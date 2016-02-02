@@ -1,0 +1,98 @@
+<rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:media="http://search.yahoo.com/mrss/" version="2.0"><channel><title>Hello World! I'm Vincent</title><description>Thoughts, stories and ideas.</description><link>http://localhost:2368/</link><generator>Ghost 0.7</generator><lastBuildDate>Tue, 02 Feb 2016 18:02:06 GMT</lastBuildDate><atom:link href="http://localhost:2368/rss/" rel="self" type="application/rss+xml"/><ttl>60</ttl><item><title>How to setup Ghost blog platform (上)</title><description>&lt;p&gt;Reference Page &lt;a href="https://stefanscherer.github.io/setup-ghost-for-github-pages/"&gt;setup-ghost-for-github-pages&lt;/a&gt;&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;&lt;strong&gt;前言&lt;/strong&gt;&lt;/p&gt;
+  
+  &lt;p&gt;用 Setup Ghost 作為 Ghost 部落格的第一篇文章也滿別具意義的, 不過在最一開始 Survey 時選用架設 Blog 的 Framework 是 &lt;a href="http://octopress.org/"&gt;Octopress&lt;/a&gt; , 但隨著架設完後一邊試用的體悟, 發現整個操作還真是 &lt;del&gt;Suck&lt;/del&gt; Geek啊! 只好再廣泛的涉略後選用了 Ghost。&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;&lt;a data-flickr-embed="true" href="https://www.flickr.com/photos/138186136@N06/24635687672/" title="001 GhostEditor"&gt;&lt;img src="https://farm2.staticflickr.com/1532/24635687672_85473e64a4_z.jpg" width="640" height="321" alt="001 GhostEditor"&gt;&lt;/a&gt;&lt;script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"&gt;&lt;/script&gt; 雖然 Octopress 與其同為支援 Ｍarkdown 的語法, 但選用Ghost的最大好處是後台已經整合了 Markdown的即視編輯器 (可能還稱不上殺手應用, 但已深得我心)  &lt;/p&gt;
+
+&lt;h2 id="beforeinstallnodejs"&gt;Before Install Node.js&lt;/h2&gt;
+
+&lt;p&gt;Ghost 是用 Node.js 打造, 所以在執行過程中需要啟動 &lt;a href="https://zh.wikipedia.org/wiki/Node.js"&gt;Node.js&lt;/a&gt; &lt;br&gt;
+而在 Mac 環境上安裝軟體套件目前常見的方式是透過 brew (也是參考網頁所上提供的)&lt;/p&gt;</description><link>http://localhost:2368/how-to-setup-ghost/</link><guid isPermaLink="false">bcd278b7-b38d-43c2-8b45-a3ffb2eb919f</guid><dc:creator>Captain Vincent</dc:creator><pubDate>Mon, 01 Feb 2016 15:41:06 GMT</pubDate><content:encoded>&lt;p&gt;Reference Page &lt;a href="https://stefanscherer.github.io/setup-ghost-for-github-pages/"&gt;setup-ghost-for-github-pages&lt;/a&gt;&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;&lt;strong&gt;前言&lt;/strong&gt;&lt;/p&gt;
+  
+  &lt;p&gt;用 Setup Ghost 作為 Ghost 部落格的第一篇文章也滿別具意義的, 不過在最一開始 Survey 時選用架設 Blog 的 Framework 是 &lt;a href="http://octopress.org/"&gt;Octopress&lt;/a&gt; , 但隨著架設完後一邊試用的體悟, 發現整個操作還真是 &lt;del&gt;Suck&lt;/del&gt; Geek啊! 只好再廣泛的涉略後選用了 Ghost。&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;&lt;a data-flickr-embed="true" href="https://www.flickr.com/photos/138186136@N06/24635687672/" title="001 GhostEditor"&gt;&lt;img src="https://farm2.staticflickr.com/1532/24635687672_85473e64a4_z.jpg" width="640" height="321" alt="001 GhostEditor"&gt;&lt;/a&gt;&lt;script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"&gt;&lt;/script&gt; 雖然 Octopress 與其同為支援 Ｍarkdown 的語法, 但選用Ghost的最大好處是後台已經整合了 Markdown的即視編輯器 (可能還稱不上殺手應用, 但已深得我心)  &lt;/p&gt;
+
+&lt;h2 id="beforeinstallnodejs"&gt;Before Install Node.js&lt;/h2&gt;
+
+&lt;p&gt;Ghost 是用 Node.js 打造, 所以在執行過程中需要啟動 &lt;a href="https://zh.wikipedia.org/wiki/Node.js"&gt;Node.js&lt;/a&gt; &lt;br&gt;
+而在 Mac 環境上安裝軟體套件目前常見的方式是透過 brew (也是參考網頁所上提供的), 但因為遇到了以下問題所以又花了些時間一一排除, 這邊稍微做簡單的說明避免大家繞路。&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;透過 brew 無法安裝目前 Ghost 所相容的版本, 在啟動時出現以下 Error Message &lt;br&gt;
+&lt;code&gt;Ghost needs Node version ~0.10.0 || ~0.12.0 || ~4.2.0 you are using version 5.4.0&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;修正後的做法, 改先透過安裝 nvm(node version manager) &lt;code&gt;brew install nvm&lt;/code&gt; 之後再進行指定版本的 node.js 安裝 &lt;a href="http://icarus4.logdown.com/posts/175092-nodejs-installation-guide"&gt;參考網頁&lt;/a&gt; , &lt;br&gt;
+但後續仍會遇到 &lt;a href="https://github.com/creationix/nvm/issues/855"&gt;https://github.com/creationix/nvm/issues/855&lt;/a&gt; 的問題, 需透過多餘的指令解決衝突的部分, 並且會導致 Shell start-up latency
+&lt;code&gt;NVM is not compatible with the npm config "prefix"&lt;/code&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;&lt;strong&gt;所以最終的建議做法是 follow &lt;a href="https://github.com/creationix/nvm"&gt;nvm官網&lt;/a&gt; 指令來安裝 nvm , 如下&lt;/strong&gt; &lt;/p&gt;
+
+&lt;pre&gt;&lt;code class="language- language-bash"&gt;git clone https://github.com/creationix/nvm.git ~/.nvm &amp;amp;&amp;amp; cd ~/.nvm &amp;amp;&amp;amp; git checkout `git describe --abbrev=0 --tags`  
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;將以下行加入 ~/.bashrc, ~/.profile, or ~/.zshrc, 讓系統自動幫你在登入時 source 完 script&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class="language- language-bash"&gt;export NVM_DIR="$HOME/.nvm"  
+[ -s "$NVM_DIR/nvm.sh" ] &amp;amp;&amp;amp; . "$NVM_DIR/nvm.sh" # This loads nvm
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;strong&gt;By the way&lt;/strong&gt; 官網也就有提到 &lt;mark&gt;Homebrew installation is not supported.&lt;/mark&gt;&lt;/p&gt;
+
+&lt;h2 id="installnodejs"&gt;Install Node.js&lt;/h2&gt;
+
+&lt;p&gt;在順利安裝完 nvm 之後, 透過以下指令可以秀出目前 nvm 的版本&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class="language- language-bash"&gt;nvm ls-remote  
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;並再以指令安裝建議的版本, 筆者目前安裝的版本為 Ghost 所建議的 4.2.0&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class="language- language-bash"&gt;nvm install 4.2.0  
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;指定所使用的 Node.js version&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class="language- language-bash"&gt;nvm use 4.2.0  
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id="downloadandinstallghost"&gt;Download and Install Ghost&lt;/h2&gt;
+
+&lt;p&gt;Check for the latest version of Ghost from &lt;a href="https://ghost.org/download/"&gt;Ghost.org&lt;/a&gt;  &lt;/p&gt;
+
+&lt;pre&gt;&lt;code class="language- language-bash"&gt;mkdir ghost  
+cd ghost  
+wget --no-check-certificate https://ghost.org/zip/ghost-0.7.5.zip  
+unzip ghost-0.7.5.zip  
+npm install --production  
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;npm 全名為 Node Package Manager，是 Node.js 的套件（package）管理工具, 透過 &lt;code&gt;npm install&lt;/code&gt; 會安裝 node.js 應用程序底下, package.json 文本中 dependencies 指定的相關套件, 透過這樣的方式可以降低拿到該應用程序在執行環境建立的複雜度。&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h2 id="startghost"&gt;Start Ghost&lt;/h2&gt;
+
+&lt;pre&gt;&lt;code class="language- language-bash"&gt;npm start  
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id="logintoghost"&gt;Login to Ghost&lt;/h2&gt;
+
+&lt;p&gt;透過 Browser 開啟以下網址連結到設定頁面, 也可以閱讀 Ghost 幫使用者預設好的第一篇文章 Welcome to Ghost 上所提供的資訊&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class="language- language-bash"&gt;open http://localhost:2368/ghost  
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;&lt;strong&gt;總結&lt;/strong&gt;&lt;/p&gt;
+  
+  &lt;p&gt;透過以上的步驟就可以在本地端建立一個部落格平台, 下一章節會繼續介紹如何將本地端的部落格部署到 git.io 上。&lt;/p&gt;
+&lt;/blockquote&gt;</content:encoded></item></channel></rss>
