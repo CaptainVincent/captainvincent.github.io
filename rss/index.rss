@@ -1,25 +1,215 @@
-<rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:media="http://search.yahoo.com/mrss/" version="2.0"><channel><title>Hello World! I'm Vincent</title><description>Thoughts, stories and ideas.</description><link>http://localhost:2368/</link><generator>Ghost 0.7</generator><lastBuildDate>Tue, 02 Feb 2016 18:02:06 GMT</lastBuildDate><atom:link href="http://localhost:2368/rss/" rel="self" type="application/rss+xml"/><ttl>60</ttl><item><title>How to setup Ghost blog platform (上)</title><description>&lt;p&gt;Reference Page &lt;a href="https://stefanscherer.github.io/setup-ghost-for-github-pages/"&gt;setup-ghost-for-github-pages&lt;/a&gt;&lt;/p&gt;
+<rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:media="http://search.yahoo.com/mrss/" version="2.0"><channel><title>Hello World! I'm Vincent</title><description>Thoughts, stories and ideas.</description><link>http://localhost:2368/</link><generator>Ghost 0.7</generator><lastBuildDate>Thu, 04 Feb 2016 16:45:23 GMT</lastBuildDate><atom:link href="http://localhost:2368/rss/" rel="self" type="application/rss+xml"/><ttl>60</ttl><item><title>How to setup Ghost blog platform (下)</title><description>&lt;blockquote&gt;
+  &lt;p&gt;接著進入下一個主題, 如何部署 Ghost 到 git.io 以及 Ghost 進階的功能設定
+  &lt;strong&gt;(Syntax highlight, 使用 Disqus 添加留言功能, 添加 Google Analytics&lt;/strong&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Buster &lt;a href="http://blog.axitkhurana.com/introducing-ghost/"&gt;作者Blog中介紹&lt;/a&gt; 有提到是受了 Octopress 的啟發以及在命名上由來的惡趣味, ker ker... Ghostbusters &lt;del&gt;又透露自己年紀了&lt;/del&gt; &lt;br&gt;
+&lt;img src="http://upload.wikimedia.org/wikipedia/en/c/c7/Ghostbusters_cover.png" alt=""&gt;&lt;/p&gt;
+
+&lt;h2 id="ghostgitio"&gt;部署 Ghost 到 git.io&lt;/h2&gt;
+
+&lt;p&gt;首先要部署 Ghost 到 git.io 需要先安裝 python 以及套件 &lt;a href="https://github.com/axitkhurana/buster"&gt;buster&lt;/a&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class="language- language-bash"&gt;brew install python  
+sudo pip install buster  
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;a href="http://stackoverflow.com/questions/32862072/attempting-to-install-buster-with-pip-on-mac"&gt;[Issue 1]&lt;/a&gt; 參考自&lt;/p&gt;</description><link>http://localhost:2368/how-to-setup-ghost-blog-platform-xia/</link><guid isPermaLink="false">4d889d8f-ae98-47a4-81cc-445ac9ac618e</guid><category>Ghost</category><category>Octopress</category><category>prismjs</category><category>Disqus</category><dc:creator>Captain Vincent</dc:creator><pubDate>Wed, 03 Feb 2016 10:57:59 GMT</pubDate><content:encoded>&lt;blockquote&gt;
+  &lt;p&gt;接著進入下一個主題, 如何部署 Ghost 到 git.io 以及 Ghost 進階的功能設定
+  &lt;strong&gt;(Syntax highlight, 使用 Disqus 添加留言功能, 添加 Google Analytics&lt;/strong&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Buster &lt;a href="http://blog.axitkhurana.com/introducing-ghost/"&gt;作者Blog中介紹&lt;/a&gt; 有提到是受了 Octopress 的啟發以及在命名上由來的惡趣味, ker ker... Ghostbusters &lt;del&gt;又透露自己年紀了&lt;/del&gt; &lt;br&gt;
+&lt;img src="http://upload.wikimedia.org/wikipedia/en/c/c7/Ghostbusters_cover.png" alt=""&gt;&lt;/p&gt;
+
+&lt;h2 id="ghostgitio"&gt;部署 Ghost 到 git.io&lt;/h2&gt;
+
+&lt;p&gt;首先要部署 Ghost 到 git.io 需要先安裝 python 以及套件 &lt;a href="https://github.com/axitkhurana/buster"&gt;buster&lt;/a&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class="language- language-bash"&gt;brew install python  
+sudo pip install buster  
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;a href="http://stackoverflow.com/questions/32862072/attempting-to-install-buster-with-pip-on-mac"&gt;[Issue 1]&lt;/a&gt; 參考自 Stackoverflow, 在安裝 &lt;code&gt;sudo pip install buster&lt;/code&gt; 出現錯誤時, 可以看看是否同樣是因為&lt;mark&gt;尚未安裝 xcode 的command line tool 所造成的&lt;/mark&gt;&lt;/p&gt;
+
+&lt;p&gt;然後在 Ghost 目錄底下建立一個名為 static 的資料夾, 指向 github 上 git.io 的 repo&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class="language- language-bash"&gt;git clone git@github.com:username/username.github.io.git static  
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;以手動方式完成(筆者是採用這種方式) 或是直接使用 Buster 提供的 command 來幫忙&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class="language- language-bash"&gt;buster setup [--gh-repo=&amp;lt;repo-url&amp;gt;]  
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;接著透過以下指令分別產生完靜態頁面, 並透過 Browser 預覽產生完的結果&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class="language- language-bash"&gt;buster generate --domain=http://localhost:2368  
+buster preview  
+open http://localhost:9000  
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;最後就可以將 Ghost 以及日後做的變更 deploy 到 git.io 上囉。&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class="language- language-bash"&gt;buster deploy  
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;hr&gt;
+
+&lt;h2 id="syntaxhighlightinghost"&gt;Syntax Highlight in Ghost&lt;/h2&gt;
+
+&lt;p&gt;使用 &lt;a href="http://prismjs.com/download.html"&gt;prismjs&lt;/a&gt; , 首先先至官網上如下圖操作
+&lt;a data-flickr-embed="true" href="https://www.flickr.com/photos/138186136@N06/24679275812/in/album-72157661932318534/" title="001 PrismJS"&gt;&lt;img src="https://farm2.staticflickr.com/1468/24679275812_eb4f8dafe5_z.jpg" width="640" height="604" style="display:block; margin:auto;" alt="001 PrismJS"&gt;&lt;/a&gt;&lt;script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"&gt;&lt;/script&gt;&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;透過預覽來選擇不同的 Theme , 這邊設計有點詭異的地方在 preview window 在網頁底部  &lt;/li&gt;
+&lt;li&gt;瀏覽完後再選擇你想使用的 Theme  &lt;/li&gt;
+&lt;li&gt;接著勾選要支援 syntax highlight 的語言  &lt;/li&gt;
+&lt;li&gt;接下來移至網頁底部分別按下按鈕來下載 js 與 css 檔案 (prism.css &amp;amp; prism.js)&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;&lt;a data-flickr-embed="true" href="https://www.flickr.com/photos/138186136@N06/24797117325/in/album-72157661932318534/" title="002 PrismJS2"&gt;&lt;img src="https://farm2.staticflickr.com/1612/24797117325_4a9c842678.jpg" width="500" height="256" style="display:block; margin:auto;" alt="002 PrismJS2"&gt;&lt;/a&gt;&lt;script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"&gt;&lt;/script&gt;&lt;/p&gt;
+
+&lt;p&gt;下載完後再將 prism.css &amp;amp; prism.js 分別放置當前 Ghost 所使用的 Theme 底下路徑中 (Ghost 所預設使用的 Theme 為 casper)&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;/content/themes/[theme name]/assets/css/
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;與&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;/content/themes/[theme name]/assets/js/
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;接著修改以下路徑的檔案&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;/content/themes/[theme name]/default.hbs
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;在該檔案內分別&lt;mark&gt;添加以下關於 prism.css 與 prism.js 修改的兩行 Code&lt;/mark&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class="language- language-javascript"&gt;    &amp;lt;link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Merriweather:300,700,700italic,300italic|Open+Sans:700,400" /&amp;gt;
+    &amp;lt;link rel="stylesheet" type="text/css" href="{{asset "css/prism.css"}}" /&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;與&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class="language- language-javascript"&gt;    &amp;lt;script type="text/javascript" src="{{asset "js/jquery.fitvids.js"}}"&amp;gt;&amp;lt;/script&amp;gt;
+    &amp;lt;script type="text/javascript" src="{{asset "js/prism.js"}}"&amp;gt;&amp;lt;/script&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;接著就可以在文章中添加以下的寫法來測試一下。&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt; ``` language-javascript
+ var s = "JavaScript syntax highlighting";  
+ alert(s); 
+ ```
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;hr&gt;
+
+&lt;h2 id="disqus"&gt;添加 Disqus 留言功能&lt;/h2&gt;
+
+&lt;p&gt;Reference Page &lt;a href="http://academy.ghost.org/adding-disqus-to-your-ghost-blog/"&gt;Adding Disqus to your Ghost blog&lt;/a&gt; &lt;br&gt;
+參考官網教學上的做法即可, &lt;del&gt;故省略翻譯&lt;/del&gt; XD&lt;/p&gt;
+
+&lt;p&gt;第一步先註冊一個 Disqus 帳號&lt;/p&gt;
+
+&lt;p&gt;&lt;a data-flickr-embed="true" href="https://www.flickr.com/photos/138186136@N06/24187392983/in/album-72157661932318534/" title="DisqusCreate"&gt;&lt;img src="https://farm2.staticflickr.com/1570/24187392983_8947254fb3_z.jpg" width="432" height="567" style="display:block; margin:auto;" alt="DisqusCreate"&gt;&lt;/a&gt;&lt;script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"&gt;&lt;/script&gt;&lt;/p&gt;
+
+&lt;p&gt;登入後先點選右上角的 Setting 選項 Add Disqus To Site&lt;/p&gt;
+
+&lt;p&gt;&lt;a data-flickr-embed="true" href="https://www.flickr.com/photos/138186136@N06/24814247255/in/album-72157661932318534/" title="DisqusSelectCreate"&gt;&lt;img src="https://farm2.staticflickr.com/1639/24814247255_60a5425209_n.jpg" width="181" height="320" style="display:block; margin:auto;" alt="DisqusSelectCreate"&gt;&lt;/a&gt;&lt;script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"&gt;&lt;/script&gt;&lt;/p&gt;
+
+&lt;p&gt;再點選下圖中間的 Start Using Engage 或右上方 Install on Your Site 進入取得識別用的 Disqus URL&lt;/p&gt;
+
+&lt;p&gt;&lt;a data-flickr-embed="true" href="https://www.flickr.com/photos/138186136@N06/24186062574/in/album-72157661932318534/" title="DisqusCreateApp"&gt;&lt;img src="https://farm2.staticflickr.com/1546/24186062574_15a900c299_z.jpg" width="640" height="271" style="display:block; margin:auto;" alt="DisqusCreateApp"&gt;&lt;/a&gt;&lt;script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"&gt;&lt;/script&gt;&lt;/p&gt;
+
+&lt;p&gt;註冊一個識別用的 Disqus URL&lt;/p&gt;
+
+&lt;p&gt;&lt;a data-flickr-embed="true" href="https://www.flickr.com/photos/138186136@N06/24187392843/in/album-72157661932318534/" title="DisqusSetupURL"&gt;&lt;img src="https://farm2.staticflickr.com/1695/24187392843_907fa17378_z.jpg" width="640" height="451" style="display:block; margin:auto;" alt="DisqusSetupURL"&gt;&lt;/a&gt;&lt;script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"&gt;&lt;/script&gt;&lt;/p&gt;
+
+&lt;p&gt;取得用來內嵌的 Disqus Script&lt;/p&gt;
+
+&lt;p&gt;&lt;a data-flickr-embed="true" href="https://www.flickr.com/photos/138186136@N06/24186062594/in/album-72157661932318534/" title="DisqusGetTheScript"&gt;&lt;img src="https://farm2.staticflickr.com/1719/24186062594_26746cf4f3.jpg" width="500" height="493" style="display:block; margin:auto;" alt="DisqusGetTheScript"&gt;&lt;/a&gt;&lt;script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"&gt;&lt;/script&gt;&lt;/p&gt;
+
+&lt;p&gt;接著會得到的類似以下內文的 Script&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class="language- language-javascript"&gt;&amp;lt;div id="disqus_thread"&amp;gt;&amp;lt;/div&amp;gt;  
+&amp;lt;script&amp;gt;  
+/**
+* RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+* LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables
+*/
+/*
+var disqus_config = function () {  
+this.page.url = PAGE_URL; // Replace PAGE_URL with your page's canonical URL variable  
+this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable  
+};
+*/
+(function() { // DON'T EDIT BELOW THIS LINE
+    var d = document, s = d.createElement('script');
+
+    s.src = '//captainvincent.disqus.com/embed.js';
+
+    s.setAttribute('data-timestamp', +new Date());
+    (d.head || d.body).appendChild(s);
+})();
+&amp;lt;/script&amp;gt;  
+&amp;lt;noscript&amp;gt;Please enable JavaScript to view the &amp;lt;a href="https://disqus.com/?ref_noscript" rel="nofollow"&amp;gt;comments powered by Disqus.&amp;lt;/a&amp;gt;&amp;lt;/noscript&amp;gt;  
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;再透過修改底下路徑的檔案, 將 Script 貼入希望放置留言區的地方, 目前筆者是放在 footer 區塊裡的 &lt;code&gt;&amp;lt;section class="share"&amp;gt;&lt;/code&gt; 之後&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;content/themes/[theme name]/post.hbs  
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;並修改剛貼入的 Script 中底下的四行, 先將註解符號 &lt;code&gt;/*&lt;/code&gt; &lt;code&gt;*/&lt;/code&gt; 移除,&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class="language- language-javascript"&gt;/*
+this.page.url = PAGE_URL; // Replace PAGE_URL with your page's canonical URL variable  
+this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable  
+*/
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;最後再將 &lt;code&gt;PAGE_URL&lt;/code&gt; 置換成 &lt;code&gt;'{{@blog.url}}{{url}}'&lt;/code&gt;, &lt;code&gt;PAGE_IDENTIFIER&lt;/code&gt; 置換成 &lt;code&gt;'ghost-{{id}}'&lt;/code&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class="language- language-javascript"&gt;this.page.url = '{{@blog.url}}{{url}}';  
+this.page.identifier = 'ghost-{{id}}';  
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;
+存擋完畢就大功告成了。&lt;/p&gt;
+
+&lt;h2 id="googleanalytics"&gt;添加 Google Analytics&lt;/h2&gt;
+
+&lt;p&gt;先建立 &lt;a href="https://accounts.google.com/SignUpExpress?service=analytics&amp;amp;continue=https%3A%2F%2Fanalytics.google.com%2Fanalytics%2Fweb%2F"&gt;Google Analytisc Account&lt;/a&gt; , 並先取得 Tracking Code 類似下圖 
+&lt;a data-flickr-embed="true" href="https://www.flickr.com/photos/138186136@N06/24520255780/in/dateposted-public/" title="Google_Analytics"&gt;&lt;img src="https://farm2.staticflickr.com/1519/24520255780_f1e379d615.jpg" width="500" height="219" style="display:block; margin:auto;" alt="Google_Analytics"&gt;&lt;/a&gt;&lt;script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"&gt;&lt;/script&gt; &lt;br&gt;
+在透過 Ghost Platform 所提供的管理頁面選項 Code Injection&lt;/p&gt;
+
+&lt;p&gt;&lt;a data-flickr-embed="true" href="https://www.flickr.com/photos/138186136@N06/24789705376/in/album-72157661932318534/" title="CodeInjection"&gt;&lt;img src="https://farm2.staticflickr.com/1664/24789705376_446840ebd2_z.jpg" width="640" height="330" style="display:block; margin:auto;" alt="CodeInjection"&gt;&lt;/a&gt;&lt;script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"&gt;&lt;/script&gt;&lt;/p&gt;
+
+&lt;p&gt;選擇右上角 Save 之後就完成了。&lt;/p&gt;</content:encoded></item><item><title>How to setup Ghost blog platform (上)</title><description>&lt;p&gt;Reference Page &lt;a href="https://stefanscherer.github.io/setup-ghost-for-github-pages/"&gt;setup-ghost-for-github-pages&lt;/a&gt;&lt;/p&gt;
 
 &lt;blockquote&gt;
   &lt;p&gt;&lt;strong&gt;前言&lt;/strong&gt;&lt;/p&gt;
   
-  &lt;p&gt;用 Setup Ghost 作為 Ghost 部落格的第一篇文章也滿別具意義的, 不過在最一開始 Survey 時選用架設 Blog 的 Framework 是 &lt;a href="http://octopress.org/"&gt;Octopress&lt;/a&gt; , 但隨著架設完後一邊試用的體悟, 發現整個操作還真是 &lt;del&gt;Suck&lt;/del&gt; Geek啊! 只好再廣泛的涉略後選用了 Ghost。&lt;/p&gt;
+  &lt;p&gt;用 Setup Ghost 作為 Ghost 部落格的第一篇文章也滿別具意義的, 不過在最一開始 Survey 時選用架設 Blog 的 Framework 是 &lt;a href="http://octopress.org/"&gt;Octopress&lt;/a&gt; , 但隨著架設完後一邊試用的體悟, 發現整個操作還真是 &lt;del&gt;Suck&lt;/del&gt; Geek啊! 只好再廣泛的涉略一下後選用了 Ghost。&lt;/p&gt;
 &lt;/blockquote&gt;
 
-&lt;p&gt;&lt;a data-flickr-embed="true" href="https://www.flickr.com/photos/138186136@N06/24635687672/" title="001 GhostEditor"&gt;&lt;img src="https://farm2.staticflickr.com/1532/24635687672_85473e64a4_z.jpg" width="640" height="321" alt="001 GhostEditor"&gt;&lt;/a&gt;&lt;script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"&gt;&lt;/script&gt; 雖然 Octopress 與其同為支援 Ｍarkdown 的語法, 但選用Ghost的最大好處是後台已經整合了 Markdown的即視編輯器 (可能還稱不上殺手應用, 但已深得我心)  &lt;/p&gt;
+&lt;p&gt;&lt;a data-flickr-embed="true" href="https://www.flickr.com/photos/138186136@N06/24635687672/" title="001 GhostEditor"&gt;&lt;img src="https://farm2.staticflickr.com/1532/24635687672_85473e64a4_z.jpg" width="640" height="321" style="display:block; margin:auto;" alt="001 GhostEditor"&gt;&lt;/a&gt;&lt;script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"&gt;&lt;/script&gt; 雖然 Octopress 與其同為支援 Ｍarkdown 的語法, 但選用Ghost的最大好處是後台已經整合了 Markdown的即視編輯器 (可能還稱不上殺手應用, 但已深得我心)  &lt;/p&gt;
 
 &lt;h2 id="beforeinstallnodejs"&gt;Before Install Node.js&lt;/h2&gt;
 
 &lt;p&gt;Ghost 是用 Node.js 打造, 所以在執行過程中需要啟動 &lt;a href="https://zh.wikipedia.org/wiki/Node.js"&gt;Node.js&lt;/a&gt; &lt;br&gt;
-而在 Mac 環境上安裝軟體套件目前常見的方式是透過 brew (也是參考網頁所上提供的)&lt;/p&gt;</description><link>http://localhost:2368/how-to-setup-ghost/</link><guid isPermaLink="false">bcd278b7-b38d-43c2-8b45-a3ffb2eb919f</guid><dc:creator>Captain Vincent</dc:creator><pubDate>Mon, 01 Feb 2016 15:41:06 GMT</pubDate><content:encoded>&lt;p&gt;Reference Page &lt;a href="https://stefanscherer.github.io/setup-ghost-for-github-pages/"&gt;setup-ghost-for-github-pages&lt;/a&gt;&lt;/p&gt;
+而在 Mac 環境上安裝軟體套件目前常見的方式是透過 brew (也是參考網頁所上提供的)&lt;/p&gt;</description><link>http://localhost:2368/how-to-setup-ghost/</link><guid isPermaLink="false">bcd278b7-b38d-43c2-8b45-a3ffb2eb919f</guid><category>Ghost</category><category>Octopress</category><dc:creator>Captain Vincent</dc:creator><pubDate>Mon, 01 Feb 2016 15:41:06 GMT</pubDate><content:encoded>&lt;p&gt;Reference Page &lt;a href="https://stefanscherer.github.io/setup-ghost-for-github-pages/"&gt;setup-ghost-for-github-pages&lt;/a&gt;&lt;/p&gt;
 
 &lt;blockquote&gt;
   &lt;p&gt;&lt;strong&gt;前言&lt;/strong&gt;&lt;/p&gt;
   
-  &lt;p&gt;用 Setup Ghost 作為 Ghost 部落格的第一篇文章也滿別具意義的, 不過在最一開始 Survey 時選用架設 Blog 的 Framework 是 &lt;a href="http://octopress.org/"&gt;Octopress&lt;/a&gt; , 但隨著架設完後一邊試用的體悟, 發現整個操作還真是 &lt;del&gt;Suck&lt;/del&gt; Geek啊! 只好再廣泛的涉略後選用了 Ghost。&lt;/p&gt;
+  &lt;p&gt;用 Setup Ghost 作為 Ghost 部落格的第一篇文章也滿別具意義的, 不過在最一開始 Survey 時選用架設 Blog 的 Framework 是 &lt;a href="http://octopress.org/"&gt;Octopress&lt;/a&gt; , 但隨著架設完後一邊試用的體悟, 發現整個操作還真是 &lt;del&gt;Suck&lt;/del&gt; Geek啊! 只好再廣泛的涉略一下後選用了 Ghost。&lt;/p&gt;
 &lt;/blockquote&gt;
 
-&lt;p&gt;&lt;a data-flickr-embed="true" href="https://www.flickr.com/photos/138186136@N06/24635687672/" title="001 GhostEditor"&gt;&lt;img src="https://farm2.staticflickr.com/1532/24635687672_85473e64a4_z.jpg" width="640" height="321" alt="001 GhostEditor"&gt;&lt;/a&gt;&lt;script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"&gt;&lt;/script&gt; 雖然 Octopress 與其同為支援 Ｍarkdown 的語法, 但選用Ghost的最大好處是後台已經整合了 Markdown的即視編輯器 (可能還稱不上殺手應用, 但已深得我心)  &lt;/p&gt;
+&lt;p&gt;&lt;a data-flickr-embed="true" href="https://www.flickr.com/photos/138186136@N06/24635687672/" title="001 GhostEditor"&gt;&lt;img src="https://farm2.staticflickr.com/1532/24635687672_85473e64a4_z.jpg" width="640" height="321" style="display:block; margin:auto;" alt="001 GhostEditor"&gt;&lt;/a&gt;&lt;script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"&gt;&lt;/script&gt; 雖然 Octopress 與其同為支援 Ｍarkdown 的語法, 但選用Ghost的最大好處是後台已經整合了 Markdown的即視編輯器 (可能還稱不上殺手應用, 但已深得我心)  &lt;/p&gt;
 
 &lt;h2 id="beforeinstallnodejs"&gt;Before Install Node.js&lt;/h2&gt;
 
@@ -30,8 +220,9 @@
 &lt;li&gt;透過 brew 無法安裝目前 Ghost 所相容的版本, 在啟動時出現以下 Error Message &lt;br&gt;
 &lt;code&gt;Ghost needs Node version ~0.10.0 || ~0.12.0 || ~4.2.0 you are using version 5.4.0&lt;/code&gt;&lt;/li&gt;
 &lt;li&gt;修正後的做法, 改先透過安裝 nvm(node version manager) &lt;code&gt;brew install nvm&lt;/code&gt; 之後再進行指定版本的 node.js 安裝 &lt;a href="http://icarus4.logdown.com/posts/175092-nodejs-installation-guide"&gt;參考網頁&lt;/a&gt; , &lt;br&gt;
-但後續仍會遇到 &lt;a href="https://github.com/creationix/nvm/issues/855"&gt;https://github.com/creationix/nvm/issues/855&lt;/a&gt; 的問題, 需透過多餘的指令解決衝突的部分, 並且會導致 Shell start-up latency
-&lt;code&gt;NVM is not compatible with the npm config "prefix"&lt;/code&gt;&lt;/li&gt;
+但後續仍會遇到 &lt;a href="https://github.com/creationix/nvm/issues/855"&gt;https://github.com/creationix/nvm/issues/855&lt;/a&gt; 的問題, 需透過多餘的指令解決衝突的部分, &lt;br&gt;
+&lt;code&gt;NVM is not compatible with the npm config "prefix"&lt;/code&gt; &lt;br&gt;
+並且會導致 Shell start-up latency 時間拉長&lt;/li&gt;
 &lt;/ol&gt;
 
 &lt;p&gt;&lt;strong&gt;所以最終的建議做法是 follow &lt;a href="https://github.com/creationix/nvm"&gt;nvm官網&lt;/a&gt; 指令來安裝 nvm , 如下&lt;/strong&gt; &lt;/p&gt;
