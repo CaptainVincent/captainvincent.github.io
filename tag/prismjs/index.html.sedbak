@@ -3,7 +3,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
-    <title>Disqus - Hello World! I'm Vincent</title>
+    <title>prismjs - Hello World! I'm Vincent</title>
     <meta name="description" content="">
 
     <meta name="HandheldFriendly" content="True">
@@ -19,20 +19,20 @@
     
     <meta property="og:site_name" content="Hello World! I'm Vincent">
     <meta property="og:type" content="website">
-    <meta property="og:title" content="Disqus - Hello World! I'm Vincent">
-    <meta property="og:url" content="http://captainvincent.github.io/tag/disqus/">
+    <meta property="og:title" content="prismjs - Hello World! I'm Vincent">
+    <meta property="og:url" content="http://localhost:2368/tag/prismjs/">
     
     <meta name="twitter:card" content="summary">
-    <meta name="twitter:title" content="Disqus - Hello World! I'm Vincent">
-    <meta name="twitter:url" content="http://captainvincent.github.io/tag/disqus/">
+    <meta name="twitter:title" content="prismjs - Hello World! I'm Vincent">
+    <meta name="twitter:url" content="http://localhost:2368/tag/prismjs/">
     
     <script type="application/ld+json">
 {
     "@context": "http://schema.org",
     "@type": "Series",
     "publisher": "Hello World! I'm Vincent",
-    "url": "http://captainvincent.github.io/tag/disqus/",
-    "name": "Disqus"
+    "url": "http://localhost:2368/tag/prismjs/",
+    "name": "prismjs"
 }
     </script>
 
@@ -49,7 +49,7 @@
 
 </script>
 </head>
-<body class="tag-template tag-disqus nav-closed">
+<body class="tag-template tag-prismjs nav-closed">
 
     <div class="nav">
     <h3 class="nav-title">Menu</h3>
@@ -74,7 +74,7 @@
     </nav>
     <div class="vertical">
         <div class="main-header-content inner">
-            <h1 class="page-title">Disqus</h1>
+            <h1 class="page-title">prismjs</h1>
             <h2 class="page-description">
                     A 1-post collection
             </h2>
@@ -101,7 +101,7 @@
     <footer class="post-meta">
         <img class="author-thumb" src="../../content/images/2016/01/--.JPG" alt="Captain Vincent" nopin="nopin">
         <a href="../../author/captain/">Captain Vincent</a>
-         on <a href="../ghost-tag/">Ghost</a>, <a href="../octopress/">Octopress</a>, <a href="../prismjs/">prismjs</a>, <a href="index.html">Disqus</a>
+         on <a href="../ghost-tag/">Ghost</a>, <a href="../octopress/">Octopress</a>, <a href="index.html">prismjs</a>, <a href="../disqus/">Disqus</a>
         <time class="post-date" datetime="2016-02-03">03 February 2016</time>
     </footer>
 </article>

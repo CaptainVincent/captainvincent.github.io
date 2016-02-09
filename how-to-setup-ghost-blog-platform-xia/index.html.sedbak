@@ -21,7 +21,7 @@
     <meta property="og:type" content="article">
     <meta property="og:title" content="How to setup Ghost blog platform (下)">
     <meta property="og:description" content="接著進入下一個主題, 如何部署 Ghost 到 git.io 以及 Ghost 進階的功能設定   (Syntax highlight, 使用 Disqus 添加留言功能, 添加 Google Analytics Buster 作者Blog中介紹 有提到是受了 Octopress 的啟發以及在命名上由來的惡趣味, ker ker... Ghostbusters 又透露自己年紀了  部署 Ghost 到 git.io 首先要部署 Ghost 到 git.io 需要先安裝 python 以及套件 buster...">
-    <meta property="og:url" content="http://captainvincent.github.io/how-to-setup-ghost-blog-platform-xia/">
+    <meta property="og:url" content="http://localhost:2368/how-to-setup-ghost-blog-platform-xia/">
     <meta property="article:published_time" content="2016-02-03T10:57:59.011Z">
     <meta property="article:modified_time" content="2016-02-04T16:42:36.377Z">
     <meta property="article:tag" content="Ghost">
@@ -32,7 +32,7 @@
     <meta name="twitter:card" content="summary">
     <meta name="twitter:title" content="How to setup Ghost blog platform (下)">
     <meta name="twitter:description" content="接著進入下一個主題, 如何部署 Ghost 到 git.io 以及 Ghost 進階的功能設定   (Syntax highlight, 使用 Disqus 添加留言功能, 添加 Google Analytics Buster 作者Blog中介紹 有提到是受了 Octopress 的啟發以及在命名上由來的惡趣味, ker ker... Ghostbusters 又透露自己年紀了  部署 Ghost 到 git.io 首先要部署 Ghost 到 git.io 需要先安裝 python 以及套件 buster...">
-    <meta name="twitter:url" content="http://captainvincent.github.io/how-to-setup-ghost-blog-platform-xia/">
+    <meta name="twitter:url" content="http://localhost:2368/how-to-setup-ghost-blog-platform-xia/">
     
     <script type="application/ld+json">
 {
@@ -42,13 +42,13 @@
     "author": {
         "@type": "Person",
         "name": "Captain Vincent",
-        "image": "http://captainvincent.github.io/content/images/2016/01/--.JPG",
-        "url": "http://captainvincent.github.io/author/captain",
+        "image": "http://localhost:2368/content/images/2016/01/--.JPG",
+        "url": "http://localhost:2368/author/captain",
         "sameAs": null,
         "description": null
     },
     "headline": "How to setup Ghost blog platform (下)",
-    "url": "http://captainvincent.github.io/how-to-setup-ghost-blog-platform-xia/",
+    "url": "http://localhost:2368/how-to-setup-ghost-blog-platform-xia/",
     "datePublished": "2016-02-03T10:57:59.011Z",
     "dateModified": "2016-02-04T16:42:36.377Z",
     "keywords": "Ghost, Octopress, prismjs, Disqus",
@@ -137,7 +137,7 @@ sudo pip install buster
 
 <p>接著透過以下指令分別產生完靜態頁面, 並透過 Browser 預覽產生完的結果</p>
 
-<pre><code class="language- language-bash">buster generate --domain=http://captainvincent.github.io  
+<pre><code class="language- language-bash">buster generate --domain=http://localhost:2368  
 buster preview  
 open http://localhost:9000  
 </code></pre>
@@ -304,13 +304,13 @@ this.page.identifier = 'ghost-{{id}}';
 
             <section class="share">
                 <h4>Share this post</h4>
-                <a class="icon-twitter" href="https://twitter.com/intent/tweet?text=How%20to%20setup%20Ghost%20blog%20platform%20(%E4%B8%8B)&amp;url=http://captainvincent.github.io/how-to-setup-ghost-blog-platform-xia/" onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
+                <a class="icon-twitter" href="https://twitter.com/intent/tweet?text=How%20to%20setup%20Ghost%20blog%20platform%20(%E4%B8%8B)&amp;url=http://localhost:2368/how-to-setup-ghost-blog-platform-xia/" onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
                     <span class="hidden">Twitter</span>
                 </a>
-                <a class="icon-facebook" href="https://www.facebook.com/sharer/sharer.php?u=http://captainvincent.github.io/how-to-setup-ghost-blog-platform-xia/" onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;">
+                <a class="icon-facebook" href="https://www.facebook.com/sharer/sharer.php?u=http://localhost:2368/how-to-setup-ghost-blog-platform-xia/" onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;">
                     <span class="hidden">Facebook</span>
                 </a>
-                <a class="icon-google-plus" href="https://plus.google.com/share?url=http://captainvincent.github.io/how-to-setup-ghost-blog-platform-xia/" onclick="window.open(this.href, 'google-plus-share', 'width=490,height=530');return false;">
+                <a class="icon-google-plus" href="https://plus.google.com/share?url=http://localhost:2368/how-to-setup-ghost-blog-platform-xia/" onclick="window.open(this.href, 'google-plus-share', 'width=490,height=530');return false;">
                     <span class="hidden">Google+</span>
                 </a>
             </section>
@@ -323,7 +323,7 @@ this.page.identifier = 'ghost-{{id}}';
             */
 
             var disqus_config = function () {
-                this.page.url = 'http://captainvincent.github.io/how-to-setup-ghost-blog-platform-xia/'; // Replace PAGE_URL with your page's canonical URL variable
+                this.page.url = 'http://localhost:2368/how-to-setup-ghost-blog-platform-xia/'; // Replace PAGE_URL with your page's canonical URL variable
                 this.page.identifier = 'ghost-4'; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
             };
 
