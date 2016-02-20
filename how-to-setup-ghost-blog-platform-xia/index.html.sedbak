@@ -11,9 +11,9 @@
 
     <link rel="shortcut icon" href="../favicon.ico">
 
-    <link rel="stylesheet" type="text/css" href="../assets/css/screen.css?v=fa51f18bd8">
+    <link rel="stylesheet" type="text/css" href="../assets/css/screen.css?v=feb5343477">
     <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Merriweather:300,700,700italic,300italic%7COpen+Sans:700,400">
-    <link rel="stylesheet" type="text/css" href="../assets/css/prism.css?v=fa51f18bd8">
+    <link rel="stylesheet" type="text/css" href="../assets/css/prism.css?v=feb5343477">
     <link rel="canonical" href="index.html">
     <meta name="referrer" content="origin">
     
@@ -344,6 +344,12 @@ this.page.identifier = 'ghost-{{id}}';
 </main>
 
 <aside class="read-next">
+    <a class="read-next-story no-cover" href="../duo-kong-cao-zuo-mi-ji-bi-ji/">
+        <section class="post">
+            <h2>多空操作秘笈筆記 (Mind Map)</h2>
+            <p>原名      Secrets For Profiting In Bull And Bear Markets by Stan Weinstein      別名      史丹溫斯坦稱傲牛熊市的秘密 重點摘要、心得 書中強調的是透過 技術面 來分析趨勢,…</p>
+        </section>
+    </a>
     <a class="read-next-story prev no-cover" href="../how-to-setup-ghost/">
         <section class="post">
             <h2>How to setup Ghost blog platform (上)</h2>
@@ -365,8 +371,8 @@ this.page.identifier = 'ghost-{{id}}';
     <script type="text/javascript" src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
     
 
-    <script type="text/javascript" src="../assets/js/jquery.fitvids.js?v=fa51f18bd8"></script>
-    <script type="text/javascript" src="../assets/js/prism.js?v=fa51f18bd8"></script> 
-    <script type="text/javascript" src="../assets/js/index.js?v=fa51f18bd8"></script>
+    <script type="text/javascript" src="../assets/js/jquery.fitvids.js?v=feb5343477"></script>
+    <script type="text/javascript" src="../assets/js/prism.js?v=feb5343477"></script> 
+    <script type="text/javascript" src="../assets/js/index.js?v=feb5343477"></script>
 
 </body>
