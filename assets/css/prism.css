@@ -1,4 +1,4 @@
-/* http://prismjs.com/download.html?themes=prism&languages=markup+css+clike+javascript+bash */
+/* http://prismjs.com/download.html?themes=prism&languages=markup+css+clike+javascript+bash+git+json */
 /**
  * prism.js default theme for JavaScript, CSS and HTML
  * Based on dabblet (http://dabblet.com)
@@ -11,7 +11,6 @@ pre[class*="language-"] {
 	background: none;
 	text-shadow: 0 1px white;
 	font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
-	direction: ltr;
 	text-align: left;
 	white-space: pre;
 	word-spacing: normal;

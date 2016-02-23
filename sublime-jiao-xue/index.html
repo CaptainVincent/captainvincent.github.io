@@ -1,0 +1,391 @@
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <title>Sublime Text 教學</title>
+    <meta name="description" content="">
+
+    <meta name="HandheldFriendly" content="True">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="shortcut icon" href="../favicon.ico">
+
+    <link rel="stylesheet" type="text/css" href="../assets/css/screen.css?v=7583b8f102">
+    <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Merriweather:300,700,700italic,300italic%7COpen+Sans:700,400">
+    <link rel="stylesheet" type="text/css" href="../assets/css/prism.css?v=7583b8f102">
+    <link rel="canonical" href="index.html">
+    <meta name="referrer" content="origin">
+    
+    <meta property="og:site_name" content="Hello World! I'm Vincent">
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="Sublime Text 教學">
+    <meta property="og:description" content="筆者按: 網路上關於 Sublime 的教學其實已經多如繁星, 所以本篇說為教學, 充其量目的也只是敝人的備忘錄而已 (笑)。 引言 在前公司待了三年多快四年, 一直都是在 Windows 上透過 SSH 連到 Linux 的 build server 做開發, 常使用的語言為 C++、C, 而在前公司最普遍的 trace code 工具是有名的 Source Insight, 但對我來說有以下的缺點: 非跨平台  我個人電腦使用的環境是 OSX, 所以對於開發工具需在公司跟家裡做切換, 使用的意願上其實是非常低, 不外乎在工具的使用也是有所謂的學習曲線, 需分散心力來維持兩套是滿浪費精力的。 (要在 Mac 上執行 Windows...">
+    <meta property="og:url" content="http://captainvincent.github.io/sublime-jiao-xue/">
+    <meta property="article:published_time" content="2016-02-22T18:24:00.329Z">
+    <meta property="article:modified_time" content="2016-02-23T18:20:46.685Z">
+    
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Sublime Text 教學">
+    <meta name="twitter:description" content="筆者按: 網路上關於 Sublime 的教學其實已經多如繁星, 所以本篇說為教學, 充其量目的也只是敝人的備忘錄而已 (笑)。 引言 在前公司待了三年多快四年, 一直都是在 Windows 上透過 SSH 連到 Linux 的 build server 做開發, 常使用的語言為 C++、C, 而在前公司最普遍的 trace code 工具是有名的 Source Insight, 但對我來說有以下的缺點: 非跨平台  我個人電腦使用的環境是 OSX, 所以對於開發工具需在公司跟家裡做切換, 使用的意願上其實是非常低, 不外乎在工具的使用也是有所謂的學習曲線, 需分散心力來維持兩套是滿浪費精力的。 (要在 Mac 上執行 Windows...">
+    <meta name="twitter:url" content="http://captainvincent.github.io/sublime-jiao-xue/">
+    
+    <script type="application/ld+json">
+{
+    "@context": "http://schema.org",
+    "@type": "Article",
+    "publisher": "Hello World! I'm Vincent",
+    "author": {
+        "@type": "Person",
+        "name": "Captain Vincent",
+        "image": "http://captainvincent.github.io/content/images/2016/01/--.JPG",
+        "url": "http://captainvincent.github.io/author/captain",
+        "sameAs": null,
+        "description": null
+    },
+    "headline": "Sublime Text 教學",
+    "url": "http://captainvincent.github.io/sublime-jiao-xue/",
+    "datePublished": "2016-02-22T18:24:00.329Z",
+    "dateModified": "2016-02-23T18:20:46.685Z",
+    "description": "筆者按: 網路上關於 Sublime 的教學其實已經多如繁星, 所以本篇說為教學, 充其量目的也只是敝人的備忘錄而已 (笑)。 引言 在前公司待了三年多快四年, 一直都是在 Windows 上透過 SSH 連到 Linux 的 build server 做開發, 常使用的語言為 C++、C, 而在前公司最普遍的 trace code 工具是有名的 Source Insight, 但對我來說有以下的缺點: 非跨平台  我個人電腦使用的環境是 OSX, 所以對於開發工具需在公司跟家裡做切換, 使用的意願上其實是非常低, 不外乎在工具的使用也是有所謂的學習曲線, 需分散心力來維持兩套是滿浪費精力的。 (要在 Mac 上執行 Windows..."
+}
+    </script>
+
+    <meta name="generator" content="Ghost 0.7">
+    <link rel="alternate" type="application/rss+xml" title="Hello World! I'm Vincent" href="../rss/index.html">
+    <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-73341093-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+</head>
+<body class="post-template nav-closed">
+
+    <div class="nav">
+    <h3 class="nav-title">Menu</h3>
+    <a href="index.html#" class="nav-close">
+        <span class="hidden">Close</span>
+    </a>
+    <ul>
+            <li class="nav-home" role="presentation"><a href="../">Home</a></li>
+    </ul>
+    <a class="subscribe-button icon-feed" href="../rss/index.rss">Subscribe</a>
+</div>
+<span class="nav-cover"></span>
+
+
+    <div class="site-wrapper">
+
+        
+
+
+<header class="main-header post-head no-cover">
+    <nav class="main-nav  clearfix">
+        
+            <a class="menu-button icon-menu" href="index.html#"><span class="word">Menu</span></a>
+    </nav>
+</header>
+
+<main class="content" role="main">
+    <article class="post">
+
+        <header class="post-header">
+            <h1 class="post-title">Sublime Text 教學</h1>
+            <section class="post-meta">
+                <time class="post-date" datetime="2016-02-23">23 February 2016</time> 
+            </section>
+        </header>
+
+        <section class="post-content">
+            <blockquote>
+  <p>筆者按: 網路上關於 Sublime 的教學其實已經多如繁星, 所以本篇說為教學, 充其量目的也只是敝人的備忘錄而已 (笑)。</p>
+</blockquote>
+
+<h4 id="">引言</h4>
+
+<p>在前公司待了三年多快四年, 一直都是在 Windows 上透過 SSH 連到 Linux 的 build server 做開發, 常使用的語言為 C++、C, 而在前公司最普遍的 trace code 工具是有名的 <del>Source Insight</del>, 但對我來說有以下的缺點:</p>
+
+<ol>
+<li><strong>非跨平台</strong> <br>
+我個人電腦使用的環境是 OSX, 所以對於開發工具需在公司跟家裡做切換, 使用的意願上其實是非常低, 不外乎在工具的使用也是有所謂的學習曲線, 需分散心力來維持兩套是滿浪費精力的。
+(要在 Mac 上執行 Windows 程式就我所知也有三種方式, 一種是安裝雙系統共存, 再來是使用虛擬機器VMWare, 最後則是透過 Wine 來安裝, 但會喜歡使用 Mac 的人其實對優雅都有種偏執, 所以我想還是能省則省吧!)。</li>
+<li><strong>使用介面非常醜</strong> <br>
+這可能主觀意識成分居多, 而且多半應該是來自一種對於 Windows 視窗樣式的厭惡吧! 但気持ち (Kimochi) 有時也是這麼重要～ (攤)。</li>
+<li><strong>要$$</strong> <br>
+<del>雖然公司都...</del>, 嗯, 我什麼都沒說。  </li>
+<li><strong>笨重</strong> <br>
+匯入專案以及建立 Source tree 需要滿長的時間 (尤其是龐大的專案時), 加上使用起來一直有種跟不上思緒的頓感 (<del>哈味</del>)。</li>
+<li><strong>模糊搜尋做得不夠好</strong> <br>
+小弟記憶力一直不太好, 所以這功能也滿在意的。</li>
+</ol>
+
+<p>最後當工作快滿一年的時候, 經由一位快離職的同事分享, 開始認識了 Sublime, 也就一直擁抱到現在了。</p>
+
+<hr>
+
+<h2 id="step1installsublime">Step 1. Install Sublime</h2>
+
+<p>首先可以先至官網抓取最新的版本 <a href="http://www.sublimetext.com/2">Sublime2</a>、<a href="http://www.sublimetext.com/3">Sublime3</a>, 跟一般平台上的應用程式安裝方式無異 (所以這邊省略讓各位自行摸索一下), 接著要 <strong>安裝最重要的套件 Package Control x3</strong> (筆者懶得打三遍, 但希望你們明白這真的很重要!), 有點類似 Ubuntu 的 apt-get、Mac 的 Homebrew、Python 的 Pip、Node.js 的 npm 關係, 這是一個屬於 Sublime 套件管理的 Plugin (由於實在太方便了, 沒意外的話應該是每個用戶必先安裝, <del>除非天生反骨</del>)。</p>
+
+<h2 id="step2installpackagecontrol">Step 2. Install Package Control</h2>
+
+<p>Package Control的安裝方式也很簡易 <a href="https://packagecontrol.io/installation">Package Control安裝頁面</a> 有提供 Sublime Text 2 跟 Sublime Text 3 的 Command, 執行 Sublime 後按 <code>Ctrl + `</code> (`是鍵盤最左上角那個) 叫出 Sublime 的 Console Panel (或是透過操作畫面上方的 Menu 選單 <code>View -&gt; Show Console</code> 也可以叫出)</p>
+
+<p><img src="https://farm2.staticflickr.com/1513/24572921463_63fa373e0d.jpg" alt=""></p>
+
+<p>複製貼上你下載版本的指令進去按 <code>Enter</code> 即可 (注意不要複製到行尾或行頭多餘空白格), 安裝完成之後可以再按一次按 <code>Ctrl + `</code> 或是 <code>ESC</code> 關掉Console。</p>
+
+<p><img src="https://farm2.staticflickr.com/1704/24569074674_1c37755a8d_z.jpg" alt=""></p>
+
+<p>此時已經可以執行 Package Control 的相關指令, 方式一樣是兩種 (這部分的操作很頻繁, 所以筆者平時都是以快速鍵操作為主)</p>
+
+<ol>
+<li>透過操作畫面上方的 Menu 選單 <code>Sublime Text -&gt; Preference -&gt; Package Control</code>  </li>
+<li>按 <code>Ctrl/Cmd(Windows/Mac) + Shift + P</code></li>
+</ol>
+
+<p><img src="https://farm2.staticflickr.com/1469/24569403644_79a1f874f2.jpg" alt=""></p>
+
+<p>出現輸入框後, 可以針對 Package的操作輸入以下 Keywords (ex. install、remove、list)</p>
+
+<p><img src="https://farm2.staticflickr.com/1619/25173739056_94164dac33_z.jpg" alt=""></p>
+
+<p>常見的操作說明如下</p>
+
+<ul>
+<li><strong>List Package</strong>: 列出已安裝的 Package (這邊可以試著鍵入 list, 輸入框的模糊搜尋會幫你選取到match 的指令, 相當方便的使用者體驗)</li>
+<li><strong>Install Package</strong>: 左下會有個移動的等號 "=" 表示正在搜尋可以安裝的Package, 耐心等待跑完之後, 會彈出類似下拉式的選單供選擇 (挑選欲安裝的Package一樣可以鍵入關鍵字, 讓模糊搜尋幫助你挑選)</li>
+<li><strong>Remove Package</strong>: 列出已安裝的Package, 提供選取刪除</li>
+</ul>
+
+<p>另外, 在挑選 Plugin 安裝的部分, 除了可以先上網看看相關領域開發者都推薦使用的之外, 也可上 <a href="https://packagecontrol.io/packages/Package%20Control">Package Control 官網</a> 透過一些關鍵字來尋找, 跟在Sublime裡面搜尋的差別在於, 官網上的會提供 Rank 讓你知道這個 Package 被安裝的熱門程度, 較多人使用的 Plugin 在維護跟品質上都相對比較有保障。</p>
+
+<blockquote>
+  <p>註</p>
+  
+  <p>Cmd = Command key define in Mac Keyboard</p>
+  
+  <p><code>Ctrl/Cmd(Windows/Mac) + Shift + P</code>, 透過這組快速鍵叫出來的是 Sublime 的 Command Palette (也可從 Menu 選單裡的 Tool 選項叫出來), 透過這個 Command Palette 可用來呼叫許多其他 Plugin 預設的功能, 所以絕大部份的時候只需要記得這個快速鍵, 就已經相當方便了。</p>
+  
+  <p>Ex. git plugin也是在這個輸入框內做操作</p>
+</blockquote>
+
+<h2 id="step3">Step 3. 推薦一些筆者安裝使用的套件</h2>
+
+<p>(這裡先介紹一般通用的套件)</p>
+
+<p>透過 Package Control 都可以輕易的 Install 以下的 Plugin 協助你提升工作效率, 而需注意的是部分 Plugin 安裝之後, 有時會需要做一些客製化的調整 (例如修改 Package Setting 檔, 從 Menu 選單 Preferences -&gt; Package Setting -&gt; 挑選你要修改的 Plugin)</p>
+
+<p><img src="https://farm2.staticflickr.com/1586/25174133666_ec6ba6156d_z.jpg" alt=""></p>
+
+<p>筆者似乎從 Sublime Text 3 開始就不能直接修改 Default 的 Setting, 需要打開 User 的 Setting 來做變更 (如上圖), 不過這也是建立良好修改習慣的開始。</p>
+
+<hr>
+
+<h4 id="highlightwordshttpspackagecontroliopackageshighlightwords"><a href="https://packagecontrol.io/packages/HighlightWords">HighlightWords</a></h4>
+
+<p>這個套件的使用來自於 Source Insight 裡我覺得很方便的功能, 在 Source Insight 裡透過 <code>Shift + F8</code> 來常駐 (持續性) 的標記某個單詞 (同時也會標記這整個文本裡所有出現的地方, 有助於 trace code), 但在 Sublime 中, 雖然選取文字時會幫你標記, 但滑鼠點擊它處則標記即消失, 無法保持持續標記 (<mark>Highlight</mark>) 的狀態, 另外在剛接觸這個套件的版本所提供的方式, 是透過快速鍵後只會彈出最下排一個輸入框, 提供輸入想標記的單詞, 而要取消標記也是刪除這輸入框裡的內容, 隨著我跟前同事私下研究改進, 目前已可透過 <code>Cmd + Shift + H</code> 來 Highlight 游標目前停留的字詞, 並對同樣的字詞再按一次快速鍵則取消標記, 使用方式已與Source Insight無異, 甚至更好用。</p>
+
+<hr>
+
+<h4 id="brackethighlighterhttpspackagecontroliopackagesbrackethighlighter"><a href="https://packagecontrol.io/packages/BracketHighlighter">BracketHighlighter</a></h4>
+
+<p>Trace code 滿常需要的除了前面標記變數的功能以外, 另外也需要幫忙判斷括號從哪括到哪, 這Plugin就提供了這樣的的幫助。</p>
+
+<p>注意, 這邊筆者會將Setting修改成如下, 以呈現較佳的視覺效果</p>
+
+<pre><code class="language-json">"default": {
+"icon": "dot",
+// BH1's original default color for reference
+"color": "entity.name.class",
+//"color": "brackethighlighter.default",
+"style": "block"
+},
+</code></pre>
+
+<hr>
+
+<h4 id="ctagshttpspackagecontroliopackagesctags"><a href="https://packagecontrol.io/packages/CTags">Ctags</a></h4>
+
+<p>也是在 trace code 方面個人覺得非常好用的 Plugin 之一, 先介紹 ctags 本身是一個專門幫忙對 soruce code、header file 產生 index file 用的工具, 且在一開始最早僅支援 C, 後來延伸至今已可支援以下語言</p>
+
+<p>Ant、Asm、Asp、Awk、Basic、BETA、C、C++、C#、Cobol、DosBatch、Eiffel、Erlang、Flex、Fortran、HTML、Java、JavaScript、Lisp、Lua、Make、MatLab、OCaml、Pascal、Perl、PHP、Python、REXX、Ruby、Scheme、Sh、SLang、SML、SQL、Tcl、Tex、Vera、Verilog、VHDL、Vim、YACC</p>
+
+<blockquote>
+  <p>可以透過 Shell 底下的 Command 來查詢支援的語言</p>
+</blockquote>
+
+<pre><code class="language- language-bash">ctags --list-languages  
+</code></pre>
+
+<blockquote>
+  <p>另外 ctags 本身也可以支援對語言或副檔名做延伸的定義</p>
+</blockquote>
+
+<p>ex. 在Sublime中使用的話, 在 Ctags 的 Plugin Setting 內加入下面這句 (等於將後面參數傳給 ctags )  </p>
+
+<pre><code class="language- language-json">"opts" : ["--langmap=C:+.mq4", "--extra=+q", "--fields=+Saim", "--c-kinds=+lpx", "--c++-kinds=+lpx", "-R"],
+</code></pre>
+
+<ul>
+<li><strong>--extra=+q --fields=+Saim</strong> 指名要建立的 tags 包含 Class 內 member 的資訊</li>
+<li><strong>--c-kinds=+lpx --c++-kinds=+lpx</strong> 是用來對底下參數打開
+<ul><li><strong>l</strong>  local variables [off]</li>
+<li><strong>p</strong>  function prototypes</li>
+<li><strong>x</strong>  external and forward variable declarations [off]</li></ul></li>
+<li><strong>-R</strong> 則是整個目錄底下遞迴的方式去循環查找建立 index</li>
+<li><strong>--langmap=C:+.mq4</strong> 是筆者想針對 MT4 平台開發程式, 副檔名使用的是 mq4, 但語法本身很接近 C 語言, 所以 extend C parser 來幫忙建立 tag file</li>
+</ul>
+
+<blockquote>
+  <p>另外透過以下指令可以看 ctags 對每個語言建立 index 的詳細程度, 部分可供 On/Off</p>
+</blockquote>
+
+<pre><code class="language- language-bash">ctags --list-kinds  
+</code></pre>
+
+<p>以上大概介紹完ctags可以做到的事後, 就要開始介紹如何安裝。</p>
+
+<ul>
+<li>Mac Shell : brew install ctags (Mac 有自帶的 ctags 但無法使用, 記得要抓新的, 筆者使用的是 Exuberant Ctags 5.8)</li>
+<li>Ubuntu Shell: apt-get install ctags</li>
+<li>Windows: 有點久遠, 大概有執行可以抓下來安裝吧</li>
+</ul>
+
+<p>裝完之後記得修改User Setting加入</p>
+
+<pre><code class="language- language-json">"command": "/usr/local/Cellar/ctags/5.8_1/bin/ctags",
+</code></pre>
+
+<p>後面字串需對應到實際安裝 ctags 的執行檔路徑, 這樣便可以開始建立 index 使用了。
+<img src="https://farm2.staticflickr.com/1579/25123928811_0ef0bcb02c_z.jpg" alt=""></p>
+
+<hr>
+
+<h4 id="blockcursoreverywherehttpspackagecontroliopackagesblock20cursor20everywhere"><a href="https://packagecontrol.io/packages/Block%20Cursor%20Everywhere">Block Cursor Everywhere</a></h4>
+
+<p>在文字編輯器內要尋找鍵盤的游標有時候也是種困擾, 這個 Plugin 可以幫忙在 Vim 指令 mode 下提供 <mark> 方塊形</mark> 的鍵盤游標。</p>
+
+<blockquote>
+  <p><strong>Vim Mode</strong></p>
+  
+  <p>如果有使用過Linux開發的話, 常用的 Console 文字編輯器有兩套 Vi/Vim or Emac (筆者是只接觸過 vim), 在 Vim 底下有提供兩種 mode: 指令 mode 以及編輯 mode, 以往已經使用習慣 Vim 的朋友可以透過修改 Sublime 的 Setting file 模擬 Vim, 分別是將</p>
+  
+  <p><code>"ignored_packages": ["Vintage"],</code> 中的 Vintage 拿掉 (切換成可支援 Vim mode)</p>
+  
+  <p><code>"vintage_start_in_command_mode": true,</code> 加入這行, (開啟檔案時會優先啟動 Vim 的 command mode), 這個 Plugin 是搭配 Vintage 使用, 可以幫忙快速定位到目前游標的位置, 加速編輯上的效率。</p>
+</blockquote>
+
+<hr>
+
+<p>最後下面是筆者習慣的 Theme 跟 Color Schemes , Theme 是整個軟體介面的主題樣式, 而 Color Scheme 是用來做語法上色時的配色樣本, 網路都有一些常用或是推薦的樣式, 甚至已經幫忙整理好預覽圖, 都可以從而參考找出自己需要的。</p>
+
+<p><img src="https://farm2.staticflickr.com/1604/25098884972_a69241ee7c_z.jpg" alt=""></p>
+
+<h4 id="themesodahttpspackagecontroliopackagestheme2020soda"><a href="https://packagecontrol.io/packages/Theme%20-%20Soda">Theme - Soda</a></h4>
+
+<pre><code class="language- language-json">"soda_classic_tabs": true,
+"theme": "Soda Dark 3.sublime-theme",
+</code></pre>
+
+<p>(Add to Preferences.sublime-settings)</p>
+
+<h4 id="tomorrowcolorschemeshttpspackagecontroliopackagestomorrow20color20schemes"><a href="https://packagecontrol.io/packages/Tomorrow%20Color%20Schemes">Tomorrow Color Schemes</a></h4>
+
+<pre><code class="language- language-json">"color_scheme": "Packages/Tomorrow Color Schemes/Tomorrow-Night.tmTheme",
+</code></pre>
+
+<p>(Add to Preferences.sublime-settings)</p>
+        </section>
+
+        <footer class="post-footer">
+
+
+            <figure class="author-image">
+                <a class="img" href="../author/captain/" style="background-image: url(../content/images/2016/01/--.JPG)"><span class="hidden">Captain Vincent's Picture</span></a>
+            </figure>
+
+            <section class="author">
+                <h4><a href="../author/captain/">Captain Vincent</a></h4>
+
+                    <p>Read <a href="../author/captain/">more posts</a> by this author.</p>
+                <div class="author-meta">
+                    
+                    
+                </div>
+            </section>
+
+
+            <section class="share">
+                <h4>Share this post</h4>
+                <a class="icon-twitter" href="https://twitter.com/intent/tweet?text=Sublime%20Text%20%E6%95%99%E5%AD%B8&amp;url=http://captainvincent.github.io/sublime-jiao-xue/" onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
+                    <span class="hidden">Twitter</span>
+                </a>
+                <a class="icon-facebook" href="https://www.facebook.com/sharer/sharer.php?u=http://captainvincent.github.io/sublime-jiao-xue/" onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;">
+                    <span class="hidden">Facebook</span>
+                </a>
+                <a class="icon-google-plus" href="https://plus.google.com/share?url=http://captainvincent.github.io/sublime-jiao-xue/" onclick="window.open(this.href, 'google-plus-share', 'width=490,height=530');return false;">
+                    <span class="hidden">Google+</span>
+                </a>
+            </section>
+
+            <div id="disqus_thread"></div>
+            <script>
+            /**
+            * RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+            * LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables
+            */
+
+            var disqus_config = function () {
+                this.page.url = 'http://captainvincent.github.io/sublime-jiao-xue/'; // Replace PAGE_URL with your page's canonical URL variable
+                this.page.identifier = 'ghost-6'; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+            };
+
+            (function() { // DON'T EDIT BELOW THIS LINE
+                var d = document, s = d.createElement('script');
+
+                s.src = '//captainvincent.disqus.com/embed.js';
+
+                s.setAttribute('data-timestamp', +new Date());
+                (d.head || d.body).appendChild(s);
+            })();
+            </script>
+            <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+
+        </footer>
+
+    </article>
+</main>
+
+<aside class="read-next">
+    <a class="read-next-story prev no-cover" href="../duo-kong-cao-zuo-mi-ji-bi-ji/">
+        <section class="post">
+            <h2>多空操作秘笈筆記 (Mind Map)</h2>
+            <p>原名      Secrets For Profiting In Bull And Bear Markets by Stan Weinstein      別名      史丹溫斯坦稱傲牛熊市的秘密 重點摘要、心得 書中強調的是透過 技術面 來分析趨勢,…</p>
+        </section>
+    </a>
+</aside>
+
+
+
+
+        <footer class="site-footer clearfix">
+            <section class="copyright"><a href="../">Hello World! I'm Vincent</a> © 2016</section>
+            <section class="poweredby">Proudly published with <a href="https://ghost.org">Ghost</a></section>
+        </footer>
+
+    </div>
+
+    <script type="text/javascript" src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+    
+
+    <script type="text/javascript" src="../assets/js/jquery.fitvids.js?v=7583b8f102"></script>
+    <script type="text/javascript" src="../assets/js/prism.js?v=7583b8f102"></script> 
+    <script type="text/javascript" src="../assets/js/index.js?v=7583b8f102"></script>
+
+</body>

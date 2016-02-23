@@ -1,4 +1,213 @@
-<rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:media="http://search.yahoo.com/mrss/" version="2.0"><channel><title>Hello World! I'm Vincent</title><description>Thoughts, stories and ideas.</description><link>http://localhost:2368/</link><generator>Ghost 0.7</generator><lastBuildDate>Sat, 20 Feb 2016 19:55:07 GMT</lastBuildDate><atom:link href="http://localhost:2368/rss/" rel="self" type="application/rss+xml"/><ttl>60</ttl><item><title>多空操作秘笈筆記 (Mind Map)</title><description>&lt;blockquote&gt;
+<rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:media="http://search.yahoo.com/mrss/" version="2.0"><channel><title>Hello World! I'm Vincent</title><description>Thoughts, stories and ideas.</description><link>http://localhost:2368/</link><generator>Ghost 0.7</generator><lastBuildDate>Tue, 23 Feb 2016 18:20:57 GMT</lastBuildDate><atom:link href="http://localhost:2368/rss/" rel="self" type="application/rss+xml"/><ttl>60</ttl><item><title>Sublime Text 教學</title><description>&lt;blockquote&gt;
+  &lt;p&gt;筆者按: 網路上關於 Sublime 的教學其實已經多如繁星, 所以本篇說為教學, 充其量目的也只是敝人的備忘錄而已 (笑)。&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h4 id=""&gt;引言&lt;/h4&gt;
+
+&lt;p&gt;在前公司待了三年多快四年, 一直都是在 Windows 上透過 SSH 連到 Linux 的 build server 做開發, 常使用的語言為 C++、C, 而在前公司最普遍的 trace code 工具是有名的 &lt;del&gt;Source Insight&lt;/del&gt;, 但對我來說有以下的缺點:&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;&lt;strong&gt;非跨平台&lt;/strong&gt; &lt;br&gt;
+我個人電腦使用的環境是 OSX, 所以對於開發工具需在公司跟家裡做切換, 使用的意願上其實是非常低, 不外乎在工具的使用也是有所謂的學習曲線, 需分散心力來維持兩套是滿浪費精力的。
+(要在 Mac 上執行 Windows 程式就我所知也有三種方式, 一種是安裝雙系統共存, 再來是使用虛擬機器VMWare, 最後則是透過 Wine 來安裝, 但會喜歡使用 Mac 的人其實對優雅都有種偏執, 所以我想還是能省則省吧!&lt;/li&gt;&lt;/ol&gt;</description><link>http://localhost:2368/sublime-jiao-xue/</link><guid isPermaLink="false">4c4675c9-609b-459f-87e2-f2eb84fcd1b9</guid><dc:creator>Captain Vincent</dc:creator><pubDate>Mon, 22 Feb 2016 18:24:00 GMT</pubDate><content:encoded>&lt;blockquote&gt;
+  &lt;p&gt;筆者按: 網路上關於 Sublime 的教學其實已經多如繁星, 所以本篇說為教學, 充其量目的也只是敝人的備忘錄而已 (笑)。&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h4 id=""&gt;引言&lt;/h4&gt;
+
+&lt;p&gt;在前公司待了三年多快四年, 一直都是在 Windows 上透過 SSH 連到 Linux 的 build server 做開發, 常使用的語言為 C++、C, 而在前公司最普遍的 trace code 工具是有名的 &lt;del&gt;Source Insight&lt;/del&gt;, 但對我來說有以下的缺點:&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;&lt;strong&gt;非跨平台&lt;/strong&gt; &lt;br&gt;
+我個人電腦使用的環境是 OSX, 所以對於開發工具需在公司跟家裡做切換, 使用的意願上其實是非常低, 不外乎在工具的使用也是有所謂的學習曲線, 需分散心力來維持兩套是滿浪費精力的。
+(要在 Mac 上執行 Windows 程式就我所知也有三種方式, 一種是安裝雙系統共存, 再來是使用虛擬機器VMWare, 最後則是透過 Wine 來安裝, 但會喜歡使用 Mac 的人其實對優雅都有種偏執, 所以我想還是能省則省吧!)。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;使用介面非常醜&lt;/strong&gt; &lt;br&gt;
+這可能主觀意識成分居多, 而且多半應該是來自一種對於 Windows 視窗樣式的厭惡吧! 但気持ち (Kimochi) 有時也是這麼重要～ (攤)。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;要$$&lt;/strong&gt; &lt;br&gt;
+&lt;del&gt;雖然公司都...&lt;/del&gt;, 嗯, 我什麼都沒說。  &lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;笨重&lt;/strong&gt; &lt;br&gt;
+匯入專案以及建立 Source tree 需要滿長的時間 (尤其是龐大的專案時), 加上使用起來一直有種跟不上思緒的頓感 (&lt;del&gt;哈味&lt;/del&gt;)。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;模糊搜尋做得不夠好&lt;/strong&gt; &lt;br&gt;
+小弟記憶力一直不太好, 所以這功能也滿在意的。&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;最後當工作快滿一年的時候, 經由一位快離職的同事分享, 開始認識了 Sublime, 也就一直擁抱到現在了。&lt;/p&gt;
+
+&lt;hr&gt;
+
+&lt;h2 id="step1installsublime"&gt;Step 1. Install Sublime&lt;/h2&gt;
+
+&lt;p&gt;首先可以先至官網抓取最新的版本 &lt;a href="http://www.sublimetext.com/2"&gt;Sublime2&lt;/a&gt;、&lt;a href="http://www.sublimetext.com/3"&gt;Sublime3&lt;/a&gt;, 跟一般平台上的應用程式安裝方式無異 (所以這邊省略讓各位自行摸索一下), 接著要 &lt;strong&gt;安裝最重要的套件 Package Control x3&lt;/strong&gt; (筆者懶得打三遍, 但希望你們明白這真的很重要!), 有點類似 Ubuntu 的 apt-get、Mac 的 Homebrew、Python 的 Pip、Node.js 的 npm 關係, 這是一個屬於 Sublime 套件管理的 Plugin (由於實在太方便了, 沒意外的話應該是每個用戶必先安裝, &lt;del&gt;除非天生反骨&lt;/del&gt;)。&lt;/p&gt;
+
+&lt;h2 id="step2installpackagecontrol"&gt;Step 2. Install Package Control&lt;/h2&gt;
+
+&lt;p&gt;Package Control的安裝方式也很簡易 &lt;a href="https://packagecontrol.io/installation"&gt;Package Control安裝頁面&lt;/a&gt; 有提供 Sublime Text 2 跟 Sublime Text 3 的 Command, 執行 Sublime 後按 &lt;code&gt;Ctrl + `&lt;/code&gt; (`是鍵盤最左上角那個) 叫出 Sublime 的 Console Panel (或是透過操作畫面上方的 Menu 選單 &lt;code&gt;View -&amp;gt; Show Console&lt;/code&gt; 也可以叫出)&lt;/p&gt;
+
+&lt;p&gt;&lt;img src="https://farm2.staticflickr.com/1513/24572921463_63fa373e0d.jpg" alt=""&gt;&lt;/p&gt;
+
+&lt;p&gt;複製貼上你下載版本的指令進去按 &lt;code&gt;Enter&lt;/code&gt; 即可 (注意不要複製到行尾或行頭多餘空白格), 安裝完成之後可以再按一次按 &lt;code&gt;Ctrl + `&lt;/code&gt; 或是 &lt;code&gt;ESC&lt;/code&gt; 關掉Console。&lt;/p&gt;
+
+&lt;p&gt;&lt;img src="https://farm2.staticflickr.com/1704/24569074674_1c37755a8d_z.jpg" alt=""&gt;&lt;/p&gt;
+
+&lt;p&gt;此時已經可以執行 Package Control 的相關指令, 方式一樣是兩種 (這部分的操作很頻繁, 所以筆者平時都是以快速鍵操作為主)&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;透過操作畫面上方的 Menu 選單 &lt;code&gt;Sublime Text -&amp;gt; Preference -&amp;gt; Package Control&lt;/code&gt;  &lt;/li&gt;
+&lt;li&gt;按 &lt;code&gt;Ctrl/Cmd(Windows/Mac) + Shift + P&lt;/code&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;&lt;img src="https://farm2.staticflickr.com/1469/24569403644_79a1f874f2.jpg" alt=""&gt;&lt;/p&gt;
+
+&lt;p&gt;出現輸入框後, 可以針對 Package的操作輸入以下 Keywords (ex. install、remove、list)&lt;/p&gt;
+
+&lt;p&gt;&lt;img src="https://farm2.staticflickr.com/1619/25173739056_94164dac33_z.jpg" alt=""&gt;&lt;/p&gt;
+
+&lt;p&gt;常見的操作說明如下&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;List Package&lt;/strong&gt;: 列出已安裝的 Package (這邊可以試著鍵入 list, 輸入框的模糊搜尋會幫你選取到match 的指令, 相當方便的使用者體驗)&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Install Package&lt;/strong&gt;: 左下會有個移動的等號 "=" 表示正在搜尋可以安裝的Package, 耐心等待跑完之後, 會彈出類似下拉式的選單供選擇 (挑選欲安裝的Package一樣可以鍵入關鍵字, 讓模糊搜尋幫助你挑選)&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Remove Package&lt;/strong&gt;: 列出已安裝的Package, 提供選取刪除&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;另外, 在挑選 Plugin 安裝的部分, 除了可以先上網看看相關領域開發者都推薦使用的之外, 也可上 &lt;a href="https://packagecontrol.io/packages/Package%20Control"&gt;Package Control 官網&lt;/a&gt; 透過一些關鍵字來尋找, 跟在Sublime裡面搜尋的差別在於, 官網上的會提供 Rank 讓你知道這個 Package 被安裝的熱門程度, 較多人使用的 Plugin 在維護跟品質上都相對比較有保障。&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;註&lt;/p&gt;
+  
+  &lt;p&gt;Cmd = Command key define in Mac Keyboard&lt;/p&gt;
+  
+  &lt;p&gt;&lt;code&gt;Ctrl/Cmd(Windows/Mac) + Shift + P&lt;/code&gt;, 透過這組快速鍵叫出來的是 Sublime 的 Command Palette (也可從 Menu 選單裡的 Tool 選項叫出來), 透過這個 Command Palette 可用來呼叫許多其他 Plugin 預設的功能, 所以絕大部份的時候只需要記得這個快速鍵, 就已經相當方便了。&lt;/p&gt;
+  
+  &lt;p&gt;Ex. git plugin也是在這個輸入框內做操作&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h2 id="step3"&gt;Step 3. 推薦一些筆者安裝使用的套件&lt;/h2&gt;
+
+&lt;p&gt;(這裡先介紹一般通用的套件)&lt;/p&gt;
+
+&lt;p&gt;透過 Package Control 都可以輕易的 Install 以下的 Plugin 協助你提升工作效率, 而需注意的是部分 Plugin 安裝之後, 有時會需要做一些客製化的調整 (例如修改 Package Setting 檔, 從 Menu 選單 Preferences -&gt; Package Setting -&gt; 挑選你要修改的 Plugin)&lt;/p&gt;
+
+&lt;p&gt;&lt;img src="https://farm2.staticflickr.com/1586/25174133666_ec6ba6156d_z.jpg" alt=""&gt;&lt;/p&gt;
+
+&lt;p&gt;筆者似乎從 Sublime Text 3 開始就不能直接修改 Default 的 Setting, 需要打開 User 的 Setting 來做變更 (如上圖), 不過這也是建立良好修改習慣的開始。&lt;/p&gt;
+
+&lt;hr&gt;
+
+&lt;h4 id="highlightwordshttpspackagecontroliopackageshighlightwords"&gt;&lt;a href="https://packagecontrol.io/packages/HighlightWords"&gt;HighlightWords&lt;/a&gt;&lt;/h4&gt;
+
+&lt;p&gt;這個套件的使用來自於 Source Insight 裡我覺得很方便的功能, 在 Source Insight 裡透過 &lt;code&gt;Shift + F8&lt;/code&gt; 來常駐 (持續性) 的標記某個單詞 (同時也會標記這整個文本裡所有出現的地方, 有助於 trace code), 但在 Sublime 中, 雖然選取文字時會幫你標記, 但滑鼠點擊它處則標記即消失, 無法保持持續標記 (&lt;mark&gt;Highlight&lt;/mark&gt;) 的狀態, 另外在剛接觸這個套件的版本所提供的方式, 是透過快速鍵後只會彈出最下排一個輸入框, 提供輸入想標記的單詞, 而要取消標記也是刪除這輸入框裡的內容, 隨著我跟前同事私下研究改進, 目前已可透過 &lt;code&gt;Cmd + Shift + H&lt;/code&gt; 來 Highlight 游標目前停留的字詞, 並對同樣的字詞再按一次快速鍵則取消標記, 使用方式已與Source Insight無異, 甚至更好用。&lt;/p&gt;
+
+&lt;hr&gt;
+
+&lt;h4 id="brackethighlighterhttpspackagecontroliopackagesbrackethighlighter"&gt;&lt;a href="https://packagecontrol.io/packages/BracketHighlighter"&gt;BracketHighlighter&lt;/a&gt;&lt;/h4&gt;
+
+&lt;p&gt;Trace code 滿常需要的除了前面標記變數的功能以外, 另外也需要幫忙判斷括號從哪括到哪, 這Plugin就提供了這樣的的幫助。&lt;/p&gt;
+
+&lt;p&gt;注意, 這邊筆者會將Setting修改成如下, 以呈現較佳的視覺效果&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class="language-json"&gt;"default": {
+"icon": "dot",
+// BH1's original default color for reference
+"color": "entity.name.class",
+//"color": "brackethighlighter.default",
+"style": "block"
+},
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;hr&gt;
+
+&lt;h4 id="ctagshttpspackagecontroliopackagesctags"&gt;&lt;a href="https://packagecontrol.io/packages/CTags"&gt;Ctags&lt;/a&gt;&lt;/h4&gt;
+
+&lt;p&gt;也是在 trace code 方面個人覺得非常好用的 Plugin 之一, 先介紹 ctags 本身是一個專門幫忙對 soruce code、header file 產生 index file 用的工具, 且在一開始最早僅支援 C, 後來延伸至今已可支援以下語言&lt;/p&gt;
+
+&lt;p&gt;Ant、Asm、Asp、Awk、Basic、BETA、C、C++、C#、Cobol、DosBatch、Eiffel、Erlang、Flex、Fortran、HTML、Java、JavaScript、Lisp、Lua、Make、MatLab、OCaml、Pascal、Perl、PHP、Python、REXX、Ruby、Scheme、Sh、SLang、SML、SQL、Tcl、Tex、Vera、Verilog、VHDL、Vim、YACC&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;可以透過 Shell 底下的 Command 來查詢支援的語言&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;pre&gt;&lt;code class="language- language-bash"&gt;ctags --list-languages  
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;另外 ctags 本身也可以支援對語言或副檔名做延伸的定義&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;ex. 在Sublime中使用的話, 在 Ctags 的 Plugin Setting 內加入下面這句 (等於將後面參數傳給 ctags )  &lt;/p&gt;
+
+&lt;pre&gt;&lt;code class="language- language-json"&gt;"opts" : ["--langmap=C:+.mq4", "--extra=+q", "--fields=+Saim", "--c-kinds=+lpx", "--c++-kinds=+lpx", "-R"],
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;--extra=+q --fields=+Saim&lt;/strong&gt; 指名要建立的 tags 包含 Class 內 member 的資訊&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;--c-kinds=+lpx --c++-kinds=+lpx&lt;/strong&gt; 是用來對底下參數打開
+&lt;ul&gt;&lt;li&gt;&lt;strong&gt;l&lt;/strong&gt;  local variables [off]&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;p&lt;/strong&gt;  function prototypes&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;x&lt;/strong&gt;  external and forward variable declarations [off]&lt;/li&gt;&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;-R&lt;/strong&gt; 則是整個目錄底下遞迴的方式去循環查找建立 index&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;--langmap=C:+.mq4&lt;/strong&gt; 是筆者想針對 MT4 平台開發程式, 副檔名使用的是 mq4, 但語法本身很接近 C 語言, 所以 extend C parser 來幫忙建立 tag file&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;另外透過以下指令可以看 ctags 對每個語言建立 index 的詳細程度, 部分可供 On/Off&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;pre&gt;&lt;code class="language- language-bash"&gt;ctags --list-kinds  
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;以上大概介紹完ctags可以做到的事後, 就要開始介紹如何安裝。&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Mac Shell : brew install ctags (Mac 有自帶的 ctags 但無法使用, 記得要抓新的, 筆者使用的是 Exuberant Ctags 5.8)&lt;/li&gt;
+&lt;li&gt;Ubuntu Shell: apt-get install ctags&lt;/li&gt;
+&lt;li&gt;Windows: 有點久遠, 大概有執行可以抓下來安裝吧&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;裝完之後記得修改User Setting加入&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class="language- language-json"&gt;"command": "/usr/local/Cellar/ctags/5.8_1/bin/ctags",
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;後面字串需對應到實際安裝 ctags 的執行檔路徑, 這樣便可以開始建立 index 使用了。
+&lt;img src="https://farm2.staticflickr.com/1579/25123928811_0ef0bcb02c_z.jpg" alt=""&gt;&lt;/p&gt;
+
+&lt;hr&gt;
+
+&lt;h4 id="blockcursoreverywherehttpspackagecontroliopackagesblock20cursor20everywhere"&gt;&lt;a href="https://packagecontrol.io/packages/Block%20Cursor%20Everywhere"&gt;Block Cursor Everywhere&lt;/a&gt;&lt;/h4&gt;
+
+&lt;p&gt;在文字編輯器內要尋找鍵盤的游標有時候也是種困擾, 這個 Plugin 可以幫忙在 Vim 指令 mode 下提供 &lt;mark&gt; 方塊形&lt;/mark&gt; 的鍵盤游標。&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;&lt;strong&gt;Vim Mode&lt;/strong&gt;&lt;/p&gt;
+  
+  &lt;p&gt;如果有使用過Linux開發的話, 常用的 Console 文字編輯器有兩套 Vi/Vim or Emac (筆者是只接觸過 vim), 在 Vim 底下有提供兩種 mode: 指令 mode 以及編輯 mode, 以往已經使用習慣 Vim 的朋友可以透過修改 Sublime 的 Setting file 模擬 Vim, 分別是將&lt;/p&gt;
+  
+  &lt;p&gt;&lt;code&gt;"ignored_packages": ["Vintage"],&lt;/code&gt; 中的 Vintage 拿掉 (切換成可支援 Vim mode)&lt;/p&gt;
+  
+  &lt;p&gt;&lt;code&gt;"vintage_start_in_command_mode": true,&lt;/code&gt; 加入這行, (開啟檔案時會優先啟動 Vim 的 command mode), 這個 Plugin 是搭配 Vintage 使用, 可以幫忙快速定位到目前游標的位置, 加速編輯上的效率。&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;hr&gt;
+
+&lt;p&gt;最後下面是筆者習慣的 Theme 跟 Color Schemes , Theme 是整個軟體介面的主題樣式, 而 Color Scheme 是用來做語法上色時的配色樣本, 網路都有一些常用或是推薦的樣式, 甚至已經幫忙整理好預覽圖, 都可以從而參考找出自己需要的。&lt;/p&gt;
+
+&lt;p&gt;&lt;img src="https://farm2.staticflickr.com/1604/25098884972_a69241ee7c_z.jpg" alt=""&gt;&lt;/p&gt;
+
+&lt;h4 id="themesodahttpspackagecontroliopackagestheme2020soda"&gt;&lt;a href="https://packagecontrol.io/packages/Theme%20-%20Soda"&gt;Theme - Soda&lt;/a&gt;&lt;/h4&gt;
+
+&lt;pre&gt;&lt;code class="language- language-json"&gt;"soda_classic_tabs": true,
+"theme": "Soda Dark 3.sublime-theme",
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;(Add to Preferences.sublime-settings)&lt;/p&gt;
+
+&lt;h4 id="tomorrowcolorschemeshttpspackagecontroliopackagestomorrow20color20schemes"&gt;&lt;a href="https://packagecontrol.io/packages/Tomorrow%20Color%20Schemes"&gt;Tomorrow Color Schemes&lt;/a&gt;&lt;/h4&gt;
+
+&lt;pre&gt;&lt;code class="language- language-json"&gt;"color_scheme": "Packages/Tomorrow Color Schemes/Tomorrow-Night.tmTheme",
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;(Add to Preferences.sublime-settings)&lt;/p&gt;</content:encoded></item><item><title>多空操作秘笈筆記 (Mind Map)</title><description>&lt;blockquote&gt;
   &lt;p&gt;原名&lt;/p&gt;
   
   &lt;p&gt;Secrets For Profiting In Bull And Bear Markets by &lt;strong&gt;Stan Weinstein&lt;/strong&gt;&lt;/p&gt;
@@ -8,7 +217,7 @@
   &lt;p&gt;史丹溫斯坦稱傲牛熊市的秘密&lt;/p&gt;
 &lt;/blockquote&gt;
 
-&lt;h3 id=""&gt;重點摘要、心得&lt;/h3&gt;
+&lt;h2 id=""&gt;重點摘要、心得&lt;/h2&gt;
 
 &lt;p&gt;書中強調的是透過 &lt;strong&gt;技術面&lt;/strong&gt; 來分析趨勢, 介紹的內容分別從最基本的術語解釋, 先跟讀者做認知上對齊的動作 (這部分也是筆者在閱讀此書上對作者用心感受最深的部分), 再來進入此書的正題, 趨勢的階段性介紹 (分別為打底、上升、頭部、下降四個階段), 教你如何辨認當前走勢是處於何種階段; 當瞭解了走勢呈現出的階段資訊後, 告訴讀者位在何時是合適的進場時機 (突破至第二階段以及連續買進的突破出現時), 搭配著作者羅列的圖表可以循序漸進的學習並練習, 最後再用額外的章節指導這門藝術要如何更加精煉, 到此我們已完成了前半部的工程 (套書中的說法就是 - 「&lt;strong&gt;你已經登堂了&lt;/strong&gt;」)。&lt;/p&gt;
 
@@ -24,7 +233,7 @@
   &lt;p&gt;史丹溫斯坦稱傲牛熊市的秘密&lt;/p&gt;
 &lt;/blockquote&gt;
 
-&lt;h3 id=""&gt;重點摘要、心得&lt;/h3&gt;
+&lt;h2 id=""&gt;重點摘要、心得&lt;/h2&gt;
 
 &lt;p&gt;書中強調的是透過 &lt;strong&gt;技術面&lt;/strong&gt; 來分析趨勢, 介紹的內容分別從最基本的術語解釋, 先跟讀者做認知上對齊的動作 (這部分也是筆者在閱讀此書上對作者用心感受最深的部分), 再來進入此書的正題, 趨勢的階段性介紹 (分別為打底、上升、頭部、下降四個階段), 教你如何辨認當前走勢是處於何種階段; 當瞭解了走勢呈現出的階段資訊後, 告訴讀者位在何時是合適的進場時機 (突破至第二階段以及連續買進的突破出現時), 搭配著作者羅列的圖表可以循序漸進的學習並練習, 最後再用額外的章節指導這門藝術要如何更加精煉, 到此我們已完成了前半部的工程 (套書中的說法就是 - 「&lt;strong&gt;你已經登堂了&lt;/strong&gt;」)。&lt;/p&gt;
 
@@ -102,8 +311,9 @@ open http://localhost:9000
 
 &lt;h2 id="syntaxhighlightinghost"&gt;Syntax Highlight in Ghost&lt;/h2&gt;
 
-&lt;p&gt;使用 &lt;a href="http://prismjs.com/download.html"&gt;prismjs&lt;/a&gt; , 首先先至官網上如下圖操作
-&lt;a data-flickr-embed="true" href="https://www.flickr.com/photos/138186136@N06/24679275812/in/album-72157661932318534/" title="001 PrismJS"&gt;&lt;img src="https://farm2.staticflickr.com/1468/24679275812_eb4f8dafe5_z.jpg" width="640" height="604" style="display:block; margin:auto;" alt="001 PrismJS"&gt;&lt;/a&gt;&lt;script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"&gt;&lt;/script&gt;&lt;/p&gt;
+&lt;p&gt;使用 &lt;a href="http://prismjs.com/download.html"&gt;prismjs&lt;/a&gt; , 首先先至官網上如下圖操作&lt;/p&gt;
+
+&lt;p&gt;&lt;img src="https://farm2.staticflickr.com/1468/24679275812_eb4f8dafe5_z.jpg" alt=""&gt;&lt;/p&gt;
 
 &lt;ol&gt;
 &lt;li&gt;透過預覽來選擇不同的 Theme , 這邊設計有點詭異的地方在 preview window 在網頁底部  &lt;/li&gt;
@@ -112,7 +322,7 @@ open http://localhost:9000
 &lt;li&gt;接下來移至網頁底部分別按下按鈕來下載 js 與 css 檔案 (prism.css &amp;amp; prism.js)&lt;/li&gt;
 &lt;/ol&gt;
 
-&lt;p&gt;&lt;a data-flickr-embed="true" href="https://www.flickr.com/photos/138186136@N06/24797117325/in/album-72157661932318534/" title="002 PrismJS2"&gt;&lt;img src="https://farm2.staticflickr.com/1612/24797117325_4a9c842678.jpg" width="500" height="256" style="display:block; margin:auto;" alt="002 PrismJS2"&gt;&lt;/a&gt;&lt;script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"&gt;&lt;/script&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://farm2.staticflickr.com/1612/24797117325_4a9c842678.jpg" alt=""&gt;&lt;/p&gt;
 
 &lt;p&gt;下載完後再將 prism.css &amp;amp; prism.js 分別放置當前 Ghost 所使用的 Theme 底下路徑中 (Ghost 所預設使用的 Theme 為 casper)&lt;/p&gt;
 
@@ -158,23 +368,23 @@ open http://localhost:9000
 
 &lt;p&gt;第一步先註冊一個 Disqus 帳號&lt;/p&gt;
 
-&lt;p&gt;&lt;a data-flickr-embed="true" href="https://www.flickr.com/photos/138186136@N06/24187392983/in/album-72157661932318534/" title="DisqusCreate"&gt;&lt;img src="https://farm2.staticflickr.com/1570/24187392983_8947254fb3_z.jpg" width="432" height="567" style="display:block; margin:auto;" alt="DisqusCreate"&gt;&lt;/a&gt;&lt;script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"&gt;&lt;/script&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://farm2.staticflickr.com/1570/24187392983_8947254fb3_z.jpg" alt=""&gt;&lt;/p&gt;
 
 &lt;p&gt;登入後先點選右上角的 Setting 選項 Add Disqus To Site&lt;/p&gt;
 
-&lt;p&gt;&lt;a data-flickr-embed="true" href="https://www.flickr.com/photos/138186136@N06/24814247255/in/album-72157661932318534/" title="DisqusSelectCreate"&gt;&lt;img src="https://farm2.staticflickr.com/1639/24814247255_60a5425209_n.jpg" width="181" height="320" style="display:block; margin:auto;" alt="DisqusSelectCreate"&gt;&lt;/a&gt;&lt;script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"&gt;&lt;/script&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://farm2.staticflickr.com/1639/24814247255_60a5425209_n.jpg" alt=""&gt;&lt;/p&gt;
 
 &lt;p&gt;再點選下圖中間的 Start Using Engage 或右上方 Install on Your Site 進入取得識別用的 Disqus URL&lt;/p&gt;
 
-&lt;p&gt;&lt;a data-flickr-embed="true" href="https://www.flickr.com/photos/138186136@N06/24186062574/in/album-72157661932318534/" title="DisqusCreateApp"&gt;&lt;img src="https://farm2.staticflickr.com/1546/24186062574_15a900c299_z.jpg" width="640" height="271" style="display:block; margin:auto;" alt="DisqusCreateApp"&gt;&lt;/a&gt;&lt;script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"&gt;&lt;/script&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://farm2.staticflickr.com/1546/24186062574_15a900c299_z.jpg" alt=""&gt;&lt;/p&gt;
 
 &lt;p&gt;註冊一個識別用的 Disqus URL&lt;/p&gt;
 
-&lt;p&gt;&lt;a data-flickr-embed="true" href="https://www.flickr.com/photos/138186136@N06/24187392843/in/album-72157661932318534/" title="DisqusSetupURL"&gt;&lt;img src="https://farm2.staticflickr.com/1695/24187392843_907fa17378_z.jpg" width="640" height="451" style="display:block; margin:auto;" alt="DisqusSetupURL"&gt;&lt;/a&gt;&lt;script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"&gt;&lt;/script&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://farm2.staticflickr.com/1695/24187392843_907fa17378_z.jpg" alt=""&gt;&lt;/p&gt;
 
 &lt;p&gt;取得用來內嵌的 Disqus Script&lt;/p&gt;
 
-&lt;p&gt;&lt;a data-flickr-embed="true" href="https://www.flickr.com/photos/138186136@N06/24186062594/in/album-72157661932318534/" title="DisqusGetTheScript"&gt;&lt;img src="https://farm2.staticflickr.com/1719/24186062594_26746cf4f3.jpg" width="500" height="493" style="display:block; margin:auto;" alt="DisqusGetTheScript"&gt;&lt;/a&gt;&lt;script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"&gt;&lt;/script&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://farm2.staticflickr.com/1719/24186062594_26746cf4f3.jpg" alt=""&gt;&lt;/p&gt;
 
 &lt;p&gt;接著會得到的類似以下內文的 Script&lt;/p&gt;
 
@@ -226,11 +436,13 @@ this.page.identifier = 'ghost-{{id}}';
 
 &lt;h2 id="googleanalytics"&gt;添加 Google Analytics&lt;/h2&gt;
 
-&lt;p&gt;先建立 &lt;a href="https://accounts.google.com/SignUpExpress?service=analytics&amp;amp;continue=https%3A%2F%2Fanalytics.google.com%2Fanalytics%2Fweb%2F"&gt;Google Analytisc Account&lt;/a&gt; , 並先取得 Tracking Code 類似下圖 
-&lt;a data-flickr-embed="true" href="https://www.flickr.com/photos/138186136@N06/24520255780/in/dateposted-public/" title="Google_Analytics"&gt;&lt;img src="https://farm2.staticflickr.com/1519/24520255780_f1e379d615.jpg" width="500" height="219" style="display:block; margin:auto;" alt="Google_Analytics"&gt;&lt;/a&gt;&lt;script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"&gt;&lt;/script&gt; &lt;br&gt;
-在透過 Ghost Platform 所提供的管理頁面選項 Code Injection&lt;/p&gt;
+&lt;p&gt;先建立 &lt;a href="https://accounts.google.com/SignUpExpress?service=analytics&amp;amp;continue=https%3A%2F%2Fanalytics.google.com%2Fanalytics%2Fweb%2F"&gt;Google Analytisc Account&lt;/a&gt; , 並先取得 Tracking Code 類似下圖 &lt;/p&gt;
 
-&lt;p&gt;&lt;a data-flickr-embed="true" href="https://www.flickr.com/photos/138186136@N06/24789705376/in/album-72157661932318534/" title="CodeInjection"&gt;&lt;img src="https://farm2.staticflickr.com/1664/24789705376_446840ebd2_z.jpg" width="640" height="330" style="display:block; margin:auto;" alt="CodeInjection"&gt;&lt;/a&gt;&lt;script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"&gt;&lt;/script&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://farm2.staticflickr.com/1519/24520255780_f1e379d615.jpg" alt=""&gt;&lt;/p&gt;
+
+&lt;p&gt;再透過 Ghost Platform 所提供的管理頁面選項 Code Injection&lt;/p&gt;
+
+&lt;p&gt;&lt;img src="https://farm2.staticflickr.com/1664/24789705376_446840ebd2_z.jpg" alt=""&gt;&lt;/p&gt;
 
 &lt;p&gt;選擇右上角 Save 之後就完成了。&lt;/p&gt;</content:encoded></item><item><title>How to setup Ghost blog platform (上)</title><description>&lt;p&gt;Reference Page &lt;a href="https://stefanscherer.github.io/setup-ghost-for-github-pages/"&gt;setup-ghost-for-github-pages&lt;/a&gt;&lt;/p&gt;
 
@@ -240,7 +452,8 @@ this.page.identifier = 'ghost-{{id}}';
   &lt;p&gt;用 Setup Ghost 作為 Ghost 部落格的第一篇文章也滿別具意義的, 不過在最一開始 Survey 時選用架設 Blog 的 Framework 是 &lt;a href="http://octopress.org/"&gt;Octopress&lt;/a&gt; , 但隨著架設完後一邊試用的體悟, 發現整個操作還真是 &lt;del&gt;Suck&lt;/del&gt; Geek啊! 只好再廣泛的涉略一下後選用了 Ghost。&lt;/p&gt;
 &lt;/blockquote&gt;
 
-&lt;p&gt;&lt;a data-flickr-embed="true" href="https://www.flickr.com/photos/138186136@N06/24635687672/" title="001 GhostEditor"&gt;&lt;img src="https://farm2.staticflickr.com/1532/24635687672_85473e64a4_z.jpg" width="640" height="321" style="display:block; margin:auto;" alt="001 GhostEditor"&gt;&lt;/a&gt;&lt;script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"&gt;&lt;/script&gt; 雖然 Octopress 與其同為支援 Ｍarkdown 的語法, 但選用Ghost的最大好處是後台已經整合了 Markdown的即視編輯器 (可能還稱不上殺手應用, 但已深得我心)  &lt;/p&gt;
+&lt;p&gt;&lt;img src="https://farm2.staticflickr.com/1532/24635687672_85473e64a4_z.jpg" alt=""&gt;
+雖然 Octopress 與其同為支援 Ｍarkdown 的語法, 但選用Ghost的最大好處是後台已經整合了 Markdown的即視編輯器 (可能還稱不上殺手應用, 但已深得我心)&lt;/p&gt;
 
 &lt;h2 id="beforeinstallnodejs"&gt;Before Install Node.js&lt;/h2&gt;
 
@@ -253,7 +466,8 @@ this.page.identifier = 'ghost-{{id}}';
   &lt;p&gt;用 Setup Ghost 作為 Ghost 部落格的第一篇文章也滿別具意義的, 不過在最一開始 Survey 時選用架設 Blog 的 Framework 是 &lt;a href="http://octopress.org/"&gt;Octopress&lt;/a&gt; , 但隨著架設完後一邊試用的體悟, 發現整個操作還真是 &lt;del&gt;Suck&lt;/del&gt; Geek啊! 只好再廣泛的涉略一下後選用了 Ghost。&lt;/p&gt;
 &lt;/blockquote&gt;
 
-&lt;p&gt;&lt;a data-flickr-embed="true" href="https://www.flickr.com/photos/138186136@N06/24635687672/" title="001 GhostEditor"&gt;&lt;img src="https://farm2.staticflickr.com/1532/24635687672_85473e64a4_z.jpg" width="640" height="321" style="display:block; margin:auto;" alt="001 GhostEditor"&gt;&lt;/a&gt;&lt;script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"&gt;&lt;/script&gt; 雖然 Octopress 與其同為支援 Ｍarkdown 的語法, 但選用Ghost的最大好處是後台已經整合了 Markdown的即視編輯器 (可能還稱不上殺手應用, 但已深得我心)  &lt;/p&gt;
+&lt;p&gt;&lt;img src="https://farm2.staticflickr.com/1532/24635687672_85473e64a4_z.jpg" alt=""&gt;
+雖然 Octopress 與其同為支援 Ｍarkdown 的語法, 但選用Ghost的最大好處是後台已經整合了 Markdown的即視編輯器 (可能還稱不上殺手應用, 但已深得我心)&lt;/p&gt;
 
 &lt;h2 id="beforeinstallnodejs"&gt;Before Install Node.js&lt;/h2&gt;
 

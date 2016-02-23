@@ -11,9 +11,9 @@
 
     <link rel="shortcut icon" href="../favicon.ico">
 
-    <link rel="stylesheet" type="text/css" href="../assets/css/screen.css?v=feb5343477">
+    <link rel="stylesheet" type="text/css" href="../assets/css/screen.css?v=7583b8f102">
     <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Merriweather:300,700,700italic,300italic%7COpen+Sans:700,400">
-    <link rel="stylesheet" type="text/css" href="../assets/css/prism.css?v=feb5343477">
+    <link rel="stylesheet" type="text/css" href="../assets/css/prism.css?v=7583b8f102">
     <link rel="canonical" href="index.html">
     <meta name="referrer" content="origin">
     
@@ -23,7 +23,7 @@
     <meta property="og:description" content="接著進入下一個主題, 如何部署 Ghost 到 git.io 以及 Ghost 進階的功能設定   (Syntax highlight, 使用 Disqus 添加留言功能, 添加 Google Analytics Buster 作者Blog中介紹 有提到是受了 Octopress 的啟發以及在命名上由來的惡趣味, ker ker... Ghostbusters 又透露自己年紀了  部署 Ghost 到 git.io 首先要部署 Ghost 到 git.io 需要先安裝 python 以及套件 buster...">
     <meta property="og:url" content="http://captainvincent.github.io/how-to-setup-ghost-blog-platform-xia/">
     <meta property="article:published_time" content="2016-02-03T10:57:59.011Z">
-    <meta property="article:modified_time" content="2016-02-04T16:42:36.377Z">
+    <meta property="article:modified_time" content="2016-02-22T21:58:55.243Z">
     <meta property="article:tag" content="Ghost">
     <meta property="article:tag" content="Octopress">
     <meta property="article:tag" content="prismjs">
@@ -50,7 +50,7 @@
     "headline": "How to setup Ghost blog platform (下)",
     "url": "http://captainvincent.github.io/how-to-setup-ghost-blog-platform-xia/",
     "datePublished": "2016-02-03T10:57:59.011Z",
-    "dateModified": "2016-02-04T16:42:36.377Z",
+    "dateModified": "2016-02-22T21:58:55.243Z",
     "keywords": "Ghost, Octopress, prismjs, Disqus",
     "description": "接著進入下一個主題, 如何部署 Ghost 到 git.io 以及 Ghost 進階的功能設定   (Syntax highlight, 使用 Disqus 添加留言功能, 添加 Google Analytics Buster 作者Blog中介紹 有提到是受了 Octopress 的啟發以及在命名上由來的惡趣味, ker ker... Ghostbusters 又透露自己年紀了  部署 Ghost 到 git.io 首先要部署 Ghost 到 git.io 需要先安裝 python 以及套件 buster..."
 }
@@ -151,8 +151,9 @@ open http://localhost:9000
 
 <h2 id="syntaxhighlightinghost">Syntax Highlight in Ghost</h2>
 
-<p>使用 <a href="http://prismjs.com/download.html">prismjs</a> , 首先先至官網上如下圖操作
-<a data-flickr-embed="true" href="https://www.flickr.com/photos/138186136@N06/24679275812/in/album-72157661932318534/" title="001 PrismJS"><img src="https://farm2.staticflickr.com/1468/24679275812_eb4f8dafe5_z.jpg" width="640" height="604" style="display:block; margin:auto;" alt="001 PrismJS"></a><script async src="http://embedr.flickr.com/assets/client-code.js" charset="utf-8"></script></p>
+<p>使用 <a href="http://prismjs.com/download.html">prismjs</a> , 首先先至官網上如下圖操作</p>
+
+<p><img src="https://farm2.staticflickr.com/1468/24679275812_eb4f8dafe5_z.jpg" alt=""></p>
 
 <ol>
 <li>透過預覽來選擇不同的 Theme , 這邊設計有點詭異的地方在 preview window 在網頁底部  </li>
@@ -161,7 +162,7 @@ open http://localhost:9000
 <li>接下來移至網頁底部分別按下按鈕來下載 js 與 css 檔案 (prism.css &amp; prism.js)</li>
 </ol>
 
-<p><a data-flickr-embed="true" href="https://www.flickr.com/photos/138186136@N06/24797117325/in/album-72157661932318534/" title="002 PrismJS2"><img src="https://farm2.staticflickr.com/1612/24797117325_4a9c842678.jpg" width="500" height="256" style="display:block; margin:auto;" alt="002 PrismJS2"></a><script async src="http://embedr.flickr.com/assets/client-code.js" charset="utf-8"></script></p>
+<p><img src="https://farm2.staticflickr.com/1612/24797117325_4a9c842678.jpg" alt=""></p>
 
 <p>下載完後再將 prism.css &amp; prism.js 分別放置當前 Ghost 所使用的 Theme 底下路徑中 (Ghost 所預設使用的 Theme 為 casper)</p>
 
@@ -207,23 +208,23 @@ open http://localhost:9000
 
 <p>第一步先註冊一個 Disqus 帳號</p>
 
-<p><a data-flickr-embed="true" href="https://www.flickr.com/photos/138186136@N06/24187392983/in/album-72157661932318534/" title="DisqusCreate"><img src="https://farm2.staticflickr.com/1570/24187392983_8947254fb3_z.jpg" width="432" height="567" style="display:block; margin:auto;" alt="DisqusCreate"></a><script async src="http://embedr.flickr.com/assets/client-code.js" charset="utf-8"></script></p>
+<p><img src="https://farm2.staticflickr.com/1570/24187392983_8947254fb3_z.jpg" alt=""></p>
 
 <p>登入後先點選右上角的 Setting 選項 Add Disqus To Site</p>
 
-<p><a data-flickr-embed="true" href="https://www.flickr.com/photos/138186136@N06/24814247255/in/album-72157661932318534/" title="DisqusSelectCreate"><img src="https://farm2.staticflickr.com/1639/24814247255_60a5425209_n.jpg" width="181" height="320" style="display:block; margin:auto;" alt="DisqusSelectCreate"></a><script async src="http://embedr.flickr.com/assets/client-code.js" charset="utf-8"></script></p>
+<p><img src="https://farm2.staticflickr.com/1639/24814247255_60a5425209_n.jpg" alt=""></p>
 
 <p>再點選下圖中間的 Start Using Engage 或右上方 Install on Your Site 進入取得識別用的 Disqus URL</p>
 
-<p><a data-flickr-embed="true" href="https://www.flickr.com/photos/138186136@N06/24186062574/in/album-72157661932318534/" title="DisqusCreateApp"><img src="https://farm2.staticflickr.com/1546/24186062574_15a900c299_z.jpg" width="640" height="271" style="display:block; margin:auto;" alt="DisqusCreateApp"></a><script async src="http://embedr.flickr.com/assets/client-code.js" charset="utf-8"></script></p>
+<p><img src="https://farm2.staticflickr.com/1546/24186062574_15a900c299_z.jpg" alt=""></p>
 
 <p>註冊一個識別用的 Disqus URL</p>
 
-<p><a data-flickr-embed="true" href="https://www.flickr.com/photos/138186136@N06/24187392843/in/album-72157661932318534/" title="DisqusSetupURL"><img src="https://farm2.staticflickr.com/1695/24187392843_907fa17378_z.jpg" width="640" height="451" style="display:block; margin:auto;" alt="DisqusSetupURL"></a><script async src="http://embedr.flickr.com/assets/client-code.js" charset="utf-8"></script></p>
+<p><img src="https://farm2.staticflickr.com/1695/24187392843_907fa17378_z.jpg" alt=""></p>
 
 <p>取得用來內嵌的 Disqus Script</p>
 
-<p><a data-flickr-embed="true" href="https://www.flickr.com/photos/138186136@N06/24186062594/in/album-72157661932318534/" title="DisqusGetTheScript"><img src="https://farm2.staticflickr.com/1719/24186062594_26746cf4f3.jpg" width="500" height="493" style="display:block; margin:auto;" alt="DisqusGetTheScript"></a><script async src="http://embedr.flickr.com/assets/client-code.js" charset="utf-8"></script></p>
+<p><img src="https://farm2.staticflickr.com/1719/24186062594_26746cf4f3.jpg" alt=""></p>
 
 <p>接著會得到的類似以下內文的 Script</p>
 
@@ -275,11 +276,13 @@ this.page.identifier = 'ghost-{{id}}';
 
 <h2 id="googleanalytics">添加 Google Analytics</h2>
 
-<p>先建立 <a href="https://accounts.google.com/SignUpExpress?service=analytics&amp;continue=https%3A%2F%2Fanalytics.google.com%2Fanalytics%2Fweb%2F">Google Analytisc Account</a> , 並先取得 Tracking Code 類似下圖 
-<a data-flickr-embed="true" href="https://www.flickr.com/photos/138186136@N06/24520255780/in/dateposted-public/" title="Google_Analytics"><img src="https://farm2.staticflickr.com/1519/24520255780_f1e379d615.jpg" width="500" height="219" style="display:block; margin:auto;" alt="Google_Analytics"></a><script async src="http://embedr.flickr.com/assets/client-code.js" charset="utf-8"></script> <br>
-在透過 Ghost Platform 所提供的管理頁面選項 Code Injection</p>
+<p>先建立 <a href="https://accounts.google.com/SignUpExpress?service=analytics&amp;continue=https%3A%2F%2Fanalytics.google.com%2Fanalytics%2Fweb%2F">Google Analytisc Account</a> , 並先取得 Tracking Code 類似下圖 </p>
 
-<p><a data-flickr-embed="true" href="https://www.flickr.com/photos/138186136@N06/24789705376/in/album-72157661932318534/" title="CodeInjection"><img src="https://farm2.staticflickr.com/1664/24789705376_446840ebd2_z.jpg" width="640" height="330" style="display:block; margin:auto;" alt="CodeInjection"></a><script async src="http://embedr.flickr.com/assets/client-code.js" charset="utf-8"></script></p>
+<p><img src="https://farm2.staticflickr.com/1519/24520255780_f1e379d615.jpg" alt=""></p>
+
+<p>再透過 Ghost Platform 所提供的管理頁面選項 Code Injection</p>
+
+<p><img src="https://farm2.staticflickr.com/1664/24789705376_446840ebd2_z.jpg" alt=""></p>
 
 <p>選擇右上角 Save 之後就完成了。</p>
         </section>
@@ -371,8 +374,8 @@ this.page.identifier = 'ghost-{{id}}';
     <script type="text/javascript" src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
     
 
-    <script type="text/javascript" src="../assets/js/jquery.fitvids.js?v=feb5343477"></script>
-    <script type="text/javascript" src="../assets/js/prism.js?v=feb5343477"></script> 
-    <script type="text/javascript" src="../assets/js/index.js?v=feb5343477"></script>
+    <script type="text/javascript" src="../assets/js/jquery.fitvids.js?v=7583b8f102"></script>
+    <script type="text/javascript" src="../assets/js/prism.js?v=7583b8f102"></script> 
+    <script type="text/javascript" src="../assets/js/index.js?v=7583b8f102"></script>
 
 </body>
