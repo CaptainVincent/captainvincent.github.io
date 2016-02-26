@@ -1,4 +1,238 @@
-<rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:media="http://search.yahoo.com/mrss/" version="2.0"><channel><title>Hello World! I'm Vincent</title><description>Thoughts, stories and ideas.</description><link>http://localhost:2368/</link><generator>Ghost 0.7</generator><lastBuildDate>Tue, 23 Feb 2016 18:20:57 GMT</lastBuildDate><atom:link href="http://localhost:2368/rss/" rel="self" type="application/rss+xml"/><ttl>60</ttl><item><title>Sublime Text 教學</title><description>&lt;blockquote&gt;
+<rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:media="http://search.yahoo.com/mrss/" version="2.0"><channel><title>Hello World! I'm Vincent</title><description>Thoughts, stories and ideas.</description><link>http://localhost:2368/</link><generator>Ghost 0.7</generator><lastBuildDate>Fri, 26 Feb 2016 22:34:29 GMT</lastBuildDate><atom:link href="http://localhost:2368/rss/" rel="self" type="application/rss+xml"/><ttl>60</ttl><item><title>Python 第一步 virtualenv</title><description>&lt;p&gt;剛開始接觸 Python 的時候, 最先了解到的是開發者社群的貢獻, 有別於 C/C++ 這類型語言給我的感覺, 在開發上使用第三方的函式庫, 是相當方便以及普遍的事情。&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;&lt;strong&gt;&lt;a href="https://pypi.python.org/pypi"&gt;Python Package Index (PyPI)&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;
+  
+  &lt;p&gt;PyPI is the default Package Index for the Python community. It is open to all Python developers to consume and distribute their distributions.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;早期 Python 在套件的安裝上有數種工具可以選擇, 不過目前比較主流的是透過 &lt;strong&gt;PIP&lt;/strong&gt; 來安裝套件 (搜尋、安裝已經建立在 PyPI 上的套件), 這邊會先建議在開始安裝其它套件之前, 可以先安裝名為 &lt;strong&gt;virtualenv&lt;/strong&gt;&lt;/p&gt;</description><link>http://localhost:2368/python-xin-shou-ru-men/</link><guid isPermaLink="false">2f5401a3-206c-4e83-9d88-7cbc63958609</guid><dc:creator>Captain Vincent</dc:creator><pubDate>Wed, 24 Feb 2016 18:07:00 GMT</pubDate><content:encoded>&lt;p&gt;剛開始接觸 Python 的時候, 最先了解到的是開發者社群的貢獻, 有別於 C/C++ 這類型語言給我的感覺, 在開發上使用第三方的函式庫, 是相當方便以及普遍的事情。&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;&lt;strong&gt;&lt;a href="https://pypi.python.org/pypi"&gt;Python Package Index (PyPI)&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;
+  
+  &lt;p&gt;PyPI is the default Package Index for the Python community. It is open to all Python developers to consume and distribute their distributions.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;早期 Python 在套件的安裝上有數種工具可以選擇, 不過目前比較主流的是透過 &lt;strong&gt;PIP&lt;/strong&gt; 來安裝套件 (搜尋、安裝已經建立在 PyPI 上的套件), 這邊會先建議在開始安裝其它套件之前, 可以先安裝名為 &lt;strong&gt;virtualenv&lt;/strong&gt;, 這個用來建立獨立 python 執行環境的套件, 之後就可以愉快體驗 &lt;del&gt;也不用擔心系統髒髒的&lt;/del&gt;。&lt;/p&gt;
+
+&lt;p&gt;安裝方式很簡單, 如下&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class="language- language-bash"&gt;pip install virtualenv  
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;首先透過 pip 安裝 virtualenv, 安裝完後可以執行的命令如下&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class="language- language-bash"&gt;virtualenv [ENVNAME]  
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;在當前目錄底下建立一個資料夾, 裡面會存放可獨立運行的 python 執行環境&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class="language- language-bash"&gt;cd [ENVNAME]  
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;移動至該路徑下&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class="language- language-bash"&gt;source bin/activate  
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;啟用這個執行環境, 啟用後的效果包含之後安裝的套件會在此路徑下, 以及執行的 python 程式會使用此路徑下的 library&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class="language- language-bash"&gt;deactivate  
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;使用完畢後可以退出這個虛擬環境, 嗯~ 系統除了多了這個工作路徑的資料夾其他依舊美好。&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;補充&lt;/p&gt;
+  
+  &lt;p&gt;在虛擬環境的管理上其實也有套件可以幫忙, 好處是不會讓建立虛擬環境的資料夾分散在各處 (集中放置)、切換流程更加便利, 這邊要介紹的就是透過 &lt;a href="http://virtualenvwrapper.readthedocs.org/en/latest/index.html"&gt;&lt;strong&gt;virtualenvwrapper&lt;/strong&gt;&lt;/a&gt; 來處理&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;pre&gt;&lt;code class="language- language-bash"&gt;pip install virtualenvwrapper  
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;安裝套件方式一樣是透過 pip&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;export WORKON_HOME=$HOME/PyEnv  
+export PROJECT_HOME=$HOME/Devel  
+source /usr/local/bin/virtualenvwrapper.sh  
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;將以上貼入 .bashrc or .zshrc 檔 (是根據你所使用的 Shell 預設會開啟時會載入的 rc 檔)&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;WORKON_HOME 是虛擬環境配置的路徑&lt;/li&gt;
+&lt;li&gt;PROJECT_HOME 暫時用不到&lt;/li&gt;
+&lt;li&gt;最後 source 腳本&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;介紹常用的功能&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class="language- language-bash"&gt;mkvirtualenv [-i package] [-r requirements_file] [virtualenv options] [ENVNAME]  
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;建立虛擬環境&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class="language- language-bash"&gt;lsvirtualenv [-b] [-l] [-h]  
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;列出存在的虛擬環境&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class="language- language-bash"&gt;rmvirtualenv [ENVNAME]  
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;移除虛擬環境&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class="language- language-bash"&gt;$ workon [ENVNAME]
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;啟動虛擬環境&lt;/p&gt;
+
+&lt;p&gt;最後退出虛擬環境的方式一樣是用 &lt;code&gt;deactivate&lt;/code&gt;。&lt;/p&gt;</content:encoded></item><item><title>MT4</title><description>&lt;blockquote&gt;
+  &lt;p&gt;MT4 (&lt;a href="http://www.metatrader4.com/"&gt;Metatrade 4&lt;/a&gt;) 以及 MT5 (&lt;a href="http://www.metatrader5.com/"&gt;Metatrade 5&lt;/a&gt;) 都是由俄羅斯公司 MetaQuotes Software Corp 所開發的交易平台, 並由各個外匯公司對該平台提供服務。&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;pre&gt;&lt;code class="language- language-bash"&gt;MQL4  
+|-- Experts (EA 又稱專家系統, 執行交易策略的文件)
+|-- Files (程式中使用到的外部檔案)
+|-- Images (程式中使用的點陣圖)
+|-- Include (Header檔)
+|-- Indicators (建立指標的文件)
+|-- Libraries
+|-- Logs
+|-- Presets (預設屬性區)
+|-- Projects
+`-- Scripts (腳本檔)
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;檔案存放路徑結構&lt;/p&gt;
+
+&lt;p&gt;MQL4/MQL5 為該交易平台所撰寫的程式語言, 語法的部分類似 C/C+&lt;/p&gt;</description><link>http://localhost:2368/mt4/</link><guid isPermaLink="false">b3f6f3fb-3745-41fa-b9de-7efcec901737</guid><dc:creator>Captain Vincent</dc:creator><pubDate>Wed, 24 Feb 2016 09:18:15 GMT</pubDate><content:encoded>&lt;blockquote&gt;
+  &lt;p&gt;MT4 (&lt;a href="http://www.metatrader4.com/"&gt;Metatrade 4&lt;/a&gt;) 以及 MT5 (&lt;a href="http://www.metatrader5.com/"&gt;Metatrade 5&lt;/a&gt;) 都是由俄羅斯公司 MetaQuotes Software Corp 所開發的交易平台, 並由各個外匯公司對該平台提供服務。&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;pre&gt;&lt;code class="language- language-bash"&gt;MQL4  
+|-- Experts (EA 又稱專家系統, 執行交易策略的文件)
+|-- Files (程式中使用到的外部檔案)
+|-- Images (程式中使用的點陣圖)
+|-- Include (Header檔)
+|-- Indicators (建立指標的文件)
+|-- Libraries
+|-- Logs
+|-- Presets (預設屬性區)
+|-- Projects
+`-- Scripts (腳本檔)
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;檔案存放路徑結構&lt;/p&gt;
+
+&lt;p&gt;MQL4/MQL5 為該交易平台所撰寫的程式語言, 語法的部分類似 C/C++ (筆者的感覺其實只是 C/C++ 的子集, 所以有學過 C/C++的人應該不太陌生), 故詳細語法在這邊不會是著墨的重點。&lt;/p&gt;
+
+&lt;h2 id="mql45"&gt;MQL4/5 撰寫的程式碼用途&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;EA 連結至特定圖表後的自動交易系統, 可用於回測&lt;/li&gt;
+&lt;li&gt;Indicators 編寫透過自訂公式來計算數據產生的指標&lt;/li&gt;
+&lt;li&gt;Scripts 執行單一功能的程式碼, 附加至圖表時會立即執行一次&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id="mql4c"&gt;MQL4 語法與標準 C 不同之處&lt;/h2&gt;
+
+&lt;p&gt;&lt;br&gt;  &lt;/p&gt;
+
+&lt;h6 id="datatypehttpsdocsmql4combasistypes"&gt;&lt;strong&gt;&lt;a href="https://docs.mql4.com/basis/types"&gt;Data Type&lt;/a&gt;&lt;/strong&gt; (範例皆轉自官方)&lt;/h6&gt;
+
+&lt;ul&gt;
+&lt;li&gt;string&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;pre&gt;&lt;code class="language- language-clike"&gt;string svar="This is a character string";  
+string svar2=StringSubstr(svar,0,4);  
+Print("Copyright symbol\t\x00A9");  
+FileWrite(handle,"This string contains a new line symbols \n");  
+string MT4path="C:\\Program Files\\MetaTrader 4";  
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;br&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;color&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;pre&gt;&lt;code class="language- language-clike"&gt;//--- Literals
+C'128,128,128'    // Gray  
+C'0x00,0x00,0xFF' // Blue  
+//color names
+clrRed               // Red  
+clrYellow            // Yellow  
+clrBlack             // Black  
+//--- Integral representations
+0xFFFFFF          // White  
+16777215          // White  
+0x008000          // Green  
+32768             // Green  
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;br&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Datetime&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;pre&gt;&lt;code class="language- language-clike"&gt;datetime NY=D'2015.01.01 00:00';     // Time of beginning of year 2015  
+datetime d1=D'1980.07.19 12:30:27';  // Year Month Day Hours Minutes Seconds  
+datetime d2=D'19.07.1980 12:30:27';  // Equal to D'1980.07.19 12:30:27';  
+datetime d3=D'19.07.1980 12';        // Equal to D'1980.07.19 12:00:00'  
+datetime d4=D'01.01.2004';           // Equal to D'01.01.2004 00:00:00'  
+datetime compilation_date=__DATE__;             // Compilation date  
+datetime compilation_date_time=__DATETIME__;    // Compilation date and time  
+datetime compilation_time=__DATETIME__-__DATE__;// Compilation time  
+//--- Examples of declarations after which compiler warnings will be returned
+datetime warning1=D'12:30:27';       // Equal to D'[date of compilation] 12:30:27'  
+datetime warning2=D'';               // Equal to __DATETIME__  
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;br&gt;&lt;/p&gt;
+
+&lt;h6 id="preprocessor"&gt;&lt;strong&gt;Preprocessor 對程式屬性的設定&lt;/strong&gt;&lt;/h6&gt;
+
+&lt;p&gt;&lt;a href="https://docs.mql4.com/basis/preprosessor/compilation"&gt;#Properties&lt;/a&gt; (參考官方介紹)&lt;/p&gt;
+
+&lt;h2 id="mql4"&gt;MQL4 程式介紹&lt;/h2&gt;
+
+&lt;h6 id=""&gt;下單種類&lt;/h6&gt;
+
+&lt;ul&gt;
+&lt;li&gt;市價單 (OP&lt;em&gt;BUY, OP&lt;/em&gt;SELL)&lt;/li&gt;
+&lt;li&gt;順勢單 (OP&lt;em&gt;BUYSTOP, OP&lt;/em&gt;SELLSTOP)
+超過指定價格買 BUY單 或 SELL單 (不保證履約價)&lt;/li&gt;
+&lt;li&gt;逆勢單 (OP&lt;em&gt;BUYLIMIT, OP&lt;/em&gt;SELLLIMIT) 成交價在限制價格內才會買進 (會保證成交價)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;外匯券商所允許的下單方式為&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;現價以上, 可以下 Buy-Stop, Sell-Limit&lt;/li&gt;
+&lt;li&gt;現價以下, 可以下 Buy-Limit, Sell-Stop
+&lt;img src="https://farm2.staticflickr.com/1577/25187105571_52e4ff737f.jpg" alt=""&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h6 id=""&gt;&lt;strong&gt;特殊函數&lt;/strong&gt;&lt;/h6&gt;
+
+&lt;p&gt;&lt;a href="https://docs.mql4.com/basis/function/events"&gt;More Detail&lt;/a&gt; (參考官方介紹)&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;OnInit()－程式起始時會執行一次&lt;/li&gt;
+&lt;li&gt;OnTick()－圖表 Event 會觸發執行的函式&lt;/li&gt;
+&lt;li&gt;OnTimer()－時間 Event 會觸發執行的函式&lt;/li&gt;
+&lt;li&gt;OnDeinit()－結束時會執行的函式&lt;/li&gt;
+&lt;li&gt;OnTester()－測試 Event 會觸發執行的函式&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h6 id="ea"&gt;&lt;strong&gt;EA 程式架構&lt;/strong&gt;&lt;/h6&gt;
+
+&lt;p&gt;(待補充)&lt;/p&gt;</content:encoded></item><item><title>Sublime Text 教學</title><description>&lt;blockquote&gt;
   &lt;p&gt;筆者按: 網路上關於 Sublime 的教學其實已經多如繁星, 所以本篇說為教學, 充其量目的也只是敝人的備忘錄而已 (笑)。&lt;/p&gt;
 &lt;/blockquote&gt;
 
@@ -207,7 +441,7 @@
 &lt;pre&gt;&lt;code class="language- language-json"&gt;"color_scheme": "Packages/Tomorrow Color Schemes/Tomorrow-Night.tmTheme",
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;p&gt;(Add to Preferences.sublime-settings)&lt;/p&gt;</content:encoded></item><item><title>多空操作秘笈筆記 (Mind Map)</title><description>&lt;blockquote&gt;
+&lt;p&gt;(Add to Preferences.sublime-settings)&lt;/p&gt;</content:encoded></item><item><title>多空操作秘笈 筆記 (Mind Map)</title><description>&lt;blockquote&gt;
   &lt;p&gt;原名&lt;/p&gt;
   
   &lt;p&gt;Secrets For Profiting In Bull And Bear Markets by &lt;strong&gt;Stan Weinstein&lt;/strong&gt;&lt;/p&gt;
