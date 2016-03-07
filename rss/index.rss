@@ -1,4 +1,323 @@
-<rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:media="http://search.yahoo.com/mrss/" version="2.0"><channel><title>Hello World! I'm Vincent</title><description>Thoughts, stories and ideas.</description><link>http://localhost:2368/</link><generator>Ghost 0.7</generator><lastBuildDate>Fri, 26 Feb 2016 22:34:29 GMT</lastBuildDate><atom:link href="http://localhost:2368/rss/" rel="self" type="application/rss+xml"/><ttl>60</ttl><item><title>Python 第一步 virtualenv</title><description>&lt;p&gt;剛開始接觸 Python 的時候, 最先了解到的是開發者社群的貢獻, 有別於 C/C++ 這類型語言給我的感覺, 在開發上使用第三方的函式庫, 是相當方便以及普遍的事情。&lt;/p&gt;
+<rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:media="http://search.yahoo.com/mrss/" version="2.0"><channel><title>Hello World! I'm Vincent</title><description>Thoughts, stories and ideas.</description><link>http://localhost:2368/</link><generator>Ghost 0.7</generator><lastBuildDate>Mon, 07 Mar 2016 01:33:49 GMT</lastBuildDate><atom:link href="http://localhost:2368/rss/" rel="self" type="application/rss+xml"/><ttl>60</ttl><item><title>21st Century C / 21世紀 C 語言 (閱讀筆記)</title><description>&lt;blockquote&gt;
+  &lt;p&gt;C 語言的演進, K&amp;amp;R (1978) -&gt; ANSI C89 (1989) -&gt; ISO C99 (1999) -&gt; C11 (2011)&lt;/p&gt;
+  
+  &lt;p&gt;POSIX (&lt;strong&gt;P&lt;/strong&gt;ortable &lt;strong&gt;O&lt;/strong&gt;perating &lt;strong&gt;S&lt;/strong&gt;ystem &lt;strong&gt;I&lt;/strong&gt;nterface of UNI&lt;strong&gt;X&lt;/strong&gt;) 標準, 由 IEEE 制定類  Unix 的作業系統在實作上共通的基礎 (API 的關聯、Shell的運作、命令列工具的的執行相關規範, 跟本篇最大的關聯是符合 POSIX 標準的系統, 也包含了提供 C 語言的編譯器)。&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h2 id=""&gt;介紹內容&lt;/h2&gt;
+
+&lt;p&gt;Basic Tool: GDB、Valgrind、&lt;/p&gt;</description><link>http://localhost:2368/21st-century-c/</link><guid isPermaLink="false">baa7b733-a6a7-466e-b381-2efbfd401ea0</guid><dc:creator>Captain Vincent</dc:creator><pubDate>Fri, 04 Mar 2016 13:04:20 GMT</pubDate><content:encoded>&lt;blockquote&gt;
+  &lt;p&gt;C 語言的演進, K&amp;amp;R (1978) -&gt; ANSI C89 (1989) -&gt; ISO C99 (1999) -&gt; C11 (2011)&lt;/p&gt;
+  
+  &lt;p&gt;POSIX (&lt;strong&gt;P&lt;/strong&gt;ortable &lt;strong&gt;O&lt;/strong&gt;perating &lt;strong&gt;S&lt;/strong&gt;ystem &lt;strong&gt;I&lt;/strong&gt;nterface of UNI&lt;strong&gt;X&lt;/strong&gt;) 標準, 由 IEEE 制定類  Unix 的作業系統在實作上共通的基礎 (API 的關聯、Shell的運作、命令列工具的的執行相關規範, 跟本篇最大的關聯是符合 POSIX 標準的系統, 也包含了提供 C 語言的編譯器)。&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h2 id=""&gt;介紹內容&lt;/h2&gt;
+
+&lt;p&gt;Basic Tool: GDB、Valgrind、gprof、make、pkg-config、doxygen &lt;br&gt;
+Autotools: Autoconf、Automake、libtool &lt;br&gt;
+Useful Lib: libcURL、libGlib、libGSL、libSQLite3、libXML2&lt;/p&gt;
+
+&lt;h4 id=""&gt;編譯階段&lt;/h4&gt;
+
+&lt;p&gt;使用 pkg-config 顯示出使用該lib需要的 include、link 參數&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class="language- language-bash"&gt;pkg-config --libs [lib name]  
+pkg-config --cflags [lib name]  
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;br&gt;&lt;/p&gt;
+
+&lt;p&gt;一般在編譯時, 使用額外 lib 在編譯時所需的下參數&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class="language- lnaguage-bash"&gt;gcc -I[header path] -L[library path] -l[library name]  
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;ul&gt;
+&lt;li&gt;-I: 將路徑加入 include header 搜尋 path&lt;/li&gt;
+&lt;li&gt;-L: 將路徑加入 Library 搜尋 path&lt;/li&gt;
+&lt;li&gt;-l: 指定連結函式庫&lt;/li&gt;
+&lt;li&gt;-D: 等同於 define symbol (ex. -Dxxx)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;可以搭配 pkg-config 使用 (但並非所有 lib 都有對 pkg-config 註冊)&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class="language- language-bash"&gt;gcc ｀pkg-config --cflags --libs [lib name]` -o [output name] [source file name]  
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;br&gt;&lt;/p&gt;
+
+&lt;hr&gt;
+
+&lt;h4 id="linksharelibrary"&gt;執行期間的 Link  (Share Library)&lt;/h4&gt;
+
+&lt;ul&gt;
+&lt;li&gt;使用 Autotools, Libtool 會自動加入正確的旗標來搜尋使用的 lib (後面章節會介紹)&lt;/li&gt;
+&lt;li&gt;透過 export LD_LIBRARY_PATH 來指定執行時的搜尋路徑&lt;/li&gt;
+&lt;li&gt;在 makefile 中添加 &lt;code&gt;LDADD=-L[lib path] -Wl, -R[lib path]&lt;/code&gt; 
+(-Wl 用來將後續用'逗號'隔開的 list 轉換成'空白'的 list 後傳給 linker)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;hr&gt;
+
+&lt;h4 id="makefile"&gt;使用 Makefile 簡化編譯時冗長繁瑣的指令&lt;/h4&gt;
+
+&lt;pre&gt;&lt;code class="language- language-makefile"&gt;P=program_name  
+OBJECT=  
+CFLAGS= -g -Wall -O3  
+LDLIBS=  
+CC=C99
+
+$(P): $(OBJECT)
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;(Makefile 範例)&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;$(var name) 表示變數, Shell使用 $Var 而 Makefile則要求必須以小括號括起來&lt;/li&gt;
+&lt;li&gt;以冒號 ":" 區隔表示相依的關係&lt;/li&gt;
+&lt;li&gt;以上的變數會在 make 的隱含規則中展開成執行的命令&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;strong&gt;除了上述範例中, 將變數值直接宣告在 Makefile 內, 額外將變數值傳給 Makefile 的方式有&lt;/strong&gt;&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;export 進環境變數  &lt;/li&gt;
+&lt;li&gt;將變數指派命令放在執行命令之前 (只限當次執行有效) &lt;br&gt;
+&lt;em&gt;C 語言編譯的程式, 可在程式碼中透過 getenv 取得 1. 或 2. 指定的值&lt;/em&gt;&lt;/li&gt;
+&lt;li&gt;make 也允許從命令列設定變數&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;pre&gt;&lt;code class="language- language-bash"&gt;CFLAGS="-g -Wall" make // 針對 make 及 子程序設定環境變數 (上述方法2)  
+make CFLAGS="-g -Wall" // 設定 makefile 變數 (上述方法3)  
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;br&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class="language- language-bash"&gt;make -p &amp;gt; rule.txt  
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;可以查看 rule.txt 了解 make 的隱含規則&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;Manual Page&lt;/p&gt;
+  
+  &lt;ul&gt;
+  &lt;li&gt;&lt;p&gt;man 指令可以搜尋函式的使用手冊 (ex. &lt;code&gt;man printf&lt;/code&gt;)&lt;/p&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;p&gt;&lt;code&gt;man -k keyword&lt;/code&gt; 可以搜尋簡介&lt;/p&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;p&gt;manual 分許多 section, section 1 為命令列、3為函式庫名稱 (man 3 printf 會列出 C 函式庫的文件)&lt;/p&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;p&gt;vi 可將游標移到 keyword 上, 按 &lt;strong&gt;K&lt;/strong&gt; 查閱 manual page&lt;/p&gt;&lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;&lt;a href="https://zh.wikipedia.org/wiki/Here%E6%96%87%E6%A1%A3"&gt;Here文檔的介紹&lt;/a&gt;&lt;/p&gt;
+
+&lt;hr&gt;
+
+&lt;h4 id="debug"&gt;Debug / 除錯&lt;/h4&gt;
+
+&lt;p&gt;&lt;a href="https://developer.apple.com/library/ios/documentation/IDEs/Conceptual/gdb_to_lldb_transition_guide/document/lldb-command-examples.html"&gt;GDB vs LLDB&lt;/a&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class="language- language-bash"&gt;set $ptr=&amp;amp;x[3] //expr int* $ptr = &amp;amp;x[3]  
+p *($ptr++)  
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;之後再重複按 &lt;code&gt;Enter&lt;/code&gt; 會執行前一動指令, 此技巧可走訪陣列, 甚至套用 link-list&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class="language- language-bash"&gt;p $  
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;$ 可表示前一次輸出變數存放的值, 但這邊 LLDB 測試無效&lt;/p&gt;
+
+&lt;p&gt;在 .gdbinit 中可以 define macro 來整理複雜資料結構的輸出&lt;/p&gt;
+
+&lt;h6 id="profiling"&gt;Profiling&lt;/h6&gt;
+
+&lt;p&gt;Compile option 加上 &lt;code&gt;-pg&lt;/code&gt; 會為 gprof 準備程式, 指令 &lt;code&gt;gprof binary &amp;gt; profile&lt;/code&gt; 即可開始記錄, 結束後再打開 profile 看 log。 &lt;br&gt;
+mac 上的分析可以參考 &lt;a href="http://stackoverflow.com/questions/11445619/profiling-c-on-mac-os-x"&gt;StackOverflow 提到的 Instruments&lt;/a&gt;&lt;/p&gt;
+
+&lt;h6 id="valgrind"&gt;Valgrind&lt;/h6&gt;
+
+&lt;p&gt;可以使用 Valgrind 偵測記憶體的使用錯誤(例子省略)&lt;/p&gt;
+
+&lt;h6 id="unittest"&gt;Unit Test&lt;/h6&gt;
+
+&lt;p&gt;使用 Glib 內建的 tool 來實作(省略), 求覆蓋率可透過在 Compile option 加上 &lt;br&gt;
+&lt;code&gt;- fprofile-arcs -ftest-coverage -O0&lt;/code&gt;, 在執行程式後下指令 &lt;code&gt;gcov program.gcda&lt;/code&gt; 可顯示執行行數的百分比, 另外 program.c.cov 會顯示被測試到的次數&lt;/p&gt;
+
+&lt;h6 id="doxygen"&gt;Doxygen&lt;/h6&gt;
+
+&lt;p&gt;使用 Doxygen 來產生文件, 比起在程式碼中添加的說明, 搭配 Graphviz 產生的各類圖表在 trace code 幫助更大。&lt;/p&gt;
+
+&lt;hr&gt;
+
+&lt;h4 id="autotool"&gt;Autotool 章節&lt;/h4&gt;
+
+&lt;p&gt;在打包程式的部分目前常見的還有 CMake 可以使用, autotool的部分等以後有時間再回過頭來看吧... Ker Ker&lt;/p&gt;
+
+&lt;hr&gt;
+
+&lt;h4 id="git"&gt;Git 版本控管章節&lt;/h4&gt;
+
+&lt;p&gt;&lt;a href="https://git-scm.com/book/zh-tw/v1"&gt;Git 中文參考資料&lt;/a&gt;&lt;/p&gt;
+
+&lt;hr&gt;
+
+&lt;h4 id=""&gt;類似書中範例的參考&lt;/h4&gt;
+
+&lt;p&gt;&lt;a href="http://intermediate-and-advanced-software-carpentry.readthedocs.org/en/latest/c++-wrapping.html"&gt;Wrapping C/C++ for Python&lt;/a&gt;&lt;/p&gt;
+
+&lt;hr&gt;
+
+&lt;h4 id=""&gt;變數的存取&lt;/h4&gt;
+
+&lt;p&gt;&lt;a href="http://www.csee.umbc.edu/courses/undergraduate/202/spring07/Lectures/ChangSynopses/modules/m05-scope/slides.php?print"&gt;Reference&lt;/a&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Life Time
+&lt;ul&gt;&lt;li&gt;static: 直到程式結束為止才會釋放&lt;/li&gt;
+&lt;li&gt;automatic: 離開 Scope (block) 的時候即會馬上釋放&lt;/li&gt;
+&lt;li&gt;dynamic: 要手動 free 才會釋放&lt;/li&gt;&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;Scope
+&lt;ul&gt;&lt;li&gt;Local scope: 在 block 內可被看見&lt;/li&gt;
+&lt;li&gt;Class scope: Class 內的成員才可看見&lt;/li&gt;
+&lt;li&gt;Namespace scope: 同一個 namespace 才可看見&lt;/li&gt;
+&lt;li&gt;File scope: 相同檔案內才可看見&lt;/li&gt;
+&lt;li&gt;Global scope: 任何地方皆可看見, 除非被隱藏&lt;/li&gt;&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h6 id="structvsarray"&gt;Struct vs Array&lt;/h6&gt;
+
+&lt;p&gt;在記憶體的使用上, 傳遞 struct 時會整個被複製出去, 但 array 僅會傳遞別名 (指向相同的記憶體空間)。&lt;/p&gt;
+
+&lt;p&gt;另外, Array 目前已可提供執行期才決定大小 (透過 run time 得知的值來宣告 array), 並且不用手動 free。&lt;/p&gt;
+
+&lt;h6 id="point"&gt;Point&lt;/h6&gt;
+
+&lt;pre&gt;&lt;code class="language- language-clike"&gt;ptr[0] = *(ptr+0) // 這邊僅表示左右兩者相等, 非賦值  
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;(但是 void 的 point 是無法以陣列的方式取值, 因為缺少了型別無法計算位移量)。&lt;/p&gt;
+
+&lt;h6 id="nan"&gt;NaN&lt;/h6&gt;
+
+&lt;p&gt;&lt;strong&gt;N&lt;/strong&gt;ot-&lt;strong&gt;A&lt;/strong&gt;-&lt;strong&gt;N&lt;/strong&gt;umber, 使用 NaN 作為例外回傳值, 另外 NaN 具備的特性, 即使 &lt;code&gt;NaN == NaN&lt;/code&gt; 也會回傳 false, 只能用 &lt;code&gt;isnan()&lt;/code&gt; 來檢查。&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;NaN 的值可透過 0/0. 來得到 (0/0 會產生錯誤, 因為整數無法表示 NaN)。&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;hr&gt;
+
+&lt;h4 id=""&gt;介紹容易犯錯的章節&lt;/h4&gt;
+
+&lt;h6 id="macro"&gt;Macro&lt;/h6&gt;
+
+&lt;p&gt;在巨集的外部需加上大括號, 好處是可限制展開內容的變數生存空間, 也可降低展開後造成問題的風險。&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class="language- language-bash"&gt;gcc -E [source file name]  
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;加上 &lt;code&gt;-E&lt;/code&gt; option 之後只會執行前置處理器的部分, 並從標準輸出中印出結果, 可搜尋巨集擴展的部分來除錯。&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;前置處理器中的小技巧&lt;/p&gt;
+  
+  &lt;ul&gt;
+  &lt;li&gt;&lt;p&gt;如果有兩個連續的字串出現, 箝制處理器會將兩個字串合併為一個&lt;/p&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;p&gt;&lt;code&gt;sizeof()&lt;/code&gt; 是個 compile time 的 operator&lt;/p&gt;&lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/blockquote&gt;
+
+&lt;h6 id="const"&gt;const&lt;/h6&gt;
+
+&lt;ul&gt;
+&lt;li&gt;int const : 常數整數&lt;/li&gt;
+&lt;li&gt;int const * : 一個可變動的指標, 指向常數整數&lt;/li&gt;
+&lt;li&gt;int * const : 一個常數指標, 指向可變動的整數&lt;/li&gt;
+&lt;li&gt;int * const * : 一個指向常數指標的指標&lt;/li&gt;
+&lt;li&gt;int const * * : 一個指標的指標, 指向常數整數&lt;/li&gt;
+&lt;li&gt;int const * const * : 一個指向常數指標的指標, 常數指標指向常數整數
+
+
+&lt;blockquote&gt;
+  &lt;p&gt;前後相鄰的 int 與 const 可以互換, 意義仍不變。&lt;/p&gt;&lt;/blockquote&gt;&lt;/li&gt;
+  &lt;/ul&gt;
+  struct 內的變數, 透過將 pointer 傳出之後仍舊無法受到 const 的保護, 需特別注意。 &lt;p&gt;&lt;/p&gt;
+
+
+&lt;pre&gt;&lt;code class="language- language-clike"&gt;int *ptr;  
+int const **constptr = &amp;amp;ptr  
+int const const_var = 10;  
+*constprt = &amp;amp;const_var // 等同 ptr = &amp;amp;const_var
+*prt = 20 // 等同於改變了 const_var 的值
+&lt;/code&gt;&lt;/pre&gt;
+
+
+範例顯示透過指標操作 const 需要小心
+
+
+
+&lt;hr&gt;
+
+
+
+
+&lt;h4 id=""&gt;好用工具介紹&lt;/h4&gt;
+
+&lt;ul&gt;
+&lt;li&gt;asprintf 來做文字轉換 (函式會自行 malloc, 但需手動 free)&lt;/li&gt;
+&lt;li&gt;Stopif 巨集的使用可在函式 return 異常值時提供保護&lt;/li&gt;
+&lt;li&gt;strdup 可以回傳複製字串後的內容&lt;/li&gt;
+&lt;li&gt;strtok 以 strtok_r or strtok_s 取代 (thread safe)&lt;/li&gt;
+&lt;li&gt;mmap 可以解決讀取檔案比記憶體大的問題&lt;/li&gt;
+&lt;li&gt;libxml 提供處理 unicode 的函式庫
+&lt;ul&gt;&lt;li&gt;語言相關處理的 keywords : Gettext 提供翻譯框架、xgettext 產生需要翻譯的字串索引&lt;/li&gt;&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;hr&gt;
+
+&lt;h4 id=""&gt;特殊技巧&lt;/h4&gt;
+
+&lt;pre&gt;&lt;code class="language- language-clike"&gt;define test(i, ...) for(int index=0; index&amp;lt;i; i++) {__VA__ARGS__}  
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;ul&gt;
+&lt;li&gt;展開時, 在第二個參數之後 (從 &lt;code&gt;...&lt;/code&gt; 刪節號之後的參數都會被展開至 &lt;code&gt;__VA__ARGS__&lt;/code&gt; 的位置&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;pre&gt;&lt;code class="language- language-clike"&gt;int iArray[] = {0, 1, 2, 3}; //賦值用  
+function( (iArray[]){0,1,2,3} ) //傳遞用  
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;ul&gt;
+&lt;li&gt;複合常量的寫法&lt;/li&gt;
+&lt;li&gt;透過前兩項技巧可以寫出向量化的 macro (展開成多個處理相同事情的 Snippets)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;pre&gt;&lt;code class="language- language-clike"&gt;struct stTest  
+{
+    int first;
+    int second;
+};
+struct stTest temp = {.first=1};  
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;pre&gt;&lt;code class="language- language-clike"&gt;int list[5] = {[3]=4, [4]=5};  
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;ul&gt;
+&lt;li&gt;指定初始子, 未指定會賦值 0&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;pre&gt;&lt;code class="language- language-clike"&gt;__attribute__((format(printf,m,n)))  
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;ul&gt;
+&lt;li&gt;使用 __attribute__ 來控制變量輸入的問題, &lt;a href="http://huenlil.pixnet.net/blog/post/26078382-%5B%E8%BD%89%5Dgnu-c-__attribute__-%E6%A9%9F%E5%88%B6%E7%B0%A1%E4%BB%8B"&gt;參考資訊&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;(最後兩章的翻譯讀起來有點怪, 加上應用層面比較難參考, 就整理到這邊吧 : ) 收工~)&lt;/p&gt;</content:encoded></item><item><title>Python 第一步 virtualenv</title><description>&lt;p&gt;剛開始接觸 Python 的時候, 最先了解到的是開發者社群的貢獻, 有別於 C/C++ 這類型語言給我的感覺, 在開發上使用第三方的函式庫, 是相當方便以及普遍的事情。&lt;/p&gt;
 
 &lt;blockquote&gt;
   &lt;p&gt;&lt;strong&gt;&lt;a href="https://pypi.python.org/pypi"&gt;Python Package Index (PyPI)&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;
@@ -127,7 +446,7 @@ source /usr/local/bin/virtualenvwrapper.sh
 
 &lt;p&gt;檔案存放路徑結構&lt;/p&gt;
 
-&lt;p&gt;MQL4/MQL5 為該交易平台所撰寫的程式語言, 語法的部分類似 C/C++ (筆者的感覺其實只是 C/C++ 的子集, 所以有學過 C/C++的人應該不太陌生), 故詳細語法在這邊不會是著墨的重點。&lt;/p&gt;
+&lt;p&gt;MQL4/MQL5 為該交易平台所撰寫的程式語言, 語法的部分類似 C/C++ (筆者的感覺其實只是 C/C++ 的子集, 所以有學過 C/C++的人應該不太陌生), 故詳細語法在這邊不是著墨的重點。&lt;/p&gt;
 
 &lt;h2 id="mql45"&gt;MQL4/5 撰寫的程式碼用途&lt;/h2&gt;
 
@@ -195,13 +514,23 @@ datetime warning2=D'';               // Equal to __DATETIME__
 
 &lt;p&gt;&lt;br&gt;&lt;/p&gt;
 
-&lt;h6 id="preprocessor"&gt;&lt;strong&gt;Preprocessor 對程式屬性的設定&lt;/strong&gt;&lt;/h6&gt;
+&lt;h6 id="preprocessor"&gt;&lt;strong&gt;提供 Preprocessor 對程式屬性的設定&lt;/strong&gt;&lt;/h6&gt;
 
 &lt;p&gt;&lt;a href="https://docs.mql4.com/basis/preprosessor/compilation"&gt;#Properties&lt;/a&gt; (參考官方介紹)&lt;/p&gt;
 
 &lt;h2 id="mql4"&gt;MQL4 程式介紹&lt;/h2&gt;
 
-&lt;h6 id=""&gt;下單種類&lt;/h6&gt;
+&lt;h4 id=""&gt;報價系統跳動單位&lt;/h4&gt;
+
+&lt;p&gt;外匯交易單位為一手 (部份券商交易提供較小單位的操作 ex. 0.1手、0.01手), 而這邊一手實際上指的是交易量 (而非價) 的單位, &lt;strong&gt;一手表示為 100K 單位貨幣&lt;/strong&gt; (依前方的貨幣為主 ex. 一手 EURUSD 的單, 金額為 100K EUR)&lt;/p&gt;
+
+&lt;p&gt;而在外匯交易的報價是以點 (Pips) 為跳動單位, 但在程式交易內的跳動則是用 Points 來替代, 包含允許滑點 (Slippage) 的參數也都是以 Points 來設定, 但 Points 在各券商報價系統中實際為何不一定 (如果報價單位有提供到步 則 1 Point = 1步, 若只有到點 則 1 Points = 1點)。&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;Pips 稱 &lt;strong&gt;點&lt;/strong&gt;, 而比 Pips 再小一位數的單位則稱 &lt;strong&gt;小點&lt;/strong&gt; 或是 &lt;strong&gt;步&lt;/strong&gt; (1點 = 10步)&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h4 id=""&gt;下單種類&lt;/h4&gt;
 
 &lt;ul&gt;
 &lt;li&gt;市價單 (OP&lt;em&gt;BUY, OP&lt;/em&gt;SELL)&lt;/li&gt;
@@ -210,7 +539,7 @@ datetime warning2=D'';               // Equal to __DATETIME__
 &lt;li&gt;逆勢單 (OP&lt;em&gt;BUYLIMIT, OP&lt;/em&gt;SELLLIMIT) 成交價在限制價格內才會買進 (會保證成交價)&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;外匯券商所允許的下單方式為&lt;/p&gt;
+&lt;p&gt;(外匯券商所允許的下單方式為)&lt;/p&gt;
 
 &lt;ul&gt;
 &lt;li&gt;現價以上, 可以下 Buy-Stop, Sell-Limit&lt;/li&gt;
@@ -218,7 +547,7 @@ datetime warning2=D'';               // Equal to __DATETIME__
 &lt;img src="https://farm2.staticflickr.com/1577/25187105571_52e4ff737f.jpg" alt=""&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h6 id=""&gt;&lt;strong&gt;特殊函數&lt;/strong&gt;&lt;/h6&gt;
+&lt;h4 id=""&gt;&lt;strong&gt;特殊函數&lt;/strong&gt;&lt;/h4&gt;
 
 &lt;p&gt;&lt;a href="https://docs.mql4.com/basis/function/events"&gt;More Detail&lt;/a&gt; (參考官方介紹)&lt;/p&gt;
 
@@ -230,7 +559,39 @@ datetime warning2=D'';               // Equal to __DATETIME__
 &lt;li&gt;OnTester()－測試 Event 會觸發執行的函式&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h6 id="ea"&gt;&lt;strong&gt;EA 程式架構&lt;/strong&gt;&lt;/h6&gt;
+&lt;h4 id="index"&gt;&lt;strong&gt;關於時序物件的 Index&lt;/strong&gt;&lt;/h4&gt;
+
+&lt;p&gt;當前的物件皆為 ０, 時間愈往倒退值愈大
+ex. 收盤價, 今日為 Close[0], 昨日為 Close[1]...etc&lt;/p&gt;
+
+&lt;h4 id="api"&gt;&lt;strong&gt;交易 API 介紹&lt;/strong&gt;&lt;/h4&gt;
+
+&lt;p&gt;這邊介紹一些關於撰寫 EA 時會經常使用到的 API&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Order Send&lt;/strong&gt; : 下單 API, 預掛單也是透過此 API&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class="language- language-clike"&gt;OrderSend( str symbol, int cmd=OP_BUY|OP_SELL|OP_BUYSTOP|OP_SELLSTOP|OP_BUYLIMIT|OP_SELLLIMIT, dbl volume, dbl price, int slippage, dbl stoploss, dbl takeprofit, str comment=NULL, int magic=0, dtt expiration=0, clr arrow_color=CLR_NONE )  
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;ul&gt;
+&lt;li&gt;CMD - 顧名思義, 下單可執行的操作 (四種下單操作)&lt;/li&gt;
+&lt;li&gt;Volume - 幾手 (外匯下單的單位)&lt;/li&gt;
+&lt;li&gt;Price - 價位&lt;/li&gt;
+&lt;li&gt;Slippage - 允許最大滑點&lt;/li&gt;
+&lt;li&gt;Stop Loss - 停損價位&lt;/li&gt;
+&lt;li&gt;Take Profit - 停利價位&lt;/li&gt;
+&lt;li&gt;Comment - 註解&lt;/li&gt;
+&lt;li&gt;Magic - 訂單識別碼&lt;/li&gt;
+&lt;li&gt;DTT Expiration - 此單的有效期, 大部分交易商取消&lt;/li&gt;
+&lt;li&gt;Arrow Color - 標記在走勢圖上的下單點, &lt;a href="https://docs.mql4.com/constants/objectconstants/webcolors"&gt;顏色參考&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;strong&gt;Order Modify&lt;/strong&gt; : 修改訂單的 API&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class="language- language-clike"&gt;OrderModify( int ticket, dbl price, dbl stoploss, dbl takeprofit, dtt expiration, clr color=CLR_NONE )  
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h4 id="ea"&gt;&lt;strong&gt;EA 程式架構&lt;/strong&gt;&lt;/h4&gt;
 
 &lt;p&gt;(待補充)&lt;/p&gt;</content:encoded></item><item><title>Sublime Text 教學</title><description>&lt;blockquote&gt;
   &lt;p&gt;筆者按: 網路上關於 Sublime 的教學其實已經多如繁星, 所以本篇說為教學, 充其量目的也只是敝人的備忘錄而已 (笑)。&lt;/p&gt;

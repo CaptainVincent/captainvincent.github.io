@@ -20,18 +20,18 @@
     <meta property="og:site_name" content="Hello World! I'm Vincent">
     <meta property="og:type" content="website">
     <meta property="og:title" content="Disqus - Hello World! I'm Vincent">
-    <meta property="og:url" content="http://captainvincent.github.io/tag/disqus/">
+    <meta property="og:url" content="http://localhost:2368/tag/disqus/">
     
     <meta name="twitter:card" content="summary">
     <meta name="twitter:title" content="Disqus - Hello World! I'm Vincent">
-    <meta name="twitter:url" content="http://captainvincent.github.io/tag/disqus/">
+    <meta name="twitter:url" content="http://localhost:2368/tag/disqus/">
     
     <script type="application/ld+json">
 {
     "@context": "http://schema.org",
     "@type": "Series",
     "publisher": "Hello World! I'm Vincent",
-    "url": "http://captainvincent.github.io/tag/disqus/",
+    "url": "http://localhost:2368/tag/disqus/",
     "name": "Disqus"
 }
     </script>
