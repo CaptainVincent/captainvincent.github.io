@@ -1,4 +1,87 @@
-<rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:media="http://search.yahoo.com/mrss/" version="2.0"><channel><title>Hello World! I'm Vincent</title><description>Thoughts, stories and ideas.</description><link>http://localhost:2368/</link><generator>Ghost 0.7</generator><lastBuildDate>Mon, 07 Mar 2016 01:33:49 GMT</lastBuildDate><atom:link href="http://localhost:2368/rss/" rel="self" type="application/rss+xml"/><ttl>60</ttl><item><title>21st Century C / 21世紀 C 語言 (閱讀筆記)</title><description>&lt;blockquote&gt;
+<rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:media="http://search.yahoo.com/mrss/" version="2.0"><channel><title>Hello World! I'm Vincent</title><description>Thoughts, stories and ideas.</description><link>http://localhost:2368/</link><generator>Ghost 0.7</generator><lastBuildDate>Tue, 08 Mar 2016 22:33:05 GMT</lastBuildDate><atom:link href="http://localhost:2368/rss/" rel="self" type="application/rss+xml"/><ttl>60</ttl><item><title>海龜特訓班 筆記 (Mind Map)</title><description>&lt;blockquote&gt;
+  &lt;p&gt;原名&lt;/p&gt;
+  
+  &lt;p&gt;The Complete TurtleTrader by &lt;strong&gt;Michael W. Covel&lt;/strong&gt;&lt;/p&gt;
+  
+  &lt;p&gt;這是一部關於 理察.丹尼斯 (Richard Dennis) 訓練雜牌軍成為百萬交易員的故事(1983-1984)。不過絕大部分都被我在筆記中省略了 (笑)。&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h2 id=""&gt;由來&lt;/h2&gt;
+
+&lt;p&gt;&lt;strong&gt;海龜&lt;/strong&gt; 是丹尼斯給學生們的暱稱, 曾到新加坡參觀海龜培育場而受到了啟發, 「要像培育海龜般的那樣培育交易員」。&lt;/p&gt;
+
+&lt;h2 id=""&gt;第一部分&lt;/h2&gt;
+
+&lt;p&gt;回顧歷史的鋪成, 介紹實驗的契機、挑選過程與最後成為交易員的海龜們背景多麼隨機性 (就當故事書讀讀吧)。&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;無限多猴子理論 (Infinite Monkey Theory)&lt;/p&gt;
+  
+  &lt;p&gt;只要世界上有無限多個猴子在隨機敲打鍵盤，最後就會有一隻敲出 莎士比亞全集。&lt;/p&gt;
+  
+  &lt;p&gt;(筆者按: 書中只是提到這個理論, 但無論是 丹尼斯 或是 他的實驗伙伴 艾克哈特 &lt;em&gt;(William Eckhardt)&lt;/em&gt; 都不相信這是巧合帶來實驗的結果)&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h2 id="mindmap"&gt;第二部分 交易策略 (Mind Map)&lt;/h2&gt;
+
+&lt;iframe width="853" height="480" src="https://embed.coggle.it/diagram/56df193f0337486314e39c0a/15cdb25a899d198e34460c4f7b2589b4a19fdccbd89305e7cbdab8bf6619b0cd" frameborder="0" allowfullscreen&gt;&lt;/iframe&gt;  
+
+&lt;blockquote&gt;
+  &lt;p&gt;在第二屆的學員們中, 提出了當時海龜策略槓桿底下背負的風險,&lt;/p&gt;&lt;/blockquote&gt;</description><link>http://localhost:2368/hai-gui-te-xun-ban-bi-ji/</link><guid isPermaLink="false">a9e4ea00-cd31-4d7d-923e-76b57ab14b5f</guid><category>順勢</category><category>Richard Dennis</category><category>海龜</category><category>Mind Map</category><category>理查.丹尼斯</category><dc:creator>Captain Vincent</dc:creator><pubDate>Mon, 07 Mar 2016 06:40:10 GMT</pubDate><content:encoded>&lt;blockquote&gt;
+  &lt;p&gt;原名&lt;/p&gt;
+  
+  &lt;p&gt;The Complete TurtleTrader by &lt;strong&gt;Michael W. Covel&lt;/strong&gt;&lt;/p&gt;
+  
+  &lt;p&gt;這是一部關於 理察.丹尼斯 (Richard Dennis) 訓練雜牌軍成為百萬交易員的故事(1983-1984)。不過絕大部分都被我在筆記中省略了 (笑)。&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h2 id=""&gt;由來&lt;/h2&gt;
+
+&lt;p&gt;&lt;strong&gt;海龜&lt;/strong&gt; 是丹尼斯給學生們的暱稱, 曾到新加坡參觀海龜培育場而受到了啟發, 「要像培育海龜般的那樣培育交易員」。&lt;/p&gt;
+
+&lt;h2 id=""&gt;第一部分&lt;/h2&gt;
+
+&lt;p&gt;回顧歷史的鋪成, 介紹實驗的契機、挑選過程與最後成為交易員的海龜們背景多麼隨機性 (就當故事書讀讀吧)。&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;無限多猴子理論 (Infinite Monkey Theory)&lt;/p&gt;
+  
+  &lt;p&gt;只要世界上有無限多個猴子在隨機敲打鍵盤，最後就會有一隻敲出 莎士比亞全集。&lt;/p&gt;
+  
+  &lt;p&gt;(筆者按: 書中只是提到這個理論, 但無論是 丹尼斯 或是 他的實驗伙伴 艾克哈特 &lt;em&gt;(William Eckhardt)&lt;/em&gt; 都不相信這是巧合帶來實驗的結果)&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h2 id="mindmap"&gt;第二部分 交易策略 (Mind Map)&lt;/h2&gt;
+
+&lt;iframe width="853" height="480" src="https://embed.coggle.it/diagram/56df193f0337486314e39c0a/15cdb25a899d198e34460c4f7b2589b4a19fdccbd89305e7cbdab8bf6619b0cd" frameborder="0" allowfullscreen&gt;&lt;/iframe&gt;  
+
+&lt;blockquote&gt;
+  &lt;p&gt;在第二屆的學員們中, 提出了當時海龜策略槓桿底下背負的風險, 遠比老師 丹尼斯 設想的要高上許多。&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h2 id=""&gt;第三部分&lt;/h2&gt;
+
+&lt;p&gt;實驗展開地後續, 在不平等的交易配額下導致內部崩裂、交易員間的猜忌; 而在混沌之中, 丹尼斯的交易身影也在一場公募基金的災難中退下舞台。&lt;/p&gt;
+
+&lt;h2 id=""&gt;故事尾聲&lt;/h2&gt;
+
+&lt;p&gt;敘述著 丹尼斯 及海龜們在各自離開之後的發展, 這中間有許多的風光但也有著些許唏噓, 並在受訪之後為我們留下分析、談論著同儕之間為何誰會是贏家的觀點, 畢竟在他們分道揚鑣後, 我們得從規則以外找些別的東西來區分是何能讓脫穎而出的人達到長期交易成功, 這邊列出書中提到的幾點 **需保持心理強韌、具備一的人, 才能夠繼續把握機會順勢操盤人生的吧。&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;企業家精神 (書中整理, 由Nancy Upton 及  Don Sexton 提出)&lt;/p&gt;
+  
+  &lt;ul&gt;
+  &lt;li&gt;不妥協者：較低的妥協需求, 自立自強&lt;/li&gt;
+  &lt;li&gt;情緒冷淡者：對人不一定冷漠, 不過也可能很明顯&lt;/li&gt;
+  &lt;li&gt;高空跳傘者：比較不在意身體受傷, 但此特質會隨年齡改變&lt;/li&gt;
+  &lt;li&gt;冒險者：喜歡冒險&lt;/li&gt;
+  &lt;li&gt;社交圓滑者：比較具說服力&lt;/li&gt;
+  &lt;li&gt;獨立自主：有較高的自立需求&lt;/li&gt;
+  &lt;li&gt;求變者：喜歡新奇的方法&lt;/li&gt;
+  &lt;li&gt;充滿活力：較需要且能較長時間工作&lt;/li&gt;
+  &lt;li&gt;自我滿足：不需要他人認同, 但還是要組成人脈&lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/blockquote&gt;</content:encoded></item><item><title>21st Century C / 21世紀 C 語言 (閱讀筆記)</title><description>&lt;blockquote&gt;
   &lt;p&gt;C 語言的演進, K&amp;amp;R (1978) -&gt; ANSI C89 (1989) -&gt; ISO C99 (1999) -&gt; C11 (2011)&lt;/p&gt;
   
   &lt;p&gt;POSIX (&lt;strong&gt;P&lt;/strong&gt;ortable &lt;strong&gt;O&lt;/strong&gt;perating &lt;strong&gt;S&lt;/strong&gt;ystem &lt;strong&gt;I&lt;/strong&gt;nterface of UNI&lt;strong&gt;X&lt;/strong&gt;) 標準, 由 IEEE 制定類  Unix 的作業系統在實作上共通的基礎 (API 的關聯、Shell的運作、命令列工具的的執行相關規範, 跟本篇最大的關聯是符合 POSIX 標準的系統, 也包含了提供 C 語言的編譯器)。&lt;/p&gt;
@@ -6,7 +89,7 @@
 
 &lt;h2 id=""&gt;介紹內容&lt;/h2&gt;
 
-&lt;p&gt;Basic Tool: GDB、Valgrind、&lt;/p&gt;</description><link>http://localhost:2368/21st-century-c/</link><guid isPermaLink="false">baa7b733-a6a7-466e-b381-2efbfd401ea0</guid><dc:creator>Captain Vincent</dc:creator><pubDate>Fri, 04 Mar 2016 13:04:20 GMT</pubDate><content:encoded>&lt;blockquote&gt;
+&lt;p&gt;Basic Tool: GDB、Valgrind、&lt;/p&gt;</description><link>http://localhost:2368/21st-century-c/</link><guid isPermaLink="false">baa7b733-a6a7-466e-b381-2efbfd401ea0</guid><category>GDB</category><category>Valgrind</category><category>Gprof</category><category>Make</category><category>pkg-config</category><category>doxygen</category><dc:creator>Captain Vincent</dc:creator><pubDate>Fri, 04 Mar 2016 13:04:20 GMT</pubDate><content:encoded>&lt;blockquote&gt;
   &lt;p&gt;C 語言的演進, K&amp;amp;R (1978) -&gt; ANSI C89 (1989) -&gt; ISO C99 (1999) -&gt; C11 (2011)&lt;/p&gt;
   
   &lt;p&gt;POSIX (&lt;strong&gt;P&lt;/strong&gt;ortable &lt;strong&gt;O&lt;/strong&gt;perating &lt;strong&gt;S&lt;/strong&gt;ystem &lt;strong&gt;I&lt;/strong&gt;nterface of UNI&lt;strong&gt;X&lt;/strong&gt;) 標準, 由 IEEE 制定類  Unix 的作業系統在實作上共通的基礎 (API 的關聯、Shell的運作、命令列工具的的執行相關規範, 跟本篇最大的關聯是符合 POSIX 標準的系統, 也包含了提供 C 語言的編譯器)。&lt;/p&gt;
@@ -325,7 +408,7 @@ struct stTest temp = {.first=1};
   &lt;p&gt;PyPI is the default Package Index for the Python community. It is open to all Python developers to consume and distribute their distributions.&lt;/p&gt;
 &lt;/blockquote&gt;
 
-&lt;p&gt;早期 Python 在套件的安裝上有數種工具可以選擇, 不過目前比較主流的是透過 &lt;strong&gt;PIP&lt;/strong&gt; 來安裝套件 (搜尋、安裝已經建立在 PyPI 上的套件), 這邊會先建議在開始安裝其它套件之前, 可以先安裝名為 &lt;strong&gt;virtualenv&lt;/strong&gt;&lt;/p&gt;</description><link>http://localhost:2368/python-xin-shou-ru-men/</link><guid isPermaLink="false">2f5401a3-206c-4e83-9d88-7cbc63958609</guid><dc:creator>Captain Vincent</dc:creator><pubDate>Wed, 24 Feb 2016 18:07:00 GMT</pubDate><content:encoded>&lt;p&gt;剛開始接觸 Python 的時候, 最先了解到的是開發者社群的貢獻, 有別於 C/C++ 這類型語言給我的感覺, 在開發上使用第三方的函式庫, 是相當方便以及普遍的事情。&lt;/p&gt;
+&lt;p&gt;早期 Python 在套件的安裝上有數種工具可以選擇, 不過目前比較主流的是透過 &lt;strong&gt;PIP&lt;/strong&gt; 來安裝套件 (搜尋、安裝已經建立在 PyPI 上的套件), 這邊會先建議在開始安裝其它套件之前, 可以先安裝名為 &lt;strong&gt;virtualenv&lt;/strong&gt;&lt;/p&gt;</description><link>http://localhost:2368/python-xin-shou-ru-men/</link><guid isPermaLink="false">2f5401a3-206c-4e83-9d88-7cbc63958609</guid><category>python</category><category>pip</category><category>virtualenv</category><dc:creator>Captain Vincent</dc:creator><pubDate>Wed, 24 Feb 2016 18:07:00 GMT</pubDate><content:encoded>&lt;p&gt;剛開始接觸 Python 的時候, 最先了解到的是開發者社群的貢獻, 有別於 C/C++ 這類型語言給我的感覺, 在開發上使用第三方的函式庫, 是相當方便以及普遍的事情。&lt;/p&gt;
 
 &lt;blockquote&gt;
   &lt;p&gt;&lt;strong&gt;&lt;a href="https://pypi.python.org/pypi"&gt;Python Package Index (PyPI)&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;
@@ -427,7 +510,7 @@ source /usr/local/bin/virtualenvwrapper.sh
 
 &lt;p&gt;檔案存放路徑結構&lt;/p&gt;
 
-&lt;p&gt;MQL4/MQL5 為該交易平台所撰寫的程式語言, 語法的部分類似 C/C+&lt;/p&gt;</description><link>http://localhost:2368/mt4/</link><guid isPermaLink="false">b3f6f3fb-3745-41fa-b9de-7efcec901737</guid><dc:creator>Captain Vincent</dc:creator><pubDate>Wed, 24 Feb 2016 09:18:15 GMT</pubDate><content:encoded>&lt;blockquote&gt;
+&lt;p&gt;MQL4/MQL5 為該交易平台所撰寫的程式語言, 語法的部分類似 C/C+&lt;/p&gt;</description><link>http://localhost:2368/mt4/</link><guid isPermaLink="false">b3f6f3fb-3745-41fa-b9de-7efcec901737</guid><category>MT4</category><category>MQL4</category><category>外匯</category><category>自動交易</category><category>程式</category><dc:creator>Captain Vincent</dc:creator><pubDate>Wed, 24 Feb 2016 09:18:15 GMT</pubDate><content:encoded>&lt;blockquote&gt;
   &lt;p&gt;MT4 (&lt;a href="http://www.metatrader4.com/"&gt;Metatrade 4&lt;/a&gt;) 以及 MT5 (&lt;a href="http://www.metatrader5.com/"&gt;Metatrade 5&lt;/a&gt;) 都是由俄羅斯公司 MetaQuotes Software Corp 所開發的交易平台, 並由各個外匯公司對該平台提供服務。&lt;/p&gt;
 &lt;/blockquote&gt;
 
@@ -604,7 +687,7 @@ ex. 收盤價, 今日為 Close[0], 昨日為 Close[1]...etc&lt;/p&gt;
 &lt;ol&gt;
 &lt;li&gt;&lt;strong&gt;非跨平台&lt;/strong&gt; &lt;br&gt;
 我個人電腦使用的環境是 OSX, 所以對於開發工具需在公司跟家裡做切換, 使用的意願上其實是非常低, 不外乎在工具的使用也是有所謂的學習曲線, 需分散心力來維持兩套是滿浪費精力的。
-(要在 Mac 上執行 Windows 程式就我所知也有三種方式, 一種是安裝雙系統共存, 再來是使用虛擬機器VMWare, 最後則是透過 Wine 來安裝, 但會喜歡使用 Mac 的人其實對優雅都有種偏執, 所以我想還是能省則省吧!&lt;/li&gt;&lt;/ol&gt;</description><link>http://localhost:2368/sublime-jiao-xue/</link><guid isPermaLink="false">4c4675c9-609b-459f-87e2-f2eb84fcd1b9</guid><dc:creator>Captain Vincent</dc:creator><pubDate>Mon, 22 Feb 2016 18:24:00 GMT</pubDate><content:encoded>&lt;blockquote&gt;
+(要在 Mac 上執行 Windows 程式就我所知也有三種方式, 一種是安裝雙系統共存, 再來是使用虛擬機器VMWare, 最後則是透過 Wine 來安裝, 但會喜歡使用 Mac 的人其實對優雅都有種偏執, 所以我想還是能省則省吧!&lt;/li&gt;&lt;/ol&gt;</description><link>http://localhost:2368/sublime-jiao-xue/</link><guid isPermaLink="false">4c4675c9-609b-459f-87e2-f2eb84fcd1b9</guid><category>Sublime</category><category>PackageControl</category><dc:creator>Captain Vincent</dc:creator><pubDate>Mon, 22 Feb 2016 18:24:00 GMT</pubDate><content:encoded>&lt;blockquote&gt;
   &lt;p&gt;筆者按: 網路上關於 Sublime 的教學其實已經多如繁星, 所以本篇說為教學, 充其量目的也只是敝人的備忘錄而已 (笑)。&lt;/p&gt;
 &lt;/blockquote&gt;
 
@@ -818,7 +901,7 @@ ex. 收盤價, 今日為 Close[0], 昨日為 Close[1]...etc&lt;/p&gt;
 
 &lt;p&gt;第二部分則是要教導讀者如何留住獲利, 在盡可能準確的時刻下轎 (透過正確的觀念建立追蹤止損點來保護獲利), 並在適當的時間可以放空來增加獲利, 而做空的分析方式其實跟做多恰為相反, 領悟力高的讀者應該不難舉一反三。&lt;/p&gt;
 
-&lt;p&gt;最後一部分作者說明了一些用來追蹤市場走勢的長期指標 (因為在前幾章節所介紹的準則之一就是 -「不要違背市場操作」), 也補充了股市以外運用其分析方式操作得宜的投資實例 (基金、&lt;/p&gt;</description><link>http://localhost:2368/duo-kong-cao-zuo-mi-ji-bi-ji/</link><guid isPermaLink="false">f730b870-ed59-44e3-944d-9a29ae5ea53a</guid><dc:creator>Captain Vincent</dc:creator><pubDate>Sat, 20 Feb 2016 18:36:48 GMT</pubDate><content:encoded>&lt;blockquote&gt;
+&lt;p&gt;最後一部分作者說明了一些用來追蹤市場走勢的長期指標 (因為在前幾章節所介紹的準則之一就是 -「不要違背市場操作」), 也補充了股市以外運用其分析方式操作得宜的投資實例 (基金、&lt;/p&gt;</description><link>http://localhost:2368/duo-kong-cao-zuo-mi-ji-bi-ji/</link><guid isPermaLink="false">f730b870-ed59-44e3-944d-9a29ae5ea53a</guid><category>Mind Map</category><category>史丹溫斯坦</category><category>Stan Weinstein</category><dc:creator>Captain Vincent</dc:creator><pubDate>Sat, 20 Feb 2016 18:36:48 GMT</pubDate><content:encoded>&lt;blockquote&gt;
   &lt;p&gt;原名&lt;/p&gt;
   
   &lt;p&gt;Secrets For Profiting In Bull And Bear Markets by &lt;strong&gt;Stan Weinstein&lt;/strong&gt;&lt;/p&gt;
