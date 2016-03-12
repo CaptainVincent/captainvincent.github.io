@@ -1,4 +1,133 @@
-<rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:media="http://search.yahoo.com/mrss/" version="2.0"><channel><title>Hello World! I'm Vincent</title><description>Thoughts, stories and ideas.</description><link>http://localhost:2368/</link><generator>Ghost 0.7</generator><lastBuildDate>Wed, 09 Mar 2016 15:58:05 GMT</lastBuildDate><atom:link href="http://localhost:2368/rss/" rel="self" type="application/rss+xml"/><ttl>60</ttl><item><title>海龜特訓班 筆記 (Mind Map)</title><description>&lt;blockquote&gt;
+<rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:media="http://search.yahoo.com/mrss/" version="2.0"><channel><title>Hello World! I'm Vincent</title><description>Thoughts, stories and ideas.</description><link>http://localhost:2368/</link><generator>Ghost 0.7</generator><lastBuildDate>Sat, 12 Mar 2016 10:35:44 GMT</lastBuildDate><atom:link href="http://localhost:2368/rss/" rel="self" type="application/rss+xml"/><ttl>60</ttl><item><title>Kelly Formula / 凱利公式 － 風險控管</title><description>&lt;blockquote&gt;
+  &lt;p&gt;投資 vs 投機 vs 賭博,&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h2 id="kellyformula"&gt;Kelly Formula&lt;/h2&gt;
+
+&lt;p&gt;&lt;img src="https://farm2.staticflickr.com/1497/25083691774_dba0e65847_o.jpg" alt="Kelly Formula"&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;b : 賠率 (獲勝後的報償比上本金的比例, ex. 賭上 1 元, 獲勝可拿回 1+b 元)&lt;/li&gt;
+&lt;li&gt;p : 勝率 (獲勝的機率)&lt;/li&gt;
+&lt;li&gt;q : 敗率 (1-p)&lt;/li&gt;
+&lt;li&gt;f : 為使用現有資金應進行投注的比例&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Kelly Formula 為求最大期望值時, 應投入的資金比例 (其中 b、p、q 皆為不變常數) &lt;br&gt;
+from &lt;a href="https://zh.wikipedia.org/wiki/%E5%87%B1%E5%88%A9%E5%85%AC%E5%BC%8F"&gt;Wiki&lt;/a&gt;  &lt;/p&gt;
+
+&lt;hr&gt;
+
+&lt;h2 id=""&gt;證明&lt;/h2&gt;
+
+&lt;p&gt;&lt;strong&gt;Definition&lt;/strong&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;X&lt;sub&gt;n&lt;/sub&gt; : 表示 經過 n 次賭局後所剩的資金 (n=0, 表示初始資金)&lt;/li&gt;
+&lt;li&gt;W&lt;sub&gt;n&lt;/sub&gt;&lt;/li&gt;&lt;/ul&gt;</description><link>http://localhost:2368/kelly-formula/</link><guid isPermaLink="false">8fbf310e-9b7b-4bac-a24e-c1c22ca661a4</guid><dc:creator>Captain Vincent</dc:creator><pubDate>Fri, 11 Mar 2016 10:57:55 GMT</pubDate><content:encoded>&lt;blockquote&gt;
+  &lt;p&gt;投資 vs 投機 vs 賭博,&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h2 id="kellyformula"&gt;Kelly Formula&lt;/h2&gt;
+
+&lt;p&gt;&lt;img src="https://farm2.staticflickr.com/1497/25083691774_dba0e65847_o.jpg" alt="Kelly Formula"&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;b : 賠率 (獲勝後的報償比上本金的比例, ex. 賭上 1 元, 獲勝可拿回 1+b 元)&lt;/li&gt;
+&lt;li&gt;p : 勝率 (獲勝的機率)&lt;/li&gt;
+&lt;li&gt;q : 敗率 (1-p)&lt;/li&gt;
+&lt;li&gt;f : 為使用現有資金應進行投注的比例&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Kelly Formula 為求最大期望值時, 應投入的資金比例 (其中 b、p、q 皆為不變常數) &lt;br&gt;
+from &lt;a href="https://zh.wikipedia.org/wiki/%E5%87%B1%E5%88%A9%E5%85%AC%E5%BC%8F"&gt;Wiki&lt;/a&gt;  &lt;/p&gt;
+
+&lt;hr&gt;
+
+&lt;h2 id=""&gt;證明&lt;/h2&gt;
+
+&lt;p&gt;&lt;strong&gt;Definition&lt;/strong&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;X&lt;sub&gt;n&lt;/sub&gt; : 表示 經過 n 次賭局後所剩的資金 (n=0, 表示初始資金)&lt;/li&gt;
+&lt;li&gt;W&lt;sub&gt;n&lt;/sub&gt; : 表示 經過 n 次賭局, Win 的次數&lt;/li&gt;
+&lt;li&gt;L&lt;sub&gt;n&lt;/sub&gt; : 表示 經過 n 次賭局, Loss 的次數&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;strong&gt;Two Cases&lt;/strong&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;X&lt;sub&gt;n&lt;/sub&gt; = X&lt;sub&gt;n-1&lt;/sub&gt; ( 1 + bf )
+&lt;br&gt;Win case, 剩餘金額 = 前次金額 * (1 + 賠率*前次投注的比例)  &lt;/li&gt;
+&lt;li&gt;X&lt;sub&gt;n&lt;/sub&gt; = X&lt;sub&gt;n-1&lt;/sub&gt; ( 1 - f )
+&lt;br&gt;Loss case, 剩餘金額 = 前次金額 * (1 - 前次損失的比例)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;更進一步可以理解&lt;/p&gt;
+
+&lt;p&gt;X&lt;sub&gt;n&lt;/sub&gt; = X&lt;sub&gt;0&lt;/sub&gt; ( 1 - f ) &lt;sup&gt;Ln&lt;/sup&gt; ( 1 + bf ) &lt;sup&gt;Wn&lt;/sup&gt; ... (式1) &lt;br&gt;
+剩餘金額 = 初始金額 * (失敗 case)&lt;sup&gt;失敗次數&lt;/sup&gt; * (勝利 case)&lt;sup&gt;勝利次數&lt;/sup&gt; &lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;參考文獻中更進一步的將 Loss Case 中的賠率 (賠給對方), 另外定義為 a, 所以整理得到的公式會如下&lt;/p&gt;
+  
+  &lt;p&gt;X&lt;sub&gt;n&lt;/sub&gt; = X&lt;sub&gt;0&lt;/sub&gt; ( 1 - af ) &lt;sup&gt;Ln&lt;/sup&gt; ( 1 + bf ) &lt;sup&gt;Wn&lt;/sup&gt; ... (式2)&lt;/p&gt;
+  
+  &lt;p&gt;而 (式1) 只是當 a=1 的 special case (表示當輸了時, 會造成該次投注金額全部損失)&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Reference &lt;a href="https://www.math.washington.edu/~morrow/336_10/papers/jane.pdf"&gt;Betting with the Kelly Criterion&lt;/a&gt;, Jane Hung (June 2,2010)&lt;/p&gt;
+
+&lt;p&gt;這邊先以 (式2) 來求 f 的最佳值, 首先對 &lt;strong&gt;方程式&lt;/strong&gt; 的左右兩側同時&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;除以 X&lt;sub&gt;0&lt;/sub&gt;  &lt;/li&gt;
+&lt;li&gt;&lt;p&gt;取 ln (ln = log&lt;sub&gt;e&lt;/sub&gt;)  &lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;因為 ln 為嚴格遞增函數, 所以對 &lt;strong&gt;方程式&lt;/strong&gt; 兩側作用後, 不影響求極大值的條件。&lt;br&gt;
+  (若 x&lt;sub&gt;1&lt;/sub&gt;、x&lt;sub&gt;2&lt;/sub&gt; 為實數 且 x&lt;sub&gt;1&lt;/sub&gt;&gt;x&lt;sub&gt;2&lt;/sub&gt;, 則 f(x&lt;sub&gt;1&lt;/sub&gt;) &gt; f(x&lt;sub&gt;2&lt;/sub&gt;)恆成立, 滿足此條件的 f(x) 稱為 &lt;strong&gt;嚴格遞增函數&lt;/strong&gt;)&lt;/p&gt;
+&lt;/blockquote&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;除以 n (當 n&gt;0 時, 也可視為嚴格遞增)&lt;/p&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;透過使用下列對數律&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;log&lt;sub&gt;a&lt;/sub&gt; X*Y = log&lt;sub&gt;a&lt;/sub&gt; X + log&lt;sub&gt;a&lt;/sub&gt; Y&lt;/li&gt;
+&lt;li&gt;b * log&lt;sub&gt;a&lt;/sub&gt; X = log&lt;sub&gt;a&lt;/sub&gt; X &lt;sup&gt;b&lt;/sup&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;化簡後如下 ... (式3)
+&lt;img src="https://farm2.staticflickr.com/1669/25690346716_7d44c0666a.jpg" alt="Step1"&gt;&lt;/p&gt;
+
+&lt;p&gt;新定義一個函式為 G(f) = 上式, 因 L&lt;sub&gt;n&lt;/sub&gt; / n = q、W&lt;sub&gt;n&lt;/sub&gt; / n = p (來自於 p、q 本身的定義為勝率跟敗率), 所以得到&lt;/p&gt;
+
+&lt;p&gt;G(f) = q (ln (1-af)) + p (ln (1+bf))&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;目前問題已經轉化為要求 G(f) 的最大值時, f 應該使用多少?&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;這邊一階微分在數學上的意義是斜率, 所以當我們今天要找極大值相當於我們要找斜率 = 0的點, 所以我們先找出 G'(f) = 0 的 f值有哪些? &lt;/p&gt;
+
+&lt;p&gt;使用 &lt;a href="https://en.wikipedia.org/wiki/Chain_rule"&gt;Chain Rule&lt;/a&gt; 技巧可以得到下面結果&lt;/p&gt;
+
+&lt;p&gt;&lt;img src="https://farm2.staticflickr.com/1702/25719192595_02cd415376_n.jpg" alt="Step2"&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src="https://farm2.staticflickr.com/1703/25418464200_564ea61514_n.jpg" alt="Step3"&gt;&lt;/p&gt;
+
+&lt;p&gt;因為分母 =\= 0, 所以這邊僅需要求分子 &lt;strong&gt;bp - aq- abf = 0&lt;/strong&gt; 的 f 解, 透過移項後即可得到 G(f) 的極值出現在 f 為何時 (當然這邊其實還要用二階微分求函數的凹性, 來確認是極大還是極小值, 但這邊省略參考 Jane 的文獻)&lt;/p&gt;
+
+&lt;p&gt;&lt;img src="https://farm2.staticflickr.com/1481/25719324655_119cc96a22_m.jpg" alt="Step4"&gt;&lt;/p&gt;
+
+&lt;p&gt;得到 (式2) 的解後, 就可以知道 (式1) 得到的 Kelly Fromula 僅是當 a=0 時的特殊解。&lt;/p&gt;
+
+&lt;p&gt;&lt;a href="https://www.symbolab.com"&gt;推薦Online好用的數學工具&lt;/a&gt;&lt;/p&gt;
+
+&lt;hr&gt;
+
+&lt;h2 id="thestockmarket"&gt;The Stock Market&lt;/h2&gt;
+
+&lt;p&gt;(待補充)&lt;/p&gt;</content:encoded></item><item><title>海龜特訓班 筆記 (Mind Map)</title><description>&lt;blockquote&gt;
   &lt;p&gt;原名&lt;/p&gt;
   
   &lt;p&gt;The Complete TurtleTrader by &lt;strong&gt;Michael W. Covel&lt;/strong&gt;&lt;/p&gt;
