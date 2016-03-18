@@ -11,23 +11,23 @@
 
     <link rel="shortcut icon" href="../favicon.ico">
 
-    <link rel="stylesheet" type="text/css" href="../assets/css/screen.css?v=7596028f5e">
+    <link rel="stylesheet" type="text/css" href="../assets/css/screen.css?v=ea4de00989">
     <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Merriweather:300,700,700italic,300italic%7COpen+Sans:700,400">
-    <link rel="stylesheet" type="text/css" href="../assets/css/prism.css?v=7596028f5e">
+    <link rel="stylesheet" type="text/css" href="../assets/css/prism.css?v=ea4de00989">
     <link rel="canonical" href="index.html">
     <meta name="referrer" content="origin">
     
     <meta property="og:site_name" content="Hello World! I'm Vincent">
     <meta property="og:type" content="article">
     <meta property="og:title" content="Kelly Formula / 凱利公式 － 風險控管">
-    <meta property="og:description" content="投資 vs 投機 vs 賭博, Kelly Formula b : 賠率 (獲勝後的報償比上本金的比例, ex. 賭上 1 元, 獲勝可拿回 1+b 元) p : 勝率 (獲勝的機率) q : 敗率 (1-p) f : 為使用現有資金應進行投注的比例 Kelly Formula 為求最大期望值時, 應投入的資金比例 (其中 b、p、q 皆為不變常數)  from Wiki   證明 Definition Xn...">
+    <meta property="og:description" content="投資 vs 投機 vs 賭博, 不管你自認為是使用以上三種策略的那一種人, 今天要介紹的是一門讓你在這條路上可以走得更遠、更久的準則－Kelly Formula, 先來上一堂數學課吧!  Kelly Formula b : 賠率 (獲勝後的報償比上本金的比例, ex. 賭上 1 元, 獲勝可拿回 1+b 元) p : 勝率 (獲勝的機率) q : 敗率 (1-p) f : 為使用現有資金應進行投注的比例 Kelly Formula 為求最大期望值時, 應投入的資金比例 (其中 b、p、q...">
     <meta property="og:url" content="http://captainvincent.github.io/kelly-formula/">
     <meta property="article:published_time" content="2016-03-11T10:57:55.730Z">
-    <meta property="article:modified_time" content="2016-03-12T10:35:29.621Z">
+    <meta property="article:modified_time" content="2016-03-18T15:12:54.482Z">
     
     <meta name="twitter:card" content="summary">
     <meta name="twitter:title" content="Kelly Formula / 凱利公式 － 風險控管">
-    <meta name="twitter:description" content="投資 vs 投機 vs 賭博, Kelly Formula b : 賠率 (獲勝後的報償比上本金的比例, ex. 賭上 1 元, 獲勝可拿回 1+b 元) p : 勝率 (獲勝的機率) q : 敗率 (1-p) f : 為使用現有資金應進行投注的比例 Kelly Formula 為求最大期望值時, 應投入的資金比例 (其中 b、p、q 皆為不變常數)  from Wiki   證明 Definition Xn...">
+    <meta name="twitter:description" content="投資 vs 投機 vs 賭博, 不管你自認為是使用以上三種策略的那一種人, 今天要介紹的是一門讓你在這條路上可以走得更遠、更久的準則－Kelly Formula, 先來上一堂數學課吧!  Kelly Formula b : 賠率 (獲勝後的報償比上本金的比例, ex. 賭上 1 元, 獲勝可拿回 1+b 元) p : 勝率 (獲勝的機率) q : 敗率 (1-p) f : 為使用現有資金應進行投注的比例 Kelly Formula 為求最大期望值時, 應投入的資金比例 (其中 b、p、q...">
     <meta name="twitter:url" content="http://captainvincent.github.io/kelly-formula/">
     
     <script type="application/ld+json">
@@ -46,8 +46,8 @@
     "headline": "Kelly Formula / 凱利公式 － 風險控管",
     "url": "http://captainvincent.github.io/kelly-formula/",
     "datePublished": "2016-03-11T10:57:55.730Z",
-    "dateModified": "2016-03-12T10:35:29.621Z",
-    "description": "投資 vs 投機 vs 賭博, Kelly Formula b : 賠率 (獲勝後的報償比上本金的比例, ex. 賭上 1 元, 獲勝可拿回 1+b 元) p : 勝率 (獲勝的機率) q : 敗率 (1-p) f : 為使用現有資金應進行投注的比例 Kelly Formula 為求最大期望值時, 應投入的資金比例 (其中 b、p、q 皆為不變常數)  from Wiki   證明 Definition Xn..."
+    "dateModified": "2016-03-18T15:12:54.482Z",
+    "description": "投資 vs 投機 vs 賭博, 不管你自認為是使用以上三種策略的那一種人, 今天要介紹的是一門讓你在這條路上可以走得更遠、更久的準則－Kelly Formula, 先來上一堂數學課吧!  Kelly Formula b : 賠率 (獲勝後的報償比上本金的比例, ex. 賭上 1 元, 獲勝可拿回 1+b 元) p : 勝率 (獲勝的機率) q : 敗率 (1-p) f : 為使用現有資金應進行投注的比例 Kelly Formula 為求最大期望值時, 應投入的資金比例 (其中 b、p、q..."
 }
     </script>
 
@@ -104,7 +104,7 @@
 
         <section class="post-content">
             <blockquote>
-  <p>投資 vs 投機 vs 賭博,</p>
+  <p>投資 vs 投機 vs 賭博, 不管你自認為是使用以上三種策略的那一種人, 今天要介紹的是一門讓你在這條路上可以走得更遠、更久的準則－<strong>Kelly Formula</strong>, 先來上一堂數學課吧! </p>
 </blockquote>
 
 <h2 id="kellyformula">Kelly Formula</h2>
@@ -161,13 +161,10 @@ Loss case, 剩餘金額 = 前次金額 * (1 - 前次損失的比例)</li>
 
 <ol>
 <li>除以 X<sub>0</sub>  </li>
-<li><p>取 ln (ln = log<sub>e</sub>)  </p>
-
-<blockquote>
-  <p>因為 ln 為嚴格遞增函數, 所以對 <strong>方程式</strong> 兩側作用後, 不影響求極大值的條件。
-  (若 x<sub>1</sub>、x<sub>2</sub> 為實數 且 x<sub>1</sub>&gt;x<sub>2</sub>, 則 f(x<sub>1</sub>) &gt; f(x<sub>2</sub>)恆成立, 滿足此條件的 f(x) 稱為 <strong>嚴格遞增函數</strong>)</p>
-</blockquote></li>
-<li><p>除以 n (當 n&gt;0 時, 也可視為嚴格遞增)</p></li>
+<li>取 ln (ln = log<sub>e</sub>) <br>
+因為 ln 為嚴格遞增函數, 所以對 <strong>方程式</strong> 兩側作用後, 不影響求極大值的條件。
+(若 x<sub>1</sub>、x<sub>2</sub> 為實數 且 x<sub>1</sub>&gt;x<sub>2</sub>, 則 f(x<sub>1</sub>) &gt; f(x<sub>2</sub>)恆成立, 滿足此條件的 f(x) 稱為 <strong>嚴格遞增函數</strong>)</li>
+<li>除以 n (當 n&gt;0 時, 也可視為嚴格遞增)</li>
 </ol>
 
 <p>透過使用下列對數律</p>
@@ -180,13 +177,13 @@ Loss case, 剩餘金額 = 前次金額 * (1 - 前次損失的比例)</li>
 <p>化簡後如下 ... (式3)
 <img src="https://farm2.staticflickr.com/1669/25690346716_7d44c0666a.jpg" alt="Step1"></p>
 
-<p>新定義一個函式為 G(f) = 上式, 因 L<sub>n</sub> / n = q、W<sub>n</sub> / n = p (來自於 p、q 本身的定義為勝率跟敗率), 所以得到</p>
+<p>新定義一個函式為 G(f) = (式3), 因 L<sub>n</sub> / n = q、W<sub>n</sub> / n = p (來自於 p、q 本身的定義為勝率跟敗率), 所以得到</p>
 
 <p>G(f) = q (ln (1-af)) + p (ln (1+bf))</p>
 
 <p><strong>目前問題已經轉化為要求 G(f) 的最大值時, f 應該使用多少?</strong></p>
 
-<p>這邊一階微分在數學上的意義是斜率, 所以當我們今天要找極大值相當於我們要找斜率 = 0的點, 所以我們先找出 G'(f) = 0 的 f值有哪些? </p>
+<p>這邊一階微分在數學上的意義是斜率, 所以當我們今天要找極大值相當於我們要找出斜率 = 0 的點, 所以我們先找出 G'(f) = 0 的 f 值有哪些? </p>
 
 <p>使用 <a href="https://en.wikipedia.org/wiki/Chain_rule">Chain Rule</a> 技巧可以得到下面結果</p>
 
@@ -194,11 +191,11 @@ Loss case, 剩餘金額 = 前次金額 * (1 - 前次損失的比例)</li>
 
 <p><img src="https://farm2.staticflickr.com/1703/25418464200_564ea61514_n.jpg" alt="Step3"></p>
 
-<p>因為分母 =\= 0, 所以這邊僅需要求分子 <strong>bp - aq- abf = 0</strong> 的 f 解, 透過移項後即可得到 G(f) 的極值出現在 f 為何時 (當然這邊其實還要用二階微分求函數的凹性, 來確認是極大還是極小值, 但這邊省略參考 Jane 的文獻)</p>
+<p>因為分母 =\= 0, 所以這邊僅需要求分子 <strong>bp - aq- abf = 0</strong> 的 f 解, 透過移項後即可得到 G(f) 的極值出現在 f 為何時 (當然這邊其實還要用二階微分來求函數的凹性, 確認求出的 f 值代入 G(f) 是極大還是極小值, 但這邊省略請直接參考 <a href="https://www.math.washington.edu/~morrow/336_10/papers/jane.pdf">Jane 的文獻</a>)</p>
 
 <p><img src="https://farm2.staticflickr.com/1481/25719324655_119cc96a22_m.jpg" alt="Step4"></p>
 
-<p>得到 (式2) 的解後, 就可以知道 (式1) 得到的 Kelly Fromula 僅是當 a=0 時的特殊解。</p>
+<p>得到 (式2) 的解後, 就可以知道 (式1) 得到的 Kelly Fromula 僅是當 a 為 1 時的特殊解。</p>
 
 <p><a href="https://www.symbolab.com">推薦Online好用的數學工具</a></p>
 
@@ -206,7 +203,61 @@ Loss case, 剩餘金額 = 前次金額 * (1 - 前次損失的比例)</li>
 
 <h2 id="thestockmarket">The Stock Market</h2>
 
-<p>(待補充)</p>
+<p>股票市場上的賭局並非使用固定的賠率看待, 所以這邊引入了隨機變數的概念, 用 <strong>X</strong> 表示每單位可拿回的金額 (相當於之前 Kelly Formula 裡的賠率 b), P(X = s) 則表示當 X 為 s 時發生的機率。</p>
+
+<p><a href="http://ccckmit.wikidot.com/st:randomvariable">隨機變數參考網站</a></p>
+
+<p>又因為今天在設法求出最佳投注資金比例 f 時, 重點不在於整個市場的機率分佈呈現是如何, 所以對機率分佈上做了以下的假設</p>
+
+<p><code>P(X = μ + σ) = P(X = μ − σ) = 0.5 ... (式4)</code></p>
+
+<ul>
+<li>μ 為平均值</li>
+<li>σ 為標準差</li>
+</ul>
+
+<p><strong>而在資金 Y 變化的公式則是由下式表示</strong></p>
+
+<p>Y<sub>n</sub> = Y<sub>n-1</sub> (1 + (1-f)r + fX), <em>(r 表示 <strong>未</strong> 進行投注的資金獲得的報償比例)</em></p>
+
+<p>解讀為</p>
+
+<pre><code>現有剩餘資金 = 前次剩餘資金*(1 + 未投注市場比例*未投注報償比 + 投注市場比例*投注市場報償比) 
+</code></pre>
+
+<p>當今天進行了 n 次的投注後, 嘗試列出 <strong>現有資金</strong> 與 <strong>初始資金</strong> 間的關係, 所以這邊重新做了一次以下的假設, 使得我們經過 n 次投注後得到的總 μ, σ<sup>2</sup> and r 仍相同 (意味要將 μ, σ<sup>2</sup> and r 平均分散在 n 次的投注中)</p>
+
+<ul>
+<li><p>標準差 σ'
+<img src="https://farm2.staticflickr.com/1651/25203896753_b1333171ea_t.jpg" alt="Step5">
+(因為要令 σ'<sup>2</sup> * n = σ<sup>2</sup>)</p></li>
+<li><p>回報率 μ'
+<img src="https://farm2.staticflickr.com/1692/25830684445_9488841440_t.jpg" alt="Step6">
+(因為要令 μ'* n = μ)</p></li>
+<li><p>其他投資回報率 r'
+<img src="https://farm2.staticflickr.com/1565/25200176134_81d6ea1236_t.jpg" alt="Step7">
+(因為要令 r'* n = r)</p></li>
+<li><p>將以上的變量代入一開始假設的機率分佈
+<img src="https://farm2.staticflickr.com/1506/25200176174_cd81ae121e.jpg" alt="Step8"></p></li>
+</ul>
+
+<p>可以導出 Y<sub>n</sub> 與 Y<sub>0</sub> 的關係式
+<img src="https://farm2.staticflickr.com/1579/25202372904_2b2901e3d6_n.jpg" alt="Step9"></p>
+
+<p>將 Y<sub>0</sub> 移項至左式, 再兩邊同取 ln 後
+<img src="https://farm2.staticflickr.com/1520/25738035291_dc778d991b.jpg" alt="Step10"></p>
+
+<blockquote>
+  <p>回到 Kelly Formula 的討論, 我們仍是要求 G<sub>n</sub>(f) 的極大值出現在 f (資金下注比例) 為何時?</p>
+</blockquote>
+
+<p>在這部分的推導上是先將 G<sub>n</sub>(f) 以 Maclaurin 級數展開, 並令 n-&gt;∞ 時對多項式來求極值。</p>
+
+<p><a data-flickr-embed="true" href="https://www.flickr.com/photos/138186136@N06/25254483243/in/dateposted-public/" title="Step11"><img src="https://farm2.staticflickr.com/1550/25254483243_fae5dae26b.jpg" align="center" width="375" height="500" alt="Step11"></a><script async src="http://embedr.flickr.com/assets/client-code.js" charset="utf-8"></script> <br>
+(詳細的步驟可以參考我的計算過程, 跟 Jane 的有些微出入, 我猜她可能沒有實際推導後面的展開式, 所以才會在微分的結果上寫錯)</p>
+
+<p>最後我們總算可以導出適用於市場的 Kelly Criterion。
+<img src="https://farm2.staticflickr.com/1518/25883526085_a10a0e006e_o.jpg" alt="Step12"></p>
         </section>
 
         <footer class="post-footer">
@@ -290,8 +341,8 @@ Loss case, 剩餘金額 = 前次金額 * (1 - 前次損失的比例)</li>
     <script type="text/javascript" src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
     
 
-    <script type="text/javascript" src="../assets/js/jquery.fitvids.js?v=7596028f5e"></script>
-    <script type="text/javascript" src="../assets/js/prism.js?v=7596028f5e"></script> 
-    <script type="text/javascript" src="../assets/js/index.js?v=7596028f5e"></script>
+    <script type="text/javascript" src="../assets/js/jquery.fitvids.js?v=ea4de00989"></script>
+    <script type="text/javascript" src="../assets/js/prism.js?v=ea4de00989"></script> 
+    <script type="text/javascript" src="../assets/js/index.js?v=ea4de00989"></script>
 
 </body>

@@ -1,5 +1,5 @@
-<rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:media="http://search.yahoo.com/mrss/" version="2.0"><channel><title>Hello World! I'm Vincent</title><description>Thoughts, stories and ideas.</description><link>http://localhost:2368/</link><generator>Ghost 0.7</generator><lastBuildDate>Sat, 12 Mar 2016 10:35:44 GMT</lastBuildDate><atom:link href="http://localhost:2368/rss/" rel="self" type="application/rss+xml"/><ttl>60</ttl><item><title>Kelly Formula / 凱利公式 － 風險控管</title><description>&lt;blockquote&gt;
-  &lt;p&gt;投資 vs 投機 vs 賭博,&lt;/p&gt;
+<rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:media="http://search.yahoo.com/mrss/" version="2.0"><channel><title>Hello World! I'm Vincent</title><description>Thoughts, stories and ideas.</description><link>http://localhost:2368/</link><generator>Ghost 0.7</generator><lastBuildDate>Fri, 18 Mar 2016 15:13:52 GMT</lastBuildDate><atom:link href="http://localhost:2368/rss/" rel="self" type="application/rss+xml"/><ttl>60</ttl><item><title>Kelly Formula / 凱利公式 － 風險控管</title><description>&lt;blockquote&gt;
+  &lt;p&gt;投資 vs 投機 vs 賭博, 不管你自認為是使用以上三種策略的那一種人, 今天要介紹的是一門讓你在這條路上可以走得更遠、更久的準則－&lt;strong&gt;Kelly Formula&lt;/strong&gt;, 先來上一堂數學課吧! &lt;/p&gt;
 &lt;/blockquote&gt;
 
 &lt;h2 id="kellyformula"&gt;Kelly Formula&lt;/h2&gt;
@@ -23,9 +23,8 @@ from &lt;a href="https://zh.wikipedia.org/wiki/%E5%87%B1%E5%88%A9%E5%85%AC%E5%BC
 &lt;p&gt;&lt;strong&gt;Definition&lt;/strong&gt;&lt;/p&gt;
 
 &lt;ul&gt;
-&lt;li&gt;X&lt;sub&gt;n&lt;/sub&gt; : 表示 經過 n 次賭局後所剩的資金 (n=0, 表示初始資金)&lt;/li&gt;
-&lt;li&gt;W&lt;sub&gt;n&lt;/sub&gt;&lt;/li&gt;&lt;/ul&gt;</description><link>http://localhost:2368/kelly-formula/</link><guid isPermaLink="false">8fbf310e-9b7b-4bac-a24e-c1c22ca661a4</guid><dc:creator>Captain Vincent</dc:creator><pubDate>Fri, 11 Mar 2016 10:57:55 GMT</pubDate><content:encoded>&lt;blockquote&gt;
-  &lt;p&gt;投資 vs 投機 vs 賭博,&lt;/p&gt;
+&lt;li&gt;X&lt;sub&gt;n&lt;/sub&gt; : 表示 經過 n&lt;/li&gt;&lt;/ul&gt;</description><link>http://localhost:2368/kelly-formula/</link><guid isPermaLink="false">8fbf310e-9b7b-4bac-a24e-c1c22ca661a4</guid><dc:creator>Captain Vincent</dc:creator><pubDate>Fri, 11 Mar 2016 10:57:55 GMT</pubDate><content:encoded>&lt;blockquote&gt;
+  &lt;p&gt;投資 vs 投機 vs 賭博, 不管你自認為是使用以上三種策略的那一種人, 今天要介紹的是一門讓你在這條路上可以走得更遠、更久的準則－&lt;strong&gt;Kelly Formula&lt;/strong&gt;, 先來上一堂數學課吧! &lt;/p&gt;
 &lt;/blockquote&gt;
 
 &lt;h2 id="kellyformula"&gt;Kelly Formula&lt;/h2&gt;
@@ -82,13 +81,10 @@ from &lt;a href="https://zh.wikipedia.org/wiki/%E5%87%B1%E5%88%A9%E5%85%AC%E5%BC
 
 &lt;ol&gt;
 &lt;li&gt;除以 X&lt;sub&gt;0&lt;/sub&gt;  &lt;/li&gt;
-&lt;li&gt;&lt;p&gt;取 ln (ln = log&lt;sub&gt;e&lt;/sub&gt;)  &lt;/p&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;因為 ln 為嚴格遞增函數, 所以對 &lt;strong&gt;方程式&lt;/strong&gt; 兩側作用後, 不影響求極大值的條件。&lt;br&gt;
-  (若 x&lt;sub&gt;1&lt;/sub&gt;、x&lt;sub&gt;2&lt;/sub&gt; 為實數 且 x&lt;sub&gt;1&lt;/sub&gt;&gt;x&lt;sub&gt;2&lt;/sub&gt;, 則 f(x&lt;sub&gt;1&lt;/sub&gt;) &gt; f(x&lt;sub&gt;2&lt;/sub&gt;)恆成立, 滿足此條件的 f(x) 稱為 &lt;strong&gt;嚴格遞增函數&lt;/strong&gt;)&lt;/p&gt;
-&lt;/blockquote&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;除以 n (當 n&gt;0 時, 也可視為嚴格遞增)&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;取 ln (ln = log&lt;sub&gt;e&lt;/sub&gt;) &lt;br&gt;
+因為 ln 為嚴格遞增函數, 所以對 &lt;strong&gt;方程式&lt;/strong&gt; 兩側作用後, 不影響求極大值的條件。&lt;br&gt;
+(若 x&lt;sub&gt;1&lt;/sub&gt;、x&lt;sub&gt;2&lt;/sub&gt; 為實數 且 x&lt;sub&gt;1&lt;/sub&gt;&gt;x&lt;sub&gt;2&lt;/sub&gt;, 則 f(x&lt;sub&gt;1&lt;/sub&gt;) &gt; f(x&lt;sub&gt;2&lt;/sub&gt;)恆成立, 滿足此條件的 f(x) 稱為 &lt;strong&gt;嚴格遞增函數&lt;/strong&gt;)&lt;/li&gt;
+&lt;li&gt;除以 n (當 n&gt;0 時, 也可視為嚴格遞增)&lt;/li&gt;
 &lt;/ol&gt;
 
 &lt;p&gt;透過使用下列對數律&lt;/p&gt;
@@ -101,13 +97,13 @@ from &lt;a href="https://zh.wikipedia.org/wiki/%E5%87%B1%E5%88%A9%E5%85%AC%E5%BC
 &lt;p&gt;化簡後如下 ... (式3)
 &lt;img src="https://farm2.staticflickr.com/1669/25690346716_7d44c0666a.jpg" alt="Step1"&gt;&lt;/p&gt;
 
-&lt;p&gt;新定義一個函式為 G(f) = 上式, 因 L&lt;sub&gt;n&lt;/sub&gt; / n = q、W&lt;sub&gt;n&lt;/sub&gt; / n = p (來自於 p、q 本身的定義為勝率跟敗率), 所以得到&lt;/p&gt;
+&lt;p&gt;新定義一個函式為 G(f) = (式3), 因 L&lt;sub&gt;n&lt;/sub&gt; / n = q、W&lt;sub&gt;n&lt;/sub&gt; / n = p (來自於 p、q 本身的定義為勝率跟敗率), 所以得到&lt;/p&gt;
 
 &lt;p&gt;G(f) = q (ln (1-af)) + p (ln (1+bf))&lt;/p&gt;
 
 &lt;p&gt;&lt;strong&gt;目前問題已經轉化為要求 G(f) 的最大值時, f 應該使用多少?&lt;/strong&gt;&lt;/p&gt;
 
-&lt;p&gt;這邊一階微分在數學上的意義是斜率, 所以當我們今天要找極大值相當於我們要找斜率 = 0的點, 所以我們先找出 G'(f) = 0 的 f值有哪些? &lt;/p&gt;
+&lt;p&gt;這邊一階微分在數學上的意義是斜率, 所以當我們今天要找極大值相當於我們要找出斜率 = 0 的點, 所以我們先找出 G'(f) = 0 的 f 值有哪些? &lt;/p&gt;
 
 &lt;p&gt;使用 &lt;a href="https://en.wikipedia.org/wiki/Chain_rule"&gt;Chain Rule&lt;/a&gt; 技巧可以得到下面結果&lt;/p&gt;
 
@@ -115,11 +111,11 @@ from &lt;a href="https://zh.wikipedia.org/wiki/%E5%87%B1%E5%88%A9%E5%85%AC%E5%BC
 
 &lt;p&gt;&lt;img src="https://farm2.staticflickr.com/1703/25418464200_564ea61514_n.jpg" alt="Step3"&gt;&lt;/p&gt;
 
-&lt;p&gt;因為分母 =\= 0, 所以這邊僅需要求分子 &lt;strong&gt;bp - aq- abf = 0&lt;/strong&gt; 的 f 解, 透過移項後即可得到 G(f) 的極值出現在 f 為何時 (當然這邊其實還要用二階微分求函數的凹性, 來確認是極大還是極小值, 但這邊省略參考 Jane 的文獻)&lt;/p&gt;
+&lt;p&gt;因為分母 =\= 0, 所以這邊僅需要求分子 &lt;strong&gt;bp - aq- abf = 0&lt;/strong&gt; 的 f 解, 透過移項後即可得到 G(f) 的極值出現在 f 為何時 (當然這邊其實還要用二階微分來求函數的凹性, 確認求出的 f 值代入 G(f) 是極大還是極小值, 但這邊省略請直接參考 &lt;a href="https://www.math.washington.edu/~morrow/336_10/papers/jane.pdf"&gt;Jane 的文獻&lt;/a&gt;)&lt;/p&gt;
 
 &lt;p&gt;&lt;img src="https://farm2.staticflickr.com/1481/25719324655_119cc96a22_m.jpg" alt="Step4"&gt;&lt;/p&gt;
 
-&lt;p&gt;得到 (式2) 的解後, 就可以知道 (式1) 得到的 Kelly Fromula 僅是當 a=0 時的特殊解。&lt;/p&gt;
+&lt;p&gt;得到 (式2) 的解後, 就可以知道 (式1) 得到的 Kelly Fromula 僅是當 a 為 1 時的特殊解。&lt;/p&gt;
 
 &lt;p&gt;&lt;a href="https://www.symbolab.com"&gt;推薦Online好用的數學工具&lt;/a&gt;&lt;/p&gt;
 
@@ -127,7 +123,61 @@ from &lt;a href="https://zh.wikipedia.org/wiki/%E5%87%B1%E5%88%A9%E5%85%AC%E5%BC
 
 &lt;h2 id="thestockmarket"&gt;The Stock Market&lt;/h2&gt;
 
-&lt;p&gt;(待補充)&lt;/p&gt;</content:encoded></item><item><title>海龜特訓班 筆記 (Mind Map)</title><description>&lt;blockquote&gt;
+&lt;p&gt;股票市場上的賭局並非使用固定的賠率看待, 所以這邊引入了隨機變數的概念, 用 &lt;strong&gt;X&lt;/strong&gt; 表示每單位可拿回的金額 (相當於之前 Kelly Formula 裡的賠率 b), P(X = s) 則表示當 X 為 s 時發生的機率。&lt;/p&gt;
+
+&lt;p&gt;&lt;a href="http://ccckmit.wikidot.com/st:randomvariable"&gt;隨機變數參考網站&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;又因為今天在設法求出最佳投注資金比例 f 時, 重點不在於整個市場的機率分佈呈現是如何, 所以對機率分佈上做了以下的假設&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;P(X = μ + σ) = P(X = μ − σ) = 0.5 ... (式4)&lt;/code&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;μ 為平均值&lt;/li&gt;
+&lt;li&gt;σ 為標準差&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;strong&gt;而在資金 Y 變化的公式則是由下式表示&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;Y&lt;sub&gt;n&lt;/sub&gt; = Y&lt;sub&gt;n-1&lt;/sub&gt; (1 + (1-f)r + fX), &lt;em&gt;(r 表示 &lt;strong&gt;未&lt;/strong&gt; 進行投注的資金獲得的報償比例)&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;解讀為&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;現有剩餘資金 = 前次剩餘資金*(1 + 未投注市場比例*未投注報償比 + 投注市場比例*投注市場報償比) 
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;當今天進行了 n 次的投注後, 嘗試列出 &lt;strong&gt;現有資金&lt;/strong&gt; 與 &lt;strong&gt;初始資金&lt;/strong&gt; 間的關係, 所以這邊重新做了一次以下的假設, 使得我們經過 n 次投注後得到的總 μ, σ&lt;sup&gt;2&lt;/sup&gt; and r 仍相同 (意味要將 μ, σ&lt;sup&gt;2&lt;/sup&gt; and r 平均分散在 n 次的投注中)&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;標準差 σ'
+&lt;img src="https://farm2.staticflickr.com/1651/25203896753_b1333171ea_t.jpg" alt="Step5"&gt;
+(因為要令 σ'&lt;sup&gt;2&lt;/sup&gt; * n = σ&lt;sup&gt;2&lt;/sup&gt;)&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;回報率 μ'
+&lt;img src="https://farm2.staticflickr.com/1692/25830684445_9488841440_t.jpg" alt="Step6"&gt;
+(因為要令 μ'* n = μ)&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;其他投資回報率 r'
+&lt;img src="https://farm2.staticflickr.com/1565/25200176134_81d6ea1236_t.jpg" alt="Step7"&gt;
+(因為要令 r'* n = r)&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;將以上的變量代入一開始假設的機率分佈
+&lt;img src="https://farm2.staticflickr.com/1506/25200176174_cd81ae121e.jpg" alt="Step8"&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;可以導出 Y&lt;sub&gt;n&lt;/sub&gt; 與 Y&lt;sub&gt;0&lt;/sub&gt; 的關係式
+&lt;img src="https://farm2.staticflickr.com/1579/25202372904_2b2901e3d6_n.jpg" alt="Step9"&gt;&lt;/p&gt;
+
+&lt;p&gt;將 Y&lt;sub&gt;0&lt;/sub&gt; 移項至左式, 再兩邊同取 ln 後
+&lt;img src="https://farm2.staticflickr.com/1520/25738035291_dc778d991b.jpg" alt="Step10"&gt;&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;回到 Kelly Formula 的討論, 我們仍是要求 G&lt;sub&gt;n&lt;/sub&gt;(f) 的極大值出現在 f (資金下注比例) 為何時?&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;在這部分的推導上是先將 G&lt;sub&gt;n&lt;/sub&gt;(f) 以 Maclaurin 級數展開, 並令 n-&gt;∞ 時對多項式來求極值。&lt;/p&gt;
+
+&lt;p&gt;&lt;a data-flickr-embed="true" href="https://www.flickr.com/photos/138186136@N06/25254483243/in/dateposted-public/" title="Step11"&gt;&lt;img src="https://farm2.staticflickr.com/1550/25254483243_fae5dae26b.jpg" align="center" width="375" height="500" alt="Step11"&gt;&lt;/a&gt;&lt;script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"&gt;&lt;/script&gt; &lt;br&gt;
+(詳細的步驟可以參考我的計算過程, 跟 Jane 的有些微出入, 我猜她可能沒有實際推導後面的展開式, 所以才會在微分的結果上寫錯)&lt;/p&gt;
+
+&lt;p&gt;最後我們總算可以導出適用於市場的 Kelly Criterion。
+&lt;img src="https://farm2.staticflickr.com/1518/25883526085_a10a0e006e_o.jpg" alt="Step12"&gt;&lt;/p&gt;</content:encoded></item><item><title>海龜特訓班 筆記 (Mind Map)</title><description>&lt;blockquote&gt;
   &lt;p&gt;原名&lt;/p&gt;
   
   &lt;p&gt;The Complete TurtleTrader by &lt;strong&gt;Michael W. Covel&lt;/strong&gt;&lt;/p&gt;
