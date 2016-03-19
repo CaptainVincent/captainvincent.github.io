@@ -1,4 +1,4 @@
-<rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:media="http://search.yahoo.com/mrss/" version="2.0"><channel><title>Hello World! I'm Vincent</title><description>Thoughts, stories and ideas.</description><link>http://localhost:2368/</link><generator>Ghost 0.7</generator><lastBuildDate>Fri, 18 Mar 2016 15:13:52 GMT</lastBuildDate><atom:link href="http://localhost:2368/rss/" rel="self" type="application/rss+xml"/><ttl>60</ttl><item><title>Kelly Formula / 凱利公式 － 風險控管</title><description>&lt;blockquote&gt;
+<rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:media="http://search.yahoo.com/mrss/" version="2.0"><channel><title>Hello World! I'm Vincent</title><description>Thoughts, stories and ideas.</description><link>http://localhost:2368/</link><generator>Ghost 0.7</generator><lastBuildDate>Sat, 19 Mar 2016 05:10:32 GMT</lastBuildDate><atom:link href="http://localhost:2368/rss/" rel="self" type="application/rss+xml"/><ttl>60</ttl><item><title>Kelly Formula / 凱利公式 － 風險控管</title><description>&lt;blockquote&gt;
   &lt;p&gt;投資 vs 投機 vs 賭博, 不管你自認為是使用以上三種策略的那一種人, 今天要介紹的是一門讓你在這條路上可以走得更遠、更久的準則－&lt;strong&gt;Kelly Formula&lt;/strong&gt;, 先來上一堂數學課吧! &lt;/p&gt;
 &lt;/blockquote&gt;
 
@@ -203,7 +203,7 @@ from &lt;a href="https://zh.wikipedia.org/wiki/%E5%87%B1%E5%88%A9%E5%85%AC%E5%BC
 
 &lt;h2 id="mindmap"&gt;第二部分 交易策略 (Mind Map)&lt;/h2&gt;
 
-&lt;iframe width="853" height="480" src="https://embed.coggle.it/diagram/56df193f0337486314e39c0a/15cdb25a899d198e34460c4f7b2589b4a19fdccbd89305e7cbdab8bf6619b0cd" frameborder="0" allowfullscreen&gt;&lt;/iframe&gt;  
+&lt;iframe width="853" height="480" src="https://embed.coggle.it/diagram/Vt9MRT9kC8o93lZw/ba20a801476260b3885c5a005c35b6b9ce12bb13d385efd229574892c2083848" frameborder="0" allowfullscreen&gt;&lt;/iframe&gt;  
 
 &lt;blockquote&gt;
   &lt;p&gt;在第二屆的學員們中, 提出了當時海龜策略槓桿底下背負的風險,&lt;/p&gt;&lt;/blockquote&gt;</description><link>http://localhost:2368/hai-gui-te-xun-ban-bi-ji/</link><guid isPermaLink="false">a9e4ea00-cd31-4d7d-923e-76b57ab14b5f</guid><category>順勢</category><category>Richard Dennis</category><category>海龜</category><category>Mind Map</category><category>理查.丹尼斯</category><dc:creator>Captain Vincent</dc:creator><pubDate>Mon, 07 Mar 2016 06:40:10 GMT</pubDate><content:encoded>&lt;blockquote&gt;
@@ -232,7 +232,7 @@ from &lt;a href="https://zh.wikipedia.org/wiki/%E5%87%B1%E5%88%A9%E5%85%AC%E5%BC
 
 &lt;h2 id="mindmap"&gt;第二部分 交易策略 (Mind Map)&lt;/h2&gt;
 
-&lt;iframe width="853" height="480" src="https://embed.coggle.it/diagram/56df193f0337486314e39c0a/15cdb25a899d198e34460c4f7b2589b4a19fdccbd89305e7cbdab8bf6619b0cd" frameborder="0" allowfullscreen&gt;&lt;/iframe&gt;  
+&lt;iframe width="853" height="480" src="https://embed.coggle.it/diagram/Vt9MRT9kC8o93lZw/ba20a801476260b3885c5a005c35b6b9ce12bb13d385efd229574892c2083848" frameborder="0" allowfullscreen&gt;&lt;/iframe&gt;  
 
 &lt;blockquote&gt;
   &lt;p&gt;在第二屆的學員們中, 提出了當時海龜策略槓桿底下背負的風險, 遠比老師 丹尼斯 設想的要高上許多。&lt;/p&gt;
@@ -1108,7 +1108,7 @@ ex. 收盤價, 今日為 Close[0], 昨日為 Close[1]...etc&lt;/p&gt;
 
 &lt;p&gt;(使用方式類似 Google Map 的拖曳操作可以移動畫面, 右鍵可以彈出放大鏡的按鈕, 按壓放大鏡拖曳後可以 Zoom In/Out) － 謝謝收看。&lt;/p&gt;
 
-&lt;iframe width="853" height="480" src="https://embed.coggle.it/diagram/56c6e98e8b3ea34363ccd4c5/30be348f07c8d291036a0721b40f2975b0042eb7c4069f030a14f3663dd1867b" frameborder="0" allowfullscreen&gt;&lt;/iframe&gt;</content:encoded></item><item><title>How to setup Ghost blog platform (下)</title><description>&lt;blockquote&gt;
+&lt;iframe width="853" height="480" src="https://embed.coggle.it/diagram/Vsbpjos-o0NjzNTF/8a429b96d7098f33ba01c968075a2d3733cf8771d6c29faf87f84efe919e8b31" frameborder="0" allowfullscreen&gt;&lt;/iframe&gt;</content:encoded></item><item><title>How to setup Ghost blog platform (下)</title><description>&lt;blockquote&gt;
   &lt;p&gt;接著進入下一個主題, 如何部署 Ghost 到 git.io 以及 Ghost 進階的功能設定
   &lt;strong&gt;(Syntax highlight, 使用 Disqus 添加留言功能, 添加 Google Analytics&lt;/strong&gt;&lt;/p&gt;
 &lt;/blockquote&gt;
