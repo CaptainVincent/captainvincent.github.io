@@ -1,4 +1,28 @@
-<rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:media="http://search.yahoo.com/mrss/" version="2.0"><channel><title>Hello World! I'm Vincent</title><description>Thoughts, stories and ideas.</description><link>http://localhost:2368/</link><generator>Ghost 0.7</generator><lastBuildDate>Sat, 19 Mar 2016 05:10:32 GMT</lastBuildDate><atom:link href="http://localhost:2368/rss/" rel="self" type="application/rss+xml"/><ttl>60</ttl><item><title>Kelly Formula / 凱利公式 － 風險控管</title><description>&lt;blockquote&gt;
+<rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:media="http://search.yahoo.com/mrss/" version="2.0"><channel><title>Hello World! I'm Vincent</title><description>Thoughts, stories and ideas.</description><link>http://localhost:2368/</link><generator>Ghost 0.7</generator><lastBuildDate>Tue, 22 Mar 2016 07:15:07 GMT</lastBuildDate><atom:link href="http://localhost:2368/rss/" rel="self" type="application/rss+xml"/><ttl>60</ttl><item><title>道氏理論的 21 招選股技巧 筆記 (Mind Map)</title><description>&lt;blockquote&gt;
+  &lt;p&gt;History repeats itself. 技術面操盤者心中共同的信念。&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;關於 Mind Map 內的筆記整理, 是筆者消化後認為有可能後續實驗可以參考的法則, 有可能並未忠實呈現道氏理論原先的面貌 (或本書作者的完整意思), 像道氏理論中對於各技術分析的指標都會強調求出其三重型態或是至少求出中、短期的線圖, 但筆者的重心僅在這些技術指標的特徵描述, 實際應用時應再自行驗證加入主觀意識的部分。&lt;/p&gt;
+
+&lt;h2 id="mindmap"&gt;筆記 (Mind Map)&lt;/h2&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;使用方式類似 Google Map 的拖曳操作可以移動畫面, 右鍵可以彈出放大鏡的按鈕, 按壓放大鏡拖曳後可以 Zoom In/Out&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;iframe width="853" height="480" src="https://embed.coggle.it/diagram/Vu5LNj_zpOYo1mzy/739e465141646161dad5c001a099ada2bdb261208d58eeee6ca71408a3c87dfe" frameborder="0" allowfullscreen&gt;&lt;/iframe&gt;</description><link>http://localhost:2368/dao-shi-li-lun-de-21-zhao-xuan-gu-ji-qiao/</link><guid isPermaLink="false">c3e8ac2f-03b6-4684-88da-f10b74881e2c</guid><dc:creator>Captain Vincent</dc:creator><pubDate>Sat, 19 Mar 2016 12:05:46 GMT</pubDate><content:encoded>&lt;blockquote&gt;
+  &lt;p&gt;History repeats itself. 技術面操盤者心中共同的信念。&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;關於 Mind Map 內的筆記整理, 是筆者消化後認為有可能後續實驗可以參考的法則, 有可能並未忠實呈現道氏理論原先的面貌 (或本書作者的完整意思), 像道氏理論中對於各技術分析的指標都會強調求出其三重型態或是至少求出中、短期的線圖, 但筆者的重心僅在這些技術指標的特徵描述, 實際應用時應再自行驗證加入主觀意識的部分。&lt;/p&gt;
+
+&lt;h2 id="mindmap"&gt;筆記 (Mind Map)&lt;/h2&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;使用方式類似 Google Map 的拖曳操作可以移動畫面, 右鍵可以彈出放大鏡的按鈕, 按壓放大鏡拖曳後可以 Zoom In/Out&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;iframe width="853" height="480" src="https://embed.coggle.it/diagram/Vu5LNj_zpOYo1mzy/739e465141646161dad5c001a099ada2bdb261208d58eeee6ca71408a3c87dfe" frameborder="0" allowfullscreen&gt;&lt;/iframe&gt;</content:encoded></item><item><title>Kelly Formula / 凱利公式 － 風險控管</title><description>&lt;blockquote&gt;
   &lt;p&gt;投資 vs 投機 vs 賭博, 不管你自認為是使用以上三種策略的那一種人, 今天要介紹的是一門讓你在這條路上可以走得更遠、更久的準則－&lt;strong&gt;Kelly Formula&lt;/strong&gt;, 先來上一堂數學課吧! &lt;/p&gt;
 &lt;/blockquote&gt;
 
@@ -203,10 +227,8 @@ from &lt;a href="https://zh.wikipedia.org/wiki/%E5%87%B1%E5%88%A9%E5%85%AC%E5%BC
 
 &lt;h2 id="mindmap"&gt;第二部分 交易策略 (Mind Map)&lt;/h2&gt;
 
-&lt;iframe width="853" height="480" src="https://embed.coggle.it/diagram/Vt9MRT9kC8o93lZw/ba20a801476260b3885c5a005c35b6b9ce12bb13d385efd229574892c2083848" frameborder="0" allowfullscreen&gt;&lt;/iframe&gt;  
-
 &lt;blockquote&gt;
-  &lt;p&gt;在第二屆的學員們中, 提出了當時海龜策略槓桿底下背負的風險,&lt;/p&gt;&lt;/blockquote&gt;</description><link>http://localhost:2368/hai-gui-te-xun-ban-bi-ji/</link><guid isPermaLink="false">a9e4ea00-cd31-4d7d-923e-76b57ab14b5f</guid><category>順勢</category><category>Richard Dennis</category><category>海龜</category><category>Mind Map</category><category>理查.丹尼斯</category><dc:creator>Captain Vincent</dc:creator><pubDate>Mon, 07 Mar 2016 06:40:10 GMT</pubDate><content:encoded>&lt;blockquote&gt;
+  &lt;p&gt;使用方式類似 Google&lt;/p&gt;&lt;/blockquote&gt;</description><link>http://localhost:2368/hai-gui-te-xun-ban-bi-ji/</link><guid isPermaLink="false">a9e4ea00-cd31-4d7d-923e-76b57ab14b5f</guid><category>順勢</category><category>Richard Dennis</category><category>海龜</category><category>Mind Map</category><category>理查.丹尼斯</category><dc:creator>Captain Vincent</dc:creator><pubDate>Mon, 07 Mar 2016 06:40:10 GMT</pubDate><content:encoded>&lt;blockquote&gt;
   &lt;p&gt;原名&lt;/p&gt;
   
   &lt;p&gt;The Complete TurtleTrader by &lt;strong&gt;Michael W. Covel&lt;/strong&gt;&lt;/p&gt;
@@ -231,6 +253,10 @@ from &lt;a href="https://zh.wikipedia.org/wiki/%E5%87%B1%E5%88%A9%E5%85%AC%E5%BC
 &lt;/blockquote&gt;
 
 &lt;h2 id="mindmap"&gt;第二部分 交易策略 (Mind Map)&lt;/h2&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;使用方式類似 Google Map 的拖曳操作可以移動畫面, 右鍵可以彈出放大鏡的按鈕, 按壓放大鏡拖曳後可以 Zoom In/Out&lt;/p&gt;
+&lt;/blockquote&gt;
 
 &lt;iframe width="853" height="480" src="https://embed.coggle.it/diagram/Vt9MRT9kC8o93lZw/ba20a801476260b3885c5a005c35b6b9ce12bb13d385efd229574892c2083848" frameborder="0" allowfullscreen&gt;&lt;/iframe&gt;  
 
@@ -1104,9 +1130,13 @@ ex. 收盤價, 今日為 Close[0], 昨日為 Close[1]...etc&lt;/p&gt;
 
 &lt;hr&gt;
 
+&lt;h2 id="mindmap"&gt;筆記 (Mind Map)&lt;/h2&gt;
+
 &lt;p&gt;底下是採用 &lt;a href="https://zh.wikipedia.org/wiki/%E5%BF%83%E6%99%BA%E5%9B%BE"&gt;Mind Map&lt;/a&gt; 方式對此書做的筆記 (包含選用合適的工具、閱讀書籍, 筆記著實花了筆者相當久的時間), 若有他人也能從中有所領悟的話, 筆者也會深感欣慰。&lt;/p&gt;
 
-&lt;p&gt;(使用方式類似 Google Map 的拖曳操作可以移動畫面, 右鍵可以彈出放大鏡的按鈕, 按壓放大鏡拖曳後可以 Zoom In/Out) － 謝謝收看。&lt;/p&gt;
+&lt;blockquote&gt;
+  &lt;p&gt;使用方式類似 Google Map 的拖曳操作可以移動畫面, 右鍵可以彈出放大鏡的按鈕, 按壓放大鏡拖曳後可以 Zoom In/Out&lt;/p&gt;
+&lt;/blockquote&gt;
 
 &lt;iframe width="853" height="480" src="https://embed.coggle.it/diagram/Vsbpjos-o0NjzNTF/8a429b96d7098f33ba01c968075a2d3733cf8771d6c29faf87f84efe919e8b31" frameborder="0" allowfullscreen&gt;&lt;/iframe&gt;</content:encoded></item><item><title>How to setup Ghost blog platform (下)</title><description>&lt;blockquote&gt;
   &lt;p&gt;接著進入下一個主題, 如何部署 Ghost 到 git.io 以及 Ghost 進階的功能設定
