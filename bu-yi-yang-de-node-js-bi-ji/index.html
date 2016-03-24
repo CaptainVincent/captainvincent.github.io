@@ -1,0 +1,524 @@
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <title>不一樣的 Node.js 筆記 (一)</title>
+    <meta name="description" content="">
+
+    <meta name="HandheldFriendly" content="True">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="shortcut icon" href="../favicon.ico">
+
+    <link rel="stylesheet" type="text/css" href="../assets/css/screen.css?v=53a54d0bef">
+    <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Merriweather:300,700,700italic,300italic%7COpen+Sans:700,400">
+    <link rel="stylesheet" type="text/css" href="../assets/css/prism.css?v=53a54d0bef">
+    <link rel="canonical" href="index.html">
+    <meta name="referrer" content="origin">
+    
+    <meta property="og:site_name" content="Hello World! I'm Vincent">
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="不一樣的 Node.js 筆記 (一)">
+    <meta property="og:description" content="原著：不一樣的 Node.js－用 JavaScript 打造高效能的前後台網頁程式 林政毅、蔡政崇、錢逢祥 (2014/05/12)   作者群 期許本書可以替讀者勾勒出 Node.js 的技術藍圖。 Node.js 簡介 Node.js 為一個 opensource 的框架, 採用了 Chrome's V8 JavaScript Engine。 它讓 Javascript 可以獨立運行於瀏覽器之外。 制定了一系列機制於 API 來協助達到原生 JavaScript 所不支援的功能 (ex....">
+    <meta property="og:url" content="http://captainvincent.github.io/bu-yi-yang-de-node-js-bi-ji/">
+    <meta property="article:published_time" content="2016-03-22T12:34:46.673Z">
+    <meta property="article:modified_time" content="2016-03-24T17:58:45.374Z">
+    
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="不一樣的 Node.js 筆記 (一)">
+    <meta name="twitter:description" content="原著：不一樣的 Node.js－用 JavaScript 打造高效能的前後台網頁程式 林政毅、蔡政崇、錢逢祥 (2014/05/12)   作者群 期許本書可以替讀者勾勒出 Node.js 的技術藍圖。 Node.js 簡介 Node.js 為一個 opensource 的框架, 採用了 Chrome's V8 JavaScript Engine。 它讓 Javascript 可以獨立運行於瀏覽器之外。 制定了一系列機制於 API 來協助達到原生 JavaScript 所不支援的功能 (ex....">
+    <meta name="twitter:url" content="http://captainvincent.github.io/bu-yi-yang-de-node-js-bi-ji/">
+    
+    <script type="application/ld+json">
+{
+    "@context": "http://schema.org",
+    "@type": "Article",
+    "publisher": "Hello World! I'm Vincent",
+    "author": {
+        "@type": "Person",
+        "name": "Captain Vincent",
+        "image": "http://captainvincent.github.io/content/images/2016/01/--.JPG",
+        "url": "http://captainvincent.github.io/author/captain",
+        "sameAs": null,
+        "description": null
+    },
+    "headline": "不一樣的 Node.js 筆記 (一)",
+    "url": "http://captainvincent.github.io/bu-yi-yang-de-node-js-bi-ji/",
+    "datePublished": "2016-03-22T12:34:46.673Z",
+    "dateModified": "2016-03-24T17:58:45.374Z",
+    "description": "原著：不一樣的 Node.js－用 JavaScript 打造高效能的前後台網頁程式 林政毅、蔡政崇、錢逢祥 (2014/05/12)   作者群 期許本書可以替讀者勾勒出 Node.js 的技術藍圖。 Node.js 簡介 Node.js 為一個 opensource 的框架, 採用了 Chrome&#x27;s V8 JavaScript Engine。 它讓 Javascript 可以獨立運行於瀏覽器之外。 制定了一系列機制於 API 來協助達到原生 JavaScript 所不支援的功能 (ex...."
+}
+    </script>
+
+    <meta name="generator" content="Ghost 0.7">
+    <link rel="alternate" type="application/rss+xml" title="Hello World! I'm Vincent" href="../rss/index.html">
+    <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-73341093-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+</head>
+<body class="post-template nav-closed">
+
+    <div class="nav">
+    <h3 class="nav-title">Menu</h3>
+    <a href="index.html#" class="nav-close">
+        <span class="hidden">Close</span>
+    </a>
+    <ul>
+            <li class="nav-aboutme" role="presentation"><a href="https://about.me/CaptainVincent">About.Me</a></li>
+            <li class="nav-blog-home-page" role="presentation"><a href="../">Blog Home Page</a></li>
+    </ul>
+    <a class="subscribe-button icon-feed" href="../rss/index.rss">Subscribe</a>
+</div>
+<span class="nav-cover"></span>
+
+
+    <div class="site-wrapper">
+
+        
+
+
+<header class="main-header post-head no-cover">
+    <nav class="main-nav  clearfix">
+        
+            <a class="menu-button icon-menu" href="index.html#"><span class="word">Menu</span></a>
+    </nav>
+</header>
+
+<main class="content" role="main">
+    <article class="post">
+
+        <header class="post-header">
+            <h1 class="post-title">不一樣的 Node.js 筆記 (一)</h1>
+            <section class="post-meta">
+                <time class="post-date" datetime="2016-03-22">22 March 2016</time> 
+            </section>
+        </header>
+
+        <section class="post-content">
+            <p>原著：不一樣的 Node.js－用 JavaScript 打造高效能的前後台網頁程式 林政毅、蔡政崇、錢逢祥 (2014/05/12)</p>
+
+<blockquote>
+  <p>作者群 期許本書可以替讀者勾勒出 Node.js 的技術藍圖。</p>
+</blockquote>
+
+<h2 id="nodejs">Node.js 簡介</h2>
+
+<p>Node.js 為一個 opensource 的框架, 採用了 Chrome's V8 JavaScript Engine。</p>
+
+<ul>
+<li>它讓 Javascript 可以獨立運行於瀏覽器之外。</li>
+<li>制定了一系列機制於 API 來協助達到原生 JavaScript 所不支援的功能 (ex. Module、FileSystem、Socket、Process ...etc)</li>
+<li>支援第三方模組的功能擴充</li>
+<li>繼承 JavaScript 中 Event-driven 的非同步特性
+
+
+<blockquote>
+  書中作者認定 Event-driven 的非同步概念是與多工/緒是不同的, 但筆者認為 Event-driven 其實也只是一種使用多工/緒鑄成的樣板, 透過用多工/緒的方式來將執行與等待的動作拆分開來。</blockquote></li>
+  </ul>
+  <h3 id="">優勢</h3>
+
+
+<ul>
+<li>統一前後開發的經驗</li>
+<li>開發效率高 (見仁見智)</li>
+<li>極佳的效能 (雖然 JIT 的技術引進後, 仍有無法跟原生的程式相抗衡的宿命)</li>
+<li>數以萬計的第三方模組支援</li>
+<li>跨平台</li>
+</ul>
+
+<h3 id="javascript">JavaScript 簡介</h3>
+
+<p>又稱做 ECMAScript (<a href="https://zh.wikipedia.org/wiki/JavaScript">Wiki 傳送門</a>),
+在瀏覽器百家爭鳴的年代, 各家對 JavaScipt 實作的支援與標準不同, 最後由 ECMA 的協調下統一制定了 ECMA-262的標準。</p>
+
+<p>目前常見的 JavaScript Engine有</p>
+
+<ul>
+<li>V8 - Google Chrome 所使用, 首先引入 JIT 技術</li>
+<li>SpiderMonkey - Mozilla FireFox 所使用, 由 Javascript 語言發明人 Brendan Eich 開發; 而 Mozilla 基金會的前身是由當時被 IE 所擊敗的 Netscape 為了託管其 opensource 的專案所成立</li>
+<li>Chakra - 微軟 IE 9.0 之後開始搭載</li>
+</ul>
+
+<hr>
+
+<h2 id="javascript">JavaScript 語法</h2>
+
+<p>因為 Node.js 是 base on JavaScript 而衍伸的, 所以在語法上我們還是要回來介紹 JavaScript 做為基石。 </p>
+
+<h3 id="">變數宣告</h3>
+
+<pre><code class="language- language-javascript">var MyName = 'Vincent'; //顯式宣告  
+YourName = 'Guest'; //隱式宣告  
+</code></pre>
+
+<p></p>
+
+<h3 id="">變數型別</h3>
+
+<pre><code class="language- language-javascript">var text = undefined; //未宣告的變數或宣告後未初始化  
+var text = 'string'; //字串  
+var text = 520; //64 bit 浮點數  
+var text = true; //布林變數 true or false  
+var text = function() {}; //函數  
+var text = null; //釋放物件時指向 null  
+var text = { key1 : 1}; //物件  
+var text = [5,2,0]; //陣列  
+</code></pre>
+
+<p></p>
+
+<h5 id="string">字串 (String)</h5>
+
+<p>只要用雙/單引號括起來的都是字串類型, 底下是特殊字元的介紹。</p>
+
+<ol>
+<li><code>\n</code> 換行鍵</li>
+<li><code>\r</code> 回車鍵</li>
+<li><code>\t</code> Tab 鍵</li>
+<li><code>\b</code> 刪除鍵</li>
+<li><code>\f</code> 換頁鍵</li>
+<li><code>\'</code> 單引號</li>
+<li><code>\"</code> 雙引號</li>
+<li><code>\\</code> 反斜線 (單一個反斜線稱跳脫字元, 需連續兩個才能秀出字元)</li>
+<li><code>\x00 - \xFF</code> (16 bit 的字元)</li>
+<li><code>\u0000 - \uFFFF</code> (Unicode 字元)</li>
+</ol>
+
+<h5 id="number">數值 (Number)</h5>
+
+<pre><code class="language- language-javascript">var num1 = .0001 //可省略小數點前的 0  
+var num2 = 1E-4 //科學記號  
+var num3 = 0x123 //16 進位表示, 不接受小數點  
+var num4 = 0123 //0 開頭表示 8 進位數字, 不接受小數點  
+Infinity //無窮大  
+NaN //代表非數字, 變數未初始化就進行數字運算時會回傳該值  
+</code></pre>
+
+<p></p>
+
+<h5 id="function">函式 (Function)</h5>
+
+<pre><code class="language- language-javascript">function FunctionName(parameter)  
+{
+    ...
+    return result; // 可以有回傳值也可無
+} //一般的命名方式來建立函式
+
+var fnVar = function(parameter)  
+{
+    ...
+} //使用變數承接匿名函式, 後續可透過 fnVar 來呼叫
+
+(function(parameter){
+    ...
+}('test')) //在匿名函式後直接使用'()'來馬上呼叫
+</code></pre>
+
+<p>函式可以使用關鍵字 function 做宣告, 沒有提供 function name 時則是匿名 (Anonymous) 函式 (第一版書中有誤)。</p>
+
+<pre><code class="language- language-javascript">var functionOne = function(){console.log("hello world!")};  
+var functionTwo = new Function('console.log("hello world!")');  
+</code></pre>
+
+<p>建立函式還可另外分為兩種類型, 一個會建立成 function 另一個則是 object。</p>
+
+<p><a href="http://www.w3school.com.cn/jsref/jsref_obj_global.asp">JavaScript 內建全域函式</a></p>
+
+<h5 id="object">物件 (Object)</h5>
+
+<p>物件擁有自己的屬性 (properties) 以及方法 (methods)。</p>
+
+<h5 id="array">陣列 (Array)</h5>
+
+<p>亦是一種物件類型 (所以有提供以下方法 push、pop、shift、unshift、splice ...etc), 陣列元素也可以是不同的類型。</p>
+
+<h3 id="json">JSON</h3>
+
+<p><strong>J</strong>ava<strong>S</strong>cript <strong>O</strong>bject <strong>N</strong>otation</p>
+
+<ul>
+<li>輕量級的資料交換語言, 為獨立程式語言外的格式定義語法 且 目前已被多種程式語言所支援。</li>
+<li>相對於傳統的關係型資料庫，一些關係型資料庫 (NoSQL) 選擇 JSON 作為其資料儲存格式 (MongoDB、CouchDB、RavenDB ...etc)。</li>
+</ul>
+
+<pre><code class="language- language-javascript">var myObj = new Object();  
+myObj.name = 'Vincent';  
+myObj.gender = 'Male';
+
+var myArray = new Array('one', 'two', 'three');  
+</code></pre>
+
+<p>標準建立 Object 與 Array的方式</p>
+
+<pre><code class="language- language-javascript">var myObj  
+{
+    'name' : 'Vincent';
+    'gender' : 'Male';
+};
+
+var myArray = ['one', 'two', 'three'];  
+</code></pre>
+
+<p>使用 JSON 語法 ([]、{} 與 、) 描述建立的 Object 與 Array (鍵值與元素皆可支援 64 bit 浮點數)</p>
+
+<p>JSON 格式的文字檔可透過 JavaScript 內建的函式處理</p>
+
+<ul>
+<li>JSON.stringify() 轉換陣列或物件成 JSON 格式的資料</li>
+<li>JSON.parser() 將 JSON 格式的資料轉成物件或陣列</li>
+</ul>
+
+<h3 id="">運算符</h3>
+
+<ul>
+<li><p><code>+</code>, <code>-</code>, <code>*</code>, <code>/</code>, 以上為常見的算數運算符</p>
+
+<blockquote>
+  <p><code>+</code> 同時具有字串串接的功能, 所以在表達式中需注意, 運算符會從算式由左至右運算</p>
+</blockquote></li>
+<li><p><code>&amp;</code> (and), <code>|</code> (or), <code>~</code> (not), <code>^</code> (xor), <code>&lt;&lt;</code> (位元左移), <code>&gt;&gt;</code> (位元右移), <code>&gt;&gt;&gt;</code> (位元無符號右移), 以上為位元 (bitwise) 運算符號</p></li>
+<li><p><code>&gt;</code>, <code>&lt;</code>, <code>&gt;=</code>, <code>&lt;=</code>, <code>==</code>, <code>===</code> (左值等於右值 且 兩邊資料類型也相同時為 true, 反之 false), <code>!=</code>, <code>!==</code> (與 === 相反意思), <code>&amp;&amp;</code>, <code>||</code>, <code>!</code>, 以上為比較與邏輯運算符</p>
+
+<blockquote>
+  <p><code>===</code> 在物件的比較上, 還會比對參考的位置是否相同, 兩個物件雖含相同元素內容仍會比對結果 false</p>
+</blockquote></li>
+</ul>
+
+<h3 id="">特殊用法</h3>
+
+<pre><code class="language- language-javascript">var a=1;  
+var b=2;
+
+typeof("abc"); //回傳資料類型
+
+var result1 = (a == b)? true:false; //條件式成立與否決定後續的回傳值
+
+var result2 = instanceof "abc" instanceof String;  
+//回傳是否為該物件類型, 注意這邊 "abc" 為 string 類型, 但並非 String Object
+
+var result3 = (a++, b++, a+b); //依序執行並會傳最後一個算式的結果
+
+var result4 = delete a; //將變量重設為 undefined, 並回傳成功與否
+
+var result5 = void b++; //放棄運算結果用 undefined 代替回傳  
+</code></pre>
+
+<p></p>
+
+<h3 id="">流程控制</h3>
+
+<ul>
+<li>if... else... if</li>
+<li>switch... case</li>
+<li>for... loop</li>
+<li>for... in</li>
+<li>while... loop</li>
+<li>do... while</li>
+<li>continue、break、(return、throw 省略未介紹)</li>
+<li>with</li>
+</ul>
+
+<p>範例</p>
+
+<pre><code class="language- language-javascript">var condition = 3;  
+var list = [  
+    {id:1, name='Vincent'},
+    {id:2, name='Miyu'},
+    {id:3, name='Guest'}
+];
+// JSON 格式建立陣列
+
+// if... else if... else... 
+if (condition == 1) {  
+    ....
+}
+else if(condition == 2) {  
+    ....
+}
+else {  
+    ....
+};
+
+// switch... case...
+switch (condition) {  
+    case 1:
+        ...
+        break;
+    case 2:
+        ...
+        break;
+    default:
+        ...
+}
+
+// for... loop
+for (var index=0 ; index&lt;3 ; index++)  
+{
+    ...
+}
+
+// for... in
+for (var i in list){  
+    var obj = list[i];
+    console.log(obj.id + ':' + obj.name);
+}
+
+// while... loop
+var i = 0;  
+while (i&lt;=3)  
+{
+    ...
+    i++;
+}
+
+// do... while
+var j = 0;  
+do  
+{
+    ...
+    j++;
+} while (j&lt;3);
+
+// continue、break
+for (var index=0 ; index&lt;10 ; index++)  
+{
+    if(index == 1){
+        continue; //會跳開此次迴圈的執行, 執行下一次迴圈
+    }
+
+    if(index == 5)
+    {
+        break; //會直接離開迴圈
+    }
+    console.log(index);
+}
+
+// with (strict mode 無法使用)
+for (var i in list){  
+    var obj = list[i];
+    with (obj) {
+        console.log(id + ':' + name); 
+        //with的功用主要是用來省略物件名稱
+    }
+}
+</code></pre>
+
+<p></p>
+
+<h3 id="prototype">原型 (Prototype)</h3>
+
+<p>Prototype 應用於將 JavaScript 中屬於同建構子 (constructor) 建立的所有物件, 把可以共享的部分獨立出來, 避免重複建立的問題。  </p>
+
+<pre><code class="language- language-javascript">function Person(age,id){  
+    this.age = age;
+    this.id = id;
+}
+
+Person.prototype.address = 'taipei';
+
+Person.prototype.out = function(){  
+    console.log('age:' + this.age + ' id:' + this.id + ' address:' + this.address);
+}
+</code></pre>
+
+<p>(address 與 out 為所有物件共享) </p>
+
+<h3 id="gcgarbagecollection">記憶體回收機制 (GC, Garbage Collection)</h3>
+
+<p>透過計算指向物件的 reference count 來確認該物件是否仍被使用, 當 reference count 降為 0 時便釋放該記憶體空間。</p>
+        </section>
+
+        <footer class="post-footer">
+
+
+            <figure class="author-image">
+                <a class="img" href="../author/captain/" style="background-image: url(../content/images/2016/01/--.JPG)"><span class="hidden">Captain Vincent's Picture</span></a>
+            </figure>
+
+            <section class="author">
+                <h4><a href="../author/captain/">Captain Vincent</a></h4>
+
+                    <p>Read <a href="../author/captain/">more posts</a> by this author.</p>
+                <div class="author-meta">
+                    
+                    
+                </div>
+            </section>
+
+
+            <section class="share">
+                <h4>Share this post</h4>
+                <a class="icon-twitter" href="https://twitter.com/intent/tweet?text=%E4%B8%8D%E4%B8%80%E6%A8%A3%E7%9A%84%20Node.js%20%E7%AD%86%E8%A8%98%20(%E4%B8%80)&amp;url=http://captainvincent.github.io/bu-yi-yang-de-node-js-bi-ji/" onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
+                    <span class="hidden">Twitter</span>
+                </a>
+                <a class="icon-facebook" href="https://www.facebook.com/sharer/sharer.php?u=http://captainvincent.github.io/bu-yi-yang-de-node-js-bi-ji/index.html" onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;">
+                    <span class="hidden">Facebook</span>
+                </a>
+                <a class="icon-google-plus" href="https://plus.google.com/share?url=http://captainvincent.github.io/bu-yi-yang-de-node-js-bi-ji/" onclick="window.open(this.href, 'google-plus-share', 'width=490,height=530');return false;">
+                    <span class="hidden">Google+</span>
+                </a>
+            </section>
+
+            <div id="disqus_thread"></div>
+            <script>
+            /**
+            * RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+            * LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables
+            */
+
+            var disqus_config = function () {
+                this.page.url = 'http://captainvincent.github.io/bu-yi-yang-de-node-js-bi-ji/'; // Replace PAGE_URL with your page's canonical URL variable
+                this.page.identifier = 'ghost-18'; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+            };
+
+            (function() { // DON'T EDIT BELOW THIS LINE
+                var d = document, s = d.createElement('script');
+
+                s.src = '//captainvincent.disqus.com/embed.js';
+
+                s.setAttribute('data-timestamp', +new Date());
+                (d.head || d.body).appendChild(s);
+            })();
+            </script>
+            <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+
+        </footer>
+
+    </article>
+</main>
+
+<aside class="read-next">
+    <a class="read-next-story prev no-cover" href="../dao-shi-li-lun-de-21-zhao-xuan-gu-ji-qiao/">
+        <section class="post">
+            <h2>道氏理論的 21 招選股技巧 筆記 (Mind Map)</h2>
+            <p>原著：道氏理論的21招選股技巧 陳東 (2012/04/01)   History repeats itself. 技術面操盤者心中共同的信念。 關於 Mind Map 內的筆記整理, 是筆者消化後認為有可能後續實驗可以參考的法則, 有可能並未忠實呈現道氏理論原先的面貌 (或本書作者的完整意思), 像道氏理論中對於各技術分析的指標都會強調求出其三重型態或是至少求出中、短期的線圖,…</p>
+        </section>
+    </a>
+</aside>
+
+
+
+
+        <footer class="site-footer clearfix">
+            <section class="copyright"><a href="../">Hello World! I'm Vincent</a> © 2016</section>
+            <section class="poweredby">Proudly published with <a href="https://ghost.org">Ghost</a></section>
+        </footer>
+
+    </div>
+
+    <script type="text/javascript" src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+    
+
+    <script type="text/javascript" src="../assets/js/jquery.fitvids.js?v=53a54d0bef"></script>
+    <script type="text/javascript" src="../assets/js/prism.js?v=53a54d0bef"></script> 
+    <script type="text/javascript" src="../assets/js/index.js?v=53a54d0bef"></script>
+
+</body>

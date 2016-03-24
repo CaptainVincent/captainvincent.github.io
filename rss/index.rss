@@ -1,4 +1,350 @@
-<rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:media="http://search.yahoo.com/mrss/" version="2.0"><channel><title>Hello World! I'm Vincent</title><description>Thoughts, stories and ideas.</description><link>http://localhost:2368/</link><generator>Ghost 0.7</generator><lastBuildDate>Tue, 22 Mar 2016 07:15:07 GMT</lastBuildDate><atom:link href="http://localhost:2368/rss/" rel="self" type="application/rss+xml"/><ttl>60</ttl><item><title>道氏理論的 21 招選股技巧 筆記 (Mind Map)</title><description>&lt;blockquote&gt;
+<rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:media="http://search.yahoo.com/mrss/" version="2.0"><channel><title>Hello World! I'm Vincent</title><description>Thoughts, stories and ideas.</description><link>http://localhost:2368/</link><generator>Ghost 0.7</generator><lastBuildDate>Thu, 24 Mar 2016 17:59:09 GMT</lastBuildDate><atom:link href="http://localhost:2368/rss/" rel="self" type="application/rss+xml"/><ttl>60</ttl><item><title>不一樣的 Node.js 筆記 (一)</title><description>&lt;p&gt;原著：不一樣的 Node.js－用 JavaScript 打造高效能的前後台網頁程式 林政毅、蔡政崇、錢逢祥 (2014/05/12)&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;作者群 期許本書可以替讀者勾勒出 Node.js 的技術藍圖。&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h2 id="nodejs"&gt;Node.js 簡介&lt;/h2&gt;
+
+&lt;p&gt;Node.js 為一個 opensource 的框架, 採用了 Chrome's V8 JavaScript Engine。&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;它讓 Javascript 可以獨立運行於瀏覽器之外。&lt;/li&gt;
+&lt;li&gt;制定了一系列機制於 API 來協助達到原生 JavaScript 所不支援的功能 (ex. Module、FileSystem、Socket、Process ...etc)&lt;/li&gt;
+&lt;li&gt;支援第三方模組的功能擴充&lt;/li&gt;
+&lt;li&gt;繼承 JavaScript 中 Event-driven&lt;/li&gt;&lt;/ul&gt;</description><link>http://localhost:2368/bu-yi-yang-de-node-js-bi-ji/</link><guid isPermaLink="false">8ccbede2-6c6b-4362-9e42-3800e73a3c83</guid><dc:creator>Captain Vincent</dc:creator><pubDate>Tue, 22 Mar 2016 12:34:46 GMT</pubDate><content:encoded>&lt;p&gt;原著：不一樣的 Node.js－用 JavaScript 打造高效能的前後台網頁程式 林政毅、蔡政崇、錢逢祥 (2014/05/12)&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;作者群 期許本書可以替讀者勾勒出 Node.js 的技術藍圖。&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h2 id="nodejs"&gt;Node.js 簡介&lt;/h2&gt;
+
+&lt;p&gt;Node.js 為一個 opensource 的框架, 採用了 Chrome's V8 JavaScript Engine。&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;它讓 Javascript 可以獨立運行於瀏覽器之外。&lt;/li&gt;
+&lt;li&gt;制定了一系列機制於 API 來協助達到原生 JavaScript 所不支援的功能 (ex. Module、FileSystem、Socket、Process ...etc)&lt;/li&gt;
+&lt;li&gt;支援第三方模組的功能擴充&lt;/li&gt;
+&lt;li&gt;繼承 JavaScript 中 Event-driven 的非同步特性
+
+
+&lt;blockquote&gt;
+  書中作者認定 Event-driven 的非同步概念是與多工/緒是不同的, 但筆者認為 Event-driven 其實也只是一種使用多工/緒鑄成的樣板, 透過用多工/緒的方式來將執行與等待的動作拆分開來。&lt;/blockquote&gt;&lt;/li&gt;
+  &lt;/ul&gt;
+  &lt;h3 id=""&gt;優勢&lt;/h3&gt;
+
+
+&lt;ul&gt;
+&lt;li&gt;統一前後開發的經驗&lt;/li&gt;
+&lt;li&gt;開發效率高 (見仁見智)&lt;/li&gt;
+&lt;li&gt;極佳的效能 (雖然 JIT 的技術引進後, 仍有無法跟原生的程式相抗衡的宿命)&lt;/li&gt;
+&lt;li&gt;數以萬計的第三方模組支援&lt;/li&gt;
+&lt;li&gt;跨平台&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id="javascript"&gt;JavaScript 簡介&lt;/h3&gt;
+
+&lt;p&gt;又稱做 ECMAScript (&lt;a href="https://zh.wikipedia.org/wiki/JavaScript"&gt;Wiki 傳送門&lt;/a&gt;),
+在瀏覽器百家爭鳴的年代, 各家對 JavaScipt 實作的支援與標準不同, 最後由 ECMA 的協調下統一制定了 ECMA-262的標準。&lt;/p&gt;
+
+&lt;p&gt;目前常見的 JavaScript Engine有&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;V8 - Google Chrome 所使用, 首先引入 JIT 技術&lt;/li&gt;
+&lt;li&gt;SpiderMonkey - Mozilla FireFox 所使用, 由 Javascript 語言發明人 Brendan Eich 開發; 而 Mozilla 基金會的前身是由當時被 IE 所擊敗的 Netscape 為了託管其 opensource 的專案所成立&lt;/li&gt;
+&lt;li&gt;Chakra - 微軟 IE 9.0 之後開始搭載&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;hr&gt;
+
+&lt;h2 id="javascript"&gt;JavaScript 語法&lt;/h2&gt;
+
+&lt;p&gt;因為 Node.js 是 base on JavaScript 而衍伸的, 所以在語法上我們還是要回來介紹 JavaScript 做為基石。 &lt;/p&gt;
+
+&lt;h3 id=""&gt;變數宣告&lt;/h3&gt;
+
+&lt;pre&gt;&lt;code class="language- language-javascript"&gt;var MyName = 'Vincent'; //顯式宣告  
+YourName = 'Guest'; //隱式宣告  
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;br&gt;&lt;/p&gt;
+
+&lt;h3 id=""&gt;變數型別&lt;/h3&gt;
+
+&lt;pre&gt;&lt;code class="language- language-javascript"&gt;var text = undefined; //未宣告的變數或宣告後未初始化  
+var text = 'string'; //字串  
+var text = 520; //64 bit 浮點數  
+var text = true; //布林變數 true or false  
+var text = function() {}; //函數  
+var text = null; //釋放物件時指向 null  
+var text = { key1 : 1}; //物件  
+var text = [5,2,0]; //陣列  
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;br&gt;&lt;/p&gt;
+
+&lt;h5 id="string"&gt;字串 (String)&lt;/h5&gt;
+
+&lt;p&gt;只要用雙/單引號括起來的都是字串類型, 底下是特殊字元的介紹。&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;&lt;code&gt;\n&lt;/code&gt; 換行鍵&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;\r&lt;/code&gt; 回車鍵&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;\t&lt;/code&gt; Tab 鍵&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;\b&lt;/code&gt; 刪除鍵&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;\f&lt;/code&gt; 換頁鍵&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;\'&lt;/code&gt; 單引號&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;\"&lt;/code&gt; 雙引號&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;\\&lt;/code&gt; 反斜線 (單一個反斜線稱跳脫字元, 需連續兩個才能秀出字元)&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;\x00 - \xFF&lt;/code&gt; (16 bit 的字元)&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;\u0000 - \uFFFF&lt;/code&gt; (Unicode 字元)&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h5 id="number"&gt;數值 (Number)&lt;/h5&gt;
+
+&lt;pre&gt;&lt;code class="language- language-javascript"&gt;var num1 = .0001 //可省略小數點前的 0  
+var num2 = 1E-4 //科學記號  
+var num3 = 0x123 //16 進位表示, 不接受小數點  
+var num4 = 0123 //0 開頭表示 8 進位數字, 不接受小數點  
+Infinity //無窮大  
+NaN //代表非數字, 變數未初始化就進行數字運算時會回傳該值  
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;br&gt;&lt;/p&gt;
+
+&lt;h5 id="function"&gt;函式 (Function)&lt;/h5&gt;
+
+&lt;pre&gt;&lt;code class="language- language-javascript"&gt;function FunctionName(parameter)  
+{
+    ...
+    return result; // 可以有回傳值也可無
+} //一般的命名方式來建立函式
+
+var fnVar = function(parameter)  
+{
+    ...
+} //使用變數承接匿名函式, 後續可透過 fnVar 來呼叫
+
+(function(parameter){
+    ...
+}('test')) //在匿名函式後直接使用'()'來馬上呼叫
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;函式可以使用關鍵字 function 做宣告, 沒有提供 function name 時則是匿名 (Anonymous) 函式 (第一版書中有誤)。&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class="language- language-javascript"&gt;var functionOne = function(){console.log("hello world!")};  
+var functionTwo = new Function('console.log("hello world!")');  
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;建立函式還可另外分為兩種類型, 一個會建立成 function 另一個則是 object。&lt;/p&gt;
+
+&lt;p&gt;&lt;a href="http://www.w3school.com.cn/jsref/jsref_obj_global.asp"&gt;JavaScript 內建全域函式&lt;/a&gt;&lt;/p&gt;
+
+&lt;h5 id="object"&gt;物件 (Object)&lt;/h5&gt;
+
+&lt;p&gt;物件擁有自己的屬性 (properties) 以及方法 (methods)。&lt;/p&gt;
+
+&lt;h5 id="array"&gt;陣列 (Array)&lt;/h5&gt;
+
+&lt;p&gt;亦是一種物件類型 (所以有提供以下方法 push、pop、shift、unshift、splice ...etc), 陣列元素也可以是不同的類型。&lt;/p&gt;
+
+&lt;h3 id="json"&gt;JSON&lt;/h3&gt;
+
+&lt;p&gt;&lt;strong&gt;J&lt;/strong&gt;ava&lt;strong&gt;S&lt;/strong&gt;cript &lt;strong&gt;O&lt;/strong&gt;bject &lt;strong&gt;N&lt;/strong&gt;otation&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;輕量級的資料交換語言, 為獨立程式語言外的格式定義語法 且 目前已被多種程式語言所支援。&lt;/li&gt;
+&lt;li&gt;相對於傳統的關係型資料庫，一些關係型資料庫 (NoSQL) 選擇 JSON 作為其資料儲存格式 (MongoDB、CouchDB、RavenDB ...etc)。&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;pre&gt;&lt;code class="language- language-javascript"&gt;var myObj = new Object();  
+myObj.name = 'Vincent';  
+myObj.gender = 'Male';
+
+var myArray = new Array('one', 'two', 'three');  
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;標準建立 Object 與 Array的方式&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class="language- language-javascript"&gt;var myObj  
+{
+    'name' : 'Vincent';
+    'gender' : 'Male';
+};
+
+var myArray = ['one', 'two', 'three'];  
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;使用 JSON 語法 ([]、{} 與 、) 描述建立的 Object 與 Array (鍵值與元素皆可支援 64 bit 浮點數)&lt;/p&gt;
+
+&lt;p&gt;JSON 格式的文字檔可透過 JavaScript 內建的函式處理&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;JSON.stringify() 轉換陣列或物件成 JSON 格式的資料&lt;/li&gt;
+&lt;li&gt;JSON.parser() 將 JSON 格式的資料轉成物件或陣列&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=""&gt;運算符&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;&lt;code&gt;+&lt;/code&gt;, &lt;code&gt;-&lt;/code&gt;, &lt;code&gt;*&lt;/code&gt;, &lt;code&gt;/&lt;/code&gt;, 以上為常見的算數運算符&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;&lt;code&gt;+&lt;/code&gt; 同時具有字串串接的功能, 所以在表達式中需注意, 運算符會從算式由左至右運算&lt;/p&gt;
+&lt;/blockquote&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;code&gt;&amp;amp;&lt;/code&gt; (and), &lt;code&gt;|&lt;/code&gt; (or), &lt;code&gt;~&lt;/code&gt; (not), &lt;code&gt;^&lt;/code&gt; (xor), &lt;code&gt;&amp;lt;&amp;lt;&lt;/code&gt; (位元左移), &lt;code&gt;&amp;gt;&amp;gt;&lt;/code&gt; (位元右移), &lt;code&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/code&gt; (位元無符號右移), 以上為位元 (bitwise) 運算符號&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;code&gt;&amp;gt;&lt;/code&gt;, &lt;code&gt;&amp;lt;&lt;/code&gt;, &lt;code&gt;&amp;gt;=&lt;/code&gt;, &lt;code&gt;&amp;lt;=&lt;/code&gt;, &lt;code&gt;==&lt;/code&gt;, &lt;code&gt;===&lt;/code&gt; (左值等於右值 且 兩邊資料類型也相同時為 true, 反之 false), &lt;code&gt;!=&lt;/code&gt;, &lt;code&gt;!==&lt;/code&gt; (與 === 相反意思), &lt;code&gt;&amp;amp;&amp;amp;&lt;/code&gt;, &lt;code&gt;||&lt;/code&gt;, &lt;code&gt;!&lt;/code&gt;, 以上為比較與邏輯運算符&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;&lt;code&gt;===&lt;/code&gt; 在物件的比較上, 還會比對參考的位置是否相同, 兩個物件雖含相同元素內容仍會比對結果 false&lt;/p&gt;
+&lt;/blockquote&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=""&gt;特殊用法&lt;/h3&gt;
+
+&lt;pre&gt;&lt;code class="language- language-javascript"&gt;var a=1;  
+var b=2;
+
+typeof("abc"); //回傳資料類型
+
+var result1 = (a == b)? true:false; //條件式成立與否決定後續的回傳值
+
+var result2 = instanceof "abc" instanceof String;  
+//回傳是否為該物件類型, 注意這邊 "abc" 為 string 類型, 但並非 String Object
+
+var result3 = (a++, b++, a+b); //依序執行並會傳最後一個算式的結果
+
+var result4 = delete a; //將變量重設為 undefined, 並回傳成功與否
+
+var result5 = void b++; //放棄運算結果用 undefined 代替回傳  
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;br&gt;&lt;/p&gt;
+
+&lt;h3 id=""&gt;流程控制&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;if... else... if&lt;/li&gt;
+&lt;li&gt;switch... case&lt;/li&gt;
+&lt;li&gt;for... loop&lt;/li&gt;
+&lt;li&gt;for... in&lt;/li&gt;
+&lt;li&gt;while... loop&lt;/li&gt;
+&lt;li&gt;do... while&lt;/li&gt;
+&lt;li&gt;continue、break、(return、throw 省略未介紹)&lt;/li&gt;
+&lt;li&gt;with&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;範例&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class="language- language-javascript"&gt;var condition = 3;  
+var list = [  
+    {id:1, name='Vincent'},
+    {id:2, name='Miyu'},
+    {id:3, name='Guest'}
+];
+// JSON 格式建立陣列
+
+// if... else if... else... 
+if (condition == 1) {  
+    ....
+}
+else if(condition == 2) {  
+    ....
+}
+else {  
+    ....
+};
+
+// switch... case...
+switch (condition) {  
+    case 1:
+        ...
+        break;
+    case 2:
+        ...
+        break;
+    default:
+        ...
+}
+
+// for... loop
+for (var index=0 ; index&amp;lt;3 ; index++)  
+{
+    ...
+}
+
+// for... in
+for (var i in list){  
+    var obj = list[i];
+    console.log(obj.id + ':' + obj.name);
+}
+
+// while... loop
+var i = 0;  
+while (i&amp;lt;=3)  
+{
+    ...
+    i++;
+}
+
+// do... while
+var j = 0;  
+do  
+{
+    ...
+    j++;
+} while (j&amp;lt;3);
+
+// continue、break
+for (var index=0 ; index&amp;lt;10 ; index++)  
+{
+    if(index == 1){
+        continue; //會跳開此次迴圈的執行, 執行下一次迴圈
+    }
+
+    if(index == 5)
+    {
+        break; //會直接離開迴圈
+    }
+    console.log(index);
+}
+
+// with (strict mode 無法使用)
+for (var i in list){  
+    var obj = list[i];
+    with (obj) {
+        console.log(id + ':' + name); 
+        //with的功用主要是用來省略物件名稱
+    }
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;br&gt;&lt;/p&gt;
+
+&lt;h3 id="prototype"&gt;原型 (Prototype)&lt;/h3&gt;
+
+&lt;p&gt;Prototype 應用於將 JavaScript 中屬於同建構子 (constructor) 建立的所有物件, 把可以共享的部分獨立出來, 避免重複建立的問題。  &lt;/p&gt;
+
+&lt;pre&gt;&lt;code class="language- language-javascript"&gt;function Person(age,id){  
+    this.age = age;
+    this.id = id;
+}
+
+Person.prototype.address = 'taipei';
+
+Person.prototype.out = function(){  
+    console.log('age:' + this.age + ' id:' + this.id + ' address:' + this.address);
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;(address 與 out 為所有物件共享) &lt;/p&gt;
+
+&lt;h3 id="gcgarbagecollection"&gt;記憶體回收機制 (GC, Garbage Collection)&lt;/h3&gt;
+
+&lt;p&gt;透過計算指向物件的 reference count 來確認該物件是否仍被使用, 當 reference count 降為 0 時便釋放該記憶體空間。&lt;/p&gt;</content:encoded></item><item><title>道氏理論的 21 招選股技巧 筆記 (Mind Map)</title><description>&lt;p&gt;原著：道氏理論的21招選股技巧 陳東 (2012/04/01)&lt;/p&gt;
+
+&lt;blockquote&gt;
   &lt;p&gt;History repeats itself. 技術面操盤者心中共同的信念。&lt;/p&gt;
 &lt;/blockquote&gt;
 
@@ -10,7 +356,9 @@
   &lt;p&gt;使用方式類似 Google Map 的拖曳操作可以移動畫面, 右鍵可以彈出放大鏡的按鈕, 按壓放大鏡拖曳後可以 Zoom In/Out&lt;/p&gt;
 &lt;/blockquote&gt;
 
-&lt;iframe width="853" height="480" src="https://embed.coggle.it/diagram/Vu5LNj_zpOYo1mzy/739e465141646161dad5c001a099ada2bdb261208d58eeee6ca71408a3c87dfe" frameborder="0" allowfullscreen&gt;&lt;/iframe&gt;</description><link>http://localhost:2368/dao-shi-li-lun-de-21-zhao-xuan-gu-ji-qiao/</link><guid isPermaLink="false">c3e8ac2f-03b6-4684-88da-f10b74881e2c</guid><dc:creator>Captain Vincent</dc:creator><pubDate>Sat, 19 Mar 2016 12:05:46 GMT</pubDate><content:encoded>&lt;blockquote&gt;
+&lt;iframe width="853" height="480" src="https://embed.coggle.it/diagram/Vu5LNj_zpOYo1mzy/739e465141646161dad5c001a099ada2bdb261208d58eeee6ca71408a3c87dfe" frameborder="0" allowfullscreen&gt;&lt;/iframe&gt;</description><link>http://localhost:2368/dao-shi-li-lun-de-21-zhao-xuan-gu-ji-qiao/</link><guid isPermaLink="false">c3e8ac2f-03b6-4684-88da-f10b74881e2c</guid><dc:creator>Captain Vincent</dc:creator><pubDate>Sat, 19 Mar 2016 12:05:46 GMT</pubDate><content:encoded>&lt;p&gt;原著：道氏理論的21招選股技巧 陳東 (2012/04/01)&lt;/p&gt;
+
+&lt;blockquote&gt;
   &lt;p&gt;History repeats itself. 技術面操盤者心中共同的信念。&lt;/p&gt;
 &lt;/blockquote&gt;
 
