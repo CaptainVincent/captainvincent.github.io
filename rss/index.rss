@@ -1,4 +1,66 @@
-<rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:media="http://search.yahoo.com/mrss/" version="2.0"><channel><title>Hello World! I'm Vincent</title><description>Thoughts, stories and ideas.</description><link>http://localhost:2368/</link><generator>Ghost 0.7</generator><lastBuildDate>Fri, 01 Apr 2016 13:57:35 GMT</lastBuildDate><atom:link href="http://localhost:2368/rss/" rel="self" type="application/rss+xml"/><ttl>60</ttl><item><title>寫字書 筆記</title><description>&lt;p&gt;原著：寫字書 鄭文彬 (2009/05)&lt;/p&gt;
+<rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:media="http://search.yahoo.com/mrss/" version="2.0"><channel><title>Hello World! I'm Vincent</title><description>Thoughts, stories and ideas.</description><link>http://localhost:2368/</link><generator>Ghost 0.7</generator><lastBuildDate>Fri, 08 Apr 2016 05:00:59 GMT</lastBuildDate><atom:link href="http://localhost:2368/rss/" rel="self" type="application/rss+xml"/><ttl>60</ttl><item><title>讀書別靠意志力 筆記 (Mind Map)</title><description>&lt;blockquote&gt;
+  &lt;p&gt;原名&lt;/p&gt;
+  
+  &lt;p&gt;Garantiert erfolgreich lernen. by &lt;strong&gt;Christian Grüning&lt;/strong&gt;&lt;/p&gt;
+  
+  &lt;p&gt;副標：「風靡德國的邏輯 K 書法」。此本書是筆者開始接觸心智圖筆記方式的啟蒙書, 所以當筆者開始撰寫部落格文章使用到心智圖的時候, 就一直想再花時間回顧介紹這本書, 換言之 「It's time」。&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h2 id=""&gt;學習的四個階段&lt;/h2&gt;
+
+&lt;ol&gt;
+&lt;li&gt;資訊的瀏覽 (結構式閱讀)  &lt;/li&gt;
+&lt;li&gt;資訊的整理 (心智圖法, 使用心智圖的方式是最符合大腦理解記憶的結構)  &lt;/li&gt;
+&lt;li&gt;資訊的儲存  &lt;/li&gt;
+&lt;li&gt;資訊的提取、運用&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h2 id=""&gt;影響學習的三個因素&lt;/h2&gt;
+
+&lt;ol&gt;
+&lt;li&gt;學習動機  &lt;/li&gt;
+&lt;li&gt;壓力控制 (當知識在建構時會產生理解衝突, 在突破前會感受到壓力而需放鬆)  &lt;/li&gt;
+&lt;li&gt;專注力&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h2 id="mindmap"&gt;筆記 (Mind Map)&lt;/h2&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;使用方式類似 Google Map 的拖曳操作可以移動畫面, 右鍵可以彈出放大鏡的按鈕, 按壓放大鏡拖曳後可以 Zoom In/Out&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;iframe width="853" height="480" src="https://embed.coggle.it/diagram/Vv6gE3KDZDovIgC1/62da971574a9d78dc8a641dc8a78bdac2458d4070a104a2a1944ba32a7a6280d" frameborder="0" allowfullscreen&gt;&lt;/iframe&gt;</description><link>http://localhost:2368/du-shu-bie-kao-yi-zhi-li-mind-map/</link><guid isPermaLink="false">57664373-b556-47ed-b899-d7b2a1d7b6e3</guid><dc:creator>Captain Vincent</dc:creator><pubDate>Thu, 07 Apr 2016 04:00:00 GMT</pubDate><content:encoded>&lt;blockquote&gt;
+  &lt;p&gt;原名&lt;/p&gt;
+  
+  &lt;p&gt;Garantiert erfolgreich lernen. by &lt;strong&gt;Christian Grüning&lt;/strong&gt;&lt;/p&gt;
+  
+  &lt;p&gt;副標：「風靡德國的邏輯 K 書法」。此本書是筆者開始接觸心智圖筆記方式的啟蒙書, 所以當筆者開始撰寫部落格文章使用到心智圖的時候, 就一直想再花時間回顧介紹這本書, 換言之 「It's time」。&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h2 id=""&gt;學習的四個階段&lt;/h2&gt;
+
+&lt;ol&gt;
+&lt;li&gt;資訊的瀏覽 (結構式閱讀)  &lt;/li&gt;
+&lt;li&gt;資訊的整理 (心智圖法, 使用心智圖的方式是最符合大腦理解記憶的結構)  &lt;/li&gt;
+&lt;li&gt;資訊的儲存  &lt;/li&gt;
+&lt;li&gt;資訊的提取、運用&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h2 id=""&gt;影響學習的三個因素&lt;/h2&gt;
+
+&lt;ol&gt;
+&lt;li&gt;學習動機  &lt;/li&gt;
+&lt;li&gt;壓力控制 (當知識在建構時會產生理解衝突, 在突破前會感受到壓力而需放鬆)  &lt;/li&gt;
+&lt;li&gt;專注力&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h2 id="mindmap"&gt;筆記 (Mind Map)&lt;/h2&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;使用方式類似 Google Map 的拖曳操作可以移動畫面, 右鍵可以彈出放大鏡的按鈕, 按壓放大鏡拖曳後可以 Zoom In/Out&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;iframe width="853" height="480" src="https://embed.coggle.it/diagram/Vv6gE3KDZDovIgC1/62da971574a9d78dc8a641dc8a78bdac2458d4070a104a2a1944ba32a7a6280d" frameborder="0" allowfullscreen&gt;&lt;/iframe&gt;</content:encoded></item><item><title>寫字書 筆記</title><description>&lt;p&gt;原著：寫字書 鄭文彬 (2009/05)&lt;/p&gt;
 
 &lt;h2 id=""&gt;基礎&lt;/h2&gt;
 
@@ -734,7 +796,7 @@ from &lt;a href="https://zh.wikipedia.org/wiki/%E5%87%B1%E5%88%A9%E5%85%AC%E5%BC
   &lt;li&gt;充滿活力：較需要且能較長時間工作&lt;/li&gt;
   &lt;li&gt;自我滿足：不需要他人認同, 但還是要組成人脈&lt;/li&gt;
   &lt;/ul&gt;
-&lt;/blockquote&gt;</content:encoded></item><item><title>21st Century C / 21世紀 C 語言 (閱讀筆記)</title><description>&lt;blockquote&gt;
+&lt;/blockquote&gt;</content:encoded></item><item><title>21st Century C / 21世紀 C 語言 筆記</title><description>&lt;blockquote&gt;
   &lt;p&gt;C 語言的演進, K&amp;amp;R (1978) -&gt; ANSI C89 (1989) -&gt; ISO C99 (1999) -&gt; C11 (2011)&lt;/p&gt;
   
   &lt;p&gt;POSIX (&lt;strong&gt;P&lt;/strong&gt;ortable &lt;strong&gt;O&lt;/strong&gt;perating &lt;strong&gt;S&lt;/strong&gt;ystem &lt;strong&gt;I&lt;/strong&gt;nterface of UNI&lt;strong&gt;X&lt;/strong&gt;) 標準, 由 IEEE 制定類  Unix 的作業系統在實作上共通的基礎 (API 的關聯、Shell的運作、命令列工具的的執行相關規範, 跟本篇最大的關聯是符合 POSIX 標準的系統, 也包含了提供 C 語言的編譯器)。&lt;/p&gt;
