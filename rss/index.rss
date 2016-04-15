@@ -1,4 +1,127 @@
-<rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:media="http://search.yahoo.com/mrss/" version="2.0"><channel><title>Hello World! I'm Vincent</title><description>Thoughts, stories and ideas.</description><link>http://localhost:2368/</link><generator>Ghost 0.7</generator><lastBuildDate>Wed, 13 Apr 2016 13:25:20 GMT</lastBuildDate><atom:link href="http://localhost:2368/rss/" rel="self" type="application/rss+xml"/><ttl>60</ttl><item><title>交易贏家的 21 週全記錄 筆記 (Mind Map)</title><description>&lt;blockquote&gt;
+<rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:media="http://search.yahoo.com/mrss/" version="2.0"><channel><title>Hello World! I'm Vincent</title><description>Thoughts, stories and ideas.</description><link>http://localhost:2368/</link><generator>Ghost 0.7</generator><lastBuildDate>Fri, 15 Apr 2016 01:10:51 GMT</lastBuildDate><atom:link href="http://localhost:2368/rss/" rel="self" type="application/rss+xml"/><ttl>60</ttl><item><title>亞當理論 筆記</title><description>&lt;blockquote&gt;
+  &lt;p&gt;原名&lt;/p&gt;
+  
+  &lt;p&gt;The Adam Theory of Markets or What Matters is Profit. by &lt;strong&gt;Welles J. Wilde&lt;/strong&gt;&lt;/p&gt;
+  
+  &lt;p&gt;從事交易所需要瞭解的, 遠比大多數人想像的還要少得多。&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h2 id=""&gt;摘錄&lt;/h2&gt;
+
+&lt;p&gt;如同開宗名義所表示的, 要忘掉那些根深蒂固的知識, 那些最有效的原則和秘密, 總是簡單明顯到一再被人們所忽視, 所以這本書很簡單扼要 (&lt;del&gt;薄&lt;/del&gt;)。&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;亞當理論&lt;/strong&gt; 被作者視為一套凡樸歸真的觀察方法 (而作者本身在此之前曾制定出了 RSI、DMI、ATR 及 SAR ...etc 技術指標)&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;屈服於市場 (順勢交易法則)&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;更進一步解釋, 這邊書裡提到的是要屏棄其他所學, 不要妄加臆測市場, 交易最大的困難不是瞭解的不夠, 而是知道的太多, 既有的成見會讓我們無法對市場保持敬畏。&lt;/p&gt;
+&lt;/blockquote&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;市場最重要的事－價格 (書中沒有多做說明, 僅表示任何事情皆會反映在價格之上), 而另一件重要的事則是－趨勢&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;對稱性, 針對趨勢亞當理論中提出了對稱性的解釋,&lt;/p&gt;&lt;/li&gt;&lt;/ul&gt;</description><link>http://localhost:2368/ya-dang-li-lun-bi-ji-mind-map/</link><guid isPermaLink="false">70bf0e95-f0c3-4b22-adc9-1cce3c5c7b41</guid><dc:creator>Captain Vincent</dc:creator><pubDate>Wed, 13 Apr 2016 21:13:41 GMT</pubDate><content:encoded>&lt;blockquote&gt;
+  &lt;p&gt;原名&lt;/p&gt;
+  
+  &lt;p&gt;The Adam Theory of Markets or What Matters is Profit. by &lt;strong&gt;Welles J. Wilde&lt;/strong&gt;&lt;/p&gt;
+  
+  &lt;p&gt;從事交易所需要瞭解的, 遠比大多數人想像的還要少得多。&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h2 id=""&gt;摘錄&lt;/h2&gt;
+
+&lt;p&gt;如同開宗名義所表示的, 要忘掉那些根深蒂固的知識, 那些最有效的原則和秘密, 總是簡單明顯到一再被人們所忽視, 所以這本書很簡單扼要 (&lt;del&gt;薄&lt;/del&gt;)。&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;亞當理論&lt;/strong&gt; 被作者視為一套凡樸歸真的觀察方法 (而作者本身在此之前曾制定出了 RSI、DMI、ATR 及 SAR ...etc 技術指標)&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;屈服於市場 (順勢交易法則)&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;更進一步解釋, 這邊書裡提到的是要屏棄其他所學, 不要妄加臆測市場, 交易最大的困難不是瞭解的不夠, 而是知道的太多, 既有的成見會讓我們無法對市場保持敬畏。&lt;/p&gt;
+&lt;/blockquote&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;市場最重要的事－價格 (書中沒有多做說明, 僅表示任何事情皆會反映在價格之上), 而另一件重要的事則是－趨勢&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;對稱性, 針對趨勢亞當理論中提出了對稱性的解釋, 對角線的映射稱作 double reflection, 其強烈程度大於 single reflection, 並且在隨後的解釋認定以下兩種特性在對稱性上的表現愈好 (也就可以說明為何套用在突破點時不理想)&lt;/p&gt;
+
+&lt;ol&gt;&lt;li&gt;離目前時間愈近 &lt;/li&gt;
+&lt;li&gt;斜率愈大的趨勢 
+&lt;img src="https://farm2.staticflickr.com/1537/26398334016_82a3dabde8.jpg" alt="Fig1"&gt;&lt;/li&gt;&lt;/ol&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;比起買低賣高, 亞當理論更信奉：&lt;strong&gt;「買高, 賣得更高」&lt;/strong&gt;, 這裡與別追逐市場 (不要追高殺低) 的想法完全背道而馳, 但書裡的想法是當市場開始走了你才知道方向, 價格不會漲到不能買的地步, 也不會跌到不能賣的時候&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;只交易已經發動的市場 而 遠離那些靜止或走勢不明的&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;良好的交易者善於掌握 方向 (direction) 與 期間 (duration) 而非轉折點 (turning points), 亞當理論永遠抓不住頭部與底部, 只在意捕捉這兩者間的趨勢 &lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;亞當理論在於 &lt;strong&gt;不&lt;/strong&gt; 要抓 &lt;strong&gt;反轉點&lt;/strong&gt;, 而是抓 &lt;strong&gt;突破點&lt;/strong&gt;。&lt;/p&gt;
+&lt;/blockquote&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;培養虧損小錢的做法是常態 且 絕無例外 (停損, 停損的空間只能縮不能增)&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;營業廳的交易員知道大家都將停損設在哪, 也會故意去誘發, 但當行情發動的時候就算他們想誘發也會變得很困難, 設立停損的好處遠勝過於壞處。&lt;/p&gt;
+&lt;/blockquote&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;加碼操作的方式&lt;/p&gt;
+
+&lt;ol&gt;&lt;li&gt;觀察雙重映射圖 (double reflection) 來判定是否應該繼續加碼, 理想的轉折趨勢 (反轉回原來趨勢) 應該非常迅速在 1~3 日內完成 &lt;/li&gt;
+&lt;li&gt;加碼的部位不能夠超過之前建立的部位&lt;/li&gt;&lt;/ol&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;進場時機, 這邊指得是最合適用雙重應設圖來決策&lt;/p&gt;
+
+&lt;ol&gt;&lt;li&gt;突破時&lt;/li&gt;
+&lt;li&gt;趨勢改變時&lt;/li&gt;
+&lt;li&gt;價格跳空 (線圖沒有重疊部分) 時 或 當日高低價差很大, 如果與 1.、2. 同時發生時更值得留心&lt;/li&gt;&lt;/ol&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;進場與停損 &lt;strong&gt;圖示&lt;/strong&gt;, 停損時需以對稱的低點作為停損價位, 但進場時須確保對稱低點不會跌破進場價位 (換句話說就是突破過去高點才進場), 初始的停損可以用之前的低點來做
+&lt;img src="https://farm2.staticflickr.com/1568/26433568485_50377b240c.jpg" alt="Fig2"&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;亞當理論十準則
+&lt;ol&gt;&lt;li&gt;賠錢部位不要加碼及攤平&lt;/li&gt;
+&lt;li&gt;進場時絕對要設停損&lt;/li&gt;
+&lt;li&gt;除非趨勢朝著交易的相同方向, 否則不要移動停損點&lt;/li&gt;
+&lt;li&gt;決不讓合理的小損失擴大&lt;/li&gt;
+&lt;li&gt;任何一筆交易或任何一天, 讓損失維持 &amp;lt; 10%&lt;/li&gt;
+&lt;li&gt;別抓頭部底部&lt;/li&gt;
+&lt;li&gt;不要逆勢操作&lt;/li&gt;
+&lt;li&gt;保持彈性, 即便是亞當理論也會出錯&lt;/li&gt;
+&lt;li&gt;交易不順時不妨縮手休息&lt;/li&gt;
+&lt;li&gt;認清自己交易的目的&lt;/li&gt;&lt;/ol&gt;&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;1、2、3、4、5 點都是在說明停損的重要性 (不允許任何的犯錯), 6、7 點說明交易原則是順勢交易而不是靠抓反轉點, 最後三點則是一些交易人的心理建設。&lt;/p&gt;&lt;/blockquote&gt;&lt;/li&gt;&lt;p&gt;&lt;/p&gt;
+
+&lt;li&gt;&lt;p&gt;不需要每日做 雙重映射 (Double Reflection) 圖, 僅當市場出現轉折時預測低點做停損 (不過這邊筆者的疑問是轉折的空間得保留多大)&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;心像化, 這一章節談的東西有點玄, 所謂的心像化的定義為在心中不斷地描繪某件事的圖像, 日復一日、年復一年的將正面肯定的圖像一再地烙印在潛意識中 (作者會每日的開始花 15 分鐘完成這件工作, 想像的內容以操作準則為主 並 刻畫每一個階段性目標)&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;以另類的角度看待市場&lt;/p&gt;
+
+&lt;ul&gt;&lt;li&gt;抽象化讓自己遠離情緒的波動, 以數字去計算而非「錢」&lt;/li&gt;
+&lt;li&gt;把握原則讓自己做對的事 (成為成功的交易者), 將「錢」視為次要目標&lt;/li&gt;
+&lt;li&gt;在起步時以非常小的部位, 降低規模跟頻率, 不要讓自己開始想到「錢」&lt;/li&gt;&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;幾個讓交易者失去平常心的因素&lt;/p&gt;
+
+&lt;ul&gt;&lt;li&gt;建立太大的部位&lt;/li&gt;
+&lt;li&gt;停損點設定太遠&lt;/li&gt;
+&lt;li&gt;冒太大的風險&lt;/li&gt;
+&lt;li&gt;想要證明自己比別人操作更好&lt;/li&gt;
+&lt;li&gt;相對於交易利潤, 過分提高了自己的「要求」(這句筆者不太明瞭, 是指太過於貪心?)&lt;/li&gt;
+&lt;li&gt;必須靠交易維生 (什麼!! 原來不行~ XD)&lt;/li&gt;&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;hr&gt;
+
+&lt;h2 id=""&gt;系統&lt;/h2&gt;
+
+&lt;p&gt;作者提出一個好的系統具備以下性質&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;簡單&lt;/li&gt;
+&lt;li&gt;追隨市場, 系統應 &lt;strong&gt;呈現市場樣貌&lt;/strong&gt; 而非揣測市場樣貌&lt;/li&gt;
+&lt;li&gt;調適性, 具有彈性可以反應市場的狀況&lt;/li&gt;
+&lt;li&gt;在任何時間架構下都能適用&lt;/li&gt;
+&lt;li&gt;不能落後&lt;/li&gt;
+&lt;li&gt;衡量準確不需人為干預&lt;/li&gt;
+&lt;li&gt;排除武斷的因子&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;檢視市場現有架構的缺失&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;移動平均：武斷因為需人為決定時間架構 且 落後於市場&lt;/li&gt;
+&lt;li&gt;漲跌週期：傾向於市場應該? 嘗試抓出頭/底部, 十分複雜&lt;/li&gt;
+&lt;li&gt;線性回歸：傾向於市場應該? 且 落後指標&lt;/li&gt;
+&lt;li&gt;趨勢線：武斷地採取時間架構 與 決定採用的點&lt;/li&gt;
+&lt;/ul&gt;</content:encoded></item><item><title>交易贏家的 21 週全記錄 筆記 (Mind Map)</title><description>&lt;blockquote&gt;
   &lt;p&gt;原名&lt;/p&gt;
   
   &lt;p&gt;Diary of a Professional Commodity Trader：Lessons from 21 Weeks of Real Trading. by &lt;strong&gt;Peter L. Brandt&lt;/strong&gt;&lt;/p&gt;
