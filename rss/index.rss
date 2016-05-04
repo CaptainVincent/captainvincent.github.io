@@ -1,7 +1,120 @@
-<rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:media="http://search.yahoo.com/mrss/" version="2.0"><channel><title>Hello World! I'm Vincent</title><description>Thoughts, stories and ideas.</description><link>http://localhost:2368/</link><generator>Ghost 0.7</generator><lastBuildDate>Wed, 04 May 2016 04:01:23 GMT</lastBuildDate><atom:link href="http://localhost:2368/rss/" rel="self" type="application/rss+xml"/><ttl>60</ttl><item><title>新 操作生涯不是夢 筆記 (未完)</title><description>&lt;blockquote&gt;
+<rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:media="http://search.yahoo.com/mrss/" version="2.0"><channel><title>Hello World! I'm Vincent</title><description>Thoughts, stories and ideas.</description><link>http://localhost:2368/</link><generator>Ghost 0.7</generator><lastBuildDate>Wed, 04 May 2016 21:16:07 GMT</lastBuildDate><atom:link href="http://localhost:2368/rss/" rel="self" type="application/rss+xml"/><ttl>60</ttl><item><title>動能指標 筆記 (一) 解釋與原理</title><description>&lt;blockquote&gt;
   &lt;p&gt;原名&lt;/p&gt;
   
-  &lt;p&gt;The New Trading for a Living. &lt;strong&gt;Dr. Alexander Elder&lt;/strong&gt;&lt;/p&gt;
+  &lt;p&gt;Martin Pring on Market Momentum. by &lt;strong&gt;Martin J. Pring&lt;/strong&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;本書宗旨在於盡可能的介紹許多指標, 待讀者在瞭解這些指標的基本功能與運作原理後, 應持續思考抱著懷疑的態度反覆測試、挑選少數的指標作為操作的組合 (或許五種, 頂多六種), 而這懷疑的心態即便對於作者所述的認知與結論也不例外。&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;動能&lt;/p&gt;
+  
+  &lt;p&gt;在本書的定義「動能」用以描述價格變化的速度, 但它僅是個泛稱, 並非如諸多交易系統將之視為單一指標, 而就圖型的呈現而言, 衡量的方式會落在兩個端點之間, 所以也稱做「擺盪指標」, 所以在書中使用的名詞會將兩者視為同一物, 這也是與許多文獻較為不同之處。&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;任何自由市場中的價格, 都是取決於 &lt;strong&gt;交易者對於基本面的看法&lt;/strong&gt; 或 &lt;strong&gt;對於其他交易者想法的臆測&lt;/strong&gt;, 而不是取決於基本面本身, 意味市場是由心理力量的驅動, 動能則是試圖衡量市場參與者的情緒強度, 但沒有任何指標可以提供完美的訊號, 唯有透過數個具備驗證的指標來過濾出可信度較高的訊號, 再加以順勢採取行動。&lt;/p&gt;
+
+&lt;h2 id=""&gt;動能的解釋與原理&lt;/h2&gt;
+
+&lt;p&gt;前言, 實際操作的訊號僅可來自於價格趨勢的突破 (書中是使用 &lt;del&gt;反轉&lt;/del&gt; 一詞, 但筆者秉持近代操作的主流方式為順勢, 所以這邊將之修改為突破), 而不可來自於動能指標 (僅能作為輔助性證據)&lt;/p&gt;</description><link>http://localhost:2368/dong-neng/</link><guid isPermaLink="false">c3c58b79-812e-4c69-b812-f88e742d8c5b</guid><dc:creator>Captain Vincent</dc:creator><pubDate>Wed, 04 May 2016 05:05:19 GMT</pubDate><content:encoded>&lt;blockquote&gt;
+  &lt;p&gt;原名&lt;/p&gt;
+  
+  &lt;p&gt;Martin Pring on Market Momentum. by &lt;strong&gt;Martin J. Pring&lt;/strong&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;本書宗旨在於盡可能的介紹許多指標, 待讀者在瞭解這些指標的基本功能與運作原理後, 應持續思考抱著懷疑的態度反覆測試、挑選少數的指標作為操作的組合 (或許五種, 頂多六種), 而這懷疑的心態即便對於作者所述的認知與結論也不例外。&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;動能&lt;/p&gt;
+  
+  &lt;p&gt;在本書的定義「動能」用以描述價格變化的速度, 但它僅是個泛稱, 並非如諸多交易系統將之視為單一指標, 而就圖型的呈現而言, 衡量的方式會落在兩個端點之間, 所以也稱做「擺盪指標」, 所以在書中使用的名詞會將兩者視為同一物, 這也是與許多文獻較為不同之處。&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;任何自由市場中的價格, 都是取決於 &lt;strong&gt;交易者對於基本面的看法&lt;/strong&gt; 或 &lt;strong&gt;對於其他交易者想法的臆測&lt;/strong&gt;, 而不是取決於基本面本身, 意味市場是由心理力量的驅動, 動能則是試圖衡量市場參與者的情緒強度, 但沒有任何指標可以提供完美的訊號, 唯有透過數個具備驗證的指標來過濾出可信度較高的訊號, 再加以順勢採取行動。&lt;/p&gt;
+
+&lt;h2 id=""&gt;動能的解釋與原理&lt;/h2&gt;
+
+&lt;p&gt;前言, 實際操作的訊號僅可來自於價格趨勢的突破 (書中是使用 &lt;del&gt;反轉&lt;/del&gt; 一詞, 但筆者秉持近代操作的主流方式為順勢, 所以這邊將之修改為突破), 而不可來自於動能指標 (僅能作為輔助性證據)。&lt;/p&gt;
+
+&lt;h4 id=""&gt;時間架構&lt;/h4&gt;
+
+&lt;p&gt;投資交易的決策須放在時間架構上來考量, 短期趨勢與長期相悖時, 進行短期交易將會遭遇困難。&lt;/p&gt;
+
+&lt;h4 id=""&gt;超買與超賣&lt;/h4&gt;
+
+&lt;p&gt;任何動能類型的指標都具有擺盪的特性, 而這擺盪的兩端稱為「超買」(overbought) 與「超賣」(oversold), 將來回擺盪的兩端區域視為極端, 尋找劃分這兩端折返區的邊界, 而兩邊內所夾的中間區域應包含大部分的常態。&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;當進入兩側極端時, 價格趨勢反轉的可能性增高, 切記動能是輔助訊號, 實際的交易信號仍應以價格趨勢為主。&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;&lt;img src="https://farm8.staticflickr.com/7688/26817613055_bda9cc5cc5.jpg" alt="典型的擺盪指標"&gt;&lt;/p&gt;
+
+&lt;p&gt;擺盪指標的性質與震幅因素&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;計算公式&lt;/li&gt;
+&lt;li&gt;商品本身波動程度&lt;/li&gt;
+&lt;li&gt;採取的時間週期&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;另外, 作者補充一種行為, 當價格趨勢出現的初期, 動量指標隨即呈現強勁的順勢 (指與價格方向相仿 且 具備以下特性), 市場明顯的變化適合長期投資的部位。&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;深入 超買/賣區&lt;/li&gt;
+&lt;li&gt;停留 超買/賣區 時間拉長&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=""&gt;背離&lt;/h4&gt;
+
+&lt;p&gt;動能指標通常領先價格的反應 (因為在動能消化完全之前, 價格仍會持續趨勢), 當兩者相互配合朝同樣的方向前進是相當健全的, 而背離的反應是指兩者的趨勢不同 (用趨勢線的觀點來看), 背離的出現是在預告反轉的可能性, 也為何當背離的情形出現愈多, 最後反轉的後果愈嚴重。&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;動能 與 價格 趨勢背離 =&gt; 價格趨勢可能反轉, 實際交易訊號仍應以價格走勢的確認才可&lt;/li&gt;
+&lt;li&gt;強勁的動能 與 疲軟的價格走勢&lt;/li&gt;
+&lt;li&gt;維持在均衡線上的動能, 卻伴隨著 峰/谷 位的價格&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;觀察的重點&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;背離的次數愈多, 所代表的意義愈重大&lt;/li&gt;
+&lt;li&gt;背離涵蓋的區間愈長, 所代表的意義愈重大&lt;/li&gt;
+&lt;li&gt;背離時的價格、動能讀數 (例子為前一列表中的第三項)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;最後作者提出複雜背離的觀察方式, 藉由不同時間週期的動能指標 (應有顯著的長短) 搭配, 即快慢線的原理, 但作者對於這部分的著墨不多, 這邊也只能解釋到這。&lt;/p&gt;
+
+&lt;h2 id=""&gt;分析方式&lt;/h2&gt;
+
+&lt;p&gt;這一章節將對動能指標做進一步的觀察。&lt;/p&gt;
+
+&lt;h4 id=""&gt;趨勢線&lt;/h4&gt;
+
+&lt;p&gt;對動能指標做趨勢線可以得到輔助性的證據 (預測突破), 依作者的說法動能指標通常都會領先價格, 但不一定會反映在價格上, 而趨勢線的重要性來自於以下三點 (應用在價格之上亦是如此), 而貫穿後的趨勢線隨即將成為貫穿方向的反向阻力。&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;趨勢線維持的長度：愈長愈好&lt;/li&gt;
+&lt;li&gt;趨勢線遭測試 (觸及) 的次數：愈多愈好&lt;/li&gt;
+&lt;li&gt;角度：愈水平的突破愈具意義&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=""&gt;價格型態&lt;/h4&gt;
+
+&lt;p&gt;應用在價格上傳統的畫圖分析方法, 像是 頭肩底/頂、雙頭頂/底 之類的一樣也能運作在動能指標之上, 但作者會避開落在極端區域中, 仍要更往極端深入的突破訊號, 除此之外價格型態很少出現在動能指標中, 仍是十分值得注意。&lt;/p&gt;
+
+&lt;h4 id=""&gt;移動平均&lt;/h4&gt;
+
+&lt;p&gt;平緩動能指標蘊含的劇烈隨機波動, 以 MA 來取代之前所述的觀察重點, 甚至用兩條不同週期的 MA 來觀察交錯的時機 (ex. MACD 中的快線與慢線做法)。&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;移動平均的週期選擇需仔細評估, 因為移動平均的特性會讓原本領先價格的動能指標變成落後。&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;以上就是本書第一部分對於動能指標的初步探討及說明。&lt;/p&gt;</content:encoded></item><item><title>新 操作生涯不是夢 筆記 (未完)</title><description>&lt;blockquote&gt;
+  &lt;p&gt;原名&lt;/p&gt;
+  
+  &lt;p&gt;The New Trading for a Living. by &lt;strong&gt;Dr. Alexander Elder&lt;/strong&gt;&lt;/p&gt;
 &lt;/blockquote&gt;
 
 &lt;p&gt;本書為 &lt;strong&gt;操作生涯不是夢&lt;/strong&gt; 與 &lt;strong&gt;走進我的交易室&lt;/strong&gt; 兩本經典著作的作者, 在經過二十年後對前者做出的修訂, 在經典中添加這些年的經驗與教訓。&lt;/p&gt;
@@ -15,10 +128,10 @@
 &lt;li&gt;優秀的交易者會小心照顧資本
 &lt;ul&gt;&lt;li&gt;負合遊戲, 扣除手續費、滑價、買/賣價差, 這是場負合的遊戲, 只是中等以上的技巧是不夠的&lt;/li&gt;
 &lt;li&gt;一般交易者承擔的滑價為手續費的 3 倍, 避免使用市價單買進 (改用限價單, 但不保證成交), 錯過了某筆交易仍有其他無數的機會, 除了停損單, 一旦市場反應不如預期, 應儘速出場&lt;/li&gt;
-&lt;li&gt;尋找低廉手續費率的經紀人、建立進出頻率較少的系統、在平穩的市況進場&lt;/li&gt;&lt;/ul&gt;&lt;/li&gt;&lt;/ul&gt;</description><link>http://localhost:2368/xin-cao-zuo-sheng-ya-bu-shi-meng-bi-ji/</link><guid isPermaLink="false">af53c9d7-7beb-4cb6-a7f4-655a54cda3a7</guid><dc:creator>Captain Vincent</dc:creator><pubDate>Tue, 03 May 2016 18:03:05 GMT</pubDate><content:encoded>&lt;blockquote&gt;
+&lt;li&gt;尋找低廉手續費率的經紀人、建立進出頻率較少的系統、&lt;/li&gt;&lt;/ul&gt;&lt;/li&gt;&lt;/ul&gt;</description><link>http://localhost:2368/xin-cao-zuo-sheng-ya-bu-shi-meng-bi-ji/</link><guid isPermaLink="false">af53c9d7-7beb-4cb6-a7f4-655a54cda3a7</guid><dc:creator>Captain Vincent</dc:creator><pubDate>Tue, 03 May 2016 18:03:05 GMT</pubDate><content:encoded>&lt;blockquote&gt;
   &lt;p&gt;原名&lt;/p&gt;
   
-  &lt;p&gt;The New Trading for a Living. &lt;strong&gt;Dr. Alexander Elder&lt;/strong&gt;&lt;/p&gt;
+  &lt;p&gt;The New Trading for a Living. by &lt;strong&gt;Dr. Alexander Elder&lt;/strong&gt;&lt;/p&gt;
 &lt;/blockquote&gt;
 
 &lt;p&gt;本書為 &lt;strong&gt;操作生涯不是夢&lt;/strong&gt; 與 &lt;strong&gt;走進我的交易室&lt;/strong&gt; 兩本經典著作的作者, 在經過二十年後對前者做出的修訂, 在經典中添加這些年的經驗與教訓。&lt;/p&gt;
@@ -2116,213 +2229,4 @@ ex. 收盤價, 今日為 Close[0], 昨日為 Close[1]...etc&lt;/p&gt;
 
 &lt;h4 id="ea"&gt;&lt;strong&gt;EA 程式架構&lt;/strong&gt;&lt;/h4&gt;
 
-&lt;p&gt;(待補充)&lt;/p&gt;</content:encoded></item><item><title>Sublime Text 教學</title><description>&lt;blockquote&gt;
-  &lt;p&gt;筆者按: 網路上關於 Sublime 的教學其實已經多如繁星, 所以本篇說為教學, 充其量目的也只是敝人的備忘錄而已 (笑)。&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;h4 id=""&gt;引言&lt;/h4&gt;
-
-&lt;p&gt;在前公司待了三年多快四年, 一直都是在 Windows 上透過 SSH 連到 Linux 的 build server 做開發, 常使用的語言為 C++、C, 而在前公司最普遍的 trace code 工具是有名的 &lt;del&gt;Source Insight&lt;/del&gt;, 但對我來說有以下的缺點:&lt;/p&gt;
-
-&lt;ol&gt;
-&lt;li&gt;&lt;strong&gt;非跨平台&lt;/strong&gt; &lt;br&gt;
-我個人電腦使用的環境是 OSX, 所以對於開發工具需在公司跟家裡做切換, 使用的意願上其實是非常低, 不外乎在工具的使用也是有所謂的學習曲線, 需分散心力來維持兩套是滿浪費精力的。
-(要在 Mac 上執行 Windows 程式就我所知也有三種方式, 一種是安裝雙系統共存, 再來是使用虛擬機器VMWare, 最後則是透過 Wine 來安裝, 但會喜歡使用 Mac 的人其實對優雅都有種偏執, 所以我想還是能省則省吧!&lt;/li&gt;&lt;/ol&gt;</description><link>http://localhost:2368/sublime-jiao-xue/</link><guid isPermaLink="false">4c4675c9-609b-459f-87e2-f2eb84fcd1b9</guid><category>Sublime</category><category>PackageControl</category><dc:creator>Captain Vincent</dc:creator><pubDate>Mon, 22 Feb 2016 18:24:00 GMT</pubDate><content:encoded>&lt;blockquote&gt;
-  &lt;p&gt;筆者按: 網路上關於 Sublime 的教學其實已經多如繁星, 所以本篇說為教學, 充其量目的也只是敝人的備忘錄而已 (笑)。&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;h4 id=""&gt;引言&lt;/h4&gt;
-
-&lt;p&gt;在前公司待了三年多快四年, 一直都是在 Windows 上透過 SSH 連到 Linux 的 build server 做開發, 常使用的語言為 C++、C, 而在前公司最普遍的 trace code 工具是有名的 &lt;del&gt;Source Insight&lt;/del&gt;, 但對我來說有以下的缺點:&lt;/p&gt;
-
-&lt;ol&gt;
-&lt;li&gt;&lt;strong&gt;非跨平台&lt;/strong&gt; &lt;br&gt;
-我個人電腦使用的環境是 OSX, 所以對於開發工具需在公司跟家裡做切換, 使用的意願上其實是非常低, 不外乎在工具的使用也是有所謂的學習曲線, 需分散心力來維持兩套是滿浪費精力的。
-(要在 Mac 上執行 Windows 程式就我所知也有三種方式, 一種是安裝雙系統共存, 再來是使用虛擬機器VMWare, 最後則是透過 Wine 來安裝, 但會喜歡使用 Mac 的人其實對優雅都有種偏執, 所以我想還是能省則省吧!)。&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;使用介面非常醜&lt;/strong&gt; &lt;br&gt;
-這可能主觀意識成分居多, 而且多半應該是來自一種對於 Windows 視窗樣式的厭惡吧! 但気持ち (Kimochi) 有時也是這麼重要～ (攤)。&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;要$$&lt;/strong&gt; &lt;br&gt;
-&lt;del&gt;雖然公司都...&lt;/del&gt;, 嗯, 我什麼都沒說。  &lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;笨重&lt;/strong&gt; &lt;br&gt;
-匯入專案以及建立 Source tree 需要滿長的時間 (尤其是龐大的專案時), 加上使用起來一直有種跟不上思緒的頓感 (&lt;del&gt;哈味&lt;/del&gt;)。&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;模糊搜尋做得不夠好&lt;/strong&gt; &lt;br&gt;
-小弟記憶力一直不太好, 所以這功能也滿在意的。&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;p&gt;最後當工作快滿一年的時候, 經由一位快離職的同事分享, 開始認識了 Sublime, 也就一直擁抱到現在了。&lt;/p&gt;
-
-&lt;hr&gt;
-
-&lt;h2 id="step1installsublime"&gt;Step 1. Install Sublime&lt;/h2&gt;
-
-&lt;p&gt;首先可以先至官網抓取最新的版本 &lt;a href="http://www.sublimetext.com/2"&gt;Sublime2&lt;/a&gt;、&lt;a href="http://www.sublimetext.com/3"&gt;Sublime3&lt;/a&gt;, 跟一般平台上的應用程式安裝方式無異 (所以這邊省略讓各位自行摸索一下), 接著要 &lt;strong&gt;安裝最重要的套件 Package Control x3&lt;/strong&gt; (筆者懶得打三遍, 但希望你們明白這真的很重要!), 有點類似 Ubuntu 的 apt-get、Mac 的 Homebrew、Python 的 Pip、Node.js 的 npm 關係, 這是一個屬於 Sublime 套件管理的 Plugin (由於實在太方便了, 沒意外的話應該是每個用戶必先安裝, &lt;del&gt;除非天生反骨&lt;/del&gt;)。&lt;/p&gt;
-
-&lt;h2 id="step2installpackagecontrol"&gt;Step 2. Install Package Control&lt;/h2&gt;
-
-&lt;p&gt;Package Control的安裝方式也很簡易 &lt;a href="https://packagecontrol.io/installation"&gt;Package Control安裝頁面&lt;/a&gt; 有提供 Sublime Text 2 跟 Sublime Text 3 的 Command, 執行 Sublime 後按 &lt;code&gt;Ctrl + `&lt;/code&gt; (`是鍵盤最左上角那個) 叫出 Sublime 的 Console Panel (或是透過操作畫面上方的 Menu 選單 &lt;code&gt;View -&amp;gt; Show Console&lt;/code&gt; 也可以叫出)&lt;/p&gt;
-
-&lt;p&gt;&lt;img src="https://farm2.staticflickr.com/1513/24572921463_63fa373e0d.jpg" alt=""&gt;&lt;/p&gt;
-
-&lt;p&gt;複製貼上你下載版本的指令進去按 &lt;code&gt;Enter&lt;/code&gt; 即可 (注意不要複製到行尾或行頭多餘空白格), 安裝完成之後可以再按一次按 &lt;code&gt;Ctrl + `&lt;/code&gt; 或是 &lt;code&gt;ESC&lt;/code&gt; 關掉Console。&lt;/p&gt;
-
-&lt;p&gt;&lt;img src="https://farm2.staticflickr.com/1704/24569074674_1c37755a8d_z.jpg" alt=""&gt;&lt;/p&gt;
-
-&lt;p&gt;此時已經可以執行 Package Control 的相關指令, 方式一樣是兩種 (這部分的操作很頻繁, 所以筆者平時都是以快速鍵操作為主)&lt;/p&gt;
-
-&lt;ol&gt;
-&lt;li&gt;透過操作畫面上方的 Menu 選單 &lt;code&gt;Sublime Text -&amp;gt; Preference -&amp;gt; Package Control&lt;/code&gt;  &lt;/li&gt;
-&lt;li&gt;按 &lt;code&gt;Ctrl/Cmd(Windows/Mac) + Shift + P&lt;/code&gt;&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;p&gt;&lt;img src="https://farm2.staticflickr.com/1469/24569403644_79a1f874f2.jpg" alt=""&gt;&lt;/p&gt;
-
-&lt;p&gt;出現輸入框後, 可以針對 Package的操作輸入以下 Keywords (ex. install、remove、list)&lt;/p&gt;
-
-&lt;p&gt;&lt;img src="https://farm2.staticflickr.com/1619/25173739056_94164dac33_z.jpg" alt=""&gt;&lt;/p&gt;
-
-&lt;p&gt;常見的操作說明如下&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;List Package&lt;/strong&gt;: 列出已安裝的 Package (這邊可以試著鍵入 list, 輸入框的模糊搜尋會幫你選取到match 的指令, 相當方便的使用者體驗)&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Install Package&lt;/strong&gt;: 左下會有個移動的等號 "=" 表示正在搜尋可以安裝的Package, 耐心等待跑完之後, 會彈出類似下拉式的選單供選擇 (挑選欲安裝的Package一樣可以鍵入關鍵字, 讓模糊搜尋幫助你挑選)&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Remove Package&lt;/strong&gt;: 列出已安裝的Package, 提供選取刪除&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;另外, 在挑選 Plugin 安裝的部分, 除了可以先上網看看相關領域開發者都推薦使用的之外, 也可上 &lt;a href="https://packagecontrol.io/packages/Package%20Control"&gt;Package Control 官網&lt;/a&gt; 透過一些關鍵字來尋找, 跟在Sublime裡面搜尋的差別在於, 官網上的會提供 Rank 讓你知道這個 Package 被安裝的熱門程度, 較多人使用的 Plugin 在維護跟品質上都相對比較有保障。&lt;/p&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;註&lt;/p&gt;
-  
-  &lt;p&gt;Cmd = Command key define in Mac Keyboard&lt;/p&gt;
-  
-  &lt;p&gt;&lt;code&gt;Ctrl/Cmd(Windows/Mac) + Shift + P&lt;/code&gt;, 透過這組快速鍵叫出來的是 Sublime 的 Command Palette (也可從 Menu 選單裡的 Tool 選項叫出來), 透過這個 Command Palette 可用來呼叫許多其他 Plugin 預設的功能, 所以絕大部份的時候只需要記得這個快速鍵, 就已經相當方便了。&lt;/p&gt;
-  
-  &lt;p&gt;Ex. git plugin也是在這個輸入框內做操作&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;h2 id="step3"&gt;Step 3. 推薦一些筆者安裝使用的套件&lt;/h2&gt;
-
-&lt;p&gt;(這裡先介紹一般通用的套件)&lt;/p&gt;
-
-&lt;p&gt;透過 Package Control 都可以輕易的 Install 以下的 Plugin 協助你提升工作效率, 而需注意的是部分 Plugin 安裝之後, 有時會需要做一些客製化的調整 (例如修改 Package Setting 檔, 從 Menu 選單 Preferences -&gt; Package Setting -&gt; 挑選你要修改的 Plugin)&lt;/p&gt;
-
-&lt;p&gt;&lt;img src="https://farm2.staticflickr.com/1586/25174133666_ec6ba6156d_z.jpg" alt=""&gt;&lt;/p&gt;
-
-&lt;p&gt;筆者似乎從 Sublime Text 3 開始就不能直接修改 Default 的 Setting, 需要打開 User 的 Setting 來做變更 (如上圖), 不過這也是建立良好修改習慣的開始。&lt;/p&gt;
-
-&lt;hr&gt;
-
-&lt;h4 id="highlightwordshttpspackagecontroliopackageshighlightwords"&gt;&lt;a href="https://packagecontrol.io/packages/HighlightWords"&gt;HighlightWords&lt;/a&gt;&lt;/h4&gt;
-
-&lt;p&gt;這個套件的使用來自於 Source Insight 裡我覺得很方便的功能, 在 Source Insight 裡透過 &lt;code&gt;Shift + F8&lt;/code&gt; 來常駐 (持續性) 的標記某個單詞 (同時也會標記這整個文本裡所有出現的地方, 有助於 trace code), 但在 Sublime 中, 雖然選取文字時會幫你標記, 但滑鼠點擊它處則標記即消失, 無法保持持續標記 (&lt;mark&gt;Highlight&lt;/mark&gt;) 的狀態, 另外在剛接觸這個套件的版本所提供的方式, 是透過快速鍵後只會彈出最下排一個輸入框, 提供輸入想標記的單詞, 而要取消標記也是刪除這輸入框裡的內容, 隨著我跟前同事私下研究改進, 目前已可透過 &lt;code&gt;Cmd + Shift + H&lt;/code&gt; 來 Highlight 游標目前停留的字詞, 並對同樣的字詞再按一次快速鍵則取消標記, 使用方式已與Source Insight無異, 甚至更好用。&lt;/p&gt;
-
-&lt;hr&gt;
-
-&lt;h4 id="brackethighlighterhttpspackagecontroliopackagesbrackethighlighter"&gt;&lt;a href="https://packagecontrol.io/packages/BracketHighlighter"&gt;BracketHighlighter&lt;/a&gt;&lt;/h4&gt;
-
-&lt;p&gt;Trace code 滿常需要的除了前面標記變數的功能以外, 另外也需要幫忙判斷括號從哪括到哪, 這Plugin就提供了這樣的的幫助。&lt;/p&gt;
-
-&lt;p&gt;注意, 這邊筆者會將Setting修改成如下, 以呈現較佳的視覺效果&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class="language-json"&gt;"default": {
-"icon": "dot",
-// BH1's original default color for reference
-"color": "entity.name.class",
-//"color": "brackethighlighter.default",
-"style": "block"
-},
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;hr&gt;
-
-&lt;h4 id="ctagshttpspackagecontroliopackagesctags"&gt;&lt;a href="https://packagecontrol.io/packages/CTags"&gt;Ctags&lt;/a&gt;&lt;/h4&gt;
-
-&lt;p&gt;也是在 trace code 方面個人覺得非常好用的 Plugin 之一, 先介紹 ctags 本身是一個專門幫忙對 soruce code、header file 產生 index file 用的工具, 且在一開始最早僅支援 C, 後來延伸至今已可支援以下語言&lt;/p&gt;
-
-&lt;p&gt;Ant、Asm、Asp、Awk、Basic、BETA、C、C++、C#、Cobol、DosBatch、Eiffel、Erlang、Flex、Fortran、HTML、Java、JavaScript、Lisp、Lua、Make、MatLab、OCaml、Pascal、Perl、PHP、Python、REXX、Ruby、Scheme、Sh、SLang、SML、SQL、Tcl、Tex、Vera、Verilog、VHDL、Vim、YACC&lt;/p&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;可以透過 Shell 底下的 Command 來查詢支援的語言&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;pre&gt;&lt;code class="language- language-bash"&gt;ctags --list-languages  
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;另外 ctags 本身也可以支援對語言或副檔名做延伸的定義&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;ex. 在Sublime中使用的話, 在 Ctags 的 Plugin Setting 內加入下面這句 (等於將後面參數傳給 ctags )  &lt;/p&gt;
-
-&lt;pre&gt;&lt;code class="language- language-json"&gt;"opts" : ["--langmap=C:+.mq4", "--extra=+q", "--fields=+Saim", "--c-kinds=+lpx", "--c++-kinds=+lpx", "-R"],
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;--extra=+q --fields=+Saim&lt;/strong&gt; 指名要建立的 tags 包含 Class 內 member 的資訊&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;--c-kinds=+lpx --c++-kinds=+lpx&lt;/strong&gt; 是用來對底下參數打開
-&lt;ul&gt;&lt;li&gt;&lt;strong&gt;l&lt;/strong&gt;  local variables [off]&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;p&lt;/strong&gt;  function prototypes&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;x&lt;/strong&gt;  external and forward variable declarations [off]&lt;/li&gt;&lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;-R&lt;/strong&gt; 則是整個目錄底下遞迴的方式去循環查找建立 index&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;--langmap=C:+.mq4&lt;/strong&gt; 是筆者想針對 MT4 平台開發程式, 副檔名使用的是 mq4, 但語法本身很接近 C 語言, 所以 extend C parser 來幫忙建立 tag file&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;另外透過以下指令可以看 ctags 對每個語言建立 index 的詳細程度, 部分可供 On/Off&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;pre&gt;&lt;code class="language- language-bash"&gt;ctags --list-kinds  
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;以上大概介紹完ctags可以做到的事後, 就要開始介紹如何安裝。&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;Mac Shell : brew install ctags (Mac 有自帶的 ctags 但無法使用, 記得要抓新的, 筆者使用的是 Exuberant Ctags 5.8)&lt;/li&gt;
-&lt;li&gt;Ubuntu Shell: apt-get install ctags&lt;/li&gt;
-&lt;li&gt;Windows: 有點久遠, 大概有執行可以抓下來安裝吧&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;裝完之後記得修改User Setting加入&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class="language- language-json"&gt;"command": "/usr/local/Cellar/ctags/5.8_1/bin/ctags",
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;後面字串需對應到實際安裝 ctags 的執行檔路徑, 這樣便可以開始建立 index 使用了。
-&lt;img src="https://farm2.staticflickr.com/1579/25123928811_0ef0bcb02c_z.jpg" alt=""&gt;&lt;/p&gt;
-
-&lt;hr&gt;
-
-&lt;h4 id="blockcursoreverywherehttpspackagecontroliopackagesblock20cursor20everywhere"&gt;&lt;a href="https://packagecontrol.io/packages/Block%20Cursor%20Everywhere"&gt;Block Cursor Everywhere&lt;/a&gt;&lt;/h4&gt;
-
-&lt;p&gt;在文字編輯器內要尋找鍵盤的游標有時候也是種困擾, 這個 Plugin 可以幫忙在 Vim 指令 mode 下提供 &lt;mark&gt; 方塊形&lt;/mark&gt; 的鍵盤游標。&lt;/p&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;&lt;strong&gt;Vim Mode&lt;/strong&gt;&lt;/p&gt;
-  
-  &lt;p&gt;如果有使用過Linux開發的話, 常用的 Console 文字編輯器有兩套 Vi/Vim or Emac (筆者是只接觸過 vim), 在 Vim 底下有提供兩種 mode: 指令 mode 以及編輯 mode, 以往已經使用習慣 Vim 的朋友可以透過修改 Sublime 的 Setting file 模擬 Vim, 分別是將&lt;/p&gt;
-  
-  &lt;p&gt;&lt;code&gt;"ignored_packages": ["Vintage"],&lt;/code&gt; 中的 Vintage 拿掉 (切換成可支援 Vim mode)&lt;/p&gt;
-  
-  &lt;p&gt;&lt;code&gt;"vintage_start_in_command_mode": true,&lt;/code&gt; 加入這行, (開啟檔案時會優先啟動 Vim 的 command mode), 這個 Plugin 是搭配 Vintage 使用, 可以幫忙快速定位到目前游標的位置, 加速編輯上的效率。&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;hr&gt;
-
-&lt;p&gt;最後下面是筆者習慣的 Theme 跟 Color Schemes , Theme 是整個軟體介面的主題樣式, 而 Color Scheme 是用來做語法上色時的配色樣本, 網路都有一些常用或是推薦的樣式, 甚至已經幫忙整理好預覽圖, 都可以從而參考找出自己需要的。&lt;/p&gt;
-
-&lt;p&gt;&lt;img src="https://farm2.staticflickr.com/1604/25098884972_a69241ee7c_z.jpg" alt=""&gt;&lt;/p&gt;
-
-&lt;h4 id="themesodahttpspackagecontroliopackagestheme2020soda"&gt;&lt;a href="https://packagecontrol.io/packages/Theme%20-%20Soda"&gt;Theme - Soda&lt;/a&gt;&lt;/h4&gt;
-
-&lt;pre&gt;&lt;code class="language- language-json"&gt;"soda_classic_tabs": true,
-"theme": "Soda Dark 3.sublime-theme",
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;(Add to Preferences.sublime-settings)&lt;/p&gt;
-
-&lt;h4 id="tomorrowcolorschemeshttpspackagecontroliopackagestomorrow20color20schemes"&gt;&lt;a href="https://packagecontrol.io/packages/Tomorrow%20Color%20Schemes"&gt;Tomorrow Color Schemes&lt;/a&gt;&lt;/h4&gt;
-
-&lt;pre&gt;&lt;code class="language- language-json"&gt;"color_scheme": "Packages/Tomorrow Color Schemes/Tomorrow-Night.tmTheme",
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;(Add to Preferences.sublime-settings)&lt;/p&gt;</content:encoded></item></channel></rss>
+&lt;p&gt;(待補充)&lt;/p&gt;</content:encoded></item></channel></rss>

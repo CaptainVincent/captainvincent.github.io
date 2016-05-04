@@ -1,0 +1,290 @@
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <title>動能指標 筆記 (一) 解釋與原理</title>
+    <meta name="description" content="">
+
+    <meta name="HandheldFriendly" content="True">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="shortcut icon" href="../favicon.ico">
+
+    <link rel="stylesheet" type="text/css" href="../assets/css/screen.css?v=f6d946fd74">
+    <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Merriweather:300,700,700italic,300italic%7COpen+Sans:700,400">
+    <link rel="stylesheet" type="text/css" href="../assets/css/prism.css?v=f6d946fd74">
+    <link rel="canonical" href="index.html">
+    <meta name="referrer" content="origin">
+    
+    <meta property="og:site_name" content="Hello World! I'm Vincent">
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="動能指標 筆記 (一) 解釋與原理">
+    <meta property="og:description" content="原名      Martin Pring on Market Momentum. by Martin J. Pring 本書宗旨在於盡可能的介紹許多指標, 待讀者在瞭解這些指標的基本功能與運作原理後, 應持續思考抱著懷疑的態度反覆測試、挑選少數的指標作為操作的組合 (或許五種, 頂多六種), 而這懷疑的心態即便對於作者所述的認知與結論也不例外。   動能      在本書的定義「動能」用以描述價格變化的速度, 但它僅是個泛稱, 並非如諸多交易系統將之視為單一指標, 而就圖型的呈現而言, 衡量的方式會落在兩個端點之間, 所以也稱做「擺盪指標」, 所以在書中使用的名詞會將兩者視為同一物, 這也是與許多文獻較為不同之處。 任何自由市場中的價格, 都是取決於 交易者對於基本面的看法 或 對於其他交易者想法的臆測, 而不是取決於基本面本身, 意味市場是由心理力量的驅動, 動能則是試圖衡量市場參與者的情緒強度, 但沒有任何指標可以提供完美的訊號, 唯有透過數個具備驗證的指標來過濾出可信度較高的訊號, 再加以順勢採取行動。...">
+    <meta property="og:url" content="http://captainvincent.github.io/dong-neng/">
+    <meta property="article:published_time" content="2016-05-04T05:05:19.339Z">
+    <meta property="article:modified_time" content="2016-05-04T21:15:42.084Z">
+    
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="動能指標 筆記 (一) 解釋與原理">
+    <meta name="twitter:description" content="原名      Martin Pring on Market Momentum. by Martin J. Pring 本書宗旨在於盡可能的介紹許多指標, 待讀者在瞭解這些指標的基本功能與運作原理後, 應持續思考抱著懷疑的態度反覆測試、挑選少數的指標作為操作的組合 (或許五種, 頂多六種), 而這懷疑的心態即便對於作者所述的認知與結論也不例外。   動能      在本書的定義「動能」用以描述價格變化的速度, 但它僅是個泛稱, 並非如諸多交易系統將之視為單一指標, 而就圖型的呈現而言, 衡量的方式會落在兩個端點之間, 所以也稱做「擺盪指標」, 所以在書中使用的名詞會將兩者視為同一物, 這也是與許多文獻較為不同之處。 任何自由市場中的價格, 都是取決於 交易者對於基本面的看法 或 對於其他交易者想法的臆測, 而不是取決於基本面本身, 意味市場是由心理力量的驅動, 動能則是試圖衡量市場參與者的情緒強度, 但沒有任何指標可以提供完美的訊號, 唯有透過數個具備驗證的指標來過濾出可信度較高的訊號, 再加以順勢採取行動。...">
+    <meta name="twitter:url" content="http://captainvincent.github.io/dong-neng/">
+    
+    <script type="application/ld+json">
+{
+    "@context": "http://schema.org",
+    "@type": "Article",
+    "publisher": "Hello World! I'm Vincent",
+    "author": {
+        "@type": "Person",
+        "name": "Captain Vincent",
+        "image": "http://captainvincent.github.io/content/images/2016/01/--.JPG",
+        "url": "http://captainvincent.github.io/author/captain",
+        "sameAs": null,
+        "description": null
+    },
+    "headline": "動能指標 筆記 (一) 解釋與原理",
+    "url": "http://captainvincent.github.io/dong-neng/",
+    "datePublished": "2016-05-04T05:05:19.339Z",
+    "dateModified": "2016-05-04T21:15:42.084Z",
+    "description": "原名      Martin Pring on Market Momentum. by Martin J. Pring 本書宗旨在於盡可能的介紹許多指標, 待讀者在瞭解這些指標的基本功能與運作原理後, 應持續思考抱著懷疑的態度反覆測試、挑選少數的指標作為操作的組合 (或許五種, 頂多六種), 而這懷疑的心態即便對於作者所述的認知與結論也不例外。   動能      在本書的定義「動能」用以描述價格變化的速度, 但它僅是個泛稱, 並非如諸多交易系統將之視為單一指標, 而就圖型的呈現而言, 衡量的方式會落在兩個端點之間, 所以也稱做「擺盪指標」, 所以在書中使用的名詞會將兩者視為同一物, 這也是與許多文獻較為不同之處。 任何自由市場中的價格, 都是取決於 交易者對於基本面的看法 或 對於其他交易者想法的臆測, 而不是取決於基本面本身, 意味市場是由心理力量的驅動, 動能則是試圖衡量市場參與者的情緒強度, 但沒有任何指標可以提供完美的訊號, 唯有透過數個具備驗證的指標來過濾出可信度較高的訊號, 再加以順勢採取行動。..."
+}
+    </script>
+
+    <meta name="generator" content="Ghost 0.7">
+    <link rel="alternate" type="application/rss+xml" title="Hello World! I'm Vincent" href="../rss/index.html">
+    <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-73341093-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+</head>
+<body class="post-template nav-closed">
+
+    <div class="nav">
+    <h3 class="nav-title">Menu</h3>
+    <a href="index.html#" class="nav-close">
+        <span class="hidden">Close</span>
+    </a>
+    <ul>
+            <li class="nav-blog-home-page" role="presentation"><a href="../">Blog Home Page</a></li>
+            <li class="nav-git-book" role="presentation"><a href="https://www.gitbook.com/@captainvincent">Git Book</a></li>
+            <li class="nav-aboutme" role="presentation"><a href="https://about.me/CaptainVincent">About.Me</a></li>
+    </ul>
+    <a class="subscribe-button icon-feed" href="../rss/index.rss">Subscribe</a>
+</div>
+<span class="nav-cover"></span>
+
+
+    <div class="site-wrapper">
+
+        
+
+
+<header class="main-header post-head no-cover">
+    <nav class="main-nav  clearfix">
+        
+            <a class="menu-button icon-menu" href="index.html#"><span class="word">Menu</span></a>
+    </nav>
+</header>
+
+<main class="content" role="main">
+    <article class="post">
+
+        <header class="post-header">
+            <h1 class="post-title">動能指標 筆記 (一) 解釋與原理</h1>
+            <section class="post-meta">
+                <time class="post-date" datetime="2016-05-04">04 May 2016</time> 
+            </section>
+        </header>
+
+        <section class="post-content">
+            <blockquote>
+  <p>原名</p>
+  
+  <p>Martin Pring on Market Momentum. by <strong>Martin J. Pring</strong></p>
+</blockquote>
+
+<p>本書宗旨在於盡可能的介紹許多指標, 待讀者在瞭解這些指標的基本功能與運作原理後, 應持續思考抱著懷疑的態度反覆測試、挑選少數的指標作為操作的組合 (或許五種, 頂多六種), 而這懷疑的心態即便對於作者所述的認知與結論也不例外。</p>
+
+<blockquote>
+  <p>動能</p>
+  
+  <p>在本書的定義「動能」用以描述價格變化的速度, 但它僅是個泛稱, 並非如諸多交易系統將之視為單一指標, 而就圖型的呈現而言, 衡量的方式會落在兩個端點之間, 所以也稱做「擺盪指標」, 所以在書中使用的名詞會將兩者視為同一物, 這也是與許多文獻較為不同之處。</p>
+</blockquote>
+
+<p>任何自由市場中的價格, 都是取決於 <strong>交易者對於基本面的看法</strong> 或 <strong>對於其他交易者想法的臆測</strong>, 而不是取決於基本面本身, 意味市場是由心理力量的驅動, 動能則是試圖衡量市場參與者的情緒強度, 但沒有任何指標可以提供完美的訊號, 唯有透過數個具備驗證的指標來過濾出可信度較高的訊號, 再加以順勢採取行動。</p>
+
+<h2 id="">動能的解釋與原理</h2>
+
+<p>前言, 實際操作的訊號僅可來自於價格趨勢的突破 (書中是使用 <del>反轉</del> 一詞, 但筆者秉持近代操作的主流方式為順勢, 所以這邊將之修改為突破), 而不可來自於動能指標 (僅能作為輔助性證據)。</p>
+
+<h4 id="">時間架構</h4>
+
+<p>投資交易的決策須放在時間架構上來考量, 短期趨勢與長期相悖時, 進行短期交易將會遭遇困難。</p>
+
+<h4 id="">超買與超賣</h4>
+
+<p>任何動能類型的指標都具有擺盪的特性, 而這擺盪的兩端稱為「超買」(overbought) 與「超賣」(oversold), 將來回擺盪的兩端區域視為極端, 尋找劃分這兩端折返區的邊界, 而兩邊內所夾的中間區域應包含大部分的常態。</p>
+
+<blockquote>
+  <p>當進入兩側極端時, 價格趨勢反轉的可能性增高, 切記動能是輔助訊號, 實際的交易信號仍應以價格趨勢為主。</p>
+</blockquote>
+
+<p><img src="https://farm8.staticflickr.com/7688/26817613055_bda9cc5cc5.jpg" alt="典型的擺盪指標"></p>
+
+<p>擺盪指標的性質與震幅因素</p>
+
+<ul>
+<li>計算公式</li>
+<li>商品本身波動程度</li>
+<li>採取的時間週期</li>
+</ul>
+
+<p>另外, 作者補充一種行為, 當價格趨勢出現的初期, 動量指標隨即呈現強勁的順勢 (指與價格方向相仿 且 具備以下特性), 市場明顯的變化適合長期投資的部位。</p>
+
+<ul>
+<li>深入 超買/賣區</li>
+<li>停留 超買/賣區 時間拉長</li>
+</ul>
+
+<h4 id="">背離</h4>
+
+<p>動能指標通常領先價格的反應 (因為在動能消化完全之前, 價格仍會持續趨勢), 當兩者相互配合朝同樣的方向前進是相當健全的, 而背離的反應是指兩者的趨勢不同 (用趨勢線的觀點來看), 背離的出現是在預告反轉的可能性, 也為何當背離的情形出現愈多, 最後反轉的後果愈嚴重。</p>
+
+<ul>
+<li>動能 與 價格 趨勢背離 =&gt; 價格趨勢可能反轉, 實際交易訊號仍應以價格走勢的確認才可</li>
+<li>強勁的動能 與 疲軟的價格走勢</li>
+<li>維持在均衡線上的動能, 卻伴隨著 峰/谷 位的價格</li>
+</ul>
+
+<p>觀察的重點</p>
+
+<ul>
+<li>背離的次數愈多, 所代表的意義愈重大</li>
+<li>背離涵蓋的區間愈長, 所代表的意義愈重大</li>
+<li>背離時的價格、動能讀數 (例子為前一列表中的第三項)</li>
+</ul>
+
+<p>最後作者提出複雜背離的觀察方式, 藉由不同時間週期的動能指標 (應有顯著的長短) 搭配, 即快慢線的原理, 但作者對於這部分的著墨不多, 這邊也只能解釋到這。</p>
+
+<h2 id="">分析方式</h2>
+
+<p>這一章節將對動能指標做進一步的觀察。</p>
+
+<h4 id="">趨勢線</h4>
+
+<p>對動能指標做趨勢線可以得到輔助性的證據 (預測突破), 依作者的說法動能指標通常都會領先價格, 但不一定會反映在價格上, 而趨勢線的重要性來自於以下三點 (應用在價格之上亦是如此), 而貫穿後的趨勢線隨即將成為貫穿方向的反向阻力。</p>
+
+<ul>
+<li>趨勢線維持的長度：愈長愈好</li>
+<li>趨勢線遭測試 (觸及) 的次數：愈多愈好</li>
+<li>角度：愈水平的突破愈具意義</li>
+</ul>
+
+<h4 id="">價格型態</h4>
+
+<p>應用在價格上傳統的畫圖分析方法, 像是 頭肩底/頂、雙頭頂/底 之類的一樣也能運作在動能指標之上, 但作者會避開落在極端區域中, 仍要更往極端深入的突破訊號, 除此之外價格型態很少出現在動能指標中, 仍是十分值得注意。</p>
+
+<h4 id="">移動平均</h4>
+
+<p>平緩動能指標蘊含的劇烈隨機波動, 以 MA 來取代之前所述的觀察重點, 甚至用兩條不同週期的 MA 來觀察交錯的時機 (ex. MACD 中的快線與慢線做法)。</p>
+
+<blockquote>
+  <p>移動平均的週期選擇需仔細評估, 因為移動平均的特性會讓原本領先價格的動能指標變成落後。</p>
+</blockquote>
+
+<p>以上就是本書第一部分對於動能指標的初步探討及說明。</p>
+        </section>
+
+        <footer class="post-footer">
+
+
+            <figure class="author-image">
+                <a class="img" href="../author/captain/" style="background-image: url(../content/images/2016/01/--.JPG)"><span class="hidden">Captain Vincent's Picture</span></a>
+            </figure>
+
+            <section class="author">
+                <h4><a href="../author/captain/">Captain Vincent</a></h4>
+
+                    <p>Read <a href="../author/captain/">more posts</a> by this author.</p>
+                <div class="author-meta">
+                    
+                    
+                </div>
+            </section>
+
+
+            <section class="share">
+                <h4>Share this post</h4>
+                <a class="icon-twitter" href="https://twitter.com/intent/tweet?text=%E5%8B%95%E8%83%BD%E6%8C%87%E6%A8%99%20%E7%AD%86%E8%A8%98%20(%E4%B8%80)%20%E8%A7%A3%E9%87%8B%E8%88%87%E5%8E%9F%E7%90%86&amp;url=http://captainvincent.github.io/dong-neng/" onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
+                    <span class="hidden">Twitter</span>
+                </a>
+                <a class="icon-facebook" href="https://www.facebook.com/sharer/sharer.php?u=http://captainvincent.github.io/dong-neng/index.html" onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;">
+                    <span class="hidden">Facebook</span>
+                </a>
+                <a class="icon-google-plus" href="https://plus.google.com/share?url=http://captainvincent.github.io/dong-neng/" onclick="window.open(this.href, 'google-plus-share', 'width=490,height=530');return false;">
+                    <span class="hidden">Google+</span>
+                </a>
+            </section>
+
+            <div id="disqus_thread"></div>
+            <script>
+            /**
+            * RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+            * LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables
+            */
+
+            var disqus_config = function () {
+                this.page.url = 'http://captainvincent.github.io/dong-neng/'; // Replace PAGE_URL with your page's canonical URL variable
+                this.page.identifier = 'ghost-27'; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+            };
+
+            (function() { // DON'T EDIT BELOW THIS LINE
+                var d = document, s = d.createElement('script');
+
+                s.src = '//captainvincent.disqus.com/embed.js';
+
+                s.setAttribute('data-timestamp', +new Date());
+                (d.head || d.body).appendChild(s);
+            })();
+            </script>
+            <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+
+        </footer>
+
+    </article>
+</main>
+
+<aside class="read-next">
+    <a class="read-next-story prev no-cover" href="../xin-cao-zuo-sheng-ya-bu-shi-meng-bi-ji/">
+        <section class="post">
+            <h2>新 操作生涯不是夢 筆記 (未完)</h2>
+            <p>原名      The New Trading for a Living. by Dr. Alexander Elder 本書為 操作生涯不是夢 與 走進我的交易室 兩本經典著作的作者, 在經過二十年後對前者做出的修訂, 在經典中添加這些年的經驗與教訓。 導論…</p>
+        </section>
+    </a>
+</aside>
+
+
+
+
+        <footer class="site-footer clearfix">
+            <section class="copyright"><a href="../">Hello World! I'm Vincent</a> © 2016</section>
+            <section class="poweredby">Proudly published with <a href="https://ghost.org">Ghost</a></section>
+        </footer>
+
+    </div>
+
+    <script type="text/javascript" src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+    
+
+    <script type="text/javascript" src="../assets/js/jquery.fitvids.js?v=f6d946fd74"></script>
+    <script type="text/javascript" src="../assets/js/prism.js?v=f6d946fd74"></script> 
+    <script type="text/javascript" src="../assets/js/index.js?v=f6d946fd74"></script>
+
+</body>
