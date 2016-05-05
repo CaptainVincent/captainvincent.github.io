@@ -1,0 +1,231 @@
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <title>動能指標 筆記 (二) 指標介紹 (未完)</title>
+    <meta name="description" content="">
+
+    <meta name="HandheldFriendly" content="True">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="shortcut icon" href="../favicon.ico">
+
+    <link rel="stylesheet" type="text/css" href="../assets/css/screen.css?v=f6d946fd74">
+    <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Merriweather:300,700,700italic,300italic%7COpen+Sans:700,400">
+    <link rel="stylesheet" type="text/css" href="../assets/css/prism.css?v=f6d946fd74">
+    <link rel="canonical" href="index.html">
+    <meta name="referrer" content="origin">
+    
+    <meta property="og:site_name" content="Hello World! I'm Vincent">
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="動能指標 筆記 (二) 指標介紹 (未完)">
+    <meta property="og:description" content="原名      Martin Pring on Market Momentum. by Martin J. Pring 後續幾個章節將會介紹書中提到的指標 變動率 (Rate of Change, ROC) N 天期的 ROC 計算方式有以下兩種, 衡量的都是與 N 日前收盤價的關係, 作者推薦的是用除法, 好處是隱含著比例的概念   在 點線賺錢術 中, 將兩種計算公式區分為 動量指標 (Momentum, MTM) 與 震盪指標 (Oscillator, OSC)。 ROC today = Close today...">
+    <meta property="og:url" content="http://captainvincent.github.io/dong-neng-zhi-biao-bi-ji-er/">
+    <meta property="article:published_time" content="2016-05-04T21:19:51.271Z">
+    <meta property="article:modified_time" content="2016-05-05T20:53:53.589Z">
+    
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="動能指標 筆記 (二) 指標介紹 (未完)">
+    <meta name="twitter:description" content="原名      Martin Pring on Market Momentum. by Martin J. Pring 後續幾個章節將會介紹書中提到的指標 變動率 (Rate of Change, ROC) N 天期的 ROC 計算方式有以下兩種, 衡量的都是與 N 日前收盤價的關係, 作者推薦的是用除法, 好處是隱含著比例的概念   在 點線賺錢術 中, 將兩種計算公式區分為 動量指標 (Momentum, MTM) 與 震盪指標 (Oscillator, OSC)。 ROC today = Close today...">
+    <meta name="twitter:url" content="http://captainvincent.github.io/dong-neng-zhi-biao-bi-ji-er/">
+    
+    <script type="application/ld+json">
+{
+    "@context": "http://schema.org",
+    "@type": "Article",
+    "publisher": "Hello World! I'm Vincent",
+    "author": {
+        "@type": "Person",
+        "name": "Captain Vincent",
+        "image": "http://captainvincent.github.io/content/images/2016/01/--.JPG",
+        "url": "http://captainvincent.github.io/author/captain",
+        "sameAs": null,
+        "description": null
+    },
+    "headline": "動能指標 筆記 (二) 指標介紹 (未完)",
+    "url": "http://captainvincent.github.io/dong-neng-zhi-biao-bi-ji-er/",
+    "datePublished": "2016-05-04T21:19:51.271Z",
+    "dateModified": "2016-05-05T20:53:53.589Z",
+    "description": "原名      Martin Pring on Market Momentum. by Martin J. Pring 後續幾個章節將會介紹書中提到的指標 變動率 (Rate of Change, ROC) N 天期的 ROC 計算方式有以下兩種, 衡量的都是與 N 日前收盤價的關係, 作者推薦的是用除法, 好處是隱含著比例的概念   在 點線賺錢術 中, 將兩種計算公式區分為 動量指標 (Momentum, MTM) 與 震盪指標 (Oscillator, OSC)。 ROC today = Close today..."
+}
+    </script>
+
+    <meta name="generator" content="Ghost 0.7">
+    <link rel="alternate" type="application/rss+xml" title="Hello World! I'm Vincent" href="../rss/index.html">
+    <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-73341093-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+</head>
+<body class="post-template nav-closed">
+
+    <div class="nav">
+    <h3 class="nav-title">Menu</h3>
+    <a href="index.html#" class="nav-close">
+        <span class="hidden">Close</span>
+    </a>
+    <ul>
+            <li class="nav-blog-home-page" role="presentation"><a href="../">Blog Home Page</a></li>
+            <li class="nav-git-book" role="presentation"><a href="https://www.gitbook.com/@captainvincent">Git Book</a></li>
+            <li class="nav-aboutme" role="presentation"><a href="https://about.me/CaptainVincent">About.Me</a></li>
+    </ul>
+    <a class="subscribe-button icon-feed" href="../rss/index.rss">Subscribe</a>
+</div>
+<span class="nav-cover"></span>
+
+
+    <div class="site-wrapper">
+
+        
+
+
+<header class="main-header post-head no-cover">
+    <nav class="main-nav  clearfix">
+        
+            <a class="menu-button icon-menu" href="index.html#"><span class="word">Menu</span></a>
+    </nav>
+</header>
+
+<main class="content" role="main">
+    <article class="post">
+
+        <header class="post-header">
+            <h1 class="post-title">動能指標 筆記 (二) 指標介紹 (未完)</h1>
+            <section class="post-meta">
+                <time class="post-date" datetime="2016-05-05">05 May 2016</time> 
+            </section>
+        </header>
+
+        <section class="post-content">
+            <blockquote>
+  <p>原名</p>
+  
+  <p>Martin Pring on Market Momentum. by <strong>Martin J. Pring</strong></p>
+</blockquote>
+
+<p>後續幾個章節將會介紹書中提到的指標</p>
+
+<h2 id="rateofchangeroc">變動率 (Rate of Change, ROC)</h2>
+
+<p>N 天期的 ROC 計算方式有以下兩種, 衡量的都是與 N 日前收盤價的關係, 作者推薦的是用除法, 好處是隱含著比例的概念</p>
+
+<blockquote>
+  <p>在 <a href="../dian-xian-zhuan-qian-shu-bi-ji/">點線賺錢術</a> 中, 將兩種計算公式區分為 <strong>動量指標 (Momentum, MTM)</strong> 與 <strong>震盪指標 (Oscillator, OSC)</strong>。</p>
+</blockquote>
+
+<p>ROC <sub>today</sub> = Close <sub>today</sub> - Close <sub>today - n</sub></p>
+
+<p>or</p>
+
+<p>ROC <sub>today</sub> = (Close <sub>today</sub> / Close <sub>today - n</sub>) * 100%</p>
+
+<p>ROC 作為超買/賣的分析是相當合適, 但劃分出極端區的界線, 需仰賴相當主觀的方式判斷 (依據商品特性不同), 只能 Trial and error 反覆地去找出合適的區間 (上下界線也不一定對稱), 但除此之外, <a href="../dong-neng-zhi-biao-bi-ji/">動能指標 筆記 (一)</a> 中提到的時間架構變化、趨勢線、價格型態的引用、複雜的背離以及均線的平緩化都能套用在此公式上。</p>
+
+<h2 id="relativestrengthindexrsi">相對強弱指標 (Relative Strength Index, RSI)</h2>
+
+<p><a href="https://zh.wikipedia.org/wiki/%E7%9B%B8%E5%B0%8D%E5%BC%B7%E5%BC%B1%E6%8C%87%E6%95%B8">Wiki 公式參考</a>, 書中提供計算方式是 Wiki 百科內提到的第一種, 而 <a href="../dian-xian-zhuan-qian-shu-bi-ji/">點線賺錢術</a> 則是第二種方式, 兩種計算方式是推導化簡後的不同形式而已, 這邊僅提供第二種作為參考</p>
+
+<p>RSI = [UpAvg / (UpAvg + DownAvg)] * 100</p>
+
+<ul>
+<li>UpAvg = 14 日漲幅平均值 (週期隨商品變動)</li>
+<li>DownAvg = 14 日跌幅平均值 (週期隨商品變動)</li>
+<li>N日 漲/跌幅的計算, 收盤大於前一日的 N日總和 與 收盤小於前一日的 N日總和</li>
+</ul>
+
+<p>在 New Commodity Trading Systems 一書中 Perry Kaufman 質疑 14 日的選擇, 提出希望取得移動平均最大偏離, 應該使用商品循環週期的一半時間, 而特性上與 ROC 不同的是, 當計算選擇的區間愈長 RSI 振幅愈小 (因為移動平均的平緩特性), 但 ROC 振幅則會愈大; 最後關於動能分析的特性應用於 RSI 需注意的部分, 從時間週期的選則上可以反覆調整讓 指標的峰/谷位 與 價格的峰/谷位 呈現有意義的關係, 以及在 頭/底部的反轉 與 背離 可採用不同的時間週期, 同時 RSI 也是少數適用價格型態判斷的指標,</p>
+        </section>
+
+        <footer class="post-footer">
+
+
+            <figure class="author-image">
+                <a class="img" href="../author/captain/" style="background-image: url(../content/images/2016/01/--.JPG)"><span class="hidden">Captain Vincent's Picture</span></a>
+            </figure>
+
+            <section class="author">
+                <h4><a href="../author/captain/">Captain Vincent</a></h4>
+
+                    <p>Read <a href="../author/captain/">more posts</a> by this author.</p>
+                <div class="author-meta">
+                    
+                    
+                </div>
+            </section>
+
+
+            <section class="share">
+                <h4>Share this post</h4>
+                <a class="icon-twitter" href="https://twitter.com/intent/tweet?text=%E5%8B%95%E8%83%BD%E6%8C%87%E6%A8%99%20%E7%AD%86%E8%A8%98%20(%E4%BA%8C)%20%E6%8C%87%E6%A8%99%E4%BB%8B%E7%B4%B9%20(%E6%9C%AA%E5%AE%8C)&amp;url=http://captainvincent.github.io/dong-neng-zhi-biao-bi-ji-er/" onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
+                    <span class="hidden">Twitter</span>
+                </a>
+                <a class="icon-facebook" href="https://www.facebook.com/sharer/sharer.php?u=http://captainvincent.github.io/dong-neng-zhi-biao-bi-ji-er/index.html" onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;">
+                    <span class="hidden">Facebook</span>
+                </a>
+                <a class="icon-google-plus" href="https://plus.google.com/share?url=http://captainvincent.github.io/dong-neng-zhi-biao-bi-ji-er/" onclick="window.open(this.href, 'google-plus-share', 'width=490,height=530');return false;">
+                    <span class="hidden">Google+</span>
+                </a>
+            </section>
+
+            <div id="disqus_thread"></div>
+            <script>
+            /**
+            * RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+            * LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables
+            */
+
+            var disqus_config = function () {
+                this.page.url = 'http://captainvincent.github.io/dong-neng-zhi-biao-bi-ji-er/'; // Replace PAGE_URL with your page's canonical URL variable
+                this.page.identifier = 'ghost-28'; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+            };
+
+            (function() { // DON'T EDIT BELOW THIS LINE
+                var d = document, s = d.createElement('script');
+
+                s.src = '//captainvincent.disqus.com/embed.js';
+
+                s.setAttribute('data-timestamp', +new Date());
+                (d.head || d.body).appendChild(s);
+            })();
+            </script>
+            <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+
+        </footer>
+
+    </article>
+</main>
+
+<aside class="read-next">
+    <a class="read-next-story prev no-cover" href="../dong-neng-zhi-biao-bi-ji/">
+        <section class="post">
+            <h2>動能指標 筆記 (一) 解釋與原理</h2>
+            <p>原名      Martin Pring on Market Momentum. by Martin J. Pring 本書宗旨在於盡可能的介紹許多指標, 待讀者在瞭解這些指標的基本功能與運作原理後, 應持續思考抱著懷疑的態度反覆測試、挑選少數的指標作為操作的組合 (或許五種, 頂多六種), 而這懷疑的心態即便對於作者所述的認知與結論也不例外。   動能      在本書的定義「…</p>
+        </section>
+    </a>
+</aside>
+
+
+
+
+        <footer class="site-footer clearfix">
+            <section class="copyright"><a href="../">Hello World! I'm Vincent</a> © 2016</section>
+            <section class="poweredby">Proudly published with <a href="https://ghost.org">Ghost</a></section>
+        </footer>
+
+    </div>
+
+    <script type="text/javascript" src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+    
+
+    <script type="text/javascript" src="../assets/js/jquery.fitvids.js?v=f6d946fd74"></script>
+    <script type="text/javascript" src="../assets/js/prism.js?v=f6d946fd74"></script> 
+    <script type="text/javascript" src="../assets/js/index.js?v=f6d946fd74"></script>
+
+</body>
