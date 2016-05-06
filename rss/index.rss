@@ -1,4 +1,4 @@
-<rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:media="http://search.yahoo.com/mrss/" version="2.0"><channel><title>Hello World! I'm Vincent</title><description>Thoughts, stories and ideas.</description><link>http://captainvincent.github.io/</link><generator>Ghost 0.7</generator><lastBuildDate>Fri, 06 May 2016 07:17:04 GMT</lastBuildDate><atom:link href="http://captainvincent.github.io/rss/" rel="self" type="application/rss+xml"/><ttl>60</ttl><item><title>動能指標 筆記 (二) 指標介紹</title><description>&lt;blockquote&gt;
+<rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:media="http://search.yahoo.com/mrss/" version="2.0"><channel><title>Hello World! I'm Vincent</title><description>Thoughts, stories and ideas.</description><link>http://captainvincent.github.io/</link><generator>Ghost 0.7</generator><lastBuildDate>Fri, 06 May 2016 17:52:01 GMT</lastBuildDate><atom:link href="http://captainvincent.github.io/rss/" rel="self" type="application/rss+xml"/><ttl>60</ttl><item><title>動能指標 筆記 (二) 指標介紹</title><description>&lt;blockquote&gt;
   &lt;p&gt;原名&lt;/p&gt;
   
   &lt;p&gt;Martin Pring on Market Momentum. by &lt;strong&gt;Martin J. Pring&lt;/strong&gt;&lt;/p&gt;
@@ -11,14 +11,14 @@
 &lt;p&gt;N 天期的 ROC 計算方式有以下兩種, 衡量的都是與 N 日前收盤價的關係, 作者推薦的是用除法, 好處是隱含著比例的概念&lt;/p&gt;
 
 &lt;blockquote&gt;
-  &lt;p&gt;在 &lt;a href="http://captainvincent.github.io/dian-xian-zhuan-qian-shu-bi-ji/"&gt;點線賺錢術&lt;/a&gt; 中, 將兩種計算公式區分為 &lt;strong&gt;動量指標 (Momentum, MTM)&lt;/strong&gt; 與 &lt;strong&gt;震盪指標 (Oscillator, OSC)&lt;/strong&gt;。&lt;/p&gt;
+  &lt;p&gt;在 &lt;a href="http://captainvincent.github.io/dian-xian-zhuan-qian-shu/"&gt;點線賺錢術&lt;/a&gt; 中, 將兩種計算公式區分為 &lt;strong&gt;動量指標 (Momentum, MTM)&lt;/strong&gt; 與 &lt;strong&gt;震盪指標 (Oscillator, OSC)&lt;/strong&gt;。&lt;/p&gt;
 &lt;/blockquote&gt;
 
 &lt;p&gt;ROC &lt;sub&gt;today&lt;/sub&gt; = Close &lt;sub&gt;today&lt;/sub&gt; - Close &lt;sub&gt;today - n&lt;/sub&gt;&lt;/p&gt;
 
 &lt;p&gt;or&lt;/p&gt;
 
-&lt;p&gt;ROC &lt;sub&gt;today&lt;/sub&gt; = (Close &lt;sub&gt;today&lt;/sub&gt;&lt;/p&gt;</description><link>http://captainvincent.github.io/dong-neng-zhi-biao-bi-ji-er/</link><guid isPermaLink="false">63ccfdbe-0bb5-4e70-8ee4-8f2e9e1e463a</guid><dc:creator>Captain Vincent</dc:creator><pubDate>Wed, 04 May 2016 21:19:51 GMT</pubDate><content:encoded>&lt;blockquote&gt;
+&lt;p&gt;ROC &lt;sub&gt;today&lt;/sub&gt; = (Close &lt;sub&gt;today&lt;/sub&gt;&lt;/p&gt;</description><link>http://captainvincent.github.io/dong-neng-zhi-biao-ii/</link><guid isPermaLink="false">63ccfdbe-0bb5-4e70-8ee4-8f2e9e1e463a</guid><dc:creator>Captain Vincent</dc:creator><pubDate>Wed, 04 May 2016 21:19:51 GMT</pubDate><content:encoded>&lt;blockquote&gt;
   &lt;p&gt;原名&lt;/p&gt;
   
   &lt;p&gt;Martin Pring on Market Momentum. by &lt;strong&gt;Martin J. Pring&lt;/strong&gt;&lt;/p&gt;
@@ -31,7 +31,7 @@
 &lt;p&gt;N 天期的 ROC 計算方式有以下兩種, 衡量的都是與 N 日前收盤價的關係, 作者推薦的是用除法, 好處是隱含著比例的概念&lt;/p&gt;
 
 &lt;blockquote&gt;
-  &lt;p&gt;在 &lt;a href="http://captainvincent.github.io/dian-xian-zhuan-qian-shu-bi-ji/"&gt;點線賺錢術&lt;/a&gt; 中, 將兩種計算公式區分為 &lt;strong&gt;動量指標 (Momentum, MTM)&lt;/strong&gt; 與 &lt;strong&gt;震盪指標 (Oscillator, OSC)&lt;/strong&gt;。&lt;/p&gt;
+  &lt;p&gt;在 &lt;a href="http://captainvincent.github.io/dian-xian-zhuan-qian-shu/"&gt;點線賺錢術&lt;/a&gt; 中, 將兩種計算公式區分為 &lt;strong&gt;動量指標 (Momentum, MTM)&lt;/strong&gt; 與 &lt;strong&gt;震盪指標 (Oscillator, OSC)&lt;/strong&gt;。&lt;/p&gt;
 &lt;/blockquote&gt;
 
 &lt;p&gt;ROC &lt;sub&gt;today&lt;/sub&gt; = Close &lt;sub&gt;today&lt;/sub&gt; - Close &lt;sub&gt;today - n&lt;/sub&gt;&lt;/p&gt;
@@ -40,11 +40,11 @@
 
 &lt;p&gt;ROC &lt;sub&gt;today&lt;/sub&gt; = (Close &lt;sub&gt;today&lt;/sub&gt; / Close &lt;sub&gt;today - n&lt;/sub&gt;) * 100%&lt;/p&gt;
 
-&lt;p&gt;ROC 作為超買/賣的分析是相當合適, 但劃分出極端區的界線, 需仰賴相當主觀的方式判斷 (依據商品特性不同), 只能 Trial and error 反覆地去找出合適的區間 (上下界線也不一定對稱), 但除此之外, &lt;a href="http://captainvincent.github.io/dong-neng-zhi-biao-bi-ji/"&gt;動能指標 筆記 (一)&lt;/a&gt; 中提到的時間架構變化、趨勢線、價格型態的引用、複雜的背離以及均線的平緩化都能套用在此公式上。&lt;/p&gt;
+&lt;p&gt;ROC 作為超買/賣的分析是相當合適, 但劃分出極端區的界線, 需仰賴相當主觀的方式判斷 (依據商品特性不同), 只能 Trial and error 反覆地去找出合適的區間 (上下界線也不一定對稱), 但除此之外, &lt;a href="http://captainvincent.github.io/dong-neng-zhi-biao-i/"&gt;動能指標 筆記 (一)&lt;/a&gt; 中提到的時間架構變化、趨勢線、價格型態的引用、複雜的背離以及均線的平緩化都能套用在此公式上。&lt;/p&gt;
 
 &lt;h2 id="relativestrengthindexrsi"&gt;相對強弱指標 (Relative Strength Index, RSI)&lt;/h2&gt;
 
-&lt;p&gt;&lt;a href="https://zh.wikipedia.org/wiki/%E7%9B%B8%E5%B0%8D%E5%BC%B7%E5%BC%B1%E6%8C%87%E6%95%B8"&gt;Wiki 公式參考&lt;/a&gt;, 書中提供計算方式是 Wiki 百科內提到的第一種, 而 &lt;a href="http://captainvincent.github.io/dian-xian-zhuan-qian-shu-bi-ji/"&gt;點線賺錢術&lt;/a&gt; 則是第二種方式, 兩種計算方式是推導化簡後的不同形式而已, 這邊僅提供第二種作為參考&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://zh.wikipedia.org/wiki/%E7%9B%B8%E5%B0%8D%E5%BC%B7%E5%BC%B1%E6%8C%87%E6%95%B8"&gt;Wiki 公式參考&lt;/a&gt;, 書中提供計算方式是 Wiki 百科內提到的第一種, 而 &lt;a href="http://captainvincent.github.io/dian-xian-zhuan-qian-shu/"&gt;點線賺錢術&lt;/a&gt; 則是第二種方式, 兩種計算方式是推導化簡後的不同形式而已, 這邊僅提供第二種作為參考&lt;/p&gt;
 
 &lt;p&gt;RSI = [UpAvg / (UpAvg + DownAvg)] * 100&lt;/p&gt;
 
@@ -66,11 +66,11 @@
 
 &lt;h4 id="macd"&gt;MACD&lt;/h4&gt;
 
-&lt;p&gt;書中的計算方式是直接使用 9日 EMA/ 15日 EMA, 不過 &lt;a href="https://zh.wikipedia.org/wiki/MACD"&gt;Wiki 上的修正公式&lt;/a&gt; 是與點線賺錢術中的介紹相同, 精神也是利用長短期的 EMA 去計算出趨勢偏離, 在對這個偏離值計算出移動平均來觀察快慢線交錯的行為。&lt;/p&gt;
+&lt;p&gt;書中的計算方式是直接使用 9日 EMA/ 15日 EMA, 不過 &lt;a href="https://zh.wikipedia.org/wiki/MACD"&gt;Wiki 上的修正公式&lt;/a&gt; 是與 &lt;a href="http://captainvincent.github.io/dian-xian-zhuan-qian-shu/"&gt;點線賺錢術&lt;/a&gt; 中的介紹相同, 精神也是利用長短期的 EMA 去計算出趨勢偏離, 在對這個偏離值計算出移動平均來觀察快慢線交錯的行為。&lt;/p&gt;
 
 &lt;h2 id="kdr"&gt;隨機指標(KD) 與 威廉 %R&lt;/h2&gt;
 
-&lt;p&gt;公式參考 點線賺錢術的章節, %K 穿越 %D 時表示快線穿越慢線, 代表某個方向的趨勢有可能成形, 這之中如果 %K 的峰/谷位落在 %D 的右側可靠度較高, 反轉的強度較強; 與之前幾種指標不同的是, 隨機指標的極端區域通常代表著趨勢持續前的暫緩 (趨勢方向不變, 與超買/賣的概念不同), 另一點是作者認為此種指標, 不適合用趨勢線的方式分析。&lt;/p&gt;
+&lt;p&gt;公式參考 &lt;a href="http://captainvincent.github.io/dian-xian-zhuan-qian-shu/"&gt;點線賺錢術&lt;/a&gt; 的章節, %K 穿越 %D 時表示快線穿越慢線, 代表某個方向的趨勢有可能成形, 這之中如果 %K 的峰/谷位落在 %D 的右側可靠度較高, 反轉的強度較強; 與之前幾種指標不同的是, 隨機指標的極端區域通常代表著趨勢持續前的暫緩 (趨勢方向不變, 與超買/賣的概念不同), 另一點是作者認為此種指標, 不適合用趨勢線的方式分析。&lt;/p&gt;
 
 &lt;blockquote&gt;
   &lt;p&gt;以結論而言, 隨機指標的表現並不如其他大多數的指標, 其精神是認為價格趨勢的反轉會反映在收盤價與最高/低價的距離。&lt;/p&gt;
@@ -89,7 +89,7 @@
 
 &lt;p&gt;作者認為動能 (震盪) 指標的使用時機應在橫向移動的區間, 適合超買/賣的判斷, 若趨勢明顯的時候則應以順勢操作為主, 趨向系統的介紹是為了區分目前市場偏向何種狀態 (橫向、趨勢明顯)。&lt;/p&gt;
 
-&lt;p&gt;公式參考 點線賺錢術的章節, 計算出來的 DI 比例為選用的週期內的漲跌各自佔多少 (剩餘的比例為沒有特定方向), 而這邊趨向指數 (DX) 公式如下&lt;/p&gt;
+&lt;p&gt;公式參考 &lt;a href="http://captainvincent.github.io/dian-xian-zhuan-qian-shu/"&gt;點線賺錢術&lt;/a&gt; 的章節, 計算出來的 DI 比例為選用的週期內的漲跌各自佔多少 (剩餘的比例為沒有特定方向), 而這邊趨向指數 (DX) 公式如下&lt;/p&gt;
 
 &lt;p&gt;DX = | (+DI&lt;sub&gt;14&lt;/sub&gt; - -DI&lt;sub&gt;14&lt;/sub&gt;) / (+DI&lt;sub&gt;14&lt;/sub&gt; + -DI&lt;sub&gt;14&lt;/sub&gt;) | * 100%&lt;/p&gt;
 
@@ -120,7 +120,7 @@
 &lt;/ul&gt;
 
 &lt;blockquote&gt;
-  &lt;p&gt;這部分也是點線賺錢術中筆者借閱的書中剛好缺頁的部分, 有點懷疑鄭老先生是不是看著這本書在寫書的, 章節排序頗有雷同。&lt;/p&gt;
+  &lt;p&gt;這部分也是 &lt;a href="http://captainvincent.github.io/dian-xian-zhuan-qian-shu/"&gt;點線賺錢術&lt;/a&gt; 中筆者借閱的書中剛好缺頁的部分, 有點懷疑鄭老先生是不是看著這本書在寫書的, 章節排序頗有雷同。&lt;/p&gt;
 &lt;/blockquote&gt;
 
 &lt;h2 id=""&gt;其他動能指標&lt;/h2&gt;
@@ -133,7 +133,7 @@
 &lt;li&gt;終極擺盪指標 (Ultimate Oscillator, UO), 這邊運用到三個週期各自給予不同的權重, 並重新定義出以下幾個數值與公式
 &lt;ul&gt;&lt;li&gt;B, 買進力量 = 收盤價 - (今日低價與收盤價較低者)&lt;/li&gt;
 &lt;li&gt;SB&lt;sub&gt;n&lt;/sub&gt;, N日 買進力量總和&lt;/li&gt;
-&lt;li&gt;R, 真實區間 (True Range, TR), 沿用 點線賺錢術中 的定義 (因為其實指標都是同一個人發明的)&lt;/li&gt;
+&lt;li&gt;R, 真實區間 (True Range, TR), 沿用 &lt;a href="http://captainvincent.github.io/dian-xian-zhuan-qian-shu/"&gt;點線賺錢術&lt;/a&gt; 中的定義 (因為其實指標都是同一個人發明的)&lt;/li&gt;
 &lt;li&gt;SR&lt;sub&gt;n&lt;/sub&gt;, N日 真實區間的總和&lt;/li&gt;
 &lt;li&gt;UO = (SB&lt;sub&gt;7&lt;/sub&gt; / SR&lt;sub&gt;7&lt;/sub&gt;) * 4 + (SB&lt;sub&gt;14&lt;/sub&gt; / SR&lt;sub&gt;14&lt;/sub&gt;) * 2 + (SB&lt;sub&gt;28&lt;/sub&gt; / SR&lt;sub&gt;28&lt;/sub&gt;)&lt;/li&gt;&lt;/ul&gt;&lt;/li&gt;
 &lt;/ul&gt;
@@ -148,7 +148,7 @@
 
 &lt;h4 id="adl"&gt;騰落指標 (ADL)&lt;/h4&gt;
 
-&lt;p&gt;計算方式本書 與 點線賺錢術中的不同, 但重點仍是計算 上漲家數(A) 與 下跌家數(D) 的差值。&lt;/p&gt;
+&lt;p&gt;計算方式本書 與 &lt;a href="http://captainvincent.github.io/dian-xian-zhuan-qian-shu/"&gt;點線賺錢術&lt;/a&gt; 中的不同, 但重點仍是計算 上漲家數(A) 與 下跌家數(D) 的差值。&lt;/p&gt;
 
 &lt;h4 id="mcclellanoscillator"&gt;麥克里倫擺盪指標 (McClellan Oscillator)&lt;/h4&gt;
 
@@ -190,7 +190,7 @@
 
 &lt;h2 id=""&gt;動能的解釋與原理&lt;/h2&gt;
 
-&lt;p&gt;前言, 實際操作的訊號僅可來自於價格趨勢的突破 (書中是使用 &lt;del&gt;反轉&lt;/del&gt; 一詞, 但筆者秉持近代操作的主流方式為順勢, 所以這邊將之修改為突破), 而不可來自於動能指標 (僅能作為輔助性證據)&lt;/p&gt;</description><link>http://captainvincent.github.io/dong-neng-zhi-biao-bi-ji/</link><guid isPermaLink="false">c3c58b79-812e-4c69-b812-f88e742d8c5b</guid><dc:creator>Captain Vincent</dc:creator><pubDate>Wed, 04 May 2016 05:05:19 GMT</pubDate><content:encoded>&lt;blockquote&gt;
+&lt;p&gt;前言, 實際操作的訊號僅可來自於價格趨勢的突破 (書中是使用 &lt;del&gt;反轉&lt;/del&gt; 一詞, 但筆者秉持近代操作的主流方式為順勢, 所以這邊將之修改為突破), 而不可來自於動能指標 (僅能作為輔助性證據)&lt;/p&gt;</description><link>http://captainvincent.github.io/dong-neng-zhi-biao-i/</link><guid isPermaLink="false">c3c58b79-812e-4c69-b812-f88e742d8c5b</guid><dc:creator>Captain Vincent</dc:creator><pubDate>Wed, 04 May 2016 05:05:19 GMT</pubDate><content:encoded>&lt;blockquote&gt;
   &lt;p&gt;原名&lt;/p&gt;
   
   &lt;p&gt;Martin Pring on Market Momentum. by &lt;strong&gt;Martin J. Pring&lt;/strong&gt;&lt;/p&gt;
@@ -302,7 +302,7 @@
 &lt;li&gt;優秀的交易者會小心照顧資本
 &lt;ul&gt;&lt;li&gt;負合遊戲, 扣除手續費、滑價、買/賣價差, 這是場負合的遊戲, 只是中等以上的技巧是不夠的&lt;/li&gt;
 &lt;li&gt;一般交易者承擔的滑價為手續費的 3 倍, 避免使用市價單買進 (改用限價單, 但不保證成交), 錯過了某筆交易仍有其他無數的機會, 除了停損單, 一旦市場反應不如預期, 應儘速出場&lt;/li&gt;
-&lt;li&gt;尋找低廉手續費率的經紀人、建立進出頻率較少的系統、&lt;/li&gt;&lt;/ul&gt;&lt;/li&gt;&lt;/ul&gt;</description><link>http://captainvincent.github.io/xin-cao-zuo-sheng-ya-bu-shi-meng-bi-ji/</link><guid isPermaLink="false">af53c9d7-7beb-4cb6-a7f4-655a54cda3a7</guid><dc:creator>Captain Vincent</dc:creator><pubDate>Tue, 03 May 2016 18:03:05 GMT</pubDate><content:encoded>&lt;blockquote&gt;
+&lt;li&gt;尋找低廉手續費率的經紀人、建立進出頻率較少的系統、&lt;/li&gt;&lt;/ul&gt;&lt;/li&gt;&lt;/ul&gt;</description><link>http://captainvincent.github.io/xin-cao-zuo-sheng-ya-bu-shi-meng/</link><guid isPermaLink="false">af53c9d7-7beb-4cb6-a7f4-655a54cda3a7</guid><dc:creator>Captain Vincent</dc:creator><pubDate>Tue, 03 May 2016 18:03:05 GMT</pubDate><content:encoded>&lt;blockquote&gt;
   &lt;p&gt;原名&lt;/p&gt;
   
   &lt;p&gt;The New Trading for a Living. by &lt;strong&gt;Dr. Alexander Elder&lt;/strong&gt;&lt;/p&gt;
@@ -361,7 +361,7 @@
 &lt;li&gt;&lt;strong&gt;訓練保持彈性&lt;/strong&gt; 能應付訓練時的突發狀況, 也較能維持平常心&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;從小而大的目標&lt;/strong&gt;&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;獎勵自己&lt;/strong&gt;&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;睡得好、&lt;/strong&gt;&lt;/li&gt;&lt;/ul&gt;</description><link>http://captainvincent.github.io/dan-ni-er-bo-shi-pao-bu-fang-cheng-shi-bi-ji/</link><guid isPermaLink="false">4d93e42e-2cf8-46b4-a3dd-1a4059efc0d8</guid><dc:creator>Captain Vincent</dc:creator><pubDate>Wed, 20 Apr 2016 12:55:27 GMT</pubDate><content:encoded>&lt;blockquote&gt;
+&lt;li&gt;&lt;strong&gt;睡得好、&lt;/strong&gt;&lt;/li&gt;&lt;/ul&gt;</description><link>http://captainvincent.github.io/dan-ni-er-bo-shi-pao-bu-fang-cheng-shi/</link><guid isPermaLink="false">4d93e42e-2cf8-46b4-a3dd-1a4059efc0d8</guid><dc:creator>Captain Vincent</dc:creator><pubDate>Wed, 20 Apr 2016 12:55:27 GMT</pubDate><content:encoded>&lt;blockquote&gt;
   &lt;p&gt;原名&lt;/p&gt;
   
   &lt;p&gt;Daniel's Running Formula. - 3rd Edition by &lt;strong&gt;Jack T. Daniels&lt;/strong&gt;&lt;/p&gt;
@@ -430,7 +430,7 @@
 &lt;img src="https://farm2.staticflickr.com/1693/25836450674_a612a82f60_c.jpg" alt="Fig1"&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;技術分析的領域中, 型態 &gt; 成交量 &gt; K&lt;/p&gt;</description><link>http://captainvincent.github.io/dian-xian-zhuan-qian-shu-bi-ji/</link><guid isPermaLink="false">aa476ede-793d-4fad-8e6f-83516b8f0e08</guid><dc:creator>Captain Vincent</dc:creator><pubDate>Fri, 15 Apr 2016 09:03:43 GMT</pubDate><content:encoded>&lt;p&gt;原著：點線賺錢術(修正第十二版) 鄭超文 (2012/06)&lt;/p&gt;
+&lt;p&gt;技術分析的領域中, 型態 &gt; 成交量 &gt; K&lt;/p&gt;</description><link>http://captainvincent.github.io/dian-xian-zhuan-qian-shu/</link><guid isPermaLink="false">aa476ede-793d-4fad-8e6f-83516b8f0e08</guid><dc:creator>Captain Vincent</dc:creator><pubDate>Fri, 15 Apr 2016 09:03:43 GMT</pubDate><content:encoded>&lt;p&gt;原著：點線賺錢術(修正第十二版) 鄭超文 (2012/06)&lt;/p&gt;
 
 &lt;blockquote&gt;
   &lt;p&gt;以技術分析的書來說, 有著墨到的部分算是相當包山包海, 但筆者認為知識仍應當求精而不在量 (尤其筆者剛閱讀完 &lt;a href="http://captainvincent.github.io/ya-dang-li-lun/"&gt;亞當理論&lt;/a&gt; 後), 建議可以用參考書的角度看待即可, 不要迷失在技術分析的汪洋大海裡了。&lt;/p&gt;
@@ -472,7 +472,7 @@
 
 &lt;h4 id=""&gt;趨勢線&lt;/h4&gt;
 
-&lt;p&gt;關於趨勢線的應用也可以參考 &lt;a href="http://captainvincent.github.io/duo-kong-cao-zuo-mi-ji-bi-ji/"&gt;多空操作秘笈筆記&lt;/a&gt;, 基本上任意一段具有趨勢的線圖, 都能使用連接低點與高點畫出支撐與壓力的直線 (低點的連線為支撐, 高點為壓力), 上升的走勢對低點較敏感, 所以稱連接低點的直線 (支撐) 為上升趨勢線, 下降的走勢則稱連接高點的直線 (壓力) 為下降趨勢線, 通常支撐與壓力的 &lt;strong&gt;突破&lt;/strong&gt; 看作新趨勢的產生, 而假突破的判定有 &lt;strong&gt;3% 幅度&lt;/strong&gt; 的說法, 這邊也可選用突破時的 &lt;strong&gt;成交量&lt;/strong&gt; 搭配判定 (否則出現 3% 的突破再跟進的意願會降低), 另外一點是當支撐或壓力線貫穿後, 會成為反方向走勢的阻力 （支撐=&gt;壓力, 壓力=&gt;支撐)。&lt;/p&gt;
+&lt;p&gt;關於趨勢線的應用也可以參考 &lt;a href="http://captainvincent.github.io/duo-kong-cao-zuo-mi-ji/"&gt;多空操作秘笈筆記&lt;/a&gt;, 基本上任意一段具有趨勢的線圖, 都能使用連接低點與高點畫出支撐與壓力的直線 (低點的連線為支撐, 高點為壓力), 上升的走勢對低點較敏感, 所以稱連接低點的直線 (支撐) 為上升趨勢線, 下降的走勢則稱連接高點的直線 (壓力) 為下降趨勢線, 通常支撐與壓力的 &lt;strong&gt;突破&lt;/strong&gt; 看作新趨勢的產生, 而假突破的判定有 &lt;strong&gt;3% 幅度&lt;/strong&gt; 的說法, 這邊也可選用突破時的 &lt;strong&gt;成交量&lt;/strong&gt; 搭配判定 (否則出現 3% 的突破再跟進的意願會降低), 另外一點是當支撐或壓力線貫穿後, 會成為反方向走勢的阻力 （支撐=&gt;壓力, 壓力=&gt;支撐)。&lt;/p&gt;
 
 &lt;p&gt;複習觀念 &lt;/p&gt;
 
@@ -511,7 +511,7 @@
 
 &lt;h2 id=""&gt;成交量&lt;/h2&gt;
 
-&lt;p&gt;趨勢的產生, 如果沒有伴隨成交量的證明可能為假, 參考 &lt;a href="http://captainvincent.github.io/duo-kong-cao-zuo-mi-ji-bi-ji/"&gt;多空操作秘笈筆記&lt;/a&gt; 所述, 向上的突破需要伴隨爆量的成交量, 而向下的突破會因股票自身的重量而下墜, 所以不用成交量來證明, 另外此書提到的其他觀念&lt;/p&gt;
+&lt;p&gt;趨勢的產生, 如果沒有伴隨成交量的證明可能為假, 參考 &lt;a href="http://captainvincent.github.io/duo-kong-cao-zuo-mi-ji/"&gt;多空操作秘笈筆記&lt;/a&gt; 所述, 向上的突破需要伴隨爆量的成交量, 而向下的突破會因股票自身的重量而下墜, 所以不用成交量來證明, 另外此書提到的其他觀念&lt;/p&gt;
 
 &lt;ul&gt;
 &lt;li&gt;價格與成交量的同時上漲, 為正向關係 (趨勢向上時價漲量增, 價跌量縮)&lt;/li&gt;
@@ -961,7 +961,7 @@ AL (最低值) = CDP - Pt&lt;/p&gt;
 
 &lt;h2 id=""&gt;起源&lt;/h2&gt;
 
-&lt;p&gt;這邊簡單提一下 Peter L. Brandt 的背景, 剛開始會從事交易的機緣是因為作者的鄰居是 CBTO (芝加哥期貨交易所) 的交易員,&lt;/p&gt;</description><link>http://captainvincent.github.io/jiao-yi-ying-jia-de-21zhou-quan-ji-lu-bi-ji-mind-map/</link><guid isPermaLink="false">0d8e26a6-72f7-4be2-a3ed-6f87b0cd05ca</guid><dc:creator>Captain Vincent</dc:creator><pubDate>Wed, 13 Apr 2016 13:20:00 GMT</pubDate><content:encoded>&lt;blockquote&gt;
+&lt;p&gt;這邊簡單提一下 Peter L. Brandt 的背景, 剛開始會從事交易的機緣是因為作者的鄰居是 CBTO (芝加哥期貨交易所) 的交易員,&lt;/p&gt;</description><link>http://captainvincent.github.io/jiao-yi-ying-jia-de-21zhou-quan-ji-lu/</link><guid isPermaLink="false">0d8e26a6-72f7-4be2-a3ed-6f87b0cd05ca</guid><dc:creator>Captain Vincent</dc:creator><pubDate>Wed, 13 Apr 2016 13:20:00 GMT</pubDate><content:encoded>&lt;blockquote&gt;
   &lt;p&gt;原名&lt;/p&gt;
   
   &lt;p&gt;Diary of a Professional Commodity Trader：Lessons from 21 Weeks of Real Trading. by &lt;strong&gt;Peter L. Brandt&lt;/strong&gt;&lt;/p&gt;
@@ -1039,7 +1039,7 @@ AL (最低值) = CDP - Pt&lt;/p&gt;
   &lt;p&gt;使用方式類似 Google Map 的拖曳操作可以移動畫面, 右鍵可以彈出放大鏡的按鈕, 按壓放大鏡拖曳後可以 Zoom In/Out&lt;/p&gt;
 &lt;/blockquote&gt;
 
-&lt;iframe width="853" height="480" src="https://embed.coggle.it/diagram/Vv6gE3KDZDovIgC1/62da971574a9d78dc8a641dc8a78bdac2458d4070a104a2a1944ba32a7a6280d" frameborder="0" allowfullscreen&gt;&lt;/iframe&gt;</description><link>http://captainvincent.github.io/du-shu-bie-kao-yi-zhi-li-mind-map/</link><guid isPermaLink="false">57664373-b556-47ed-b899-d7b2a1d7b6e3</guid><dc:creator>Captain Vincent</dc:creator><pubDate>Thu, 07 Apr 2016 04:00:00 GMT</pubDate><content:encoded>&lt;blockquote&gt;
+&lt;iframe width="853" height="480" src="https://embed.coggle.it/diagram/Vv6gE3KDZDovIgC1/62da971574a9d78dc8a641dc8a78bdac2458d4070a104a2a1944ba32a7a6280d" frameborder="0" allowfullscreen&gt;&lt;/iframe&gt;</description><link>http://captainvincent.github.io/du-shu-bie-kao-yi-zhi-li/</link><guid isPermaLink="false">57664373-b556-47ed-b899-d7b2a1d7b6e3</guid><dc:creator>Captain Vincent</dc:creator><pubDate>Thu, 07 Apr 2016 04:00:00 GMT</pubDate><content:encoded>&lt;blockquote&gt;
   &lt;p&gt;原名&lt;/p&gt;
   
   &lt;p&gt;Garantiert erfolgreich lernen. by &lt;strong&gt;Christian Grüning&lt;/strong&gt;&lt;/p&gt;
@@ -1101,7 +1101,7 @@ AL (最低值) = CDP - Pt&lt;/p&gt;
 &lt;h2 id=""&gt;出力方式&lt;/h2&gt;
 
 &lt;ul&gt;
-&lt;li&gt;橫劃：出腕力&lt;/li&gt;&lt;/ul&gt;</description><link>http://captainvincent.github.io/xie-zi-shu-bi-ji/</link><guid isPermaLink="false">a9297d0a-87a2-43e6-9fb0-4c7a25570e94</guid><dc:creator>Captain Vincent</dc:creator><pubDate>Thu, 31 Mar 2016 17:18:05 GMT</pubDate><content:encoded>&lt;p&gt;原著：寫字書 鄭文彬 (2009/05)&lt;/p&gt;
+&lt;li&gt;橫劃：出腕力&lt;/li&gt;&lt;/ul&gt;</description><link>http://captainvincent.github.io/xie-zi-shu/</link><guid isPermaLink="false">a9297d0a-87a2-43e6-9fb0-4c7a25570e94</guid><dc:creator>Captain Vincent</dc:creator><pubDate>Thu, 31 Mar 2016 17:18:05 GMT</pubDate><content:encoded>&lt;p&gt;原著：寫字書 鄭文彬 (2009/05)&lt;/p&gt;
 
 &lt;h2 id=""&gt;基礎&lt;/h2&gt;
 
@@ -1184,7 +1184,7 @@ AL (最低值) = CDP - Pt&lt;/p&gt;
 &lt;li&gt;它讓 Javascript 可以獨立運行於瀏覽器之外。&lt;/li&gt;
 &lt;li&gt;制定了一系列機制於 API 來協助達到原生 JavaScript 所不支援的功能 (ex. Module、FileSystem、Socket、Process ...etc)&lt;/li&gt;
 &lt;li&gt;支援第三方模組的功能擴充&lt;/li&gt;
-&lt;li&gt;繼承 JavaScript 中 Event-driven&lt;/li&gt;&lt;/ul&gt;</description><link>http://captainvincent.github.io/bu-yi-yang-de-node-js-bi-ji/</link><guid isPermaLink="false">8ccbede2-6c6b-4362-9e42-3800e73a3c83</guid><dc:creator>Captain Vincent</dc:creator><pubDate>Tue, 22 Mar 2016 12:34:46 GMT</pubDate><content:encoded>&lt;p&gt;原著：不一樣的 Node.js－用 JavaScript 打造高效能的前後台網頁程式 林政毅、蔡政崇、錢逢祥 (2014/05/12)&lt;/p&gt;
+&lt;li&gt;繼承 JavaScript 中 Event-driven&lt;/li&gt;&lt;/ul&gt;</description><link>http://captainvincent.github.io/bu-yi-yang-de-node-js-i/</link><guid isPermaLink="false">8ccbede2-6c6b-4362-9e42-3800e73a3c83</guid><dc:creator>Captain Vincent</dc:creator><pubDate>Tue, 22 Mar 2016 12:34:46 GMT</pubDate><content:encoded>&lt;p&gt;原著：不一樣的 Node.js－用 JavaScript 打造高效能的前後台網頁程式 林政毅、蔡政崇、錢逢祥 (2014/05/12)&lt;/p&gt;
 
 &lt;blockquote&gt;
   &lt;p&gt;作者群 期許本書可以替讀者勾勒出 Node.js 的技術藍圖。&lt;/p&gt;
@@ -1748,7 +1748,7 @@ from &lt;a href="https://zh.wikipedia.org/wiki/%E5%87%B1%E5%88%A9%E5%85%AC%E5%BC
 &lt;h2 id="mindmap"&gt;第二部分 交易策略 (Mind Map)&lt;/h2&gt;
 
 &lt;blockquote&gt;
-  &lt;p&gt;使用方式類似 Google&lt;/p&gt;&lt;/blockquote&gt;</description><link>http://captainvincent.github.io/hai-gui-te-xun-ban-bi-ji/</link><guid isPermaLink="false">a9e4ea00-cd31-4d7d-923e-76b57ab14b5f</guid><category>順勢</category><category>Richard Dennis</category><category>海龜</category><category>Mind Map</category><category>理查.丹尼斯</category><dc:creator>Captain Vincent</dc:creator><pubDate>Mon, 07 Mar 2016 06:40:10 GMT</pubDate><content:encoded>&lt;blockquote&gt;
+  &lt;p&gt;使用方式類似 Google&lt;/p&gt;&lt;/blockquote&gt;</description><link>http://captainvincent.github.io/hai-gui-te-xun-ban/</link><guid isPermaLink="false">a9e4ea00-cd31-4d7d-923e-76b57ab14b5f</guid><category>順勢</category><category>Richard Dennis</category><category>海龜</category><category>Mind Map</category><category>理查.丹尼斯</category><dc:creator>Captain Vincent</dc:creator><pubDate>Mon, 07 Mar 2016 06:40:10 GMT</pubDate><content:encoded>&lt;blockquote&gt;
   &lt;p&gt;原名&lt;/p&gt;
   
   &lt;p&gt;The Complete TurtleTrader by &lt;strong&gt;Michael W. Covel&lt;/strong&gt;&lt;/p&gt;
