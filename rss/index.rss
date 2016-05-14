@@ -1,4 +1,113 @@
-<rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:media="http://search.yahoo.com/mrss/" version="2.0"><channel><title>Hello World! I'm Vincent</title><description>Thoughts, stories and ideas.</description><link>http://captainvincent.github.io/</link><generator>Ghost 0.7</generator><lastBuildDate>Sun, 08 May 2016 00:23:02 GMT</lastBuildDate><atom:link href="http://captainvincent.github.io/rss/" rel="self" type="application/rss+xml"/><ttl>60</ttl><item><title>動能指標 筆記 (二) 指標介紹</title><description>&lt;blockquote&gt;
+<rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:media="http://search.yahoo.com/mrss/" version="2.0"><channel><title>Hello World! I'm Vincent</title><description>Thoughts, stories and ideas.</description><link>http://captainvincent.github.io/</link><generator>Ghost 0.7</generator><lastBuildDate>Sat, 14 May 2016 01:21:38 GMT</lastBuildDate><atom:link href="http://captainvincent.github.io/rss/" rel="self" type="application/rss+xml"/><ttl>60</ttl><item><title>新 操作生涯不是夢 筆記 (Mind Map)</title><description>&lt;blockquote&gt;
+  &lt;p&gt;原名&lt;/p&gt;
+  
+  &lt;p&gt;The New Trading for a Living. by &lt;strong&gt;Dr. Alexander Elder&lt;/strong&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;本書為 &lt;strong&gt;操作生涯不是夢&lt;/strong&gt; 與 &lt;strong&gt;走進我的交易室&lt;/strong&gt; 兩本經典著作的作者, 在經過二十年後對前者做出的修訂, 在經典中添加這些年的經驗與教訓。&lt;/p&gt;
+
+&lt;h2 id=""&gt;導論&lt;/h2&gt;
+
+&lt;h4 id=""&gt;動機、知識 與 紀律&lt;/h4&gt;
+
+&lt;p&gt;關鍵在於心理層面, 但絕大多數的人屈服於此, 本書 (亦或是此篇文章) 提供知識, 但動機需由讀者自行尋找, 唯有渴望成功的人, 才能走過這滿是荊棘的道路, 這裡先帶出幾個遵循的重點&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;交易為追尋理性的活動, 勿情緒化的隨波逐流&lt;/li&gt;
+&lt;li&gt;優秀的交易者會小心照顧資本
+&lt;ul&gt;&lt;li&gt;負合遊戲, 扣除手續費、滑價、買/賣價差, 這是場負合的遊戲, 只是中等以上的技巧是不夠的&lt;/li&gt;
+&lt;li&gt;一般交易者承擔的滑價為手續費的 3 倍, 避免使用市價單買進 (改用限價單, 但不保證成交), 錯過了某筆交易仍有其他無數的機會, 除了停損單,&lt;/li&gt;&lt;/ul&gt;&lt;/li&gt;&lt;/ul&gt;</description><link>http://captainvincent.github.io/xin-cao-zuo-sheng-ya-bu-shi-meng/</link><guid isPermaLink="false">af53c9d7-7beb-4cb6-a7f4-655a54cda3a7</guid><dc:creator>Captain Vincent</dc:creator><pubDate>Fri, 13 May 2016 18:03:00 GMT</pubDate><content:encoded>&lt;blockquote&gt;
+  &lt;p&gt;原名&lt;/p&gt;
+  
+  &lt;p&gt;The New Trading for a Living. by &lt;strong&gt;Dr. Alexander Elder&lt;/strong&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;本書為 &lt;strong&gt;操作生涯不是夢&lt;/strong&gt; 與 &lt;strong&gt;走進我的交易室&lt;/strong&gt; 兩本經典著作的作者, 在經過二十年後對前者做出的修訂, 在經典中添加這些年的經驗與教訓。&lt;/p&gt;
+
+&lt;h2 id=""&gt;導論&lt;/h2&gt;
+
+&lt;h4 id=""&gt;動機、知識 與 紀律&lt;/h4&gt;
+
+&lt;p&gt;關鍵在於心理層面, 但絕大多數的人屈服於此, 本書 (亦或是此篇文章) 提供知識, 但動機需由讀者自行尋找, 唯有渴望成功的人, 才能走過這滿是荊棘的道路, 這裡先帶出幾個遵循的重點&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;交易為追尋理性的活動, 勿情緒化的隨波逐流&lt;/li&gt;
+&lt;li&gt;優秀的交易者會小心照顧資本
+&lt;ul&gt;&lt;li&gt;負合遊戲, 扣除手續費、滑價、買/賣價差, 這是場負合的遊戲, 只是中等以上的技巧是不夠的&lt;/li&gt;
+&lt;li&gt;一般交易者承擔的滑價為手續費的 3 倍, 避免使用市價單買進 (改用限價單, 但不保證成交), 錯過了某筆交易仍有其他無數的機會, 除了停損單, 一旦市場反應不如預期, 應儘速出場&lt;/li&gt;
+&lt;li&gt;尋找低廉手續費率的經紀人、建立進出頻率較少的系統、在平穩的市況進場 (避免滑價跟買/賣價差擴大) 以及 採用停損單進場, 盡可能 &lt;strong&gt;降低交易成本&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;單筆交易的風險最多只能佔資本的 &lt;strong&gt;2%&lt;/strong&gt;&lt;/li&gt;&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;題外話&lt;/p&gt;
+  
+  &lt;p&gt;這本書也解惑了筆者心中一直以來的問題, 作者曾訪問過甘氏的兒子, 得知其父親一生從無能力倚靠交易維生, 在交易市場上的豐功偉業僅是投機分子虛構出的傳奇故事 (慶幸如此, 筆者不用再多看這玄而又玄的 &lt;del&gt;謬論&lt;/del&gt; 理論)。&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h2 id=""&gt;心理的迷思&lt;/h2&gt;
+
+&lt;p&gt;贏家猶如水手, 深知海洋的特性並抱持著敬畏之心, 時時保持冷靜的頭腦不膨脹自我也不膽怯市場, 輸家則是容易受情緒的起伏而控制, 以下是輸家常有的迷思&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;不切實際的幻想&lt;/strong&gt; 對報酬不成比例的期待造成過曝風險的行為&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;知識的迷思&lt;/strong&gt; 輸家並不了解交易對知識的要求並不高&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;資本不足的迷思&lt;/strong&gt; 如同 馬丁 (Martingale) 策略, 亦稱 賭博策略 (Betting strategy) 的凹單方式, 認為市場待得夠久總能獲利, 但輸家真正的問題其實在於過多交易以及資本的控管方式&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;自動導航的迷思&lt;/strong&gt; 過度依賴自動化的系統而欠缺人為的彈性&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;偶像崇拜&lt;/strong&gt; 穩操勝算一書中記錄著大師級人物的各種醜聞
+&lt;ul&gt;&lt;li&gt;市場循環大師&lt;/li&gt;
+&lt;li&gt;神奇方法大師&lt;/li&gt;
+&lt;li&gt;過世的大師&lt;/li&gt;&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;自我毀滅的傾向&lt;/strong&gt; 如同酒癮一般的一再犯上錯誤, 透過 &lt;strong&gt;交易紀錄&lt;/strong&gt; 以及 &lt;strong&gt;互助會的形式&lt;/strong&gt; 達到戒斷這些行為&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;杜克大學教授 Dan Ariely 曾敘述一個有趣的實驗, 兩組接受智力測試的其中一組, 先「不小心」的偷看到答案後而作答, 測試結果不言而喻, 接著兩組人被要求進行第二次的測驗, 並預測第二次的成績, 凡是預測準確者都可以獲得獎賞, 神奇的是作弊組在第二次測驗的預測中, 也給出了明顯較高的預測, 顯然他們 &lt;strong&gt;寧可相信自己比較聰明&lt;/strong&gt;, 寧可錯失獎賞的機會。&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h4 id=""&gt;互助會的法則&lt;/h4&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;否認&lt;/strong&gt; 起初戒斷者會否認自己身陷困境 (輸家會掩蓋損失)&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;絕境&lt;/strong&gt; 直到某些事件的發生, 才開始意識到自己的麻煩&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;承認&lt;/strong&gt; 承認自己無能為力, 才能遠離需戒斷的誘因&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;循序漸境&lt;/strong&gt; 從維持小的目標開始慢慢增加&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=""&gt;自主&lt;/h4&gt;
+
+&lt;p&gt;在整個交易過程中, 我們唯一仍控制的就是自己, 邁向成功每個交易者都有自己的心魔需要剔出, 以下是作者建議的法則, 可以協助交易者度過成為專業交易人前的那段日子。&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;下定決心讓自己能長期留在市場上&lt;/li&gt;
+&lt;li&gt;盡量學習並抱持懷疑&lt;/li&gt;
+&lt;li&gt;不可因貪婪而急於交易, 市場不會離你而去, 只會看見更多機會&lt;/li&gt;
+&lt;li&gt;發展屬於自己的交易系統&lt;/li&gt;
+&lt;li&gt;擬定資金管理計畫 長期生存 -&gt; 穩定成長 -&gt; 高水準獲利, 切勿搞錯順序&lt;/li&gt;
+&lt;li&gt;回顧「互助會」的方法, 降低衝動性交易&lt;/li&gt;
+&lt;li&gt;著手改善自己的性格, 自省改變不當的思緒與行為&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=""&gt;群眾心理&lt;/h2&gt;
+
+&lt;p&gt;價格為某一時間點參與市場交易人們的共識, 進行交易則必須對抗全世界最精明的人 (錢是由市場的多數輸家貢獻給少數贏家) 同時又需想辦法降低手續費與滑價差的剝削, 而無可避免的內線交易是市場的常態 (部分情況下合法), 身為技術分析者的工作則是尾隨他們一起賺錢, 因為參與市場的每筆交易, 都會反映在走勢圖中, 面對大型機構 (必須做交易), 個人交易者的好處是在於可以選擇交易, 絕大多數的個人交易人卻總是過度交易, 要想成功必須培養耐心、克制貪念,  記住目標是 &lt;strong&gt;做好交易而不是經常交易&lt;/strong&gt;。&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;趨勢的漲跌是多空方的信心差異導致, 經濟學家 Daniel Kahneman 引用的資料顯示恐懼引發的情緒強度是貪婪的三倍&lt;/li&gt;
+&lt;li&gt;交易是一種對資金的管理, 透過技術分析群眾的心理後的決策, 而非預測未來 (預測隱含著市場應該要如何的觀感, 在決策時會有更多心態上的偏見)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;建立投資部位後, 就彷彿加入了群眾之中, 如同鬱金香球泡沫事件, 「人們因融入群眾後而變得瘋狂, 卻必須單獨而緩慢地恢復清醒」－ 成功的交易者必須獨立思考、決策, 然而這卻有違人的天性 (書中建議的做法是在交易前擬定好策略, 不因任何未平倉的部位修改計畫)。&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h2 id="mindmap"&gt;筆記 (Mind Map)&lt;/h2&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;使用方式類似 Google Map 的拖曳操作可以移動畫面, 右鍵可以彈出放大鏡的按鈕, 按壓放大鏡拖曳後可以 Zoom In/Out&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;iframe width="853" height="480" src="https://embed.coggle.it/diagram/Vy6Gn7ET1tYabzOc/b916d38a547f0815086fc565de979079e745a4b0ef5288ab8718f52bb268f4c0" frameborder="0" allowfullscreen&gt;&lt;/iframe&gt;</content:encoded></item><item><title>動能指標 筆記 (二) 指標介紹</title><description>&lt;blockquote&gt;
   &lt;p&gt;原名&lt;/p&gt;
   
   &lt;p&gt;Martin Pring on Market Momentum. by &lt;strong&gt;Martin J. Pring&lt;/strong&gt;&lt;/p&gt;
@@ -285,108 +394,7 @@
   &lt;p&gt;移動平均的週期選擇需仔細評估, 因為移動平均的特性會讓原本領先價格的動能指標變成落後。&lt;/p&gt;
 &lt;/blockquote&gt;
 
-&lt;p&gt;以上就是本書第一部分對於動能指標的初步探討及說明。&lt;/p&gt;</content:encoded></item><item><title>新 操作生涯不是夢 筆記 (未完)</title><description>&lt;blockquote&gt;
-  &lt;p&gt;原名&lt;/p&gt;
-  
-  &lt;p&gt;The New Trading for a Living. by &lt;strong&gt;Dr. Alexander Elder&lt;/strong&gt;&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;本書為 &lt;strong&gt;操作生涯不是夢&lt;/strong&gt; 與 &lt;strong&gt;走進我的交易室&lt;/strong&gt; 兩本經典著作的作者, 在經過二十年後對前者做出的修訂, 在經典中添加這些年的經驗與教訓。&lt;/p&gt;
-
-&lt;h2 id=""&gt;導論&lt;/h2&gt;
-
-&lt;h4 id=""&gt;動機、知識 與 紀律&lt;/h4&gt;
-
-&lt;p&gt;關鍵在於心理層面, 但絕大多數的人屈服於此, 本書 (亦或是此篇文章) 提供知識, 但動機需由讀者自行尋找, 唯有渴望成功的人, 才能走過這滿是荊棘的道路, 這裡先帶出幾個遵循的重點&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;交易為追尋理性的活動, 勿情緒化的隨波逐流&lt;/li&gt;
-&lt;li&gt;優秀的交易者會小心照顧資本
-&lt;ul&gt;&lt;li&gt;負合遊戲, 扣除手續費、滑價、買/賣價差, 這是場負合的遊戲, 只是中等以上的技巧是不夠的&lt;/li&gt;
-&lt;li&gt;一般交易者承擔的滑價為手續費的 3 倍, 避免使用市價單買進 (改用限價單, 但不保證成交), 錯過了某筆交易仍有其他無數的機會, 除了停損單,&lt;/li&gt;&lt;/ul&gt;&lt;/li&gt;&lt;/ul&gt;</description><link>http://captainvincent.github.io/xin-cao-zuo-sheng-ya-bu-shi-meng/</link><guid isPermaLink="false">af53c9d7-7beb-4cb6-a7f4-655a54cda3a7</guid><dc:creator>Captain Vincent</dc:creator><pubDate>Tue, 03 May 2016 18:03:05 GMT</pubDate><content:encoded>&lt;blockquote&gt;
-  &lt;p&gt;原名&lt;/p&gt;
-  
-  &lt;p&gt;The New Trading for a Living. by &lt;strong&gt;Dr. Alexander Elder&lt;/strong&gt;&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;本書為 &lt;strong&gt;操作生涯不是夢&lt;/strong&gt; 與 &lt;strong&gt;走進我的交易室&lt;/strong&gt; 兩本經典著作的作者, 在經過二十年後對前者做出的修訂, 在經典中添加這些年的經驗與教訓。&lt;/p&gt;
-
-&lt;h2 id=""&gt;導論&lt;/h2&gt;
-
-&lt;h4 id=""&gt;動機、知識 與 紀律&lt;/h4&gt;
-
-&lt;p&gt;關鍵在於心理層面, 但絕大多數的人屈服於此, 本書 (亦或是此篇文章) 提供知識, 但動機需由讀者自行尋找, 唯有渴望成功的人, 才能走過這滿是荊棘的道路, 這裡先帶出幾個遵循的重點&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;交易為追尋理性的活動, 勿情緒化的隨波逐流&lt;/li&gt;
-&lt;li&gt;優秀的交易者會小心照顧資本
-&lt;ul&gt;&lt;li&gt;負合遊戲, 扣除手續費、滑價、買/賣價差, 這是場負合的遊戲, 只是中等以上的技巧是不夠的&lt;/li&gt;
-&lt;li&gt;一般交易者承擔的滑價為手續費的 3 倍, 避免使用市價單買進 (改用限價單, 但不保證成交), 錯過了某筆交易仍有其他無數的機會, 除了停損單, 一旦市場反應不如預期, 應儘速出場&lt;/li&gt;
-&lt;li&gt;尋找低廉手續費率的經紀人、建立進出頻率較少的系統、在平穩的市況進場 (避免滑價跟買/賣價差擴大) 以及 採用停損單進場, 盡可能 &lt;strong&gt;降低交易成本&lt;/strong&gt;&lt;/li&gt;
-&lt;li&gt;單筆交易的風險最多只能佔資本的 &lt;strong&gt;2%&lt;/strong&gt;&lt;/li&gt;&lt;/ul&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;題外話&lt;/p&gt;
-  
-  &lt;p&gt;這本書也解惑了筆者心中一直以來的問題, 作者曾訪問過甘氏的兒子, 得知其父親一生從無能力倚靠交易維生, 在交易市場上的豐功偉業僅是投機分子虛構出的傳奇故事 (慶幸如此, 筆者不用再多看這玄而又玄的 &lt;del&gt;謬論&lt;/del&gt; 理論)。&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;h2 id=""&gt;心理的迷思&lt;/h2&gt;
-
-&lt;p&gt;贏家猶如水手, 深知海洋的特性並抱持著敬畏之心, 時時保持冷靜的頭腦不膨脹自我也不膽怯市場, 輸家則是容易受情緒的起伏而控制, 以下是輸家常有的迷思&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;不切實際的幻想&lt;/strong&gt; 對報酬不成比例的期待造成過曝風險的行為&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;知識的迷思&lt;/strong&gt; 輸家並不了解交易對知識的要求並不高&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;資本不足的迷思&lt;/strong&gt; 如同 馬丁 (Martingale) 策略, 亦稱 賭博策略 (Betting strategy) 的凹單方式, 認為市場待得夠久總能獲利, 但輸家真正的問題其實在於過多交易以及資本的控管方式&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;自動導航的迷思&lt;/strong&gt; 過度依賴自動化的系統而欠缺人為的彈性&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;偶像崇拜&lt;/strong&gt; 穩操勝算中記錄著大師級人物的各種醜聞
-&lt;ul&gt;&lt;li&gt;市場循環大師&lt;/li&gt;
-&lt;li&gt;神奇方法大師&lt;/li&gt;
-&lt;li&gt;過世的大師&lt;/li&gt;&lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;自我毀滅的傾向&lt;/strong&gt; 如同酒癮一般的一再犯上錯誤, 透過 &lt;strong&gt;交易紀錄&lt;/strong&gt; 以及 &lt;strong&gt;互助會的形式&lt;/strong&gt; 達到戒斷這些行為&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h4 id=""&gt;互助會的法則&lt;/h4&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;否認&lt;/strong&gt; 起初戒斷者會否認自己身陷困境 (輸家會掩蓋損失)&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;絕境&lt;/strong&gt; 直到某些事件的發生, 才開始意識到自己的麻煩&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;承認&lt;/strong&gt; 承認自己無能為力, 才能遠離需戒斷的誘因&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;循序漸境&lt;/strong&gt; 從維持小的目標開始慢慢增加&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;杜克大學教授 Dan Ariely 曾敘述一個有趣的實驗, 兩組接受智力測試的其中一組, 先「不小心」的偷看到答案後而作答, 測試結果不言而喻, 接著兩組人被要求進行第二次的測驗, 並預測第二次的成績, 凡是預測準確者都可以獲得獎賞, 神奇的是作弊組在第二次測驗的預測中, 也給出了明顯較高的預測, 顯然他們 &lt;strong&gt;寧可相信自己比較聰明&lt;/strong&gt;, 寧可錯失獎賞的機會。&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;h4 id=""&gt;自主&lt;/h4&gt;
-
-&lt;p&gt;在整個交易過程中, 我們唯一仍控制的就是自己, 邁向成功每個交易者都有自己的心魔需要剔出, 以下是作者建議的法則, 可以協助交易者度過成為專業交易人前的那段日子。&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;下定決心讓自己能長期留在市場上&lt;/li&gt;
-&lt;li&gt;盡量學習並抱持懷疑&lt;/li&gt;
-&lt;li&gt;不可因貪婪而急於交易, 市場不會離你而去, 只會看見更多機會&lt;/li&gt;
-&lt;li&gt;發展屬於自己的交易系統&lt;/li&gt;
-&lt;li&gt;擬定資金管理計畫 長期生存 -&gt; 穩定成長 -&gt; 高水準獲利, 切勿搞錯順序&lt;/li&gt;
-&lt;li&gt;回顧「互助會」的方法, 降低衝動性交易&lt;/li&gt;
-&lt;li&gt;著手改善自己的性格, 自省改變不當的思緒與行為&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=""&gt;群眾心理&lt;/h2&gt;
-
-&lt;p&gt;價格為某一時間點參與市場交易人們的共識, 進行交易則必須對抗全世界最精明的人 (錢是由市場的多數輸家貢獻給少數贏家) 同時又需想辦法降低手續費與滑價差的剝削, 而無可避免的內線交易是市場的常態 (部分情況下合法), 身為技術分析者的工作則是尾隨他們一起賺錢, 因為參與市場的每筆交易, 都會反映在走勢圖中, 面對大型機構 (必須做交易), 個人交易者的好處是在於可以選擇交易, 絕大多數的個人交易人卻總是過度交易, 要想成功必須培養耐心、克制貪念,  記住目標是 &lt;strong&gt;做好交易而不是經常交易&lt;/strong&gt;。&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;趨勢的漲跌是多空方的信心差異導致, 經濟學家 Daniel Kahneman 引用的資料顯示恐懼引發的情緒強度是貪婪的三倍&lt;/li&gt;
-&lt;li&gt;交易是一種對資金的管理, 透過技術分析群眾的心理後的決策, 而非預測未來 (預測隱含著市場應該要如何的觀感, 在決策時會有更多心態上的偏見)&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;建立投資部位後, 就彷彿加入了群眾之中, 如同鬱金香球泡沫事件, 「人們因融入群眾後而變得瘋狂, 卻必須單獨而緩慢地恢復清醒」－ 成功的交易者必須獨立思考、決策, 然而這卻有違人的天性 (書中建議的做法是在交易前擬定好策略, 不因任何未平倉的部位修改計畫)。&lt;/p&gt;
-&lt;/blockquote&gt;</content:encoded></item><item><title>丹尼爾博士 跑步方程式 筆記 (未完)</title><description>&lt;blockquote&gt;
+&lt;p&gt;以上就是本書第一部分對於動能指標的初步探討及說明。&lt;/p&gt;</content:encoded></item><item><title>丹尼爾博士 跑步方程式 筆記 (未完)</title><description>&lt;blockquote&gt;
   &lt;p&gt;原名&lt;/p&gt;
   
   &lt;p&gt;Daniel's Running Formula. - 3rd Edition by &lt;strong&gt;Jack T. Daniels&lt;/strong&gt;&lt;/p&gt;
@@ -725,7 +733,7 @@
 
 &lt;ul&gt;&lt;li&gt;最高&lt;sub&gt;今日&lt;/sub&gt; - 最低&lt;sub&gt;今日&lt;/sub&gt; &lt;/li&gt;
 &lt;li&gt;最高&lt;sub&gt;今日&lt;/sub&gt; - 收盤&lt;sub&gt;昨日&lt;/sub&gt; &lt;/li&gt;
-&lt;li&gt;最低&lt;sub&gt;今日&lt;/sub&gt; - 收盤&lt;sub&gt;今日&lt;/sub&gt; &lt;/li&gt;&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;最低&lt;sub&gt;今日&lt;/sub&gt; - 收盤&lt;sub&gt;昨日&lt;/sub&gt; &lt;/li&gt;&lt;/ul&gt;&lt;/li&gt;
 &lt;li&gt;&lt;p&gt;方向線 (DI)&lt;/p&gt;
 
 &lt;p&gt;DI = (DM&lt;sub&gt;14&lt;/sub&gt; / TR&lt;sub&gt;14&lt;/sub&gt;) * 100, (14 是指此數值再取 14日 的平均)&lt;/p&gt;&lt;/li&gt;
