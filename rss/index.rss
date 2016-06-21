@@ -1,4 +1,215 @@
-<rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:media="http://search.yahoo.com/mrss/" version="2.0"><channel><title>Hello World! I'm Vincent</title><description>Thoughts, stories and ideas.</description><link>http://captainvincent.github.io/</link><generator>Ghost 0.7</generator><lastBuildDate>Sun, 15 May 2016 09:08:13 GMT</lastBuildDate><atom:link href="http://captainvincent.github.io/rss/" rel="self" type="application/rss+xml"/><ttl>60</ttl><item><title>丹尼爾博士 跑步方程式 筆記</title><description>&lt;blockquote&gt;
+<rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:media="http://search.yahoo.com/mrss/" version="2.0"><channel><title>Hello World! I'm Vincent</title><description>Thoughts, stories and ideas.</description><link>http://captainvincent.github.io/</link><generator>Ghost 0.7</generator><lastBuildDate>Tue, 21 Jun 2016 14:41:53 GMT</lastBuildDate><atom:link href="http://captainvincent.github.io/rss/" rel="self" type="application/rss+xml"/><ttl>60</ttl><item><title>Machine Learning Foundations 機器學習基石 (課程筆記)</title><description>&lt;blockquote&gt;
+  &lt;p&gt;由台大資工系 副教授 林軒田 提供的開放式課程, 關於教材內容皆可於 &lt;a href="https://www.youtube.com/playlist?list=PLXVfgk9fNX2I7tB6oIINGBmW50rrmFTqf"&gt;Youtube教學影片&lt;/a&gt; 及 &lt;a href="http://www.csie.ntu.edu.tw/~htlin/mooc/"&gt;投影片下載網址&lt;/a&gt; 取得。&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h2 id="introduction"&gt;Introduction&lt;/h2&gt;
+
+&lt;p&gt;模仿人類學習的方式, 透過觀察 (data) 學習 (取出特徵、經過計算處理) 後得到有意義的技巧 (提升某項可以量化評估的表現)。&lt;/p&gt;
+
+&lt;h5 id=""&gt;一些應用機器學習的時機&lt;/h5&gt;
+
+&lt;ul&gt;
+&lt;li&gt;過於複雜 (不預期的狀況) 的系統不容易轉化成程式來處理&lt;/li&gt;
+&lt;li&gt;不容易寫出判定規則的系統&lt;/li&gt;
+&lt;li&gt;人尚未或無法即時判定的行為&lt;/li&gt;
+&lt;li&gt;過分客製化 (數量過多) 的反應&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h5 id=""&gt;使用條件&lt;/h5&gt;
+
+&lt;ul&gt;
+&lt;li&gt;具備 可理解的特徵 以及 可供量化評估改進的結果&lt;/li&gt;
+&lt;li&gt;不容易定義出規則 (容易定義則使用規則撰寫一般的程式處理即可)&lt;/li&gt;
+&lt;li&gt;有資料可供學習&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id="modelcomponent"&gt;Model Component&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;A&lt;/strong&gt;lgorithm, learning algorithm 為挑選假說的演算法&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;D&lt;/strong&gt;ata Set, D: {(&lt;strong&gt;X&lt;/strong&gt;&lt;sub&gt;1&lt;/sub&gt;,Y&lt;sub&gt;1&lt;/sub&gt;&lt;/li&gt;&lt;/ul&gt;</description><link>http://captainvincent.github.io/machine-learning-foundations-ji-qi-xue-xi-ji-shi-ke-cheng-bi-ji/</link><guid isPermaLink="false">a0ece823-f40e-44e6-8fe7-d8971672558e</guid><dc:creator>Captain Vincent</dc:creator><pubDate>Mon, 20 Jun 2016 11:30:30 GMT</pubDate><content:encoded>&lt;blockquote&gt;
+  &lt;p&gt;由台大資工系 副教授 林軒田 提供的開放式課程, 關於教材內容皆可於 &lt;a href="https://www.youtube.com/playlist?list=PLXVfgk9fNX2I7tB6oIINGBmW50rrmFTqf"&gt;Youtube教學影片&lt;/a&gt; 及 &lt;a href="http://www.csie.ntu.edu.tw/~htlin/mooc/"&gt;投影片下載網址&lt;/a&gt; 取得。&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h2 id="introduction"&gt;Introduction&lt;/h2&gt;
+
+&lt;p&gt;模仿人類學習的方式, 透過觀察 (data) 學習 (取出特徵、經過計算處理) 後得到有意義的技巧 (提升某項可以量化評估的表現)。&lt;/p&gt;
+
+&lt;h5 id=""&gt;一些應用機器學習的時機&lt;/h5&gt;
+
+&lt;ul&gt;
+&lt;li&gt;過於複雜 (不預期的狀況) 的系統不容易轉化成程式來處理&lt;/li&gt;
+&lt;li&gt;不容易寫出判定規則的系統&lt;/li&gt;
+&lt;li&gt;人尚未或無法即時判定的行為&lt;/li&gt;
+&lt;li&gt;過分客製化 (數量過多) 的反應&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h5 id=""&gt;使用條件&lt;/h5&gt;
+
+&lt;ul&gt;
+&lt;li&gt;具備 可理解的特徵 以及 可供量化評估改進的結果&lt;/li&gt;
+&lt;li&gt;不容易定義出規則 (容易定義則使用規則撰寫一般的程式處理即可)&lt;/li&gt;
+&lt;li&gt;有資料可供學習&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id="modelcomponent"&gt;Model Component&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;A&lt;/strong&gt;lgorithm, learning algorithm 為挑選假說的演算法&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;D&lt;/strong&gt;ata Set, D: {(&lt;strong&gt;X&lt;/strong&gt;&lt;sub&gt;1&lt;/sub&gt;,Y&lt;sub&gt;1&lt;/sub&gt;), (&lt;strong&gt;X&lt;/strong&gt;&lt;sub&gt;2&lt;/sub&gt;,Y&lt;sub&gt;2&lt;/sub&gt;), ... (&lt;strong&gt;X&lt;/strong&gt;&lt;sub&gt;N&lt;/sub&gt;,Y&lt;sub&gt;N&lt;/sub&gt;)}&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;X&lt;/strong&gt; 為 input 的特徵向量, Y 為 Output&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;H&lt;/strong&gt;ypothesis Set, 推論 &lt;strong&gt;X&lt;/strong&gt; 與 Y 之間存在關係的假說集合&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;f&lt;/strong&gt; 理想上的 target function 可以完全地反應出所有的關係 (實際上 unknown), f: &lt;strong&gt;X&lt;/strong&gt; → Y&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;g&lt;/strong&gt; 透過 algorithm 從 hypothesis set 中挑選出最接近 f 者&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;A&lt;/strong&gt; takes &lt;strong&gt;D&lt;/strong&gt; and &lt;strong&gt;H&lt;/strong&gt; to get &lt;strong&gt;g&lt;/strong&gt; ≈ &lt;strong&gt;f&lt;/strong&gt;, 機器學習是透過資料從假說中挑選最接近目標函式者, 用以推測訓練資料以外的其他資料結果&lt;/li&gt;
+&lt;li&gt;Learning Model = &lt;strong&gt;A&lt;/strong&gt; and &lt;strong&gt;H&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;&lt;strong&gt;Machine Learning vs Data Mining&lt;/strong&gt;&lt;/p&gt;
+  
+  &lt;p&gt;資料探勘通常是對大量的資料中尋找有用的性質, 如果這個性質的目標是找出更好的 hypothesis, 則兩者的差異不大 或是 可相互幫忙。&lt;/p&gt;
+  
+  &lt;p&gt;&lt;strong&gt;Machine Learning vs Artificial Intelligence&lt;/strong&gt;&lt;/p&gt;
+  
+  &lt;p&gt;人工智慧的目標在於經過計算之後可以得到具備智能的行為, 而機器學習是其中一種實現人工智慧的方法 (其他方法像是 決策數)。&lt;/p&gt;
+  
+  &lt;p&gt;&lt;strong&gt;Machine Learning vs Statistics&lt;/strong&gt;&lt;/p&gt;
+  
+  &lt;p&gt;統計學是用資料推論一些未知的結果, 所以統計是機器學習中會使用到的其中一種工具。&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h2 id="perceptronlearningalgorithm"&gt;Perceptron Learning Algorithm&lt;/h2&gt;
+
+&lt;p&gt;這邊介紹一種簡單的 Hypothesis Set 的定義方式稱 "Perceptron" 來求一個是非題的解, 數學上的符號如下&lt;/p&gt;
+
+&lt;p&gt;Σ &lt;sub&gt;(i=1~n)&lt;/sub&gt; w&lt;sub&gt;i&lt;/sub&gt;x&lt;sub&gt;i&lt;/sub&gt; (再定義出一個 threshold 來二分這是非題的結果, y = {+1 , -1})&lt;/p&gt;
+
+&lt;p&gt;h(x) = sign ( Σ &lt;sub&gt;(i=1~n)&lt;/sub&gt; w&lt;sub&gt;i&lt;/sub&gt;x&lt;sub&gt;i&lt;/sub&gt; - threshold ) &lt;/p&gt;
+
+&lt;p&gt;令 w&lt;sub&gt;0&lt;/sub&gt; 為 -threshold、x&lt;sub&gt;0&lt;/sub&gt; 為 1, 則化簡如下&lt;/p&gt;
+
+&lt;p&gt;h(x) = sign ( Σ &lt;sub&gt;(i=0~n)&lt;/sub&gt; w&lt;sub&gt;i&lt;/sub&gt;x&lt;sub&gt;i&lt;/sub&gt; ) = sign (&lt;strong&gt;w&lt;/strong&gt;&lt;sup&gt;T&lt;/sup&gt;&lt;strong&gt;x&lt;/strong&gt;)&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;相當於取 w 與 x 兩個 n+1 維的向量內積。&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;目標是從 H 中挑選出最接近 f 的 g, 而這最接近的定義為在已經看過的資料中可以產出愈相同的 output , 但實際上整個 H 是一個無限大的集合, 所以 &lt;strong&gt;PLA&lt;/strong&gt; (Perceptron Learning Algorithm) 的想法是嘗試先從中挑選出第一個 g&lt;sub&gt;0&lt;/sub&gt; (或稱 &lt;strong&gt;w&lt;/strong&gt;&lt;sub&gt;0&lt;/sub&gt;), 並不斷的在錯誤中修正&lt;/p&gt;
+
+&lt;h5 id=""&gt;演算法&lt;/h5&gt;
+
+&lt;p&gt;If, sign (&lt;strong&gt;w&lt;/strong&gt;&lt;sup&gt;T&lt;/sup&gt;&lt;strong&gt;x&lt;/strong&gt;&lt;sub&gt;n(t)&lt;/sub&gt;) ≠ y&lt;sub&gt;n(t)&lt;/sub&gt; &lt;br&gt;
+Let, &lt;strong&gt;w&lt;/strong&gt;&lt;sub&gt;t+1&lt;/sub&gt; = &lt;strong&gt;w&lt;/strong&gt;&lt;sub&gt;t&lt;/sub&gt; + y&lt;sub&gt;n(t)&lt;/sub&gt; &lt;strong&gt;x&lt;/strong&gt;&lt;sub&gt;n(t)&lt;/sub&gt; &lt;br&gt;
+Until no more mistakes.&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;想法是當計算的結果與預期的符號不同時, 表示匹配特徵向量 &lt;strong&gt;w&lt;/strong&gt; 與 資料特徵向量 &lt;strong&gt;x&lt;/strong&gt; 兩者間的角度過大或過小, 所以修正匹配特徵向量 &lt;strong&gt;w&lt;/strong&gt; 使其遠離或靠近 &lt;strong&gt;x&lt;/strong&gt; 一點 (方向視其預期結果的正負來決定)。&lt;/p&gt;
+  
+  &lt;p&gt;sign (&lt;strong&gt;w&lt;/strong&gt;&lt;sup&gt;T&lt;/sup&gt;&lt;strong&gt;x&lt;/strong&gt;) 中, &lt;strong&gt;w&lt;/strong&gt;&lt;sup&gt;T&lt;/sup&gt;&lt;strong&gt;x&lt;/strong&gt; = 0 在二維中是一條法相量為 &lt;strong&gt;w&lt;/strong&gt;&lt;sup&gt;T&lt;/sup&gt; 的直線二分其結果 y, 在高維度時則是劃分結果 y 的則是法相量 &lt;strong&gt;w&lt;/strong&gt;&lt;sup&gt;T&lt;/sup&gt; 的高維平面。&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h5 id="linearseparability"&gt;Linear Separability 線性可分&lt;/h5&gt;
+
+&lt;p&gt;PLA 的終止條件是可以找出一個完全沒有錯誤的 &lt;strong&gt;w&lt;/strong&gt;, 此時稱作線性可分; 而這個 &lt;strong&gt;w&lt;/strong&gt;&lt;sub&gt;f&lt;/sub&gt;, 可以完美的劃分開不同結果的資料, 使其與分割平面 (線) 都有 &gt; 0 的距離 (因為計算結果與內積皆同向)&lt;/p&gt;
+
+&lt;p&gt;y&lt;sub&gt;n(t)&lt;/sub&gt; &lt;strong&gt;w&lt;/strong&gt;&lt;sub&gt;f&lt;/sub&gt;&lt;sup&gt;T&lt;/sup&gt;&lt;strong&gt;x&lt;/strong&gt;&lt;sub&gt;n(t)&lt;/sub&gt; (所有 input 包含發生錯誤的點) ≥ min( y&lt;sub&gt;n&lt;/sub&gt; &lt;strong&gt;w&lt;/strong&gt;&lt;sub&gt;f&lt;/sub&gt;&lt;sup&gt;T&lt;/sup&gt;&lt;strong&gt;x&lt;/strong&gt;&lt;sub&gt;n&lt;/sub&gt; ) &gt; 0&lt;/p&gt;
+
+&lt;h6 id="pla"&gt;討論 PLA 演算法修正的結果好壞的判定&lt;/h6&gt;
+
+&lt;p&gt;&lt;strong&gt;w&lt;/strong&gt;&lt;sub&gt;f&lt;/sub&gt;&lt;sup&gt;T&lt;/sup&gt; &lt;strong&gt;w&lt;/strong&gt;&lt;sub&gt;t+1&lt;/sub&gt; = &lt;strong&gt;w&lt;/strong&gt;&lt;sub&gt;f&lt;/sub&gt;&lt;sup&gt;T&lt;/sup&gt; (&lt;strong&gt;w&lt;/strong&gt;&lt;sub&gt;t&lt;/sub&gt; + y&lt;sub&gt;n(t)&lt;/sub&gt; &lt;strong&gt;x&lt;/strong&gt;&lt;sub&gt;n(t)&lt;/sub&gt;) &gt;= &lt;strong&gt;w&lt;/strong&gt;&lt;sub&gt;f&lt;/sub&gt;&lt;sup&gt;T&lt;/sup&gt; &lt;strong&gt;w&lt;/strong&gt;&lt;sub&gt;t&lt;/sub&gt; + min( y&lt;sub&gt;n&lt;/sub&gt; &lt;strong&gt;w&lt;/strong&gt;&lt;sub&gt;f&lt;/sub&gt;&lt;sup&gt;T&lt;/sup&gt;&lt;strong&gt;x&lt;/strong&gt;&lt;sub&gt;n&lt;/sub&gt; ) &gt; &lt;strong&gt;w&lt;/strong&gt;&lt;sub&gt;f&lt;/sub&gt;&lt;sup&gt;T&lt;/sup&gt; &lt;strong&gt;w&lt;/strong&gt;&lt;sub&gt;t&lt;/sub&gt;&lt;/p&gt;
+
+&lt;p&gt;到此我們只證明了一半, 表示透過演算法可以不停地修正可以得到與 target 內積愈來愈大的特徵向量, 但內積愈大並不能表示兩個向量的夾角愈小 (方向愈接近), 也有可能是因為修正後的向量長度變長所造成的, 這就是我們後面所要證明的第二部分。&lt;/p&gt;
+
+&lt;div&gt;  
+\begin{equation}
+  \begin{split}
+  w_f^Tw_T &amp;\geq w_f^Tw_{T-1} + min\ {y_nw_f^Tx_n} \\\
+           &amp;\geq ... \\\
+           &amp;\geq w_f^Tw_0 + T\cdot min\ {y_nw_f^Tx_n} = T\cdot min\ {y_nw_f^Tx_n}
+  \end{split}
+  \end{equation}
+&lt;/div&gt;  
+
+&lt;p&gt;透過前式, 我們可以一路推導做了 T 次修正後如上的結果&lt;/p&gt;
+
+&lt;div&gt;  
+\begin{equation}
+\begin{split}
+||w_{t+1}||^2 &amp;=    ||w_t + y_{n(t)}x_{n(t)}||^2 \\\
+              &amp;=    ||w_t||^2 + 2y_{n(t)}w_t^Tx_{n(t)} + ||y_{n(t)}x_{n(t)}||^2\\\
+              &amp;\leq ||w_t||^2 + 0 + ||y_{n(t)}x_{n(t)}||^2 \\\
+              &amp;\leq ||w_t||^2 + max\ {||x_n||^2}
+\end{split}
+\end{equation}
+&lt;/div&gt;  
+
+&lt;p&gt;因為我們僅在錯誤的時候做修正, 所以中間項的乘積會 &amp;lt; 0, 上式就是我們得到的向量長度 Upper bound&lt;/p&gt;
+
+&lt;div&gt;  
+\begin{equation}
+\begin{split}
+  ||w_T||^2 &amp;\leq ||w_{T-1}||^2 + max\ {||x_n||^2} \\\
+            &amp;\leq ... \\\
+            &amp;\leq ||w_0||^2 + T\cdot max\ {||x_n||^2} = T\cdot max\ {||x_n||^2}
+\end{split}
+\end{equation}
+&lt;/div&gt;  
+
+&lt;p&gt;接著一樣透過前式, 我們可以一路推導做了 T 次修正後如上的結果&lt;/p&gt;
+
+&lt;div&gt;  
+\begin{equation}  
+\begin{split}   
+1 &amp;\geq \frac{w_f^Tw_T}{||w_f||||w_T||} &amp;\geq \frac{T\cdot min\ y_nw_f^Tx_n}{||w_f||||w_T||} \ &amp;\geq \frac{T\cdot min\ y_nw_f^Tx_n}{||w_f||\cdot \sqrt{T}\cdot max\ {||x_n||^2}}  = \frac {\sqrt{T}\rho}{R}  
+\end{split}    
+\end{equation}
+&lt;/div&gt;  
+
+&lt;p&gt;最後可以求出 cos θ 經過 T 次迭代後的收斂式子 (ρ 與 R 皆是我們導出的常數), 因此我們可知當今天的資料是 Linear Separability 時&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;PLA 確實可修正 &lt;strong&gt;W&lt;/strong&gt;&lt;sub&gt;t&lt;/sub&gt; 使其更加靠近 &lt;strong&gt;W&lt;/strong&gt;&lt;sub&gt;f&lt;/sub&gt;&lt;/li&gt;
+&lt;li&gt;由 lower bound 可以知道經過有限次的迭代後, 此演算法會中止&lt;/li&gt;
+&lt;li&gt;綜合以上兩點所以 PLA 可以找到一條完美的分割線&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;得到以上的結果後, 對於 PLA 還是存在一些疑問, 包括了如何知道資料是線性可分 (&lt;strong&gt;W&lt;/strong&gt;&lt;sub&gt;f&lt;/sub&gt; 存在), 如果是已知那實際上我們也就不需要做 PLA, 所以這部分通常是未知, 另一個問題是怎麼知道要做多久才會結束?&lt;/p&gt;
+
+&lt;h5 id="noise"&gt;Noise&lt;/h5&gt;
+
+&lt;p&gt;關於雜訊會有一些假設, 我們假設大部分的時候雜訊是很少的 (雜訊過多則學雜訊的意義反而較大), 則大部分的時候 y&lt;sub&gt;n&lt;/sub&gt; = f (&lt;strong&gt;x&lt;/strong&gt;&lt;sub&gt;n&lt;/sub&gt;), 則當如果找到 g ≈ f 即得 y&lt;sub&gt;n&lt;/sub&gt; = g (&lt;strong&gt;x&lt;/strong&gt;&lt;sub&gt;n&lt;/sub&gt;)&lt;/p&gt;
+
+&lt;h5 id="pocketalgorithm"&gt;Pocket Algorithm&lt;/h5&gt;
+
+&lt;p&gt;基於有效的挑選出完美的 g 其實是一個 NP-Hard 的問題, 所以這邊舉了一個簡單的演算法, 演算法的精神是建立在 PLA 不停地挑選犯錯更少的 &lt;strong&gt;W&lt;/strong&gt;&lt;sub&gt;t+1&lt;/sub&gt; 出來, 直到夠多的迭代後以最終的結果為回傳值, 相較於 PLA 除了比對當前資料是否造成錯誤結果之外, Pocket Algorithm 要去計算所有資料的結果, 所以當今天資料是線性可分時, Pocket Algorithm 會比 PLA 慢, 但能確保有終止條件。&lt;/p&gt;
+
+&lt;h2 id=""&gt;機器學習的分類&lt;/h2&gt;
+
+&lt;h5 id="ysubnsub"&gt;以提供不同 y&lt;sub&gt;n&lt;/sub&gt; 形式區分的學習方式&lt;/h5&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Supervised 監督式, 提供匹配的問題與解答來教學 (其他方式的基礎)&lt;/li&gt;
+&lt;li&gt;Unsupervised 分群的問題, 不提供 y&lt;sub&gt;n&lt;/sub&gt;&lt;/li&gt;
+&lt;li&gt;Semi-supervised 數量多無法窮舉時, 部分標記剩餘透過機器學習分類&lt;/li&gt;
+&lt;li&gt;Reinforcement 單筆單筆的告知系統反應是 好 或是 不好, 不一定精確知道其輸入對應的輸出為何, 但有輔助判定的資訊&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h5 id=""&gt;以提供資料方式區分的種類&lt;/h5&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Batch 成批的資料訓練&lt;/li&gt;
+&lt;li&gt;Online, sequentially 一個一個的逐步改善 &lt;/li&gt;
+&lt;li&gt;Active, sequentially 機器主動的方式來自動挑出盲點 (應用於標記資料需要高成本)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h5 id=""&gt;以資料內容區分的種類&lt;/h5&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Concrete Features 具體有關聯性的特徵 (需有 domain knowledge)&lt;/li&gt;
+&lt;li&gt;Raw Features 通常需要人或機器建立、抽取出具體的特徵, 以避免原始資料對於問題過於抽象&lt;/li&gt;
+&lt;li&gt;Abstract Features 輸入資料完全不具任何意義, 同 raw features 一樣需要建立出特徵&lt;/li&gt;
+&lt;/ul&gt;</content:encoded></item><item><title>丹尼爾博士 跑步方程式 筆記</title><description>&lt;blockquote&gt;
   &lt;p&gt;原名&lt;/p&gt;
   
   &lt;p&gt;Daniel's Running Formula. - 3rd Edition by &lt;strong&gt;Jack T. Daniels&lt;/strong&gt;&lt;/p&gt;
@@ -1023,7 +1234,7 @@ AL (最低值) = CDP - Pt&lt;/p&gt;
 
 &lt;ol&gt;&lt;li&gt;觀察雙重映射圖 (double reflection) 來判定是否應該繼續加碼, 理想的轉折趨勢 (反轉回原來趨勢) 應該非常迅速在 1~3 日內完成 &lt;/li&gt;
 &lt;li&gt;加碼的部位不能夠超過之前建立的部位&lt;/li&gt;&lt;/ol&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;進場時機, 這邊指得是最合適用雙重應設圖來決策&lt;/p&gt;
+&lt;li&gt;&lt;p&gt;進場時機, 這邊指得是最合適用雙重映射圖來決策&lt;/p&gt;
 
 &lt;ol&gt;&lt;li&gt;突破時&lt;/li&gt;
 &lt;li&gt;趨勢改變時&lt;/li&gt;
@@ -2262,95 +2473,4 @@ struct stTest temp = {.first=1};
 &lt;li&gt;使用 __attribute__ 來控制變量輸入的問題, &lt;a href="http://huenlil.pixnet.net/blog/post/26078382-%5B%E8%BD%89%5Dgnu-c-__attribute__-%E6%A9%9F%E5%88%B6%E7%B0%A1%E4%BB%8B"&gt;參考資訊&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;(最後兩章的翻譯讀起來有點怪, 加上應用層面比較難參考, 就整理到這邊吧 : ) 收工~)&lt;/p&gt;</content:encoded></item><item><title>Python 第一步 virtualenv</title><description>&lt;p&gt;剛開始接觸 Python 的時候, 最先了解到的是開發者社群的貢獻, 有別於 C/C++ 這類型語言給我的感覺, 在開發上使用第三方的函式庫, 是相當方便以及普遍的事情。&lt;/p&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;&lt;strong&gt;&lt;a href="https://pypi.python.org/pypi"&gt;Python Package Index (PyPI)&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;
-  
-  &lt;p&gt;PyPI is the default Package Index for the Python community. It is open to all Python developers to consume and distribute their distributions.&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;早期 Python 在套件的安裝上有數種工具可以選擇, 不過目前比較主流的是透過 &lt;strong&gt;PIP&lt;/strong&gt; 來安裝套件 (搜尋、安裝已經建立在 PyPI 上的套件), 這邊會先建議在開始安裝其它套件之前, 可以先安裝名為 &lt;strong&gt;virtualenv&lt;/strong&gt;&lt;/p&gt;</description><link>http://captainvincent.github.io/python-xin-shou-ru-men/</link><guid isPermaLink="false">2f5401a3-206c-4e83-9d88-7cbc63958609</guid><category>python</category><category>pip</category><category>virtualenv</category><dc:creator>Captain Vincent</dc:creator><pubDate>Wed, 24 Feb 2016 18:07:00 GMT</pubDate><content:encoded>&lt;p&gt;剛開始接觸 Python 的時候, 最先了解到的是開發者社群的貢獻, 有別於 C/C++ 這類型語言給我的感覺, 在開發上使用第三方的函式庫, 是相當方便以及普遍的事情。&lt;/p&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;&lt;strong&gt;&lt;a href="https://pypi.python.org/pypi"&gt;Python Package Index (PyPI)&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;
-  
-  &lt;p&gt;PyPI is the default Package Index for the Python community. It is open to all Python developers to consume and distribute their distributions.&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;早期 Python 在套件的安裝上有數種工具可以選擇, 不過目前比較主流的是透過 &lt;strong&gt;PIP&lt;/strong&gt; 來安裝套件 (搜尋、安裝已經建立在 PyPI 上的套件), 這邊會先建議在開始安裝其它套件之前, 可以先安裝名為 &lt;strong&gt;virtualenv&lt;/strong&gt;, 這個用來建立獨立 python 執行環境的套件, 之後就可以愉快體驗 &lt;del&gt;也不用擔心系統髒髒的&lt;/del&gt;。&lt;/p&gt;
-
-&lt;p&gt;安裝方式很簡單, 如下&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class="language- language-bash"&gt;pip install virtualenv  
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;首先透過 pip 安裝 virtualenv, 安裝完後可以執行的命令如下&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class="language- language-bash"&gt;virtualenv [ENVNAME]  
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;在當前目錄底下建立一個資料夾, 裡面會存放可獨立運行的 python 執行環境&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class="language- language-bash"&gt;cd [ENVNAME]  
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;移動至該路徑下&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class="language- language-bash"&gt;source bin/activate  
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;啟用這個執行環境, 啟用後的效果包含之後安裝的套件會在此路徑下, 以及執行的 python 程式會使用此路徑下的 library&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class="language- language-bash"&gt;deactivate  
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;使用完畢後可以退出這個虛擬環境, 嗯~ 系統除了多了這個工作路徑的資料夾其他依舊美好。&lt;/p&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;補充&lt;/p&gt;
-  
-  &lt;p&gt;在虛擬環境的管理上其實也有套件可以幫忙, 好處是不會讓建立虛擬環境的資料夾分散在各處 (集中放置)、切換流程更加便利, 這邊要介紹的就是透過 &lt;a href="http://virtualenvwrapper.readthedocs.org/en/latest/index.html"&gt;&lt;strong&gt;virtualenvwrapper&lt;/strong&gt;&lt;/a&gt; 來處理&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;pre&gt;&lt;code class="language- language-bash"&gt;pip install virtualenvwrapper  
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;安裝套件方式一樣是透過 pip&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;export WORKON_HOME=$HOME/PyEnv  
-export PROJECT_HOME=$HOME/Devel  
-source /usr/local/bin/virtualenvwrapper.sh  
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;將以上貼入 .bashrc or .zshrc 檔 (是根據你所使用的 Shell 預設會開啟時會載入的 rc 檔)&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;WORKON_HOME 是虛擬環境配置的路徑&lt;/li&gt;
-&lt;li&gt;PROJECT_HOME 暫時用不到&lt;/li&gt;
-&lt;li&gt;最後 source 腳本&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;介紹常用的功能&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class="language- language-bash"&gt;mkvirtualenv [-i package] [-r requirements_file] [virtualenv options] [ENVNAME]  
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;建立虛擬環境&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class="language- language-bash"&gt;lsvirtualenv [-b] [-l] [-h]  
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;列出存在的虛擬環境&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class="language- language-bash"&gt;rmvirtualenv [ENVNAME]  
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;移除虛擬環境&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class="language- language-bash"&gt;$ workon [ENVNAME]
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;啟動虛擬環境&lt;/p&gt;
-
-&lt;p&gt;最後退出虛擬環境的方式一樣是用 &lt;code&gt;deactivate&lt;/code&gt;。&lt;/p&gt;</content:encoded></item></channel></rss>
+&lt;p&gt;(最後兩章的翻譯讀起來有點怪, 加上應用層面比較難參考, 就整理到這邊吧 : ) 收工~)&lt;/p&gt;</content:encoded></item></channel></rss>
