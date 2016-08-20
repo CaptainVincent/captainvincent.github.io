@@ -1,6 +1,130 @@
-<rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:media="http://search.yahoo.com/mrss/" version="2.0"><channel><title>Hello World! I'm Vincent</title><description>Thoughts, stories and ideas.</description><link>http://captainvincent.github.io/</link><generator>Ghost 0.7</generator><lastBuildDate>Tue, 21 Jun 2016 14:41:53 GMT</lastBuildDate><atom:link href="http://captainvincent.github.io/rss/" rel="self" type="application/rss+xml"/><ttl>60</ttl><item><title>Machine Learning Foundations 機器學習基石 (課程筆記)</title><description>&lt;blockquote&gt;
+<rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:media="http://search.yahoo.com/mrss/" version="2.0"><channel><title>Hello World! I'm Vincent</title><description>Thoughts, stories and ideas.</description><link>http://captainvincent.github.io/</link><generator>Ghost 0.7</generator><lastBuildDate>Sat, 20 Aug 2016 20:53:13 GMT</lastBuildDate><atom:link href="http://captainvincent.github.io/rss/" rel="self" type="application/rss+xml"/><ttl>60</ttl><item><title>2016 COSCUP Day - 1</title><description>&lt;blockquote&gt;
+  &lt;p&gt;本篇是筆者今年參加 COSCUP 不負責任、不引戰的個人摘要筆記與心得文。&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;&lt;img src="https://c8.staticflickr.com/9/8293/29037136191_aa48f5b26e.jpg" alt="Day 1"&gt;&lt;/p&gt;
+
+&lt;h3 id="llvm"&gt;LLVM框架由淺入淺&lt;/h3&gt;
+
+&lt;p&gt;全體共同議程, 介紹一些由高階語言轉成 machine code 的幾個環節如何拆分, 引入介紹透過 LLVM 的框架標準化這幾個環節, 讓對編譯器有興趣的使用者可以自行串接 LLVM IR 做各種調配。&lt;/p&gt;
+
+&lt;h3 id="mculightweightjavascriptengine"&gt;MCU 與 lightweight javascript engine 的邂逅&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="http://sssslide.com/speakerdeck.com/iamblue/mcu-yu-lightweight-javascript-engine-de-xie-hou"&gt;講者之前相同題目的 Slide&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://www.youtube.com/watch?v=n3NY_2RPAl0"&gt;講者之前相同題目的影片&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;介紹在 MCU 終端的嵌入式硬體上執行 JS (相較於 MPU 的 device 會帶起較完整的系統並具備較高規格的硬體), 最早期的啟發來自於基於 Tiny.js 開發的 Espruino, 原理是邊 parse 編解析 (但不構成 AST), 陸陸續續也出現一些針對物聯網嚴苛 device 條件所產生的 engine 設計,&lt;/p&gt;</description><link>http://captainvincent.github.io/2016-coscup-day-1/</link><guid isPermaLink="false">a09358a9-97d5-48e3-b5de-26bc396ce87a</guid><dc:creator>Captain Vincent</dc:creator><pubDate>Fri, 19 Aug 2016 23:27:03 GMT</pubDate><content:encoded>&lt;blockquote&gt;
+  &lt;p&gt;本篇是筆者今年參加 COSCUP 不負責任、不引戰的個人摘要筆記與心得文。&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;&lt;img src="https://c8.staticflickr.com/9/8293/29037136191_aa48f5b26e.jpg" alt="Day 1"&gt;&lt;/p&gt;
+
+&lt;h3 id="llvm"&gt;LLVM框架由淺入淺&lt;/h3&gt;
+
+&lt;p&gt;全體共同議程, 介紹一些由高階語言轉成 machine code 的幾個環節如何拆分, 引入介紹透過 LLVM 的框架標準化這幾個環節, 讓對編譯器有興趣的使用者可以自行串接 LLVM IR 做各種調配。&lt;/p&gt;
+
+&lt;h3 id="mculightweightjavascriptengine"&gt;MCU 與 lightweight javascript engine 的邂逅&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="http://sssslide.com/speakerdeck.com/iamblue/mcu-yu-lightweight-javascript-engine-de-xie-hou"&gt;講者之前相同題目的 Slide&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://www.youtube.com/watch?v=n3NY_2RPAl0"&gt;講者之前相同題目的影片&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;介紹在 MCU 終端的嵌入式硬體上執行 JS (相較於 MPU 的 device 會帶起較完整的系統並具備較高規格的硬體), 最早期的啟發來自於基於 Tiny.js 開發的 Espruino, 原理是邊 parse 編解析 (但不構成 AST), 陸陸續續也出現一些針對物聯網嚴苛 device 條件所產生的 engine 設計, 最後講者是透過去封裝一層名為 Microlattice.JS 的 interface 去使用 jerryscript (lightweight JS engine), 建構在freeRTOS 上。&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;因為設備問題, 所以 talk 只進行到一半, 剩下部分需參考講者之前演講資訊。&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h3 id="freebirdjs"&gt;物聯網不滿足 - 自由管理物聯網裝置和溝通的 freebird.js&lt;/h3&gt;
+
+&lt;p&gt;從物聯網的一些基礎介紹起, 帶起要解決的問題, 主要是破碎的溝通方式 (同質、異質網路的相容性), 雖有 IFTTT 的解決方案(?), 但可能會導致 device 之間溝通的 latency 過長, 再來是想建立有系統的方式解決溝通問題 (因為從上層到底層都有問題要解決), 而開源計畫的 freebird.js 就是要解決 相容 以及 快速開發 IoT 應用的法門之一。&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;精神就是幫開發者做掉一些 dirty job, 讓開發者可以更容易地進入物聯網的, 但目前 protocol、晶片 driver 推陳出新, 仍須仰賴推廣讓開發者共同參與。 (另外 freebird.js 尚未 release 約 10~11 月)&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h3 id="log"&gt;萬事萬物皆是 Log&lt;/h3&gt;
+
+&lt;p&gt;&lt;a href="https://medium.com/@poga/%E8%90%AC%E4%BA%8B%E8%90%AC%E7%89%A9%E7%9A%86%E6%98%AF-log-%E7%B3%BB%E7%B5%B1%E6%9E%B6%E6%A7%8B%E4%B9%9F%E4%BE%86%E9%BB%9E%E7%A7%91%E6%99%AE-caf3029359f8#.y9qlju1iz"&gt;作者提供的逐字稿&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Determinism 相同的過程 = 相同的結果 (讓系統可以如此般趨於穩定的境界), 所以在設計系統架構時試著先用 log 去表示。&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;讓會眾可以安心抓神奇寶貝的講者 (?)&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h3 id="opensourcedevops"&gt;Open Source 的 DevOps 工具箱&lt;/h3&gt;
+
+&lt;p&gt;&lt;a href="https://onedrive.live.com/view.aspx?resid=449602EB8FBEC303!2399&amp;amp;ithint=file%2cpptx&amp;amp;app=PowerPoint&amp;amp;authkey=!ANC0p7Yoi51Wu9E"&gt;講者投影片&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;精神在於建立一種文化, 介紹常見的軟體工程在開發時應有的配置 (列舉可用的 open source 工具)。&lt;/p&gt;
+
+&lt;h3 id=""&gt;寫出高性能的服務與應用。那些你沒想過的事！&lt;/h3&gt;
+
+&lt;p&gt;全體共同議程, 比較偏向大學的 計算機組織 與 作業系統該有知識 (?), 算是溫故為主的內容。&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;總結&lt;/p&gt;
+  
+  &lt;p&gt;COSCUP 的伙食不錯, &lt;del&gt;中研院 電擊獸 很多&lt;/del&gt;, 跟其他主題更明確的聚會相比, 感覺準備的內容有比較多一點的學生感, 引用朋友的見解, 來參加聚會聽 talk 只是配菜, 重點在於 要多認識些人 或是 上台當講者, 筆者默默期許自己。&lt;/p&gt;
+&lt;/blockquote&gt;</content:encoded></item><item><title>Movie - The Weather Man (2005)</title><description>&lt;h2 id=""&gt;成年人的電影, 寓意深遠的對白&lt;/h2&gt;
+
+&lt;p&gt;Michael Caine 還真是適合扮演智慧的長者, 如同黑暗騎士 (Dark Knight) 中管家阿福 (Alfred) 的設定, 在榮格心理學裡智慧老人的化身。&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Robert Spritzel&lt;/strong&gt;: David, sacrifice is... to get anything of value, you have to sacrifice.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Dave Spritz&lt;/strong&gt;: I know that dad, but I think that if we continue down this road, it's gonna be too detrimental for the kids.&lt;/p&gt;</description><link>http://captainvincent.github.io/the-weather-man-2005/</link><guid isPermaLink="false">4a31bf6f-0539-4382-9b4e-68d0fda78a20</guid><dc:creator>Captain Vincent</dc:creator><pubDate>Tue, 05 Jul 2016 10:44:03 GMT</pubDate><content:encoded>&lt;h2 id=""&gt;成年人的電影, 寓意深遠的對白&lt;/h2&gt;
+
+&lt;p&gt;Michael Caine 還真是適合扮演智慧的長者, 如同黑暗騎士 (Dark Knight) 中管家阿福 (Alfred) 的設定, 在榮格心理學裡智慧老人的化身。&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Robert Spritzel&lt;/strong&gt;: David, sacrifice is... to get anything of value, you have to sacrifice.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Dave Spritz&lt;/strong&gt;: I know that dad, but I think that if we continue down this road, it's gonna be too detrimental for the kids. It's just too hard.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Robert Spritzel&lt;/strong&gt;: Do you know that the harder thing to do and the right thing to do are usually the same thing? Nothing that has meaning is easy. &lt;strong&gt;"Easy" doesn't enter into grown-up life.&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href="http://www.imdb.com/title/tt0384680/quotes"&gt;Quotes From Here&lt;/a&gt;&lt;/p&gt;</content:encoded></item><item><title>Work On TensorFlow</title><description>&lt;blockquote&gt;
+  &lt;p&gt;本篇為透過修習 機器學習 課程後進一步的實作練習紀錄。 &lt;a href="http://wiki.jikexueyuan.com/project/tensorflow-zh/"&gt;簡體參考文獻&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h2 id="introduction"&gt;Introduction&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href="https://www.tensorflow.org/"&gt;TensorFlow&lt;/a&gt; 為一套由 Google 所提供的開源機器學習系統, 目前的版本號為 r0.9。&lt;/p&gt;
+
+&lt;h4 id="install"&gt;Install&lt;/h4&gt;
+
+&lt;p&gt;先從 &lt;a href="https://www.tensorflow.org/versions/r0.9/get_started/os_setup.html#pip-installation"&gt;參考列表&lt;/a&gt; 上選擇合適的版本, 這邊除了使用到 GPU 的版本, 其餘在安裝方式雷同。&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class="language- language-bash"&gt;export TF_BINARY_URL=https://storage.googleapis.com/tensorflow/mac/tensorflow-0.9.0rc0-py2-none-any.whl  
+sudo pip install --upgrade $TF_BINARY_URL  
+&lt;/code&gt;&lt;/pre&gt;</description><link>http://captainvincent.github.io/work-on-tensorflow/</link><guid isPermaLink="false">44af6ff1-7a3b-4226-a867-c8beb53f76b4</guid><dc:creator>Captain Vincent</dc:creator><pubDate>Thu, 23 Jun 2016 12:20:46 GMT</pubDate><content:encoded>&lt;blockquote&gt;
+  &lt;p&gt;本篇為透過修習 機器學習 課程後進一步的實作練習紀錄。 &lt;a href="http://wiki.jikexueyuan.com/project/tensorflow-zh/"&gt;簡體參考文獻&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h2 id="introduction"&gt;Introduction&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href="https://www.tensorflow.org/"&gt;TensorFlow&lt;/a&gt; 為一套由 Google 所提供的開源機器學習系統, 目前的版本號為 r0.9。&lt;/p&gt;
+
+&lt;h4 id="install"&gt;Install&lt;/h4&gt;
+
+&lt;p&gt;先從 &lt;a href="https://www.tensorflow.org/versions/r0.9/get_started/os_setup.html#pip-installation"&gt;參考列表&lt;/a&gt; 上選擇合適的版本, 這邊除了使用到 GPU 的版本, 其餘在安裝方式雷同。&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class="language- language-bash"&gt;export TF_BINARY_URL=https://storage.googleapis.com/tensorflow/mac/tensorflow-0.9.0rc0-py2-none-any.whl  
+sudo pip install --upgrade $TF_BINARY_URL  
+&lt;/code&gt;&lt;/pre&gt;</content:encoded></item><item><title>Machine Learning Foundations 機器學習基石 (課程筆記)</title><description>&lt;blockquote&gt;
   &lt;p&gt;由台大資工系 副教授 林軒田 提供的開放式課程, 關於教材內容皆可於 &lt;a href="https://www.youtube.com/playlist?list=PLXVfgk9fNX2I7tB6oIINGBmW50rrmFTqf"&gt;Youtube教學影片&lt;/a&gt; 及 &lt;a href="http://www.csie.ntu.edu.tw/~htlin/mooc/"&gt;投影片下載網址&lt;/a&gt; 取得。&lt;/p&gt;
 &lt;/blockquote&gt;
+
+&lt;h3 id="gitbookhttpswwwgitbookcombookcaptainvincentmachinelearningfoundationsdetails"&gt;&lt;a href="https://www.gitbook.com/book/captainvincent/machine-learning-foundations/details"&gt;&lt;strong&gt;Git Book&lt;/strong&gt;傳送門&lt;/a&gt;&lt;/h3&gt;
+
+&lt;p&gt;隨著文章的編寫, 發現用 Blog 單篇文章的形式呈現會讓整體知識的結構太過於線性, 所以重頭使用 Gitbook 編寫, 更完整的學習筆記可以前往參考, 這邊僅提供一些 Overview。&lt;/p&gt;
+
+&lt;hr&gt;
+
+&lt;p&gt;以下尚未整理, 請直接參閱 gitbook 最新更新。&lt;/p&gt;
 
 &lt;h2 id="introduction"&gt;Introduction&lt;/h2&gt;
 
@@ -19,17 +143,17 @@
 
 &lt;ul&gt;
 &lt;li&gt;具備 可理解的特徵 以及 可供量化評估改進的結果&lt;/li&gt;
-&lt;li&gt;不容易定義出規則 (容易定義則使用規則撰寫一般的程式處理即可)&lt;/li&gt;
-&lt;li&gt;有資料可供學習&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id="modelcomponent"&gt;Model Component&lt;/h2&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;A&lt;/strong&gt;lgorithm, learning algorithm 為挑選假說的演算法&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;D&lt;/strong&gt;ata Set, D: {(&lt;strong&gt;X&lt;/strong&gt;&lt;sub&gt;1&lt;/sub&gt;,Y&lt;sub&gt;1&lt;/sub&gt;&lt;/li&gt;&lt;/ul&gt;</description><link>http://captainvincent.github.io/machine-learning-foundations-ji-qi-xue-xi-ji-shi-ke-cheng-bi-ji/</link><guid isPermaLink="false">a0ece823-f40e-44e6-8fe7-d8971672558e</guid><dc:creator>Captain Vincent</dc:creator><pubDate>Mon, 20 Jun 2016 11:30:30 GMT</pubDate><content:encoded>&lt;blockquote&gt;
+&lt;li&gt;不容易定義出規則&lt;/li&gt;&lt;/ul&gt;</description><link>http://captainvincent.github.io/machine-learning-foundations-ji-qi-xue-xi-ji-shi-ke-cheng-bi-ji/</link><guid isPermaLink="false">a0ece823-f40e-44e6-8fe7-d8971672558e</guid><dc:creator>Captain Vincent</dc:creator><pubDate>Mon, 20 Jun 2016 11:30:30 GMT</pubDate><content:encoded>&lt;blockquote&gt;
   &lt;p&gt;由台大資工系 副教授 林軒田 提供的開放式課程, 關於教材內容皆可於 &lt;a href="https://www.youtube.com/playlist?list=PLXVfgk9fNX2I7tB6oIINGBmW50rrmFTqf"&gt;Youtube教學影片&lt;/a&gt; 及 &lt;a href="http://www.csie.ntu.edu.tw/~htlin/mooc/"&gt;投影片下載網址&lt;/a&gt; 取得。&lt;/p&gt;
 &lt;/blockquote&gt;
+
+&lt;h3 id="gitbookhttpswwwgitbookcombookcaptainvincentmachinelearningfoundationsdetails"&gt;&lt;a href="https://www.gitbook.com/book/captainvincent/machine-learning-foundations/details"&gt;&lt;strong&gt;Git Book&lt;/strong&gt;傳送門&lt;/a&gt;&lt;/h3&gt;
+
+&lt;p&gt;隨著文章的編寫, 發現用 Blog 單篇文章的形式呈現會讓整體知識的結構太過於線性, 所以重頭使用 Gitbook 編寫, 更完整的學習筆記可以前往參考, 這邊僅提供一些 Overview。&lt;/p&gt;
+
+&lt;hr&gt;
+
+&lt;p&gt;以下尚未整理, 請直接參閱 gitbook 最新更新。&lt;/p&gt;
 
 &lt;h2 id="introduction"&gt;Introduction&lt;/h2&gt;
 
@@ -83,19 +207,19 @@
 
 &lt;p&gt;這邊介紹一種簡單的 Hypothesis Set 的定義方式稱 "Perceptron" 來求一個是非題的解, 數學上的符號如下&lt;/p&gt;
 
-&lt;p&gt;Σ &lt;sub&gt;(i=1~n)&lt;/sub&gt; w&lt;sub&gt;i&lt;/sub&gt;x&lt;sub&gt;i&lt;/sub&gt; (再定義出一個 threshold 來二分這是非題的結果, y = {+1 , -1})&lt;/p&gt;
+&lt;p&gt;Σ &lt;sub&gt;(i=1~d)&lt;/sub&gt; w&lt;sub&gt;i&lt;/sub&gt;x&lt;sub&gt;i&lt;/sub&gt; (再定義出一個 threshold 來二分這是非題的結果, y = {+1 , -1})&lt;/p&gt;
 
-&lt;p&gt;h(x) = sign ( Σ &lt;sub&gt;(i=1~n)&lt;/sub&gt; w&lt;sub&gt;i&lt;/sub&gt;x&lt;sub&gt;i&lt;/sub&gt; - threshold ) &lt;/p&gt;
+&lt;p&gt;h(x) = sign ( Σ &lt;sub&gt;(i=1~d)&lt;/sub&gt; w&lt;sub&gt;i&lt;/sub&gt;x&lt;sub&gt;i&lt;/sub&gt; - threshold ) &lt;/p&gt;
 
 &lt;p&gt;令 w&lt;sub&gt;0&lt;/sub&gt; 為 -threshold、x&lt;sub&gt;0&lt;/sub&gt; 為 1, 則化簡如下&lt;/p&gt;
 
-&lt;p&gt;h(x) = sign ( Σ &lt;sub&gt;(i=0~n)&lt;/sub&gt; w&lt;sub&gt;i&lt;/sub&gt;x&lt;sub&gt;i&lt;/sub&gt; ) = sign (&lt;strong&gt;w&lt;/strong&gt;&lt;sup&gt;T&lt;/sup&gt;&lt;strong&gt;x&lt;/strong&gt;)&lt;/p&gt;
+&lt;p&gt;h(x) = sign ( Σ &lt;sub&gt;(i=0~d)&lt;/sub&gt; w&lt;sub&gt;i&lt;/sub&gt;x&lt;sub&gt;i&lt;/sub&gt; ) = sign (&lt;strong&gt;w&lt;/strong&gt;&lt;sup&gt;T&lt;/sup&gt;&lt;strong&gt;x&lt;/strong&gt;)&lt;/p&gt;
 
 &lt;blockquote&gt;
-  &lt;p&gt;相當於取 w 與 x 兩個 n+1 維的向量內積。&lt;/p&gt;
+  &lt;p&gt;相當於取 w 與 x 兩個 d+1 維的向量內積。&lt;/p&gt;
 &lt;/blockquote&gt;
 
-&lt;p&gt;目標是從 H 中挑選出最接近 f 的 g, 而這最接近的定義為在已經看過的資料中可以產出愈相同的 output , 但實際上整個 H 是一個無限大的集合, 所以 &lt;strong&gt;PLA&lt;/strong&gt; (Perceptron Learning Algorithm) 的想法是嘗試先從中挑選出第一個 g&lt;sub&gt;0&lt;/sub&gt; (或稱 &lt;strong&gt;w&lt;/strong&gt;&lt;sub&gt;0&lt;/sub&gt;), 並不斷的在錯誤中修正&lt;/p&gt;
+&lt;p&gt;目標是從 H 中挑選出最接近 f 的 g, 而這最接近的定義為在已經看過的資料中可以產出愈相同的 output , 但實際上整個 H 是一個無限大的集合, 所以 &lt;strong&gt;PLA&lt;/strong&gt; (Perceptron Learning Algorithm) 的想法是嘗試先從中挑選出第一個 g&lt;sub&gt;0&lt;/sub&gt; (或稱 &lt;strong&gt;w&lt;/strong&gt;&lt;sub&gt;0&lt;/sub&gt;), 並不斷的在錯誤中修正。&lt;/p&gt;
 
 &lt;h5 id=""&gt;演算法&lt;/h5&gt;
 
@@ -186,6 +310,8 @@ Until no more mistakes.&lt;/p&gt;
 
 &lt;h2 id=""&gt;機器學習的分類&lt;/h2&gt;
 
+&lt;p&gt;在整個學習的 Model 中針對控制變因的種類區分定義其特性。&lt;/p&gt;
+
 &lt;h5 id="ysubnsub"&gt;以提供不同 y&lt;sub&gt;n&lt;/sub&gt; 形式區分的學習方式&lt;/h5&gt;
 
 &lt;ul&gt;
@@ -209,7 +335,136 @@ Until no more mistakes.&lt;/p&gt;
 &lt;li&gt;Concrete Features 具體有關聯性的特徵 (需有 domain knowledge)&lt;/li&gt;
 &lt;li&gt;Raw Features 通常需要人或機器建立、抽取出具體的特徵, 以避免原始資料對於問題過於抽象&lt;/li&gt;
 &lt;li&gt;Abstract Features 輸入資料完全不具任何意義, 同 raw features 一樣需要建立出特徵&lt;/li&gt;
-&lt;/ul&gt;</content:encoded></item><item><title>丹尼爾博士 跑步方程式 筆記</title><description>&lt;blockquote&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=""&gt;機器學習的限制&lt;/h2&gt;
+
+&lt;p&gt;最根本的現實是機器學習即便挑選的演算法以及假說設定的再好, 最終也只能代表 inside &lt;strong&gt;D&lt;/strong&gt;ata 能有不錯的表現, 關於 outside &lt;strong&gt;D&lt;/strong&gt; 我們都是未知, 接下來就是對於我們是否能增加一些條件, 來對於這些未知的結果得到較為可靠的推論 (透過數學的工具)。&lt;/p&gt;
+
+&lt;h5 id="topicihoeffdingsinequality"&gt;Topic I (Hoeffding's Inequality)&lt;/h5&gt;
+
+&lt;p&gt;&lt;strong&gt;Sample (取樣) 的代表性&lt;/strong&gt;, 假設取樣中某特徵呈現的機率為 ν 實際機率為 μ, 則兩者存在以下不等式的關係&lt;/p&gt;
+
+&lt;p&gt;P [|ν - μ| &gt; ɛ] ≤ 2 exp (-2ɛ&lt;sup&gt;2&lt;/sup&gt;N), ɛ 為誤差範圍、N 為取樣數&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;誤差愈大 或 取樣數愈大, 不等式右項就愈小, 表示發生的可能性愈低&lt;/li&gt;
+&lt;li&gt;ν = μ 是 PAC (&lt;strong&gt;P&lt;/strong&gt;robably &lt;strong&gt;A&lt;/strong&gt;pproximately &lt;strong&gt;C&lt;/strong&gt;orrect) 很大的機會是對的, 但還是有例外&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h5 id="topicii"&gt;Topic II&lt;/h5&gt;
+
+&lt;p&gt;假定透過相同的 P 機率分佈作為產生 訓練資料(in) 及 測試資料(out) 的樣本, 這邊機率的意涵為 &lt;strong&gt;D&lt;/strong&gt;ata 透過特定 &lt;strong&gt;H&lt;/strong&gt;ypothesis 產生對或錯的機率 (使用 &lt;strong&gt;E&lt;/strong&gt;rror 作為錯誤的機率)。&lt;/p&gt;
+
+&lt;p&gt;P [|E&lt;sub&gt;in&lt;/sub&gt;(h) - E&lt;sub&gt;out&lt;/sub&gt;(h)| &gt; ɛ] ≤ 2 exp (-2ɛ&lt;sup&gt;2&lt;/sup&gt;N)&lt;/p&gt;
+
+&lt;p&gt;所以當取樣夠多時&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;E&lt;sub&gt;in&lt;/sub&gt;(h) ≈ E&lt;sub&gt;out&lt;/sub&gt;(h)&lt;/li&gt;
+&lt;li&gt;又當 E&lt;sub&gt;in&lt;/sub&gt;(h) 夠小時, g = f is PAC (&lt;strong&gt;P&lt;/strong&gt;robably &lt;strong&gt;A&lt;/strong&gt;pproximately &lt;strong&gt;C&lt;/strong&gt;orrect)&lt;/li&gt;
+&lt;li&gt;說明了如何驗證一個 Hypothesis 的好壞, 但不保證被 Algorithm 挑選到&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h5 id="topiciiipickalgorithm"&gt;Topic III (Pick Algorithm)&lt;/h5&gt;
+
+&lt;p&gt;挑選 Hypothesis 的限制, E&lt;sub&gt;in&lt;/sub&gt;(h) 最低不一定代表是最佳, 因為 sample 到不好的資料會讓 E&lt;sub&gt;in&lt;/sub&gt;(h)、E&lt;sub&gt;out&lt;/sub&gt;(h) 相距很遠, 當有選擇時, 會讓選出錯誤的 Hypothesis 機率增加 (更容易選到 overfitting 的假說)。&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;令有限 M 種的 Hypothesis&lt;/strong&gt;, 由 Topic I &lt;strong&gt;Hoeffding's Inequality&lt;/strong&gt; 知道個別 Hypothesis 選中不好的資料 (E&lt;sub&gt;in&lt;/sub&gt;(h)、E&lt;sub&gt;out&lt;/sub&gt;(h) 相距很遠) 的機率不高, 所以 Σ &lt;sub&gt;(i=0~M) &lt;/sub&gt;P&lt;sub&gt;D&lt;/sub&gt;[BAD of D]≤ 2 M exp (-2ɛ&lt;sup&gt;2&lt;/sup&gt;N), 可得知當取樣個數夠多時 且 有限個數 M 的 &lt;strong&gt;H&lt;/strong&gt;, E&lt;sub&gt;in&lt;/sub&gt;(g) ≈ E&lt;sub&gt;out&lt;/sub&gt;(g) is PAC 一樣會成立。&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;Ｍ 的挑選是個取捨, 過小的話可以讓選中不好的 g 機會降低, 但是可以選的選項太少反而不一定存在可以挑出夠小的 E&lt;sub&gt;in&lt;/sub&gt;(h), 太大的 M 則是讓選出不好的 g 機率增加。&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;&lt;img src="https://c3.staticflickr.com/8/7296/27787727066_f067f65a94_z.jpg" alt="學習架構"&gt;
+&lt;center&gt;(學習架構圖)&lt;/center&gt;&lt;/p&gt;
+
+&lt;h5 id="topicivhypothesisset"&gt;Topic IV 如何收斂 Hypothesis Set&lt;/h5&gt;
+
+&lt;p&gt;∞ 多個 Hypothesis 會讓不等式的 Upper Bound 沒有意義, 原因在於 Set 之中其實存在許多相似重疊的 Hypothesis, 接著我們要收斂 Set 裡的個數, 先嘗試對 Hypothesis 做分類, 方法是從 &lt;strong&gt;D&lt;/strong&gt;ata 的角度看待這些 Hypothesis 是將其歸類為何 ex. binary classification output y = {+1, -1}。&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Effective Number of Lines&lt;/strong&gt; 定義為將 output 劃分不同種類的可能性 (≤ 2&lt;sup&gt;N&lt;/sup&gt;)&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;僅一筆資料時, 存在兩種 分割線／高維平面 將其 output 分為 +1 或 -1&lt;/li&gt;
+&lt;li&gt;二筆資料時, 存在四種 分割線／高維平面 將這兩個資料特徵向量 output 分為 +1 或 -1&lt;/li&gt;
+&lt;li&gt;三筆資料時, 最多存在八種 分割線／高維平面, 但如果三點共線時則僅六種 (+1,-1,+1), (-1,+1,-1) 的 分割線／高維平面 不存在&lt;/li&gt;
+&lt;li&gt;四筆資料時, 共平面時 (想像成二維), 則最多只有 14 種 (對角線為相同 output 的分割線／高維平面 不存在)&lt;/li&gt;
+&lt;li&gt;五筆資料時, 共平面時 (想像成二維), 則最多只有 22 種&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;strong&gt;Dichotomy&lt;/strong&gt; 指透過 Hypothesis 對所有 x (input data) 運算的結果, Dichotomies H(x&lt;sub&gt;1&lt;/sub&gt;, x&lt;sub&gt;2&lt;/sub&gt;, ... x&lt;sub&gt;N&lt;/sub&gt;) 表示這些不同 &lt;strong&gt;結果的集合&lt;/strong&gt;, 集合內個數上限稱為 Effective Number of Lines。&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Target&lt;/strong&gt; 目標在於找到一個方法, 可以有效的將 ∞ 多個 Hypothesis 找到分類後的個數可以 &amp;lt;&amp;lt; 2&lt;sup&gt;N&lt;/sup&gt; (大於 2&lt;sup&gt;N&lt;/sup&gt; 會讓 Top III 的不等式右項無法收斂), 而這個目標的關係式稱作 &lt;/p&gt;
+
+&lt;p&gt;Growth Function: m&lt;sub&gt;H&lt;/sub&gt;(N) = max | H(x&lt;sub&gt;1&lt;/sub&gt;, x&lt;sub&gt;2&lt;/sub&gt;, ... x&lt;sub&gt;N&lt;/sub&gt;) | ≤ 2&lt;sup&gt;N&lt;/sup&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Break Point&lt;/strong&gt; 第一個資料點 K 使得 m&lt;sub&gt;H&lt;/sub&gt; (K) &amp;lt; 2&lt;sup&gt;K&lt;/sup&gt;, 在  K &amp;lt; N 皆會成立。&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Example&lt;/strong&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Growth Function for Positive Rays (大於某個 threshold 結果為正), 則 ∞ 的 H 為 h(x) = sign( x - threshold ), 但 Growth Function 為 m&lt;sub&gt;H&lt;/sub&gt;(N) = N+1, 因為僅有 N+1 種可以放置 threshold 的組合。&lt;/li&gt;
+&lt;li&gt;Growth Function for Positive Intervals (在某個區間內時, 結果為正), 則 ∞ 的 H 為 h(x) = +1 if x ∈ [l, r), -1 otherwise, 但 Growth Function 為 m&lt;sub&gt;H&lt;/sub&gt;(N) = (C N+1 取 2) + 1 (all -1 的 case)。&lt;/li&gt;
+&lt;li&gt;Growth Function for Convex Sets (凸多邊形內的區域結果為正), 其中一種可能是將所有資料排成圓形, 並將結果為正的點連線成多邊形, 此時 2&lt;sup&gt;N&lt;/sup&gt; 所有種排列皆可以產生, 因為 Growth Function 是取 max, 所以僅需要造出這組即可得知 Growth Function 為 m&lt;sub&gt;H&lt;/sub&gt;(N) = 2&lt;sup&gt;N&lt;/sup&gt;。
+
+
+&lt;blockquote&gt;
+  &lt;p&gt;成長函數為 2&lt;sup&gt;N&lt;/sup&gt; 的這 N 個 input 被稱作 &lt;strong&gt;Shattered&lt;/strong&gt;。&lt;/p&gt;&lt;/blockquote&gt;&lt;/li&gt;
+  &lt;/ul&gt;
+  &lt;strong&gt;Conjecture 猜想&lt;/strong&gt;&lt;p&gt;&lt;/p&gt;
+
+
+&lt;ul&gt;
+&lt;li&gt;No break point: m&lt;sub&gt;H&lt;/sub&gt;(K) = 2&lt;sup&gt;N&lt;/sup&gt;&lt;/li&gt;
+&lt;li&gt;Exist break point K: m&lt;sub&gt;H&lt;/sub&gt;(K) = O(N&lt;sup&gt;K-1&lt;/sup&gt;) 之後會證明&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;strong&gt;Proof&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;令 B(N,K) 為 &lt;strong&gt;B&lt;/strong&gt;ounding Function, 其值是要抽象於 Growth Function 外只在乎其 Dichotomies 上限, 解讀為 N 個 input 中任意取 K 項的不同 Dichotomy 個數 (當 K 為 break point 時), 而這邊重點又在於已知任取 K 項時不會 Shattered (種類 &amp;lt; 2&lt;sup&gt;K&lt;/sup&gt;), 那是否能找得出 B(N,K) ≤ 多項式的複雜度 (個數)。 &lt;/p&gt;
+
+&lt;p&gt;B(N,K) = 2α + β (拆分為 α 表示 Dichotomy 中僅最末項不同的個數, β 是剩餘個數)&lt;/p&gt;
+
+&lt;p&gt;α + β ≤ B(N-1,K) (去掉最末項後 &lt;strong&gt;僅&lt;/strong&gt; 留下不同的 Dichotomy 個數, 因為 B(N,K) 告訴我們任 K 項不 Shattered, 所以剩下的項本身也不會 Shattered)&lt;/p&gt;
+
+&lt;p&gt;α ≤ B(N-1,K-1) (若任取 K-1 項會 Shattered = 2&lt;sup&gt;K-1&lt;/sup&gt;, 則加上之前去掉的最末項 =  2&lt;sup&gt;K&lt;/sup&gt;, 與 Bounding Function 定義衝突)&lt;/p&gt;
+
+&lt;p&gt;B(N,K) ≤ B(N-1,K) + B(N-1,K-1) (替換上式可得知)&lt;/p&gt;
+
+&lt;p&gt;&lt;img src="https://c7.staticflickr.com/8/7396/27806904806_dc75eeba71.jpg" alt="Bounding Function"&gt;
+&lt;center&gt;(2D Perceptron Learning Algorithm)&lt;/center&gt;&lt;/p&gt;
+
+&lt;p&gt;透過以上關係式, 可以用數學歸納法證明以下不等式, 而 RHS 的最高項為 N&lt;sup&gt;k-1&lt;/sup&gt;&lt;/p&gt;
+
+&lt;div&gt;  
+\begin{equation}
+  \begin{split}
+B(N,k)\leq \sum_{i=0}^{k-1}\binom {N}{i}  
+\end{split}
+\end{equation}
+&lt;/div&gt;
+
+&lt;p&gt;當 N = 1 時代入很容易得知成立, 假設 N = N' 也成立, 透過以下推導得知 N = N'+1 也會成立, 得證&lt;/p&gt;
+
+&lt;div&gt;  
+\begin{aligned}
+B(N'+1,k) &amp;\leq B(N',k) + B(N',k-1) \\\  
+&amp;\leq \sum_{i=0}^{k-1}\binom{N'}{i}+\sum_{i=0}^{k-2}\binom{N'}{i} \\\
+&amp;=1+\sum_{i=1}^{k-1}\binom{N'}{i}+\sum_{i=1}^{k-1}\binom{N'}{i-1} \\\
+&amp;=1+\sum_{i=1}^{k-1}[\binom{N'}{i}+\binom{N'}{i-1}] \\\
+&amp;=1+\sum_{i=1}^{k-1}\binom{N'+1}{i}=\sum_{i=0}^{k-1}\binom{N'+1}{i}
+\end{aligned}
+&lt;/div&gt;
+
+&lt;p&gt;所以得知, 當 Break Point 存在時, 其 m&lt;sub&gt;H&lt;/sub&gt;(K) 數量跟 N 的關係會是 polynomial (上式其實可以反向再證明 LHS = RHS, 不僅僅是 upper bound)&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;VC Dimension&lt;/strong&gt; (d&lt;sub&gt;vc&lt;/sub&gt;) = 'minimum K' -1&lt;/p&gt;
+
+&lt;h2 id="noise"&gt;Noise&lt;/h2&gt;
+
+&lt;p&gt;Is VC bound work fine  with &lt;strong&gt;Noise&lt;/strong&gt;. &lt;br&gt;
+假設 output 存在一個機率分佈 (含雜訊造成的結果) 稱作 P(y|&lt;strong&gt;x&lt;/strong&gt;) = f(&lt;strong&gt;x&lt;/strong&gt;) + noise, mini-target 的觀念是挑選機率分佈中發生機率較高者為 output, 更進一步說 P(&lt;strong&gt;x&lt;/strong&gt;) 機率高者 (表示 input 常被選中) 時我們更要挑選 mini-target 的 P(y|&lt;strong&gt;x&lt;/strong&gt;)。&lt;/p&gt;</content:encoded></item><item><title>丹尼爾博士 跑步方程式 筆記</title><description>&lt;blockquote&gt;
   &lt;p&gt;原名&lt;/p&gt;
   
   &lt;p&gt;Daniel's Running Formula. - 3rd Edition by &lt;strong&gt;Jack T. Daniels&lt;/strong&gt;&lt;/p&gt;
@@ -1890,587 +2145,4 @@ Person.prototype.out = function(){
   &lt;p&gt;使用方式類似 Google Map 的拖曳操作可以移動畫面, 右鍵可以彈出放大鏡的按鈕, 按壓放大鏡拖曳後可以 Zoom In/Out&lt;/p&gt;
 &lt;/blockquote&gt;
 
-&lt;iframe width="853" height="480" src="https://embed.coggle.it/diagram/Vu5LNj_zpOYo1mzy/739e465141646161dad5c001a099ada2bdb261208d58eeee6ca71408a3c87dfe" frameborder="0" allowfullscreen&gt;&lt;/iframe&gt;</content:encoded></item><item><title>Kelly Formula / 凱利公式 － 風險控管</title><description>&lt;blockquote&gt;
-  &lt;p&gt;投資 vs 投機 vs 賭博, 不管你自認為是使用以上三種策略的那一種人, 今天要介紹的是一門讓你在這條路上可以走得更遠、更久的準則－&lt;strong&gt;Kelly Formula&lt;/strong&gt;, 先來上一堂數學課吧! &lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;h2 id="kellyformula"&gt;Kelly Formula&lt;/h2&gt;
-
-&lt;p&gt;&lt;img src="https://farm2.staticflickr.com/1497/25083691774_dba0e65847_o.jpg" alt="Kelly Formula"&gt;&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;b : 賠率 (獲勝後的報償比上本金的比例, ex. 賭上 1 元, 獲勝可拿回 1+b 元)&lt;/li&gt;
-&lt;li&gt;p : 勝率 (獲勝的機率)&lt;/li&gt;
-&lt;li&gt;q : 敗率 (1-p)&lt;/li&gt;
-&lt;li&gt;f : 為使用現有資金應進行投注的比例&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Kelly Formula 為求最大期望值時, 應投入的資金比例 (其中 b、p、q 皆為不變常數) &lt;br&gt;
-from &lt;a href="https://zh.wikipedia.org/wiki/%E5%87%B1%E5%88%A9%E5%85%AC%E5%BC%8F"&gt;Wiki&lt;/a&gt;  &lt;/p&gt;
-
-&lt;hr&gt;
-
-&lt;h2 id=""&gt;證明&lt;/h2&gt;
-
-&lt;p&gt;&lt;strong&gt;Definition&lt;/strong&gt;&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;X&lt;sub&gt;n&lt;/sub&gt; : 表示 經過 n&lt;/li&gt;&lt;/ul&gt;</description><link>http://captainvincent.github.io/kelly-formula/</link><guid isPermaLink="false">8fbf310e-9b7b-4bac-a24e-c1c22ca661a4</guid><dc:creator>Captain Vincent</dc:creator><pubDate>Fri, 11 Mar 2016 10:57:55 GMT</pubDate><content:encoded>&lt;blockquote&gt;
-  &lt;p&gt;投資 vs 投機 vs 賭博, 不管你自認為是使用以上三種策略的那一種人, 今天要介紹的是一門讓你在這條路上可以走得更遠、更久的準則－&lt;strong&gt;Kelly Formula&lt;/strong&gt;, 先來上一堂數學課吧! &lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;h2 id="kellyformula"&gt;Kelly Formula&lt;/h2&gt;
-
-&lt;p&gt;&lt;img src="https://farm2.staticflickr.com/1497/25083691774_dba0e65847_o.jpg" alt="Kelly Formula"&gt;&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;b : 賠率 (獲勝後的報償比上本金的比例, ex. 賭上 1 元, 獲勝可拿回 1+b 元)&lt;/li&gt;
-&lt;li&gt;p : 勝率 (獲勝的機率)&lt;/li&gt;
-&lt;li&gt;q : 敗率 (1-p)&lt;/li&gt;
-&lt;li&gt;f : 為使用現有資金應進行投注的比例&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Kelly Formula 為求最大期望值時, 應投入的資金比例 (其中 b、p、q 皆為不變常數) &lt;br&gt;
-from &lt;a href="https://zh.wikipedia.org/wiki/%E5%87%B1%E5%88%A9%E5%85%AC%E5%BC%8F"&gt;Wiki&lt;/a&gt;  &lt;/p&gt;
-
-&lt;hr&gt;
-
-&lt;h2 id=""&gt;證明&lt;/h2&gt;
-
-&lt;p&gt;&lt;strong&gt;Definition&lt;/strong&gt;&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;X&lt;sub&gt;n&lt;/sub&gt; : 表示 經過 n 次賭局後所剩的資金 (n=0, 表示初始資金)&lt;/li&gt;
-&lt;li&gt;W&lt;sub&gt;n&lt;/sub&gt; : 表示 經過 n 次賭局, Win 的次數&lt;/li&gt;
-&lt;li&gt;L&lt;sub&gt;n&lt;/sub&gt; : 表示 經過 n 次賭局, Loss 的次數&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;strong&gt;Two Cases&lt;/strong&gt;&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;X&lt;sub&gt;n&lt;/sub&gt; = X&lt;sub&gt;n-1&lt;/sub&gt; ( 1 + bf )
-&lt;br&gt;Win case, 剩餘金額 = 前次金額 * (1 + 賠率*前次投注的比例)  &lt;/li&gt;
-&lt;li&gt;X&lt;sub&gt;n&lt;/sub&gt; = X&lt;sub&gt;n-1&lt;/sub&gt; ( 1 - f )
-&lt;br&gt;Loss case, 剩餘金額 = 前次金額 * (1 - 前次損失的比例)&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;更進一步可以理解&lt;/p&gt;
-
-&lt;p&gt;X&lt;sub&gt;n&lt;/sub&gt; = X&lt;sub&gt;0&lt;/sub&gt; ( 1 - f ) &lt;sup&gt;Ln&lt;/sup&gt; ( 1 + bf ) &lt;sup&gt;Wn&lt;/sup&gt; ... (式1) &lt;br&gt;
-剩餘金額 = 初始金額 * (失敗 case)&lt;sup&gt;失敗次數&lt;/sup&gt; * (勝利 case)&lt;sup&gt;勝利次數&lt;/sup&gt; &lt;/p&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;參考文獻中更進一步的將 Loss Case 中的賠率 (賠給對方), 另外定義為 a, 所以整理得到的公式會如下&lt;/p&gt;
-  
-  &lt;p&gt;X&lt;sub&gt;n&lt;/sub&gt; = X&lt;sub&gt;0&lt;/sub&gt; ( 1 - af ) &lt;sup&gt;Ln&lt;/sup&gt; ( 1 + bf ) &lt;sup&gt;Wn&lt;/sup&gt; ... (式2)&lt;/p&gt;
-  
-  &lt;p&gt;而 (式1) 只是當 a=1 的 special case (表示當輸了時, 會造成該次投注金額全部損失)&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;Reference &lt;a href="https://www.math.washington.edu/~morrow/336_10/papers/jane.pdf"&gt;Betting with the Kelly Criterion&lt;/a&gt;, Jane Hung (June 2,2010)&lt;/p&gt;
-
-&lt;p&gt;這邊先以 (式2) 來求 f 的最佳值, 首先對 &lt;strong&gt;方程式&lt;/strong&gt; 的左右兩側同時&lt;/p&gt;
-
-&lt;ol&gt;
-&lt;li&gt;除以 X&lt;sub&gt;0&lt;/sub&gt;  &lt;/li&gt;
-&lt;li&gt;取 ln (ln = log&lt;sub&gt;e&lt;/sub&gt;) &lt;br&gt;
-因為 ln 為嚴格遞增函數, 所以對 &lt;strong&gt;方程式&lt;/strong&gt; 兩側作用後, 不影響求極大值的條件。&lt;br&gt;
-(若 x&lt;sub&gt;1&lt;/sub&gt;、x&lt;sub&gt;2&lt;/sub&gt; 為實數 且 x&lt;sub&gt;1&lt;/sub&gt;&gt;x&lt;sub&gt;2&lt;/sub&gt;, 則 f(x&lt;sub&gt;1&lt;/sub&gt;) &gt; f(x&lt;sub&gt;2&lt;/sub&gt;)恆成立, 滿足此條件的 f(x) 稱為 &lt;strong&gt;嚴格遞增函數&lt;/strong&gt;)&lt;/li&gt;
-&lt;li&gt;除以 n (當 n&gt;0 時, 也可視為嚴格遞增)&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;p&gt;透過使用下列對數律&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;log&lt;sub&gt;a&lt;/sub&gt; X*Y = log&lt;sub&gt;a&lt;/sub&gt; X + log&lt;sub&gt;a&lt;/sub&gt; Y&lt;/li&gt;
-&lt;li&gt;b * log&lt;sub&gt;a&lt;/sub&gt; X = log&lt;sub&gt;a&lt;/sub&gt; X &lt;sup&gt;b&lt;/sup&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;化簡後如下 ... (式3)
-&lt;img src="https://farm2.staticflickr.com/1669/25690346716_7d44c0666a.jpg" alt="Step1"&gt;&lt;/p&gt;
-
-&lt;p&gt;新定義一個函式為 G(f) = (式3), 因 L&lt;sub&gt;n&lt;/sub&gt; / n = q、W&lt;sub&gt;n&lt;/sub&gt; / n = p (來自於 p、q 本身的定義為勝率跟敗率), 所以得到&lt;/p&gt;
-
-&lt;p&gt;G(f) = q (ln (1-af)) + p (ln (1+bf))&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;目前問題已經轉化為要求 G(f) 的最大值時, f 應該使用多少?&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;這邊一階微分在數學上的意義是斜率, 所以當我們今天要找極大值相當於我們要找出斜率 = 0 的點, 所以我們先找出 G'(f) = 0 的 f 值有哪些? &lt;/p&gt;
-
-&lt;p&gt;使用 &lt;a href="https://en.wikipedia.org/wiki/Chain_rule"&gt;Chain Rule&lt;/a&gt; 技巧可以得到下面結果&lt;/p&gt;
-
-&lt;p&gt;&lt;img src="https://farm2.staticflickr.com/1702/25719192595_02cd415376_n.jpg" alt="Step2"&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;img src="https://farm2.staticflickr.com/1703/25418464200_564ea61514_n.jpg" alt="Step3"&gt;&lt;/p&gt;
-
-&lt;p&gt;因為分母 =\= 0, 所以這邊僅需要求分子 &lt;strong&gt;bp - aq- abf = 0&lt;/strong&gt; 的 f 解, 透過移項後即可得到 G(f) 的極值出現在 f 為何時 (當然這邊其實還要用二階微分來求函數的凹性, 確認求出的 f 值代入 G(f) 是極大還是極小值, 但這邊省略請直接參考 &lt;a href="https://www.math.washington.edu/~morrow/336_10/papers/jane.pdf"&gt;Jane 的文獻&lt;/a&gt;)&lt;/p&gt;
-
-&lt;p&gt;&lt;img src="https://farm2.staticflickr.com/1481/25719324655_119cc96a22_m.jpg" alt="Step4"&gt;&lt;/p&gt;
-
-&lt;p&gt;得到 (式2) 的解後, 就可以知道 (式1) 得到的 Kelly Fromula 僅是當 a 為 1 時的特殊解。&lt;/p&gt;
-
-&lt;p&gt;&lt;a href="https://www.symbolab.com"&gt;推薦Online好用的數學工具&lt;/a&gt;&lt;/p&gt;
-
-&lt;hr&gt;
-
-&lt;h2 id="thestockmarket"&gt;The Stock Market&lt;/h2&gt;
-
-&lt;p&gt;股票市場上的賭局並非使用固定的賠率看待, 所以這邊引入了隨機變數的概念, 用 &lt;strong&gt;X&lt;/strong&gt; 表示每單位可拿回的金額 (相當於之前 Kelly Formula 裡的賠率 b), P(X = s) 則表示當 X 為 s 時發生的機率。&lt;/p&gt;
-
-&lt;p&gt;&lt;a href="http://ccckmit.wikidot.com/st:randomvariable"&gt;隨機變數參考網站&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;又因為今天在設法求出最佳投注資金比例 f 時, 重點不在於整個市場的機率分佈呈現是如何, 所以對機率分佈上做了以下的假設&lt;/p&gt;
-
-&lt;p&gt;&lt;code&gt;P(X = μ + σ) = P(X = μ − σ) = 0.5 ... (式4)&lt;/code&gt;&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;μ 為平均值&lt;/li&gt;
-&lt;li&gt;σ 為標準差&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;strong&gt;而在資金 Y 變化的公式則是由下式表示&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;Y&lt;sub&gt;n&lt;/sub&gt; = Y&lt;sub&gt;n-1&lt;/sub&gt; (1 + (1-f)r + fX), &lt;em&gt;(r 表示 &lt;strong&gt;未&lt;/strong&gt; 進行投注的資金獲得的報償比例)&lt;/em&gt;&lt;/p&gt;
-
-&lt;p&gt;解讀為&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;現有剩餘資金 = 前次剩餘資金*(1 + 未投注市場比例*未投注報償比 + 投注市場比例*投注市場報償比) 
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;當今天進行了 n 次的投注後, 嘗試列出 &lt;strong&gt;現有資金&lt;/strong&gt; 與 &lt;strong&gt;初始資金&lt;/strong&gt; 間的關係, 所以這邊重新做了一次以下的假設, 使得我們經過 n 次投注後得到的總 μ, σ&lt;sup&gt;2&lt;/sup&gt; and r 仍相同 (意味要將 μ, σ&lt;sup&gt;2&lt;/sup&gt; and r 平均分散在 n 次的投注中)&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;p&gt;標準差 σ'
-&lt;img src="https://farm2.staticflickr.com/1651/25203896753_b1333171ea_t.jpg" alt="Step5"&gt;
-(因為要令 σ'&lt;sup&gt;2&lt;/sup&gt; * n = σ&lt;sup&gt;2&lt;/sup&gt;)&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;回報率 μ'
-&lt;img src="https://farm2.staticflickr.com/1692/25830684445_9488841440_t.jpg" alt="Step6"&gt;
-(因為要令 μ'* n = μ)&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;其他投資回報率 r'
-&lt;img src="https://farm2.staticflickr.com/1565/25200176134_81d6ea1236_t.jpg" alt="Step7"&gt;
-(因為要令 r'* n = r)&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;將以上的變量代入一開始假設的機率分佈
-&lt;img src="https://farm2.staticflickr.com/1506/25200176174_cd81ae121e.jpg" alt="Step8"&gt;&lt;/p&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;可以導出 Y&lt;sub&gt;n&lt;/sub&gt; 與 Y&lt;sub&gt;0&lt;/sub&gt; 的關係式
-&lt;img src="https://farm2.staticflickr.com/1579/25202372904_2b2901e3d6_n.jpg" alt="Step9"&gt;&lt;/p&gt;
-
-&lt;p&gt;將 Y&lt;sub&gt;0&lt;/sub&gt; 移項至左式, 再兩邊同取 ln 後
-&lt;img src="https://farm2.staticflickr.com/1520/25738035291_dc778d991b.jpg" alt="Step10"&gt;&lt;/p&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;回到 Kelly Formula 的討論, 我們仍是要求 G&lt;sub&gt;n&lt;/sub&gt;(f) 的極大值出現在 f (資金下注比例) 為何時?&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;在這部分的推導上是先將 G&lt;sub&gt;n&lt;/sub&gt;(f) 以 Maclaurin 級數展開, 並令 n-&gt;∞ 時對多項式來求極值。&lt;/p&gt;
-
-&lt;p&gt;&lt;a data-flickr-embed="true" href="https://www.flickr.com/photos/138186136@N06/25254483243/in/dateposted-public/" title="Step11"&gt;&lt;img src="https://farm2.staticflickr.com/1550/25254483243_fae5dae26b.jpg" align="center" width="375" height="500" alt="Step11"&gt;&lt;/a&gt;&lt;script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"&gt;&lt;/script&gt; &lt;br&gt;
-(詳細的步驟可以參考我的計算過程, 跟 Jane 的有些微出入, 我猜她可能沒有實際推導後面的展開式, 所以才會在微分的結果上寫錯)&lt;/p&gt;
-
-&lt;p&gt;最後我們總算可以導出適用於市場的 Kelly Criterion。
-&lt;img src="https://farm2.staticflickr.com/1518/25883526085_a10a0e006e_o.jpg" alt="Step12"&gt;&lt;/p&gt;</content:encoded></item><item><title>海龜特訓班 筆記 (Mind Map)</title><description>&lt;blockquote&gt;
-  &lt;p&gt;原名&lt;/p&gt;
-  
-  &lt;p&gt;The Complete TurtleTrader by &lt;strong&gt;Michael W. Covel&lt;/strong&gt;&lt;/p&gt;
-  
-  &lt;p&gt;這是一部關於 理察.丹尼斯 (Richard Dennis) 訓練雜牌軍成為百萬交易員的故事(1983-1984)。不過絕大部分都被我在筆記中省略了 (笑)。&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;h2 id=""&gt;由來&lt;/h2&gt;
-
-&lt;p&gt;&lt;strong&gt;海龜&lt;/strong&gt; 是丹尼斯給學生們的暱稱, 曾到新加坡參觀海龜培育場而受到了啟發, 「要像培育海龜般的那樣培育交易員」。&lt;/p&gt;
-
-&lt;h2 id=""&gt;第一部分&lt;/h2&gt;
-
-&lt;p&gt;回顧歷史的鋪成, 介紹實驗的契機、挑選過程與最後成為交易員的海龜們背景多麼隨機性 (就當故事書讀讀吧)。&lt;/p&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;無限多猴子理論 (Infinite Monkey Theory)&lt;/p&gt;
-  
-  &lt;p&gt;只要世界上有無限多個猴子在隨機敲打鍵盤，最後就會有一隻敲出 莎士比亞全集。&lt;/p&gt;
-  
-  &lt;p&gt;(筆者按: 書中只是提到這個理論, 但無論是 丹尼斯 或是 他的實驗伙伴 艾克哈特 &lt;em&gt;(William Eckhardt)&lt;/em&gt; 都不相信這是巧合帶來實驗的結果)&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;h2 id="mindmap"&gt;第二部分 交易策略 (Mind Map)&lt;/h2&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;使用方式類似 Google&lt;/p&gt;&lt;/blockquote&gt;</description><link>http://captainvincent.github.io/hai-gui-te-xun-ban/</link><guid isPermaLink="false">a9e4ea00-cd31-4d7d-923e-76b57ab14b5f</guid><category>順勢</category><category>Richard Dennis</category><category>海龜</category><category>Mind Map</category><category>理查.丹尼斯</category><dc:creator>Captain Vincent</dc:creator><pubDate>Mon, 07 Mar 2016 06:40:10 GMT</pubDate><content:encoded>&lt;blockquote&gt;
-  &lt;p&gt;原名&lt;/p&gt;
-  
-  &lt;p&gt;The Complete TurtleTrader by &lt;strong&gt;Michael W. Covel&lt;/strong&gt;&lt;/p&gt;
-  
-  &lt;p&gt;這是一部關於 理察.丹尼斯 (Richard Dennis) 訓練雜牌軍成為百萬交易員的故事(1983-1984)。不過絕大部分都被我在筆記中省略了 (笑)。&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;h2 id=""&gt;由來&lt;/h2&gt;
-
-&lt;p&gt;&lt;strong&gt;海龜&lt;/strong&gt; 是丹尼斯給學生們的暱稱, 曾到新加坡參觀海龜培育場而受到了啟發, 「要像培育海龜般的那樣培育交易員」。&lt;/p&gt;
-
-&lt;h2 id=""&gt;第一部分&lt;/h2&gt;
-
-&lt;p&gt;回顧歷史的鋪成, 介紹實驗的契機、挑選過程與最後成為交易員的海龜們背景多麼隨機性 (就當故事書讀讀吧)。&lt;/p&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;無限多猴子理論 (Infinite Monkey Theory)&lt;/p&gt;
-  
-  &lt;p&gt;只要世界上有無限多個猴子在隨機敲打鍵盤，最後就會有一隻敲出 莎士比亞全集。&lt;/p&gt;
-  
-  &lt;p&gt;(筆者按: 書中只是提到這個理論, 但無論是 丹尼斯 或是 他的實驗伙伴 艾克哈特 &lt;em&gt;(William Eckhardt)&lt;/em&gt; 都不相信這是巧合帶來實驗的結果)&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;h2 id="mindmap"&gt;第二部分 交易策略 (Mind Map)&lt;/h2&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;使用方式類似 Google Map 的拖曳操作可以移動畫面, 右鍵可以彈出放大鏡的按鈕, 按壓放大鏡拖曳後可以 Zoom In/Out&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;iframe width="853" height="480" src="https://embed.coggle.it/diagram/Vt9MRT9kC8o93lZw/ba20a801476260b3885c5a005c35b6b9ce12bb13d385efd229574892c2083848" frameborder="0" allowfullscreen&gt;&lt;/iframe&gt;  
-
-&lt;blockquote&gt;
-  &lt;p&gt;在第二屆的學員們中, 提出了當時海龜策略槓桿底下背負的風險, 遠比老師 丹尼斯 設想的要高上許多。&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;h2 id=""&gt;第三部分&lt;/h2&gt;
-
-&lt;p&gt;實驗展開地後續, 在不平等的交易配額下導致內部崩裂、交易員間的猜忌; 而在混沌之中, 丹尼斯的交易身影也在一場公募基金的災難中退下舞台。&lt;/p&gt;
-
-&lt;h2 id=""&gt;故事尾聲&lt;/h2&gt;
-
-&lt;p&gt;敘述著 丹尼斯 及 海龜們 在各自離開之後的發展, 這中間有許多的風光但也有著些許唏噓, 並在受訪之後為我們留下分析、談論著他們之間為何誰才會是贏家的觀點, 畢竟在他們分道揚鑣後, 我們得從規則以外找些別的東西, 來區分是何能讓脫穎而出的人達到長期交易的成功並得以延續發光, 這邊列出書中提到的幾點 &lt;strong&gt;需保持心理強韌、具備企業家精神&lt;/strong&gt;, 也許就是這樣的人, 才能夠繼續把握機會順勢操盤人生的吧。&lt;/p&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;企業家精神 (書中整理, 由Nancy Upton 及  Don Sexton 提出)&lt;/p&gt;
-  
-  &lt;ul&gt;
-  &lt;li&gt;不妥協者：較低的妥協需求, 自立自強&lt;/li&gt;
-  &lt;li&gt;情緒冷淡者：對人不一定冷漠, 不過也可能很明顯&lt;/li&gt;
-  &lt;li&gt;高空跳傘者：比較不在意身體受傷, 但此特質會隨年齡改變&lt;/li&gt;
-  &lt;li&gt;冒險者：喜歡冒險&lt;/li&gt;
-  &lt;li&gt;社交圓滑者：比較具說服力&lt;/li&gt;
-  &lt;li&gt;獨立自主：有較高的自立需求&lt;/li&gt;
-  &lt;li&gt;求變者：喜歡新奇的方法&lt;/li&gt;
-  &lt;li&gt;充滿活力：較需要且能較長時間工作&lt;/li&gt;
-  &lt;li&gt;自我滿足：不需要他人認同, 但還是要組成人脈&lt;/li&gt;
-  &lt;/ul&gt;
-&lt;/blockquote&gt;</content:encoded></item><item><title>21st Century C / 21世紀 C 語言 筆記</title><description>&lt;blockquote&gt;
-  &lt;p&gt;C 語言的演進, K&amp;amp;R (1978) -&gt; ANSI C89 (1989) -&gt; ISO C99 (1999) -&gt; C11 (2011)&lt;/p&gt;
-  
-  &lt;p&gt;POSIX (&lt;strong&gt;P&lt;/strong&gt;ortable &lt;strong&gt;O&lt;/strong&gt;perating &lt;strong&gt;S&lt;/strong&gt;ystem &lt;strong&gt;I&lt;/strong&gt;nterface of UNI&lt;strong&gt;X&lt;/strong&gt;) 標準, 由 IEEE 制定類  Unix 的作業系統在實作上共通的基礎 (API 的關聯、Shell的運作、命令列工具的的執行相關規範, 跟本篇最大的關聯是符合 POSIX 標準的系統, 也包含了提供 C 語言的編譯器)。&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;h2 id=""&gt;介紹內容&lt;/h2&gt;
-
-&lt;p&gt;Basic Tool: GDB、Valgrind、&lt;/p&gt;</description><link>http://captainvincent.github.io/21st-century-c/</link><guid isPermaLink="false">baa7b733-a6a7-466e-b381-2efbfd401ea0</guid><category>GDB</category><category>Valgrind</category><category>Gprof</category><category>Make</category><category>pkg-config</category><category>doxygen</category><dc:creator>Captain Vincent</dc:creator><pubDate>Fri, 04 Mar 2016 13:04:20 GMT</pubDate><content:encoded>&lt;blockquote&gt;
-  &lt;p&gt;C 語言的演進, K&amp;amp;R (1978) -&gt; ANSI C89 (1989) -&gt; ISO C99 (1999) -&gt; C11 (2011)&lt;/p&gt;
-  
-  &lt;p&gt;POSIX (&lt;strong&gt;P&lt;/strong&gt;ortable &lt;strong&gt;O&lt;/strong&gt;perating &lt;strong&gt;S&lt;/strong&gt;ystem &lt;strong&gt;I&lt;/strong&gt;nterface of UNI&lt;strong&gt;X&lt;/strong&gt;) 標準, 由 IEEE 制定類  Unix 的作業系統在實作上共通的基礎 (API 的關聯、Shell的運作、命令列工具的的執行相關規範, 跟本篇最大的關聯是符合 POSIX 標準的系統, 也包含了提供 C 語言的編譯器)。&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;h2 id=""&gt;介紹內容&lt;/h2&gt;
-
-&lt;p&gt;Basic Tool: GDB、Valgrind、gprof、make、pkg-config、doxygen &lt;br&gt;
-Autotools: Autoconf、Automake、libtool &lt;br&gt;
-Useful Lib: libcURL、libGlib、libGSL、libSQLite3、libXML2&lt;/p&gt;
-
-&lt;h4 id=""&gt;編譯階段&lt;/h4&gt;
-
-&lt;p&gt;使用 pkg-config 顯示出使用該lib需要的 include、link 參數&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class="language- language-bash"&gt;pkg-config --libs [lib name]  
-pkg-config --cflags [lib name]  
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;&lt;br&gt;&lt;/p&gt;
-
-&lt;p&gt;一般在編譯時, 使用額外 lib 在編譯時所需的下參數&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class="language- lnaguage-bash"&gt;gcc -I[header path] -L[library path] -l[library name]  
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;ul&gt;
-&lt;li&gt;-I: 將路徑加入 include header 搜尋 path&lt;/li&gt;
-&lt;li&gt;-L: 將路徑加入 Library 搜尋 path&lt;/li&gt;
-&lt;li&gt;-l: 指定連結函式庫&lt;/li&gt;
-&lt;li&gt;-D: 等同於 define symbol (ex. -Dxxx)&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;可以搭配 pkg-config 使用 (但並非所有 lib 都有對 pkg-config 註冊)&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class="language- language-bash"&gt;gcc ｀pkg-config --cflags --libs [lib name]` -o [output name] [source file name]  
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;&lt;br&gt;&lt;/p&gt;
-
-&lt;hr&gt;
-
-&lt;h4 id="linksharelibrary"&gt;執行期間的 Link  (Share Library)&lt;/h4&gt;
-
-&lt;ul&gt;
-&lt;li&gt;使用 Autotools, Libtool 會自動加入正確的旗標來搜尋使用的 lib (後面章節會介紹)&lt;/li&gt;
-&lt;li&gt;透過 export LD_LIBRARY_PATH 來指定執行時的搜尋路徑&lt;/li&gt;
-&lt;li&gt;在 makefile 中添加 &lt;code&gt;LDADD=-L[lib path] -Wl, -R[lib path]&lt;/code&gt; 
-(-Wl 用來將後續用'逗號'隔開的 list 轉換成'空白'的 list 後傳給 linker)&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;hr&gt;
-
-&lt;h4 id="makefile"&gt;使用 Makefile 簡化編譯時冗長繁瑣的指令&lt;/h4&gt;
-
-&lt;pre&gt;&lt;code class="language- language-makefile"&gt;P=program_name  
-OBJECT=  
-CFLAGS= -g -Wall -O3  
-LDLIBS=  
-CC=C99
-
-$(P): $(OBJECT)
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;(Makefile 範例)&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;$(var name) 表示變數, Shell使用 $Var 而 Makefile則要求必須以小括號括起來&lt;/li&gt;
-&lt;li&gt;以冒號 ":" 區隔表示相依的關係&lt;/li&gt;
-&lt;li&gt;以上的變數會在 make 的隱含規則中展開成執行的命令&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;strong&gt;除了上述範例中, 將變數值直接宣告在 Makefile 內, 額外將變數值傳給 Makefile 的方式有&lt;/strong&gt;&lt;/p&gt;
-
-&lt;ol&gt;
-&lt;li&gt;export 進環境變數  &lt;/li&gt;
-&lt;li&gt;將變數指派命令放在執行命令之前 (只限當次執行有效) &lt;br&gt;
-&lt;em&gt;C 語言編譯的程式, 可在程式碼中透過 getenv 取得 1. 或 2. 指定的值&lt;/em&gt;&lt;/li&gt;
-&lt;li&gt;make 也允許從命令列設定變數&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;pre&gt;&lt;code class="language- language-bash"&gt;CFLAGS="-g -Wall" make // 針對 make 及 子程序設定環境變數 (上述方法2)  
-make CFLAGS="-g -Wall" // 設定 makefile 變數 (上述方法3)  
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;&lt;br&gt;&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class="language- language-bash"&gt;make -p &amp;gt; rule.txt  
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;可以查看 rule.txt 了解 make 的隱含規則&lt;/p&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;Manual Page&lt;/p&gt;
-  
-  &lt;ul&gt;
-  &lt;li&gt;&lt;p&gt;man 指令可以搜尋函式的使用手冊 (ex. &lt;code&gt;man printf&lt;/code&gt;)&lt;/p&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;p&gt;&lt;code&gt;man -k keyword&lt;/code&gt; 可以搜尋簡介&lt;/p&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;p&gt;manual 分許多 section, section 1 為命令列、3為函式庫名稱 (man 3 printf 會列出 C 函式庫的文件)&lt;/p&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;p&gt;vi 可將游標移到 keyword 上, 按 &lt;strong&gt;K&lt;/strong&gt; 查閱 manual page&lt;/p&gt;&lt;/li&gt;
-  &lt;/ul&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;&lt;a href="https://zh.wikipedia.org/wiki/Here%E6%96%87%E6%A1%A3"&gt;Here文檔的介紹&lt;/a&gt;&lt;/p&gt;
-
-&lt;hr&gt;
-
-&lt;h4 id="debug"&gt;Debug / 除錯&lt;/h4&gt;
-
-&lt;p&gt;&lt;a href="https://developer.apple.com/library/ios/documentation/IDEs/Conceptual/gdb_to_lldb_transition_guide/document/lldb-command-examples.html"&gt;GDB vs LLDB&lt;/a&gt;&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class="language- language-bash"&gt;set $ptr=&amp;amp;x[3] //expr int* $ptr = &amp;amp;x[3]  
-p *($ptr++)  
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;之後再重複按 &lt;code&gt;Enter&lt;/code&gt; 會執行前一動指令, 此技巧可走訪陣列, 甚至套用 link-list&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class="language- language-bash"&gt;p $  
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;$ 可表示前一次輸出變數存放的值, 但這邊 LLDB 測試無效&lt;/p&gt;
-
-&lt;p&gt;在 .gdbinit 中可以 define macro 來整理複雜資料結構的輸出&lt;/p&gt;
-
-&lt;h6 id="profiling"&gt;Profiling&lt;/h6&gt;
-
-&lt;p&gt;Compile option 加上 &lt;code&gt;-pg&lt;/code&gt; 會為 gprof 準備程式, 指令 &lt;code&gt;gprof binary &amp;gt; profile&lt;/code&gt; 即可開始記錄, 結束後再打開 profile 看 log。 &lt;br&gt;
-mac 上的分析可以參考 &lt;a href="http://stackoverflow.com/questions/11445619/profiling-c-on-mac-os-x"&gt;StackOverflow 提到的 Instruments&lt;/a&gt;&lt;/p&gt;
-
-&lt;h6 id="valgrind"&gt;Valgrind&lt;/h6&gt;
-
-&lt;p&gt;可以使用 Valgrind 偵測記憶體的使用錯誤(例子省略)&lt;/p&gt;
-
-&lt;h6 id="unittest"&gt;Unit Test&lt;/h6&gt;
-
-&lt;p&gt;使用 Glib 內建的 tool 來實作(省略), 求覆蓋率可透過在 Compile option 加上 &lt;br&gt;
-&lt;code&gt;- fprofile-arcs -ftest-coverage -O0&lt;/code&gt;, 在執行程式後下指令 &lt;code&gt;gcov program.gcda&lt;/code&gt; 可顯示執行行數的百分比, 另外 program.c.cov 會顯示被測試到的次數&lt;/p&gt;
-
-&lt;h6 id="doxygen"&gt;Doxygen&lt;/h6&gt;
-
-&lt;p&gt;使用 Doxygen 來產生文件, 比起在程式碼中添加的說明, 搭配 Graphviz 產生的各類圖表在 trace code 幫助更大。&lt;/p&gt;
-
-&lt;hr&gt;
-
-&lt;h4 id="autotool"&gt;Autotool 章節&lt;/h4&gt;
-
-&lt;p&gt;在打包程式的部分目前常見的還有 CMake 可以使用, autotool的部分等以後有時間再回過頭來看吧... Ker Ker&lt;/p&gt;
-
-&lt;hr&gt;
-
-&lt;h4 id="git"&gt;Git 版本控管章節&lt;/h4&gt;
-
-&lt;p&gt;&lt;a href="https://git-scm.com/book/zh-tw/v1"&gt;Git 中文參考資料&lt;/a&gt;&lt;/p&gt;
-
-&lt;hr&gt;
-
-&lt;h4 id=""&gt;類似書中範例的參考&lt;/h4&gt;
-
-&lt;p&gt;&lt;a href="http://intermediate-and-advanced-software-carpentry.readthedocs.org/en/latest/c++-wrapping.html"&gt;Wrapping C/C++ for Python&lt;/a&gt;&lt;/p&gt;
-
-&lt;hr&gt;
-
-&lt;h4 id=""&gt;變數的存取&lt;/h4&gt;
-
-&lt;p&gt;&lt;a href="http://www.csee.umbc.edu/courses/undergraduate/202/spring07/Lectures/ChangSynopses/modules/m05-scope/slides.php?print"&gt;Reference&lt;/a&gt;&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;Life Time
-&lt;ul&gt;&lt;li&gt;static: 直到程式結束為止才會釋放&lt;/li&gt;
-&lt;li&gt;automatic: 離開 Scope (block) 的時候即會馬上釋放&lt;/li&gt;
-&lt;li&gt;dynamic: 要手動 free 才會釋放&lt;/li&gt;&lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;Scope
-&lt;ul&gt;&lt;li&gt;Local scope: 在 block 內可被看見&lt;/li&gt;
-&lt;li&gt;Class scope: Class 內的成員才可看見&lt;/li&gt;
-&lt;li&gt;Namespace scope: 同一個 namespace 才可看見&lt;/li&gt;
-&lt;li&gt;File scope: 相同檔案內才可看見&lt;/li&gt;
-&lt;li&gt;Global scope: 任何地方皆可看見, 除非被隱藏&lt;/li&gt;&lt;/ul&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h6 id="structvsarray"&gt;Struct vs Array&lt;/h6&gt;
-
-&lt;p&gt;在記憶體的使用上, 傳遞 struct 時會整個被複製出去, 但 array 僅會傳遞別名 (指向相同的記憶體空間)。&lt;/p&gt;
-
-&lt;p&gt;另外, Array 目前已可提供執行期才決定大小 (透過 run time 得知的值來宣告 array), 並且不用手動 free。&lt;/p&gt;
-
-&lt;h6 id="point"&gt;Point&lt;/h6&gt;
-
-&lt;pre&gt;&lt;code class="language- language-clike"&gt;ptr[0] = *(ptr+0) // 這邊僅表示左右兩者相等, 非賦值  
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;(但是 void 的 point 是無法以陣列的方式取值, 因為缺少了型別無法計算位移量)。&lt;/p&gt;
-
-&lt;h6 id="nan"&gt;NaN&lt;/h6&gt;
-
-&lt;p&gt;&lt;strong&gt;N&lt;/strong&gt;ot-&lt;strong&gt;A&lt;/strong&gt;-&lt;strong&gt;N&lt;/strong&gt;umber, 使用 NaN 作為例外回傳值, 另外 NaN 具備的特性, 即使 &lt;code&gt;NaN == NaN&lt;/code&gt; 也會回傳 false, 只能用 &lt;code&gt;isnan()&lt;/code&gt; 來檢查。&lt;/p&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;NaN 的值可透過 0/0. 來得到 (0/0 會產生錯誤, 因為整數無法表示 NaN)。&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;hr&gt;
-
-&lt;h4 id=""&gt;介紹容易犯錯的章節&lt;/h4&gt;
-
-&lt;h6 id="macro"&gt;Macro&lt;/h6&gt;
-
-&lt;p&gt;在巨集的外部需加上大括號, 好處是可限制展開內容的變數生存空間, 也可降低展開後造成問題的風險。&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class="language- language-bash"&gt;gcc -E [source file name]  
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;加上 &lt;code&gt;-E&lt;/code&gt; option 之後只會執行前置處理器的部分, 並從標準輸出中印出結果, 可搜尋巨集擴展的部分來除錯。&lt;/p&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;前置處理器中的小技巧&lt;/p&gt;
-  
-  &lt;ul&gt;
-  &lt;li&gt;&lt;p&gt;如果有兩個連續的字串出現, 箝制處理器會將兩個字串合併為一個&lt;/p&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;p&gt;&lt;code&gt;sizeof()&lt;/code&gt; 是個 compile time 的 operator&lt;/p&gt;&lt;/li&gt;
-  &lt;/ul&gt;
-&lt;/blockquote&gt;
-
-&lt;h6 id="const"&gt;const&lt;/h6&gt;
-
-&lt;ul&gt;
-&lt;li&gt;int const : 常數整數&lt;/li&gt;
-&lt;li&gt;int const * : 一個可變動的指標, 指向常數整數&lt;/li&gt;
-&lt;li&gt;int * const : 一個常數指標, 指向可變動的整數&lt;/li&gt;
-&lt;li&gt;int * const * : 一個指向常數指標的指標&lt;/li&gt;
-&lt;li&gt;int const * * : 一個指標的指標, 指向常數整數&lt;/li&gt;
-&lt;li&gt;int const * const * : 一個指向常數指標的指標, 常數指標指向常數整數
-
-
-&lt;blockquote&gt;
-  &lt;p&gt;前後相鄰的 int 與 const 可以互換, 意義仍不變。&lt;/p&gt;&lt;/blockquote&gt;&lt;/li&gt;
-  &lt;/ul&gt;
-  struct 內的變數, 透過將 pointer 傳出之後仍舊無法受到 const 的保護, 需特別注意。 &lt;p&gt;&lt;/p&gt;
-
-
-&lt;pre&gt;&lt;code class="language- language-clike"&gt;int *ptr;  
-int const **constptr = &amp;amp;ptr  
-int const const_var = 10;  
-*constprt = &amp;amp;const_var // 等同 ptr = &amp;amp;const_var
-*prt = 20 // 等同於改變了 const_var 的值
-&lt;/code&gt;&lt;/pre&gt;
-
-
-範例顯示透過指標操作 const 需要小心
-
-
-
-&lt;hr&gt;
-
-
-
-
-&lt;h4 id=""&gt;好用工具介紹&lt;/h4&gt;
-
-&lt;ul&gt;
-&lt;li&gt;asprintf 來做文字轉換 (函式會自行 malloc, 但需手動 free)&lt;/li&gt;
-&lt;li&gt;Stopif 巨集的使用可在函式 return 異常值時提供保護&lt;/li&gt;
-&lt;li&gt;strdup 可以回傳複製字串後的內容&lt;/li&gt;
-&lt;li&gt;strtok 以 strtok_r or strtok_s 取代 (thread safe)&lt;/li&gt;
-&lt;li&gt;mmap 可以解決讀取檔案比記憶體大的問題&lt;/li&gt;
-&lt;li&gt;libxml 提供處理 unicode 的函式庫
-&lt;ul&gt;&lt;li&gt;語言相關處理的 keywords : Gettext 提供翻譯框架、xgettext 產生需要翻譯的字串索引&lt;/li&gt;&lt;/ul&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;hr&gt;
-
-&lt;h4 id=""&gt;特殊技巧&lt;/h4&gt;
-
-&lt;pre&gt;&lt;code class="language- language-clike"&gt;define test(i, ...) for(int index=0; index&amp;lt;i; i++) {__VA__ARGS__}  
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;ul&gt;
-&lt;li&gt;展開時, 在第二個參數之後 (從 &lt;code&gt;...&lt;/code&gt; 刪節號之後的參數都會被展開至 &lt;code&gt;__VA__ARGS__&lt;/code&gt; 的位置&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;pre&gt;&lt;code class="language- language-clike"&gt;int iArray[] = {0, 1, 2, 3}; //賦值用  
-function( (iArray[]){0,1,2,3} ) //傳遞用  
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;ul&gt;
-&lt;li&gt;複合常量的寫法&lt;/li&gt;
-&lt;li&gt;透過前兩項技巧可以寫出向量化的 macro (展開成多個處理相同事情的 Snippets)&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;pre&gt;&lt;code class="language- language-clike"&gt;struct stTest  
-{
-    int first;
-    int second;
-};
-struct stTest temp = {.first=1};  
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;pre&gt;&lt;code class="language- language-clike"&gt;int list[5] = {[3]=4, [4]=5};  
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;ul&gt;
-&lt;li&gt;指定初始子, 未指定會賦值 0&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;pre&gt;&lt;code class="language- language-clike"&gt;__attribute__((format(printf,m,n)))  
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;ul&gt;
-&lt;li&gt;使用 __attribute__ 來控制變量輸入的問題, &lt;a href="http://huenlil.pixnet.net/blog/post/26078382-%5B%E8%BD%89%5Dgnu-c-__attribute__-%E6%A9%9F%E5%88%B6%E7%B0%A1%E4%BB%8B"&gt;參考資訊&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;(最後兩章的翻譯讀起來有點怪, 加上應用層面比較難參考, 就整理到這邊吧 : ) 收工~)&lt;/p&gt;</content:encoded></item></channel></rss>
+&lt;iframe width="853" height="480" src="https://embed.coggle.it/diagram/Vu5LNj_zpOYo1mzy/739e465141646161dad5c001a099ada2bdb261208d58eeee6ca71408a3c87dfe" frameborder="0" allowfullscreen&gt;&lt;/iframe&gt;</content:encoded></item></channel></rss>

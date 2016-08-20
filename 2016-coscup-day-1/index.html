@@ -1,0 +1,259 @@
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <title>2016 COSCUP Day - 1</title>
+    <meta name="description" content="">
+
+    <meta name="HandheldFriendly" content="True">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="shortcut icon" href="../favicon.ico">
+
+    <link rel="stylesheet" type="text/css" href="../assets/css/screen.css?v=117cab5f1c">
+    <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Merriweather:300,700,700italic,300italic%7COpen+Sans:700,400">
+    <link rel="stylesheet" type="text/css" href="../assets/css/prism.css?v=117cab5f1c">
+    <link rel="canonical" href="index.html">
+    <meta name="referrer" content="origin">
+    
+    <meta property="og:site_name" content="Hello World! I'm Vincent">
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="2016 COSCUP Day - 1">
+    <meta property="og:description" content="本篇是筆者今年參加 COSCUP 不負責任、不引戰的個人摘要筆記與心得文。 LLVM框架由淺入淺 全體共同議程, 介紹一些由高階語言轉成 machine code 的幾個環節如何拆分, 引入介紹透過 LLVM 的框架標準化這幾個環節, 讓對編譯器有興趣的使用者可以自行串接 LLVM IR 做各種調配。 MCU 與 lightweight javascript engine 的邂逅 講者之前相同題目的 Slide 講者之前相同題目的影片 介紹在 MCU 終端的嵌入式硬體上執行 JS (相較於 MPU 的 device 會帶起較完整的系統並具備較高規格的硬體), 最早期的啟發來自於基於 Tiny.js 開發的 Espruino,...">
+    <meta property="og:url" content="http://captainvincent.github.io/2016-coscup-day-1/">
+    <meta property="article:published_time" content="2016-08-19T23:27:03.372Z">
+    <meta property="article:modified_time" content="2016-08-20T20:52:42.378Z">
+    
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="2016 COSCUP Day - 1">
+    <meta name="twitter:description" content="本篇是筆者今年參加 COSCUP 不負責任、不引戰的個人摘要筆記與心得文。 LLVM框架由淺入淺 全體共同議程, 介紹一些由高階語言轉成 machine code 的幾個環節如何拆分, 引入介紹透過 LLVM 的框架標準化這幾個環節, 讓對編譯器有興趣的使用者可以自行串接 LLVM IR 做各種調配。 MCU 與 lightweight javascript engine 的邂逅 講者之前相同題目的 Slide 講者之前相同題目的影片 介紹在 MCU 終端的嵌入式硬體上執行 JS (相較於 MPU 的 device 會帶起較完整的系統並具備較高規格的硬體), 最早期的啟發來自於基於 Tiny.js 開發的 Espruino,...">
+    <meta name="twitter:url" content="http://captainvincent.github.io/2016-coscup-day-1/">
+    
+    <script type="application/ld+json">
+{
+    "@context": "http://schema.org",
+    "@type": "Article",
+    "publisher": "Hello World! I'm Vincent",
+    "author": {
+        "@type": "Person",
+        "name": "Captain Vincent",
+        "image": "http://captainvincent.github.io/content/images/2016/01/--.JPG",
+        "url": "http://captainvincent.github.io/author/captain",
+        "sameAs": null,
+        "description": null
+    },
+    "headline": "2016 COSCUP Day - 1",
+    "url": "http://captainvincent.github.io/2016-coscup-day-1/",
+    "datePublished": "2016-08-19T23:27:03.372Z",
+    "dateModified": "2016-08-20T20:52:42.378Z",
+    "description": "本篇是筆者今年參加 COSCUP 不負責任、不引戰的個人摘要筆記與心得文。 LLVM框架由淺入淺 全體共同議程, 介紹一些由高階語言轉成 machine code 的幾個環節如何拆分, 引入介紹透過 LLVM 的框架標準化這幾個環節, 讓對編譯器有興趣的使用者可以自行串接 LLVM IR 做各種調配。 MCU 與 lightweight javascript engine 的邂逅 講者之前相同題目的 Slide 講者之前相同題目的影片 介紹在 MCU 終端的嵌入式硬體上執行 JS (相較於 MPU 的 device 會帶起較完整的系統並具備較高規格的硬體), 最早期的啟發來自於基於 Tiny.js 開發的 Espruino,..."
+}
+    </script>
+
+    <meta name="generator" content="Ghost 0.7">
+    <link rel="alternate" type="application/rss+xml" title="Hello World! I'm Vincent" href="../rss/index.html">
+    <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-73341093-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+</head>
+<body class="post-template nav-closed">
+
+    <div class="nav">
+    <h3 class="nav-title">Menu</h3>
+    <a href="index.html#" class="nav-close">
+        <span class="hidden">Close</span>
+    </a>
+    <ul>
+            <li class="nav-blog-home-page" role="presentation"><a href="../">Blog Home Page</a></li>
+            <li class="nav-git-book" role="presentation"><a href="https://www.gitbook.com/@captainvincent">Git Book</a></li>
+            <li class="nav-aboutme" role="presentation"><a href="https://about.me/CaptainVincent">About.Me</a></li>
+    </ul>
+    <a class="subscribe-button icon-feed" href="../rss/index.rss">Subscribe</a>
+</div>
+<span class="nav-cover"></span>
+
+
+    <div class="site-wrapper">
+
+        
+
+
+<header class="main-header post-head no-cover">
+    <nav class="main-nav  clearfix">
+        
+            <a class="menu-button icon-menu" href="index.html#"><span class="word">Menu</span></a>
+    </nav>
+</header>
+
+<main class="content" role="main">
+    <article class="post">
+
+        <header class="post-header">
+            <h1 class="post-title">2016 COSCUP Day - 1</h1>
+            <section class="post-meta">
+                <time class="post-date" datetime="2016-08-20">20 August 2016</time> 
+            </section>
+        </header>
+
+        <section class="post-content">
+            <blockquote>
+  <p>本篇是筆者今年參加 COSCUP 不負責任、不引戰的個人摘要筆記與心得文。</p>
+</blockquote>
+
+<p><img src="https://c8.staticflickr.com/9/8293/29037136191_aa48f5b26e.jpg" alt="Day 1"></p>
+
+<h3 id="llvm">LLVM框架由淺入淺</h3>
+
+<p>全體共同議程, 介紹一些由高階語言轉成 machine code 的幾個環節如何拆分, 引入介紹透過 LLVM 的框架標準化這幾個環節, 讓對編譯器有興趣的使用者可以自行串接 LLVM IR 做各種調配。</p>
+
+<h3 id="mculightweightjavascriptengine">MCU 與 lightweight javascript engine 的邂逅</h3>
+
+<ul>
+<li><a href="http://sssslide.com/speakerdeck.com/iamblue/mcu-yu-lightweight-javascript-engine-de-xie-hou">講者之前相同題目的 Slide</a></li>
+<li><a href="https://www.youtube.com/watch?v=n3NY_2RPAl0">講者之前相同題目的影片</a></li>
+</ul>
+
+<p>介紹在 MCU 終端的嵌入式硬體上執行 JS (相較於 MPU 的 device 會帶起較完整的系統並具備較高規格的硬體), 最早期的啟發來自於基於 Tiny.js 開發的 Espruino, 原理是邊 parse 編解析 (但不構成 AST), 陸陸續續也出現一些針對物聯網嚴苛 device 條件所產生的 engine 設計, 最後講者是透過去封裝一層名為 Microlattice.JS 的 interface 去使用 jerryscript (lightweight JS engine), 建構在freeRTOS 上。</p>
+
+<blockquote>
+  <p>因為設備問題, 所以 talk 只進行到一半, 剩下部分需參考講者之前演講資訊。</p>
+</blockquote>
+
+<h3 id="freebirdjs">物聯網不滿足 - 自由管理物聯網裝置和溝通的 freebird.js</h3>
+
+<p>從物聯網的一些基礎介紹起, 帶起要解決的問題, 主要是破碎的溝通方式 (同質、異質網路的相容性), 雖有 IFTTT 的解決方案(?), 但可能會導致 device 之間溝通的 latency 過長, 再來是想建立有系統的方式解決溝通問題 (因為從上層到底層都有問題要解決), 而開源計畫的 freebird.js 就是要解決 相容 以及 快速開發 IoT 應用的法門之一。</p>
+
+<blockquote>
+  <p>精神就是幫開發者做掉一些 dirty job, 讓開發者可以更容易地進入物聯網的, 但目前 protocol、晶片 driver 推陳出新, 仍須仰賴推廣讓開發者共同參與。 (另外 freebird.js 尚未 release 約 10~11 月)</p>
+</blockquote>
+
+<h3 id="log">萬事萬物皆是 Log</h3>
+
+<p><a href="https://medium.com/@poga/%E8%90%AC%E4%BA%8B%E8%90%AC%E7%89%A9%E7%9A%86%E6%98%AF-log-%E7%B3%BB%E7%B5%B1%E6%9E%B6%E6%A7%8B%E4%B9%9F%E4%BE%86%E9%BB%9E%E7%A7%91%E6%99%AE-caf3029359f8#.y9qlju1iz">作者提供的逐字稿</a></p>
+
+<p>Determinism 相同的過程 = 相同的結果 (讓系統可以如此般趨於穩定的境界), 所以在設計系統架構時試著先用 log 去表示。</p>
+
+<blockquote>
+  <p>讓會眾可以安心抓神奇寶貝的講者 (?)</p>
+</blockquote>
+
+<h3 id="opensourcedevops">Open Source 的 DevOps 工具箱</h3>
+
+<p><a href="https://onedrive.live.com/view.aspx?resid=449602EB8FBEC303!2399&amp;ithint=file%2cpptx&amp;app=PowerPoint&amp;authkey=!ANC0p7Yoi51Wu9E">講者投影片</a></p>
+
+<p>精神在於建立一種文化, 介紹常見的軟體工程在開發時應有的配置 (列舉可用的 open source 工具)。</p>
+
+<h3 id="">寫出高性能的服務與應用。那些你沒想過的事！</h3>
+
+<p>全體共同議程, 比較偏向大學的 計算機組織 與 作業系統該有知識 (?), 算是溫故為主的內容。</p>
+
+<blockquote>
+  <p>總結</p>
+  
+  <p>COSCUP 的伙食不錯, <del>中研院 電擊獸 很多</del>, 跟其他主題更明確的聚會相比, 感覺準備的內容有比較多一點的學生感, 引用朋友的見解, 來參加聚會聽 talk 只是配菜, 重點在於 要多認識些人 或是 上台當講者, 筆者默默期許自己。</p>
+</blockquote>
+        </section>
+
+        <footer class="post-footer">
+
+
+            <figure class="author-image">
+                <a class="img" href="../author/captain/" style="background-image: url(../content/images/2016/01/--.JPG)"><span class="hidden">Captain Vincent's Picture</span></a>
+            </figure>
+
+            <section class="author">
+                <h4><a href="../author/captain/">Captain Vincent</a></h4>
+
+                    <p>Read <a href="../author/captain/">more posts</a> by this author.</p>
+                <div class="author-meta">
+                    
+                    
+                </div>
+            </section>
+
+
+            <section class="share">
+                <h4>Share this post</h4>
+                <a class="icon-twitter" href="https://twitter.com/intent/tweet?text=2016%20COSCUP%20Day%20-%201&amp;url=http://captainvincent.github.io/2016-coscup-day-1/" onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
+                    <span class="hidden">Twitter</span>
+                </a>
+                <a class="icon-facebook" href="https://www.facebook.com/sharer/sharer.php?u=http://captainvincent.github.io/2016-coscup-day-1/index.html" onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;">
+                    <span class="hidden">Facebook</span>
+                </a>
+                <a class="icon-google-plus" href="https://plus.google.com/share?url=http://captainvincent.github.io/2016-coscup-day-1/" onclick="window.open(this.href, 'google-plus-share', 'width=490,height=530');return false;">
+                    <span class="hidden">Google+</span>
+                </a>
+            </section>
+
+            <div id="disqus_thread"></div>
+            <script>
+            /**
+            * RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+            * LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables
+            */
+
+            var disqus_config = function () {
+                this.page.url = 'http://captainvincent.github.io/2016-coscup-day-1/'; // Replace PAGE_URL with your page's canonical URL variable
+                this.page.identifier = 'ghost-33'; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+            };
+
+            (function() { // DON'T EDIT BELOW THIS LINE
+                var d = document, s = d.createElement('script');
+
+                s.src = '//captainvincent.disqus.com/embed.js';
+
+                s.setAttribute('data-timestamp', +new Date());
+                (d.head || d.body).appendChild(s);
+            })();
+            </script>
+            <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+
+        </footer>
+
+    </article>
+</main>
+
+<aside class="read-next">
+    <a class="read-next-story prev no-cover" href="../the-weather-man-2005/">
+        <section class="post">
+            <h2>Movie - The Weather Man (2005)</h2>
+            <p>成年人的電影, 寓意深遠的對白 Michael Caine 還真是適合扮演智慧的長者, 如同黑暗騎士 (Dark Knight) 中管家阿福 (Alfred) 的設定, 在榮格心理學裡智慧老人的化身。 Robert Spritzel: David, sacrifice is... to get…</p>
+        </section>
+    </a>
+</aside>
+
+
+
+
+        <footer class="site-footer clearfix">
+            <section class="copyright"><a href="../">Hello World! I'm Vincent</a> © 2016</section>
+            <section class="poweredby">Proudly published with <a href="https://ghost.org">Ghost</a></section>
+        </footer>
+
+    </div>
+
+    <script type="text/javascript" src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+    
+
+    <script type="text/javascript" src="../assets/js/jquery.fitvids.js?v=117cab5f1c"></script>
+    <script type="text/javascript" src="../assets/js/prism.js?v=117cab5f1c"></script>
+    <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/x-mathjax-config">
+        MathJax.Hub.Config({
+            tex2jax: {
+                inlineMath: [['$','$'], ['\\\\(','\\\\)']],
+                processEscapes: true
+            }
+        });
+    </script>
+    <script type="text/javascript" src="../assets/js/index.js?v=117cab5f1c"></script>
+
+</body>

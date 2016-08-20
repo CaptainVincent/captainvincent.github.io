@@ -11,23 +11,23 @@
 
     <link rel="shortcut icon" href="../favicon.ico">
 
-    <link rel="stylesheet" type="text/css" href="../assets/css/screen.css?v=16480e2d13">
+    <link rel="stylesheet" type="text/css" href="../assets/css/screen.css?v=117cab5f1c">
     <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Merriweather:300,700,700italic,300italic%7COpen+Sans:700,400">
-    <link rel="stylesheet" type="text/css" href="../assets/css/prism.css?v=16480e2d13">
+    <link rel="stylesheet" type="text/css" href="../assets/css/prism.css?v=117cab5f1c">
     <link rel="canonical" href="index.html">
     <meta name="referrer" content="origin">
     
     <meta property="og:site_name" content="Hello World! I'm Vincent">
     <meta property="og:type" content="article">
     <meta property="og:title" content="Machine Learning Foundations 機器學習基石 (課程筆記)">
-    <meta property="og:description" content="由台大資工系 副教授 林軒田 提供的開放式課程, 關於教材內容皆可於 Youtube教學影片 及 投影片下載網址 取得。 Introduction 模仿人類學習的方式, 透過觀察 (data) 學習 (取出特徵、經過計算處理) 後得到有意義的技巧 (提升某項可以量化評估的表現)。 一些應用機器學習的時機 過於複雜 (不預期的狀況) 的系統不容易轉化成程式來處理 不容易寫出判定規則的系統 人尚未或無法即時判定的行為 過分客製化 (數量過多) 的反應 使用條件 具備 可理解的特徵 以及 可供量化評估改進的結果 不容易定義出規則 (容易定義則使用規則撰寫一般的程式處理即可) 有資料可供學習 Model Component Algorithm, learning algorithm...">
+    <meta property="og:description" content="由台大資工系 副教授 林軒田 提供的開放式課程, 關於教材內容皆可於 Youtube教學影片 及 投影片下載網址 取得。 Git Book傳送門 隨著文章的編寫, 發現用 Blog 單篇文章的形式呈現會讓整體知識的結構太過於線性, 所以重頭使用 Gitbook 編寫, 更完整的學習筆記可以前往參考, 這邊僅提供一些 Overview。 以下尚未整理, 請直接參閱 gitbook 最新更新。 Introduction 模仿人類學習的方式, 透過觀察 (data) 學習 (取出特徵、經過計算處理) 後得到有意義的技巧 (提升某項可以量化評估的表現)。 一些應用機器學習的時機 過於複雜 (不預期的狀況) 的系統不容易轉化成程式來處理 不容易寫出判定規則的系統 人尚未或無法即時判定的行為...">
     <meta property="og:url" content="http://captainvincent.github.io/machine-learning-foundations-ji-qi-xue-xi-ji-shi-ke-cheng-bi-ji/">
     <meta property="article:published_time" content="2016-06-20T11:30:30.170Z">
-    <meta property="article:modified_time" content="2016-06-21T14:41:04.539Z">
+    <meta property="article:modified_time" content="2016-08-20T19:54:08.300Z">
     
     <meta name="twitter:card" content="summary">
     <meta name="twitter:title" content="Machine Learning Foundations 機器學習基石 (課程筆記)">
-    <meta name="twitter:description" content="由台大資工系 副教授 林軒田 提供的開放式課程, 關於教材內容皆可於 Youtube教學影片 及 投影片下載網址 取得。 Introduction 模仿人類學習的方式, 透過觀察 (data) 學習 (取出特徵、經過計算處理) 後得到有意義的技巧 (提升某項可以量化評估的表現)。 一些應用機器學習的時機 過於複雜 (不預期的狀況) 的系統不容易轉化成程式來處理 不容易寫出判定規則的系統 人尚未或無法即時判定的行為 過分客製化 (數量過多) 的反應 使用條件 具備 可理解的特徵 以及 可供量化評估改進的結果 不容易定義出規則 (容易定義則使用規則撰寫一般的程式處理即可) 有資料可供學習 Model Component Algorithm, learning algorithm...">
+    <meta name="twitter:description" content="由台大資工系 副教授 林軒田 提供的開放式課程, 關於教材內容皆可於 Youtube教學影片 及 投影片下載網址 取得。 Git Book傳送門 隨著文章的編寫, 發現用 Blog 單篇文章的形式呈現會讓整體知識的結構太過於線性, 所以重頭使用 Gitbook 編寫, 更完整的學習筆記可以前往參考, 這邊僅提供一些 Overview。 以下尚未整理, 請直接參閱 gitbook 最新更新。 Introduction 模仿人類學習的方式, 透過觀察 (data) 學習 (取出特徵、經過計算處理) 後得到有意義的技巧 (提升某項可以量化評估的表現)。 一些應用機器學習的時機 過於複雜 (不預期的狀況) 的系統不容易轉化成程式來處理 不容易寫出判定規則的系統 人尚未或無法即時判定的行為...">
     <meta name="twitter:url" content="http://captainvincent.github.io/machine-learning-foundations-ji-qi-xue-xi-ji-shi-ke-cheng-bi-ji/">
     
     <script type="application/ld+json">
@@ -46,8 +46,8 @@
     "headline": "Machine Learning Foundations 機器學習基石 (課程筆記)",
     "url": "http://captainvincent.github.io/machine-learning-foundations-ji-qi-xue-xi-ji-shi-ke-cheng-bi-ji/",
     "datePublished": "2016-06-20T11:30:30.170Z",
-    "dateModified": "2016-06-21T14:41:04.539Z",
-    "description": "由台大資工系 副教授 林軒田 提供的開放式課程, 關於教材內容皆可於 Youtube教學影片 及 投影片下載網址 取得。 Introduction 模仿人類學習的方式, 透過觀察 (data) 學習 (取出特徵、經過計算處理) 後得到有意義的技巧 (提升某項可以量化評估的表現)。 一些應用機器學習的時機 過於複雜 (不預期的狀況) 的系統不容易轉化成程式來處理 不容易寫出判定規則的系統 人尚未或無法即時判定的行為 過分客製化 (數量過多) 的反應 使用條件 具備 可理解的特徵 以及 可供量化評估改進的結果 不容易定義出規則 (容易定義則使用規則撰寫一般的程式處理即可) 有資料可供學習 Model Component Algorithm, learning algorithm..."
+    "dateModified": "2016-08-20T19:54:08.300Z",
+    "description": "由台大資工系 副教授 林軒田 提供的開放式課程, 關於教材內容皆可於 Youtube教學影片 及 投影片下載網址 取得。 Git Book傳送門 隨著文章的編寫, 發現用 Blog 單篇文章的形式呈現會讓整體知識的結構太過於線性, 所以重頭使用 Gitbook 編寫, 更完整的學習筆記可以前往參考, 這邊僅提供一些 Overview。 以下尚未整理, 請直接參閱 gitbook 最新更新。 Introduction 模仿人類學習的方式, 透過觀察 (data) 學習 (取出特徵、經過計算處理) 後得到有意義的技巧 (提升某項可以量化評估的表現)。 一些應用機器學習的時機 過於複雜 (不預期的狀況) 的系統不容易轉化成程式來處理 不容易寫出判定規則的系統 人尚未或無法即時判定的行為..."
 }
     </script>
 
@@ -108,6 +108,14 @@
   <p>由台大資工系 副教授 林軒田 提供的開放式課程, 關於教材內容皆可於 <a href="https://www.youtube.com/playlist?list=PLXVfgk9fNX2I7tB6oIINGBmW50rrmFTqf">Youtube教學影片</a> 及 <a href="http://www.csie.ntu.edu.tw/~htlin/mooc/">投影片下載網址</a> 取得。</p>
 </blockquote>
 
+<h3 id="gitbookhttpswwwgitbookcombookcaptainvincentmachinelearningfoundationsdetails"><a href="https://www.gitbook.com/book/captainvincent/machine-learning-foundations/details"><strong>Git Book</strong>傳送門</a></h3>
+
+<p>隨著文章的編寫, 發現用 Blog 單篇文章的形式呈現會讓整體知識的結構太過於線性, 所以重頭使用 Gitbook 編寫, 更完整的學習筆記可以前往參考, 這邊僅提供一些 Overview。</p>
+
+<hr>
+
+<p>以下尚未整理, 請直接參閱 gitbook 最新更新。</p>
+
 <h2 id="introduction">Introduction</h2>
 
 <p>模仿人類學習的方式, 透過觀察 (data) 學習 (取出特徵、經過計算處理) 後得到有意義的技巧 (提升某項可以量化評估的表現)。</p>
@@ -160,19 +168,19 @@
 
 <p>這邊介紹一種簡單的 Hypothesis Set 的定義方式稱 "Perceptron" 來求一個是非題的解, 數學上的符號如下</p>
 
-<p>Σ <sub>(i=1~n)</sub> w<sub>i</sub>x<sub>i</sub> (再定義出一個 threshold 來二分這是非題的結果, y = {+1 , -1})</p>
+<p>Σ <sub>(i=1~d)</sub> w<sub>i</sub>x<sub>i</sub> (再定義出一個 threshold 來二分這是非題的結果, y = {+1 , -1})</p>
 
-<p>h(x) = sign ( Σ <sub>(i=1~n)</sub> w<sub>i</sub>x<sub>i</sub> - threshold ) </p>
+<p>h(x) = sign ( Σ <sub>(i=1~d)</sub> w<sub>i</sub>x<sub>i</sub> - threshold ) </p>
 
 <p>令 w<sub>0</sub> 為 -threshold、x<sub>0</sub> 為 1, 則化簡如下</p>
 
-<p>h(x) = sign ( Σ <sub>(i=0~n)</sub> w<sub>i</sub>x<sub>i</sub> ) = sign (<strong>w</strong><sup>T</sup><strong>x</strong>)</p>
+<p>h(x) = sign ( Σ <sub>(i=0~d)</sub> w<sub>i</sub>x<sub>i</sub> ) = sign (<strong>w</strong><sup>T</sup><strong>x</strong>)</p>
 
 <blockquote>
-  <p>相當於取 w 與 x 兩個 n+1 維的向量內積。</p>
+  <p>相當於取 w 與 x 兩個 d+1 維的向量內積。</p>
 </blockquote>
 
-<p>目標是從 H 中挑選出最接近 f 的 g, 而這最接近的定義為在已經看過的資料中可以產出愈相同的 output , 但實際上整個 H 是一個無限大的集合, 所以 <strong>PLA</strong> (Perceptron Learning Algorithm) 的想法是嘗試先從中挑選出第一個 g<sub>0</sub> (或稱 <strong>w</strong><sub>0</sub>), 並不斷的在錯誤中修正</p>
+<p>目標是從 H 中挑選出最接近 f 的 g, 而這最接近的定義為在已經看過的資料中可以產出愈相同的 output , 但實際上整個 H 是一個無限大的集合, 所以 <strong>PLA</strong> (Perceptron Learning Algorithm) 的想法是嘗試先從中挑選出第一個 g<sub>0</sub> (或稱 <strong>w</strong><sub>0</sub>), 並不斷的在錯誤中修正。</p>
 
 <h5 id="">演算法</h5>
 
@@ -263,6 +271,8 @@ Until no more mistakes.</p>
 
 <h2 id="">機器學習的分類</h2>
 
+<p>在整個學習的 Model 中針對控制變因的種類區分定義其特性。</p>
+
 <h5 id="ysubnsub">以提供不同 y<sub>n</sub> 形式區分的學習方式</h5>
 
 <ul>
@@ -287,6 +297,135 @@ Until no more mistakes.</p>
 <li>Raw Features 通常需要人或機器建立、抽取出具體的特徵, 以避免原始資料對於問題過於抽象</li>
 <li>Abstract Features 輸入資料完全不具任何意義, 同 raw features 一樣需要建立出特徵</li>
 </ul>
+
+<h2 id="">機器學習的限制</h2>
+
+<p>最根本的現實是機器學習即便挑選的演算法以及假說設定的再好, 最終也只能代表 inside <strong>D</strong>ata 能有不錯的表現, 關於 outside <strong>D</strong> 我們都是未知, 接下來就是對於我們是否能增加一些條件, 來對於這些未知的結果得到較為可靠的推論 (透過數學的工具)。</p>
+
+<h5 id="topicihoeffdingsinequality">Topic I (Hoeffding's Inequality)</h5>
+
+<p><strong>Sample (取樣) 的代表性</strong>, 假設取樣中某特徵呈現的機率為 ν 實際機率為 μ, 則兩者存在以下不等式的關係</p>
+
+<p>P [|ν - μ| &gt; ɛ] ≤ 2 exp (-2ɛ<sup>2</sup>N), ɛ 為誤差範圍、N 為取樣數</p>
+
+<ul>
+<li>誤差愈大 或 取樣數愈大, 不等式右項就愈小, 表示發生的可能性愈低</li>
+<li>ν = μ 是 PAC (<strong>P</strong>robably <strong>A</strong>pproximately <strong>C</strong>orrect) 很大的機會是對的, 但還是有例外</li>
+</ul>
+
+<h5 id="topicii">Topic II</h5>
+
+<p>假定透過相同的 P 機率分佈作為產生 訓練資料(in) 及 測試資料(out) 的樣本, 這邊機率的意涵為 <strong>D</strong>ata 透過特定 <strong>H</strong>ypothesis 產生對或錯的機率 (使用 <strong>E</strong>rror 作為錯誤的機率)。</p>
+
+<p>P [|E<sub>in</sub>(h) - E<sub>out</sub>(h)| &gt; ɛ] ≤ 2 exp (-2ɛ<sup>2</sup>N)</p>
+
+<p>所以當取樣夠多時</p>
+
+<ul>
+<li>E<sub>in</sub>(h) ≈ E<sub>out</sub>(h)</li>
+<li>又當 E<sub>in</sub>(h) 夠小時, g = f is PAC (<strong>P</strong>robably <strong>A</strong>pproximately <strong>C</strong>orrect)</li>
+<li>說明了如何驗證一個 Hypothesis 的好壞, 但不保證被 Algorithm 挑選到</li>
+</ul>
+
+<h5 id="topiciiipickalgorithm">Topic III (Pick Algorithm)</h5>
+
+<p>挑選 Hypothesis 的限制, E<sub>in</sub>(h) 最低不一定代表是最佳, 因為 sample 到不好的資料會讓 E<sub>in</sub>(h)、E<sub>out</sub>(h) 相距很遠, 當有選擇時, 會讓選出錯誤的 Hypothesis 機率增加 (更容易選到 overfitting 的假說)。</p>
+
+<p><strong>令有限 M 種的 Hypothesis</strong>, 由 Topic I <strong>Hoeffding's Inequality</strong> 知道個別 Hypothesis 選中不好的資料 (E<sub>in</sub>(h)、E<sub>out</sub>(h) 相距很遠) 的機率不高, 所以 Σ <sub>(i=0~M) </sub>P<sub>D</sub>[BAD of D]≤ 2 M exp (-2ɛ<sup>2</sup>N), 可得知當取樣個數夠多時 且 有限個數 M 的 <strong>H</strong>, E<sub>in</sub>(g) ≈ E<sub>out</sub>(g) is PAC 一樣會成立。</p>
+
+<blockquote>
+  <p>Ｍ 的挑選是個取捨, 過小的話可以讓選中不好的 g 機會降低, 但是可以選的選項太少反而不一定存在可以挑出夠小的 E<sub>in</sub>(h), 太大的 M 則是讓選出不好的 g 機率增加。</p>
+</blockquote>
+
+<p><img src="https://c3.staticflickr.com/8/7296/27787727066_f067f65a94_z.jpg" alt="學習架構">
+</p><center>(學習架構圖)</center>
+
+<h5 id="topicivhypothesisset">Topic IV 如何收斂 Hypothesis Set</h5>
+
+<p>∞ 多個 Hypothesis 會讓不等式的 Upper Bound 沒有意義, 原因在於 Set 之中其實存在許多相似重疊的 Hypothesis, 接著我們要收斂 Set 裡的個數, 先嘗試對 Hypothesis 做分類, 方法是從 <strong>D</strong>ata 的角度看待這些 Hypothesis 是將其歸類為何 ex. binary classification output y = {+1, -1}。</p>
+
+<p><strong>Effective Number of Lines</strong> 定義為將 output 劃分不同種類的可能性 (≤ 2<sup>N</sup>)</p>
+
+<ul>
+<li>僅一筆資料時, 存在兩種 分割線／高維平面 將其 output 分為 +1 或 -1</li>
+<li>二筆資料時, 存在四種 分割線／高維平面 將這兩個資料特徵向量 output 分為 +1 或 -1</li>
+<li>三筆資料時, 最多存在八種 分割線／高維平面, 但如果三點共線時則僅六種 (+1,-1,+1), (-1,+1,-1) 的 分割線／高維平面 不存在</li>
+<li>四筆資料時, 共平面時 (想像成二維), 則最多只有 14 種 (對角線為相同 output 的分割線／高維平面 不存在)</li>
+<li>五筆資料時, 共平面時 (想像成二維), 則最多只有 22 種</li>
+</ul>
+
+<p><strong>Dichotomy</strong> 指透過 Hypothesis 對所有 x (input data) 運算的結果, Dichotomies H(x<sub>1</sub>, x<sub>2</sub>, ... x<sub>N</sub>) 表示這些不同 <strong>結果的集合</strong>, 集合內個數上限稱為 Effective Number of Lines。</p>
+
+<p><strong>Target</strong> 目標在於找到一個方法, 可以有效的將 ∞ 多個 Hypothesis 找到分類後的個數可以 &lt;&lt; 2<sup>N</sup> (大於 2<sup>N</sup> 會讓 Top III 的不等式右項無法收斂), 而這個目標的關係式稱作 </p>
+
+<p>Growth Function: m<sub>H</sub>(N) = max | H(x<sub>1</sub>, x<sub>2</sub>, ... x<sub>N</sub>) | ≤ 2<sup>N</sup></p>
+
+<p><strong>Break Point</strong> 第一個資料點 K 使得 m<sub>H</sub> (K) &lt; 2<sup>K</sup>, 在  K &lt; N 皆會成立。</p>
+
+<p><strong>Example</strong></p>
+
+<ul>
+<li>Growth Function for Positive Rays (大於某個 threshold 結果為正), 則 ∞ 的 H 為 h(x) = sign( x - threshold ), 但 Growth Function 為 m<sub>H</sub>(N) = N+1, 因為僅有 N+1 種可以放置 threshold 的組合。</li>
+<li>Growth Function for Positive Intervals (在某個區間內時, 結果為正), 則 ∞ 的 H 為 h(x) = +1 if x ∈ [l, r), -1 otherwise, 但 Growth Function 為 m<sub>H</sub>(N) = (C N+1 取 2) + 1 (all -1 的 case)。</li>
+<li>Growth Function for Convex Sets (凸多邊形內的區域結果為正), 其中一種可能是將所有資料排成圓形, 並將結果為正的點連線成多邊形, 此時 2<sup>N</sup> 所有種排列皆可以產生, 因為 Growth Function 是取 max, 所以僅需要造出這組即可得知 Growth Function 為 m<sub>H</sub>(N) = 2<sup>N</sup>。
+
+
+<blockquote>
+  <p>成長函數為 2<sup>N</sup> 的這 N 個 input 被稱作 <strong>Shattered</strong>。</p></blockquote></li>
+  </ul>
+  <strong>Conjecture 猜想</strong>
+
+
+<ul>
+<li>No break point: m<sub>H</sub>(K) = 2<sup>N</sup></li>
+<li>Exist break point K: m<sub>H</sub>(K) = O(N<sup>K-1</sup>) 之後會證明</li>
+</ul>
+
+<p><strong>Proof</strong></p>
+
+<p>令 B(N,K) 為 <strong>B</strong>ounding Function, 其值是要抽象於 Growth Function 外只在乎其 Dichotomies 上限, 解讀為 N 個 input 中任意取 K 項的不同 Dichotomy 個數 (當 K 為 break point 時), 而這邊重點又在於已知任取 K 項時不會 Shattered (種類 &lt; 2<sup>K</sup>), 那是否能找得出 B(N,K) ≤ 多項式的複雜度 (個數)。 </p>
+
+<p>B(N,K) = 2α + β (拆分為 α 表示 Dichotomy 中僅最末項不同的個數, β 是剩餘個數)</p>
+
+<p>α + β ≤ B(N-1,K) (去掉最末項後 <strong>僅</strong> 留下不同的 Dichotomy 個數, 因為 B(N,K) 告訴我們任 K 項不 Shattered, 所以剩下的項本身也不會 Shattered)</p>
+
+<p>α ≤ B(N-1,K-1) (若任取 K-1 項會 Shattered = 2<sup>K-1</sup>, 則加上之前去掉的最末項 =  2<sup>K</sup>, 與 Bounding Function 定義衝突)</p>
+
+<p>B(N,K) ≤ B(N-1,K) + B(N-1,K-1) (替換上式可得知)</p>
+
+<p><img src="https://c7.staticflickr.com/8/7396/27806904806_dc75eeba71.jpg" alt="Bounding Function">
+</p><center>(2D Perceptron Learning Algorithm)</center>
+
+<p>透過以上關係式, 可以用數學歸納法證明以下不等式, 而 RHS 的最高項為 N<sup>k-1</sup></p>
+
+<div>  
+\begin{equation}
+  \begin{split}
+B(N,k)\leq \sum_{i=0}^{k-1}\binom {N}{i}  
+\end{split}
+\end{equation}
+</div>
+
+<p>當 N = 1 時代入很容易得知成立, 假設 N = N' 也成立, 透過以下推導得知 N = N'+1 也會成立, 得證</p>
+
+<div>  
+\begin{aligned}
+B(N'+1,k) &amp;\leq B(N',k) + B(N',k-1) \\\  
+&amp;\leq \sum_{i=0}^{k-1}\binom{N'}{i}+\sum_{i=0}^{k-2}\binom{N'}{i} \\\
+&amp;=1+\sum_{i=1}^{k-1}\binom{N'}{i}+\sum_{i=1}^{k-1}\binom{N'}{i-1} \\\
+&amp;=1+\sum_{i=1}^{k-1}[\binom{N'}{i}+\binom{N'}{i-1}] \\\
+&amp;=1+\sum_{i=1}^{k-1}\binom{N'+1}{i}=\sum_{i=0}^{k-1}\binom{N'+1}{i}
+\end{aligned}
+</div>
+
+<p>所以得知, 當 Break Point 存在時, 其 m<sub>H</sub>(K) 數量跟 N 的關係會是 polynomial (上式其實可以反向再證明 LHS = RHS, 不僅僅是 upper bound)</p>
+
+<p><strong>VC Dimension</strong> (d<sub>vc</sub>) = 'minimum K' -1</p>
+
+<h2 id="noise">Noise</h2>
+
+<p>Is VC bound work fine  with <strong>Noise</strong>. <br>
+假設 output 存在一個機率分佈 (含雜訊造成的結果) 稱作 P(y|<strong>x</strong>) = f(<strong>x</strong>) + noise, mini-target 的觀念是挑選機率分佈中發生機率較高者為 output, 更進一步說 P(<strong>x</strong>) 機率高者 (表示 input 常被選中) 時我們更要挑選 mini-target 的 P(y|<strong>x</strong>)。</p>
         </section>
 
         <footer class="post-footer">
@@ -349,6 +488,12 @@ Until no more mistakes.</p>
 </main>
 
 <aside class="read-next">
+    <a class="read-next-story no-cover" href="../work-on-tensorflow/">
+        <section class="post">
+            <h2>Work On TensorFlow</h2>
+            <p>本篇為透過修習 機器學習 課程後進一步的實作練習紀錄。 簡體參考文獻 Introduction TensorFlow 為一套由 Google 所提供的開源機器學習系統, 目前的版本號為 r0.9。 Install 先從 參考列表 上選擇合適的版本, 這邊除了使用到 GPU 的版本,…</p>
+        </section>
+    </a>
     <a class="read-next-story prev no-cover" href="../dan-ni-er-bo-shi-pao-bu-fang-cheng-shi/">
         <section class="post">
             <h2>丹尼爾博士 跑步方程式 筆記</h2>
@@ -370,8 +515,8 @@ Until no more mistakes.</p>
     <script type="text/javascript" src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
     
 
-    <script type="text/javascript" src="../assets/js/jquery.fitvids.js?v=16480e2d13"></script>
-    <script type="text/javascript" src="../assets/js/prism.js?v=16480e2d13"></script>
+    <script type="text/javascript" src="../assets/js/jquery.fitvids.js?v=117cab5f1c"></script>
+    <script type="text/javascript" src="../assets/js/prism.js?v=117cab5f1c"></script>
     <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
     <script type="text/x-mathjax-config">
         MathJax.Hub.Config({
@@ -381,6 +526,6 @@ Until no more mistakes.</p>
             }
         });
     </script>
-    <script type="text/javascript" src="../assets/js/index.js?v=16480e2d13"></script>
+    <script type="text/javascript" src="../assets/js/index.js?v=117cab5f1c"></script>
 
 </body>
