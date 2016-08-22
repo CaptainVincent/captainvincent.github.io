@@ -1,4 +1,152 @@
-<rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:media="http://search.yahoo.com/mrss/" version="2.0"><channel><title>Hello World! I'm Vincent</title><description>Thoughts, stories and ideas.</description><link>http://captainvincent.github.io/</link><generator>Ghost 0.7</generator><lastBuildDate>Sat, 20 Aug 2016 20:53:13 GMT</lastBuildDate><atom:link href="http://captainvincent.github.io/rss/" rel="self" type="application/rss+xml"/><ttl>60</ttl><item><title>2016 COSCUP Day - 1</title><description>&lt;blockquote&gt;
+<rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:media="http://search.yahoo.com/mrss/" version="2.0"><channel><title>Hello World! I'm Vincent</title><description>Thoughts, stories and ideas.</description><link>http://captainvincent.github.io/</link><generator>Ghost 0.7</generator><lastBuildDate>Mon, 22 Aug 2016 14:05:35 GMT</lastBuildDate><atom:link href="http://captainvincent.github.io/rss/" rel="self" type="application/rss+xml"/><ttl>60</ttl><item><title>2016 COSCUP Day - 2</title><description>&lt;p&gt;&lt;img src="https://c7.staticflickr.com/9/8118/28868620030_52dd7da609.jpg" alt="COSCUP Day2"&gt;&lt;/p&gt;
+
+&lt;p&gt;前一天太晚睡, 第一個共同議程遲到錯過了 QQ。&lt;/p&gt;
+
+&lt;h3 id="servotheparallelbrowserengine"&gt;Servo, the Parallel Browser Engine&lt;/h3&gt;
+
+&lt;p&gt;&lt;a href="https://shinglyu.github.io/my_presentations/2016-coscup-servo-intro.pdf"&gt;講者投影片&lt;/a&gt;、&lt;a href="https://servo.org/bhtml-newtab/newtab.html"&gt;Demo 測試網頁&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;因應硬體平行化的架構, 將 browser 本身可拆分的工作 (ex. tree 中去計算 layout 的部分) 去進行平行化的 engine 設計, 但 javascript engine 仍直接沿用 SpiderMonkey。&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;加速&lt;/li&gt;
+&lt;li&gt;平均使用 CPU 可以降低耗電&lt;/li&gt;
+&lt;li&gt;將繪圖部分整理利用 GPU 加速&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;使用 Github 的 workflow 讓貢獻者意願增加, 並會對 Servo 做跨瀏覽器相容的測試。&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;Rust (Servo 使用的語言) 透過 compiler time 協助安全性的處理,&lt;/p&gt;&lt;/blockquote&gt;</description><link>http://captainvincent.github.io/2016-coscup-day-2/</link><guid isPermaLink="false">e0a4cf4a-e826-48d3-aad2-e48f2ce92e66</guid><category>COSCUP</category><dc:creator>Captain Vincent</dc:creator><pubDate>Sun, 21 Aug 2016 02:49:44 GMT</pubDate><content:encoded>&lt;p&gt;&lt;img src="https://c7.staticflickr.com/9/8118/28868620030_52dd7da609.jpg" alt="COSCUP Day2"&gt;&lt;/p&gt;
+
+&lt;p&gt;前一天太晚睡, 第一個共同議程遲到錯過了 QQ。&lt;/p&gt;
+
+&lt;h3 id="servotheparallelbrowserengine"&gt;Servo, the Parallel Browser Engine&lt;/h3&gt;
+
+&lt;p&gt;&lt;a href="https://shinglyu.github.io/my_presentations/2016-coscup-servo-intro.pdf"&gt;講者投影片&lt;/a&gt;、&lt;a href="https://servo.org/bhtml-newtab/newtab.html"&gt;Demo 測試網頁&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;因應硬體平行化的架構, 將 browser 本身可拆分的工作 (ex. tree 中去計算 layout 的部分) 去進行平行化的 engine 設計, 但 javascript engine 仍直接沿用 SpiderMonkey。&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;加速&lt;/li&gt;
+&lt;li&gt;平均使用 CPU 可以降低耗電&lt;/li&gt;
+&lt;li&gt;將繪圖部分整理利用 GPU 加速&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;使用 Github 的 workflow 讓貢獻者意願增加, 並會對 Servo 做跨瀏覽器相容的測試。&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;Rust (Servo 使用的語言) 透過 compiler time 協助安全性的處理, crates.io 相當於 Rust 的 npm, 目前 Servo 算是 Rust 的大用戶。&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h3 id="weex"&gt;Weex 輕量級跨平台動態解決方案&lt;/h3&gt;
+
+&lt;p&gt;因應 2015 雙11 活動設計&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Native 體驗&lt;/li&gt;
+&lt;li&gt;Web 般靈活的修改呈現&lt;/li&gt;
+&lt;li&gt;依據使用者消費習慣推薦內容&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;方案&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;JSON -&gt; NativeView 方案 (建立 Native template, 難以維護、Bug 修正更新不及時)&lt;/li&gt;
+&lt;li&gt;React Native (效能上 Weex 表現較佳, 基於 React Native 的設計是以 APP 為單位)&lt;/li&gt;
+&lt;li&gt;Vue.js + Web conponent =&gt; Weex (可使用在 單一頁面、嵌入 Native、嵌入 Web、整個 App 的建立 ... etc 的應用場景)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;目標&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;變化性高&lt;/li&gt;
+&lt;li&gt;性能要求&lt;/li&gt;
+&lt;li&gt;一次開發三端同步 (Web、iOS、Android)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;靈感來源&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Web Component&lt;/li&gt;
+&lt;li&gt;Vuejs&lt;/li&gt;
+&lt;li&gt;Polymer&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;類似 React Native 要解決的問題, 但應用場景加入更多的變化的框架, 提供給開發者多一些的選擇。&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h3 id="ahighscalemlplatformusingsparkandkafka"&gt;A High Scale ML Platform Using SPARK and KAFKA&lt;/h3&gt;
+
+&lt;p&gt;Batch vs Streaming&lt;/p&gt;
+
+&lt;h5 id="batch"&gt;Batch&lt;/h5&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Batch 大量一波一波收到的資料, 可容忍不即時&lt;/li&gt;
+&lt;li&gt;使用 Spark, 因為是 in-memory 的計算, 並且對 Machine Learning 以及 SQL 的整合都很 friendly&lt;/li&gt;
+&lt;li&gt;演算法
+&lt;ul&gt;&lt;li&gt;Alternating Least Square&lt;/li&gt;
+&lt;li&gt;Logistic Regression (分類演算法)&lt;/li&gt;
+&lt;li&gt;GDBT (Ranking 演算法)&lt;/li&gt;
+&lt;li&gt;Clustering (依據使用者的行為分類)&lt;/li&gt;
+&lt;li&gt;Top-k rank&lt;/li&gt;&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;Text Mining
+&lt;ul&gt;&lt;li&gt;Naive Bayes&lt;/li&gt;
+&lt;li&gt;Latent dirichlet allocation &lt;/li&gt;
+&lt;li&gt;Word2vec&lt;/li&gt;&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h5 id="streamingexaccesslog"&gt;Streaming (ex. access log)&lt;/h5&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Streaming 持續收到的資料, 需較即時地處理&lt;/li&gt;
+&lt;li&gt;應用在根據使用者行為的 live prediction&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;囧&gt; 可能是對 (SPARK、KAFKA) 這兩個 term 太陌生了, 所以聽著聽著就睡著了。&lt;/p&gt;
+
+&lt;h3 id="nas"&gt;NAS 也可以揀土豆&lt;/h3&gt;
+
+&lt;p&gt;介紹機器學習的一些方法以及他們一些訓練的實驗 (看了一下共筆    , 結果想抄筆記還沒得抄)。&lt;/p&gt;
+
+&lt;h3 id=""&gt;開放公司文化之下的軟體開發 / 如何用開源軟體賺錢？&lt;/h3&gt;
+
+&lt;p&gt;全體共同議程, 雖有諸多廣告的內容, 但整體上不至於討厭。&lt;/p&gt;
+
+&lt;p&gt;對於「開源」各方的直覺態度&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;小企業 - 免費的！功能不強沒關係&lt;/li&gt;
+&lt;li&gt;大企業 - 我們賣硬體，加一點軟體是不是可以多賣一點錢&lt;/li&gt;
+&lt;li&gt;員工 - 老闆要一個功能，我不會寫，找看看有沒有人寫過&lt;/li&gt;
+&lt;li&gt;政府 - 我們來辦比賽！&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;結論, 我們該如何使用開源軟體？ (需求主導)&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;觀察客戶要甚麼&lt;/li&gt;
+&lt;li&gt;加上重要功能，甚至比原來的軟體強大&lt;/li&gt;
+&lt;li&gt;願意自己重寫&lt;/li&gt;
+&lt;li&gt;甚至徹底改變商業模式&lt;/li&gt;
+&lt;li&gt;建置世界級的大系統&lt;/li&gt;
+&lt;li&gt;注重使用者體驗&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id="lightningtalk"&gt;Lightning Talk&lt;/h3&gt;
+
+&lt;p&gt;個人覺得的亮點&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;用 Git 的 branch 來畫台北捷運圖 (雖有點浪費才能, 但挺有趣的)&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://hackmd.io/"&gt;HackMD&lt;/a&gt; 的應用, 使用 markdown 來撰寫部落格後, 覺得他們整合大部分我所使用到的功能, 會找時間體驗一下他們的服務&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;&lt;del&gt;捕夢網請的模特兒不錯&lt;/del&gt;, 兩天的議程終於結束了, 參加完之後總是會讓體內燃著熱血, 要繼續 GoGo 邁向神乎其技的境界。 &lt;/p&gt;
+&lt;/blockquote&gt;</content:encoded></item><item><title>2016 COSCUP Day - 1</title><description>&lt;blockquote&gt;
   &lt;p&gt;本篇是筆者今年參加 COSCUP 不負責任、不引戰的個人摘要筆記與心得文。&lt;/p&gt;
 &lt;/blockquote&gt;
 
@@ -15,7 +163,7 @@
 &lt;li&gt;&lt;a href="https://www.youtube.com/watch?v=n3NY_2RPAl0"&gt;講者之前相同題目的影片&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;介紹在 MCU 終端的嵌入式硬體上執行 JS (相較於 MPU 的 device 會帶起較完整的系統並具備較高規格的硬體), 最早期的啟發來自於基於 Tiny.js 開發的 Espruino, 原理是邊 parse 編解析 (但不構成 AST), 陸陸續續也出現一些針對物聯網嚴苛 device 條件所產生的 engine 設計,&lt;/p&gt;</description><link>http://captainvincent.github.io/2016-coscup-day-1/</link><guid isPermaLink="false">a09358a9-97d5-48e3-b5de-26bc396ce87a</guid><dc:creator>Captain Vincent</dc:creator><pubDate>Fri, 19 Aug 2016 23:27:03 GMT</pubDate><content:encoded>&lt;blockquote&gt;
+&lt;p&gt;介紹在 MCU 終端的嵌入式硬體上執行 JS (相較於 MPU 的 device 會帶起較完整的系統並具備較高規格的硬體, MCU 的硬體規格限制更多), 最早期的啟發來自於基於 Tiny.js 開發的 Espruino, 原理是邊 parse 編解析 (但不構成 AST), 陸陸續續也出現一些針對物聯網嚴苛 device 條件所產生的&lt;/p&gt;</description><link>http://captainvincent.github.io/2016-coscup-day-1/</link><guid isPermaLink="false">a09358a9-97d5-48e3-b5de-26bc396ce87a</guid><category>COSCUP</category><dc:creator>Captain Vincent</dc:creator><pubDate>Fri, 19 Aug 2016 23:27:03 GMT</pubDate><content:encoded>&lt;blockquote&gt;
   &lt;p&gt;本篇是筆者今年參加 COSCUP 不負責任、不引戰的個人摘要筆記與心得文。&lt;/p&gt;
 &lt;/blockquote&gt;
 
@@ -32,7 +180,7 @@
 &lt;li&gt;&lt;a href="https://www.youtube.com/watch?v=n3NY_2RPAl0"&gt;講者之前相同題目的影片&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;介紹在 MCU 終端的嵌入式硬體上執行 JS (相較於 MPU 的 device 會帶起較完整的系統並具備較高規格的硬體), 最早期的啟發來自於基於 Tiny.js 開發的 Espruino, 原理是邊 parse 編解析 (但不構成 AST), 陸陸續續也出現一些針對物聯網嚴苛 device 條件所產生的 engine 設計, 最後講者是透過去封裝一層名為 Microlattice.JS 的 interface 去使用 jerryscript (lightweight JS engine), 建構在freeRTOS 上。&lt;/p&gt;
+&lt;p&gt;介紹在 MCU 終端的嵌入式硬體上執行 JS (相較於 MPU 的 device 會帶起較完整的系統並具備較高規格的硬體, MCU 的硬體規格限制更多), 最早期的啟發來自於基於 Tiny.js 開發的 Espruino, 原理是邊 parse 編解析 (但不構成 AST), 陸陸續續也出現一些針對物聯網嚴苛 device 條件所產生的 engine 設計, 最後講者是透過去封裝一層名為 Microlattice.JS 的 interface 去使用 jerryscript (lightweight JS engine), 建構在freeRTOS 上。&lt;/p&gt;
 
 &lt;blockquote&gt;
   &lt;p&gt;因為設備問題, 所以 talk 只進行到一半, 剩下部分需參考講者之前演講資訊。&lt;/p&gt;
@@ -60,7 +208,7 @@
 
 &lt;p&gt;&lt;a href="https://onedrive.live.com/view.aspx?resid=449602EB8FBEC303!2399&amp;amp;ithint=file%2cpptx&amp;amp;app=PowerPoint&amp;amp;authkey=!ANC0p7Yoi51Wu9E"&gt;講者投影片&lt;/a&gt;&lt;/p&gt;
 
-&lt;p&gt;精神在於建立一種文化, 介紹常見的軟體工程在開發時應有的配置 (列舉可用的 open source 工具)。&lt;/p&gt;
+&lt;p&gt;精神在於建立一種文化, 介紹常見的軟體工程在開發時應有的配置 (列舉可用的 open source 工具, 詳細參閱投影片)。&lt;/p&gt;
 
 &lt;h3 id=""&gt;寫出高性能的服務與應用。那些你沒想過的事！&lt;/h3&gt;
 
@@ -69,7 +217,7 @@
 &lt;blockquote&gt;
   &lt;p&gt;總結&lt;/p&gt;
   
-  &lt;p&gt;COSCUP 的伙食不錯, &lt;del&gt;中研院 電擊獸 很多&lt;/del&gt;, 跟其他主題更明確的聚會相比, 感覺準備的內容有比較多一點的學生感, 引用朋友的見解, 來參加聚會聽 talk 只是配菜, 重點在於 要多認識些人 或是 上台當講者, 筆者默默期許自己。&lt;/p&gt;
+  &lt;p&gt;COSCUP 的伙食不錯, &lt;del&gt;中研院 電擊獸 很多&lt;/del&gt;, 跟其他主題更明確的聚會相比, 感覺準備的內容有比較多一點的學生感, 但引用朋友的見解, 來參加聚會聽 talk 只是配菜, 重點在於 要多認識人 或是 上台當講者, 筆者只能默默期許自己。&lt;/p&gt;
 &lt;/blockquote&gt;</content:encoded></item><item><title>Movie - The Weather Man (2005)</title><description>&lt;h2 id=""&gt;成年人的電影, 寓意深遠的對白&lt;/h2&gt;
 
 &lt;p&gt;Michael Caine 還真是適合扮演智慧的長者, 如同黑暗騎士 (Dark Knight) 中管家阿福 (Alfred) 的設定, 在榮格心理學裡智慧老人的化身。&lt;/p&gt;
@@ -2117,32 +2265,4 @@ Person.prototype.out = function(){
 
 &lt;h3 id="gcgarbagecollection"&gt;記憶體回收機制 (GC, Garbage Collection)&lt;/h3&gt;
 
-&lt;p&gt;透過計算指向物件的 reference count 來確認該物件是否仍被使用, 當 reference count 降為 0 時便釋放該記憶體空間。&lt;/p&gt;</content:encoded></item><item><title>道氏理論的 21 招選股技巧 筆記 (Mind Map)</title><description>&lt;p&gt;原著：道氏理論的21招選股技巧 陳東 (2012/04/01)&lt;/p&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;History repeats itself. 技術面操盤者心中共同的信念。&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;關於 Mind Map 內的筆記整理, 是筆者消化後認為有可能後續實驗可以參考的法則, 有可能並未忠實呈現道氏理論原先的面貌 (或本書作者的完整意思), 像道氏理論中對於各技術分析的指標都會強調求出其三重型態或是至少求出中、短期的線圖, 但筆者的重心僅在這些技術指標的特徵描述, 實際應用時應再自行驗證加入主觀意識的部分。&lt;/p&gt;
-
-&lt;h2 id="mindmap"&gt;筆記 (Mind Map)&lt;/h2&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;使用方式類似 Google Map 的拖曳操作可以移動畫面, 右鍵可以彈出放大鏡的按鈕, 按壓放大鏡拖曳後可以 Zoom In/Out&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;iframe width="853" height="480" src="https://embed.coggle.it/diagram/Vu5LNj_zpOYo1mzy/739e465141646161dad5c001a099ada2bdb261208d58eeee6ca71408a3c87dfe" frameborder="0" allowfullscreen&gt;&lt;/iframe&gt;</description><link>http://captainvincent.github.io/dao-shi-li-lun-de-21-zhao-xuan-gu-ji-qiao/</link><guid isPermaLink="false">c3e8ac2f-03b6-4684-88da-f10b74881e2c</guid><category>Mind Map</category><dc:creator>Captain Vincent</dc:creator><pubDate>Sat, 19 Mar 2016 12:05:46 GMT</pubDate><content:encoded>&lt;p&gt;原著：道氏理論的21招選股技巧 陳東 (2012/04/01)&lt;/p&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;History repeats itself. 技術面操盤者心中共同的信念。&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;關於 Mind Map 內的筆記整理, 是筆者消化後認為有可能後續實驗可以參考的法則, 有可能並未忠實呈現道氏理論原先的面貌 (或本書作者的完整意思), 像道氏理論中對於各技術分析的指標都會強調求出其三重型態或是至少求出中、短期的線圖, 但筆者的重心僅在這些技術指標的特徵描述, 實際應用時應再自行驗證加入主觀意識的部分。&lt;/p&gt;
-
-&lt;h2 id="mindmap"&gt;筆記 (Mind Map)&lt;/h2&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;使用方式類似 Google Map 的拖曳操作可以移動畫面, 右鍵可以彈出放大鏡的按鈕, 按壓放大鏡拖曳後可以 Zoom In/Out&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;iframe width="853" height="480" src="https://embed.coggle.it/diagram/Vu5LNj_zpOYo1mzy/739e465141646161dad5c001a099ada2bdb261208d58eeee6ca71408a3c87dfe" frameborder="0" allowfullscreen&gt;&lt;/iframe&gt;</content:encoded></item></channel></rss>
+&lt;p&gt;透過計算指向物件的 reference count 來確認該物件是否仍被使用, 當 reference count 降為 0 時便釋放該記憶體空間。&lt;/p&gt;</content:encoded></item></channel></rss>

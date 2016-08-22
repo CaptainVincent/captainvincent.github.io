@@ -1,0 +1,335 @@
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <title>2016 COSCUP Day - 2</title>
+    <meta name="description" content="">
+
+    <meta name="HandheldFriendly" content="True">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="shortcut icon" href="../favicon.ico">
+
+    <link rel="stylesheet" type="text/css" href="../assets/css/screen.css?v=117cab5f1c">
+    <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Merriweather:300,700,700italic,300italic%7COpen+Sans:700,400">
+    <link rel="stylesheet" type="text/css" href="../assets/css/prism.css?v=117cab5f1c">
+    <link rel="canonical" href="index.html">
+    <meta name="referrer" content="origin">
+    
+    <meta property="og:site_name" content="Hello World! I'm Vincent">
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="2016 COSCUP Day - 2">
+    <meta property="og:description" content="前一天太晚睡, 第一個共同議程遲到錯過了 QQ。 Servo, the Parallel Browser Engine 講者投影片、Demo 測試網頁 因應硬體平行化的架構, 將 browser 本身可拆分的工作 (ex. tree 中去計算 layout 的部分) 去進行平行化的 engine 設計, 但 javascript engine 仍直接沿用 SpiderMonkey。 加速 平均使用 CPU 可以降低耗電 將繪圖部分整理利用 GPU 加速 使用 Github 的 workflow 讓貢獻者意願增加,...">
+    <meta property="og:url" content="http://captainvincent.github.io/2016-coscup-day-2/">
+    <meta property="article:published_time" content="2016-08-21T02:49:44.378Z">
+    <meta property="article:modified_time" content="2016-08-22T14:04:56.981Z">
+    <meta property="article:tag" content="COSCUP">
+    
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="2016 COSCUP Day - 2">
+    <meta name="twitter:description" content="前一天太晚睡, 第一個共同議程遲到錯過了 QQ。 Servo, the Parallel Browser Engine 講者投影片、Demo 測試網頁 因應硬體平行化的架構, 將 browser 本身可拆分的工作 (ex. tree 中去計算 layout 的部分) 去進行平行化的 engine 設計, 但 javascript engine 仍直接沿用 SpiderMonkey。 加速 平均使用 CPU 可以降低耗電 將繪圖部分整理利用 GPU 加速 使用 Github 的 workflow 讓貢獻者意願增加,...">
+    <meta name="twitter:url" content="http://captainvincent.github.io/2016-coscup-day-2/">
+    
+    <script type="application/ld+json">
+{
+    "@context": "http://schema.org",
+    "@type": "Article",
+    "publisher": "Hello World! I'm Vincent",
+    "author": {
+        "@type": "Person",
+        "name": "Captain Vincent",
+        "image": "http://captainvincent.github.io/content/images/2016/01/--.JPG",
+        "url": "http://captainvincent.github.io/author/captain",
+        "sameAs": null,
+        "description": null
+    },
+    "headline": "2016 COSCUP Day - 2",
+    "url": "http://captainvincent.github.io/2016-coscup-day-2/",
+    "datePublished": "2016-08-21T02:49:44.378Z",
+    "dateModified": "2016-08-22T14:04:56.981Z",
+    "keywords": "COSCUP",
+    "description": "前一天太晚睡, 第一個共同議程遲到錯過了 QQ。 Servo, the Parallel Browser Engine 講者投影片、Demo 測試網頁 因應硬體平行化的架構, 將 browser 本身可拆分的工作 (ex. tree 中去計算 layout 的部分) 去進行平行化的 engine 設計, 但 javascript engine 仍直接沿用 SpiderMonkey。 加速 平均使用 CPU 可以降低耗電 將繪圖部分整理利用 GPU 加速 使用 Github 的 workflow 讓貢獻者意願增加,..."
+}
+    </script>
+
+    <meta name="generator" content="Ghost 0.7">
+    <link rel="alternate" type="application/rss+xml" title="Hello World! I'm Vincent" href="../rss/index.html">
+    <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-73341093-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+</head>
+<body class="post-template tag-coscup nav-closed">
+
+    <div class="nav">
+    <h3 class="nav-title">Menu</h3>
+    <a href="index.html#" class="nav-close">
+        <span class="hidden">Close</span>
+    </a>
+    <ul>
+            <li class="nav-blog-home-page" role="presentation"><a href="../">Blog Home Page</a></li>
+            <li class="nav-git-book" role="presentation"><a href="https://www.gitbook.com/@captainvincent">Git Book</a></li>
+            <li class="nav-aboutme" role="presentation"><a href="https://about.me/CaptainVincent">About.Me</a></li>
+    </ul>
+    <a class="subscribe-button icon-feed" href="../rss/index.rss">Subscribe</a>
+</div>
+<span class="nav-cover"></span>
+
+
+    <div class="site-wrapper">
+
+        
+
+
+<header class="main-header post-head no-cover">
+    <nav class="main-nav  clearfix">
+        
+            <a class="menu-button icon-menu" href="index.html#"><span class="word">Menu</span></a>
+    </nav>
+</header>
+
+<main class="content" role="main">
+    <article class="post tag-coscup">
+
+        <header class="post-header">
+            <h1 class="post-title">2016 COSCUP Day - 2</h1>
+            <section class="post-meta">
+                <time class="post-date" datetime="2016-08-21">21 August 2016</time>  on <a href="../tag/coscup/">COSCUP</a>
+            </section>
+        </header>
+
+        <section class="post-content">
+            <p><img src="https://c7.staticflickr.com/9/8118/28868620030_52dd7da609.jpg" alt="COSCUP Day2"></p>
+
+<p>前一天太晚睡, 第一個共同議程遲到錯過了 QQ。</p>
+
+<h3 id="servotheparallelbrowserengine">Servo, the Parallel Browser Engine</h3>
+
+<p><a href="https://shinglyu.github.io/my_presentations/2016-coscup-servo-intro.pdf">講者投影片</a>、<a href="https://servo.org/bhtml-newtab/newtab.html">Demo 測試網頁</a></p>
+
+<p>因應硬體平行化的架構, 將 browser 本身可拆分的工作 (ex. tree 中去計算 layout 的部分) 去進行平行化的 engine 設計, 但 javascript engine 仍直接沿用 SpiderMonkey。</p>
+
+<ul>
+<li>加速</li>
+<li>平均使用 CPU 可以降低耗電</li>
+<li>將繪圖部分整理利用 GPU 加速</li>
+</ul>
+
+<p>使用 Github 的 workflow 讓貢獻者意願增加, 並會對 Servo 做跨瀏覽器相容的測試。</p>
+
+<blockquote>
+  <p>Rust (Servo 使用的語言) 透過 compiler time 協助安全性的處理, crates.io 相當於 Rust 的 npm, 目前 Servo 算是 Rust 的大用戶。</p>
+</blockquote>
+
+<h3 id="weex">Weex 輕量級跨平台動態解決方案</h3>
+
+<p>因應 2015 雙11 活動設計</p>
+
+<ul>
+<li>Native 體驗</li>
+<li>Web 般靈活的修改呈現</li>
+<li>依據使用者消費習慣推薦內容</li>
+</ul>
+
+<p>方案</p>
+
+<ul>
+<li>JSON -&gt; NativeView 方案 (建立 Native template, 難以維護、Bug 修正更新不及時)</li>
+<li>React Native (效能上 Weex 表現較佳, 基於 React Native 的設計是以 APP 為單位)</li>
+<li>Vue.js + Web conponent =&gt; Weex (可使用在 單一頁面、嵌入 Native、嵌入 Web、整個 App 的建立 ... etc 的應用場景)</li>
+</ul>
+
+<p>目標</p>
+
+<ul>
+<li>變化性高</li>
+<li>性能要求</li>
+<li>一次開發三端同步 (Web、iOS、Android)</li>
+</ul>
+
+<p>靈感來源</p>
+
+<ul>
+<li>Web Component</li>
+<li>Vuejs</li>
+<li>Polymer</li>
+</ul>
+
+<blockquote>
+  <p>類似 React Native 要解決的問題, 但應用場景加入更多的變化的框架, 提供給開發者多一些的選擇。</p>
+</blockquote>
+
+<h3 id="ahighscalemlplatformusingsparkandkafka">A High Scale ML Platform Using SPARK and KAFKA</h3>
+
+<p>Batch vs Streaming</p>
+
+<h5 id="batch">Batch</h5>
+
+<ul>
+<li>Batch 大量一波一波收到的資料, 可容忍不即時</li>
+<li>使用 Spark, 因為是 in-memory 的計算, 並且對 Machine Learning 以及 SQL 的整合都很 friendly</li>
+<li>演算法
+<ul><li>Alternating Least Square</li>
+<li>Logistic Regression (分類演算法)</li>
+<li>GDBT (Ranking 演算法)</li>
+<li>Clustering (依據使用者的行為分類)</li>
+<li>Top-k rank</li></ul></li>
+<li>Text Mining
+<ul><li>Naive Bayes</li>
+<li>Latent dirichlet allocation </li>
+<li>Word2vec</li></ul></li>
+</ul>
+
+<h5 id="streamingexaccesslog">Streaming (ex. access log)</h5>
+
+<ul>
+<li>Streaming 持續收到的資料, 需較即時地處理</li>
+<li>應用在根據使用者行為的 live prediction</li>
+</ul>
+
+<p>囧&gt; 可能是對 (SPARK、KAFKA) 這兩個 term 太陌生了, 所以聽著聽著就睡著了。</p>
+
+<h3 id="nas">NAS 也可以揀土豆</h3>
+
+<p>介紹機器學習的一些方法以及他們一些訓練的實驗 (看了一下共筆    , 結果想抄筆記還沒得抄)。</p>
+
+<h3 id="">開放公司文化之下的軟體開發 / 如何用開源軟體賺錢？</h3>
+
+<p>全體共同議程, 雖有諸多廣告的內容, 但整體上不至於討厭。</p>
+
+<p>對於「開源」各方的直覺態度</p>
+
+<ul>
+<li>小企業 - 免費的！功能不強沒關係</li>
+<li>大企業 - 我們賣硬體，加一點軟體是不是可以多賣一點錢</li>
+<li>員工 - 老闆要一個功能，我不會寫，找看看有沒有人寫過</li>
+<li>政府 - 我們來辦比賽！</li>
+</ul>
+
+<p>結論, 我們該如何使用開源軟體？ (需求主導)</p>
+
+<ul>
+<li>觀察客戶要甚麼</li>
+<li>加上重要功能，甚至比原來的軟體強大</li>
+<li>願意自己重寫</li>
+<li>甚至徹底改變商業模式</li>
+<li>建置世界級的大系統</li>
+<li>注重使用者體驗</li>
+</ul>
+
+<h3 id="lightningtalk">Lightning Talk</h3>
+
+<p>個人覺得的亮點</p>
+
+<ul>
+<li>用 Git 的 branch 來畫台北捷運圖 (雖有點浪費才能, 但挺有趣的)</li>
+<li><a href="https://hackmd.io/">HackMD</a> 的應用, 使用 markdown 來撰寫部落格後, 覺得他們整合大部分我所使用到的功能, 會找時間體驗一下他們的服務</li>
+</ul>
+
+<blockquote>
+  <p><del>捕夢網請的模特兒不錯</del>, 兩天的議程終於結束了, 參加完之後總是會讓體內燃著熱血, 要繼續 GoGo 邁向神乎其技的境界。 </p>
+</blockquote>
+        </section>
+
+        <footer class="post-footer">
+
+
+            <figure class="author-image">
+                <a class="img" href="../author/captain/" style="background-image: url(../content/images/2016/01/--.JPG)"><span class="hidden">Captain Vincent's Picture</span></a>
+            </figure>
+
+            <section class="author">
+                <h4><a href="../author/captain/">Captain Vincent</a></h4>
+
+                    <p>Read <a href="../author/captain/">more posts</a> by this author.</p>
+                <div class="author-meta">
+                    
+                    
+                </div>
+            </section>
+
+
+            <section class="share">
+                <h4>Share this post</h4>
+                <a class="icon-twitter" href="https://twitter.com/intent/tweet?text=2016%20COSCUP%20Day%20-%202&amp;url=http://captainvincent.github.io/2016-coscup-day-2/" onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
+                    <span class="hidden">Twitter</span>
+                </a>
+                <a class="icon-facebook" href="https://www.facebook.com/sharer/sharer.php?u=http://captainvincent.github.io/2016-coscup-day-2/index.html" onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;">
+                    <span class="hidden">Facebook</span>
+                </a>
+                <a class="icon-google-plus" href="https://plus.google.com/share?url=http://captainvincent.github.io/2016-coscup-day-2/" onclick="window.open(this.href, 'google-plus-share', 'width=490,height=530');return false;">
+                    <span class="hidden">Google+</span>
+                </a>
+            </section>
+
+            <div id="disqus_thread"></div>
+            <script>
+            /**
+            * RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+            * LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables
+            */
+
+            var disqus_config = function () {
+                this.page.url = 'http://captainvincent.github.io/2016-coscup-day-2/'; // Replace PAGE_URL with your page's canonical URL variable
+                this.page.identifier = 'ghost-34'; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+            };
+
+            (function() { // DON'T EDIT BELOW THIS LINE
+                var d = document, s = d.createElement('script');
+
+                s.src = '//captainvincent.disqus.com/embed.js';
+
+                s.setAttribute('data-timestamp', +new Date());
+                (d.head || d.body).appendChild(s);
+            })();
+            </script>
+            <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+
+        </footer>
+
+    </article>
+</main>
+
+<aside class="read-next">
+    <a class="read-next-story prev no-cover" href="../2016-coscup-day-1/">
+        <section class="post">
+            <h2>2016 COSCUP Day - 1</h2>
+            <p>本篇是筆者今年參加 COSCUP 不負責任、不引戰的個人摘要筆記與心得文。 LLVM框架由淺入淺 全體共同議程, 介紹一些由高階語言轉成 machine code 的幾個環節如何拆分, 引入介紹透過 LLVM 的框架標準化這幾個環節, 讓對編譯器有興趣的使用者可以自行串接 LLVM IR 做各種調配。 MCU 與…</p>
+        </section>
+    </a>
+</aside>
+
+
+
+
+        <footer class="site-footer clearfix">
+            <section class="copyright"><a href="../">Hello World! I'm Vincent</a> © 2016</section>
+            <section class="poweredby">Proudly published with <a href="https://ghost.org">Ghost</a></section>
+        </footer>
+
+    </div>
+
+    <script type="text/javascript" src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+    
+
+    <script type="text/javascript" src="../assets/js/jquery.fitvids.js?v=117cab5f1c"></script>
+    <script type="text/javascript" src="../assets/js/prism.js?v=117cab5f1c"></script>
+    <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/x-mathjax-config">
+        MathJax.Hub.Config({
+            tex2jax: {
+                inlineMath: [['$','$'], ['\\\\(','\\\\)']],
+                processEscapes: true
+            }
+        });
+    </script>
+    <script type="text/javascript" src="../assets/js/index.js?v=117cab5f1c"></script>
+
+</body>

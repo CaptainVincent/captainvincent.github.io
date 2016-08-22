@@ -20,14 +20,15 @@
     <meta property="og:site_name" content="Hello World! I'm Vincent">
     <meta property="og:type" content="article">
     <meta property="og:title" content="2016 COSCUP Day - 1">
-    <meta property="og:description" content="本篇是筆者今年參加 COSCUP 不負責任、不引戰的個人摘要筆記與心得文。 LLVM框架由淺入淺 全體共同議程, 介紹一些由高階語言轉成 machine code 的幾個環節如何拆分, 引入介紹透過 LLVM 的框架標準化這幾個環節, 讓對編譯器有興趣的使用者可以自行串接 LLVM IR 做各種調配。 MCU 與 lightweight javascript engine 的邂逅 講者之前相同題目的 Slide 講者之前相同題目的影片 介紹在 MCU 終端的嵌入式硬體上執行 JS (相較於 MPU 的 device 會帶起較完整的系統並具備較高規格的硬體), 最早期的啟發來自於基於 Tiny.js 開發的 Espruino,...">
+    <meta property="og:description" content="本篇是筆者今年參加 COSCUP 不負責任、不引戰的個人摘要筆記與心得文。 LLVM框架由淺入淺 全體共同議程, 介紹一些由高階語言轉成 machine code 的幾個環節如何拆分, 引入介紹透過 LLVM 的框架標準化這幾個環節, 讓對編譯器有興趣的使用者可以自行串接 LLVM IR 做各種調配。 MCU 與 lightweight javascript engine 的邂逅 講者之前相同題目的 Slide 講者之前相同題目的影片 介紹在 MCU 終端的嵌入式硬體上執行 JS (相較於 MPU 的 device 會帶起較完整的系統並具備較高規格的硬體, MCU 的硬體規格限制更多), 最早期的啟發來自於基於 Tiny.js...">
     <meta property="og:url" content="http://captainvincent.github.io/2016-coscup-day-1/">
     <meta property="article:published_time" content="2016-08-19T23:27:03.372Z">
-    <meta property="article:modified_time" content="2016-08-20T20:52:42.378Z">
+    <meta property="article:modified_time" content="2016-08-22T13:56:49.730Z">
+    <meta property="article:tag" content="COSCUP">
     
     <meta name="twitter:card" content="summary">
     <meta name="twitter:title" content="2016 COSCUP Day - 1">
-    <meta name="twitter:description" content="本篇是筆者今年參加 COSCUP 不負責任、不引戰的個人摘要筆記與心得文。 LLVM框架由淺入淺 全體共同議程, 介紹一些由高階語言轉成 machine code 的幾個環節如何拆分, 引入介紹透過 LLVM 的框架標準化這幾個環節, 讓對編譯器有興趣的使用者可以自行串接 LLVM IR 做各種調配。 MCU 與 lightweight javascript engine 的邂逅 講者之前相同題目的 Slide 講者之前相同題目的影片 介紹在 MCU 終端的嵌入式硬體上執行 JS (相較於 MPU 的 device 會帶起較完整的系統並具備較高規格的硬體), 最早期的啟發來自於基於 Tiny.js 開發的 Espruino,...">
+    <meta name="twitter:description" content="本篇是筆者今年參加 COSCUP 不負責任、不引戰的個人摘要筆記與心得文。 LLVM框架由淺入淺 全體共同議程, 介紹一些由高階語言轉成 machine code 的幾個環節如何拆分, 引入介紹透過 LLVM 的框架標準化這幾個環節, 讓對編譯器有興趣的使用者可以自行串接 LLVM IR 做各種調配。 MCU 與 lightweight javascript engine 的邂逅 講者之前相同題目的 Slide 講者之前相同題目的影片 介紹在 MCU 終端的嵌入式硬體上執行 JS (相較於 MPU 的 device 會帶起較完整的系統並具備較高規格的硬體, MCU 的硬體規格限制更多), 最早期的啟發來自於基於 Tiny.js...">
     <meta name="twitter:url" content="http://captainvincent.github.io/2016-coscup-day-1/">
     
     <script type="application/ld+json">
@@ -46,8 +47,9 @@
     "headline": "2016 COSCUP Day - 1",
     "url": "http://captainvincent.github.io/2016-coscup-day-1/",
     "datePublished": "2016-08-19T23:27:03.372Z",
-    "dateModified": "2016-08-20T20:52:42.378Z",
-    "description": "本篇是筆者今年參加 COSCUP 不負責任、不引戰的個人摘要筆記與心得文。 LLVM框架由淺入淺 全體共同議程, 介紹一些由高階語言轉成 machine code 的幾個環節如何拆分, 引入介紹透過 LLVM 的框架標準化這幾個環節, 讓對編譯器有興趣的使用者可以自行串接 LLVM IR 做各種調配。 MCU 與 lightweight javascript engine 的邂逅 講者之前相同題目的 Slide 講者之前相同題目的影片 介紹在 MCU 終端的嵌入式硬體上執行 JS (相較於 MPU 的 device 會帶起較完整的系統並具備較高規格的硬體), 最早期的啟發來自於基於 Tiny.js 開發的 Espruino,..."
+    "dateModified": "2016-08-22T13:56:49.730Z",
+    "keywords": "COSCUP",
+    "description": "本篇是筆者今年參加 COSCUP 不負責任、不引戰的個人摘要筆記與心得文。 LLVM框架由淺入淺 全體共同議程, 介紹一些由高階語言轉成 machine code 的幾個環節如何拆分, 引入介紹透過 LLVM 的框架標準化這幾個環節, 讓對編譯器有興趣的使用者可以自行串接 LLVM IR 做各種調配。 MCU 與 lightweight javascript engine 的邂逅 講者之前相同題目的 Slide 講者之前相同題目的影片 介紹在 MCU 終端的嵌入式硬體上執行 JS (相較於 MPU 的 device 會帶起較完整的系統並具備較高規格的硬體, MCU 的硬體規格限制更多), 最早期的啟發來自於基於 Tiny.js..."
 }
     </script>
 
@@ -64,7 +66,7 @@
 
 </script>
 </head>
-<body class="post-template nav-closed">
+<body class="post-template tag-coscup nav-closed">
 
     <div class="nav">
     <h3 class="nav-title">Menu</h3>
@@ -94,12 +96,12 @@
 </header>
 
 <main class="content" role="main">
-    <article class="post">
+    <article class="post tag-coscup">
 
         <header class="post-header">
             <h1 class="post-title">2016 COSCUP Day - 1</h1>
             <section class="post-meta">
-                <time class="post-date" datetime="2016-08-20">20 August 2016</time> 
+                <time class="post-date" datetime="2016-08-20">20 August 2016</time>  on <a href="../tag/coscup/">COSCUP</a>
             </section>
         </header>
 
@@ -121,7 +123,7 @@
 <li><a href="https://www.youtube.com/watch?v=n3NY_2RPAl0">講者之前相同題目的影片</a></li>
 </ul>
 
-<p>介紹在 MCU 終端的嵌入式硬體上執行 JS (相較於 MPU 的 device 會帶起較完整的系統並具備較高規格的硬體), 最早期的啟發來自於基於 Tiny.js 開發的 Espruino, 原理是邊 parse 編解析 (但不構成 AST), 陸陸續續也出現一些針對物聯網嚴苛 device 條件所產生的 engine 設計, 最後講者是透過去封裝一層名為 Microlattice.JS 的 interface 去使用 jerryscript (lightweight JS engine), 建構在freeRTOS 上。</p>
+<p>介紹在 MCU 終端的嵌入式硬體上執行 JS (相較於 MPU 的 device 會帶起較完整的系統並具備較高規格的硬體, MCU 的硬體規格限制更多), 最早期的啟發來自於基於 Tiny.js 開發的 Espruino, 原理是邊 parse 編解析 (但不構成 AST), 陸陸續續也出現一些針對物聯網嚴苛 device 條件所產生的 engine 設計, 最後講者是透過去封裝一層名為 Microlattice.JS 的 interface 去使用 jerryscript (lightweight JS engine), 建構在freeRTOS 上。</p>
 
 <blockquote>
   <p>因為設備問題, 所以 talk 只進行到一半, 剩下部分需參考講者之前演講資訊。</p>
@@ -149,7 +151,7 @@
 
 <p><a href="https://onedrive.live.com/view.aspx?resid=449602EB8FBEC303!2399&amp;ithint=file%2cpptx&amp;app=PowerPoint&amp;authkey=!ANC0p7Yoi51Wu9E">講者投影片</a></p>
 
-<p>精神在於建立一種文化, 介紹常見的軟體工程在開發時應有的配置 (列舉可用的 open source 工具)。</p>
+<p>精神在於建立一種文化, 介紹常見的軟體工程在開發時應有的配置 (列舉可用的 open source 工具, 詳細參閱投影片)。</p>
 
 <h3 id="">寫出高性能的服務與應用。那些你沒想過的事！</h3>
 
@@ -158,7 +160,7 @@
 <blockquote>
   <p>總結</p>
   
-  <p>COSCUP 的伙食不錯, <del>中研院 電擊獸 很多</del>, 跟其他主題更明確的聚會相比, 感覺準備的內容有比較多一點的學生感, 引用朋友的見解, 來參加聚會聽 talk 只是配菜, 重點在於 要多認識些人 或是 上台當講者, 筆者默默期許自己。</p>
+  <p>COSCUP 的伙食不錯, <del>中研院 電擊獸 很多</del>, 跟其他主題更明確的聚會相比, 感覺準備的內容有比較多一點的學生感, 但引用朋友的見解, 來參加聚會聽 talk 只是配菜, 重點在於 要多認識人 或是 上台當講者, 筆者只能默默期許自己。</p>
 </blockquote>
         </section>
 
@@ -222,6 +224,12 @@
 </main>
 
 <aside class="read-next">
+    <a class="read-next-story no-cover" href="../2016-coscup-day-2/">
+        <section class="post">
+            <h2>2016 COSCUP Day - 2</h2>
+            <p>前一天太晚睡, 第一個共同議程遲到錯過了 QQ。 Servo, the Parallel Browser Engine 講者投影片、Demo 測試網頁 因應硬體平行化的架構, 將 browser 本身可拆分的工作 (ex. tree 中去計算 layout…</p>
+        </section>
+    </a>
     <a class="read-next-story prev no-cover" href="../the-weather-man-2005/">
         <section class="post">
             <h2>Movie - The Weather Man (2005)</h2>
