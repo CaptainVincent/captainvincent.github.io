@@ -1,0 +1,264 @@
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <title>Ghost 0.9.0 Upgrade</title>
+    <meta name="description" content="">
+
+    <meta name="HandheldFriendly" content="True">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="shortcut icon" href="../favicon.ico">
+
+    <link rel="stylesheet" type="text/css" href="../assets/css/screen.css?v=3fdc09fc57">
+    <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Merriweather:300,700,700italic,300italic%7COpen+Sans:700,400">
+
+    <link rel="canonical" href="index.html">
+    <meta name="referrer" content="origin-when-cross-origin">
+    
+    <meta property="og:site_name" content="Hello World! I'm Vincent">
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="Ghost 0.9.0 Upgrade">
+    <meta property="og:description" content="最近打開 Ghost 一直提醒我更新, 所以這篇文章就在一邊更新的過程中催生出來, 祝我好運吧！ How to upgrade (英文官方連結) Preparation 備份 Export &amp;amp; Import 將資料先以 JSON 格式匯出, 以免悲劇性的錯誤發生 (但順利升級的話是不用特別再匯入的)。 確認能夠停止、重新啟動 Ghost 這部分可以參考 官方中文安裝文件, 其中列舉安裝方式是最終目標都是將 Ghost 部署到線上的機器, 所以會有幾種登出 SSH 仍不要停掉 Ghost 的做法, 這時候就會牽涉本章節標題的步驟 (確認能夠停止、重新啟動 Ghost), 但如果有閱讀過筆者 How to setup Ghost blog platform (下) , 會知道筆者平時是透過 npm start run 在本地端, 等文章完成後,">
+    <meta property="og:url" content="http://captainvincent.github.io/ghost-0-9-0-upgrade/">
+    <meta property="article:published_time" content="2016-08-27T12:10:11.000Z">
+    <meta property="article:modified_time" content="2016-08-28T11:28:05.000Z">
+    <meta property="article:publisher" content="https://www.facebook.com/UndercoverEngineer">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Ghost 0.9.0 Upgrade">
+    <meta name="twitter:description" content="最近打開 Ghost 一直提醒我更新, 所以這篇文章就在一邊更新的過程中催生出來, 祝我好運吧！ How to upgrade (英文官方連結) Preparation 備份 Export &amp;amp; Import 將資料先以 JSON 格式匯出, 以免悲劇性的錯誤發生 (但順利升級的話是不用特別再匯入的)。 確認能夠停止、重新啟動 Ghost 這部分可以參考 官方中文安裝文件, 其中列舉安裝方式是最終目標都是將 Ghost 部署到線上的機器, 所以會有幾種登出 SSH 仍不要停掉 Ghost 的做法, 這時候就會牽涉本章節標題的步驟 (確認能夠停止、重新啟動 Ghost), 但如果有閱讀過筆者 How to setup Ghost blog platform (下) , 會知道筆者平時是透過 npm start run 在本地端, 等文章完成後,">
+    <meta name="twitter:url" content="http://captainvincent.github.io/ghost-0-9-0-upgrade/">
+    <meta name="twitter:label1" content="Written by">
+    <meta name="twitter:data1" content="Captain Vincent">
+    
+    <script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "publisher": {
+        "@type": "Organization",
+        "name": "Hello World! I&#x27;m Vincent",
+        "logo": "http://captainvincent.github.io/ghost/img/ghosticon.jpg"
+    },
+    "author": {
+        "@type": "Person",
+        "name": "Captain Vincent",
+        "image": "http://captainvincent.github.io/content/images/2016/01/--.JPG",
+        "url": "http://captainvincent.github.io/author/captain/",
+        "sameAs": []
+    },
+    "headline": "Ghost 0.9.0 Upgrade",
+    "url": "http://captainvincent.github.io/ghost-0-9-0-upgrade/",
+    "datePublished": "2016-08-27T12:10:11.000Z",
+    "dateModified": "2016-08-28T11:28:05.000Z",
+    "description": "最近打開 Ghost 一直提醒我更新, 所以這篇文章就在一邊更新的過程中催生出來, 祝我好運吧！ How to upgrade (英文官方連結) Preparation 備份 Export &amp;amp; Import 將資料先以 JSON 格式匯出, 以免悲劇性的錯誤發生 (但順利升級的話是不用特別再匯入的)。 確認能夠停止、重新啟動 Ghost 這部分可以參考 官方中文安裝文件, 其中列舉安裝方式是最終目標都是將 Ghost 部署到線上的機器, 所以會有幾種登出 SSH 仍不要停掉 Ghost 的做法, 這時候就會牽涉本章節標題的步驟 (確認能夠停止、重新啟動 Ghost), 但如果有閱讀過筆者 How to setup Ghost blog platform (下) , 會知道筆者平時是透過 npm start run 在本地端, 等文章完成後,"
+}
+    </script>
+
+    <meta name="generator" content="Ghost 0.9">
+    <link rel="alternate" type="application/rss+xml" title="Hello World! I'm Vincent" href="../rss/index.html">
+    <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-73341093-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+</head>
+<body class="post-template nav-closed">
+
+    <div class="nav">
+    <h3 class="nav-title">Menu</h3>
+    <a href="index.html#" class="nav-close">
+        <span class="hidden">Close</span>
+    </a>
+    <ul>
+            <li class="nav-blog-home-page" role="presentation"><a href="../">Blog Home Page</a></li>
+            <li class="nav-git-book" role="presentation"><a href="https://www.gitbook.com/@captainvincent">Git Book</a></li>
+            <li class="nav-aboutme" role="presentation"><a href="https://about.me/CaptainVincent">About.Me</a></li>
+    </ul>
+        <a class="subscribe-button icon-feed" href="../rss/index.rss">Subscribe</a>
+</div>
+<span class="nav-cover"></span>
+
+
+    <div class="site-wrapper">
+
+        
+
+
+<header class="main-header post-head no-cover">
+    <nav class="main-nav  clearfix">
+        
+            <a class="menu-button icon-menu" href="index.html#"><span class="word">Menu</span></a>
+    </nav>
+</header>
+
+<main class="content" role="main">
+    <article class="post">
+
+        <header class="post-header">
+            <h1 class="post-title">Ghost 0.9.0 Upgrade</h1>
+            <section class="post-meta">
+                <time class="post-date" datetime="2016-08-27">27 August 2016</time> 
+            </section>
+        </header>
+
+        <section class="post-content">
+            <p><img src="https://c4.staticflickr.com/9/8400/28643234163_717f156e19.jpg" alt="更新通知"></p>
+
+<blockquote>
+  <p>最近打開 Ghost 一直提醒我更新, 所以這篇文章就在一邊更新的過程中催生出來, 祝我好運吧！</p>
+</blockquote>
+
+<p><a href="http://support.ghost.org/how-to-upgrade/">How to upgrade</a> (英文官方連結)</p>
+
+<h3 id="preparation">Preparation</h3>
+
+<ul>
+<li><h5 id="exportimporthttpsupportghostorgimportandexportmyghostblogsettingsanddata">備份 <a href="http://support.ghost.org/import-and-export-my-ghost-blog-settings-and-data/">Export &amp; Import</a></h5>
+
+<p>將資料先以 JSON 格式匯出, 以免悲劇性的錯誤發生 (但順利升級的話是不用特別再匯入的)。</p></li>
+<li><h5 id="ghost">確認能夠停止、重新啟動 Ghost</h5>
+
+<p>這部分可以參考 <a href="http://docs.ghost.org/zh_TW/installation/deploy/">官方中文安裝文件</a>, 其中列舉安裝方式是最終目標都是將 Ghost 部署到線上的機器, 所以會有幾種登出 SSH 仍不要停掉 Ghost 的做法, 這時候就會牽涉本章節標題的步驟 (確認能夠停止、重新啟動 Ghost), 但如果有閱讀過筆者 <a href="../how-to-setup-ghost-blog-platform-xia/">How to setup Ghost blog platform (下)</a> , 會知道筆者平時是透過 <code>npm start</code> run 在本地端, 等文章完成後, 再透過 buster 的腳本將部落格轉成靜態網頁發佈至 <a href="http://captainvincent.github.io/">github.io</a>, 所以關於這種做法要停止、重新開始則僅需要停掉 <code>npm start</code> 這個 process, 等更新完之後再重新啟動即可。</p></li>
+<li><h5 id="">版本進版的挑選</h5>
+
+<p>遵循 <a href="http://semver.org/lang/zh-TW/">Semantic Versioning</a> 的版本規範 Version : Major.Minor.Patch, 所以官網關於在進版上有一些建議 <a href="http://support.ghost.org/how-to-upgrade/#3.-consider-the-version-jump">參考連結</a>, 避免使用到帶有 Upgrade Bug 的版本。</p></li>
+</ul>
+
+<h3 id="upgrading">Upgrading</h3>
+
+<ul>
+<li><h5 id="ghost">停止 Ghost 運行</h5>
+
+<p>先根據目前帶起 Ghost 的執行方式, 使其停止運行。</p></li>
+<li><h5 id="">下載欲更新版本</h5>
+
+<p><a href="https://ghost.org/developers/">Ghost.org download page,</a> or <a href="https://github.com/TryGhost/Ghost/releases">GitHub release page</a></p></li>
+<li><h5 id="">解壓縮下載包</h5>
+
+<p>嗯, 就是解壓縮 you know ~</p></li>
+<li><h5 id="">刪除原始安裝路徑下的部分資料夾、檔案, 並進行替換</h5>
+
+<p>不要刪掉 <code>content</code> 資料夾! 不要刪掉 <code>content</code> 資料夾! 不要刪掉 <code>content</code> 資料夾! 很重要所以說三遍, 這邊列出我有替換的部分：
+<code>core folder</code>、<code>index.js</code>、<code>npm-shrinkwrap.json</code>、<code>npm-shrinkwrap.json</code>、<code>PRIVACY.md</code>、<code>README.md</code>, 以及最麻煩的 <code>content/themes/casper</code> (要手動 merge 修改過的部分到新的版本, 筆者因為自身有引用一些語法高光、數學公式的 javascript 以及 修改過 Theme 的字體大小, 若皆無則可直接使用新版本覆蓋)。</p></li>
+<li><h5 id="">確認檔案的權限</h5>
+
+<p>這邊因為 Ghost 可能部署在雲端由多人共筆, 所以要確認使用者皆有讀寫的權限。</p></li>
+<li><h5 id="ghost">更新 Ghost 的相依套件</h5>
+
+<p>在 Ghost 安裝目錄可以見到 <code>content</code> 與 <code>core</code>, 在此路徑下執行 <code>npm install --production</code> (應無任何錯誤產生, 但警告可以容許)。</p></li>
+<li><h5 id="ghost">重啟 Ghost</h5>
+
+<p>先根據自身帶起 Ghost 的執行方式, 使其重新運行。</p></li>
+<li><h5 id="troubleshooting">Troubleshooting</h5>
+
+<p><a href="http://support.ghost.org/how-to-upgrade/#troubleshooting">官網參考資料</a></p></li>
+</ul>
+
+<blockquote>
+  <p>可喜可賀, 筆者總算升級完成, 但似乎覺得好像更新後也沒什麼不同。世界依舊美好 :)</p>
+</blockquote>
+        </section>
+
+        <footer class="post-footer">
+
+
+            <figure class="author-image">
+                <a class="img" href="../author/captain/" style="background-image: url(../content/images/2016/01/--.JPG)"><span class="hidden">Captain Vincent's Picture</span></a>
+            </figure>
+
+            <section class="author">
+                <h4><a href="../author/captain/">Captain Vincent</a></h4>
+
+                    <p>Read <a href="../author/captain/">more posts</a> by this author.</p>
+                <div class="author-meta">
+                    
+                    
+                </div>
+            </section>
+
+
+            <section class="share">
+                <h4>Share this post</h4>
+                <a class="icon-twitter" href="https://twitter.com/intent/tweet?text=Ghost%200.9.0%20Upgrade&amp;url=http://captainvincent.github.io/ghost-0-9-0-upgrade/" onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
+                    <span class="hidden">Twitter</span>
+                </a>
+                <a class="icon-facebook" href="https://www.facebook.com/sharer/sharer.php?u=http://captainvincent.github.io/ghost-0-9-0-upgrade/index.html" onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;">
+                    <span class="hidden">Facebook</span>
+                </a>
+                <a class="icon-google-plus" href="https://plus.google.com/share?url=http://captainvincent.github.io/ghost-0-9-0-upgrade/" onclick="window.open(this.href, 'google-plus-share', 'width=490,height=530');return false;">
+                    <span class="hidden">Google+</span>
+                </a>
+            </section>
+
+
+            <div id="disqus_thread"></div>
+            <script>
+            /**
+            * RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+            * LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables
+            */
+
+            var disqus_config = function () {
+                this.page.url = 'http://captainvincent.github.io/ghost-0-9-0-upgrade/'; // Replace PAGE_URL with your page's canonical URL variable
+                this.page.identifier = 'ghost-35'; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+            };
+
+            (function() { // DON'T EDIT BELOW THIS LINE
+                var d = document, s = d.createElement('script');
+
+                s.src = '//captainvincent.disqus.com/embed.js';
+
+                s.setAttribute('data-timestamp', +new Date());
+                (d.head || d.body).appendChild(s);
+            })();
+            </script>
+            <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+
+
+        </footer>
+
+    </article>
+</main>
+
+<aside class="read-next">
+    <a class="read-next-story prev no-cover" href="../2016-coscup-day-2/">
+        <section class="post">
+            <h2>2016 COSCUP Day - 2</h2>
+            <p>前一天太晚睡, 第一個共同議程遲到錯過了 QQ。 Servo, the Parallel Browser Engine 講者投影片、Demo 測試網頁 因應硬體平行化的架構, 將 browser 本身可拆分的工作 (ex. tree 中去計算 layout…</p>
+        </section>
+    </a>
+</aside>
+
+
+
+        <footer class="site-footer clearfix">
+            <section class="copyright"><a href="../">Hello World! I'm Vincent</a> © 2016</section>
+            <section class="poweredby">Proudly published with <a href="https://ghost.org">Ghost</a></section>
+        </footer>
+
+    </div>
+
+    <script type="text/javascript" src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
+    
+    <script type="text/javascript" src="../assets/js/jquery.fitvids.js?v=3fdc09fc57"></script>
+    <script type="text/javascript" src="../assets/js/jquery.fitvids.js?v=3fdc09fc57"></script>
+    <script type="text/javascript" src="../assets/js/prism.js?v=3fdc09fc57"></script>
+    <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/x-mathjax-config">
+        MathJax.Hub.Config({
+            tex2jax: {
+                inlineMath: [['$','$'], ['\\\\(','\\\\)']],
+                processEscapes: true
+            }
+        });
+    </script>
+    <script type="text/javascript" src="../assets/js/index.js?v=3fdc09fc57"></script>
+
+</body>

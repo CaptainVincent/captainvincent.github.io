@@ -11,47 +11,52 @@
 
     <link rel="shortcut icon" href="../favicon.ico">
 
-    <link rel="stylesheet" type="text/css" href="../assets/css/screen.css?v=117cab5f1c">
+    <link rel="stylesheet" type="text/css" href="../assets/css/screen.css?v=3fdc09fc57">
     <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Merriweather:300,700,700italic,300italic%7COpen+Sans:700,400">
-    <link rel="stylesheet" type="text/css" href="../assets/css/prism.css?v=117cab5f1c">
+
     <link rel="canonical" href="index.html">
-    <meta name="referrer" content="origin">
+    <meta name="referrer" content="origin-when-cross-origin">
     
     <meta property="og:site_name" content="Hello World! I'm Vincent">
     <meta property="og:type" content="article">
     <meta property="og:title" content="Machine Learning Foundations 機器學習基石 (課程筆記)">
-    <meta property="og:description" content="由台大資工系 副教授 林軒田 提供的開放式課程, 關於教材內容皆可於 Youtube教學影片 及 投影片下載網址 取得。 Git Book傳送門 隨著文章的編寫, 發現用 Blog 單篇文章的形式呈現會讓整體知識的結構太過於線性, 所以重頭使用 Gitbook 編寫, 更完整的學習筆記可以前往參考, 這邊僅提供一些 Overview。 以下尚未整理, 請直接參閱 gitbook 最新更新。 Introduction 模仿人類學習的方式, 透過觀察 (data) 學習 (取出特徵、經過計算處理) 後得到有意義的技巧 (提升某項可以量化評估的表現)。 一些應用機器學習的時機 過於複雜 (不預期的狀況) 的系統不容易轉化成程式來處理 不容易寫出判定規則的系統 人尚未或無法即時判定的行為...">
+    <meta property="og:description" content="由台大資工系 副教授 林軒田 提供的開放式課程, 關於教材內容皆可於 Youtube教學影片 及 投影片下載網址 取得。 Git Book傳送門 隨著文章的編寫, 發現用 Blog 單篇文章的形式呈現會讓整體知識的結構太過於線性, 所以重頭使用 Gitbook 編寫, 更完整的學習筆記可以前往參考, 這邊僅提供一些 Overview。 以下尚未整理, 請直接參閱 gitbook 最新更新。 Introduction 模仿人類學習的方式, 透過觀察 (data) 學習 (取出特徵、經過計算處理) 後得到有意義的技巧 (提升某項可以量化評估的表現)。 一些應用機器學習的時機 過於複雜 (不預期的狀況) 的系統不容易轉化成程式來處理 不容易寫出判定規則的系統 人尚未或無法即時判定的行為 過分客製化 (數量過多) 的反應 使用條件 具備 可理解的特徵 以及 可供量化評估改進的結果 不容易定義出規則 (容易定義則使用規則撰寫一般的程式處理即可)">
     <meta property="og:url" content="http://captainvincent.github.io/machine-learning-foundations-ji-qi-xue-xi-ji-shi-ke-cheng-bi-ji/">
-    <meta property="article:published_time" content="2016-06-20T11:30:30.170Z">
-    <meta property="article:modified_time" content="2016-08-20T19:54:08.300Z">
-    
+    <meta property="article:published_time" content="2016-06-20T11:30:30.000Z">
+    <meta property="article:modified_time" content="2016-08-20T19:54:08.000Z">
+    <meta property="article:publisher" content="https://www.facebook.com/UndercoverEngineer">
     <meta name="twitter:card" content="summary">
     <meta name="twitter:title" content="Machine Learning Foundations 機器學習基石 (課程筆記)">
-    <meta name="twitter:description" content="由台大資工系 副教授 林軒田 提供的開放式課程, 關於教材內容皆可於 Youtube教學影片 及 投影片下載網址 取得。 Git Book傳送門 隨著文章的編寫, 發現用 Blog 單篇文章的形式呈現會讓整體知識的結構太過於線性, 所以重頭使用 Gitbook 編寫, 更完整的學習筆記可以前往參考, 這邊僅提供一些 Overview。 以下尚未整理, 請直接參閱 gitbook 最新更新。 Introduction 模仿人類學習的方式, 透過觀察 (data) 學習 (取出特徵、經過計算處理) 後得到有意義的技巧 (提升某項可以量化評估的表現)。 一些應用機器學習的時機 過於複雜 (不預期的狀況) 的系統不容易轉化成程式來處理 不容易寫出判定規則的系統 人尚未或無法即時判定的行為...">
+    <meta name="twitter:description" content="由台大資工系 副教授 林軒田 提供的開放式課程, 關於教材內容皆可於 Youtube教學影片 及 投影片下載網址 取得。 Git Book傳送門 隨著文章的編寫, 發現用 Blog 單篇文章的形式呈現會讓整體知識的結構太過於線性, 所以重頭使用 Gitbook 編寫, 更完整的學習筆記可以前往參考, 這邊僅提供一些 Overview。 以下尚未整理, 請直接參閱 gitbook 最新更新。 Introduction 模仿人類學習的方式, 透過觀察 (data) 學習 (取出特徵、經過計算處理) 後得到有意義的技巧 (提升某項可以量化評估的表現)。 一些應用機器學習的時機 過於複雜 (不預期的狀況) 的系統不容易轉化成程式來處理 不容易寫出判定規則的系統 人尚未或無法即時判定的行為 過分客製化 (數量過多) 的反應 使用條件 具備 可理解的特徵 以及 可供量化評估改進的結果 不容易定義出規則 (容易定義則使用規則撰寫一般的程式處理即可)">
     <meta name="twitter:url" content="http://captainvincent.github.io/machine-learning-foundations-ji-qi-xue-xi-ji-shi-ke-cheng-bi-ji/">
+    <meta name="twitter:label1" content="Written by">
+    <meta name="twitter:data1" content="Captain Vincent">
     
     <script type="application/ld+json">
 {
-    "@context": "http://schema.org",
+    "@context": "https://schema.org",
     "@type": "Article",
-    "publisher": "Hello World! I'm Vincent",
+    "publisher": {
+        "@type": "Organization",
+        "name": "Hello World! I&#x27;m Vincent",
+        "logo": "http://captainvincent.github.io/ghost/img/ghosticon.jpg"
+    },
     "author": {
         "@type": "Person",
         "name": "Captain Vincent",
         "image": "http://captainvincent.github.io/content/images/2016/01/--.JPG",
-        "url": "http://captainvincent.github.io/author/captain",
-        "sameAs": null,
-        "description": null
+        "url": "http://captainvincent.github.io/author/captain/",
+        "sameAs": []
     },
     "headline": "Machine Learning Foundations 機器學習基石 (課程筆記)",
     "url": "http://captainvincent.github.io/machine-learning-foundations-ji-qi-xue-xi-ji-shi-ke-cheng-bi-ji/",
-    "datePublished": "2016-06-20T11:30:30.170Z",
-    "dateModified": "2016-08-20T19:54:08.300Z",
-    "description": "由台大資工系 副教授 林軒田 提供的開放式課程, 關於教材內容皆可於 Youtube教學影片 及 投影片下載網址 取得。 Git Book傳送門 隨著文章的編寫, 發現用 Blog 單篇文章的形式呈現會讓整體知識的結構太過於線性, 所以重頭使用 Gitbook 編寫, 更完整的學習筆記可以前往參考, 這邊僅提供一些 Overview。 以下尚未整理, 請直接參閱 gitbook 最新更新。 Introduction 模仿人類學習的方式, 透過觀察 (data) 學習 (取出特徵、經過計算處理) 後得到有意義的技巧 (提升某項可以量化評估的表現)。 一些應用機器學習的時機 過於複雜 (不預期的狀況) 的系統不容易轉化成程式來處理 不容易寫出判定規則的系統 人尚未或無法即時判定的行為..."
+    "datePublished": "2016-06-20T11:30:30.000Z",
+    "dateModified": "2016-08-20T19:54:08.000Z",
+    "description": "由台大資工系 副教授 林軒田 提供的開放式課程, 關於教材內容皆可於 Youtube教學影片 及 投影片下載網址 取得。 Git Book傳送門 隨著文章的編寫, 發現用 Blog 單篇文章的形式呈現會讓整體知識的結構太過於線性, 所以重頭使用 Gitbook 編寫, 更完整的學習筆記可以前往參考, 這邊僅提供一些 Overview。 以下尚未整理, 請直接參閱 gitbook 最新更新。 Introduction 模仿人類學習的方式, 透過觀察 (data) 學習 (取出特徵、經過計算處理) 後得到有意義的技巧 (提升某項可以量化評估的表現)。 一些應用機器學習的時機 過於複雜 (不預期的狀況) 的系統不容易轉化成程式來處理 不容易寫出判定規則的系統 人尚未或無法即時判定的行為 過分客製化 (數量過多) 的反應 使用條件 具備 可理解的特徵 以及 可供量化評估改進的結果 不容易定義出規則 (容易定義則使用規則撰寫一般的程式處理即可)"
 }
     </script>
 
-    <meta name="generator" content="Ghost 0.7">
+    <meta name="generator" content="Ghost 0.9">
     <link rel="alternate" type="application/rss+xml" title="Hello World! I'm Vincent" href="../rss/index.html">
     <script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
@@ -76,7 +81,7 @@
             <li class="nav-git-book" role="presentation"><a href="https://www.gitbook.com/@captainvincent">Git Book</a></li>
             <li class="nav-aboutme" role="presentation"><a href="https://about.me/CaptainVincent">About.Me</a></li>
     </ul>
-    <a class="subscribe-button icon-feed" href="../rss/index.rss">Subscribe</a>
+        <a class="subscribe-button icon-feed" href="../rss/index.rss">Subscribe</a>
 </div>
 <span class="nav-cover"></span>
 
@@ -459,6 +464,7 @@ B(N'+1,k) &amp;\leq B(N',k) + B(N',k-1) \\\
                 </a>
             </section>
 
+
             <div id="disqus_thread"></div>
             <script>
             /**
@@ -482,6 +488,7 @@ B(N'+1,k) &amp;\leq B(N',k) + B(N',k-1) \\\
             </script>
             <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
 
+
         </footer>
 
     </article>
@@ -504,7 +511,6 @@ B(N'+1,k) &amp;\leq B(N',k) + B(N',k-1) \\\
 
 
 
-
         <footer class="site-footer clearfix">
             <section class="copyright"><a href="../">Hello World! I'm Vincent</a> © 2016</section>
             <section class="poweredby">Proudly published with <a href="https://ghost.org">Ghost</a></section>
@@ -512,11 +518,11 @@ B(N'+1,k) &amp;\leq B(N',k) + B(N',k-1) \\\
 
     </div>
 
-    <script type="text/javascript" src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
     
-
-    <script type="text/javascript" src="../assets/js/jquery.fitvids.js?v=117cab5f1c"></script>
-    <script type="text/javascript" src="../assets/js/prism.js?v=117cab5f1c"></script>
+    <script type="text/javascript" src="../assets/js/jquery.fitvids.js?v=3fdc09fc57"></script>
+    <script type="text/javascript" src="../assets/js/jquery.fitvids.js?v=3fdc09fc57"></script>
+    <script type="text/javascript" src="../assets/js/prism.js?v=3fdc09fc57"></script>
     <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
     <script type="text/x-mathjax-config">
         MathJax.Hub.Config({
@@ -526,6 +532,6 @@ B(N'+1,k) &amp;\leq B(N',k) + B(N',k-1) \\\
             }
         });
     </script>
-    <script type="text/javascript" src="../assets/js/index.js?v=117cab5f1c"></script>
+    <script type="text/javascript" src="../assets/js/index.js?v=3fdc09fc57"></script>
 
 </body>
