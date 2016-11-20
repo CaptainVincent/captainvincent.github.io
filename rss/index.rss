@@ -1,4 +1,31 @@
-<rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:media="http://search.yahoo.com/mrss/" version="2.0"><channel><title>Hello World! I'm Vincent</title><description>Thoughts, stories and ideas.</description><link>http://captainvincent.github.io/</link><generator>Ghost 0.9</generator><lastBuildDate>Wed, 16 Nov 2016 13:19:03 GMT</lastBuildDate><atom:link href="http://captainvincent.github.io/rss/" rel="self" type="application/rss+xml"/><ttl>60</ttl><item><title>React Native 學習手冊 (GitBook)</title><description>&lt;blockquote&gt;
+<rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:media="http://search.yahoo.com/mrss/" version="2.0"><channel><title>Hello World! I'm Vincent</title><description>Thoughts, stories and ideas.</description><link>http://captainvincent.github.io/</link><generator>Ghost 0.9</generator><lastBuildDate>Sun, 20 Nov 2016 15:57:19 GMT</lastBuildDate><atom:link href="http://captainvincent.github.io/rss/" rel="self" type="application/rss+xml"/><ttl>60</ttl><item><title>react-native-animatable 解析</title><description>&lt;p&gt;&lt;a href="https://github.com/oblador/react-native-animatable"&gt;Github Link&lt;/a&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class="language-javascript"&gt;// Transform an object to an array the way react native wants it for transform styles
+// { a: x, b: y } =&amp;gt; [{ a: x }, { b: y }]
+function createKeyedArray(obj) {  
+  return Object.keys(obj).map(key =&amp;gt; {
+    let keyed = {};
+    keyed[key] = obj[key];
+    return keyed;
+  });
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;pre&gt;&lt;code class="language-markup"&gt;&amp;lt;p class="awesome"&amp;gt;This&lt;/code&gt;&lt;/pre&gt;</description><link>http://captainvincent.github.io/react-native-animatable-jie-xi/</link><guid isPermaLink="false">a554483a-fa8b-4551-a8fe-f6a7f3465c3b</guid><category>react-native</category><dc:creator>Captain Vincent</dc:creator><pubDate>Sun, 20 Nov 2016 15:06:40 GMT</pubDate><content:encoded>&lt;p&gt;&lt;a href="https://github.com/oblador/react-native-animatable"&gt;Github Link&lt;/a&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class="language-javascript"&gt;// Transform an object to an array the way react native wants it for transform styles
+// { a: x, b: y } =&amp;gt; [{ a: x }, { b: y }]
+function createKeyedArray(obj) {  
+  return Object.keys(obj).map(key =&amp;gt; {
+    let keyed = {};
+    keyed[key] = obj[key];
+    return keyed;
+  });
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;pre&gt;&lt;code class="language-markup"&gt;&amp;lt;p class="awesome"&amp;gt;This HTML should be syntax highlighted&amp;lt;/p&amp;gt;  
+&lt;/code&gt;&lt;/pre&gt;</content:encoded></item><item><title>React Native 學習手冊 (GitBook)</title><description>&lt;blockquote&gt;
   &lt;p&gt;原名&lt;/p&gt;
   
   &lt;p&gt;Learning React Native. by &lt;strong&gt;Bonnie Eisenman&lt;/strong&gt;&lt;/p&gt;
@@ -1269,163 +1296,4 @@ B(N'+1,k) &amp;\leq B(N',k) + B(N',k-1) \\\
 &lt;h2 id="noise"&gt;Noise&lt;/h2&gt;
 
 &lt;p&gt;Is VC bound work fine  with &lt;strong&gt;Noise&lt;/strong&gt;. &lt;br&gt;
-假設 output 存在一個機率分佈 (含雜訊造成的結果) 稱作 P(y|&lt;strong&gt;x&lt;/strong&gt;) = f(&lt;strong&gt;x&lt;/strong&gt;) + noise, mini-target 的觀念是挑選機率分佈中發生機率較高者為 output, 更進一步說 P(&lt;strong&gt;x&lt;/strong&gt;) 機率高者 (表示 input 常被選中) 時我們更要挑選 mini-target 的 P(y|&lt;strong&gt;x&lt;/strong&gt;)。&lt;/p&gt;</content:encoded></item><item><title>丹尼爾博士 跑步方程式 筆記</title><description>&lt;blockquote&gt;
-  &lt;p&gt;原名&lt;/p&gt;
-  
-  &lt;p&gt;Daniel's Running Formula. - 3rd Edition by &lt;strong&gt;Jack T. Daniels&lt;/strong&gt;&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;開始翻閱這本書的理由, 是由於筆者開始意識到了自己該重新鍛鍊身體的歲數了, 過去著重於重量訓練的自己, 在找回自己這方面決定從跑步開始, 先提升自己的心肺功能再開始高強度的訓練, 這就是筆者的初衷。&lt;/p&gt;
-
-&lt;h2 id=""&gt;跑者成功的要素&lt;/h2&gt;
-
-&lt;p&gt;才能、內在動機、機緣 與 訓練方向。&lt;/p&gt;
-
-&lt;p&gt;不可否定的, 才能仍是取決於一個成功跑者的最重要因素 (心肺功能、最大攝氧量 V.O&lt;sub&gt;2&lt;/sub&gt;max ...etc), 但天分與動機的強弱各會造就不同特質的跑者, 應獨立視為不同的個體來給予指導。&lt;/p&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;最大攝氧量 V.O&lt;sub&gt;2&lt;/sub&gt;max, 單位分鐘內的最大攝氧容積&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;h4 id=""&gt;跑步法則&lt;/h4&gt;
-
-&lt;p&gt;以下法則將歸納為心理與生理的兩個層面, 將這十點融入為平常生活的一部份, 保持兩者的健康, 並專注於當下的目標。&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;跑者的優劣勢&lt;/strong&gt; 每位跑者皆有不同的特質, 首先應當強化弱點, 後期再回歸鍛鍊強項&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;正向思考&lt;/strong&gt;&lt;/li&gt;&lt;/ul&gt;</description><link>http://captainvincent.github.io/dan-ni-er-bo-shi-pao-bu-fang-cheng-shi/</link><guid isPermaLink="false">4d93e42e-2cf8-46b4-a3dd-1a4059efc0d8</guid><dc:creator>Captain Vincent</dc:creator><pubDate>Sun, 15 May 2016 08:55:00 GMT</pubDate><content:encoded>&lt;blockquote&gt;
-  &lt;p&gt;原名&lt;/p&gt;
-  
-  &lt;p&gt;Daniel's Running Formula. - 3rd Edition by &lt;strong&gt;Jack T. Daniels&lt;/strong&gt;&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;開始翻閱這本書的理由, 是由於筆者開始意識到了自己該重新鍛鍊身體的歲數了, 過去著重於重量訓練的自己, 在找回自己這方面決定從跑步開始, 先提升自己的心肺功能再開始高強度的訓練, 這就是筆者的初衷。&lt;/p&gt;
-
-&lt;h2 id=""&gt;跑者成功的要素&lt;/h2&gt;
-
-&lt;p&gt;才能、內在動機、機緣 與 訓練方向。&lt;/p&gt;
-
-&lt;p&gt;不可否定的, 才能仍是取決於一個成功跑者的最重要因素 (心肺功能、最大攝氧量 V.O&lt;sub&gt;2&lt;/sub&gt;max ...etc), 但天分與動機的強弱各會造就不同特質的跑者, 應獨立視為不同的個體來給予指導。&lt;/p&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;最大攝氧量 V.O&lt;sub&gt;2&lt;/sub&gt;max, 單位分鐘內的最大攝氧容積&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;h4 id=""&gt;跑步法則&lt;/h4&gt;
-
-&lt;p&gt;以下法則將歸納為心理與生理的兩個層面, 將這十點融入為平常生活的一部份, 保持兩者的健康, 並專注於當下的目標。&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;跑者的優劣勢&lt;/strong&gt; 每位跑者皆有不同的特質, 首先應當強化弱點, 後期再回歸鍛鍊強項&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;正向思考&lt;/strong&gt; 需保持正向的態度&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;身體狀況有起有落&lt;/strong&gt; 理解自身的狀況並接納&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;訓練保持彈性&lt;/strong&gt; 能應付訓練時的突發狀況, 也較能維持平常心&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;從小而大的目標&lt;/strong&gt;&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;獎勵自己&lt;/strong&gt;&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;睡得好、吃得好&lt;/strong&gt;&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;生病、受傷時不訓練&lt;/strong&gt;&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;長期健康的困擾應求助專業團隊&lt;/strong&gt;&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;好成績不應倚靠僥倖&lt;/strong&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=""&gt;跑步原則 (八項) 與技術&lt;/h2&gt;
-
-&lt;p&gt;訓練需要的是原則而非某位優秀跑者的菜單, 適合自己的比照表操課更重要, 在開始介紹原則前, 先解釋身體 &lt;strong&gt;自主調解&lt;/strong&gt; 的能力, 意謂在相同的壓力在訓練中會慢慢得到適應, 而不同類型的訓練達到適應的時間所需也不同, 了解訓練的原則才能合理的去調配 &lt;strong&gt;量、強度 與 頻率&lt;/strong&gt;, 在達到目標的同時也保護身體。&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;身體對訓練壓力的反應&lt;/strong&gt; 要了解評估身體對於每項訓練產生的影響 (可以參考丹尼爾博士製作的壓力量表, 內容包含追蹤兩週內的每日 睡面狀態、疼痛與生病狀況、訓練的恢復狀況、身體柔軟度、能量與補充、生理負荷、心理負荷、其他)&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;訓練的專一性&lt;/strong&gt; 相同的壓力刺激在身體處於健康的狀態下, 都會為未來面臨的壓力做準備 (變強), 這是為何需要反覆的訓練&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;超負荷&lt;/strong&gt; 身體的變化是在恢復休息中 (兩次訓練間) 產生, 而訓練的目的是在於仍否能否持續適應新的訓練與強度, 在壓力與正向回饋間未取得平衡, 會導致身體無法跟上下一階段的訓練&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;訓練後的回饋&lt;/strong&gt; 調整 量、強度、休息、頻率 任意一項皆可改變其訓練產生的壓力
-&lt;img src="https://farm2.staticflickr.com/1518/25983432104_9f07ea1721_z.jpg" alt="Training"&gt;&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;個人的限制&lt;/strong&gt; 訓練終會抵達每個人階段性的巔峰, 而這些限制來至於天生與外在生活環境上的因素, 反映在上圖也是為何壓力訓練 II (圖上只是舉例, 實際狀況因跑者而異) 不一定能如同之前的訓練效果產生回饋&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;進步幅度遞減&lt;/strong&gt; 參考下圖&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;退步風險加速&lt;/strong&gt; 訓練壓力對於進步效果與退步風險的影響, 評估方式仍可參考作者的壓力量表, 盡可能讓訓練壓力保持在藍色區域中
-&lt;img src="https://farm2.staticflickr.com/1663/26563070676_0aff55ed66_z.jpg" alt="進步與退步"&gt;&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;保有訓練成果&lt;/strong&gt; 減量期 (減少訓練時間或趟數, 但並非強度) 的運用, 可以轉移訓練重心至其他項目仍可保持本來的訓練成果&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=""&gt;擬定計畫&lt;/h2&gt;
-
-&lt;ul&gt;
-&lt;li&gt;進行下一階段的訓練時需先在前一階段維持四~六週的訓練&lt;/li&gt;
-&lt;li&gt;讓訓練成果來告訴你何時該調整&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;步頻&lt;/strong&gt; 建議每分鐘 180 步, 所有優秀跑者所共通的特點, 在不同比賽的速度掌控在於調整 步距 (步伐寬度), 而步頻的差距變化很小&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;姿勢&lt;/strong&gt; 腳掌落地的姿勢無絕對, 盡可能維持在上述的步頻中, 以較省力的方式跑步即可&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;呼吸&lt;/strong&gt; 正常休息的狀態下, 肺部也有4~5%的 CO&lt;sub&gt;2&lt;/sub&gt;, 大口呼吸的原因來自於體內的 CO&lt;sub&gt;2&lt;/sub&gt; 濃度增高, &lt;strong&gt;強烈建議跑者在任何步頻下的練習都維持「2步吐 2步吸」的節奏, 僅有在比賽末1/3時可以換成 2吐1吸 或 2吸1吐&lt;/strong&gt;&lt;/li&gt;
-&lt;li&gt;訓練指標
-&lt;ul&gt;&lt;li&gt;最大攝氧速度 量測最大攝氧量的同時, 可同時得知其處於最大攝氧量的速度是多少 (最大攝氧量與速度之間的關係是線性遞增, &lt;a href="http://www.taipeimarathon.org.tw/%E7%9F%A5%E8%AD%98%E5%9C%92%E5%9C%B0/%E5%B0%88%E6%96%87%E5%A0%B1%E5%B0%8E/RSMO.htm"&gt;量測方式&lt;/a&gt;)&lt;/li&gt;
-&lt;li&gt;血乳酸濃度&lt;/li&gt;
-&lt;li&gt;最大心率 量測身體的最大心率可以評估目前訓練的強度&lt;/li&gt;
-&lt;li&gt;安靜心率 早上起床量測的心率, 隨著訓練之後的心臟強度增加, 此值應該要遞減&lt;/li&gt;
-&lt;li&gt;血紅素含量 愈高愈好, 但不可一昧地提升含量&lt;/li&gt;
-&lt;li&gt;攝氧量&lt;/li&gt;&lt;/ul&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=""&gt;訓練強度分配&lt;/h2&gt;
-
-&lt;p&gt;根據此表以訓練強度分配每週的練習量 (最左邊以 VO2max 最大攝氧量的百分比來表示強度)
-&lt;img src="https://farm8.staticflickr.com/7133/27005473055_b9097277b5_z.jpg" alt="強度分配圖"&gt;&lt;/p&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;練習強度區分：&lt;strong&gt;E&lt;/strong&gt;asy 輕鬆 / &lt;strong&gt;T&lt;/strong&gt;hreshod 處於乳酸閾值 / &lt;strong&gt;I&lt;/strong&gt;nterval 痛苦值最高, 強化攝氧量 / &lt;strong&gt;R&lt;/strong&gt;epetition 接近衝刺速度的短程間歇訓練, 訓練跑步的經濟性 / &lt;strong&gt;M&lt;/strong&gt;arathon 馬拉松配速跑。&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;h4 id=""&gt;將訓練計畫拆成的週期分配 (訓練季 而非平時)&lt;/h4&gt;
-
-&lt;p&gt;四個週期的重心分配順序&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;E -&gt; R -&gt; I -&gt; T (在重心的轉移時並非強度完全轉換, 而是會在該強度重心時仍搭配其他強度)&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;24週的週期分配方式, 如果訓練時間小於 24週也只能按照順序進行&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;週期一(E): 1, 2, 3, 13, 21, 23&lt;/li&gt;
-&lt;li&gt;週期二(R): 7, 8, 9, 18, 19, 20&lt;/li&gt;
-&lt;li&gt;週期三(I): 10, 11, 12, 14, 15, 16&lt;/li&gt;
-&lt;li&gt;週期四(T): 4, 5, 6, 17 22, 24&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Sample &lt;br&gt;
-&lt;img src="https://farm8.staticflickr.com/7693/26977817406_bd5f4c0633_c.jpg" alt="Sample"&gt;&lt;/p&gt;
-
-&lt;h4 id=""&gt;健身計畫&lt;/h4&gt;
-
-&lt;p&gt;書中提供四種從入門到進階的各四週計畫書, 其中 ST 指的是快步跑 (輕快、高頻約 20秒 的非衝刺跑步, 間歇 60秒), 其他部分需要操考書籍內附的表格。&lt;/p&gt;
-
-&lt;h4 id=""&gt;跑步機訓練&lt;/h4&gt;
-
-&lt;p&gt;相較於室外的風阻, 跑步機會帶來身體周圍時的悶熱環境 (散熱負擔), 提升 2% 的坡度較能模擬室外的強度, 另外跑步機的好處是能方便地達到上坡訓練 (下坡對跑者腳造成負擔, 除非競賽場地需模擬較多的下坡路段)。&lt;/p&gt;
-
-&lt;h2 id=""&gt;跑力值&lt;/h2&gt;
-
-&lt;p&gt;底下由作者和同事一同搜集統計資料繪製出的兩張表, 透過實際比賽的時間與距離可以計算出跑者速度, 代回去兩張表可以得知跑者在比賽中的 &lt;strong&gt;單位攝氧量&lt;/strong&gt; 以及 &lt;strong&gt;推算出跑者的最大攝氧量為多少&lt;/strong&gt; (即書中所稱的跑力值), 當跑力值 &amp;lt; 實驗室測出的數據時, 表示跑者仍有餘力 (跑步經濟效益低, 未發揮全力), 以跑力來設定目標。&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;p&gt;單位攝氧量
-&lt;img src="https://farm8.staticflickr.com/7696/26915496252_736e33e222.jpg" alt="單位攝氧量"&gt;&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;依據跑步時間所使用最大攝氧量的百分比
-&lt;img src="https://farm8.staticflickr.com/7499/26735714010_1e5941d1b8.jpg" alt="攝氧量%"&gt;&lt;/p&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=""&gt;總結&lt;/h2&gt;
-
-&lt;p&gt;後續章節分別討論的是在不同距離的賽事中, 如何去規劃分配以上所學的觀念, 制定出了一系列建議的課表, 列舉的方式十分繁瑣 (提供了包括 八百公尺、一千五至三千公尺、五至十公里、越野跑訓練、半馬、全馬 ...etc 相關課表), 所以這邊就不一一贅述 (關鍵在於選擇的距離是對於 &lt;strong&gt;無氧耐力的需求&lt;/strong&gt; 還是 &lt;strong&gt;攝氧量的需求&lt;/strong&gt; 較高, 來加強訓練的強度重點); 而最後在訓練課表介紹的結束後, 也提到了休息及其他補強運動的重要性, 計畫性的休息應根據之前練習給予身體的強度壓力做調整, 休息超過五天以上則會開始以指數曲線降低跑力值 (並且會隨休息後的體重增加而線性遞減), 此時恢復訓練時不應立即恢復原先強度, 應視體能下滑程度予以調整 (休息的時間愈長, 則應將恢復至原先強度的訓練強度拆分愈細 ex. 33% -&gt; 50% -&gt; 75% -&gt; 100%)。&lt;/p&gt;
-
-&lt;h4 id=""&gt;補強運動&lt;/h4&gt;
-
-&lt;ul&gt;
-&lt;li&gt;阻力訓練 (重量訓練)&lt;/li&gt;
-&lt;li&gt;循環運動
-&lt;ul&gt;&lt;li&gt;伏地挺身, 一分鐘, 次數為最大次數的二分之一&lt;/li&gt;
-&lt;li&gt;單腿側抬, 各 10下&lt;/li&gt;
-&lt;li&gt;高抬膝, 30次&lt;/li&gt;
-&lt;li&gt;仰臥起坐, 一分鐘, 次數為最大次數的二分之一&lt;/li&gt;
-&lt;li&gt;恢復跑(一分鐘輕鬆跑)和 伸展(二分鐘)&lt;/li&gt;
-&lt;li&gt;波比操, 10下&lt;/li&gt;
-&lt;li&gt;仰臥抬腿, 各 10下&lt;/li&gt;
-&lt;li&gt;拍臂, 雙臂雙腿交替上下震盪直到重複 20次&lt;/li&gt;
-&lt;li&gt;恢復跑, 兩分鐘或八百公尺&lt;/li&gt;&lt;/ul&gt;&lt;/li&gt;
-&lt;/ul&gt;</content:encoded></item></channel></rss>
+假設 output 存在一個機率分佈 (含雜訊造成的結果) 稱作 P(y|&lt;strong&gt;x&lt;/strong&gt;) = f(&lt;strong&gt;x&lt;/strong&gt;) + noise, mini-target 的觀念是挑選機率分佈中發生機率較高者為 output, 更進一步說 P(&lt;strong&gt;x&lt;/strong&gt;) 機率高者 (表示 input 常被選中) 時我們更要挑選 mini-target 的 P(y|&lt;strong&gt;x&lt;/strong&gt;)。&lt;/p&gt;</content:encoded></item></channel></rss>
