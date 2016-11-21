@@ -11,14 +11,15 @@
 
     <link rel="shortcut icon" href="../favicon.ico">
 
-    <link rel="stylesheet" type="text/css" href="../assets/css/screen.css?v=3794ccf18f">
+    <link rel="stylesheet" type="text/css" href="../assets/css/screen.css?v=f757cad3c7">
     <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Merriweather:300,700,700italic,300italic%7COpen+Sans:700,400">
-    <link rel="stylesheet" type="text/css" href="../assets/css/prism.css?v=3794ccf18f">
+    <link rel="stylesheet" type="text/css" href="../assets/css/prism.css?v=f757cad3c7">
 
     <link rel="canonical" href="index.html">
-    <meta name="referrer" content="origin-when-cross-origin">
+    <meta name="referrer" content="no-referrer-when-downgrade">
+    <link rel="amphtml" href="amp/index.html">
     
-    <meta property="og:site_name" content="Hello World! I'm Vincent">
+    <meta property="og:site_name" content="Hello World! I'm Vincent.">
     <meta property="og:type" content="article">
     <meta property="og:title" content="不一樣的 Node.js 筆記 (一)">
     <meta property="og:description" content="原著：不一樣的 Node.js－用 JavaScript 打造高效能的前後台網頁程式 林政毅、蔡政崇、錢逢祥 (2014/05/12)   作者群 期許本書可以替讀者勾勒出 Node.js 的技術藍圖。 Node.js 簡介 Node.js 為一個 opensource 的框架, 採用了 Chrome's V8 JavaScript Engine。 它讓 Javascript 可以獨立運行於瀏覽器之外。 制定了一系列機制於 API 來協助達到原生 JavaScript 所不支援的功能 (ex. Module、FileSystem、Socket、Process ...etc) 支援第三方模組的功能擴充 繼承 JavaScript 中 Event-driven">
@@ -39,26 +40,35 @@
     "@type": "Article",
     "publisher": {
         "@type": "Organization",
-        "name": "Hello World! I&#x27;m Vincent",
+        "name": "Hello World! I&#x27;m Vincent.",
         "logo": "http://captainvincent.github.io/ghost/img/ghosticon.jpg"
     },
     "author": {
         "@type": "Person",
         "name": "Captain Vincent",
-        "image": "http://captainvincent.github.io/content/images/2016/01/--.JPG",
-        "url": "http://captainvincent.github.io/author/captain/",
+        "image": {
+            "@type": "ImageObject",
+            "url": "http://captainvincent.github.io/content/images/2016/11/--.JPG",
+            "width": 889,
+            "height": 1080
+        },
+        "url": "http://captainvincent.github.io/author/vincent/",
         "sameAs": []
     },
     "headline": "不一樣的 Node.js 筆記 (一)",
     "url": "http://captainvincent.github.io/bu-yi-yang-de-node-js-i/",
     "datePublished": "2016-03-22T12:34:46.000Z",
     "dateModified": "2016-05-06T17:28:50.000Z",
-    "description": "原著：不一樣的 Node.js－用 JavaScript 打造高效能的前後台網頁程式 林政毅、蔡政崇、錢逢祥 (2014/05/12)   作者群 期許本書可以替讀者勾勒出 Node.js 的技術藍圖。 Node.js 簡介 Node.js 為一個 opensource 的框架, 採用了 Chrome&#x27;s V8 JavaScript Engine。 它讓 Javascript 可以獨立運行於瀏覽器之外。 制定了一系列機制於 API 來協助達到原生 JavaScript 所不支援的功能 (ex. Module、FileSystem、Socket、Process ...etc) 支援第三方模組的功能擴充 繼承 JavaScript 中 Event-driven"
+    "description": "原著：不一樣的 Node.js－用 JavaScript 打造高效能的前後台網頁程式 林政毅、蔡政崇、錢逢祥 (2014/05/12)   作者群 期許本書可以替讀者勾勒出 Node.js 的技術藍圖。 Node.js 簡介 Node.js 為一個 opensource 的框架, 採用了 Chrome&#x27;s V8 JavaScript Engine。 它讓 Javascript 可以獨立運行於瀏覽器之外。 制定了一系列機制於 API 來協助達到原生 JavaScript 所不支援的功能 (ex. Module、FileSystem、Socket、Process ...etc) 支援第三方模組的功能擴充 繼承 JavaScript 中 Event-driven",
+    "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "http://captainvincent.github.io"
+    }
 }
     </script>
 
-    <meta name="generator" content="Ghost 0.9">
-    <link rel="alternate" type="application/rss+xml" title="Hello World! I'm Vincent" href="../rss/index.html">
+    <meta name="generator" content="Ghost 0.11">
+    <link rel="alternate" type="application/rss+xml" title="Hello World! I'm Vincent." href="../rss/index.html">
     <script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
@@ -447,13 +457,13 @@ Person.prototype.out = function(){
 
 
             <figure class="author-image">
-                <a class="img" href="../author/captain/" style="background-image: url(../content/images/2016/01/--.JPG)"><span class="hidden">Captain Vincent's Picture</span></a>
+                <a class="img" href="../author/vincent/" style="background-image: url(../content/images/2016/11/--.JPG)"><span class="hidden">Captain Vincent's Picture</span></a>
             </figure>
 
             <section class="author">
-                <h4><a href="../author/captain/">Captain Vincent</a></h4>
+                <h4><a href="../author/vincent/">Captain Vincent</a></h4>
 
-                    <p>Read <a href="../author/captain/">more posts</a> by this author.</p>
+                    <p>Read <a href="../author/vincent/">more posts</a> by this author.</p>
                 <div class="author-meta">
                     
                     
@@ -466,7 +476,7 @@ Person.prototype.out = function(){
                 <a class="icon-twitter" href="https://twitter.com/intent/tweet?text=%E4%B8%8D%E4%B8%80%E6%A8%A3%E7%9A%84%20Node.js%20%E7%AD%86%E8%A8%98%20(%E4%B8%80)&amp;url=http://captainvincent.github.io/bu-yi-yang-de-node-js-i/" onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
                     <span class="hidden">Twitter</span>
                 </a>
-                <a class="icon-facebook" href="https://www.facebook.com/sharer/sharer.php?u=http://captainvincent.github.io/bu-yi-yang-de-node-js-i/index.html" onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;">
+                <a class="icon-facebook" href="https://www.facebook.com/sharer/sharer.php?u=http://captainvincent.github.io/bu-yi-yang-de-node-js-i/" onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;">
                     <span class="hidden">Facebook</span>
                 </a>
                 <a class="icon-google-plus" href="https://plus.google.com/share?url=http://captainvincent.github.io/bu-yi-yang-de-node-js-i/" onclick="window.open(this.href, 'google-plus-share', 'width=490,height=530');return false;">
@@ -484,7 +494,7 @@ Person.prototype.out = function(){
 
             var disqus_config = function () {
                 this.page.url = 'http://captainvincent.github.io/bu-yi-yang-de-node-js-i/'; // Replace PAGE_URL with your page's canonical URL variable
-                this.page.identifier = 'ghost-18'; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+                this.page.identifier = 'ghost-17'; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
             };
 
             (function() { // DON'T EDIT BELOW THIS LINE
@@ -497,7 +507,6 @@ Person.prototype.out = function(){
             })();
             </script>
             <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
-
 
         </footer>
 
@@ -522,17 +531,17 @@ Person.prototype.out = function(){
 
 
         <footer class="site-footer clearfix">
-            <section class="copyright"><a href="../">Hello World! I'm Vincent</a> © 2016</section>
+            <section class="copyright"><a href="../">Hello World! I'm Vincent.</a> © 2016</section>
             <section class="poweredby">Proudly published with <a href="https://ghost.org">Ghost</a></section>
         </footer>
 
     </div>
 
-    <script type="text/javascript" src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
+    <script type="text/javascript" src="http://code.jquery.com/jquery-1.12.0.min.js"></script>
     
-    <script type="text/javascript" src="../assets/js/jquery.fitvids.js?v=3794ccf18f"></script>
-    <script type="text/javascript" src="../assets/js/index.js?v=3794ccf18f"></script>
-    <script type="text/javascript" src="../assets/js/prism.js?v=3794ccf18f"></script>
+    <script type="text/javascript" src="../assets/js/jquery.fitvids.js?v=f757cad3c7"></script>
+    <script type="text/javascript" src="../assets/js/index.js?v=f757cad3c7"></script>
+    <script type="text/javascript" src="../assets/js/prism.js?v=f757cad3c7"></script>
     <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
     <script type="text/x-mathjax-config">
         MathJax.Hub.Config({
@@ -542,6 +551,4 @@ Person.prototype.out = function(){
             }
         });
     </script>
-    <script type="text/javascript" src="../assets/js/index.js?v=3794ccf18f"></script>
-
 </body>

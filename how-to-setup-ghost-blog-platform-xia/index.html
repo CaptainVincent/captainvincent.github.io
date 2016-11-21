@@ -11,14 +11,15 @@
 
     <link rel="shortcut icon" href="../favicon.ico">
 
-    <link rel="stylesheet" type="text/css" href="../assets/css/screen.css?v=3794ccf18f">
+    <link rel="stylesheet" type="text/css" href="../assets/css/screen.css?v=f757cad3c7">
     <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Merriweather:300,700,700italic,300italic%7COpen+Sans:700,400">
-    <link rel="stylesheet" type="text/css" href="../assets/css/prism.css?v=3794ccf18f">
+    <link rel="stylesheet" type="text/css" href="../assets/css/prism.css?v=f757cad3c7">
 
     <link rel="canonical" href="index.html">
-    <meta name="referrer" content="origin-when-cross-origin">
+    <meta name="referrer" content="no-referrer-when-downgrade">
+    <link rel="amphtml" href="amp/index.html">
     
-    <meta property="og:site_name" content="Hello World! I'm Vincent">
+    <meta property="og:site_name" content="Hello World! I'm Vincent.">
     <meta property="og:type" content="article">
     <meta property="og:title" content="How to setup Ghost blog platform (下)">
     <meta property="og:description" content="接著進入下一個主題, 如何部署 Ghost 到 git.io 以及 Ghost 進階的功能設定   (Syntax highlight, 使用 Disqus 添加留言功能, 添加 Google Analytics Buster 作者Blog中介紹 有提到是受了 Octopress 的啟發以及在命名上由來的惡趣味, ker ker... Ghostbusters 又透露自己年紀了  部署 Ghost 到 git.io 首先要部署 Ghost 到 git.io 需要先安裝 python 以及套件 buster brew install python   sudo pip install buster   [Issue 1] 參考自">
@@ -46,14 +47,19 @@
     "@type": "Article",
     "publisher": {
         "@type": "Organization",
-        "name": "Hello World! I&#x27;m Vincent",
+        "name": "Hello World! I&#x27;m Vincent.",
         "logo": "http://captainvincent.github.io/ghost/img/ghosticon.jpg"
     },
     "author": {
         "@type": "Person",
         "name": "Captain Vincent",
-        "image": "http://captainvincent.github.io/content/images/2016/01/--.JPG",
-        "url": "http://captainvincent.github.io/author/captain/",
+        "image": {
+            "@type": "ImageObject",
+            "url": "http://captainvincent.github.io/content/images/2016/11/--.JPG",
+            "width": 889,
+            "height": 1080
+        },
+        "url": "http://captainvincent.github.io/author/vincent/",
         "sameAs": []
     },
     "headline": "How to setup Ghost blog platform (下)",
@@ -61,12 +67,16 @@
     "datePublished": "2016-02-03T10:57:59.000Z",
     "dateModified": "2016-08-27T12:33:00.000Z",
     "keywords": "Ghost, Octopress, prismjs, Disqus",
-    "description": "接著進入下一個主題, 如何部署 Ghost 到 git.io 以及 Ghost 進階的功能設定   (Syntax highlight, 使用 Disqus 添加留言功能, 添加 Google Analytics Buster 作者Blog中介紹 有提到是受了 Octopress 的啟發以及在命名上由來的惡趣味, ker ker... Ghostbusters 又透露自己年紀了  部署 Ghost 到 git.io 首先要部署 Ghost 到 git.io 需要先安裝 python 以及套件 buster brew install python   sudo pip install buster   [Issue 1] 參考自"
+    "description": "接著進入下一個主題, 如何部署 Ghost 到 git.io 以及 Ghost 進階的功能設定   (Syntax highlight, 使用 Disqus 添加留言功能, 添加 Google Analytics Buster 作者Blog中介紹 有提到是受了 Octopress 的啟發以及在命名上由來的惡趣味, ker ker... Ghostbusters 又透露自己年紀了  部署 Ghost 到 git.io 首先要部署 Ghost 到 git.io 需要先安裝 python 以及套件 buster brew install python   sudo pip install buster   [Issue 1] 參考自",
+    "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "http://captainvincent.github.io"
+    }
 }
     </script>
 
-    <meta name="generator" content="Ghost 0.9">
-    <link rel="alternate" type="application/rss+xml" title="Hello World! I'm Vincent" href="../rss/index.html">
+    <meta name="generator" content="Ghost 0.11">
+    <link rel="alternate" type="application/rss+xml" title="Hello World! I'm Vincent." href="../rss/index.html">
     <script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
@@ -302,13 +312,13 @@ this.page.identifier = 'ghost-{{id}}';
 
 
             <figure class="author-image">
-                <a class="img" href="../author/captain/" style="background-image: url(../content/images/2016/01/--.JPG)"><span class="hidden">Captain Vincent's Picture</span></a>
+                <a class="img" href="../author/vincent/" style="background-image: url(../content/images/2016/11/--.JPG)"><span class="hidden">Captain Vincent's Picture</span></a>
             </figure>
 
             <section class="author">
-                <h4><a href="../author/captain/">Captain Vincent</a></h4>
+                <h4><a href="../author/vincent/">Captain Vincent</a></h4>
 
-                    <p>Read <a href="../author/captain/">more posts</a> by this author.</p>
+                    <p>Read <a href="../author/vincent/">more posts</a> by this author.</p>
                 <div class="author-meta">
                     
                     
@@ -321,7 +331,7 @@ this.page.identifier = 'ghost-{{id}}';
                 <a class="icon-twitter" href="https://twitter.com/intent/tweet?text=How%20to%20setup%20Ghost%20blog%20platform%20(%E4%B8%8B)&amp;url=http://captainvincent.github.io/how-to-setup-ghost-blog-platform-xia/" onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
                     <span class="hidden">Twitter</span>
                 </a>
-                <a class="icon-facebook" href="https://www.facebook.com/sharer/sharer.php?u=http://captainvincent.github.io/how-to-setup-ghost-blog-platform-xia/index.html" onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;">
+                <a class="icon-facebook" href="https://www.facebook.com/sharer/sharer.php?u=http://captainvincent.github.io/how-to-setup-ghost-blog-platform-xia/" onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;">
                     <span class="hidden">Facebook</span>
                 </a>
                 <a class="icon-google-plus" href="https://plus.google.com/share?url=http://captainvincent.github.io/how-to-setup-ghost-blog-platform-xia/" onclick="window.open(this.href, 'google-plus-share', 'width=490,height=530');return false;">
@@ -339,7 +349,7 @@ this.page.identifier = 'ghost-{{id}}';
 
             var disqus_config = function () {
                 this.page.url = 'http://captainvincent.github.io/how-to-setup-ghost-blog-platform-xia/'; // Replace PAGE_URL with your page's canonical URL variable
-                this.page.identifier = 'ghost-4'; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+                this.page.identifier = 'ghost-3'; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
             };
 
             (function() { // DON'T EDIT BELOW THIS LINE
@@ -352,7 +362,6 @@ this.page.identifier = 'ghost-{{id}}';
             })();
             </script>
             <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
-
 
         </footer>
 
@@ -377,17 +386,17 @@ this.page.identifier = 'ghost-{{id}}';
 
 
         <footer class="site-footer clearfix">
-            <section class="copyright"><a href="../">Hello World! I'm Vincent</a> © 2016</section>
+            <section class="copyright"><a href="../">Hello World! I'm Vincent.</a> © 2016</section>
             <section class="poweredby">Proudly published with <a href="https://ghost.org">Ghost</a></section>
         </footer>
 
     </div>
 
-    <script type="text/javascript" src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
+    <script type="text/javascript" src="http://code.jquery.com/jquery-1.12.0.min.js"></script>
     
-    <script type="text/javascript" src="../assets/js/jquery.fitvids.js?v=3794ccf18f"></script>
-    <script type="text/javascript" src="../assets/js/index.js?v=3794ccf18f"></script>
-    <script type="text/javascript" src="../assets/js/prism.js?v=3794ccf18f"></script>
+    <script type="text/javascript" src="../assets/js/jquery.fitvids.js?v=f757cad3c7"></script>
+    <script type="text/javascript" src="../assets/js/index.js?v=f757cad3c7"></script>
+    <script type="text/javascript" src="../assets/js/prism.js?v=f757cad3c7"></script>
     <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
     <script type="text/x-mathjax-config">
         MathJax.Hub.Config({
@@ -397,6 +406,4 @@ this.page.identifier = 'ghost-{{id}}';
             }
         });
     </script>
-    <script type="text/javascript" src="../assets/js/index.js?v=3794ccf18f"></script>
-
 </body>

@@ -1,0 +1,1031 @@
+
+<head>
+    <meta charset="utf-8">
+
+    <title>動能指標 筆記 (二) 指標介紹</title>
+    <meta name="description" content="">
+
+    <meta name="HandheldFriendly" content="True">
+    <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
+
+    <link rel="shortcut icon" href="../../favicon.ico">
+
+    <link rel="canonical" href="../index.html">
+    <meta name="referrer" content="no-referrer-when-downgrade">
+    
+    <meta property="og:site_name" content="Hello World! I'm Vincent.">
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="動能指標 筆記 (二) 指標介紹">
+    <meta property="og:description" content="原名      Martin Pring on Market Momentum. by Martin J. Pring 後續篇幅將會介紹書中提到的指標 變動率 (Rate of Change, ROC) N 天期的 ROC 計算方式有以下兩種, 衡量的都是與 N 日前收盤價的關係, 作者推薦的是用除法, 好處是隱含著比例的概念   在 點線賺錢術 中, 將兩種計算公式區分為 動量指標 (Momentum, MTM) 與 震盪指標 (Oscillator, OSC)。 ROC today = Close today - Close today - n or ROC today = (Close today">
+    <meta property="og:url" content="http://captainvincent.github.io/dong-neng-zhi-biao-ii/">
+    <meta property="article:published_time" content="2016-05-04T21:19:51.000Z">
+    <meta property="article:modified_time" content="2016-05-14T01:39:17.000Z">
+    <meta property="article:tag" content="MACD">
+    <meta property="article:tag" content="ROC">
+    <meta property="article:tag" content="RSI">
+    <meta property="article:tag" content="KD">
+    <meta property="article:tag" content="趨向系統">
+    <meta property="article:tag" content="技術指標">
+    
+    <meta property="article:publisher" content="https://www.facebook.com/UndercoverEngineer">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="動能指標 筆記 (二) 指標介紹">
+    <meta name="twitter:description" content="原名      Martin Pring on Market Momentum. by Martin J. Pring 後續篇幅將會介紹書中提到的指標 變動率 (Rate of Change, ROC) N 天期的 ROC 計算方式有以下兩種, 衡量的都是與 N 日前收盤價的關係, 作者推薦的是用除法, 好處是隱含著比例的概念   在 點線賺錢術 中, 將兩種計算公式區分為 動量指標 (Momentum, MTM) 與 震盪指標 (Oscillator, OSC)。 ROC today = Close today - Close today - n or ROC today = (Close today">
+    <meta name="twitter:url" content="http://captainvincent.github.io/dong-neng-zhi-biao-ii/">
+    <meta name="twitter:label1" content="Written by">
+    <meta name="twitter:data1" content="Captain Vincent">
+    <meta name="twitter:label2" content="Filed under">
+    <meta name="twitter:data2" content="MACD, ROC, RSI, KD, 趨向系統, 技術指標">
+    
+    <script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "publisher": {
+        "@type": "Organization",
+        "name": "Hello World! I&#x27;m Vincent.",
+        "logo": "http://captainvincent.github.io/ghost/img/ghosticon.jpg"
+    },
+    "author": {
+        "@type": "Person",
+        "name": "Captain Vincent",
+        "image": {
+            "@type": "ImageObject",
+            "url": "http://captainvincent.github.io/content/images/2016/11/--.JPG",
+            "width": 889,
+            "height": 1080
+        },
+        "url": "http://captainvincent.github.io/author/vincent/",
+        "sameAs": []
+    },
+    "headline": "動能指標 筆記 (二) 指標介紹",
+    "url": "http://captainvincent.github.io/dong-neng-zhi-biao-ii/",
+    "datePublished": "2016-05-04T21:19:51.000Z",
+    "dateModified": "2016-05-14T01:39:17.000Z",
+    "keywords": "MACD, ROC, RSI, KD, 趨向系統, 技術指標",
+    "description": "原名      Martin Pring on Market Momentum. by Martin J. Pring 後續篇幅將會介紹書中提到的指標 變動率 (Rate of Change, ROC) N 天期的 ROC 計算方式有以下兩種, 衡量的都是與 N 日前收盤價的關係, 作者推薦的是用除法, 好處是隱含著比例的概念   在 點線賺錢術 中, 將兩種計算公式區分為 動量指標 (Momentum, MTM) 與 震盪指標 (Oscillator, OSC)。 ROC today &#x3D; Close today - Close today - n or ROC today &#x3D; (Close today",
+    "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "http://captainvincent.github.io"
+    }
+}
+    </script>
+
+    <meta name="generator" content="Ghost 0.11">
+    <link rel="alternate" type="application/rss+xml" title="Hello World! I'm Vincent." href="../../rss/index.html">
+
+    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Merriweather:300,700,700italic,300italic%7COpen+Sans:700,600,400">
+    <style amp-custom>
+        /* ==========================================================================
+           Table of Contents
+           ========================================================================== */
+
+        /*
+
+            0. Normalize
+            1. General
+            2. Utilities
+            3. AMP Post
+            4. Footer
+
+        */
+
+        /* ==========================================================================
+           0. normalize.css v3.0.3 | MIT License | git.io/normalize | (minified)
+           ========================================================================== */
+
+        html {
+            font-family: sans-serif;
+
+            -ms-text-size-adjust: 100%;
+            -webkit-text-size-adjust: 100%;
+        }
+        body {
+            margin: 0;
+        }
+        article,
+        aside,
+        details,
+        figcaption,
+        figure,
+        footer,
+        header,
+        main,
+        menu,
+        nav,
+        section,
+        summary {
+            display: block;
+        }
+        audio,
+        canvas,
+        progress,
+        video {
+            display: inline-block;
+            vertical-align: baseline;
+        }
+        audio:not([controls]) {
+            display: none;
+            height: 0;
+        }
+        [hidden],
+        template {
+            display: none;
+        }
+        a {
+            background-color: transparent;
+        }
+        a:active,
+        a:hover {
+            outline: 0;
+        }
+        abbr[title] {
+            border-bottom: 1px dotted;
+        }
+        b,
+        strong {
+            font-weight: bold;
+        }
+        dfn {
+            font-style: italic;
+        }
+        h1 {
+            margin: 0.67em 0;
+            font-size: 2em;
+        }
+        mark {
+            background: #ff0;
+            color: #000;
+        }
+        small {
+            font-size: 80%;
+        }
+        sub,
+        sup {
+            position: relative;
+            vertical-align: baseline;
+            font-size: 75%;
+            line-height: 0;
+        }
+        sup {
+            top: -0.5em;
+        }
+        sub {
+            bottom: -0.25em;
+        }
+        img {
+            border: 0;
+        }
+        amp-img {
+            border: 0;
+        }
+        svg:not(:root) {
+            overflow: hidden;
+        }
+        figure {
+            margin: 1em 40px;
+        }
+        hr {
+            box-sizing: content-box;
+            height: 0;
+        }
+        pre {
+            overflow: auto;
+        }
+        code,
+        kbd,
+        pre,
+        samp {
+            font-family: monospace, monospace;
+            font-size: 1em;
+        }
+        button,
+        input,
+        optgroup,
+        select,
+        textarea {
+            margin: 0;
+            color: inherit;
+            font: inherit;
+        }
+        button {
+            overflow: visible;
+        }
+        button,
+        select {
+            text-transform: none;
+        }
+        button,
+        html input[type="button"],
+        input[type="reset"],
+        input[type="submit"] {
+            cursor: pointer;
+
+            -webkit-appearance: button;
+        }
+        button[disabled],
+        html input[disabled] {
+            cursor: default;
+        }
+        button::-moz-focus-inner,
+        input::-moz-focus-inner {
+            padding: 0;
+            border: 0;
+        }
+        input {
+            line-height: normal;
+        }
+        input[type="checkbox"],
+        input[type="radio"] {
+            box-sizing: border-box;
+            padding: 0;
+        }
+        input[type="number"]::-webkit-inner-spin-button,
+        input[type="number"]::-webkit-outer-spin-button {
+            height: auto;
+        }
+        input[type="search"] {
+            -webkit-appearance: textfield;
+        }
+        input[type="search"]::-webkit-search-cancel-button,
+        input[type="search"]::-webkit-search-decoration {
+            -webkit-appearance: none;
+        }
+        fieldset {
+            margin: 0 2px;
+            padding: 0.35em 0.625em 0.75em;
+            border: 1px solid #c0c0c0;
+        }
+        legend {
+            padding: 0;
+            border: 0;
+        }
+        textarea {
+            overflow: auto;
+        }
+        optgroup {
+            font-weight: bold;
+        }
+        table {
+            border-spacing: 0;
+            border-collapse: collapse;
+        }
+        td,
+        th {
+            padding: 0;
+        }
+
+
+        /* ==========================================================================
+           1. General - Setting up some base styles
+           ========================================================================== */
+
+        html {
+            max-height: 100%;
+            height: 100%;
+            font-size: 62.5%;
+
+            -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+        }
+
+        body {
+            max-height: 100%;
+            height: 100%;
+            color: #3a4145;
+            background: #f4f8fb;
+            letter-spacing: 0.01rem;
+            font-family: "Merriweather", serif;
+            font-size: 1.8rem;
+            line-height: 1.75em;
+            text-rendering: geometricPrecision;
+
+            -webkit-font-feature-settings: "kern" 1;
+            -moz-font-feature-settings: "kern" 1;
+            -o-font-feature-settings: "kern" 1;
+        }
+
+        ::-moz-selection {
+            background: #d6edff;
+        }
+
+        ::selection {
+            background: #d6edff;
+        }
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            margin: 0 0 0.3em 0;
+            color: #2e2e2e;
+            font-family: "Open Sans", sans-serif;
+            line-height: 1.15em;
+            text-rendering: geometricPrecision;
+
+            -webkit-font-feature-settings: "dlig" 1, "liga" 1, "lnum" 1, "kern" 1;
+            -moz-font-feature-settings: "dlig" 1, "liga" 1, "lnum" 1, "kern" 1;
+            -o-font-feature-settings: "dlig" 1, "liga" 1, "lnum" 1, "kern" 1;
+        }
+
+        h1 {
+            text-indent: -2px;
+            letter-spacing: -1px;
+            font-size: 2.6rem;
+        }
+
+        h2 {
+            letter-spacing: 0;
+            font-size: 2.4rem;
+        }
+
+        h3 {
+            letter-spacing: -0.6px;
+            font-size: 2.1rem;
+        }
+
+        h4 {
+            font-size: 1.9rem;
+        }
+
+        h5 {
+            font-size: 1.8rem;
+        }
+
+        h6 {
+            font-size: 1.8rem;
+        }
+
+        a {
+            color: #4a4a4a;
+        }
+
+        a:hover {
+            color: #111;
+        }
+
+        p,
+        ul,
+        ol,
+        dl {
+            margin: 0 0 2.5rem 0;
+            font-size: 1.5rem;
+            text-rendering: geometricPrecision;
+
+            -webkit-font-feature-settings: "liga" 1, "onum" 1, "kern" 1;
+            -moz-font-feature-settings: "liga" 1, "onum" 1, "kern" 1;
+            -o-font-feature-settings: "liga" 1, "onum" 1, "kern" 1;
+        }
+
+        ol,
+        ul {
+            padding-left: 2em;
+        }
+
+        ol ol,
+        ul ul,
+        ul ol,
+        ol ul {
+            margin: 0 0 0.4em 0;
+            padding-left: 2em;
+        }
+
+        dl dt {
+            float: left;
+            clear: left;
+            overflow: hidden;
+            margin-bottom: 1em;
+            width: 180px;
+            text-align: right;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            font-weight: 700;
+        }
+
+        dl dd {
+            margin-bottom: 1em;
+            margin-left: 200px;
+        }
+
+        li {
+            margin: 0.4em 0;
+        }
+
+        li li {
+            margin: 0;
+        }
+
+        hr {
+            display: block;
+            margin: 1.75em 0;
+            padding: 0;
+            height: 1px;
+            border: 0;
+            border-top: #efefef 1px solid;
+        }
+
+        blockquote {
+            box-sizing: border-box;
+            margin: 1.75em 0 1.75em 0;
+            padding: 0 0 0 1.75em;
+            border-left: #4a4a4a 0.4em solid;
+
+            -moz-box-sizing: border-box;
+        }
+
+        blockquote p {
+            margin: 0.8em 0;
+            font-style: italic;
+        }
+
+        blockquote small {
+            display: inline-block;
+            margin: 0.8em 0 0.8em 1.5em;
+            color: #ccc;
+            font-size: 0.9em;
+        }
+
+        blockquote small:before {
+            content: "\2014 \00A0";
+        }
+
+        blockquote cite {
+            font-weight: 700;
+        }
+
+        blockquote cite a {
+            font-weight: normal;
+        }
+
+        mark {
+            background-color: #fdffb6;
+        }
+
+        code,
+        tt {
+            padding: 1px 3px;
+            border: #e3edf3 1px solid;
+            background: #f7fafb;
+            border-radius: 2px;
+            white-space: pre-wrap;
+            font-family: Inconsolata, monospace, sans-serif;
+            font-size: 0.85em;
+            font-feature-settings: "liga" 0;
+
+            -webkit-font-feature-settings: "liga" 0;
+            -moz-font-feature-settings: "liga" 0;
+        }
+
+        pre {
+            overflow: auto;
+            box-sizing: border-box;
+            margin: 0 0 1.75em 0;
+            padding: 10px;
+            width: 100%;
+            border: #e3edf3 1px solid;
+            background: #f7fafb;
+            border-radius: 3px;
+            white-space: pre;
+            font-family: Inconsolata, monospace, sans-serif;
+            font-size: 0.9em;
+
+            -moz-box-sizing: border-box;
+        }
+
+        pre code,
+        pre tt {
+            padding: 0;
+            border: none;
+            background: transparent;
+            white-space: pre-wrap;
+            font-size: inherit;
+        }
+
+        kbd {
+            display: inline-block;
+            margin-bottom: 0.4em;
+            padding: 1px 8px;
+            border: #ccc 1px solid;
+            background: #f4f4f4;
+            border-radius: 4px;
+            box-shadow: 0 1px 0 rgba(0, 0, 0, 0.2),
+            0 1px 0 0 #fff inset;
+            color: #666;
+            text-shadow: #fff 0 1px 0;
+            font-size: 0.9em;
+            font-weight: 700;
+        }
+
+        table {
+            box-sizing: border-box;
+            margin: 1.75em 0;
+            max-width: 100%;
+            width: 100%;
+            background-color: transparent;
+
+            -moz-box-sizing: border-box;
+        }
+
+        table th,
+        table td {
+            padding: 8px;
+            border-top: #efefef 1px solid;
+            vertical-align: top;
+            text-align: left;
+            line-height: 20px;
+        }
+
+        table th {
+            color: #000;
+        }
+
+        table caption + thead tr:first-child th,
+        table caption + thead tr:first-child td,
+        table colgroup + thead tr:first-child th,
+        table colgroup + thead tr:first-child td,
+        table thead:first-child tr:first-child th,
+        table thead:first-child tr:first-child td {
+            border-top: 0;
+        }
+
+        table tbody + tbody {
+            border-top: #efefef 2px solid;
+        }
+
+        table table table {
+            background-color: #fff;
+        }
+
+        table tbody > tr:nth-child(odd) > td,
+        table tbody > tr:nth-child(odd) > th {
+            background-color: #f6f6f6;
+        }
+
+        table.plain tbody > tr:nth-child(odd) > td,
+        table.plain tbody > tr:nth-child(odd) > th {
+            background: transparent;
+        }
+
+        iframe,
+        amp-iframe,
+        .fluid-width-video-wrapper {
+            display: block;
+            margin: 1.75em 0;
+        }
+
+        /* When a video is inside the fitvids wrapper, drop the
+        margin on the iframe, cause it breaks stuff. */
+        .fluid-width-video-wrapper iframe,
+        .fluid-width-video-wrapper amp-iframe {
+            margin: 0;
+        }
+
+        textarea,
+        select,
+        input {
+            margin: 0 0 5px 0;
+            padding: 6px 9px;
+            width: 260px;
+            outline: 0;
+            border: #e7eef2 1px solid;
+            background: #fff;
+            border-radius: 4px;
+            box-shadow: none;
+            font-family: "Open Sans", sans-serif;
+            font-size: 1.6rem;
+            line-height: 1.4em;
+            font-weight: 100;
+
+            -webkit-appearance: none;
+        }
+
+        textarea {
+            min-width: 250px;
+            min-height: 80px;
+            max-width: 340px;
+            width: 100%;
+            height: auto;
+        }
+
+        input[type="text"]:focus,
+        input[type="email"]:focus,
+        input[type="search"]:focus,
+        input[type="tel"]:focus,
+        input[type="url"]:focus,
+        input[type="password"]:focus,
+        input[type="number"]:focus,
+        input[type="date"]:focus,
+        input[type="month"]:focus,
+        input[type="week"]:focus,
+        input[type="time"]:focus,
+        input[type="datetime"]:focus,
+        input[type="datetime-local"]:focus,
+        textarea:focus {
+            outline: none;
+            outline-width: 0;
+            border: #bbc7cc 1px solid;
+            background: #fff;
+        }
+
+        select {
+            width: 270px;
+            height: 30px;
+            line-height: 30px;
+        }
+
+        /* ==========================================================================
+           2. Utilities
+           ========================================================================== */
+
+        /* Clears shit */
+        .clearfix:before,
+        .clearfix:after {
+            content: " ";
+            display: table;
+        }
+        .clearfix:after {
+            clear: both;
+        }
+        .clearfix {
+            zoom: 1;
+        }
+
+        /* ==========================================================================
+           3. AMP Post
+           ========================================================================== */
+
+
+
+        .main-header {
+            position: relative;
+            display: table;
+            overflow: hidden;
+            box-sizing: border-box;
+            width: 100%;
+            height: 50px;
+            background: #5ba4e5 no-repeat center center;
+            background-size: cover;
+            text-align: left;
+
+            -webkit-box-sizing: border-box;
+            -moz-box-sizing: border-box;
+        }
+
+        .content {
+            background: #fff;
+            padding-top: 15px;
+        }
+        .blog-title,
+        .content {
+            margin: auto;
+            max-width: 600px;
+        }
+
+        .blog-title a {
+            display: block;
+            padding-right: 16px;
+            padding-left: 16px;
+            height: 50px;
+            color: #fff;
+            text-decoration: none;
+            font-family: "Open Sans", sans-serif;
+            font-size: 16px;
+            line-height: 50px;
+            font-weight: 600;
+        }
+
+        .post {
+            position: relative;
+            margin-top: 0;
+            margin-right: 16px;
+            margin-left: 16px;
+            padding-bottom: 0;
+            max-width: 100%;
+            border-bottom: #ebf2f6 1px solid;
+            word-wrap: break-word;
+            font-size: 0.95em;
+            line-height: 1.65em;
+        }
+
+        .post-header {
+            margin-bottom: 1rem;
+        }
+
+        .post-title {
+            margin-bottom: 0;
+        }
+
+        .post-title a {
+            text-decoration: none;
+        }
+
+        .post-meta {
+            display: block;
+            margin: 3px 0 0 0;
+            color: #9eabb3;
+            font-family: "Open Sans", sans-serif;
+            font-size: 1.3rem;
+            line-height: 2.2rem;
+        }
+
+        .post-meta a {
+            color: #9eabb3;
+            text-decoration: none;
+        }
+
+        .post-meta a:hover {
+            text-decoration: underline;
+        }
+
+        .post-meta .author {
+            margin: 0;
+            font-size: 1.3rem;
+            line-height: 1.3em;
+        }
+
+        .post-date {
+            display: inline-block;
+            text-transform: uppercase;
+            white-space: nowrap;
+            font-size: 1.2rem;
+            line-height: 1.2em;
+        }
+
+        .post-image {
+            margin: 0;
+            padding-top: 3rem;
+            padding-bottom: 30px;
+            border-top: 1px #E8E8E8 solid;
+        }
+
+        /* Keep images centered, and allow images wider than the main
+           text column to break out. */
+        .post-content amp-img,
+        .post-content amp-anim {
+            /* Centers an image by (1) pushing its left edge to the
+               center of its container and (2) shifting the entire image
+               in the opposite direction by half its own width.
+               Works for images that are larger than their containers. */
+            position: relative;
+            left: 50%;
+            display: block;
+            padding: 0;
+            min-width: 0;
+            max-width: 112%; /* fallback when calc doesn't work */
+            width: calc(100% + 32px); /* expand with to image + margins */
+            height: auto;
+            transform: translateX(-50%);
+
+            -webkit-transform: translateX(-50%); /* for Safari and iOS */
+            -ms-transform: translateX(-50%); /* for IE9 */
+        }
+
+        .footnotes {
+            font-size: 1.3rem;
+            line-height: 1.6em;
+            font-style: italic;
+        }
+
+        .footnotes li {
+            margin: 0.6rem 0;
+        }
+
+        .footnotes p {
+            margin: 0;
+        }
+
+        .footnotes p a:last-child {
+            text-decoration: none;
+        }
+
+        /* ==========================================================================
+           4. Footer - The bottom the AMP Post
+           ========================================================================== */
+
+        .site-footer {
+            position: relative;
+            margin: 0 auto 20px auto;
+            padding: 1rem 15px;
+            max-width: 600px;
+            color: rgba(0,0,0,0.5);
+            font-family: "Open Sans", sans-serif;
+            font-size: 1.1rem;
+            line-height: 1.75em;
+        }
+
+        .site-footer a {
+            color: rgba(0,0,0,0.5);
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .site-footer a:hover {
+            border-bottom: #bbc7cc 1px solid;
+        }
+
+        .poweredby {
+            display: block;
+            float: right;
+            width: 45%;
+            text-align: right;
+        }
+
+        .copyright {
+            display: block;
+            float: left;
+            width: 45%;
+        }
+    </style>
+
+    <style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style><noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
+    <script async src="https://cdn.ampproject.org/v0.js"></script>
+
+    
+
+</head>
+
+<body class="amp-template">
+    <header class="main-header">
+        <nav class="blog-title">
+            <a href="../../">Hello World! I'm Vincent.</a>
+        </nav>
+    </header>
+
+    <main class="content" role="main">
+        <article class="post">
+
+            <header class="post-header">
+                <h1 class="post-title">動能指標 筆記 (二) 指標介紹</h1>
+                <section class="post-meta">
+                    <p class="author">by <a href="../../author/vincent/">Captain Vincent</a></p>
+                    <time class="post-date" datetime="2016-05-04">2016-05-04</time>
+                </section>
+            </header>
+            <section class="post-content">
+
+                <blockquote>
+  <p>原名</p>
+  
+  <p>Martin Pring on Market Momentum. by <strong>Martin J. Pring</strong></p>
+</blockquote>
+
+<p>後續篇幅將會介紹書中提到的指標</p>
+
+<h2 id="rateofchangeroc">變動率 (Rate of Change, ROC)</h2>
+
+<p>N 天期的 ROC 計算方式有以下兩種, 衡量的都是與 N 日前收盤價的關係, 作者推薦的是用除法, 好處是隱含著比例的概念</p>
+
+<blockquote>
+  <p>在 <a href="../../dian-xian-zhuan-qian-shu/">點線賺錢術</a> 中, 將兩種計算公式區分為 <strong>動量指標 (Momentum, MTM)</strong> 與 <strong>震盪指標 (Oscillator, OSC)</strong>。</p>
+</blockquote>
+
+<p>ROC <sub>today</sub> = Close <sub>today</sub> - Close <sub>today - n</sub></p>
+
+<p>or</p>
+
+<p>ROC <sub>today</sub> = (Close <sub>today</sub> / Close <sub>today - n</sub>) * 100%</p>
+
+<p>ROC 作為超買/賣的分析是相當合適, 但劃分出極端區的界線, 需仰賴相當主觀的方式判斷 (依據商品特性不同), 只能 Trial and error 反覆地去找出合適的區間 (上下界線也不一定對稱), 但除此之外, <a href="../../dong-neng-zhi-biao-i/">動能指標 筆記 (一)</a> 中提到的時間架構變化、趨勢線、價格型態的引用、複雜的背離以及均線的平緩化都能套用在此公式上。</p>
+
+<h2 id="relativestrengthindexrsi">相對強弱指標 (Relative Strength Index, RSI)</h2>
+
+<p><a href="https://zh.wikipedia.org/wiki/%E7%9B%B8%E5%B0%8D%E5%BC%B7%E5%BC%B1%E6%8C%87%E6%95%B8">Wiki 公式參考</a>, 書中提供計算方式是 Wiki 百科內提到的第一種, 而 <a href="../../dian-xian-zhuan-qian-shu/">點線賺錢術</a> 則是第二種方式, 兩種計算方式是推導化簡後的不同形式而已, 這邊僅提供第二種作為參考</p>
+
+<p>RSI = [UpAvg / (UpAvg + DownAvg)] * 100</p>
+
+<ul>
+<li>UpAvg = 14 日漲幅平均值 (週期隨商品變動)</li>
+<li>DownAvg = 14 日跌幅平均值 (週期隨商品變動)</li>
+<li>N日 漲/跌幅的計算, 收盤大於前一日的 N日總和 與 收盤小於前一日的 N日總和</li>
+</ul>
+
+<p>在 New Commodity Trading Systems 一書中 Perry Kaufman 質疑 14 日的選擇, 提出希望取得移動平均最大偏離, 應該使用商品循環週期的一半時間, 而特性上與 ROC 不同的是, 當計算選擇的區間愈長 RSI 振幅愈小 (因為移動平均的平緩特性), 但 ROC 振幅則會愈大; 最後關於動能分析的特性應用於 RSI 需注意的部分, 從時間週期的選則上可以反覆調整讓 指標的峰/谷位 與 價格的峰/谷位 呈現有意義的關係, 以及在 頭/底部的反轉 與 背離 可採用不同的時間週期, 同時 RSI 也是少數適用價格型態判斷的指標。</p>
+
+<h2 id="macd">趨勢偏離 與 MACD</h2>
+
+<p>在開始介紹 MACD 之前, 這邊先花一些篇幅來講解何謂趨勢偏離, 就之前介紹的幾種評估方式都是在衡量當前與之前的價格變化, 趨勢偏離的觀念是在衡量當前價格與趨勢之間的變化 (趨勢也可視為一種價格猜測的走向), 最簡單的一種方法即是評估價格與移動平均 (MA) 的差距 (與 ROC 計算方式相同, 使用除法或減法都可以), 且在比較的計算上除了週期的變化 (甚至以較短期的 MA 取代收盤價), 作者提到可以與提前 N 日的移動平均值做比較, 在某些情況下 (書中是指峰位與打底時, 歷史紀錄是 25日 MA 提前 3日 較佳) 可以過濾掉一些雜訊。</p>
+
+<blockquote>
+  <p>使用移動平均作為趨勢偏離的指標, 其所繪製的超買/賣區的意涵, 等同於移動平均的包絡線, 包絡線的概念為在移動平均值的上下方繪製出區間通道。</p>
+</blockquote>
+
+<h4 id="macd">MACD</h4>
+
+<p>書中的計算方式是直接使用 9日 EMA/ 15日 EMA, 不過 <a href="https://zh.wikipedia.org/wiki/MACD">Wiki 上的修正公式</a> 是與 <a href="../../dian-xian-zhuan-qian-shu/">點線賺錢術</a> 中的介紹相同, 精神也是利用長短期的 EMA 去計算出趨勢偏離, 在對這個偏離值計算出移動平均來觀察快慢線交錯的行為。</p>
+
+<h2 id="kdr">隨機指標(KD) 與 威廉 %R</h2>
+
+<p>公式參考 <a href="../../dian-xian-zhuan-qian-shu/">點線賺錢術</a> 的章節, %K 穿越 %D 時表示快線穿越慢線, 代表某個方向的趨勢有可能成形, 這之中如果 %K 的峰/谷位落在 %D 的右側可靠度較高, 反轉的強度較強; 與之前幾種指標不同的是, 隨機指標的極端區域通常代表著趨勢持續前的暫緩 (趨勢方向不變, 與超買/賣的概念不同), 另一點是作者認為此種指標, 不適合用趨勢線的方式分析。</p>
+
+<blockquote>
+  <p>以結論而言, 隨機指標的表現並不如其他大多數的指標, 其精神是認為價格趨勢的反轉會反映在收盤價與最高/低價的距離。</p>
+</blockquote>
+
+<h2 id="kst">KST 系統</h2>
+
+<p>這裡指將之前介紹的許多想法融為一個交易系統的概念, 書中的做法是將長、中、短週期的 ROC 並搭配各自週期的 MA 繪製出來, 如果繪製圖型上的限制, 可將三種週期根據其時間比例去做加總成一個新的觀察指標, 透過諸多變化來塑造觀察的標的, 不過筆者認為核心觀念仍是以下兩點, 公式的變化僅是嘗試遵守這些行為。</p>
+
+<ul>
+<li>短期訊號不應與長期趨勢違背</li>
+<li>指標上的訊號皆依得到價格上的證明才可採信</li>
+</ul>
+
+<h2 id>價格波動 與 趨向系統</h2>
+
+<p>作者認為動能 (震盪) 指標的使用時機應在橫向移動的區間, 適合超買/賣的判斷, 若趨勢明顯的時候則應以順勢操作為主, 趨向系統的介紹是為了區分目前市場偏向何種狀態 (橫向、趨勢明顯)。</p>
+
+<p>公式參考 <a href="../../dian-xian-zhuan-qian-shu/">點線賺錢術</a> 的章節, 計算出來的 DI 比例為選用的週期內的漲跌各自佔多少 (剩餘的比例為沒有特定方向), 而這邊趨向指數 (DX) 公式如下</p>
+
+<p>DX = | (+DI<sub>14</sub> - -DI<sub>14</sub>) / (+DI<sub>14</sub> + -DI<sub>14</sub>) | * 100%</p>
+
+<p>ADX = DX 取 MA (平滑化過濾雜訊、凸顯根本的趨勢)</p>
+
+<p>總結, ADX 是用以評等的指標, 唯有 ADX 值偏大時才採用順勢交易 (表示趨勢明顯), 而進出場的方式可以參考 +DI 與 -DI 交錯時候的訊號 (除了在端點時的交錯例外), 當ADX 高於兩條 DI 值時, ADX 的反轉也可能伴隨著價格反轉。</p>
+
+<blockquote>
+  <p>作者這邊實務上提出與指標創建者不同的看法, 認為 ADX 出現 <strong>頭部</strong> 時, 通常隨後伴隨著是橫向盤整的情勢, 向上翻升才代表趨勢的出現。</p>
+  
+  <p>作者引用 Alexander Elder 的經典著作 <strong>操作生涯不是夢</strong>, 書中提到 ADX 停留在兩條 DI 線以下愈久, 之後的趨勢發展愈穩固。</p>
+</blockquote>
+
+<h2 id="stopandreversesar">商品篩選指數 與 拋物線系統 (Stop and Reverse, SAR)</h2>
+
+<p>商品篩選指數 (Commodity Selection Index, CSI) 是 Welles Wilder 的另一項發明, 主軸是根據 <strong>價格波動</strong>、<strong>趨向變動</strong> 以及 <strong>保證金的比例</strong> 等因素來篩選報酬率最高的標的, 但這部分的計算十分複雜, 筆者這邊僅留下關鍵字, 可供後續研究時再繼續更新。</p>
+
+<p>拋物線系統 與 動量指標無關, 屬於純停損概念 (出場 Only) 的方法, 而且這是一套用於 <strong>順勢交易</strong> 的停損方式, 因為停損點會加速掐緊獲利, 在橫向盤整的表現中則會容易被掃出場, 公式如下</p>
+
+<p>SAR <sub>today</sub> = SAR <sub>yesterday</sub> + 加速因子 * (部位極端價位 - SAR <sub>yesterday</sub>)</p>
+
+<ul>
+<li><strong>初始停損</strong> SAR <sub>initial</sub> = 做多時為進場前一次的次要低點 (書上的圖示像是之前的波谷)</li>
+<li><strong>加速因子</strong> Wilder 建議 0.02, 且每次遞增 0.02 直至 0.20 為止</li>
+<li><strong>部位極端價位</strong> 做多時, 進場以來的最高點</li>
+<li>做多時, 計算明天的 SAR 不可高於今日與昨日的最低點, 若計算出的 SAR 有違背時, 則取今日與昨日的最低點中較低者</li>
+<li>缺點之一是起始的停損點通常遠離進場點, 造成風險過高</li>
+</ul>
+
+<blockquote>
+  <p>這部分也是 <a href="../../dian-xian-zhuan-qian-shu/">點線賺錢術</a> 中筆者借閱的書中剛好缺頁的部分, 有點懷疑鄭老先生是不是看著這本書在寫書的, 章節排序頗有雷同。</p>
+</blockquote>
+
+<h2 id>其他動能指標</h2>
+
+<ul>
+<li>海利克精算指數 (Herrick Payoff Index, HPI), 由未平倉合約數代表信心指數計算出的公式</li>
+<li>累積擺動指數 (Swing Index, SI), SORRY 待補充</li>
+<li>三重平滑指數 (TRIX), 一日期的 ROC 經過連續三次的 EMA 平滑後的指標, 意涵仍與 ROC 相同</li>
+<li>商品通道指數 (Commodity Channel Index, CCI), 利用 H, L, C 三個價位取平均求出一日的代表價, 在算出 N日 代表價平均, 去計算代表價之間的距離關係 (作者的意見是似乎沒有簡單的 ROC 來得有效)</li>
+<li>終極擺盪指標 (Ultimate Oscillator, UO), 這邊運用到三個週期各自給予不同的權重, 並重新定義出以下幾個數值與公式
+<ul><li>B, 買進力量 = 收盤價 - (今日低價與收盤價較低者)</li>
+<li>SB<sub>n</sub>, N日 買進力量總和</li>
+<li>R, 真實區間 (True Range, TR), 沿用 <a href="../../dian-xian-zhuan-qian-shu/">點線賺錢術</a> 中的定義 (因為其實指標都是同一個人發明的)</li>
+<li>SR<sub>n</sub>, N日 真實區間的總和</li>
+<li>UO = (SB<sub>7</sub> / SR<sub>7</sub>) * 4 + (SB<sub>14</sub> / SR<sub>14</sub>) * 2 + (SB<sub>28</sub> / SR<sub>28</sub>)</li></ul></li>
+</ul>
+
+<h2 id>成交量的動能指標</h2>
+
+<p>量是價的先行指標, 健全的上漲趨勢中, 價漲量增、價跌量縮, 而健全的下跌趨勢中, 價跌量增、價漲量縮, 當價格與成交量的關係與趨勢該有的反應背離時, 則應視作警訊, 成交量一樣可用於 ROC、兩條不同週期的 EMA 交錯點來分析、EMA<sub>上漲成交量</sub> / EMA<sub>下跌成交量</sub> 以及 需求指數 (Demand Index), 但需求指數的部分書中並未提及公式細節。</p>
+
+<h2 id>市場動能</h2>
+
+<p>接下來要將分析的目標轉移至整個市場。</p>
+
+<h4 id="adl">騰落指標 (ADL)</h4>
+
+<p>計算方式本書 與 <a href="../../dian-xian-zhuan-qian-shu/">點線賺錢術</a> 中的不同, 但重點仍是計算 上漲家數(A) 與 下跌家數(D) 的差值。</p>
+
+<h4 id="mcclellanoscillator">麥克里倫擺盪指標 (McClellan Oscillator)</h4>
+
+<p>(A-D 的 EMA<sub>19</sub>) - (A-D 的 EMA<sub>39</sub>)</p>
+
+<h4 id="summationindex">加總指數 (Summation Index)</h4>
+
+<p>為麥克里倫擺盪指標每日的累積加總, 一般來說加總指數的移動會較為平緩 (?)</p>
+
+<h4 id="diffusionindicators">擴散指標 (Diffusion indicators)</h4>
+
+<p>最常見的是衡量位於某週期移動平均之上的家數, 另一種則是相對強度 (RS), 將股價除以某大盤指數 或是 兩種商品的比較。</p>
+
+<h4 id>淨新高</h4>
+
+<p>創新高的家數, 也可同時與創新低的家數一同做計算。</p>
+
+<h4 id="trinormkds">阿姆斯指數 (TRIN or MKDS)</h4>
+
+<p>(上漲家數/下跌家數) / (上漲成交量/下跌成交量)</p>
+
+<blockquote>
+  <p>以上就是本書中提及的指標摘要, 盡可能的消化說明其公式表達的精神, 而不是針對指標進出場的訊號過於死板的抄寫, 畢竟搭配不同週期、指標間相互參照的方式 以及 商品不同的特性 可以做出的變化實在是族繁不及備載, 唯有了解各種指標關注的現象, 才能組合成最適合自己觀察的系統。</p>
+</blockquote>
+
+            </section>
+
+        </article>
+    </main>
+    <footer class="site-footer clearfix">
+        <section class="copyright"><a href="../../">Hello World! I'm Vincent.</a> © 2016</section>
+        <section class="poweredby">Proudly published with <a href="https://ghost.org">Ghost</a></section>
+    </footer>
+</body>
