@@ -1,30 +1,605 @@
-<rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:media="http://search.yahoo.com/mrss/" version="2.0"><channel><title>Hello World! I'm Vincent.</title><description>Thoughts, stories and ideas.</description><link>http://captainvincent.github.io/</link><generator>Ghost 0.11</generator><lastBuildDate>Mon, 21 Nov 2016 15:22:52 GMT</lastBuildDate><atom:link href="http://captainvincent.github.io/rss/" rel="self" type="application/rss+xml"/><ttl>60</ttl><item><title>react-native-animatable 解析</title><description>&lt;p&gt;&lt;a href="https://github.com/oblador/react-native-animatable"&gt;Github Link&lt;/a&gt;&lt;/p&gt;
+<rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:media="http://search.yahoo.com/mrss/" version="2.0"><channel><title>Hello World! I'm Vincent.</title><description>Thoughts, stories and ideas.</description><link>http://captainvincent.github.io/</link><generator>Ghost 0.11</generator><lastBuildDate>Sat, 03 Dec 2016 16:10:33 GMT</lastBuildDate><atom:link href="http://captainvincent.github.io/rss/" rel="self" type="application/rss+xml"/><ttl>60</ttl><item><title>GDG DevFest Taipei 2016</title><description>&lt;blockquote&gt;
+  &lt;p&gt;本次為 Google 開發者社群推廣的一日活動, 完整議程參考 &lt;a href="https://devfest-taipei-3cbee.firebaseapp.com/schedule/day1"&gt;主辦單位提供&lt;/a&gt;。&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h2 id=""&gt;議程筆記&lt;/h2&gt;
+
+&lt;p&gt;Personal 會議整理&lt;/p&gt;
+
+&lt;h3 id="materialdesign"&gt;Material Design / 實感設計&lt;/h3&gt;
+
+&lt;p&gt;@Takuo Suzuki / 鈴木拓生&lt;/p&gt;
+
+&lt;p&gt;傳統的應用程式在不同的 platform 通常都呈現了不同的 interface, 對一般的使用者在使用上的經驗無法連貫以及學習曲線上的困難, Google 於 2014 制定了 Material Design 規範了 UX 設計。&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;對於這些規範的內容可以從網路上獲得許多免費資源的介紹, 這邊有查到一個模組以 react 的 component 實踐 material design &lt;a href="http://react-toolbox.com/#/"&gt;React Toolbox&lt;/a&gt;。 &lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h4 id="hackpad"&gt;Hackpad&lt;/h4&gt;
+
+&lt;ul&gt;
+&lt;li&gt;The details can be found at
+&lt;ul&gt;&lt;li&gt;&lt;a href="https://material.google.com/"&gt;https://material.google.com/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://material.io/"&gt;https:&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;&lt;/li&gt;&lt;/ul&gt;</description><link>http://captainvincent.github.io/gdg-devfest-taipei-2016/</link><guid isPermaLink="false">f2cf11d5-fff5-4057-b7b8-277bad2ca5e7</guid><dc:creator>Captain Vincent</dc:creator><pubDate>Fri, 02 Dec 2016 23:44:42 GMT</pubDate><content:encoded>&lt;blockquote&gt;
+  &lt;p&gt;本次為 Google 開發者社群推廣的一日活動, 完整議程參考 &lt;a href="https://devfest-taipei-3cbee.firebaseapp.com/schedule/day1"&gt;主辦單位提供&lt;/a&gt;。&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h2 id=""&gt;議程筆記&lt;/h2&gt;
+
+&lt;p&gt;Personal 會議整理&lt;/p&gt;
+
+&lt;h3 id="materialdesign"&gt;Material Design / 實感設計&lt;/h3&gt;
+
+&lt;p&gt;@Takuo Suzuki / 鈴木拓生&lt;/p&gt;
+
+&lt;p&gt;傳統的應用程式在不同的 platform 通常都呈現了不同的 interface, 對一般的使用者在使用上的經驗無法連貫以及學習曲線上的困難, Google 於 2014 制定了 Material Design 規範了 UX 設計。&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;對於這些規範的內容可以從網路上獲得許多免費資源的介紹, 這邊有查到一個模組以 react 的 component 實踐 material design &lt;a href="http://react-toolbox.com/#/"&gt;React Toolbox&lt;/a&gt;。 &lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h4 id="hackpad"&gt;Hackpad&lt;/h4&gt;
+
+&lt;ul&gt;
+&lt;li&gt;The details can be found at
+&lt;ul&gt;&lt;li&gt;&lt;a href="https://material.google.com/"&gt;https://material.google.com/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://material.io/"&gt;https://material.io/&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;Showcases:
+&lt;ul&gt;&lt;li&gt;g.co/materialshowcase&lt;/li&gt;&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;strong&gt;Introduction&lt;/strong&gt;&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;&lt;p&gt;Tangible Surfaces  &lt;/p&gt;
+
+&lt;ul&gt;&lt;li&gt;Depth focuses attention and provides structure.&lt;/li&gt;
+&lt;li&gt;Interaction cues &lt;/li&gt;&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Rich Imagery and Bold Colors  &lt;/p&gt;
+
+&lt;ul&gt;&lt;li&gt;Primary + Accent&lt;/li&gt;
+&lt;li&gt;Color density depends on content&lt;/li&gt;
+&lt;li&gt;Noto Fonts &lt;a href="https://www.google.com/get/noto/"&gt;https://www.google.com/get/noto/&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Meaningful Motion  &lt;/p&gt;
+
+&lt;ul&gt;&lt;li&gt;Materials transform&lt;/li&gt;&lt;/ul&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;&lt;strong&gt;Don't&lt;/strong&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;The Hamburger Diet: Not every app needs a left nav drawer&lt;/li&gt;
+&lt;li&gt;Don't force the FAB (Floating Action Button)&lt;/li&gt;
+&lt;li&gt;Everything doesn't need to be a card&lt;/li&gt;
+&lt;li&gt;Don't make the screen's lower right corner a FAB ghetto&lt;/li&gt;
+&lt;li&gt;Don't wait unitl the end to think about motion (plan beforhand)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;strong&gt;Do&lt;/strong&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Design for device independence: Mobile + Web, Portrait + Landscape&lt;/li&gt;
+&lt;li&gt;When it comes to buttons, start flat  and promote as needed&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;strong&gt;Web Frameworks&lt;/strong&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Polymer: paper elements
+&lt;a href="https://elements.polymer-project.org/browse?package=paper-elements"&gt;https://elements.polymer-project.org/browse?package=paper-elements&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Angular Material &lt;a href="https://material.angularjs.org/latest/"&gt;https://material.angularjs.org/latest/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Material Design Lite
+&lt;a href="https://getmdl.io/"&gt;https://getmdl.io/&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;strong&gt;Tools&lt;/strong&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Google Fonts
+&lt;a href="https://fonts.google.com/"&gt;https://fonts.google.com/&lt;/a&gt;  &lt;/li&gt;
+&lt;li&gt;Device Metrics
+&lt;a href="https://material.io/devices/"&gt;https://material.io/devices/&lt;/a&gt;  &lt;/li&gt;
+&lt;li&gt;Material icons
+&lt;a href="https://material.io/icons/"&gt;https://material.io/icons/&lt;/a&gt; &lt;br&gt;
+(svg is recommanded!)&lt;/li&gt;
+&lt;li&gt;Resizer
+&lt;a href="http://material.io/resizer/"&gt;http://material.io/resizer/&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;strong&gt;Downloads&lt;/strong&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;ai template
+&lt;a href="https://material.google.com/resources/layout-templates.html#"&gt;https://material.google.com/resources/layout-templates.html#&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;strong&gt;What's Next?&lt;/strong&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Material Design Codelab &lt;a href="https://github.com/googlecodelabs/android-design-library"&gt;https://github.com/googlecodelabs/android-design-library&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Plaid App plaidapp.io&lt;/li&gt;
+&lt;li&gt;12/8 Google Developer Day Livestream&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;strong&gt;Q&amp;amp;A&lt;/strong&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Why Button Navigation?
+&lt;ul&gt;&lt;li&gt;Easier to touch (than top)&lt;/li&gt;&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;hr&gt;
+
+&lt;h3 id="reactnativeperformancetuning"&gt;React Native Performance Tuning&lt;/h3&gt;
+
+&lt;p&gt;@Ray Shih&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;Dr. Stephen Strange: How do I get from here to there?&lt;/p&gt;
+  
+  &lt;p&gt;The Ancient One: How did you become a doctor?&lt;/p&gt;
+  
+  &lt;p&gt;Dr. Stephen Strange: Study and practice. Years of it.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;講者開頭先介紹了對他來說 React 的本質就是 Data -&gt; View 的過程, 傳統的網頁處理 Dom (View) 是有 life cycle 的 (State 的切換), 但在 react native 是透過 Virtual DOM 的 diff 不同來表達 state 的差異、更新。&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;前言的部分筆者聽不是很瞭...&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;&lt;strong&gt;Why React-Native&lt;/strong&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;不需要自己去刻 JSON parser&lt;/li&gt;
+&lt;li&gt;render function 可以很容易的 Scale 做拆解&lt;/li&gt;
+&lt;li&gt;開發即時&lt;/li&gt;
+&lt;li&gt;It's Native&lt;/li&gt;
+&lt;li&gt;Facebook 真的有在用&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;strong&gt;Measure&lt;/strong&gt; You Can't Optimize What You Can't Measure&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Systrace 評估是否執行超過一個 frame 框
+&lt;ul&gt;&lt;li&gt;Render thread&lt;/li&gt;
+&lt;li&gt;nativemodules thread&lt;/li&gt;
+&lt;li&gt;uithread thread&lt;/li&gt;
+&lt;li&gt;jsthread thread&lt;/li&gt;&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;console.log&lt;/li&gt;
+&lt;li&gt;End user test&lt;/li&gt;
+&lt;li&gt;react 本身已有套分析工具&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;strong&gt;Technical&lt;/strong&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Async Task 放到背後執行&lt;/li&gt;
+&lt;li&gt;Virtual DOM diff 本身也有 performance 問題, 盡量減少 virtual DOM diff 的次數: shouldComponentUpdate (內容去比對新舊 property)&lt;/li&gt;
+&lt;li&gt;global single state 但筆者認為這邊應該要用 flux 架構來解決更新資料的問題&lt;/li&gt;
+&lt;li&gt;減少 Bridge 溝通的次數&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;講者有釋出模組 &lt;a href="https://www.npmjs.com/package/fun-react"&gt;fun-react&lt;/a&gt; 包裝了一些功能。&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;hr&gt;
+
+&lt;h3 id="antiantiad"&gt;Anti-Anti-AD / 反反廣告&lt;/h3&gt;
+
+&lt;p&gt;@Aki Yu&lt;/p&gt;
+
+&lt;p&gt;APP 不管是在 Apple Store or Google Play 其實都賣不太動 (除非本身是知名軟體), 主要還是靠廣告佔了整體 82% 的收入, 直到 Adblock 的出現之後, 讓廣告收益銳減 (對開發者來說, 其實不知道發生什麼事, 只知道廣告流量突然降低)。&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;Adblock 運作的原理是針對連線去對 content 做 filter, 從系統層下手而非應用層。&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;講者使用 Charles (網路工具) 來示範建立 Proxy, 再讓手機透過此 Proxy Server 連線內含廣告的應用軟體, 撈出有無開啟的連線差異確認廣告網址 domain, 最後在程式中檢查對廣告 domain 做 request header 的確認連線有無成功, 以此判定是否安裝 Adblock。&lt;/p&gt;
+
+&lt;p&gt;如果使用者安裝 Adblock 開發者可以做什麼?&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;do nothing  &lt;/li&gt;
+&lt;li&gt;fix UI/UX bug (解決廣告欄被移除內容的顯示問題)  &lt;/li&gt;
+&lt;li&gt;Shut down App (not good)  &lt;/li&gt;
+&lt;li&gt;Limitation might be a good way (限制部分功能提示解除 Adblock 黑名單)  &lt;/li&gt;
+&lt;li&gt;以顯示客製 AD 取代  &lt;/li&gt;
+&lt;li&gt;Begging users (最好的方式是 &lt;strong&gt;求使用者&lt;/strong&gt;)&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;手機連線 Proxy 帶到的 security keyword : man in the middle attack。&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;hr&gt;
+
+&lt;h3 id="prototypeui"&gt;Prototype 與 UI 狀態間的測試&lt;/h3&gt;
+
+&lt;p&gt;@Akane Lee&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;UI 六種狀態&lt;/strong&gt; (部分節入字 O'Reilly)&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;理想 ideal: 一切完美的情況下, 最能呈現應用本身的狀態&lt;/li&gt;
+&lt;li&gt;空白 empty: 第一次開始使用, 所有資料都 reset 的時候&lt;/li&gt;
+&lt;li&gt;極限 maximum: 內容的最大值、最小值 (溫度的正負極限顯示, 文字換行的表示)&lt;/li&gt;
+&lt;li&gt;錯誤 error: 各種錯誤發生時的狀態 (錯誤的提示)&lt;/li&gt;
+&lt;li&gt;載入 loading: 降低等待的不耐煩 (超過 4 秒給進度條)&lt;/li&gt;
+&lt;li&gt;局部資料 partial： 理想狀態下的小地方變動, 藉由統一規則來設計 (動作搭配復原的設計, 對使用者學習過程中滿重要的)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;strong&gt;Prototype&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;測試驗證產品, 用以表達 User Behaivor。&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;Wireframe (有紙本與非紙本的形式), 快速、簡單、成本低&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;使用者不容易看懂, 僅做內部測試容易與真實情況產生落差, 比較容易因為按步操作而忽略到錯誤的情形。&lt;/p&gt;
+&lt;/blockquote&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Mockup 接近成品, 容易理解 ex. &lt;a href="https://www.invisionapp.com/"&gt;https://www.invisionapp.com/&lt;/a&gt;&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;仍是有與真實情境不同, 預期以外的細節落差無法反映的問題&lt;/p&gt;
+&lt;/blockquote&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Program 程式等級的, 離上架差一步, 最精準&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;成本高、製作時程長、來回修改不易&lt;/p&gt;
+&lt;/blockquote&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id="referencekeyword"&gt;Reference Keyword&lt;/h4&gt;
+
+&lt;p&gt;&lt;strong&gt;Rapid Prototyping&lt;/strong&gt; : Sketching &amp;amp; Paper Prototyping、Digtial Prototyping、Native Prototyping。&lt;/p&gt;
+
+&lt;hr&gt;
+
+&lt;h3 id="activityrecognitionwithtensorflow"&gt;Activity Recognition with TensorFlow&lt;/h3&gt;
+
+&lt;p&gt;@Aaron Lai&lt;/p&gt;
+
+&lt;p&gt;汗... 機器學習還真的不太適合在會議上做分享。&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Reference&lt;/strong&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="http://speech.ee.ntu.edu.tw/~tlkagk/courses.html"&gt;台大課程 - 李宏毅&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://playground.tensorflow.org/"&gt;TensorFlow Playground&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id="hackpad"&gt;Hackpad&lt;/h4&gt;
+
+&lt;p&gt;&lt;strong&gt;Activity Net&lt;/strong&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="http://activity-net.org/"&gt;http://activity-net.org/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;辨識整體影片內容&lt;/li&gt;
+&lt;li&gt;偵測片段活動內容&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;strong&gt;TensorFlow&lt;/strong&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://www.tensorflow.org/"&gt;https://www.tensorflow.org/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Auto-Differentiation&lt;/li&gt;
+&lt;li&gt;Input - Placeholders
+&lt;ul&gt;&lt;li&gt;statuc or dynamic shape&lt;/li&gt;&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;Variables
+&lt;ul&gt;&lt;li&gt;pass initial values&lt;/li&gt;&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;Basic Ops
+&lt;ul&gt;&lt;li&gt;Matrix multiply, concatenate&lt;/li&gt;
+&lt;li&gt;add(boradcast), multiply&lt;/li&gt;&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;Session
+&lt;ul&gt;&lt;li&gt;Connect the backend&lt;/li&gt;
+&lt;li&gt;Run the graph&lt;/li&gt;&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;pre&gt;&lt;code class="language- py"&gt;    tf.inialize_all_variables()
+    tf.Session()
+    tf.run()
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;Variable Scope&lt;/p&gt;
+
+&lt;ul&gt;&lt;li&gt;Variables within the same scope could be "reuse"&lt;/li&gt;&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Update Parameters&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;pre&gt;&lt;code class="language- py"&gt;    tf.train(optimizer)
+    minimize(cost)
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Assign Device&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;pre&gt;&lt;code class="language- py"&gt;    tf.device()
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;strong&gt;Machine Learning Framework&lt;/strong&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Hypotheses--&gt;Inference--&gt;Training&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Deep Learning&lt;/p&gt;
+
+&lt;ul&gt;&lt;li&gt;Course by Hung-Yi Lee
+&lt;a href="http://speech.ee.ntu.edu.tw/~tlkagk/courses"&gt;http://speech.ee.ntu.edu.tw/~tlkagk/courses&lt;/a&gt;&lt;em&gt;MLSD15&lt;/em&gt;2.html &lt;br&gt;
++我自己推薦 Course by Stanford  &lt;a href="https://www.youtube.com/playlist?list=PLkt2uSq6rBVctENoVBg1TpCC7OQi31AlC"&gt;https://www.youtube.com/playlist?list=PLkt2uSq6rBVctENoVBg1TpCC7OQi31AlC&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Neural Network&lt;/p&gt;
+
+&lt;ul&gt;&lt;li&gt;Logistic Regression&lt;/li&gt;
+&lt;li&gt;Many neurons&lt;/li&gt;
+&lt;li&gt;Different Activation function&lt;/li&gt;
+&lt;li&gt;More Layers&lt;/li&gt;&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;Deep Neural NetWork
+&lt;ul&gt;&lt;li&gt;ImageNet &lt;a href="http://image-net.org/"&gt;http://image-net.org/&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;TensorFlow Playground
+&lt;a href="http://playground.tensorflow.org/"&gt;http://playground.tensorflow.org/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;DNN Example: autoencoder&lt;/p&gt;
+
+&lt;ul&gt;&lt;li&gt;MNIST data &lt;a href="http://yann.lecun.com/exdb/mnist/"&gt;http://yann.lecun.com/exdb/mnist/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Auto-encode: DNN as Encoder and Decoder&lt;/li&gt;
+&lt;li&gt;Unsupervised (Dimension reduction) &lt;/li&gt;
+&lt;li&gt;"Representaion" of the image&lt;/li&gt;&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Neural Network With Memory&lt;/p&gt;
+
+&lt;ul&gt;&lt;li&gt;Recurrent Neural Network
+&lt;ul&gt;&lt;li&gt;Memory cell&lt;/li&gt;
+&lt;li&gt;Reuse&lt;/li&gt;
+&lt;li&gt;Sequence&lt;/li&gt;
+&lt;li&gt;Hard to train&lt;/li&gt;
+&lt;li&gt;Cannot "connect the dots"&lt;/li&gt;&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;Long Short-Term Memory (LSTM)
+&lt;ul&gt;&lt;li&gt;Gate Mechanism&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://colah.github.io/posts/2015-08-Understanding-LSTMs/"&gt;http://colah.github.io/posts/2015-08-Understanding-LSTMs/&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;&lt;/li&gt;&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;Convolution Neural Network
+&lt;ul&gt;&lt;li&gt;&lt;a href="http://cs231n.github.io/convolutional-networks/"&gt;http://cs231n.github.io/convolutional-networks/&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;Attention Mechanism
+&lt;ul&gt;&lt;li&gt;&lt;a href="http://distill.pub/2016/augmented-rnns/"&gt;http://distill.pub/2016/augmented-rnns/&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;strong&gt;Putting All Thing Together&lt;/strong&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Video --&gt; Inception-V3 (GoogleNet) --&gt; 2048 dims features --&gt; Attention RNN --&gt;Match: small DNN&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;strong&gt;TensorFlow Examples&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href="https://github.com/aymericdamien/TensorFlow-Examples"&gt;https://github.com/aymericdamien/TensorFlow-Examples&lt;/a&gt;&lt;/p&gt;
+
+&lt;hr&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;最後, 在一日的議程上其實感覺會結束得有點倉促, 私心慢慢覺得最近由社群所舉辦的 Conference 有逐漸疲軟的趨勢, 不如早期剛如雨後春筍般成立社群時的群眾參與度熱烈, 我想未來想藉由在這樣的舞台 Promote 自己也會愈來愈困難 囧&gt;; 但意外的慶幸自己能在這次的議程上, 關於技術的分享比較少看到新的 Terms 了, 期許自己未來也能對被關注的技術保有更多的敏銳度。&lt;/p&gt;
+&lt;/blockquote&gt;</content:encoded></item><item><title>react-native-animatable 解析</title><description>&lt;p&gt;&lt;a href="https://github.com/oblador/react-native-animatable/blob/master/index.js"&gt;Github Source Code&lt;/a&gt;&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;最近開始學習 JavaScript, 趁著 trace 別人寫的 code 來認識基本語法; 本篇就從為了要實做一些動畫效果, 一邊觀察 react-native-animatable 這個模組來一邊學習動畫的操作。&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;&lt;a href="http://browniefed.com/react-native-animation-book/"&gt;Animation Reference&lt;/a&gt; @browniefed&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;關於動畫功能介紹與舉例皆滿詳盡的一本 GitBook。&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h2 id="reactjscomponent"&gt;ReactJS Component 生命週期&lt;/h2&gt;
+
+&lt;p&gt;在介紹模組內容之前, 要先補齊一些對元件的基礎觀念。( &lt;a href="http://andyyou.logdown.com/posts/178998-reactjs-assembly-operation-and-life-cycle"&gt;Reference I&lt;/a&gt;、&lt;a href="https://facebook.github.io/react/docs/react-component.html"&gt;Reference II&lt;/a&gt; )&lt;/p&gt;
+
+&lt;h3 id="3stages"&gt;3 Stages&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Mounting&lt;/strong&gt;：元件正準備要被寫入 DOM&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Updating&lt;/strong&gt;：元件偵測到狀態的改變準備重新渲染。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Unmounting&lt;/strong&gt;：元件正要被從 DOM 中移除。
+
+
+&lt;blockquote&gt;
+  &lt;p&gt;分別會用 Will、Did 來修飾被觸發的 Callback Function Name, 來代表在這些 Stage 發生前或後的關係。&lt;/p&gt;&lt;/blockquote&gt;&lt;/li&gt;
+  &lt;/ul&gt;
+  &lt;strong&gt;Mounting&lt;/strong&gt;</description><link>http://captainvincent.github.io/react-native-animatable-jie-xi/</link><guid isPermaLink="false">a554483a-fa8b-4551-a8fe-f6a7f3465c3b</guid><category>react-native</category><dc:creator>Captain Vincent</dc:creator><pubDate>Sun, 20 Nov 2016 15:06:40 GMT</pubDate><content:encoded>&lt;p&gt;&lt;a href="https://github.com/oblador/react-native-animatable/blob/master/index.js"&gt;Github Source Code&lt;/a&gt;&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;最近開始學習 JavaScript, 趁著 trace 別人寫的 code 來認識基本語法; 本篇就從為了要實做一些動畫效果, 一邊觀察 react-native-animatable 這個模組來一邊學習動畫的操作。&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;&lt;a href="http://browniefed.com/react-native-animation-book/"&gt;Animation Reference&lt;/a&gt; @browniefed&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;關於動畫功能介紹與舉例皆滿詳盡的一本 GitBook。&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h2 id="reactjscomponent"&gt;ReactJS Component 生命週期&lt;/h2&gt;
+
+&lt;p&gt;在介紹模組內容之前, 要先補齊一些對元件的基礎觀念。( &lt;a href="http://andyyou.logdown.com/posts/178998-reactjs-assembly-operation-and-life-cycle"&gt;Reference I&lt;/a&gt;、&lt;a href="https://facebook.github.io/react/docs/react-component.html"&gt;Reference II&lt;/a&gt; )&lt;/p&gt;
+
+&lt;h3 id="3stages"&gt;3 Stages&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Mounting&lt;/strong&gt;：元件正準備要被寫入 DOM&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Updating&lt;/strong&gt;：元件偵測到狀態的改變準備重新渲染。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Unmounting&lt;/strong&gt;：元件正要被從 DOM 中移除。
+
+
+&lt;blockquote&gt;
+  &lt;p&gt;分別會用 Will、Did 來修飾被觸發的 Callback Function Name, 來代表在這些 Stage 發生前或後的關係。&lt;/p&gt;&lt;/blockquote&gt;&lt;/li&gt;
+  &lt;/ul&gt;
+  &lt;strong&gt;Mounting Stage&lt;/strong&gt;&lt;p&gt;&lt;/p&gt;
+
+
+&lt;ul&gt;
+&lt;li&gt;getInitialState() / constructor()：當物件被調用時此方法會在寫入 DOM 之前被觸發, 通常用來管理狀態的元件可以用這個方法初始化一些資料, constructor 的 naming 比較符合物件導向習慣的用語, 但是在 ES6 才支援。&lt;/li&gt;
+&lt;li&gt;componentWillMount：當元件內部的結構處理完畢 &lt;strong&gt;準備寫入 DOM 之前觸發&lt;/strong&gt;。&lt;/li&gt;
+&lt;li&gt;componentDidMount(DOMElement rootNode)：當元件 &lt;strong&gt;被寫入 DOM 之後觸發&lt;/strong&gt;。
+
+
+&lt;blockquote&gt;
+  &lt;p&gt;當初始化需要操作 DOM 元素就可以用這個方法。&lt;/p&gt;&lt;/blockquote&gt;&lt;/li&gt;
+  &lt;/ul&gt;
+  &lt;strong&gt;Updating Stage&lt;/strong&gt;&lt;p&gt;&lt;/p&gt;
+
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;componentWillReceiveProps(nextProps)：已掛載的元件收到新的 props 時被觸發。&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;在這個方法裡你通常會去比較 this.props 和 nextProps 然後再用 this.setState 去改變狀態。&lt;/p&gt;
+&lt;/blockquote&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;shouldComponentUpdate(nextProps, nextState)：這個函式需要回傳一個布林值, 當元件判斷是否需要更新 DOM 時會被觸發。&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;你可以在這個方法裡面去比較 this.props、this.state、nextProps、nextState 來決定是否需要更新, 回傳 false 則會跳過此次觸發不更新, 如果你什麼都不回傳預設會當做 false。&lt;/p&gt;
+&lt;/blockquote&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;componentWillUpdate：例如在上面 shouldComponentUpdate 你回傳了 true, 元件確定要更新了, 在準備更新前這個方法會被觸發。&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;componentDidupdate(prevProps, prevState, rootNode)：更新後觸發。&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;strong&gt;Unmounting Stage&lt;/strong&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;componentWillUnmount()：當元件準備要被移除或破壞時觸發。&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=""&gt;補充&lt;/h4&gt;
+
+&lt;ul&gt;
+&lt;li&gt;掛載後才能使用的方法
+&lt;ul&gt;&lt;li&gt;getDOMNode()：使用此方法會傳回一個 DOM 元素物件, 透過這個方法你可以取得一個參考物件直接操作 DOM 節點。&lt;/li&gt;
+&lt;li&gt;forceUpdate()：任何已掛載的元件, 當你知道元件內部有些狀態已經改變但他不是透過 this.setState() 去修改值的時候可以呼叫這個方法強迫更新。&lt;/li&gt;&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;componentDidMount() 和 componentDidUpdate() 的 rootNode 參數只是提供你一個比較方便的方式存取 DOM , 實際使用和 this.getDOMNode() 是一樣的。&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;hr&gt;
+
+&lt;p&gt;react-native-animatable 的模組結構很單純, Source Code 的部分只有一個 index.js 檔案, 後面將對 Source Code 的部分拆分成幾個 Section (片段) 來介紹。&lt;/p&gt;
+
+&lt;h3 id="codesection1"&gt;Code Section 1&lt;/h3&gt;
 
 &lt;pre&gt;&lt;code class="language-javascript"&gt;// Transform an object to an array the way react native wants it for transform styles
 // { a: x, b: y } =&amp;gt; [{ a: x }, { b: y }]
 function createKeyedArray(obj) {  
   return Object.keys(obj).map(key =&amp;gt; {
     let keyed = {};
-    keyed[key] = obj[key];
+    keyed[key] = obj[key]; // Copy value
     return keyed;
   });
 }
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;pre&gt;&lt;code class="language-markup"&gt;&amp;lt;p class="awesome"&amp;gt;This&lt;/code&gt;&lt;/pre&gt;</description><link>http://captainvincent.github.io/react-native-animatable-jie-xi/</link><guid isPermaLink="false">a554483a-fa8b-4551-a8fe-f6a7f3465c3b</guid><category>react-native</category><dc:creator>Captain Vincent</dc:creator><pubDate>Sun, 20 Nov 2016 15:06:40 GMT</pubDate><content:encoded>&lt;p&gt;&lt;a href="https://github.com/oblador/react-native-animatable"&gt;Github Link&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Goal&lt;/strong&gt;: { a: x, b: y } =&gt; [{ a: x }, { b: y }]&lt;/p&gt;
 
-&lt;pre&gt;&lt;code class="language-javascript"&gt;// Transform an object to an array the way react native wants it for transform styles
-// { a: x, b: y } =&amp;gt; [{ a: x }, { b: y }]
-function createKeyedArray(obj) {  
-  return Object.keys(obj).map(key =&amp;gt; {
-    let keyed = {};
-    keyed[key] = obj[key];
-    return keyed;
-  });
+&lt;p&gt;&lt;strong&gt;語法複習&lt;/strong&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Object.keys(obj)&lt;/strong&gt; 從 object 中取出所有的鍵值, 物件的屬性構成由 (key, value)&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Array.prototype.map(Callback)&lt;/strong&gt; 會將當前陣列的每個元素執行 Callback 回傳的結果, 集合成另一個陣列回傳&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;=&gt;&lt;/strong&gt; fat arrow function (箭頭函式)
+&lt;ul&gt;&lt;li&gt;(param1, param2, …, paramN) =&gt; { statements } &lt;/li&gt;
+&lt;li&gt;(param1, param2, …, paramN) =&gt; expression // 等於 :  =&gt; { return expression; } &lt;/li&gt;
+&lt;li&gt;singleParam =&gt; { statements } // 只有一個參數時,&lt;/li&gt;
+&lt;li&gt;() =&gt; { statements } //若無參數,就一定要加括號:&lt;/li&gt;&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id="codesection2"&gt;Code Section 2&lt;/h3&gt;
+
+&lt;pre&gt;&lt;code class="language-javascript"&gt;// Helper function to calculate transform values, args:
+// direction: in|out
+// originOrDestination: up|down|left|right
+// verticalValue: amplitude for up/down animations
+// horizontalValue: amplitude for left/right animations
+function getAnimationValueForDirection(direction, originOrDestination, verticalValue, horizontalValue) {  
+  const isVertical = originOrDestination === 'up' || originOrDestination === 'down';
+  const modifier = (isVertical &amp;amp;&amp;amp; direction === 'out' ? -1 : 1) * (originOrDestination === 'down' || originOrDestination === 'left' ? -1 : 1);
+  return modifier * (isVertical ? verticalValue : horizontalValue);
 }
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;pre&gt;&lt;code class="language-markup"&gt;&amp;lt;p class="awesome"&amp;gt;This HTML should be syntax highlighted&amp;lt;/p&amp;gt;  
+&lt;h3 id="codesection3"&gt;Code Section 3&lt;/h3&gt;
+
+&lt;pre&gt;&lt;code class="language-javascript"&gt;const TRANSFORM_STYLE_PROPERTIES = [  
+  'rotate',
+  'rotateX',
+  'rotateY',
+  'rotateZ',
+  'scale',
+  'scaleX',
+  'scaleY',
+  'translateX',
+  'translateY',
+  'skewX',
+  'skewY',
+];
+
+// Transforms { translateX: 1 } to { transform: [{ translateX: 1 }]}
+function wrapStyleTransforms(style) {  
+  let wrapped = {};
+  Object.keys(style).forEach(key =&amp;gt; {
+    if (TRANSFORM_STYLE_PROPERTIES.indexOf(key) !== -1) {
+      if (!wrapped.transform) {
+        wrapped.transform = []; // Create new array.
+      }
+      wrapped.transform.push({
+        [key]: style[key],
+      });
+    } else {
+      wrapped[key] = style[key];
+    }
+  });
+  return wrapped;
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;strong&gt;Goal&lt;/strong&gt;: Transforms { translateX: 1, undefined: value } to { transform: [{ translateX: 1 }], undefined: value}&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;語法複習&lt;/strong&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;forEach&lt;/strong&gt; 如同 map 會反覆迭代陣列中的元素, 差別是不會回傳值&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;pre&gt;&lt;code class="language-javascript"&gt;// Returns a flattened version of style with only `keys` values.
+function getStyleValues(keys, style) {  
+  if (!StyleSheet.flatten) {
+    throw new Error('StyleSheet.flatten not available, upgrade React Native or polyfill with StyleSheet.flatten = require(\'flattenStyle\');');
+  }
+  let values = {};
+  let flatStyle = Object.assign({}, StyleSheet.flatten(style));
+  if (flatStyle.transform) {
+    flatStyle.transform.forEach(transform =&amp;gt; {
+      const key = Object.keys(transform)[0];
+      flatStyle[key] = transform[key];
+    });
+    delete flatStyle.transform;
+  }
+
+  (typeof keys === 'string' ? [keys] : keys).forEach(key =&amp;gt; {
+    values[key] = (key in flatStyle ? flatStyle[key] : getDefaultStyleValue(key));
+  });
+  return values;
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;StyleSheet.flatten&lt;/strong&gt; Flattens an array of style objects, 將多個 style object 合併成單一有效的 style object (重複的元素會剔除掉無效的) &lt;a href="https://facebook.github.io/react-native/docs/stylesheet.html#flatten"&gt;Reference&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;Object.assign(target, ...sources)&lt;/strong&gt; 回傳從 source 端複製後的 target object&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;Object.assign 對於 object 中如果存在其他指向 object 的屬性, 會僅複製到 reference, 造成兩物件的物件屬性如果變化會產生連動關係, 可透過lodash 的 clonedeep 來解決。&lt;a href="https://developer.mozilla.org/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/Object/assign"&gt;Reference I&lt;/a&gt;、&lt;a href="http://jigsawye.com/2015/10/06/javascript-object-assign/"&gt;Reference II&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;Property initializers&lt;/strong&gt; ES6+ 的寫法之一是透過 static propType、static defaultProps 為 property 建立檢查的機制與預設值&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;...&lt;/strong&gt; 擴展運算符 (Spread Operator)&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;pre&gt;&lt;code class="language-javascript"&gt;var str = 'hello';  
+[...str] //  ['h','e','l','l','o']
 &lt;/code&gt;&lt;/pre&gt;</content:encoded></item><item><title>React Native 學習手冊 (GitBook)</title><description>&lt;blockquote&gt;
   &lt;p&gt;原名&lt;/p&gt;
   
@@ -946,354 +1521,4 @@ sudo pip install --upgrade $TF_BINARY_URL
 
 &lt;pre&gt;&lt;code class="language- language-bash"&gt;export TF_BINARY_URL=https://storage.googleapis.com/tensorflow/mac/tensorflow-0.9.0rc0-py2-none-any.whl  
 sudo pip install --upgrade $TF_BINARY_URL  
-&lt;/code&gt;&lt;/pre&gt;</content:encoded></item><item><title>Machine Learning Foundations 機器學習基石 (課程筆記)</title><description>&lt;blockquote&gt;
-  &lt;p&gt;由台大資工系 副教授 林軒田 提供的開放式課程, 關於教材內容皆可於 &lt;a href="https://www.youtube.com/playlist?list=PLXVfgk9fNX2I7tB6oIINGBmW50rrmFTqf"&gt;Youtube教學影片&lt;/a&gt; 及 &lt;a href="http://www.csie.ntu.edu.tw/~htlin/mooc/"&gt;投影片下載網址&lt;/a&gt; 取得。&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;h3 id="gitbookhttpswwwgitbookcombookcaptainvincentmachinelearningfoundationsdetails"&gt;&lt;a href="https://www.gitbook.com/book/captainvincent/machine-learning-foundations/details"&gt;&lt;strong&gt;Git Book&lt;/strong&gt;傳送門&lt;/a&gt;&lt;/h3&gt;
-
-&lt;p&gt;隨著文章的編寫, 發現用 Blog 單篇文章的形式呈現會讓整體知識的結構太過於線性, 所以重頭使用 Gitbook 編寫, 更完整的學習筆記可以前往參考, 這邊僅提供一些 Overview。&lt;/p&gt;
-
-&lt;hr&gt;
-
-&lt;p&gt;以下尚未整理, 請直接參閱 gitbook 最新更新。&lt;/p&gt;
-
-&lt;h2 id="introduction"&gt;Introduction&lt;/h2&gt;
-
-&lt;p&gt;模仿人類學習的方式, 透過觀察 (data) 學習 (取出特徵、經過計算處理) 後得到有意義的技巧 (提升某項可以量化評估的表現)。&lt;/p&gt;
-
-&lt;h5 id=""&gt;一些應用機器學習的時機&lt;/h5&gt;
-
-&lt;ul&gt;
-&lt;li&gt;過於複雜 (不預期的狀況) 的系統不容易轉化成程式來處理&lt;/li&gt;
-&lt;li&gt;不容易寫出判定規則的系統&lt;/li&gt;
-&lt;li&gt;人尚未或無法即時判定的行為&lt;/li&gt;
-&lt;li&gt;過分客製化 (數量過多) 的反應&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h5 id=""&gt;使用條件&lt;/h5&gt;
-
-&lt;ul&gt;
-&lt;li&gt;具備 可理解的特徵 以及 可供量化評估改進的結果&lt;/li&gt;
-&lt;li&gt;不容易定義出規則&lt;/li&gt;&lt;/ul&gt;</description><link>http://captainvincent.github.io/machine-learning-foundations-ji-qi-xue-xi-ji-shi-ke-cheng-bi-ji/</link><guid isPermaLink="false">a0ece823-f40e-44e6-8fe7-d8971672558e</guid><dc:creator>Captain Vincent</dc:creator><pubDate>Mon, 20 Jun 2016 11:30:30 GMT</pubDate><content:encoded>&lt;blockquote&gt;
-  &lt;p&gt;由台大資工系 副教授 林軒田 提供的開放式課程, 關於教材內容皆可於 &lt;a href="https://www.youtube.com/playlist?list=PLXVfgk9fNX2I7tB6oIINGBmW50rrmFTqf"&gt;Youtube教學影片&lt;/a&gt; 及 &lt;a href="http://www.csie.ntu.edu.tw/~htlin/mooc/"&gt;投影片下載網址&lt;/a&gt; 取得。&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;h3 id="gitbookhttpswwwgitbookcombookcaptainvincentmachinelearningfoundationsdetails"&gt;&lt;a href="https://www.gitbook.com/book/captainvincent/machine-learning-foundations/details"&gt;&lt;strong&gt;Git Book&lt;/strong&gt;傳送門&lt;/a&gt;&lt;/h3&gt;
-
-&lt;p&gt;隨著文章的編寫, 發現用 Blog 單篇文章的形式呈現會讓整體知識的結構太過於線性, 所以重頭使用 Gitbook 編寫, 更完整的學習筆記可以前往參考, 這邊僅提供一些 Overview。&lt;/p&gt;
-
-&lt;hr&gt;
-
-&lt;p&gt;以下尚未整理, 請直接參閱 gitbook 最新更新。&lt;/p&gt;
-
-&lt;h2 id="introduction"&gt;Introduction&lt;/h2&gt;
-
-&lt;p&gt;模仿人類學習的方式, 透過觀察 (data) 學習 (取出特徵、經過計算處理) 後得到有意義的技巧 (提升某項可以量化評估的表現)。&lt;/p&gt;
-
-&lt;h5 id=""&gt;一些應用機器學習的時機&lt;/h5&gt;
-
-&lt;ul&gt;
-&lt;li&gt;過於複雜 (不預期的狀況) 的系統不容易轉化成程式來處理&lt;/li&gt;
-&lt;li&gt;不容易寫出判定規則的系統&lt;/li&gt;
-&lt;li&gt;人尚未或無法即時判定的行為&lt;/li&gt;
-&lt;li&gt;過分客製化 (數量過多) 的反應&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h5 id=""&gt;使用條件&lt;/h5&gt;
-
-&lt;ul&gt;
-&lt;li&gt;具備 可理解的特徵 以及 可供量化評估改進的結果&lt;/li&gt;
-&lt;li&gt;不容易定義出規則 (容易定義則使用規則撰寫一般的程式處理即可)&lt;/li&gt;
-&lt;li&gt;有資料可供學習&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id="modelcomponent"&gt;Model Component&lt;/h2&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;A&lt;/strong&gt;lgorithm, learning algorithm 為挑選假說的演算法&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;D&lt;/strong&gt;ata Set, D: {(&lt;strong&gt;X&lt;/strong&gt;&lt;sub&gt;1&lt;/sub&gt;,Y&lt;sub&gt;1&lt;/sub&gt;), (&lt;strong&gt;X&lt;/strong&gt;&lt;sub&gt;2&lt;/sub&gt;,Y&lt;sub&gt;2&lt;/sub&gt;), ... (&lt;strong&gt;X&lt;/strong&gt;&lt;sub&gt;N&lt;/sub&gt;,Y&lt;sub&gt;N&lt;/sub&gt;)}&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;X&lt;/strong&gt; 為 input 的特徵向量, Y 為 Output&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;H&lt;/strong&gt;ypothesis Set, 推論 &lt;strong&gt;X&lt;/strong&gt; 與 Y 之間存在關係的假說集合&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;f&lt;/strong&gt; 理想上的 target function 可以完全地反應出所有的關係 (實際上 unknown), f: &lt;strong&gt;X&lt;/strong&gt; → Y&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;g&lt;/strong&gt; 透過 algorithm 從 hypothesis set 中挑選出最接近 f 者&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;A&lt;/strong&gt; takes &lt;strong&gt;D&lt;/strong&gt; and &lt;strong&gt;H&lt;/strong&gt; to get &lt;strong&gt;g&lt;/strong&gt; ≈ &lt;strong&gt;f&lt;/strong&gt;, 機器學習是透過資料從假說中挑選最接近目標函式者, 用以推測訓練資料以外的其他資料結果&lt;/li&gt;
-&lt;li&gt;Learning Model = &lt;strong&gt;A&lt;/strong&gt; and &lt;strong&gt;H&lt;/strong&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;&lt;strong&gt;Machine Learning vs Data Mining&lt;/strong&gt;&lt;/p&gt;
-  
-  &lt;p&gt;資料探勘通常是對大量的資料中尋找有用的性質, 如果這個性質的目標是找出更好的 hypothesis, 則兩者的差異不大 或是 可相互幫忙。&lt;/p&gt;
-  
-  &lt;p&gt;&lt;strong&gt;Machine Learning vs Artificial Intelligence&lt;/strong&gt;&lt;/p&gt;
-  
-  &lt;p&gt;人工智慧的目標在於經過計算之後可以得到具備智能的行為, 而機器學習是其中一種實現人工智慧的方法 (其他方法像是 決策數)。&lt;/p&gt;
-  
-  &lt;p&gt;&lt;strong&gt;Machine Learning vs Statistics&lt;/strong&gt;&lt;/p&gt;
-  
-  &lt;p&gt;統計學是用資料推論一些未知的結果, 所以統計是機器學習中會使用到的其中一種工具。&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;h2 id="perceptronlearningalgorithm"&gt;Perceptron Learning Algorithm&lt;/h2&gt;
-
-&lt;p&gt;這邊介紹一種簡單的 Hypothesis Set 的定義方式稱 "Perceptron" 來求一個是非題的解, 數學上的符號如下&lt;/p&gt;
-
-&lt;p&gt;Σ &lt;sub&gt;(i=1~d)&lt;/sub&gt; w&lt;sub&gt;i&lt;/sub&gt;x&lt;sub&gt;i&lt;/sub&gt; (再定義出一個 threshold 來二分這是非題的結果, y = {+1 , -1})&lt;/p&gt;
-
-&lt;p&gt;h(x) = sign ( Σ &lt;sub&gt;(i=1~d)&lt;/sub&gt; w&lt;sub&gt;i&lt;/sub&gt;x&lt;sub&gt;i&lt;/sub&gt; - threshold ) &lt;/p&gt;
-
-&lt;p&gt;令 w&lt;sub&gt;0&lt;/sub&gt; 為 -threshold、x&lt;sub&gt;0&lt;/sub&gt; 為 1, 則化簡如下&lt;/p&gt;
-
-&lt;p&gt;h(x) = sign ( Σ &lt;sub&gt;(i=0~d)&lt;/sub&gt; w&lt;sub&gt;i&lt;/sub&gt;x&lt;sub&gt;i&lt;/sub&gt; ) = sign (&lt;strong&gt;w&lt;/strong&gt;&lt;sup&gt;T&lt;/sup&gt;&lt;strong&gt;x&lt;/strong&gt;)&lt;/p&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;相當於取 w 與 x 兩個 d+1 維的向量內積。&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;目標是從 H 中挑選出最接近 f 的 g, 而這最接近的定義為在已經看過的資料中可以產出愈相同的 output , 但實際上整個 H 是一個無限大的集合, 所以 &lt;strong&gt;PLA&lt;/strong&gt; (Perceptron Learning Algorithm) 的想法是嘗試先從中挑選出第一個 g&lt;sub&gt;0&lt;/sub&gt; (或稱 &lt;strong&gt;w&lt;/strong&gt;&lt;sub&gt;0&lt;/sub&gt;), 並不斷的在錯誤中修正。&lt;/p&gt;
-
-&lt;h5 id=""&gt;演算法&lt;/h5&gt;
-
-&lt;p&gt;If, sign (&lt;strong&gt;w&lt;/strong&gt;&lt;sup&gt;T&lt;/sup&gt;&lt;strong&gt;x&lt;/strong&gt;&lt;sub&gt;n(t)&lt;/sub&gt;) ≠ y&lt;sub&gt;n(t)&lt;/sub&gt; &lt;br&gt;
-Let, &lt;strong&gt;w&lt;/strong&gt;&lt;sub&gt;t+1&lt;/sub&gt; = &lt;strong&gt;w&lt;/strong&gt;&lt;sub&gt;t&lt;/sub&gt; + y&lt;sub&gt;n(t)&lt;/sub&gt; &lt;strong&gt;x&lt;/strong&gt;&lt;sub&gt;n(t)&lt;/sub&gt; &lt;br&gt;
-Until no more mistakes.&lt;/p&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;想法是當計算的結果與預期的符號不同時, 表示匹配特徵向量 &lt;strong&gt;w&lt;/strong&gt; 與 資料特徵向量 &lt;strong&gt;x&lt;/strong&gt; 兩者間的角度過大或過小, 所以修正匹配特徵向量 &lt;strong&gt;w&lt;/strong&gt; 使其遠離或靠近 &lt;strong&gt;x&lt;/strong&gt; 一點 (方向視其預期結果的正負來決定)。&lt;/p&gt;
-  
-  &lt;p&gt;sign (&lt;strong&gt;w&lt;/strong&gt;&lt;sup&gt;T&lt;/sup&gt;&lt;strong&gt;x&lt;/strong&gt;) 中, &lt;strong&gt;w&lt;/strong&gt;&lt;sup&gt;T&lt;/sup&gt;&lt;strong&gt;x&lt;/strong&gt; = 0 在二維中是一條法相量為 &lt;strong&gt;w&lt;/strong&gt;&lt;sup&gt;T&lt;/sup&gt; 的直線二分其結果 y, 在高維度時則是劃分結果 y 的則是法相量 &lt;strong&gt;w&lt;/strong&gt;&lt;sup&gt;T&lt;/sup&gt; 的高維平面。&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;h5 id="linearseparability"&gt;Linear Separability 線性可分&lt;/h5&gt;
-
-&lt;p&gt;PLA 的終止條件是可以找出一個完全沒有錯誤的 &lt;strong&gt;w&lt;/strong&gt;, 此時稱作線性可分; 而這個 &lt;strong&gt;w&lt;/strong&gt;&lt;sub&gt;f&lt;/sub&gt;, 可以完美的劃分開不同結果的資料, 使其與分割平面 (線) 都有 &gt; 0 的距離 (因為計算結果與內積皆同向)&lt;/p&gt;
-
-&lt;p&gt;y&lt;sub&gt;n(t)&lt;/sub&gt; &lt;strong&gt;w&lt;/strong&gt;&lt;sub&gt;f&lt;/sub&gt;&lt;sup&gt;T&lt;/sup&gt;&lt;strong&gt;x&lt;/strong&gt;&lt;sub&gt;n(t)&lt;/sub&gt; (所有 input 包含發生錯誤的點) ≥ min( y&lt;sub&gt;n&lt;/sub&gt; &lt;strong&gt;w&lt;/strong&gt;&lt;sub&gt;f&lt;/sub&gt;&lt;sup&gt;T&lt;/sup&gt;&lt;strong&gt;x&lt;/strong&gt;&lt;sub&gt;n&lt;/sub&gt; ) &gt; 0&lt;/p&gt;
-
-&lt;h6 id="pla"&gt;討論 PLA 演算法修正的結果好壞的判定&lt;/h6&gt;
-
-&lt;p&gt;&lt;strong&gt;w&lt;/strong&gt;&lt;sub&gt;f&lt;/sub&gt;&lt;sup&gt;T&lt;/sup&gt; &lt;strong&gt;w&lt;/strong&gt;&lt;sub&gt;t+1&lt;/sub&gt; = &lt;strong&gt;w&lt;/strong&gt;&lt;sub&gt;f&lt;/sub&gt;&lt;sup&gt;T&lt;/sup&gt; (&lt;strong&gt;w&lt;/strong&gt;&lt;sub&gt;t&lt;/sub&gt; + y&lt;sub&gt;n(t)&lt;/sub&gt; &lt;strong&gt;x&lt;/strong&gt;&lt;sub&gt;n(t)&lt;/sub&gt;) &gt;= &lt;strong&gt;w&lt;/strong&gt;&lt;sub&gt;f&lt;/sub&gt;&lt;sup&gt;T&lt;/sup&gt; &lt;strong&gt;w&lt;/strong&gt;&lt;sub&gt;t&lt;/sub&gt; + min( y&lt;sub&gt;n&lt;/sub&gt; &lt;strong&gt;w&lt;/strong&gt;&lt;sub&gt;f&lt;/sub&gt;&lt;sup&gt;T&lt;/sup&gt;&lt;strong&gt;x&lt;/strong&gt;&lt;sub&gt;n&lt;/sub&gt; ) &gt; &lt;strong&gt;w&lt;/strong&gt;&lt;sub&gt;f&lt;/sub&gt;&lt;sup&gt;T&lt;/sup&gt; &lt;strong&gt;w&lt;/strong&gt;&lt;sub&gt;t&lt;/sub&gt;&lt;/p&gt;
-
-&lt;p&gt;到此我們只證明了一半, 表示透過演算法可以不停地修正可以得到與 target 內積愈來愈大的特徵向量, 但內積愈大並不能表示兩個向量的夾角愈小 (方向愈接近), 也有可能是因為修正後的向量長度變長所造成的, 這就是我們後面所要證明的第二部分。&lt;/p&gt;
-
-&lt;div&gt;  
-\begin{equation}
-  \begin{split}
-  w_f^Tw_T &amp;\geq w_f^Tw_{T-1} + min\ {y_nw_f^Tx_n} \\\
-           &amp;\geq ... \\\
-           &amp;\geq w_f^Tw_0 + T\cdot min\ {y_nw_f^Tx_n} = T\cdot min\ {y_nw_f^Tx_n}
-  \end{split}
-  \end{equation}
-&lt;/div&gt;  
-
-&lt;p&gt;透過前式, 我們可以一路推導做了 T 次修正後如上的結果&lt;/p&gt;
-
-&lt;div&gt;  
-\begin{equation}
-\begin{split}
-||w_{t+1}||^2 &amp;=    ||w_t + y_{n(t)}x_{n(t)}||^2 \\\
-              &amp;=    ||w_t||^2 + 2y_{n(t)}w_t^Tx_{n(t)} + ||y_{n(t)}x_{n(t)}||^2\\\
-              &amp;\leq ||w_t||^2 + 0 + ||y_{n(t)}x_{n(t)}||^2 \\\
-              &amp;\leq ||w_t||^2 + max\ {||x_n||^2}
-\end{split}
-\end{equation}
-&lt;/div&gt;  
-
-&lt;p&gt;因為我們僅在錯誤的時候做修正, 所以中間項的乘積會 &amp;lt; 0, 上式就是我們得到的向量長度 Upper bound&lt;/p&gt;
-
-&lt;div&gt;  
-\begin{equation}
-\begin{split}
-  ||w_T||^2 &amp;\leq ||w_{T-1}||^2 + max\ {||x_n||^2} \\\
-            &amp;\leq ... \\\
-            &amp;\leq ||w_0||^2 + T\cdot max\ {||x_n||^2} = T\cdot max\ {||x_n||^2}
-\end{split}
-\end{equation}
-&lt;/div&gt;  
-
-&lt;p&gt;接著一樣透過前式, 我們可以一路推導做了 T 次修正後如上的結果&lt;/p&gt;
-
-&lt;div&gt;  
-\begin{equation}  
-\begin{split}   
-1 &amp;\geq \frac{w_f^Tw_T}{||w_f||||w_T||} &amp;\geq \frac{T\cdot min\ y_nw_f^Tx_n}{||w_f||||w_T||} \ &amp;\geq \frac{T\cdot min\ y_nw_f^Tx_n}{||w_f||\cdot \sqrt{T}\cdot max\ {||x_n||^2}}  = \frac {\sqrt{T}\rho}{R}  
-\end{split}    
-\end{equation}
-&lt;/div&gt;  
-
-&lt;p&gt;最後可以求出 cos θ 經過 T 次迭代後的收斂式子 (ρ 與 R 皆是我們導出的常數), 因此我們可知當今天的資料是 Linear Separability 時&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;PLA 確實可修正 &lt;strong&gt;W&lt;/strong&gt;&lt;sub&gt;t&lt;/sub&gt; 使其更加靠近 &lt;strong&gt;W&lt;/strong&gt;&lt;sub&gt;f&lt;/sub&gt;&lt;/li&gt;
-&lt;li&gt;由 lower bound 可以知道經過有限次的迭代後, 此演算法會中止&lt;/li&gt;
-&lt;li&gt;綜合以上兩點所以 PLA 可以找到一條完美的分割線&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;得到以上的結果後, 對於 PLA 還是存在一些疑問, 包括了如何知道資料是線性可分 (&lt;strong&gt;W&lt;/strong&gt;&lt;sub&gt;f&lt;/sub&gt; 存在), 如果是已知那實際上我們也就不需要做 PLA, 所以這部分通常是未知, 另一個問題是怎麼知道要做多久才會結束?&lt;/p&gt;
-
-&lt;h5 id="noise"&gt;Noise&lt;/h5&gt;
-
-&lt;p&gt;關於雜訊會有一些假設, 我們假設大部分的時候雜訊是很少的 (雜訊過多則學雜訊的意義反而較大), 則大部分的時候 y&lt;sub&gt;n&lt;/sub&gt; = f (&lt;strong&gt;x&lt;/strong&gt;&lt;sub&gt;n&lt;/sub&gt;), 則當如果找到 g ≈ f 即得 y&lt;sub&gt;n&lt;/sub&gt; = g (&lt;strong&gt;x&lt;/strong&gt;&lt;sub&gt;n&lt;/sub&gt;)&lt;/p&gt;
-
-&lt;h5 id="pocketalgorithm"&gt;Pocket Algorithm&lt;/h5&gt;
-
-&lt;p&gt;基於有效的挑選出完美的 g 其實是一個 NP-Hard 的問題, 所以這邊舉了一個簡單的演算法, 演算法的精神是建立在 PLA 不停地挑選犯錯更少的 &lt;strong&gt;W&lt;/strong&gt;&lt;sub&gt;t+1&lt;/sub&gt; 出來, 直到夠多的迭代後以最終的結果為回傳值, 相較於 PLA 除了比對當前資料是否造成錯誤結果之外, Pocket Algorithm 要去計算所有資料的結果, 所以當今天資料是線性可分時, Pocket Algorithm 會比 PLA 慢, 但能確保有終止條件。&lt;/p&gt;
-
-&lt;h2 id=""&gt;機器學習的分類&lt;/h2&gt;
-
-&lt;p&gt;在整個學習的 Model 中針對控制變因的種類區分定義其特性。&lt;/p&gt;
-
-&lt;h5 id="ysubnsub"&gt;以提供不同 y&lt;sub&gt;n&lt;/sub&gt; 形式區分的學習方式&lt;/h5&gt;
-
-&lt;ul&gt;
-&lt;li&gt;Supervised 監督式, 提供匹配的問題與解答來教學 (其他方式的基礎)&lt;/li&gt;
-&lt;li&gt;Unsupervised 分群的問題, 不提供 y&lt;sub&gt;n&lt;/sub&gt;&lt;/li&gt;
-&lt;li&gt;Semi-supervised 數量多無法窮舉時, 部分標記剩餘透過機器學習分類&lt;/li&gt;
-&lt;li&gt;Reinforcement 單筆單筆的告知系統反應是 好 或是 不好, 不一定精確知道其輸入對應的輸出為何, 但有輔助判定的資訊&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h5 id=""&gt;以提供資料方式區分的種類&lt;/h5&gt;
-
-&lt;ul&gt;
-&lt;li&gt;Batch 成批的資料訓練&lt;/li&gt;
-&lt;li&gt;Online, sequentially 一個一個的逐步改善 &lt;/li&gt;
-&lt;li&gt;Active, sequentially 機器主動的方式來自動挑出盲點 (應用於標記資料需要高成本)&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h5 id=""&gt;以資料內容區分的種類&lt;/h5&gt;
-
-&lt;ul&gt;
-&lt;li&gt;Concrete Features 具體有關聯性的特徵 (需有 domain knowledge)&lt;/li&gt;
-&lt;li&gt;Raw Features 通常需要人或機器建立、抽取出具體的特徵, 以避免原始資料對於問題過於抽象&lt;/li&gt;
-&lt;li&gt;Abstract Features 輸入資料完全不具任何意義, 同 raw features 一樣需要建立出特徵&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=""&gt;機器學習的限制&lt;/h2&gt;
-
-&lt;p&gt;最根本的現實是機器學習即便挑選的演算法以及假說設定的再好, 最終也只能代表 inside &lt;strong&gt;D&lt;/strong&gt;ata 能有不錯的表現, 關於 outside &lt;strong&gt;D&lt;/strong&gt; 我們都是未知, 接下來就是對於我們是否能增加一些條件, 來對於這些未知的結果得到較為可靠的推論 (透過數學的工具)。&lt;/p&gt;
-
-&lt;h5 id="topicihoeffdingsinequality"&gt;Topic I (Hoeffding's Inequality)&lt;/h5&gt;
-
-&lt;p&gt;&lt;strong&gt;Sample (取樣) 的代表性&lt;/strong&gt;, 假設取樣中某特徵呈現的機率為 ν 實際機率為 μ, 則兩者存在以下不等式的關係&lt;/p&gt;
-
-&lt;p&gt;P [|ν - μ| &gt; ɛ] ≤ 2 exp (-2ɛ&lt;sup&gt;2&lt;/sup&gt;N), ɛ 為誤差範圍、N 為取樣數&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;誤差愈大 或 取樣數愈大, 不等式右項就愈小, 表示發生的可能性愈低&lt;/li&gt;
-&lt;li&gt;ν = μ 是 PAC (&lt;strong&gt;P&lt;/strong&gt;robably &lt;strong&gt;A&lt;/strong&gt;pproximately &lt;strong&gt;C&lt;/strong&gt;orrect) 很大的機會是對的, 但還是有例外&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h5 id="topicii"&gt;Topic II&lt;/h5&gt;
-
-&lt;p&gt;假定透過相同的 P 機率分佈作為產生 訓練資料(in) 及 測試資料(out) 的樣本, 這邊機率的意涵為 &lt;strong&gt;D&lt;/strong&gt;ata 透過特定 &lt;strong&gt;H&lt;/strong&gt;ypothesis 產生對或錯的機率 (使用 &lt;strong&gt;E&lt;/strong&gt;rror 作為錯誤的機率)。&lt;/p&gt;
-
-&lt;p&gt;P [|E&lt;sub&gt;in&lt;/sub&gt;(h) - E&lt;sub&gt;out&lt;/sub&gt;(h)| &gt; ɛ] ≤ 2 exp (-2ɛ&lt;sup&gt;2&lt;/sup&gt;N)&lt;/p&gt;
-
-&lt;p&gt;所以當取樣夠多時&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;E&lt;sub&gt;in&lt;/sub&gt;(h) ≈ E&lt;sub&gt;out&lt;/sub&gt;(h)&lt;/li&gt;
-&lt;li&gt;又當 E&lt;sub&gt;in&lt;/sub&gt;(h) 夠小時, g = f is PAC (&lt;strong&gt;P&lt;/strong&gt;robably &lt;strong&gt;A&lt;/strong&gt;pproximately &lt;strong&gt;C&lt;/strong&gt;orrect)&lt;/li&gt;
-&lt;li&gt;說明了如何驗證一個 Hypothesis 的好壞, 但不保證被 Algorithm 挑選到&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h5 id="topiciiipickalgorithm"&gt;Topic III (Pick Algorithm)&lt;/h5&gt;
-
-&lt;p&gt;挑選 Hypothesis 的限制, E&lt;sub&gt;in&lt;/sub&gt;(h) 最低不一定代表是最佳, 因為 sample 到不好的資料會讓 E&lt;sub&gt;in&lt;/sub&gt;(h)、E&lt;sub&gt;out&lt;/sub&gt;(h) 相距很遠, 當有選擇時, 會讓選出錯誤的 Hypothesis 機率增加 (更容易選到 overfitting 的假說)。&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;令有限 M 種的 Hypothesis&lt;/strong&gt;, 由 Topic I &lt;strong&gt;Hoeffding's Inequality&lt;/strong&gt; 知道個別 Hypothesis 選中不好的資料 (E&lt;sub&gt;in&lt;/sub&gt;(h)、E&lt;sub&gt;out&lt;/sub&gt;(h) 相距很遠) 的機率不高, 所以 Σ &lt;sub&gt;(i=0~M) &lt;/sub&gt;P&lt;sub&gt;D&lt;/sub&gt;[BAD of D]≤ 2 M exp (-2ɛ&lt;sup&gt;2&lt;/sup&gt;N), 可得知當取樣個數夠多時 且 有限個數 M 的 &lt;strong&gt;H&lt;/strong&gt;, E&lt;sub&gt;in&lt;/sub&gt;(g) ≈ E&lt;sub&gt;out&lt;/sub&gt;(g) is PAC 一樣會成立。&lt;/p&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;Ｍ 的挑選是個取捨, 過小的話可以讓選中不好的 g 機會降低, 但是可以選的選項太少反而不一定存在可以挑出夠小的 E&lt;sub&gt;in&lt;/sub&gt;(h), 太大的 M 則是讓選出不好的 g 機率增加。&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;&lt;img src="https://c3.staticflickr.com/8/7296/27787727066_f067f65a94_z.jpg" alt="學習架構"&gt;
-&lt;center&gt;(學習架構圖)&lt;/center&gt;&lt;/p&gt;
-
-&lt;h5 id="topicivhypothesisset"&gt;Topic IV 如何收斂 Hypothesis Set&lt;/h5&gt;
-
-&lt;p&gt;∞ 多個 Hypothesis 會讓不等式的 Upper Bound 沒有意義, 原因在於 Set 之中其實存在許多相似重疊的 Hypothesis, 接著我們要收斂 Set 裡的個數, 先嘗試對 Hypothesis 做分類, 方法是從 &lt;strong&gt;D&lt;/strong&gt;ata 的角度看待這些 Hypothesis 是將其歸類為何 ex. binary classification output y = {+1, -1}。&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Effective Number of Lines&lt;/strong&gt; 定義為將 output 劃分不同種類的可能性 (≤ 2&lt;sup&gt;N&lt;/sup&gt;)&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;僅一筆資料時, 存在兩種 分割線／高維平面 將其 output 分為 +1 或 -1&lt;/li&gt;
-&lt;li&gt;二筆資料時, 存在四種 分割線／高維平面 將這兩個資料特徵向量 output 分為 +1 或 -1&lt;/li&gt;
-&lt;li&gt;三筆資料時, 最多存在八種 分割線／高維平面, 但如果三點共線時則僅六種 (+1,-1,+1), (-1,+1,-1) 的 分割線／高維平面 不存在&lt;/li&gt;
-&lt;li&gt;四筆資料時, 共平面時 (想像成二維), 則最多只有 14 種 (對角線為相同 output 的分割線／高維平面 不存在)&lt;/li&gt;
-&lt;li&gt;五筆資料時, 共平面時 (想像成二維), 則最多只有 22 種&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;strong&gt;Dichotomy&lt;/strong&gt; 指透過 Hypothesis 對所有 x (input data) 運算的結果, Dichotomies H(x&lt;sub&gt;1&lt;/sub&gt;, x&lt;sub&gt;2&lt;/sub&gt;, ... x&lt;sub&gt;N&lt;/sub&gt;) 表示這些不同 &lt;strong&gt;結果的集合&lt;/strong&gt;, 集合內個數上限稱為 Effective Number of Lines。&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Target&lt;/strong&gt; 目標在於找到一個方法, 可以有效的將 ∞ 多個 Hypothesis 找到分類後的個數可以 &amp;lt;&amp;lt; 2&lt;sup&gt;N&lt;/sup&gt; (大於 2&lt;sup&gt;N&lt;/sup&gt; 會讓 Top III 的不等式右項無法收斂), 而這個目標的關係式稱作 &lt;/p&gt;
-
-&lt;p&gt;Growth Function: m&lt;sub&gt;H&lt;/sub&gt;(N) = max | H(x&lt;sub&gt;1&lt;/sub&gt;, x&lt;sub&gt;2&lt;/sub&gt;, ... x&lt;sub&gt;N&lt;/sub&gt;) | ≤ 2&lt;sup&gt;N&lt;/sup&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Break Point&lt;/strong&gt; 第一個資料點 K 使得 m&lt;sub&gt;H&lt;/sub&gt; (K) &amp;lt; 2&lt;sup&gt;K&lt;/sup&gt;, 在  K &amp;lt; N 皆會成立。&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Example&lt;/strong&gt;&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;Growth Function for Positive Rays (大於某個 threshold 結果為正), 則 ∞ 的 H 為 h(x) = sign( x - threshold ), 但 Growth Function 為 m&lt;sub&gt;H&lt;/sub&gt;(N) = N+1, 因為僅有 N+1 種可以放置 threshold 的組合。&lt;/li&gt;
-&lt;li&gt;Growth Function for Positive Intervals (在某個區間內時, 結果為正), 則 ∞ 的 H 為 h(x) = +1 if x ∈ [l, r), -1 otherwise, 但 Growth Function 為 m&lt;sub&gt;H&lt;/sub&gt;(N) = (C N+1 取 2) + 1 (all -1 的 case)。&lt;/li&gt;
-&lt;li&gt;Growth Function for Convex Sets (凸多邊形內的區域結果為正), 其中一種可能是將所有資料排成圓形, 並將結果為正的點連線成多邊形, 此時 2&lt;sup&gt;N&lt;/sup&gt; 所有種排列皆可以產生, 因為 Growth Function 是取 max, 所以僅需要造出這組即可得知 Growth Function 為 m&lt;sub&gt;H&lt;/sub&gt;(N) = 2&lt;sup&gt;N&lt;/sup&gt;。
-
-
-&lt;blockquote&gt;
-  &lt;p&gt;成長函數為 2&lt;sup&gt;N&lt;/sup&gt; 的這 N 個 input 被稱作 &lt;strong&gt;Shattered&lt;/strong&gt;。&lt;/p&gt;&lt;/blockquote&gt;&lt;/li&gt;
-  &lt;/ul&gt;
-  &lt;strong&gt;Conjecture 猜想&lt;/strong&gt;&lt;p&gt;&lt;/p&gt;
-
-
-&lt;ul&gt;
-&lt;li&gt;No break point: m&lt;sub&gt;H&lt;/sub&gt;(K) = 2&lt;sup&gt;N&lt;/sup&gt;&lt;/li&gt;
-&lt;li&gt;Exist break point K: m&lt;sub&gt;H&lt;/sub&gt;(K) = O(N&lt;sup&gt;K-1&lt;/sup&gt;) 之後會證明&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;strong&gt;Proof&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;令 B(N,K) 為 &lt;strong&gt;B&lt;/strong&gt;ounding Function, 其值是要抽象於 Growth Function 外只在乎其 Dichotomies 上限, 解讀為 N 個 input 中任意取 K 項的不同 Dichotomy 個數 (當 K 為 break point 時), 而這邊重點又在於已知任取 K 項時不會 Shattered (種類 &amp;lt; 2&lt;sup&gt;K&lt;/sup&gt;), 那是否能找得出 B(N,K) ≤ 多項式的複雜度 (個數)。 &lt;/p&gt;
-
-&lt;p&gt;B(N,K) = 2α + β (拆分為 α 表示 Dichotomy 中僅最末項不同的個數, β 是剩餘個數)&lt;/p&gt;
-
-&lt;p&gt;α + β ≤ B(N-1,K) (去掉最末項後 &lt;strong&gt;僅&lt;/strong&gt; 留下不同的 Dichotomy 個數, 因為 B(N,K) 告訴我們任 K 項不 Shattered, 所以剩下的項本身也不會 Shattered)&lt;/p&gt;
-
-&lt;p&gt;α ≤ B(N-1,K-1) (若任取 K-1 項會 Shattered = 2&lt;sup&gt;K-1&lt;/sup&gt;, 則加上之前去掉的最末項 =  2&lt;sup&gt;K&lt;/sup&gt;, 與 Bounding Function 定義衝突)&lt;/p&gt;
-
-&lt;p&gt;B(N,K) ≤ B(N-1,K) + B(N-1,K-1) (替換上式可得知)&lt;/p&gt;
-
-&lt;p&gt;&lt;img src="https://c7.staticflickr.com/8/7396/27806904806_dc75eeba71.jpg" alt="Bounding Function"&gt;
-&lt;center&gt;(2D Perceptron Learning Algorithm)&lt;/center&gt;&lt;/p&gt;
-
-&lt;p&gt;透過以上關係式, 可以用數學歸納法證明以下不等式, 而 RHS 的最高項為 N&lt;sup&gt;k-1&lt;/sup&gt;&lt;/p&gt;
-
-&lt;div&gt;  
-\begin{equation}
-  \begin{split}
-B(N,k)\leq \sum_{i=0}^{k-1}\binom {N}{i}  
-\end{split}
-\end{equation}
-&lt;/div&gt;
-
-&lt;p&gt;當 N = 1 時代入很容易得知成立, 假設 N = N' 也成立, 透過以下推導得知 N = N'+1 也會成立, 得證&lt;/p&gt;
-
-&lt;div&gt;  
-\begin{aligned}
-B(N'+1,k) &amp;\leq B(N',k) + B(N',k-1) \\\  
-&amp;\leq \sum_{i=0}^{k-1}\binom{N'}{i}+\sum_{i=0}^{k-2}\binom{N'}{i} \\\
-&amp;=1+\sum_{i=1}^{k-1}\binom{N'}{i}+\sum_{i=1}^{k-1}\binom{N'}{i-1} \\\
-&amp;=1+\sum_{i=1}^{k-1}[\binom{N'}{i}+\binom{N'}{i-1}] \\\
-&amp;=1+\sum_{i=1}^{k-1}\binom{N'+1}{i}=\sum_{i=0}^{k-1}\binom{N'+1}{i}
-\end{aligned}
-&lt;/div&gt;
-
-&lt;p&gt;所以得知, 當 Break Point 存在時, 其 m&lt;sub&gt;H&lt;/sub&gt;(K) 數量跟 N 的關係會是 polynomial (上式其實可以反向再證明 LHS = RHS, 不僅僅是 upper bound)&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;VC Dimension&lt;/strong&gt; (d&lt;sub&gt;vc&lt;/sub&gt;) = 'minimum K' -1&lt;/p&gt;
-
-&lt;h2 id="noise"&gt;Noise&lt;/h2&gt;
-
-&lt;p&gt;Is VC bound work fine  with &lt;strong&gt;Noise&lt;/strong&gt;. &lt;br&gt;
-假設 output 存在一個機率分佈 (含雜訊造成的結果) 稱作 P(y|&lt;strong&gt;x&lt;/strong&gt;) = f(&lt;strong&gt;x&lt;/strong&gt;) + noise, mini-target 的觀念是挑選機率分佈中發生機率較高者為 output, 更進一步說 P(&lt;strong&gt;x&lt;/strong&gt;) 機率高者 (表示 input 常被選中) 時我們更要挑選 mini-target 的 P(y|&lt;strong&gt;x&lt;/strong&gt;)。&lt;/p&gt;</content:encoded></item></channel></rss>
+&lt;/code&gt;&lt;/pre&gt;</content:encoded></item></channel></rss>

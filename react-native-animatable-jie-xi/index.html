@@ -11,9 +11,9 @@
 
     <link rel="shortcut icon" href="../favicon.ico">
 
-    <link rel="stylesheet" type="text/css" href="../assets/css/screen.css?v=f757cad3c7">
+    <link rel="stylesheet" type="text/css" href="../assets/css/screen.css?v=58efffce0b">
     <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Merriweather:300,700,700italic,300italic%7COpen+Sans:700,400">
-    <link rel="stylesheet" type="text/css" href="../assets/css/prism.css?v=f757cad3c7">
+    <link rel="stylesheet" type="text/css" href="../assets/css/prism.css?v=58efffce0b">
 
     <link rel="canonical" href="index.html">
     <meta name="referrer" content="no-referrer-when-downgrade">
@@ -22,16 +22,16 @@
     <meta property="og:site_name" content="Hello World! I'm Vincent.">
     <meta property="og:type" content="article">
     <meta property="og:title" content="react-native-animatable 解析">
-    <meta property="og:description" content='Github Link // Transform an object to an array the way react native wants it for transform styles // { a: x, b: y } =&amp;gt; [{ a: x }, { b: y }] function createKeyedArray(obj) {     return Object.keys(obj).map(key =&amp;gt; {     let keyed = {};     keyed[key] = obj[key];     return keyed;   }); } &amp;lt;p class="awesome"&amp;gt;This'>
+    <meta property="og:description" content="Github Source Code   最近開始學習 JavaScript, 趁著 trace 別人寫的 code 來認識基本語法; 本篇就從為了要實做一些動畫效果, 一邊觀察 react-native-animatable 這個模組來一邊學習動畫的操作。 Animation Reference @browniefed   關於動畫功能介紹與舉例皆滿詳盡的一本 GitBook。 ReactJS Component 生命週期 在介紹模組內容之前, 要先補齊一些對元件的基礎觀念。( Reference I、Reference II ) 3 Stages Mounting：元件正準備要被寫入 DOM Updating：元件偵測到狀態的改變準備重新渲染。 Unmounting：元件正要被從 DOM 中移除。   分別會用 Will、Did 來修飾被觸發的 Callback Function Name, 來代表在這些 Stage 發生前或後的關係。      Mounting">
     <meta property="og:url" content="http://captainvincent.github.io/react-native-animatable-jie-xi/">
     <meta property="article:published_time" content="2016-11-20T15:06:40.000Z">
-    <meta property="article:modified_time" content="2016-11-20T15:24:47.000Z">
+    <meta property="article:modified_time" content="2016-12-02T23:40:11.000Z">
     <meta property="article:tag" content="react-native">
     
     <meta property="article:publisher" content="https://www.facebook.com/UndercoverEngineer">
     <meta name="twitter:card" content="summary">
     <meta name="twitter:title" content="react-native-animatable 解析">
-    <meta name="twitter:description" content='Github Link // Transform an object to an array the way react native wants it for transform styles // { a: x, b: y } =&amp;gt; [{ a: x }, { b: y }] function createKeyedArray(obj) {     return Object.keys(obj).map(key =&amp;gt; {     let keyed = {};     keyed[key] = obj[key];     return keyed;   }); } &amp;lt;p class="awesome"&amp;gt;This'>
+    <meta name="twitter:description" content="Github Source Code   最近開始學習 JavaScript, 趁著 trace 別人寫的 code 來認識基本語法; 本篇就從為了要實做一些動畫效果, 一邊觀察 react-native-animatable 這個模組來一邊學習動畫的操作。 Animation Reference @browniefed   關於動畫功能介紹與舉例皆滿詳盡的一本 GitBook。 ReactJS Component 生命週期 在介紹模組內容之前, 要先補齊一些對元件的基礎觀念。( Reference I、Reference II ) 3 Stages Mounting：元件正準備要被寫入 DOM Updating：元件偵測到狀態的改變準備重新渲染。 Unmounting：元件正要被從 DOM 中移除。   分別會用 Will、Did 來修飾被觸發的 Callback Function Name, 來代表在這些 Stage 發生前或後的關係。      Mounting">
     <meta name="twitter:url" content="http://captainvincent.github.io/react-native-animatable-jie-xi/">
     <meta name="twitter:label1" content="Written by">
     <meta name="twitter:data1" content="Captain Vincent">
@@ -62,9 +62,9 @@
     "headline": "react-native-animatable 解析",
     "url": "http://captainvincent.github.io/react-native-animatable-jie-xi/",
     "datePublished": "2016-11-20T15:06:40.000Z",
-    "dateModified": "2016-11-20T15:24:47.000Z",
+    "dateModified": "2016-12-02T23:40:11.000Z",
     "keywords": "react-native",
-    "description": "Github Link // Transform an object to an array the way react native wants it for transform styles // { a: x, b: y } &#x3D;&amp;gt; [{ a: x }, { b: y }] function createKeyedArray(obj) {     return Object.keys(obj).map(key &#x3D;&amp;gt; {     let keyed &#x3D; {};     keyed[key] &#x3D; obj[key];     return keyed;   }); } &amp;lt;p class&#x3D;&quot;awesome&quot;&amp;gt;This",
+    "description": "Github Source Code   最近開始學習 JavaScript, 趁著 trace 別人寫的 code 來認識基本語法; 本篇就從為了要實做一些動畫效果, 一邊觀察 react-native-animatable 這個模組來一邊學習動畫的操作。 Animation Reference @browniefed   關於動畫功能介紹與舉例皆滿詳盡的一本 GitBook。 ReactJS Component 生命週期 在介紹模組內容之前, 要先補齊一些對元件的基礎觀念。( Reference I、Reference II ) 3 Stages Mounting：元件正準備要被寫入 DOM Updating：元件偵測到狀態的改變準備重新渲染。 Unmounting：元件正要被從 DOM 中移除。   分別會用 Will、Did 來修飾被觸發的 Callback Function Name, 來代表在這些 Stage 發生前或後的關係。      Mounting",
     "mainEntityOfPage": {
         "@type": "WebPage",
         "@id": "http://captainvincent.github.io"
@@ -82,7 +82,6 @@
 
   ga('create', 'UA-73341093-1', 'auto');
   ga('send', 'pageview');
-
 </script>
 </head>
 <body class="post-template tag-react-native-2 nav-closed">
@@ -125,20 +124,201 @@
         </header>
 
         <section class="post-content">
-            <p><a href="https://github.com/oblador/react-native-animatable">Github Link</a></p>
+            <p><a href="https://github.com/oblador/react-native-animatable/blob/master/index.js">Github Source Code</a></p>
+
+<blockquote>
+  <p>最近開始學習 JavaScript, 趁著 trace 別人寫的 code 來認識基本語法; 本篇就從為了要實做一些動畫效果, 一邊觀察 react-native-animatable 這個模組來一邊學習動畫的操作。</p>
+</blockquote>
+
+<p><a href="http://browniefed.com/react-native-animation-book/">Animation Reference</a> @browniefed</p>
+
+<blockquote>
+  <p>關於動畫功能介紹與舉例皆滿詳盡的一本 GitBook。</p>
+</blockquote>
+
+<h2 id="reactjscomponent">ReactJS Component 生命週期</h2>
+
+<p>在介紹模組內容之前, 要先補齊一些對元件的基礎觀念。( <a href="http://andyyou.logdown.com/posts/178998-reactjs-assembly-operation-and-life-cycle">Reference I</a>、<a href="https://facebook.github.io/react/docs/react-component.html">Reference II</a> )</p>
+
+<h3 id="3stages">3 Stages</h3>
+
+<ul>
+<li><strong>Mounting</strong>：元件正準備要被寫入 DOM</li>
+<li><strong>Updating</strong>：元件偵測到狀態的改變準備重新渲染。</li>
+<li><strong>Unmounting</strong>：元件正要被從 DOM 中移除。
+
+
+<blockquote>
+  <p>分別會用 Will、Did 來修飾被觸發的 Callback Function Name, 來代表在這些 Stage 發生前或後的關係。</p></blockquote></li>
+  </ul>
+  <strong>Mounting Stage</strong>
+
+
+<ul>
+<li>getInitialState() / constructor()：當物件被調用時此方法會在寫入 DOM 之前被觸發, 通常用來管理狀態的元件可以用這個方法初始化一些資料, constructor 的 naming 比較符合物件導向習慣的用語, 但是在 ES6 才支援。</li>
+<li>componentWillMount：當元件內部的結構處理完畢 <strong>準備寫入 DOM 之前觸發</strong>。</li>
+<li>componentDidMount(DOMElement rootNode)：當元件 <strong>被寫入 DOM 之後觸發</strong>。
+
+
+<blockquote>
+  <p>當初始化需要操作 DOM 元素就可以用這個方法。</p></blockquote></li>
+  </ul>
+  <strong>Updating Stage</strong>
+
+
+<ul>
+<li><p>componentWillReceiveProps(nextProps)：已掛載的元件收到新的 props 時被觸發。</p>
+
+<blockquote>
+  <p>在這個方法裡你通常會去比較 this.props 和 nextProps 然後再用 this.setState 去改變狀態。</p>
+</blockquote></li>
+<li><p>shouldComponentUpdate(nextProps, nextState)：這個函式需要回傳一個布林值, 當元件判斷是否需要更新 DOM 時會被觸發。</p>
+
+<blockquote>
+  <p>你可以在這個方法裡面去比較 this.props、this.state、nextProps、nextState 來決定是否需要更新, 回傳 false 則會跳過此次觸發不更新, 如果你什麼都不回傳預設會當做 false。</p>
+</blockquote></li>
+<li><p>componentWillUpdate：例如在上面 shouldComponentUpdate 你回傳了 true, 元件確定要更新了, 在準備更新前這個方法會被觸發。</p></li>
+<li>componentDidupdate(prevProps, prevState, rootNode)：更新後觸發。</li>
+</ul>
+
+<p><strong>Unmounting Stage</strong></p>
+
+<ul>
+<li>componentWillUnmount()：當元件準備要被移除或破壞時觸發。</li>
+</ul>
+
+<h4 id="">補充</h4>
+
+<ul>
+<li>掛載後才能使用的方法
+<ul><li>getDOMNode()：使用此方法會傳回一個 DOM 元素物件, 透過這個方法你可以取得一個參考物件直接操作 DOM 節點。</li>
+<li>forceUpdate()：任何已掛載的元件, 當你知道元件內部有些狀態已經改變但他不是透過 this.setState() 去修改值的時候可以呼叫這個方法強迫更新。</li></ul></li>
+<li>componentDidMount() 和 componentDidUpdate() 的 rootNode 參數只是提供你一個比較方便的方式存取 DOM , 實際使用和 this.getDOMNode() 是一樣的。</li>
+</ul>
+
+<hr>
+
+<p>react-native-animatable 的模組結構很單純, Source Code 的部分只有一個 index.js 檔案, 後面將對 Source Code 的部分拆分成幾個 Section (片段) 來介紹。</p>
+
+<h3 id="codesection1">Code Section 1</h3>
 
 <pre><code class="language-javascript">// Transform an object to an array the way react native wants it for transform styles
 // { a: x, b: y } =&gt; [{ a: x }, { b: y }]
 function createKeyedArray(obj) {  
   return Object.keys(obj).map(key =&gt; {
     let keyed = {};
-    keyed[key] = obj[key];
+    keyed[key] = obj[key]; // Copy value
     return keyed;
   });
 }
 </code></pre>
 
-<pre><code class="language-markup">&lt;p class="awesome"&gt;This HTML should be syntax highlighted&lt;/p&gt;  
+<p><strong>Goal</strong>: { a: x, b: y } =&gt; [{ a: x }, { b: y }]</p>
+
+<p><strong>語法複習</strong></p>
+
+<ul>
+<li><strong>Object.keys(obj)</strong> 從 object 中取出所有的鍵值, 物件的屬性構成由 (key, value)</li>
+<li><strong>Array.prototype.map(Callback)</strong> 會將當前陣列的每個元素執行 Callback 回傳的結果, 集合成另一個陣列回傳</li>
+<li><strong>=&gt;</strong> fat arrow function (箭頭函式)
+<ul><li>(param1, param2, …, paramN) =&gt; { statements } </li>
+<li>(param1, param2, …, paramN) =&gt; expression // 等於 :  =&gt; { return expression; } </li>
+<li>singleParam =&gt; { statements } // 只有一個參數時,</li>
+<li>() =&gt; { statements } //若無參數,就一定要加括號:</li></ul></li>
+</ul>
+
+<h3 id="codesection2">Code Section 2</h3>
+
+<pre><code class="language-javascript">// Helper function to calculate transform values, args:
+// direction: in|out
+// originOrDestination: up|down|left|right
+// verticalValue: amplitude for up/down animations
+// horizontalValue: amplitude for left/right animations
+function getAnimationValueForDirection(direction, originOrDestination, verticalValue, horizontalValue) {  
+  const isVertical = originOrDestination === 'up' || originOrDestination === 'down';
+  const modifier = (isVertical &amp;&amp; direction === 'out' ? -1 : 1) * (originOrDestination === 'down' || originOrDestination === 'left' ? -1 : 1);
+  return modifier * (isVertical ? verticalValue : horizontalValue);
+}
+</code></pre>
+
+<h3 id="codesection3">Code Section 3</h3>
+
+<pre><code class="language-javascript">const TRANSFORM_STYLE_PROPERTIES = [  
+  'rotate',
+  'rotateX',
+  'rotateY',
+  'rotateZ',
+  'scale',
+  'scaleX',
+  'scaleY',
+  'translateX',
+  'translateY',
+  'skewX',
+  'skewY',
+];
+
+// Transforms { translateX: 1 } to { transform: [{ translateX: 1 }]}
+function wrapStyleTransforms(style) {  
+  let wrapped = {};
+  Object.keys(style).forEach(key =&gt; {
+    if (TRANSFORM_STYLE_PROPERTIES.indexOf(key) !== -1) {
+      if (!wrapped.transform) {
+        wrapped.transform = []; // Create new array.
+      }
+      wrapped.transform.push({
+        [key]: style[key],
+      });
+    } else {
+      wrapped[key] = style[key];
+    }
+  });
+  return wrapped;
+}
+</code></pre>
+
+<p><strong>Goal</strong>: Transforms { translateX: 1, undefined: value } to { transform: [{ translateX: 1 }], undefined: value}</p>
+
+<p><strong>語法複習</strong></p>
+
+<ul>
+<li><strong>forEach</strong> 如同 map 會反覆迭代陣列中的元素, 差別是不會回傳值</li>
+</ul>
+
+<pre><code class="language-javascript">// Returns a flattened version of style with only `keys` values.
+function getStyleValues(keys, style) {  
+  if (!StyleSheet.flatten) {
+    throw new Error('StyleSheet.flatten not available, upgrade React Native or polyfill with StyleSheet.flatten = require(\'flattenStyle\');');
+  }
+  let values = {};
+  let flatStyle = Object.assign({}, StyleSheet.flatten(style));
+  if (flatStyle.transform) {
+    flatStyle.transform.forEach(transform =&gt; {
+      const key = Object.keys(transform)[0];
+      flatStyle[key] = transform[key];
+    });
+    delete flatStyle.transform;
+  }
+
+  (typeof keys === 'string' ? [keys] : keys).forEach(key =&gt; {
+    values[key] = (key in flatStyle ? flatStyle[key] : getDefaultStyleValue(key));
+  });
+  return values;
+}
+</code></pre>
+
+<ul>
+<li><strong>StyleSheet.flatten</strong> Flattens an array of style objects, 將多個 style object 合併成單一有效的 style object (重複的元素會剔除掉無效的) <a href="https://facebook.github.io/react-native/docs/stylesheet.html#flatten">Reference</a></li>
+<li><p><strong>Object.assign(target, ...sources)</strong> 回傳從 source 端複製後的 target object</p>
+
+<blockquote>
+  <p>Object.assign 對於 object 中如果存在其他指向 object 的屬性, 會僅複製到 reference, 造成兩物件的物件屬性如果變化會產生連動關係, 可透過lodash 的 clonedeep 來解決。<a href="https://developer.mozilla.org/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/Object/assign">Reference I</a>、<a href="http://jigsawye.com/2015/10/06/javascript-object-assign/">Reference II</a></p>
+</blockquote></li>
+<li><p><strong>Property initializers</strong> ES6+ 的寫法之一是透過 static propType、static defaultProps 為 property 建立檢查的機制與預設值</p></li>
+<li><p><strong>...</strong> 擴展運算符 (Spread Operator)</p></li>
+</ul>
+
+<pre><code class="language-javascript">var str = 'hello';  
+[...str] //  ['h','e','l','l','o']
 </code></pre>
         </section>
 
@@ -203,6 +383,12 @@ function createKeyedArray(obj) {
 </main>
 
 <aside class="read-next">
+    <a class="read-next-story no-cover" href="../gdg-devfest-taipei-2016/">
+        <section class="post">
+            <h2>GDG DevFest Taipei 2016</h2>
+            <p>本次為 Google 開發者社群推廣的一日活動, 完整議程參考 主辦單位提供。 議程筆記 Personal 會議整理 Material Design / 實感設計 @Takuo Suzuki / 鈴木拓生 傳統的應用程式在不同的 platform 通常都呈現了不同的 interface, 對一般的使用者在使用上的經驗無法連貫以及學習曲線上的困難,…</p>
+        </section>
+    </a>
     <a class="read-next-story prev no-cover" href="../react-native-xue-xi-shou-ce/">
         <section class="post">
             <h2>React Native 學習手冊 (GitBook)</h2>
@@ -222,9 +408,9 @@ function createKeyedArray(obj) {
 
     <script type="text/javascript" src="http://code.jquery.com/jquery-1.12.0.min.js"></script>
     
-    <script type="text/javascript" src="../assets/js/jquery.fitvids.js?v=f757cad3c7"></script>
-    <script type="text/javascript" src="../assets/js/index.js?v=f757cad3c7"></script>
-    <script type="text/javascript" src="../assets/js/prism.js?v=f757cad3c7"></script>
+    <script type="text/javascript" src="../assets/js/jquery.fitvids.js?v=58efffce0b"></script>
+    <script type="text/javascript" src="../assets/js/index.js?v=58efffce0b"></script>
+    <script type="text/javascript" src="../assets/js/prism.js?v=58efffce0b"></script>
     <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
     <script type="text/x-mathjax-config">
         MathJax.Hub.Config({

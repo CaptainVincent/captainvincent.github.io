@@ -11,9 +11,9 @@
 
     <link rel="shortcut icon" href="favicon.ico">
 
-    <link rel="stylesheet" type="text/css" href="assets/css/screen.css?v=f757cad3c7">
+    <link rel="stylesheet" type="text/css" href="assets/css/screen.css?v=58efffce0b">
     <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Merriweather:300,700,700italic,300italic%7COpen+Sans:700,400">
-    <link rel="stylesheet" type="text/css" href="assets/css/prism.css?v=f757cad3c7">
+    <link rel="stylesheet" type="text/css" href="assets/css/prism.css?v=58efffce0b">
 
     <link rel="canonical" href="index.html">
     <meta name="referrer" content="no-referrer-when-downgrade">
@@ -24,13 +24,15 @@
     <meta property="og:title" content="Hello World! I'm Vincent.">
     <meta property="og:description" content="Thoughts, stories and ideas.">
     <meta property="og:url" content="http://captainvincent.github.io/">
-    <meta property="og:image" content="http://captainvincent.github.io/content/images/2016/02/The_Stockpile_December_2015_Week4-2.jpg">
+    <meta property="og:image" content="http://captainvincent.github.io/content/images/2016/11/The_Stockpile_December_2015_Week4-2.jpg">
     <meta property="article:publisher" content="https://www.facebook.com/UndercoverEngineer">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Hello World! I'm Vincent.">
     <meta name="twitter:description" content="Thoughts, stories and ideas.">
     <meta name="twitter:url" content="http://captainvincent.github.io/">
-    <meta name="twitter:image" content="http://captainvincent.github.io/content/images/2016/02/The_Stockpile_December_2015_Week4-2.jpg">
+    <meta name="twitter:image" content="http://captainvincent.github.io/content/images/2016/11/The_Stockpile_December_2015_Week4-2.jpg">
+    <meta property="og:image:width" content="2100">
+    <meta property="og:image:height" content="1400">
     
     <script type="application/ld+json">
 {
@@ -42,7 +44,12 @@
         "logo": "http://captainvincent.github.io/ghost/img/ghosticon.jpg"
     },
     "url": "http://captainvincent.github.io/",
-    "image": "http://captainvincent.github.io/content/images/2016/02/The_Stockpile_December_2015_Week4-2.jpg",
+    "image": {
+        "@type": "ImageObject",
+        "url": "http://captainvincent.github.io/content/images/2016/11/The_Stockpile_December_2015_Week4-2.jpg",
+        "width": 2100,
+        "height": 1400
+    },
     "mainEntityOfPage": {
         "@type": "WebPage",
         "@id": "http://captainvincent.github.io"
@@ -61,7 +68,6 @@
 
   ga('create', 'UA-73341093-1', 'auto');
   ga('send', 'pageview');
-
 </script>
 </head>
 <body class="home-template nav-closed">
@@ -84,7 +90,7 @@
     <div class="site-wrapper">
 
         
-<header class="main-header " style="background-image: url(http://captainvincent.github.io/content/images/2016/02/The_Stockpile_December_2015_Week4-2.jpg)">
+<header class="main-header " style="background-image: url(content/images/2016/11/The_Stockpile_December_2015_Week4-2.jpg)">
     <nav class="main-nav overlay clearfix">
         
             <a class="menu-button icon-menu" href="index.html#"><span class="word">Menu</span></a>
@@ -102,18 +108,32 @@
 
     <div class="extra-pagination inner">
     <nav class="pagination" role="navigation">
-    <span class="page-number">Page 1 of 5</span>
+    <span class="page-number">Page 1 of 6</span>
         <a class="older-posts" href="page/2/">Older Posts <span aria-hidden="true">→</span></a>
 </nav>
 
 </div>
 
+<article class="post">
+    <header class="post-header">
+        <h2 class="post-title"><a href="gdg-devfest-taipei-2016/">GDG DevFest Taipei 2016</a></h2>
+    </header>
+    <section class="post-excerpt">
+        <p>本次為 Google 開發者社群推廣的一日活動, 完整議程參考 主辦單位提供。 議程筆記 Personal 會議整理 Material Design / 實感設計 @Takuo Suzuki / 鈴木拓生 傳統的應用程式在不同的 platform 通常都呈現了不同的 interface, 對一般的使用者在使用上的經驗無法連貫以及學習曲線上的困難, Google 於 2014 制定了 Material Design 規範了 <a class="read-more" href="gdg-devfest-taipei-2016/">»</a></p>
+    </section>
+    <footer class="post-meta">
+        <img class="author-thumb" src="content/images/2016/11/--.JPG" alt="Captain Vincent" nopin="nopin">
+        <a href="author/vincent/">Captain Vincent</a>
+        
+        <time class="post-date" datetime="2016-12-03">03 December 2016</time>
+    </footer>
+</article>
 <article class="post tag-react-native-2">
     <header class="post-header">
         <h2 class="post-title"><a href="react-native-animatable-jie-xi/">react-native-animatable 解析</a></h2>
     </header>
     <section class="post-excerpt">
-        <p>Github Link // Transform an object to an array the way react native wants it for transform styles // { a: x, b: y } =&gt; [{ a: x }, { b: y <a class="read-more" href="react-native-animatable-jie-xi/">»</a></p>
+        <p>Github Source Code   最近開始學習 JavaScript, 趁著 trace 別人寫的 code 來認識基本語法; 本篇就從為了要實做一些動畫效果, 一邊觀察 react-native-animatable 這個模組來一邊學習動畫的操作。 Animation Reference @browniefed   關於動畫功能介紹與舉例皆滿詳盡的一本 GitBook。 ReactJS Component 生命週期 在介紹模組內容之前, 要先補齊一些對元件的基礎觀念。( Reference I、 <a class="read-more" href="react-native-animatable-jie-xi/">»</a></p>
     </section>
     <footer class="post-meta">
         <img class="author-thumb" src="content/images/2016/11/--.JPG" alt="Captain Vincent" nopin="nopin">
@@ -147,7 +167,7 @@
         <img class="author-thumb" src="content/images/2016/11/--.JPG" alt="Captain Vincent" nopin="nopin">
         <a href="author/vincent/">Captain Vincent</a>
          on <a href="tag/an-jian-yi-lang/">岸見一郎</a>
-        <time class="post-date" datetime="2016-11-12">12 November 2016</time>
+        <time class="post-date" datetime="2016-11-13">13 November 2016</time>
     </footer>
 </article>
 <article class="post tag-jian-cheng-che">
@@ -192,23 +212,9 @@
         <time class="post-date" datetime="2016-10-09">09 October 2016</time>
     </footer>
 </article>
-<article class="post tag-du-bian-xiu-he">
-    <header class="post-header">
-        <h2 class="post-title"><a href="tiao-cao-fa-ze/">跳槽法則 筆記</a></h2>
-    </header>
-    <section class="post-excerpt">
-        <p>原名      ビジネスエリートへのキャリア戦略 － 渡辺 秀和 (二○一○年一舉拿下「日本獵頭大賽」顧問組MVP大獎) 如何「資歷佈局」? 相較於過去社會的經營者多半是 50~60 歲的中年人, 這個年代年紀輕輕就擁有社會知名度已經不是什麼罕見的事情, 但天才的出現並不會因時代而劇增, 所以這些現代活躍的人物, 是如何擺脫原來僅是平凡的人生, 要來分析這箇中「訣竅」。 做自己喜歡的事、得到高收入, 同時成為有社會影響力的人。 (現今趨勢, 是以彈性自由、 <a class="read-more" href="tiao-cao-fa-ze/">»</a></p>
-    </section>
-    <footer class="post-meta">
-        <img class="author-thumb" src="content/images/2016/11/--.JPG" alt="Captain Vincent" nopin="nopin">
-        <a href="author/vincent/">Captain Vincent</a>
-         on <a href="tag/du-bian-xiu-he/">渡邊秀和</a>
-        <time class="post-date" datetime="2016-10-01">01 October 2016</time>
-    </footer>
-</article>
 
 <nav class="pagination" role="navigation">
-    <span class="page-number">Page 1 of 5</span>
+    <span class="page-number">Page 1 of 6</span>
         <a class="older-posts" href="page/2/">Older Posts <span aria-hidden="true">→</span></a>
 </nav>
 
@@ -225,9 +231,9 @@
 
     <script type="text/javascript" src="http://code.jquery.com/jquery-1.12.0.min.js"></script>
     
-    <script type="text/javascript" src="assets/js/jquery.fitvids.js?v=f757cad3c7"></script>
-    <script type="text/javascript" src="assets/js/index.js?v=f757cad3c7"></script>
-    <script type="text/javascript" src="assets/js/prism.js?v=f757cad3c7"></script>
+    <script type="text/javascript" src="assets/js/jquery.fitvids.js?v=58efffce0b"></script>
+    <script type="text/javascript" src="assets/js/index.js?v=58efffce0b"></script>
+    <script type="text/javascript" src="assets/js/prism.js?v=58efffce0b"></script>
     <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
     <script type="text/x-mathjax-config">
         MathJax.Hub.Config({
