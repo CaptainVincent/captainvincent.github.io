@@ -1,4 +1,4 @@
-<rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:media="http://search.yahoo.com/mrss/" version="2.0"><channel><title>Hello World! I'm Vincent.</title><description>Thoughts, stories and ideas.</description><link>http://captainvincent.github.io/</link><generator>Ghost 0.11</generator><lastBuildDate>Sat, 03 Dec 2016 16:10:33 GMT</lastBuildDate><atom:link href="http://captainvincent.github.io/rss/" rel="self" type="application/rss+xml"/><ttl>60</ttl><item><title>GDG DevFest Taipei 2016</title><description>&lt;blockquote&gt;
+<rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:media="http://search.yahoo.com/mrss/" version="2.0"><channel><title>Hello World! I'm Vincent.</title><description>The Wilderness Years.</description><link>http://captainvincent.github.io/</link><generator>Ghost 0.11</generator><lastBuildDate>Mon, 12 Dec 2016 12:31:36 GMT</lastBuildDate><atom:link href="http://captainvincent.github.io/rss/" rel="self" type="application/rss+xml"/><ttl>60</ttl><item><title>GDG DevFest Taipei 2016</title><description>&lt;blockquote&gt;
   &lt;p&gt;本次為 Google 開發者社群推廣的一日活動, 完整議程參考 &lt;a href="https://devfest-taipei-3cbee.firebaseapp.com/schedule/day1"&gt;主辦單位提供&lt;/a&gt;。&lt;/p&gt;
 &lt;/blockquote&gt;
 
@@ -378,7 +378,7 @@
 
 &lt;blockquote&gt;
   &lt;p&gt;最後, 在一日的議程上其實感覺會結束得有點倉促, 私心慢慢覺得最近由社群所舉辦的 Conference 有逐漸疲軟的趨勢, 不如早期剛如雨後春筍般成立社群時的群眾參與度熱烈, 我想未來想藉由在這樣的舞台 Promote 自己也會愈來愈困難 囧&gt;; 但意外的慶幸自己能在這次的議程上, 關於技術的分享比較少看到新的 Terms 了, 期許自己未來也能對被關注的技術保有更多的敏銳度。&lt;/p&gt;
-&lt;/blockquote&gt;</content:encoded></item><item><title>react-native-animatable 解析</title><description>&lt;p&gt;&lt;a href="https://github.com/oblador/react-native-animatable/blob/master/index.js"&gt;Github Source Code&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;</content:encoded></item><item><title>react-native-animatable 解析 (未完)</title><description>&lt;p&gt;&lt;a href="https://github.com/oblador/react-native-animatable/blob/master/index.js"&gt;Github Source Code&lt;/a&gt;&lt;/p&gt;
 
 &lt;blockquote&gt;
   &lt;p&gt;最近開始學習 JavaScript, 趁著 trace 別人寫的 code 來認識基本語法; 本篇就從為了要實做一些動畫效果, 一邊觀察 react-native-animatable 這個模組來一邊學習動畫的操作。&lt;/p&gt;
@@ -606,6 +606,8 @@ function getStyleValues(keys, style) {
   &lt;p&gt;Learning React Native. by &lt;strong&gt;Bonnie Eisenman&lt;/strong&gt;&lt;/p&gt;
 &lt;/blockquote&gt;
 
+&lt;p&gt;&lt;img src="https://c1.staticflickr.com/1/320/31449681432_7dc3803237_z.jpg" alt="BookCover"&gt;&lt;/p&gt;
+
 &lt;p&gt;筆者最近花了差不多一個月的時間, 總算把 &lt;strong&gt;React Native 學習手冊&lt;/strong&gt; 閱讀以及例子都練習完畢了 (...累), 過程中當然也一邊把重點都整理到 Gitbook 讓自己之後可以複習、消化, 回首來看, 這本也是筆者少數真的有完成的電子書了, 平時更新 Blog 就感到頗為費心, 但果然還是不能跟寫書相比 (不管是量 或是 資料上的 Survey), 不過知識不應該僅屬於個人, 希望有需要的人, 這本電子書整理的資料也能對你有所幫助。&lt;/p&gt;
 
 &lt;h3 id="gitbookthttpswwwgitbookcombookcaptainvincentreactnativedetails"&gt;&lt;a href="https://www.gitbook.com/book/captainvincent/reactnative/details"&gt;GitBookt 傳送門&lt;/a&gt;&lt;/h3&gt;</description><link>http://captainvincent.github.io/react-native-xue-xi-shou-ce/</link><guid isPermaLink="false">fdff0b7d-6af1-487b-981a-8465da27012b</guid><category>Facebook</category><category>React Native</category><category>Gitbook</category><dc:creator>Captain Vincent</dc:creator><pubDate>Wed, 16 Nov 2016 12:54:43 GMT</pubDate><content:encoded>&lt;blockquote&gt;
@@ -613,6 +615,8 @@ function getStyleValues(keys, style) {
   
   &lt;p&gt;Learning React Native. by &lt;strong&gt;Bonnie Eisenman&lt;/strong&gt;&lt;/p&gt;
 &lt;/blockquote&gt;
+
+&lt;p&gt;&lt;img src="https://c1.staticflickr.com/1/320/31449681432_7dc3803237_z.jpg" alt="BookCover"&gt;&lt;/p&gt;
 
 &lt;p&gt;筆者最近花了差不多一個月的時間, 總算把 &lt;strong&gt;React Native 學習手冊&lt;/strong&gt; 閱讀以及例子都練習完畢了 (...累), 過程中當然也一邊把重點都整理到 Gitbook 讓自己之後可以複習、消化, 回首來看, 這本也是筆者少數真的有完成的電子書了, 平時更新 Blog 就感到頗為費心, 但果然還是不能跟寫書相比 (不管是量 或是 資料上的 Survey), 不過知識不應該僅屬於個人, 希望有需要的人, 這本電子書整理的資料也能對你有所幫助。&lt;/p&gt;
 
@@ -622,7 +626,7 @@ function getStyleValues(keys, style) {
   &lt;p&gt;老いた親を愛せますか? それでも介護はやってくる － &lt;strong&gt;岸見一郎&lt;/strong&gt;&lt;/p&gt;
 &lt;/blockquote&gt;
 
-&lt;p&gt;在 Amazon.JP 查詢日文書名時, 不經意地注意到, 此作者的書也是由 &lt;strong&gt;幻冬社&lt;/strong&gt; 所出版 (這不就是之前也曾拜讀過著作的 &lt;strong&gt;見城 徹&lt;/strong&gt; 先生所創立), 該說這世界實在太小?&lt;/p&gt;
+&lt;p&gt;在 Amazon.JP 查詢日文書名時, 不經意地注意到, 此作者的書也是由 &lt;strong&gt;幻冬社&lt;/strong&gt; 所出版 (不也就是之前剛拜讀過著作的 &lt;strong&gt;見城 徹&lt;/strong&gt; 先生所創立), 這世界實在太小(?)&lt;/p&gt;
 
 &lt;p&gt;此書的閱讀起因, 一是來自於作者的另一篇知名著作「被討厭的勇氣」(筆者同事也曾向筆者熱情推薦, 但一直還未有機會翻閱) 而勾起的好奇, 另一個理由就是筆者隨者年過而立, 也開始意識到父母親老了, 在生活相處的細節慢慢感受到角色的轉變, 父母不再如壯年般, 能適應變遷快速的今日, 存在緩慢甚至拒絕、排斥學習的固化心態, 身為家中的么子 (腰子?) , 一直在思索長年身為遊子的我們, 要如何陪伴父母面對老年, 又如何持續維繫家中的凝聚; 本文就著手整理一些書中心理建設的觀念, 供彼此互勉學習。&lt;/p&gt;
 
@@ -635,7 +639,7 @@ function getStyleValues(keys, style) {
   &lt;p&gt;老いた親を愛せますか? それでも介護はやってくる － &lt;strong&gt;岸見一郎&lt;/strong&gt;&lt;/p&gt;
 &lt;/blockquote&gt;
 
-&lt;p&gt;在 Amazon.JP 查詢日文書名時, 不經意地注意到, 此作者的書也是由 &lt;strong&gt;幻冬社&lt;/strong&gt; 所出版 (這不就是之前也曾拜讀過著作的 &lt;strong&gt;見城 徹&lt;/strong&gt; 先生所創立), 該說這世界實在太小?&lt;/p&gt;
+&lt;p&gt;在 Amazon.JP 查詢日文書名時, 不經意地注意到, 此作者的書也是由 &lt;strong&gt;幻冬社&lt;/strong&gt; 所出版 (不也就是之前剛拜讀過著作的 &lt;strong&gt;見城 徹&lt;/strong&gt; 先生所創立), 這世界實在太小(?)&lt;/p&gt;
 
 &lt;p&gt;此書的閱讀起因, 一是來自於作者的另一篇知名著作「被討厭的勇氣」(筆者同事也曾向筆者熱情推薦, 但一直還未有機會翻閱) 而勾起的好奇, 另一個理由就是筆者隨者年過而立, 也開始意識到父母親老了, 在生活相處的細節慢慢感受到角色的轉變, 父母不再如壯年般, 能適應變遷快速的今日, 存在緩慢甚至拒絕、排斥學習的固化心態, 身為家中的么子 (腰子?) , 一直在思索長年身為遊子的我們, 要如何陪伴父母面對老年, 又如何持續維繫家中的凝聚; 本文就著手整理一些書中心理建設的觀念, 供彼此互勉學習。&lt;/p&gt;
 
