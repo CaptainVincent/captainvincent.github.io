@@ -1,7 +1,8 @@
+
 <head>
     <meta charset="utf-8">
 
-    <title>Kelly Formula / 凱利公式 － 風險控管</title>
+    <title>TradingBot Speech</title>
     <meta name="description" content="">
 
     <meta name="HandheldFriendly" content="True">
@@ -14,18 +15,24 @@
     
     <meta property="og:site_name" content="Hello World! I'm Vincent.">
     <meta property="og:type" content="article">
-    <meta property="og:title" content="Kelly Formula / 凱利公式 － 風險控管">
-    <meta property="og:description" content="投資 vs 投機 vs 賭博, 不管你自認為是使用以上三種策略的那一種人, 今天要介紹的是一門讓你在這條路上可以走得更遠、更久的準則－Kelly Formula, 先來上一堂數學課吧!  Kelly Formula b : 賠率 (獲勝後的報償比上本金的比例, ex. 賭上 1 元, 獲勝可拿回 1+b 元) p : 勝率 (獲勝的機率) q : 敗率 (1-p) f : 為使用現有資金應進行投注的比例 Kelly Formula 為求最大期望值時, 應投入的資金比例 (其中 b、p、q 皆為不變常數)  from Wiki   證明 Definition Xn : 表示 經過 n 次賭局後所剩的資金">
-    <meta property="og:url" content="http://captainvincent.github.io/kelly-formula/">
-    <meta property="article:published_time" content="2016-03-11T10:57:55.000Z">
-    <meta property="article:modified_time" content="2016-03-26T17:25:07.000Z">
+    <meta property="og:title" content="TradingBot Speech">
+    <meta property="og:description" content="講者 Philipz 鄭淳尹 ＠東吳大學      題外話, 講者在早期參加創業競賽, 當時認識了 VoiceTube 的創辦人詹益維。 Slide Link 目前專業仍是放在資訊背景中的系統架構為主, 提到關於未來技術的 keyword  infrastructure as code 讓大家自己 survey。 前言 一些常見的交易員應有心態, 以及在程式交易這塊如同迷霧中解密, 很多人都會走火入魔, 而講者本身在 2013 已經放棄了這塊 business model 念頭, 轉而回老本往資訊技術發展。 認識交易商品的本質 ex. 權證的用意是用來做風險轉調、期貨是現貨的避險, 而選擇權又是期貨的避險, 所以發展交易策略遠不及經營交易平台來套利的實際。   券商工具         控制流動率    推薦書籍 (講者內心感觸很深) 碼書 解密 交易策略 基本上分為 Rule base (白箱) 跟 ML base">
+    <meta property="og:url" content="http://captainvincent.github.io/tradingbot-speech/">
+    <meta property="article:published_time" content="2016-12-16T05:36:29.000Z">
+    <meta property="article:modified_time" content="2016-12-16T13:32:01.000Z">
+    <meta property="article:tag" content="Philipz">
+    <meta property="article:tag" content="鄭淳尹">
+    <meta property="article:tag" content="TradingBot">
+    
     <meta property="article:publisher" content="https://www.facebook.com/UndercoverEngineer">
     <meta name="twitter:card" content="summary">
-    <meta name="twitter:title" content="Kelly Formula / 凱利公式 － 風險控管">
-    <meta name="twitter:description" content="投資 vs 投機 vs 賭博, 不管你自認為是使用以上三種策略的那一種人, 今天要介紹的是一門讓你在這條路上可以走得更遠、更久的準則－Kelly Formula, 先來上一堂數學課吧!  Kelly Formula b : 賠率 (獲勝後的報償比上本金的比例, ex. 賭上 1 元, 獲勝可拿回 1+b 元) p : 勝率 (獲勝的機率) q : 敗率 (1-p) f : 為使用現有資金應進行投注的比例 Kelly Formula 為求最大期望值時, 應投入的資金比例 (其中 b、p、q 皆為不變常數)  from Wiki   證明 Definition Xn : 表示 經過 n 次賭局後所剩的資金">
-    <meta name="twitter:url" content="http://captainvincent.github.io/kelly-formula/">
+    <meta name="twitter:title" content="TradingBot Speech">
+    <meta name="twitter:description" content="講者 Philipz 鄭淳尹 ＠東吳大學      題外話, 講者在早期參加創業競賽, 當時認識了 VoiceTube 的創辦人詹益維。 Slide Link 目前專業仍是放在資訊背景中的系統架構為主, 提到關於未來技術的 keyword  infrastructure as code 讓大家自己 survey。 前言 一些常見的交易員應有心態, 以及在程式交易這塊如同迷霧中解密, 很多人都會走火入魔, 而講者本身在 2013 已經放棄了這塊 business model 念頭, 轉而回老本往資訊技術發展。 認識交易商品的本質 ex. 權證的用意是用來做風險轉調、期貨是現貨的避險, 而選擇權又是期貨的避險, 所以發展交易策略遠不及經營交易平台來套利的實際。   券商工具         控制流動率    推薦書籍 (講者內心感觸很深) 碼書 解密 交易策略 基本上分為 Rule base (白箱) 跟 ML base">
+    <meta name="twitter:url" content="http://captainvincent.github.io/tradingbot-speech/">
     <meta name="twitter:label1" content="Written by">
     <meta name="twitter:data1" content="Captain Vincent">
+    <meta name="twitter:label2" content="Filed under">
+    <meta name="twitter:data2" content="Philipz, 鄭淳尹, TradingBot">
     
     <script type="application/ld+json">
 {
@@ -48,11 +55,12 @@
         "url": "http://captainvincent.github.io/author/vincent/",
         "sameAs": []
     },
-    "headline": "Kelly Formula / 凱利公式 － 風險控管",
-    "url": "http://captainvincent.github.io/kelly-formula/",
-    "datePublished": "2016-03-11T10:57:55.000Z",
-    "dateModified": "2016-03-26T17:25:07.000Z",
-    "description": "投資 vs 投機 vs 賭博, 不管你自認為是使用以上三種策略的那一種人, 今天要介紹的是一門讓你在這條路上可以走得更遠、更久的準則－Kelly Formula, 先來上一堂數學課吧!  Kelly Formula b : 賠率 (獲勝後的報償比上本金的比例, ex. 賭上 1 元, 獲勝可拿回 1+b 元) p : 勝率 (獲勝的機率) q : 敗率 (1-p) f : 為使用現有資金應進行投注的比例 Kelly Formula 為求最大期望值時, 應投入的資金比例 (其中 b、p、q 皆為不變常數)  from Wiki   證明 Definition Xn : 表示 經過 n 次賭局後所剩的資金",
+    "headline": "TradingBot Speech",
+    "url": "http://captainvincent.github.io/tradingbot-speech/",
+    "datePublished": "2016-12-16T05:36:29.000Z",
+    "dateModified": "2016-12-16T13:32:01.000Z",
+    "keywords": "Philipz, 鄭淳尹, TradingBot",
+    "description": "講者 Philipz 鄭淳尹 ＠東吳大學      題外話, 講者在早期參加創業競賽, 當時認識了 VoiceTube 的創辦人詹益維。 Slide Link 目前專業仍是放在資訊背景中的系統架構為主, 提到關於未來技術的 keyword  infrastructure as code 讓大家自己 survey。 前言 一些常見的交易員應有心態, 以及在程式交易這塊如同迷霧中解密, 很多人都會走火入魔, 而講者本身在 2013 已經放棄了這塊 business model 念頭, 轉而回老本往資訊技術發展。 認識交易商品的本質 ex. 權證的用意是用來做風險轉調、期貨是現貨的避險, 而選擇權又是期貨的避險, 所以發展交易策略遠不及經營交易平台來套利的實際。   券商工具         控制流動率    推薦書籍 (講者內心感觸很深) 碼書 解密 交易策略 基本上分為 Rule base (白箱) 跟 ML base",
     "mainEntityOfPage": {
         "@type": "WebPage",
         "@id": "http://captainvincent.github.io"
@@ -845,169 +853,68 @@
         <article class="post">
 
             <header class="post-header">
-                <h1 class="post-title">Kelly Formula / 凱利公式 － 風險控管</h1>
+                <h1 class="post-title">TradingBot Speech</h1>
                 <section class="post-meta">
                     <p class="author">by <a href="../../author/vincent/">Captain Vincent</a></p>
-                    <time class="post-date" datetime="2016-03-11">2016-03-11</time>
+                    <time class="post-date" datetime="2016-12-16">2016-12-16</time>
                 </section>
             </header>
             <section class="post-content">
 
                 <blockquote>
-  <p>投資 vs 投機 vs 賭博, 不管你自認為是使用以上三種策略的那一種人, 今天要介紹的是一門讓你在這條路上可以走得更遠、更久的準則－<strong>Kelly Formula</strong>, 先來上一堂數學課吧! </p>
+  <p>講者 <strong>Philipz 鄭淳尹</strong> ＠東吳大學</p>
+  
+  <p>題外話, 講者在早期參加創業競賽, 當時認識了 VoiceTube 的創辦人詹益維。</p>
 </blockquote>
 
-<h2 id="kellyformula">Kelly Formula</h2>
+<p><a href="https://docs.google.com/presentation/d/118aKzSVvCAst4hEEsGEUth6Rjp0FwreTAH0WE2CR1NI/pub?start=false&amp;loop=false&amp;delayms=3000&amp;slide=id.g17d921a7da_0_1">Slide Link</a></p>
 
-<p><amp-img src="https://farm2.staticflickr.com/1497/25083691774_dba0e65847_o.jpg" alt="Kelly Formula" width="228" height="98" layout="fixed"></amp-img></p>
+<p>目前專業仍是放在資訊背景中的系統架構為主, 提到關於未來技術的 keyword  <strong>infrastructure as code</strong> 讓大家自己 survey。</p>
 
-<ul>
-<li>b : 賠率 (獲勝後的報償比上本金的比例, ex. 賭上 1 元, 獲勝可拿回 1+b 元)</li>
-<li>p : 勝率 (獲勝的機率)</li>
-<li>q : 敗率 (1-p)</li>
-<li>f : 為使用現有資金應進行投注的比例</li>
-</ul>
+<h2 id>前言</h2>
 
-<p>Kelly Formula 為求最大期望值時, 應投入的資金比例 (其中 b、p、q 皆為不變常數) <br>
-from <a href="https://zh.wikipedia.org/wiki/%E5%87%B1%E5%88%A9%E5%85%AC%E5%BC%8F">Wiki</a>  </p>
+<p>一些常見的交易員應有心態, 以及在程式交易這塊如同迷霧中解密, 很多人都會走火入魔, 而講者本身在 2013 已經放棄了這塊 business model 念頭, 轉而回老本往資訊技術發展。</p>
 
-<hr>
+<h4 id>認識交易商品的本質</h4>
 
-<h2 id>證明</h2>
-
-<p><strong>Definition</strong></p>
-
-<ul>
-<li>X<sub>n</sub> : 表示 經過 n 次賭局後所剩的資金 (n=0, 表示初始資金)</li>
-<li>W<sub>n</sub> : 表示 經過 n 次賭局, Win 的次數</li>
-<li>L<sub>n</sub> : 表示 經過 n 次賭局, Loss 的次數</li>
-</ul>
-
-<p><strong>Two Cases</strong></p>
-
-<ul>
-<li>X<sub>n</sub> = X<sub>n-1</sub> ( 1 + bf )
-<br>Win case, 剩餘金額 = 前次金額 * (1 + 賠率*前次投注的比例)  </li>
-<li>X<sub>n</sub> = X<sub>n-1</sub> ( 1 - f )
-<br>Loss case, 剩餘金額 = 前次金額 * (1 - 前次損失的比例)</li>
-</ul>
-
-<p>更進一步可以理解</p>
-
-<p>X<sub>n</sub> = X<sub>0</sub> ( 1 - f ) <sup>Ln</sup> ( 1 + bf ) <sup>Wn</sup> ... (式1) <br>
-剩餘金額 = 初始金額 * (失敗 case)<sup>失敗次數</sup> * (勝利 case)<sup>勝利次數</sup> </p>
+<p>ex. 權證的用意是用來做風險轉調、期貨是現貨的避險, 而選擇權又是期貨的避險, 所以發展交易策略遠不及經營交易平台來套利的實際。</p>
 
 <blockquote>
-  <p>參考文獻中更進一步的將 Loss Case 中的賠率 (賠給對方), 另外定義為 a, 所以整理得到的公式會如下</p>
+  <p>券商工具</p>
   
-  <p>X<sub>n</sub> = X<sub>0</sub> ( 1 - af ) <sup>Ln</sup> ( 1 + bf ) <sup>Wn</sup> ... (式2)</p>
-  
-  <p>而 (式1) 只是當 a=1 的 special case (表示當輸了時, 會造成該次投注金額全部損失)</p>
+  <ul>
+  <li>控制流動率</li>
+  </ul>
 </blockquote>
 
-<p>Reference <a href="https://www.math.washington.edu/~morrow/336_10/papers/jane.pdf">Betting with the Kelly Criterion</a>, Jane Hung (June 2,2010)</p>
-
-<p>這邊先以 (式2) 來求 f 的最佳值, 首先對 <strong>方程式</strong> 的左右兩側同時</p>
-
-<ol>
-<li>除以 X<sub>0</sub>  </li>
-<li>取 ln (ln = log<sub>e</sub>) <br>
-因為 ln 為嚴格遞增函數, 所以對 <strong>方程式</strong> 兩側作用後, 不影響求極大值的條件。<br>
-(若 x<sub>1</sub>、x<sub>2</sub> 為實數 且 x<sub>1</sub>&gt;x<sub>2</sub>, 則 f(x<sub>1</sub>) &gt; f(x<sub>2</sub>)恆成立, 滿足此條件的 f(x) 稱為 <strong>嚴格遞增函數</strong>)</li>
-<li>除以 n (當 n&gt;0 時, 也可視為嚴格遞增)</li>
-</ol>
-
-<p>透過使用下列對數律</p>
+<h4 id>推薦書籍 (講者內心感觸很深)</h4>
 
 <ul>
-<li>log<sub>a</sub> X*Y = log<sub>a</sub> X + log<sub>a</sub> Y</li>
-<li>b * log<sub>a</sub> X = log<sub>a</sub> X <sup>b</sup></li>
+<li>碼書</li>
+<li>解密</li>
 </ul>
 
-<p>化簡後如下 ... (式3)
-<amp-img src="https://farm2.staticflickr.com/1669/25690346716_7d44c0666a.jpg" alt="Step1" width="500" height="68" layout="responsive"></amp-img></p>
+<h4 id>交易策略</h4>
 
-<p>新定義一個函式為 G(f) = (式3), 因 L<sub>n</sub> / n = q、W<sub>n</sub> / n = p (來自於 p、q 本身的定義為勝率跟敗率), 所以得到</p>
+<p>基本上分為 Rule base (白箱) 跟 ML base (黑箱)</p>
 
-<p>G(f) = q (ln (1-af)) + p (ln (1+bf))</p>
+<h2 id="tradingbotalgorithm">TradingBot Algorithm</h2>
 
-<p><strong>目前問題已經轉化為要求 G(f) 的最大值時, f 應該使用多少?</strong></p>
+<p>主體是使用 JAVA 開發, 串接由 C# 撰寫的群益 API 取得資料 (Windows Base, dll), 最後再透過 OrderMaster 下單大師來交易 (OrderMaster 開發者承認背後偷偷收資料紀錄, 但講者本身不介意)。</p>
 
-<p>這邊一階微分在數學上的意義是斜率, 所以當我們今天要找極大值相當於我們要找出斜率 = 0 的點, 所以我們先找出 G'(f) = 0 的 f 值有哪些? </p>
-
-<p>使用 <a href="https://en.wikipedia.org/wiki/Chain_rule">Chain Rule</a> 技巧可以得到下面結果</p>
-
-<p><amp-img src="https://farm2.staticflickr.com/1702/25719192595_02cd415376_n.jpg" alt="Step2" width="320" height="57" layout="responsive"></amp-img></p>
-
-<p><amp-img src="https://farm2.staticflickr.com/1703/25418464200_564ea61514_n.jpg" alt="Step3" width="320" height="61" layout="responsive"></amp-img></p>
-
-<p>因為分母 =\= 0, 所以這邊僅需要求分子 <strong>bp - aq- abf = 0</strong> 的 f 解, 透過移項後即可得到 G(f) 的極值出現在 f 為何時 (當然這邊其實還要用二階微分來求函數的凹性, 確認求出的 f 值代入 G(f) 是極大還是極小值, 但這邊省略請直接參考 <a href="https://www.math.washington.edu/~morrow/336_10/papers/jane.pdf">Jane 的文獻</a>)</p>
-
-<p><amp-img src="https://farm2.staticflickr.com/1481/25719324655_119cc96a22_m.jpg" alt="Step4" width="240" height="92" layout="fixed"></amp-img></p>
-
-<p>得到 (式2) 的解後, 就可以知道 (式1) 得到的 Kelly Fromula 僅是當 a 為 1 時的特殊解。</p>
-
-<p><a href="https://www.symbolab.com">推薦Online好用的數學工具</a></p>
-
-<hr>
-
-<h2 id="thestockmarket">The Stock Market</h2>
-
-<p>股票市場上的賭局並非使用固定的賠率看待, 所以這邊引入了隨機變數的概念, 用 <strong>X</strong> 表示每單位可拿回的金額 (相當於之前 Kelly Formula 裡的賠率 b), P(X = s) 則表示當 X 為 s 時發生的機率。</p>
-
-<p><a href="http://ccckmit.wikidot.com/st:randomvariable">隨機變數參考網站</a></p>
-
-<p>又因為今天在設法求出最佳投注資金比例 f 時, 重點不在於整個市場的機率分佈呈現是如何, 所以對機率分佈上做了以下的假設</p>
-
-<p><code>P(X = μ + σ) = P(X = μ − σ) = 0.5 ... (式4)</code></p>
+<h4 id>部分流程摘要</h4>
 
 <ul>
-<li>μ 為平均值</li>
-<li>σ 為標準差</li>
+<li>DWT 小波轉換濾掉一些雜訊 (作者不對 K-bar, 是用 tick data only)</li>
+<li>SVM 台大林智仁團隊釋出的 machine learning 工具, 講者只在建立交易系統時做過一次</li>
+<li>Data(摩台/台指期) -&gt; Pattern Recognition -&gt; 順勢/逆勢(不要對做摩台) -&gt; SVM 根據挑出的 label 去產生  filter rule 做最終的進場決定</li>
+<li>Data(摩台/台指期) -&gt; 停損/停利/加碼的白箱規則</li>
+<li>盤整、突破判定 是根據海龜一書而來</li>
 </ul>
-
-<p><strong>而在資金 Y 變化的公式則是由下式表示</strong></p>
-
-<p>Y<sub>n</sub> = Y<sub>n-1</sub> (1 + (1-f)r + fX), <em>(r 表示 <strong>未</strong> 進行投注的資金獲得的報償比例)</em></p>
-
-<p>解讀為</p>
-
-<pre><code>現有剩餘資金 = 前次剩餘資金*(1 + 未投注市場比例*未投注報償比 + 投注市場比例*投注市場報償比) 
-</code></pre>
-
-<p>當今天進行了 n 次的投注後, 嘗試列出 <strong>現有資金</strong> 與 <strong>初始資金</strong> 間的關係, 所以這邊重新做了一次以下的假設, 使得我們經過 n 次投注後得到的總 μ, σ<sup>2</sup> and r 仍相同 (意味要將 μ, σ<sup>2</sup> and r 平均分散在 n 次的投注中)</p>
-
-<ul>
-<li><p>標準差 σ'
-<amp-img src="https://farm2.staticflickr.com/1651/25203896753_b1333171ea_t.jpg" alt="Step5" width="100" height="54" layout="fixed"></amp-img>
-(因為要令 σ'<sup>2</sup> * n = σ<sup>2</sup>)</p></li>
-<li><p>回報率 μ'
-<amp-img src="https://farm2.staticflickr.com/1692/25830684445_9488841440_t.jpg" alt="Step6" width="100" height="62" layout="fixed"></amp-img>
-(因為要令 μ'* n = μ)</p></li>
-<li><p>其他投資回報率 r'
-<amp-img src="https://farm2.staticflickr.com/1565/25200176134_81d6ea1236_t.jpg" alt="Step7" width="100" height="63" layout="fixed"></amp-img>
-(因為要令 r'* n = r)</p></li>
-<li><p>將以上的變量代入一開始假設的機率分佈
-<amp-img src="https://farm2.staticflickr.com/1506/25200176174_cd81ae121e.jpg" alt="Step8" width="500" height="77" layout="responsive"></amp-img></p></li>
-</ul>
-
-<p>可以導出 Y<sub>n</sub> 與 Y<sub>0</sub> 的關係式
-<amp-img src="https://farm2.staticflickr.com/1579/25202372904_2b2901e3d6_n.jpg" alt="Step9" width="320" height="53" layout="responsive"></amp-img></p>
-
-<p>將 Y<sub>0</sub> 移項至左式, 再兩邊同取 ln 後
-<amp-img src="https://farm2.staticflickr.com/1520/25738035291_dc778d991b.jpg" alt="Step10" width="500" height="474" layout="responsive"></amp-img></p>
 
 <blockquote>
-  <p>回到 Kelly Formula 的討論, 我們仍是要求 G<sub>n</sub>(f) 的極大值出現在 f (資金下注比例) 為何時?</p>
+  <p><a href="https://www.facebook.com/tradingbot/">TradingBot</a> 是筆者之前有在追蹤的一個粉絲專頁 (講者 <a href="https://blog.everfine.com.tw/_-_tradingbot/">Philipz Blog</a>), 這次剛好在北部校園有舉辦演講也就特地來與會拜見一下本尊, 但在演講結束後筆者內心不禁想起了 陳奕迅－婚禮的祝福 中歌詞：「是我太天真, 還是你太殘忍～」, 因為由講者自揭的交易歷程, 總結來看實在說不上成功, 甚至最後倒戈回老本行的行為, 這些種種跡象其實都滿打擊自營商 (or 筆者) 的信心; 但可取的部分是這過程仍是少數願意 <strong>開放、系統完整 (以實踐程式自動化交易流程的角度來看)</strong> 的案例, 所以還是可以從講者過去的經驗、實作的功能來借鏡, 思考在未來交易系統上應該要呈現、包含的樣貌。</p>
 </blockquote>
-
-<p>在這部分的推導上是先將 G<sub>n</sub>(f) 以 Maclaurin 級數展開, 並令 n-&gt;∞ 時對多項式來求極值。</p>
-
-<p><a href="https://www.flickr.com/photos/138186136@N06/25254483243/in/dateposted-public/" title="Step11"><amp-img src="https://farm2.staticflickr.com/1550/25254483243_fae5dae26b.jpg" width="375" height="500" alt="Step11" layout="responsive"></amp-img></a> <br>
-(詳細的步驟可以參考我的計算過程, 跟 Jane 的有些微出入, 我猜她可能沒有實際推導後面的展開式, 所以才會在微分的結果上寫錯)</p>
-
-<p>最後我們總算可以導出適用於市場的 Kelly Criterion。
-<amp-img src="https://farm2.staticflickr.com/1518/25883526085_a10a0e006e_o.jpg" alt="Step12" width="192" height="108" layout="fixed"></amp-img></p>
 
             </section>
 
