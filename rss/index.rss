@@ -1,4 +1,42 @@
-<rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:media="http://search.yahoo.com/mrss/" version="2.0"><channel><title>Hello World! I'm Vincent.</title><description>The Wilderness Years.</description><link>http://captainvincent.github.io/</link><generator>Ghost 0.11</generator><lastBuildDate>Fri, 16 Dec 2016 13:32:21 GMT</lastBuildDate><atom:link href="http://captainvincent.github.io/rss/" rel="self" type="application/rss+xml"/><ttl>60</ttl><item><title>TradingBot Speech</title><description>&lt;blockquote&gt;
+<rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:media="http://search.yahoo.com/mrss/" version="2.0"><channel><title>Hello World! I'm Vincent.</title><description>The Wilderness Years.</description><link>http://captainvincent.github.io/</link><generator>Ghost 0.11</generator><lastBuildDate>Sun, 25 Dec 2016 00:04:47 GMT</lastBuildDate><atom:link href="http://captainvincent.github.io/rss/" rel="self" type="application/rss+xml"/><ttl>60</ttl><item><title>Cached Page</title><description>&lt;p&gt;筆者最近的功課之一是需要撈一個已經下線的網站內容, 所以首先要從網路上的頁面庫存下手 &lt;a href="http://www.cachedpages.com/"&gt;cachedpages&lt;/a&gt;; 順帶一提, 撰寫爬蟲撈取資料的人很多, 一種使用 cached page 的方式是因為網站會 ban 掉一些 (惡意?) 造成頻寬問題的連續需求發送端, 所以轉而向 cached page 著手。&lt;/p&gt;
+
+&lt;p&gt;&lt;a href="https://github.com/CaptainVincent/CachedPageSeedFinder"&gt;Github Source&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;這裡因為 google 的頁面庫存保留時間過短, 所以實作上僅對 &lt;a href="https://archive.org/web/"&gt;https://archive.org/web/&lt;/a&gt; 做查詢, 用來幫助蒐集仍存留在  cached page server 上的網址有哪些。(當然更辛苦的是針對這些不同時期 mirror 下來的頁面內容做 parsing T.T)&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class="language-bash"&gt;python CachedPageSeedFinder.py domain &amp;lt;domain&amp;gt; [--output=&amp;lt;ofname&amp;gt;&lt;/code&gt;&lt;/pre&gt;</description><link>http://captainvincent.github.io/cached-page/</link><guid isPermaLink="false">53a35d3e-fc01-401c-96bf-d33f11be104a</guid><category>python</category><category>crawler</category><category>cachedpage</category><category>docopt</category><category>requests</category><category>bs4</category><dc:creator>Captain Vincent</dc:creator><pubDate>Sat, 24 Dec 2016 23:22:40 GMT</pubDate><content:encoded>&lt;p&gt;筆者最近的功課之一是需要撈一個已經下線的網站內容, 所以首先要從網路上的頁面庫存下手 &lt;a href="http://www.cachedpages.com/"&gt;cachedpages&lt;/a&gt;; 順帶一提, 撰寫爬蟲撈取資料的人很多, 一種使用 cached page 的方式是因為網站會 ban 掉一些 (惡意?) 造成頻寬問題的連續需求發送端, 所以轉而向 cached page 著手。&lt;/p&gt;
+
+&lt;p&gt;&lt;a href="https://github.com/CaptainVincent/CachedPageSeedFinder"&gt;Github Source&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;這裡因為 google 的頁面庫存保留時間過短, 所以實作上僅對 &lt;a href="https://archive.org/web/"&gt;https://archive.org/web/&lt;/a&gt; 做查詢, 用來幫助蒐集仍存留在  cached page server 上的網址有哪些。(當然更辛苦的是針對這些不同時期 mirror 下來的頁面內容做 parsing T.T)&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class="language-bash"&gt;python CachedPageSeedFinder.py domain &amp;lt;domain&amp;gt; [--output=&amp;lt;ofname&amp;gt;] [--input=&amp;lt;dfname&amp;gt;] [--ignore=&amp;lt;list&amp;gt;]  
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h4 id="options"&gt;Options:&lt;/h4&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;-h --help&lt;/code&gt; Show this screen.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;--version&lt;/code&gt; Show version.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;--output=&amp;lt;ofname&amp;gt;&lt;/code&gt; Output all links to a file&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;--ignore=&amp;lt;list&amp;gt;&lt;/code&gt; Ignore url with filter list. Split input use separator ','. ex. --ignore=key1,key2&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;--history&lt;/code&gt; Get whole domain link with all history&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;--debugfile=&amp;lt;dfname&amp;gt;&lt;/code&gt; Debug only. Test parse link function use an input file.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;實作的內容很簡單, 先對 cached page 送出查詢後, 將回傳的網頁內容做解析撈出網址即可, 算是很簡易的 crawler, 有興趣的就自行參考看看吧。&lt;/p&gt;
+
+&lt;h4 id="pythonmodule"&gt;使用到的 python module&lt;/h4&gt;
+
+&lt;ul&gt;
+&lt;li&gt;docopt 提供命令列解析的工具&lt;/li&gt;
+&lt;li&gt;requests 用來對 server 發送 request&lt;/li&gt;
+&lt;li&gt;bs4 (BeautifulSoup) 用來解析 html 的內容&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;題外話, 後續要進行解析這些不同時期的庫存頁面工作, 已經改用 scrapy 的框架來實作, 主要是對於大量需要花時間的 io (Internet 連線) 工作, 單一循序的執行過於費時, 透過 scrapy 能同時進行多個非同步的 request 達到改善, 另外在 html 的解析上也改用 lxml (理由是依據 StackOverflow 上 &lt;a href="http://stackoverflow.com/questions/8342335/xpath-vs-dom-vs-beautifulsoup-vs-lxml-vs-other-which-is-the-fastest-approach-to"&gt;效能的評估&lt;/a&gt;)。&lt;/p&gt;
+&lt;/blockquote&gt;</content:encoded></item><item><title>TradingBot Speech</title><description>&lt;blockquote&gt;
   &lt;p&gt;講者 &lt;strong&gt;Philipz 鄭淳尹&lt;/strong&gt; ＠東吳大學&lt;/p&gt;
   
   &lt;p&gt;題外話, 講者在早期參加創業競賽, 當時認識了 VoiceTube 的創辦人詹益維。&lt;/p&gt;
@@ -1569,20 +1607,4 @@ function getStyleValues(keys, style) {
   &lt;p&gt;總結&lt;/p&gt;
   
   &lt;p&gt;COSCUP 的伙食不錯, &lt;del&gt;中研院 電擊獸 很多&lt;/del&gt;, 跟其他主題更明確的聚會相比, 感覺準備的內容有比較多一點的學生感, 但引用朋友的見解, 來參加聚會聽 talk 只是配菜, 重點在於 要多認識人 或是 上台當講者, 筆者只能默默期許自己。&lt;/p&gt;
-&lt;/blockquote&gt;</content:encoded></item><item><title>Movie - The Weather Man (2005)</title><description>&lt;h2 id=""&gt;成年人的電影, 寓意深遠的對白&lt;/h2&gt;
-
-&lt;p&gt;Michael Caine 還真是適合扮演智慧的長者, 如同黑暗騎士 (Dark Knight) 中管家阿福 (Alfred) 的設定, 在榮格心理學裡智慧老人的化身。&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Robert Spritzel&lt;/strong&gt;: David, sacrifice is... to get anything of value, you have to sacrifice.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Dave Spritz&lt;/strong&gt;: I know that dad, but I think that if we continue down this road, it's gonna be too detrimental for the kids.&lt;/p&gt;</description><link>http://captainvincent.github.io/the-weather-man-2005/</link><guid isPermaLink="false">4a31bf6f-0539-4382-9b4e-68d0fda78a20</guid><dc:creator>Captain Vincent</dc:creator><pubDate>Tue, 05 Jul 2016 10:44:03 GMT</pubDate><content:encoded>&lt;h2 id=""&gt;成年人的電影, 寓意深遠的對白&lt;/h2&gt;
-
-&lt;p&gt;Michael Caine 還真是適合扮演智慧的長者, 如同黑暗騎士 (Dark Knight) 中管家阿福 (Alfred) 的設定, 在榮格心理學裡智慧老人的化身。&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Robert Spritzel&lt;/strong&gt;: David, sacrifice is... to get anything of value, you have to sacrifice.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Dave Spritz&lt;/strong&gt;: I know that dad, but I think that if we continue down this road, it's gonna be too detrimental for the kids. It's just too hard.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Robert Spritzel&lt;/strong&gt;: Do you know that the harder thing to do and the right thing to do are usually the same thing? Nothing that has meaning is easy. &lt;strong&gt;"Easy" doesn't enter into grown-up life.&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href="http://www.imdb.com/title/tt0384680/quotes"&gt;Quotes From Here&lt;/a&gt;&lt;/p&gt;</content:encoded></item></channel></rss>
+&lt;/blockquote&gt;</content:encoded></item></channel></rss>

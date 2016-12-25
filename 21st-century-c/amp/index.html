@@ -1,0 +1,1188 @@
+
+<head>
+    <meta charset="utf-8">
+
+    <title>21st Century C / 21世紀 C 語言 筆記</title>
+    <meta name="description" content="">
+
+    <meta name="HandheldFriendly" content="True">
+    <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
+
+    <link rel="shortcut icon" href="../../favicon.ico">
+
+    <link rel="canonical" href="../index.html">
+    <meta name="referrer" content="no-referrer-when-downgrade">
+    
+    <meta property="og:site_name" content="Hello World! I'm Vincent.">
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="21st Century C / 21世紀 C 語言 筆記">
+    <meta property="og:description" content="C 語言的演進, K&amp;amp;R (1978) -&gt; ANSI C89 (1989) -&gt; ISO C99 (1999) -&gt; C11 (2011)      POSIX (Portable Operating System Interface of UNIX) 標準, 由 IEEE 制定類  Unix 的作業系統在實作上共通的基礎 (API 的關聯、Shell的運作、命令列工具的的執行相關規範, 跟本篇最大的關聯是符合 POSIX 標準的系統, 也包含了提供 C 語言的編譯器)。 介紹內容 Basic Tool: GDB、Valgrind、gprof、make、pkg-config、doxygen  Autotools:">
+    <meta property="og:url" content="http://captainvincent.github.io/21st-century-c/">
+    <meta property="article:published_time" content="2016-03-04T13:04:20.000Z">
+    <meta property="article:modified_time" content="2016-04-02T19:56:11.000Z">
+    <meta property="article:tag" content="GDB">
+    <meta property="article:tag" content="Valgrind">
+    <meta property="article:tag" content="Gprof">
+    <meta property="article:tag" content="Make">
+    <meta property="article:tag" content="pkg-config">
+    <meta property="article:tag" content="doxygen">
+    
+    <meta property="article:publisher" content="https://www.facebook.com/UndercoverEngineer">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="21st Century C / 21世紀 C 語言 筆記">
+    <meta name="twitter:description" content="C 語言的演進, K&amp;amp;R (1978) -&gt; ANSI C89 (1989) -&gt; ISO C99 (1999) -&gt; C11 (2011)      POSIX (Portable Operating System Interface of UNIX) 標準, 由 IEEE 制定類  Unix 的作業系統在實作上共通的基礎 (API 的關聯、Shell的運作、命令列工具的的執行相關規範, 跟本篇最大的關聯是符合 POSIX 標準的系統, 也包含了提供 C 語言的編譯器)。 介紹內容 Basic Tool: GDB、Valgrind、gprof、make、pkg-config、doxygen  Autotools:">
+    <meta name="twitter:url" content="http://captainvincent.github.io/21st-century-c/">
+    <meta name="twitter:label1" content="Written by">
+    <meta name="twitter:data1" content="Captain Vincent">
+    <meta name="twitter:label2" content="Filed under">
+    <meta name="twitter:data2" content="GDB, Valgrind, Gprof, Make, pkg-config, doxygen">
+    
+    <script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "publisher": {
+        "@type": "Organization",
+        "name": "Hello World! I&#x27;m Vincent.",
+        "logo": "http://captainvincent.github.io/ghost/img/ghosticon.jpg"
+    },
+    "author": {
+        "@type": "Person",
+        "name": "Captain Vincent",
+        "image": {
+            "@type": "ImageObject",
+            "url": "http://captainvincent.github.io/content/images/2016/11/--.JPG",
+            "width": 889,
+            "height": 1080
+        },
+        "url": "http://captainvincent.github.io/author/vincent/",
+        "sameAs": []
+    },
+    "headline": "21st Century C / 21世紀 C 語言 筆記",
+    "url": "http://captainvincent.github.io/21st-century-c/",
+    "datePublished": "2016-03-04T13:04:20.000Z",
+    "dateModified": "2016-04-02T19:56:11.000Z",
+    "keywords": "GDB, Valgrind, Gprof, Make, pkg-config, doxygen",
+    "description": "C 語言的演進, K&amp;amp;R (1978) -&gt; ANSI C89 (1989) -&gt; ISO C99 (1999) -&gt; C11 (2011)      POSIX (Portable Operating System Interface of UNIX) 標準, 由 IEEE 制定類  Unix 的作業系統在實作上共通的基礎 (API 的關聯、Shell的運作、命令列工具的的執行相關規範, 跟本篇最大的關聯是符合 POSIX 標準的系統, 也包含了提供 C 語言的編譯器)。 介紹內容 Basic Tool: GDB、Valgrind、gprof、make、pkg-config、doxygen  Autotools:",
+    "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "http://captainvincent.github.io"
+    }
+}
+    </script>
+
+    <meta name="generator" content="Ghost 0.11">
+    <link rel="alternate" type="application/rss+xml" title="Hello World! I'm Vincent." href="../../rss/index.html">
+
+    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Merriweather:300,700,700italic,300italic%7COpen+Sans:700,600,400">
+    <style amp-custom>
+        /* ==========================================================================
+           Table of Contents
+           ========================================================================== */
+
+        /*
+
+            0. Normalize
+            1. General
+            2. Utilities
+            3. AMP Post
+            4. Footer
+
+        */
+
+        /* ==========================================================================
+           0. normalize.css v3.0.3 | MIT License | git.io/normalize | (minified)
+           ========================================================================== */
+
+        html {
+            font-family: sans-serif;
+
+            -ms-text-size-adjust: 100%;
+            -webkit-text-size-adjust: 100%;
+        }
+        body {
+            margin: 0;
+        }
+        article,
+        aside,
+        details,
+        figcaption,
+        figure,
+        footer,
+        header,
+        main,
+        menu,
+        nav,
+        section,
+        summary {
+            display: block;
+        }
+        audio,
+        canvas,
+        progress,
+        video {
+            display: inline-block;
+            vertical-align: baseline;
+        }
+        audio:not([controls]) {
+            display: none;
+            height: 0;
+        }
+        [hidden],
+        template {
+            display: none;
+        }
+        a {
+            background-color: transparent;
+        }
+        a:active,
+        a:hover {
+            outline: 0;
+        }
+        abbr[title] {
+            border-bottom: 1px dotted;
+        }
+        b,
+        strong {
+            font-weight: bold;
+        }
+        dfn {
+            font-style: italic;
+        }
+        h1 {
+            margin: 0.67em 0;
+            font-size: 2em;
+        }
+        mark {
+            background: #ff0;
+            color: #000;
+        }
+        small {
+            font-size: 80%;
+        }
+        sub,
+        sup {
+            position: relative;
+            vertical-align: baseline;
+            font-size: 75%;
+            line-height: 0;
+        }
+        sup {
+            top: -0.5em;
+        }
+        sub {
+            bottom: -0.25em;
+        }
+        img {
+            border: 0;
+        }
+        amp-img {
+            border: 0;
+        }
+        svg:not(:root) {
+            overflow: hidden;
+        }
+        figure {
+            margin: 1em 40px;
+        }
+        hr {
+            box-sizing: content-box;
+            height: 0;
+        }
+        pre {
+            overflow: auto;
+        }
+        code,
+        kbd,
+        pre,
+        samp {
+            font-family: monospace, monospace;
+            font-size: 1em;
+        }
+        button,
+        input,
+        optgroup,
+        select,
+        textarea {
+            margin: 0;
+            color: inherit;
+            font: inherit;
+        }
+        button {
+            overflow: visible;
+        }
+        button,
+        select {
+            text-transform: none;
+        }
+        button,
+        html input[type="button"],
+        input[type="reset"],
+        input[type="submit"] {
+            cursor: pointer;
+
+            -webkit-appearance: button;
+        }
+        button[disabled],
+        html input[disabled] {
+            cursor: default;
+        }
+        button::-moz-focus-inner,
+        input::-moz-focus-inner {
+            padding: 0;
+            border: 0;
+        }
+        input {
+            line-height: normal;
+        }
+        input[type="checkbox"],
+        input[type="radio"] {
+            box-sizing: border-box;
+            padding: 0;
+        }
+        input[type="number"]::-webkit-inner-spin-button,
+        input[type="number"]::-webkit-outer-spin-button {
+            height: auto;
+        }
+        input[type="search"] {
+            -webkit-appearance: textfield;
+        }
+        input[type="search"]::-webkit-search-cancel-button,
+        input[type="search"]::-webkit-search-decoration {
+            -webkit-appearance: none;
+        }
+        fieldset {
+            margin: 0 2px;
+            padding: 0.35em 0.625em 0.75em;
+            border: 1px solid #c0c0c0;
+        }
+        legend {
+            padding: 0;
+            border: 0;
+        }
+        textarea {
+            overflow: auto;
+        }
+        optgroup {
+            font-weight: bold;
+        }
+        table {
+            border-spacing: 0;
+            border-collapse: collapse;
+        }
+        td,
+        th {
+            padding: 0;
+        }
+
+
+        /* ==========================================================================
+           1. General - Setting up some base styles
+           ========================================================================== */
+
+        html {
+            max-height: 100%;
+            height: 100%;
+            font-size: 62.5%;
+
+            -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+        }
+
+        body {
+            max-height: 100%;
+            height: 100%;
+            color: #3a4145;
+            background: #f4f8fb;
+            letter-spacing: 0.01rem;
+            font-family: "Merriweather", serif;
+            font-size: 1.8rem;
+            line-height: 1.75em;
+            text-rendering: geometricPrecision;
+
+            -webkit-font-feature-settings: "kern" 1;
+            -moz-font-feature-settings: "kern" 1;
+            -o-font-feature-settings: "kern" 1;
+        }
+
+        ::-moz-selection {
+            background: #d6edff;
+        }
+
+        ::selection {
+            background: #d6edff;
+        }
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            margin: 0 0 0.3em 0;
+            color: #2e2e2e;
+            font-family: "Open Sans", sans-serif;
+            line-height: 1.15em;
+            text-rendering: geometricPrecision;
+
+            -webkit-font-feature-settings: "dlig" 1, "liga" 1, "lnum" 1, "kern" 1;
+            -moz-font-feature-settings: "dlig" 1, "liga" 1, "lnum" 1, "kern" 1;
+            -o-font-feature-settings: "dlig" 1, "liga" 1, "lnum" 1, "kern" 1;
+        }
+
+        h1 {
+            text-indent: -2px;
+            letter-spacing: -1px;
+            font-size: 2.6rem;
+        }
+
+        h2 {
+            letter-spacing: 0;
+            font-size: 2.4rem;
+        }
+
+        h3 {
+            letter-spacing: -0.6px;
+            font-size: 2.1rem;
+        }
+
+        h4 {
+            font-size: 1.9rem;
+        }
+
+        h5 {
+            font-size: 1.8rem;
+        }
+
+        h6 {
+            font-size: 1.8rem;
+        }
+
+        a {
+            color: #4a4a4a;
+        }
+
+        a:hover {
+            color: #111;
+        }
+
+        p,
+        ul,
+        ol,
+        dl {
+            margin: 0 0 2.5rem 0;
+            font-size: 1.5rem;
+            text-rendering: geometricPrecision;
+
+            -webkit-font-feature-settings: "liga" 1, "onum" 1, "kern" 1;
+            -moz-font-feature-settings: "liga" 1, "onum" 1, "kern" 1;
+            -o-font-feature-settings: "liga" 1, "onum" 1, "kern" 1;
+        }
+
+        ol,
+        ul {
+            padding-left: 2em;
+        }
+
+        ol ol,
+        ul ul,
+        ul ol,
+        ol ul {
+            margin: 0 0 0.4em 0;
+            padding-left: 2em;
+        }
+
+        dl dt {
+            float: left;
+            clear: left;
+            overflow: hidden;
+            margin-bottom: 1em;
+            width: 180px;
+            text-align: right;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            font-weight: 700;
+        }
+
+        dl dd {
+            margin-bottom: 1em;
+            margin-left: 200px;
+        }
+
+        li {
+            margin: 0.4em 0;
+        }
+
+        li li {
+            margin: 0;
+        }
+
+        hr {
+            display: block;
+            margin: 1.75em 0;
+            padding: 0;
+            height: 1px;
+            border: 0;
+            border-top: #efefef 1px solid;
+        }
+
+        blockquote {
+            box-sizing: border-box;
+            margin: 1.75em 0 1.75em 0;
+            padding: 0 0 0 1.75em;
+            border-left: #4a4a4a 0.4em solid;
+
+            -moz-box-sizing: border-box;
+        }
+
+        blockquote p {
+            margin: 0.8em 0;
+            font-style: italic;
+        }
+
+        blockquote small {
+            display: inline-block;
+            margin: 0.8em 0 0.8em 1.5em;
+            color: #ccc;
+            font-size: 0.9em;
+        }
+
+        blockquote small:before {
+            content: "\2014 \00A0";
+        }
+
+        blockquote cite {
+            font-weight: 700;
+        }
+
+        blockquote cite a {
+            font-weight: normal;
+        }
+
+        mark {
+            background-color: #fdffb6;
+        }
+
+        code,
+        tt {
+            padding: 1px 3px;
+            border: #e3edf3 1px solid;
+            background: #f7fafb;
+            border-radius: 2px;
+            white-space: pre-wrap;
+            font-family: Inconsolata, monospace, sans-serif;
+            font-size: 0.85em;
+            font-feature-settings: "liga" 0;
+
+            -webkit-font-feature-settings: "liga" 0;
+            -moz-font-feature-settings: "liga" 0;
+        }
+
+        pre {
+            overflow: auto;
+            box-sizing: border-box;
+            margin: 0 0 1.75em 0;
+            padding: 10px;
+            width: 100%;
+            border: #e3edf3 1px solid;
+            background: #f7fafb;
+            border-radius: 3px;
+            white-space: pre;
+            font-family: Inconsolata, monospace, sans-serif;
+            font-size: 0.9em;
+
+            -moz-box-sizing: border-box;
+        }
+
+        pre code,
+        pre tt {
+            padding: 0;
+            border: none;
+            background: transparent;
+            white-space: pre-wrap;
+            font-size: inherit;
+        }
+
+        kbd {
+            display: inline-block;
+            margin-bottom: 0.4em;
+            padding: 1px 8px;
+            border: #ccc 1px solid;
+            background: #f4f4f4;
+            border-radius: 4px;
+            box-shadow: 0 1px 0 rgba(0, 0, 0, 0.2),
+            0 1px 0 0 #fff inset;
+            color: #666;
+            text-shadow: #fff 0 1px 0;
+            font-size: 0.9em;
+            font-weight: 700;
+        }
+
+        table {
+            box-sizing: border-box;
+            margin: 1.75em 0;
+            max-width: 100%;
+            width: 100%;
+            background-color: transparent;
+
+            -moz-box-sizing: border-box;
+        }
+
+        table th,
+        table td {
+            padding: 8px;
+            border-top: #efefef 1px solid;
+            vertical-align: top;
+            text-align: left;
+            line-height: 20px;
+        }
+
+        table th {
+            color: #000;
+        }
+
+        table caption + thead tr:first-child th,
+        table caption + thead tr:first-child td,
+        table colgroup + thead tr:first-child th,
+        table colgroup + thead tr:first-child td,
+        table thead:first-child tr:first-child th,
+        table thead:first-child tr:first-child td {
+            border-top: 0;
+        }
+
+        table tbody + tbody {
+            border-top: #efefef 2px solid;
+        }
+
+        table table table {
+            background-color: #fff;
+        }
+
+        table tbody > tr:nth-child(odd) > td,
+        table tbody > tr:nth-child(odd) > th {
+            background-color: #f6f6f6;
+        }
+
+        table.plain tbody > tr:nth-child(odd) > td,
+        table.plain tbody > tr:nth-child(odd) > th {
+            background: transparent;
+        }
+
+        iframe,
+        amp-iframe,
+        .fluid-width-video-wrapper {
+            display: block;
+            margin: 1.75em 0;
+        }
+
+        /* When a video is inside the fitvids wrapper, drop the
+        margin on the iframe, cause it breaks stuff. */
+        .fluid-width-video-wrapper iframe,
+        .fluid-width-video-wrapper amp-iframe {
+            margin: 0;
+        }
+
+        textarea,
+        select,
+        input {
+            margin: 0 0 5px 0;
+            padding: 6px 9px;
+            width: 260px;
+            outline: 0;
+            border: #e7eef2 1px solid;
+            background: #fff;
+            border-radius: 4px;
+            box-shadow: none;
+            font-family: "Open Sans", sans-serif;
+            font-size: 1.6rem;
+            line-height: 1.4em;
+            font-weight: 100;
+
+            -webkit-appearance: none;
+        }
+
+        textarea {
+            min-width: 250px;
+            min-height: 80px;
+            max-width: 340px;
+            width: 100%;
+            height: auto;
+        }
+
+        input[type="text"]:focus,
+        input[type="email"]:focus,
+        input[type="search"]:focus,
+        input[type="tel"]:focus,
+        input[type="url"]:focus,
+        input[type="password"]:focus,
+        input[type="number"]:focus,
+        input[type="date"]:focus,
+        input[type="month"]:focus,
+        input[type="week"]:focus,
+        input[type="time"]:focus,
+        input[type="datetime"]:focus,
+        input[type="datetime-local"]:focus,
+        textarea:focus {
+            outline: none;
+            outline-width: 0;
+            border: #bbc7cc 1px solid;
+            background: #fff;
+        }
+
+        select {
+            width: 270px;
+            height: 30px;
+            line-height: 30px;
+        }
+
+        /* ==========================================================================
+           2. Utilities
+           ========================================================================== */
+
+        /* Clears shit */
+        .clearfix:before,
+        .clearfix:after {
+            content: " ";
+            display: table;
+        }
+        .clearfix:after {
+            clear: both;
+        }
+        .clearfix {
+            zoom: 1;
+        }
+
+        /* ==========================================================================
+           3. AMP Post
+           ========================================================================== */
+
+
+
+        .main-header {
+            position: relative;
+            display: table;
+            overflow: hidden;
+            box-sizing: border-box;
+            width: 100%;
+            height: 50px;
+            background: #5ba4e5 no-repeat center center;
+            background-size: cover;
+            text-align: left;
+
+            -webkit-box-sizing: border-box;
+            -moz-box-sizing: border-box;
+        }
+
+        .content {
+            background: #fff;
+            padding-top: 15px;
+        }
+        .blog-title,
+        .content {
+            margin: auto;
+            max-width: 600px;
+        }
+
+        .blog-title a {
+            display: block;
+            padding-right: 16px;
+            padding-left: 16px;
+            height: 50px;
+            color: #fff;
+            text-decoration: none;
+            font-family: "Open Sans", sans-serif;
+            font-size: 16px;
+            line-height: 50px;
+            font-weight: 600;
+        }
+
+        .post {
+            position: relative;
+            margin-top: 0;
+            margin-right: 16px;
+            margin-left: 16px;
+            padding-bottom: 0;
+            max-width: 100%;
+            border-bottom: #ebf2f6 1px solid;
+            word-wrap: break-word;
+            font-size: 0.95em;
+            line-height: 1.65em;
+        }
+
+        .post-header {
+            margin-bottom: 1rem;
+        }
+
+        .post-title {
+            margin-bottom: 0;
+        }
+
+        .post-title a {
+            text-decoration: none;
+        }
+
+        .post-meta {
+            display: block;
+            margin: 3px 0 0 0;
+            color: #9eabb3;
+            font-family: "Open Sans", sans-serif;
+            font-size: 1.3rem;
+            line-height: 2.2rem;
+        }
+
+        .post-meta a {
+            color: #9eabb3;
+            text-decoration: none;
+        }
+
+        .post-meta a:hover {
+            text-decoration: underline;
+        }
+
+        .post-meta .author {
+            margin: 0;
+            font-size: 1.3rem;
+            line-height: 1.3em;
+        }
+
+        .post-date {
+            display: inline-block;
+            text-transform: uppercase;
+            white-space: nowrap;
+            font-size: 1.2rem;
+            line-height: 1.2em;
+        }
+
+        .post-image {
+            margin: 0;
+            padding-top: 3rem;
+            padding-bottom: 30px;
+            border-top: 1px #E8E8E8 solid;
+        }
+
+        /* Keep images centered, and allow images wider than the main
+           text column to break out. */
+        .post-content amp-img,
+        .post-content amp-anim {
+            /* Centers an image by (1) pushing its left edge to the
+               center of its container and (2) shifting the entire image
+               in the opposite direction by half its own width.
+               Works for images that are larger than their containers. */
+            position: relative;
+            left: 50%;
+            display: block;
+            padding: 0;
+            min-width: 0;
+            max-width: 112%; /* fallback when calc doesn't work */
+            width: calc(100% + 32px); /* expand with to image + margins */
+            height: auto;
+            transform: translateX(-50%);
+
+            -webkit-transform: translateX(-50%); /* for Safari and iOS */
+            -ms-transform: translateX(-50%); /* for IE9 */
+        }
+
+        .footnotes {
+            font-size: 1.3rem;
+            line-height: 1.6em;
+            font-style: italic;
+        }
+
+        .footnotes li {
+            margin: 0.6rem 0;
+        }
+
+        .footnotes p {
+            margin: 0;
+        }
+
+        .footnotes p a:last-child {
+            text-decoration: none;
+        }
+
+        /* ==========================================================================
+           4. Footer - The bottom the AMP Post
+           ========================================================================== */
+
+        .site-footer {
+            position: relative;
+            margin: 0 auto 20px auto;
+            padding: 1rem 15px;
+            max-width: 600px;
+            color: rgba(0,0,0,0.5);
+            font-family: "Open Sans", sans-serif;
+            font-size: 1.1rem;
+            line-height: 1.75em;
+        }
+
+        .site-footer a {
+            color: rgba(0,0,0,0.5);
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .site-footer a:hover {
+            border-bottom: #bbc7cc 1px solid;
+        }
+
+        .poweredby {
+            display: block;
+            float: right;
+            width: 45%;
+            text-align: right;
+        }
+
+        .copyright {
+            display: block;
+            float: left;
+            width: 45%;
+        }
+    </style>
+
+    <style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style><noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
+    <script async src="https://cdn.ampproject.org/v0.js"></script>
+
+    
+
+</head>
+
+<body class="amp-template">
+    <header class="main-header">
+        <nav class="blog-title">
+            <a href="../../">Hello World! I'm Vincent.</a>
+        </nav>
+    </header>
+
+    <main class="content" role="main">
+        <article class="post">
+
+            <header class="post-header">
+                <h1 class="post-title">21st Century C / 21世紀 C 語言 筆記</h1>
+                <section class="post-meta">
+                    <p class="author">by <a href="../../author/vincent/">Captain Vincent</a></p>
+                    <time class="post-date" datetime="2016-03-04">2016-03-04</time>
+                </section>
+            </header>
+            <section class="post-content">
+
+                <blockquote>
+  <p>C 語言的演進, K&amp;R (1978) -&gt; ANSI C89 (1989) -&gt; ISO C99 (1999) -&gt; C11 (2011)</p>
+  
+  <p>POSIX (<strong>P</strong>ortable <strong>O</strong>perating <strong>S</strong>ystem <strong>I</strong>nterface of UNI<strong>X</strong>) 標準, 由 IEEE 制定類  Unix 的作業系統在實作上共通的基礎 (API 的關聯、Shell的運作、命令列工具的的執行相關規範, 跟本篇最大的關聯是符合 POSIX 標準的系統, 也包含了提供 C 語言的編譯器)。</p>
+</blockquote>
+
+<h2 id>介紹內容</h2>
+
+<p>Basic Tool: GDB、Valgrind、gprof、make、pkg-config、doxygen <br>
+Autotools: Autoconf、Automake、libtool <br>
+Useful Lib: libcURL、libGlib、libGSL、libSQLite3、libXML2</p>
+
+<h4 id>編譯階段</h4>
+
+<p>使用 pkg-config 顯示出使用該lib需要的 include、link 參數</p>
+
+<pre><code class="language- language-bash">pkg-config --libs [lib name]  
+pkg-config --cflags [lib name]  
+</code></pre>
+
+<p><br></p>
+
+<p>一般在編譯時, 使用額外 lib 在編譯時所需的下參數</p>
+
+<pre><code class="language- lnaguage-bash">gcc -I[header path] -L[library path] -l[library name]  
+</code></pre>
+
+<ul>
+<li>-I: 將路徑加入 include header 搜尋 path</li>
+<li>-L: 將路徑加入 Library 搜尋 path</li>
+<li>-l: 指定連結函式庫</li>
+<li>-D: 等同於 define symbol (ex. -Dxxx)</li>
+</ul>
+
+<p>可以搭配 pkg-config 使用 (但並非所有 lib 都有對 pkg-config 註冊)</p>
+
+<pre><code class="language- language-bash">gcc ｀pkg-config --cflags --libs [lib name]` -o [output name] [source file name]  
+</code></pre>
+
+<p><br></p>
+
+<hr>
+
+<h4 id="linksharelibrary">執行期間的 Link  (Share Library)</h4>
+
+<ul>
+<li>使用 Autotools, Libtool 會自動加入正確的旗標來搜尋使用的 lib (後面章節會介紹)</li>
+<li>透過 export LD_LIBRARY_PATH 來指定執行時的搜尋路徑</li>
+<li>在 makefile 中添加 <code>LDADD=-L[lib path] -Wl, -R[lib path]</code> 
+(-Wl 用來將後續用'逗號'隔開的 list 轉換成'空白'的 list 後傳給 linker)</li>
+</ul>
+
+<hr>
+
+<h4 id="makefile">使用 Makefile 簡化編譯時冗長繁瑣的指令</h4>
+
+<pre><code class="language- language-makefile">P=program_name  
+OBJECT=  
+CFLAGS= -g -Wall -O3  
+LDLIBS=  
+CC=C99
+
+$(P): $(OBJECT)
+</code></pre>
+
+<p>(Makefile 範例)</p>
+
+<ul>
+<li>$(var name) 表示變數, Shell使用 $Var 而 Makefile則要求必須以小括號括起來</li>
+<li>以冒號 ":" 區隔表示相依的關係</li>
+<li>以上的變數會在 make 的隱含規則中展開成執行的命令</li>
+</ul>
+
+<p><strong>除了上述範例中, 將變數值直接宣告在 Makefile 內, 額外將變數值傳給 Makefile 的方式有</strong></p>
+
+<ol>
+<li>export 進環境變數  </li>
+<li>將變數指派命令放在執行命令之前 (只限當次執行有效) <br>
+<em>C 語言編譯的程式, 可在程式碼中透過 getenv 取得 1. 或 2. 指定的值</em></li>
+<li>make 也允許從命令列設定變數</li>
+</ol>
+
+<pre><code class="language- language-bash">CFLAGS="-g -Wall" make // 針對 make 及 子程序設定環境變數 (上述方法2)  
+make CFLAGS="-g -Wall" // 設定 makefile 變數 (上述方法3)  
+</code></pre>
+
+<p><br></p>
+
+<pre><code class="language- language-bash">make -p &gt; rule.txt  
+</code></pre>
+
+<p>可以查看 rule.txt 了解 make 的隱含規則</p>
+
+<blockquote>
+  <p>Manual Page</p>
+  
+  <ul>
+  <li><p>man 指令可以搜尋函式的使用手冊 (ex. <code>man printf</code>)</p></li>
+  <li><p><code>man -k keyword</code> 可以搜尋簡介</p></li>
+  <li><p>manual 分許多 section, section 1 為命令列、3為函式庫名稱 (man 3 printf 會列出 C 函式庫的文件)</p></li>
+  <li><p>vi 可將游標移到 keyword 上, 按 <strong>K</strong> 查閱 manual page</p></li>
+  </ul>
+</blockquote>
+
+<p><a href="https://zh.wikipedia.org/wiki/Here%E6%96%87%E6%A1%A3">Here文檔的介紹</a></p>
+
+<hr>
+
+<h4 id="debug">Debug / 除錯</h4>
+
+<p><a href="https://developer.apple.com/library/ios/documentation/IDEs/Conceptual/gdb_to_lldb_transition_guide/document/lldb-command-examples.html">GDB vs LLDB</a></p>
+
+<pre><code class="language- language-bash">set $ptr=&amp;x[3] //expr int* $ptr = &amp;x[3]  
+p *($ptr++)  
+</code></pre>
+
+<p>之後再重複按 <code>Enter</code> 會執行前一動指令, 此技巧可走訪陣列, 甚至套用 link-list</p>
+
+<pre><code class="language- language-bash">p $  
+</code></pre>
+
+<p>$ 可表示前一次輸出變數存放的值, 但這邊 LLDB 測試無效</p>
+
+<p>在 .gdbinit 中可以 define macro 來整理複雜資料結構的輸出</p>
+
+<h6 id="profiling">Profiling</h6>
+
+<p>Compile option 加上 <code>-pg</code> 會為 gprof 準備程式, 指令 <code>gprof binary &gt; profile</code> 即可開始記錄, 結束後再打開 profile 看 log。 <br>
+mac 上的分析可以參考 <a href="http://stackoverflow.com/questions/11445619/profiling-c-on-mac-os-x">StackOverflow 提到的 Instruments</a></p>
+
+<h6 id="valgrind">Valgrind</h6>
+
+<p>可以使用 Valgrind 偵測記憶體的使用錯誤(例子省略)</p>
+
+<h6 id="unittest">Unit Test</h6>
+
+<p>使用 Glib 內建的 tool 來實作(省略), 求覆蓋率可透過在 Compile option 加上 <br>
+<code>- fprofile-arcs -ftest-coverage -O0</code>, 在執行程式後下指令 <code>gcov program.gcda</code> 可顯示執行行數的百分比, 另外 program.c.cov 會顯示被測試到的次數</p>
+
+<h6 id="doxygen">Doxygen</h6>
+
+<p>使用 Doxygen 來產生文件, 比起在程式碼中添加的說明, 搭配 Graphviz 產生的各類圖表在 trace code 幫助更大。</p>
+
+<hr>
+
+<h4 id="autotool">Autotool 章節</h4>
+
+<p>在打包程式的部分目前常見的還有 CMake 可以使用, autotool的部分等以後有時間再回過頭來看吧... Ker Ker</p>
+
+<hr>
+
+<h4 id="git">Git 版本控管章節</h4>
+
+<p><a href="https://git-scm.com/book/zh-tw/v1">Git 中文參考資料</a></p>
+
+<hr>
+
+<h4 id>類似書中範例的參考</h4>
+
+<p><a href="http://intermediate-and-advanced-software-carpentry.readthedocs.org/en/latest/c++-wrapping.html">Wrapping C/C++ for Python</a></p>
+
+<hr>
+
+<h4 id>變數的存取</h4>
+
+<p><a href="http://www.csee.umbc.edu/courses/undergraduate/202/spring07/Lectures/ChangSynopses/modules/m05-scope/slides.php?print">Reference</a></p>
+
+<ul>
+<li>Life Time
+<ul><li>static: 直到程式結束為止才會釋放</li>
+<li>automatic: 離開 Scope (block) 的時候即會馬上釋放</li>
+<li>dynamic: 要手動 free 才會釋放</li></ul></li>
+<li>Scope
+<ul><li>Local scope: 在 block 內可被看見</li>
+<li>Class scope: Class 內的成員才可看見</li>
+<li>Namespace scope: 同一個 namespace 才可看見</li>
+<li>File scope: 相同檔案內才可看見</li>
+<li>Global scope: 任何地方皆可看見, 除非被隱藏</li></ul></li>
+</ul>
+
+<h6 id="structvsarray">Struct vs Array</h6>
+
+<p>在記憶體的使用上, 傳遞 struct 時會整個被複製出去, 但 array 僅會傳遞別名 (指向相同的記憶體空間)。</p>
+
+<p>另外, Array 目前已可提供執行期才決定大小 (透過 run time 得知的值來宣告 array), 並且不用手動 free。</p>
+
+<h6 id="point">Point</h6>
+
+<pre><code class="language- language-clike">ptr[0] = *(ptr+0) // 這邊僅表示左右兩者相等, 非賦值  
+</code></pre>
+
+<p>(但是 void 的 point 是無法以陣列的方式取值, 因為缺少了型別無法計算位移量)。</p>
+
+<h6 id="nan">NaN</h6>
+
+<p><strong>N</strong>ot-<strong>A</strong>-<strong>N</strong>umber, 使用 NaN 作為例外回傳值, 另外 NaN 具備的特性, 即使 <code>NaN == NaN</code> 也會回傳 false, 只能用 <code>isnan()</code> 來檢查。</p>
+
+<blockquote>
+  <p>NaN 的值可透過 0/0. 來得到 (0/0 會產生錯誤, 因為整數無法表示 NaN)。</p>
+</blockquote>
+
+<hr>
+
+<h4 id>介紹容易犯錯的章節</h4>
+
+<h6 id="macro">Macro</h6>
+
+<p>在巨集的外部需加上大括號, 好處是可限制展開內容的變數生存空間, 也可降低展開後造成問題的風險。</p>
+
+<pre><code class="language- language-bash">gcc -E [source file name]  
+</code></pre>
+
+<p>加上 <code>-E</code> option 之後只會執行前置處理器的部分, 並從標準輸出中印出結果, 可搜尋巨集擴展的部分來除錯。</p>
+
+<blockquote>
+  <p>前置處理器中的小技巧</p>
+  
+  <ul>
+  <li><p>如果有兩個連續的字串出現, 箝制處理器會將兩個字串合併為一個</p></li>
+  <li><p><code>sizeof()</code> 是個 compile time 的 operator</p></li>
+  </ul>
+</blockquote>
+
+<h6 id="const">const</h6>
+
+<ul>
+<li>int const : 常數整數</li>
+<li>int const * : 一個可變動的指標, 指向常數整數</li>
+<li>int * const : 一個常數指標, 指向可變動的整數</li>
+<li>int * const * : 一個指向常數指標的指標</li>
+<li>int const * * : 一個指標的指標, 指向常數整數</li>
+<li>int const * const * : 一個指向常數指標的指標, 常數指標指向常數整數
+
+
+<blockquote>
+  <p>前後相鄰的 int 與 const 可以互換, 意義仍不變。</p></blockquote></li>
+  </ul>
+  struct 內的變數, 透過將 pointer 傳出之後仍舊無法受到 const 的保護, 需特別注意。 <p></p>
+
+
+<pre><code class="language- language-clike">int *ptr;  
+int const **constptr = &amp;ptr  
+int const const_var = 10;  
+*constprt = &amp;const_var // 等同 ptr = &amp;const_var
+*prt = 20 // 等同於改變了 const_var 的值
+</code></pre>
+
+
+範例顯示透過指標操作 const 需要小心
+
+
+
+<hr>
+
+
+
+
+<h4 id>好用工具介紹</h4>
+
+<ul>
+<li>asprintf 來做文字轉換 (函式會自行 malloc, 但需手動 free)</li>
+<li>Stopif 巨集的使用可在函式 return 異常值時提供保護</li>
+<li>strdup 可以回傳複製字串後的內容</li>
+<li>strtok 以 strtok_r or strtok_s 取代 (thread safe)</li>
+<li>mmap 可以解決讀取檔案比記憶體大的問題</li>
+<li>libxml 提供處理 unicode 的函式庫
+<ul><li>語言相關處理的 keywords : Gettext 提供翻譯框架、xgettext 產生需要翻譯的字串索引</li></ul></li>
+</ul>
+
+<hr>
+
+<h4 id>特殊技巧</h4>
+
+<pre><code class="language- language-clike">define test(i, ...) for(int index=0; index&lt;i; i++) {__VA__ARGS__}  
+</code></pre>
+
+<ul>
+<li>展開時, 在第二個參數之後 (從 <code>...</code> 刪節號之後的參數都會被展開至 <code>__VA__ARGS__</code> 的位置</li>
+</ul>
+
+<pre><code class="language- language-clike">int iArray[] = {0, 1, 2, 3}; //賦值用  
+function( (iArray[]){0,1,2,3} ) //傳遞用  
+</code></pre>
+
+<ul>
+<li>複合常量的寫法</li>
+<li>透過前兩項技巧可以寫出向量化的 macro (展開成多個處理相同事情的 Snippets)</li>
+</ul>
+
+<pre><code class="language- language-clike">struct stTest  
+{
+    int first;
+    int second;
+};
+struct stTest temp = {.first=1};  
+</code></pre>
+
+<pre><code class="language- language-clike">int list[5] = {[3]=4, [4]=5};  
+</code></pre>
+
+<ul>
+<li>指定初始子, 未指定會賦值 0</li>
+</ul>
+
+<pre><code class="language- language-clike">__attribute__((format(printf,m,n)))  
+</code></pre>
+
+<ul>
+<li>使用 __attribute__ 來控制變量輸入的問題, <a href="http://huenlil.pixnet.net/blog/post/26078382-%5B%E8%BD%89%5Dgnu-c-__attribute__-%E6%A9%9F%E5%88%B6%E7%B0%A1%E4%BB%8B">參考資訊</a></li>
+</ul>
+
+<p>(最後兩章的翻譯讀起來有點怪, 加上應用層面比較難參考, 就整理到這邊吧 : ) 收工~)</p>
+
+            </section>
+
+        </article>
+    </main>
+    <footer class="site-footer clearfix">
+        <section class="copyright"><a href="../../">Hello World! I'm Vincent.</a> © 2016</section>
+        <section class="poweredby">Proudly published with <a href="https://ghost.org">Ghost</a></section>
+    </footer>
+</body>
