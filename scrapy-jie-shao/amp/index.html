@@ -1,0 +1,1019 @@
+
+<head>
+    <meta charset="utf-8">
+
+    <title>Scrapy 介紹</title>
+    <meta name="description" content="">
+
+    <meta name="HandheldFriendly" content="True">
+    <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
+
+    <link rel="shortcut icon" href="../../favicon.ico">
+
+    <link rel="canonical" href="../index.html">
+    <meta name="referrer" content="no-referrer-when-downgrade">
+    
+    <meta property="og:site_name" content="Hello World! I'm Vincent.">
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="Scrapy 介紹">
+    <meta property="og:description" content="延續前一個主題 CachedPage 的工作後, 有了目標網站在 Cached Page Server 上還存留的清單, 接下來要進行較為複雜的爬蟲工作 (解析原始網頁內容、抓取圖片), 這時候之前學會的技巧就遇到了一些問題   之前的架構 是循序, 透過 Requests 抓取 html content 解析網址, 再使用 BeautifulSoup, bs4 去將 html 轉成結構化的物件, 透過此 lib 的協助提取所需要的內文資訊。 Performance 循序的方式會造成因為 I/O wait 的時間太久, 導致需要連續 I/O 的工作大部分的時間都花在等待。 Data 大量蒐集的資料要如何存放, 以方便為後續作業上的使用保留彈性。Next Topic Official Tutorial dataflow reference form The">
+    <meta property="og:url" content="http://captainvincent.github.io/scrapy-jie-shao/">
+    <meta property="article:published_time" content="2016-12-28T21:41:05.000Z">
+    <meta property="article:modified_time" content="2017-01-02T20:25:46.000Z">
+    <meta property="article:publisher" content="https://www.facebook.com/UndercoverEngineer">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Scrapy 介紹">
+    <meta name="twitter:description" content="延續前一個主題 CachedPage 的工作後, 有了目標網站在 Cached Page Server 上還存留的清單, 接下來要進行較為複雜的爬蟲工作 (解析原始網頁內容、抓取圖片), 這時候之前學會的技巧就遇到了一些問題   之前的架構 是循序, 透過 Requests 抓取 html content 解析網址, 再使用 BeautifulSoup, bs4 去將 html 轉成結構化的物件, 透過此 lib 的協助提取所需要的內文資訊。 Performance 循序的方式會造成因為 I/O wait 的時間太久, 導致需要連續 I/O 的工作大部分的時間都花在等待。 Data 大量蒐集的資料要如何存放, 以方便為後續作業上的使用保留彈性。Next Topic Official Tutorial dataflow reference form The">
+    <meta name="twitter:url" content="http://captainvincent.github.io/scrapy-jie-shao/">
+    <meta name="twitter:label1" content="Written by">
+    <meta name="twitter:data1" content="Captain Vincent">
+    
+    <script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "publisher": {
+        "@type": "Organization",
+        "name": "Hello World! I&#x27;m Vincent.",
+        "logo": "http://captainvincent.github.io/ghost/img/ghosticon.jpg"
+    },
+    "author": {
+        "@type": "Person",
+        "name": "Captain Vincent",
+        "image": {
+            "@type": "ImageObject",
+            "url": "http://captainvincent.github.io/content/images/2016/11/--.JPG",
+            "width": 889,
+            "height": 1080
+        },
+        "url": "http://captainvincent.github.io/author/vincent/",
+        "sameAs": []
+    },
+    "headline": "Scrapy 介紹",
+    "url": "http://captainvincent.github.io/scrapy-jie-shao/",
+    "datePublished": "2016-12-28T21:41:05.000Z",
+    "dateModified": "2017-01-02T20:25:46.000Z",
+    "description": "延續前一個主題 CachedPage 的工作後, 有了目標網站在 Cached Page Server 上還存留的清單, 接下來要進行較為複雜的爬蟲工作 (解析原始網頁內容、抓取圖片), 這時候之前學會的技巧就遇到了一些問題   之前的架構 是循序, 透過 Requests 抓取 html content 解析網址, 再使用 BeautifulSoup, bs4 去將 html 轉成結構化的物件, 透過此 lib 的協助提取所需要的內文資訊。 Performance 循序的方式會造成因為 I/O wait 的時間太久, 導致需要連續 I/O 的工作大部分的時間都花在等待。 Data 大量蒐集的資料要如何存放, 以方便為後續作業上的使用保留彈性。Next Topic Official Tutorial dataflow reference form The",
+    "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "http://captainvincent.github.io"
+    }
+}
+    </script>
+
+    <meta name="generator" content="Ghost 0.11">
+    <link rel="alternate" type="application/rss+xml" title="Hello World! I'm Vincent." href="../../rss/index.html">
+
+    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Merriweather:300,700,700italic,300italic%7COpen+Sans:700,600,400">
+    <style amp-custom>
+        /* ==========================================================================
+           Table of Contents
+           ========================================================================== */
+
+        /*
+
+            0. Normalize
+            1. General
+            2. Utilities
+            3. AMP Post
+            4. Footer
+
+        */
+
+        /* ==========================================================================
+           0. normalize.css v3.0.3 | MIT License | git.io/normalize | (minified)
+           ========================================================================== */
+
+        html {
+            font-family: sans-serif;
+
+            -ms-text-size-adjust: 100%;
+            -webkit-text-size-adjust: 100%;
+        }
+        body {
+            margin: 0;
+        }
+        article,
+        aside,
+        details,
+        figcaption,
+        figure,
+        footer,
+        header,
+        main,
+        menu,
+        nav,
+        section,
+        summary {
+            display: block;
+        }
+        audio,
+        canvas,
+        progress,
+        video {
+            display: inline-block;
+            vertical-align: baseline;
+        }
+        audio:not([controls]) {
+            display: none;
+            height: 0;
+        }
+        [hidden],
+        template {
+            display: none;
+        }
+        a {
+            background-color: transparent;
+        }
+        a:active,
+        a:hover {
+            outline: 0;
+        }
+        abbr[title] {
+            border-bottom: 1px dotted;
+        }
+        b,
+        strong {
+            font-weight: bold;
+        }
+        dfn {
+            font-style: italic;
+        }
+        h1 {
+            margin: 0.67em 0;
+            font-size: 2em;
+        }
+        mark {
+            background: #ff0;
+            color: #000;
+        }
+        small {
+            font-size: 80%;
+        }
+        sub,
+        sup {
+            position: relative;
+            vertical-align: baseline;
+            font-size: 75%;
+            line-height: 0;
+        }
+        sup {
+            top: -0.5em;
+        }
+        sub {
+            bottom: -0.25em;
+        }
+        img {
+            border: 0;
+        }
+        amp-img {
+            border: 0;
+        }
+        svg:not(:root) {
+            overflow: hidden;
+        }
+        figure {
+            margin: 1em 40px;
+        }
+        hr {
+            box-sizing: content-box;
+            height: 0;
+        }
+        pre {
+            overflow: auto;
+        }
+        code,
+        kbd,
+        pre,
+        samp {
+            font-family: monospace, monospace;
+            font-size: 1em;
+        }
+        button,
+        input,
+        optgroup,
+        select,
+        textarea {
+            margin: 0;
+            color: inherit;
+            font: inherit;
+        }
+        button {
+            overflow: visible;
+        }
+        button,
+        select {
+            text-transform: none;
+        }
+        button,
+        html input[type="button"],
+        input[type="reset"],
+        input[type="submit"] {
+            cursor: pointer;
+
+            -webkit-appearance: button;
+        }
+        button[disabled],
+        html input[disabled] {
+            cursor: default;
+        }
+        button::-moz-focus-inner,
+        input::-moz-focus-inner {
+            padding: 0;
+            border: 0;
+        }
+        input {
+            line-height: normal;
+        }
+        input[type="checkbox"],
+        input[type="radio"] {
+            box-sizing: border-box;
+            padding: 0;
+        }
+        input[type="number"]::-webkit-inner-spin-button,
+        input[type="number"]::-webkit-outer-spin-button {
+            height: auto;
+        }
+        input[type="search"] {
+            -webkit-appearance: textfield;
+        }
+        input[type="search"]::-webkit-search-cancel-button,
+        input[type="search"]::-webkit-search-decoration {
+            -webkit-appearance: none;
+        }
+        fieldset {
+            margin: 0 2px;
+            padding: 0.35em 0.625em 0.75em;
+            border: 1px solid #c0c0c0;
+        }
+        legend {
+            padding: 0;
+            border: 0;
+        }
+        textarea {
+            overflow: auto;
+        }
+        optgroup {
+            font-weight: bold;
+        }
+        table {
+            border-spacing: 0;
+            border-collapse: collapse;
+        }
+        td,
+        th {
+            padding: 0;
+        }
+
+
+        /* ==========================================================================
+           1. General - Setting up some base styles
+           ========================================================================== */
+
+        html {
+            max-height: 100%;
+            height: 100%;
+            font-size: 62.5%;
+
+            -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+        }
+
+        body {
+            max-height: 100%;
+            height: 100%;
+            color: #3a4145;
+            background: #f4f8fb;
+            letter-spacing: 0.01rem;
+            font-family: "Merriweather", serif;
+            font-size: 1.8rem;
+            line-height: 1.75em;
+            text-rendering: geometricPrecision;
+
+            -webkit-font-feature-settings: "kern" 1;
+            -moz-font-feature-settings: "kern" 1;
+            -o-font-feature-settings: "kern" 1;
+        }
+
+        ::-moz-selection {
+            background: #d6edff;
+        }
+
+        ::selection {
+            background: #d6edff;
+        }
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            margin: 0 0 0.3em 0;
+            color: #2e2e2e;
+            font-family: "Open Sans", sans-serif;
+            line-height: 1.15em;
+            text-rendering: geometricPrecision;
+
+            -webkit-font-feature-settings: "dlig" 1, "liga" 1, "lnum" 1, "kern" 1;
+            -moz-font-feature-settings: "dlig" 1, "liga" 1, "lnum" 1, "kern" 1;
+            -o-font-feature-settings: "dlig" 1, "liga" 1, "lnum" 1, "kern" 1;
+        }
+
+        h1 {
+            text-indent: -2px;
+            letter-spacing: -1px;
+            font-size: 2.6rem;
+        }
+
+        h2 {
+            letter-spacing: 0;
+            font-size: 2.4rem;
+        }
+
+        h3 {
+            letter-spacing: -0.6px;
+            font-size: 2.1rem;
+        }
+
+        h4 {
+            font-size: 1.9rem;
+        }
+
+        h5 {
+            font-size: 1.8rem;
+        }
+
+        h6 {
+            font-size: 1.8rem;
+        }
+
+        a {
+            color: #4a4a4a;
+        }
+
+        a:hover {
+            color: #111;
+        }
+
+        p,
+        ul,
+        ol,
+        dl {
+            margin: 0 0 2.5rem 0;
+            font-size: 1.5rem;
+            text-rendering: geometricPrecision;
+
+            -webkit-font-feature-settings: "liga" 1, "onum" 1, "kern" 1;
+            -moz-font-feature-settings: "liga" 1, "onum" 1, "kern" 1;
+            -o-font-feature-settings: "liga" 1, "onum" 1, "kern" 1;
+        }
+
+        ol,
+        ul {
+            padding-left: 2em;
+        }
+
+        ol ol,
+        ul ul,
+        ul ol,
+        ol ul {
+            margin: 0 0 0.4em 0;
+            padding-left: 2em;
+        }
+
+        dl dt {
+            float: left;
+            clear: left;
+            overflow: hidden;
+            margin-bottom: 1em;
+            width: 180px;
+            text-align: right;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            font-weight: 700;
+        }
+
+        dl dd {
+            margin-bottom: 1em;
+            margin-left: 200px;
+        }
+
+        li {
+            margin: 0.4em 0;
+        }
+
+        li li {
+            margin: 0;
+        }
+
+        hr {
+            display: block;
+            margin: 1.75em 0;
+            padding: 0;
+            height: 1px;
+            border: 0;
+            border-top: #efefef 1px solid;
+        }
+
+        blockquote {
+            box-sizing: border-box;
+            margin: 1.75em 0 1.75em 0;
+            padding: 0 0 0 1.75em;
+            border-left: #4a4a4a 0.4em solid;
+
+            -moz-box-sizing: border-box;
+        }
+
+        blockquote p {
+            margin: 0.8em 0;
+            font-style: italic;
+        }
+
+        blockquote small {
+            display: inline-block;
+            margin: 0.8em 0 0.8em 1.5em;
+            color: #ccc;
+            font-size: 0.9em;
+        }
+
+        blockquote small:before {
+            content: "\2014 \00A0";
+        }
+
+        blockquote cite {
+            font-weight: 700;
+        }
+
+        blockquote cite a {
+            font-weight: normal;
+        }
+
+        mark {
+            background-color: #fdffb6;
+        }
+
+        code,
+        tt {
+            padding: 1px 3px;
+            border: #e3edf3 1px solid;
+            background: #f7fafb;
+            border-radius: 2px;
+            white-space: pre-wrap;
+            font-family: Inconsolata, monospace, sans-serif;
+            font-size: 0.85em;
+            font-feature-settings: "liga" 0;
+
+            -webkit-font-feature-settings: "liga" 0;
+            -moz-font-feature-settings: "liga" 0;
+        }
+
+        pre {
+            overflow: auto;
+            box-sizing: border-box;
+            margin: 0 0 1.75em 0;
+            padding: 10px;
+            width: 100%;
+            border: #e3edf3 1px solid;
+            background: #f7fafb;
+            border-radius: 3px;
+            white-space: pre;
+            font-family: Inconsolata, monospace, sans-serif;
+            font-size: 0.9em;
+
+            -moz-box-sizing: border-box;
+        }
+
+        pre code,
+        pre tt {
+            padding: 0;
+            border: none;
+            background: transparent;
+            white-space: pre-wrap;
+            font-size: inherit;
+        }
+
+        kbd {
+            display: inline-block;
+            margin-bottom: 0.4em;
+            padding: 1px 8px;
+            border: #ccc 1px solid;
+            background: #f4f4f4;
+            border-radius: 4px;
+            box-shadow: 0 1px 0 rgba(0, 0, 0, 0.2),
+            0 1px 0 0 #fff inset;
+            color: #666;
+            text-shadow: #fff 0 1px 0;
+            font-size: 0.9em;
+            font-weight: 700;
+        }
+
+        table {
+            box-sizing: border-box;
+            margin: 1.75em 0;
+            max-width: 100%;
+            width: 100%;
+            background-color: transparent;
+
+            -moz-box-sizing: border-box;
+        }
+
+        table th,
+        table td {
+            padding: 8px;
+            border-top: #efefef 1px solid;
+            vertical-align: top;
+            text-align: left;
+            line-height: 20px;
+        }
+
+        table th {
+            color: #000;
+        }
+
+        table caption + thead tr:first-child th,
+        table caption + thead tr:first-child td,
+        table colgroup + thead tr:first-child th,
+        table colgroup + thead tr:first-child td,
+        table thead:first-child tr:first-child th,
+        table thead:first-child tr:first-child td {
+            border-top: 0;
+        }
+
+        table tbody + tbody {
+            border-top: #efefef 2px solid;
+        }
+
+        table table table {
+            background-color: #fff;
+        }
+
+        table tbody > tr:nth-child(odd) > td,
+        table tbody > tr:nth-child(odd) > th {
+            background-color: #f6f6f6;
+        }
+
+        table.plain tbody > tr:nth-child(odd) > td,
+        table.plain tbody > tr:nth-child(odd) > th {
+            background: transparent;
+        }
+
+        iframe,
+        amp-iframe,
+        .fluid-width-video-wrapper {
+            display: block;
+            margin: 1.75em 0;
+        }
+
+        /* When a video is inside the fitvids wrapper, drop the
+        margin on the iframe, cause it breaks stuff. */
+        .fluid-width-video-wrapper iframe,
+        .fluid-width-video-wrapper amp-iframe {
+            margin: 0;
+        }
+
+        textarea,
+        select,
+        input {
+            margin: 0 0 5px 0;
+            padding: 6px 9px;
+            width: 260px;
+            outline: 0;
+            border: #e7eef2 1px solid;
+            background: #fff;
+            border-radius: 4px;
+            box-shadow: none;
+            font-family: "Open Sans", sans-serif;
+            font-size: 1.6rem;
+            line-height: 1.4em;
+            font-weight: 100;
+
+            -webkit-appearance: none;
+        }
+
+        textarea {
+            min-width: 250px;
+            min-height: 80px;
+            max-width: 340px;
+            width: 100%;
+            height: auto;
+        }
+
+        input[type="text"]:focus,
+        input[type="email"]:focus,
+        input[type="search"]:focus,
+        input[type="tel"]:focus,
+        input[type="url"]:focus,
+        input[type="password"]:focus,
+        input[type="number"]:focus,
+        input[type="date"]:focus,
+        input[type="month"]:focus,
+        input[type="week"]:focus,
+        input[type="time"]:focus,
+        input[type="datetime"]:focus,
+        input[type="datetime-local"]:focus,
+        textarea:focus {
+            outline: none;
+            outline-width: 0;
+            border: #bbc7cc 1px solid;
+            background: #fff;
+        }
+
+        select {
+            width: 270px;
+            height: 30px;
+            line-height: 30px;
+        }
+
+        /* ==========================================================================
+           2. Utilities
+           ========================================================================== */
+
+        /* Clears shit */
+        .clearfix:before,
+        .clearfix:after {
+            content: " ";
+            display: table;
+        }
+        .clearfix:after {
+            clear: both;
+        }
+        .clearfix {
+            zoom: 1;
+        }
+
+        /* ==========================================================================
+           3. AMP Post
+           ========================================================================== */
+
+
+
+        .main-header {
+            position: relative;
+            display: table;
+            overflow: hidden;
+            box-sizing: border-box;
+            width: 100%;
+            height: 50px;
+            background: #5ba4e5 no-repeat center center;
+            background-size: cover;
+            text-align: left;
+
+            -webkit-box-sizing: border-box;
+            -moz-box-sizing: border-box;
+        }
+
+        .content {
+            background: #fff;
+            padding-top: 15px;
+        }
+        .blog-title,
+        .content {
+            margin: auto;
+            max-width: 600px;
+        }
+
+        .blog-title a {
+            display: block;
+            padding-right: 16px;
+            padding-left: 16px;
+            height: 50px;
+            color: #fff;
+            text-decoration: none;
+            font-family: "Open Sans", sans-serif;
+            font-size: 16px;
+            line-height: 50px;
+            font-weight: 600;
+        }
+
+        .post {
+            position: relative;
+            margin-top: 0;
+            margin-right: 16px;
+            margin-left: 16px;
+            padding-bottom: 0;
+            max-width: 100%;
+            border-bottom: #ebf2f6 1px solid;
+            word-wrap: break-word;
+            font-size: 0.95em;
+            line-height: 1.65em;
+        }
+
+        .post-header {
+            margin-bottom: 1rem;
+        }
+
+        .post-title {
+            margin-bottom: 0;
+        }
+
+        .post-title a {
+            text-decoration: none;
+        }
+
+        .post-meta {
+            display: block;
+            margin: 3px 0 0 0;
+            color: #9eabb3;
+            font-family: "Open Sans", sans-serif;
+            font-size: 1.3rem;
+            line-height: 2.2rem;
+        }
+
+        .post-meta a {
+            color: #9eabb3;
+            text-decoration: none;
+        }
+
+        .post-meta a:hover {
+            text-decoration: underline;
+        }
+
+        .post-meta .author {
+            margin: 0;
+            font-size: 1.3rem;
+            line-height: 1.3em;
+        }
+
+        .post-date {
+            display: inline-block;
+            text-transform: uppercase;
+            white-space: nowrap;
+            font-size: 1.2rem;
+            line-height: 1.2em;
+        }
+
+        .post-image {
+            margin: 0;
+            padding-top: 3rem;
+            padding-bottom: 30px;
+            border-top: 1px #E8E8E8 solid;
+        }
+
+        /* Keep images centered, and allow images wider than the main
+           text column to break out. */
+        .post-content amp-img,
+        .post-content amp-anim {
+            /* Centers an image by (1) pushing its left edge to the
+               center of its container and (2) shifting the entire image
+               in the opposite direction by half its own width.
+               Works for images that are larger than their containers. */
+            position: relative;
+            left: 50%;
+            display: block;
+            padding: 0;
+            min-width: 0;
+            max-width: 112%; /* fallback when calc doesn't work */
+            width: calc(100% + 32px); /* expand with to image + margins */
+            height: auto;
+            transform: translateX(-50%);
+
+            -webkit-transform: translateX(-50%); /* for Safari and iOS */
+            -ms-transform: translateX(-50%); /* for IE9 */
+        }
+
+        .footnotes {
+            font-size: 1.3rem;
+            line-height: 1.6em;
+            font-style: italic;
+        }
+
+        .footnotes li {
+            margin: 0.6rem 0;
+        }
+
+        .footnotes p {
+            margin: 0;
+        }
+
+        .footnotes p a:last-child {
+            text-decoration: none;
+        }
+
+        /* ==========================================================================
+           4. Footer - The bottom the AMP Post
+           ========================================================================== */
+
+        .site-footer {
+            position: relative;
+            margin: 0 auto 20px auto;
+            padding: 1rem 15px;
+            max-width: 600px;
+            color: rgba(0,0,0,0.5);
+            font-family: "Open Sans", sans-serif;
+            font-size: 1.1rem;
+            line-height: 1.75em;
+        }
+
+        .site-footer a {
+            color: rgba(0,0,0,0.5);
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .site-footer a:hover {
+            border-bottom: #bbc7cc 1px solid;
+        }
+
+        .poweredby {
+            display: block;
+            float: right;
+            width: 45%;
+            text-align: right;
+        }
+
+        .copyright {
+            display: block;
+            float: left;
+            width: 45%;
+        }
+    </style>
+
+    <style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style><noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
+    <script async src="https://cdn.ampproject.org/v0.js"></script>
+
+    
+
+</head>
+
+<body class="amp-template">
+    <header class="main-header">
+        <nav class="blog-title">
+            <a href="../../">Hello World! I'm Vincent.</a>
+        </nav>
+    </header>
+
+    <main class="content" role="main">
+        <article class="post">
+
+            <header class="post-header">
+                <h1 class="post-title">Scrapy 介紹</h1>
+                <section class="post-meta">
+                    <p class="author">by <a href="../../author/vincent/">Captain Vincent</a></p>
+                    <time class="post-date" datetime="2016-12-29">2016-12-29</time>
+                </section>
+            </header>
+            <section class="post-content">
+
+                <p>延續前一個主題 <a href="../../cached-page/">CachedPage</a> 的工作後, 有了目標網站在 Cached Page Server 上還存留的清單, 接下來要進行較為複雜的爬蟲工作 (解析原始網頁內容、抓取圖片), 這時候之前學會的技巧就遇到了一些問題</p>
+
+<blockquote>
+  <p><a href="https://github.com/CaptainVincent/CachedPageSeedFinder">之前的架構</a> 是循序, 透過 <a href="http://docs.python-requests.org/en/master/">Requests</a> 抓取 html content 解析網址, 再使用 <a href="https://www.crummy.com/software/BeautifulSoup/bs4/doc/">BeautifulSoup, bs4</a> 去將 html 轉成結構化的物件, 透過此 lib 的協助提取所需要的內文資訊。</p>
+</blockquote>
+
+<ul>
+<li><strong>Performance</strong> 循序的方式會造成因為 I/O wait 的時間太久, 導致需要連續 I/O 的工作大部分的時間都花在等待。</li>
+<li><strong>Data</strong> 大量蒐集的資料要如何存放, 以方便為後續作業上的使用保留彈性。<a href="../../pymongo-jie-shao/">Next Topic</a></li>
+</ul>
+
+<h4 id="officialtutorialhttpsdocscrapyorgenlatestintrotutorialhtml"><a href="https://doc.scrapy.org/en/latest/intro/tutorial.html">Official Tutorial</a></h4>
+
+<p><amp-img src="http://3.bp.blogspot.com/-TRxU3bGgqAY/Vd_L56GQMRI/AAAAAAAAAhk/lS7mSF_25wQ/s1600/Scrapy-Dataflow.png" alt="Data flow" width="1060" height="582" layout="responsive"></amp-img>
+<a href="http://itcprogblog.blogspot.tw/2015/08/scraping-with-scrapy.html">dataflow reference</a> form <a href="http://itcprogblog.blogspot.tw/">The ITC Prog Blog</a></p>
+
+<p>Brief Overview</p>
+
+<ul>
+<li>The spider schedules requests for download (1)</li>
+<li>The engine manages these requests and then executes them concurrently (2,3)</li>
+<li>When the response is available (4) the engine sends it back to the spider (5,6)</li>
+<li>The spider then scrapes the response (7) and either returns more requests to the scheduler (1), or returns scraped items from the webpage (8a,8b).</li>
+</ul>
+
+<p>從上圖可以知道, 只有左半邊是我們要處理的事情。</p>
+
+<hr>
+
+<h2 id="createproject">Create Project</h2>
+
+<pre><code class="language- language-bash">scrapy startproject MySpider  
+</code></pre>
+
+<p>MySpider 為新建的 project name, 可自行命名</p>
+
+<pre><code>MySpider  
+|-- MySpider
+|   |-- __init__.py
+|   |-- items.py
+|   |-- middlewares.py
+|   |-- pipelines.py
+|   |-- settings.py
+|   `-- spiders
+|       `-- __init__.py
+`-- scrapy.cfg
+</code></pre>
+
+<p>筆者目前 project 使用到的檔案</p>
+
+<ul>
+<li>spiders/<code>&lt;spider name&gt;</code></li>
+<li>items.py</li>
+<li>pipelines.py</li>
+<li>settings.py</li>
+</ul>
+
+<h3 id="spider">Spider</h3>
+
+<p>spiders/exmaple.py  </p>
+
+<pre><code class="language- language-python">import scrapy
+
+class MySpider(scrapy.Spider):  
+    name = 'myspider'
+    #allowed_domains = ['domain url']
+    start_urls = [
+        'http://www.google.com.tw',
+    ]
+
+    def parse(self, response):
+         (...)
+         yield scrapy.Request(url, callback)
+</code></pre>
+
+<ul>
+<li>name 是用來定義執行時的名稱 ex. <code>scrapy crawl myspider</code></li>
+<li>allowed_domains 用來限制允許的連線</li>
+<li>start_urls 起始抓取的頁面, 得到 response 會呼叫 parse 這支 callback</li>
+<li>parse 從 start_urls 得到 response, 可將此視為爬蟲主程式的進入點, 將 response 的內容提取出下一步要爬取的網址, 再透過 yield 送出 request, 而 requset 取得的內容可自行定義連結至哪個 function 來作為 callback</li>
+</ul>
+
+<h3 id="item">Item</h3>
+
+<p>item 為 scrapy framework 中用來串接 pipeline 動作的資料結構, 在 item.py 中先定義出此資料的內容</p>
+
+<p>item.py  </p>
+
+<pre><code class="language- language-python">class MyspiderItem(scrapy.Item):  
+    # define the fields for your item here like:
+    person = scrapy.Field()
+    image_urls = scrapy.Field()
+    images = scrapy.Field()
+</code></pre>
+
+<ul>
+<li>person 為筆者示範如何自行定義欄位, 可透過相同的宣告方式來新增多個資料存放欄位, 但這裡 <strong>image_urls、images</strong> 為特殊欄位, 當 item 宣告這兩個欄位並在 settings.py 中去 enable ImagesPipeline, 便可以在爬蟲執行過程中透過對 image_urls list 加入 image url, 讓 scrapy 自行下載 (透過內建的 ImagesPipeline) 並把下載完的狀態存放至 images 這個 list 之中。</li>
+</ul>
+
+<h3 id="pipeline">Pipeline</h3>
+
+<p>Pipeline 用來對 spider 撈出的資料 (要先存放至 item 中) 進行進一步的操作, ex. 寫入資料庫</p>
+
+<p>pipelines.py  </p>
+
+<pre><code class="language- language-python">class MyspiderPipeline(object):  
+    def open_spider(self, spider):
+        (...)
+    def close_spider(self, spider):
+        (...)
+    def process_item(self, item, spider):
+        (...)
+</code></pre>
+
+<p>這裡介紹三個 stage</p>
+
+<ul>
+<li>open_spider spider 開啟時會觸發, 可以在這個階段做連接資料庫的動作</li>
+<li>close_spider spider 關閉時觸發, 可以在這個階段記錄一些 log (ex. 爬蟲執行的結果)</li>
+<li>process_item 當 spider 執行時有建立 item 物件, 離開該執行區塊時會觸發 (表示該 item 資料被寫入完畢), 可以在此階段將該 item 上的資訊寫入資料庫</li>
+</ul>
+
+<hr>
+
+<p>將上述三個部分的程式實作完成後, 還是有一些小地方要修改才跑得起來, 這邊一一介紹</p>
+
+<h3 id="robotstxt">robots.txt</h3>
+
+<p>Scarpy default 遵守 Robots exclusion standard, 會先嘗試在 domain 中尋找 robots.txt 的存在才允許進行 crawl, 要將此行為關掉, 修改 settings.py 如下</p>
+
+<p>settings.py  </p>
+
+<pre><code class="language- language-python"># Obey robots.txt rules
+ROBOTSTXT_OBEY = False  
+</code></pre>
+
+<h3 id="enabledpipeline">Enabled Pipeline</h3>
+
+<p>如果有自行新增的 pileline 要執行, 或是希望圖片可以透過 scrapy 自行下載 (如上面 item 範例中所述), 就要在這邊告知 scrapy, 一樣是修改 settings.py</p>
+
+<p>settings.py  </p>
+
+<pre><code class="language- language-python">ITEM_PIPELINES = {  
+    'scrapy.pipelines.images.ImagesPipeline': 1,
+    'MySpider.pipelines.MySpiderPipeline': 300,
+}
+</code></pre>
+
+<blockquote>
+  <p>後面的數字愈小, 執行的順序愈優先; ImagesPipeline 是 Scrapy 內建的, 沒有特殊的需求可以直接使用此 pipeline。</p>
+</blockquote>
+
+<p>以上就是改用 Scrapy 來作為爬蟲框架的重點整理, 有任何使用上的疑問或說明上的錯誤都歡迎留言給筆者。</p>
+
+            </section>
+
+        </article>
+    </main>
+    <footer class="site-footer clearfix">
+        <section class="copyright"><a href="../../">Hello World! I'm Vincent.</a> © 2017</section>
+        <section class="poweredby">Proudly published with <a href="https://ghost.org">Ghost</a></section>
+    </footer>
+</body>

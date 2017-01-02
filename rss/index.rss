@@ -1,10 +1,176 @@
-<rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:media="http://search.yahoo.com/mrss/" version="2.0"><channel><title>Hello World! I'm Vincent.</title><description>The Wilderness Years.</description><link>http://captainvincent.github.io/</link><generator>Ghost 0.11</generator><lastBuildDate>Sun, 25 Dec 2016 00:04:47 GMT</lastBuildDate><atom:link href="http://captainvincent.github.io/rss/" rel="self" type="application/rss+xml"/><ttl>60</ttl><item><title>Cached Page</title><description>&lt;p&gt;筆者最近的功課之一是需要撈一個已經下線的網站內容, 所以首先要從網路上的頁面庫存下手 &lt;a href="http://www.cachedpages.com/"&gt;cachedpages&lt;/a&gt;; 順帶一提, 撰寫爬蟲撈取資料的人很多, 一種使用 cached page 的方式是因為網站會 ban 掉一些 (惡意?) 造成頻寬問題的連續需求發送端, 所以轉而向 cached page 著手。&lt;/p&gt;
+<rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:media="http://search.yahoo.com/mrss/" version="2.0"><channel><title>Hello World! I'm Vincent.</title><description>The Wilderness Years.</description><link>http://captainvincent.github.io/</link><generator>Ghost 0.11</generator><lastBuildDate>Mon, 02 Jan 2017 20:26:41 GMT</lastBuildDate><atom:link href="http://captainvincent.github.io/rss/" rel="self" type="application/rss+xml"/><ttl>60</ttl><item><title>pymongo 介紹 (未完)</title><link>http://captainvincent.github.io/pymongo-jie-shao/</link><guid isPermaLink="false">624779c1-312a-4506-a5cc-b1e8d57dfa7b</guid><dc:creator>Captain Vincent</dc:creator><pubDate>Thu, 29 Dec 2016 08:06:47 GMT</pubDate><content:encoded/></item><item><title>Scrapy 介紹</title><description>&lt;p&gt;延續前一個主題 &lt;a href="http://captainvincent.github.io/cached-page/"&gt;CachedPage&lt;/a&gt; 的工作後, 有了目標網站在 Cached Page Server 上還存留的清單, 接下來要進行較為複雜的爬蟲工作 (解析原始網頁內容、抓取圖片), 這時候之前學會的技巧就遇到了一些問題&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;&lt;a href="https://github.com/CaptainVincent/CachedPageSeedFinder"&gt;之前的架構&lt;/a&gt; 是循序, 透過 &lt;a href="http://docs.python-requests.org/en/master/"&gt;Requests&lt;/a&gt; 抓取 html content 解析網址, 再使用 &lt;a href="https://www.crummy.com/software/BeautifulSoup/bs4/doc/"&gt;BeautifulSoup, bs4&lt;/a&gt; 去將 html 轉成結構化的物件, 透過此 lib 的協助提取所需要的內文資訊。&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Performance&lt;/strong&gt; 循序的方式會造成因為 I/O wait 的時間太久, 導致需要連續 I/O 的工作大部分的時間都花在等待。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Data&lt;/strong&gt; 大量蒐集的資料要如何存放, 以方便為後續作業上的使用保留彈性。&lt;a href="http://captainvincent.github.io/pymongo-jie-shao/"&gt;Next Topic&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id="officialtutorialhttpsdocscrapyorgenlatestintrotutorialhtml"&gt;&lt;a href="https://doc.scrapy.org/en/latest/intro/tutorial.html"&gt;Official Tutorial&lt;/a&gt;&lt;/h4&gt;
+
+&lt;p&gt;&lt;img src="http://3.bp.blogspot.com/-TRxU3bGgqAY/Vd_L56GQMRI/AAAAAAAAAhk/lS7mSF_25wQ/s1600/Scrapy-Dataflow.png" alt="Data flow"&gt;
+&lt;a href="http://itcprogblog.blogspot.tw/2015/08/scraping-with-scrapy.html"&gt;dataflow reference&lt;/a&gt; form &lt;a href="http://itcprogblog.blogspot.tw/"&gt;The&lt;/a&gt;&lt;/p&gt;</description><link>http://captainvincent.github.io/scrapy-jie-shao/</link><guid isPermaLink="false">e29af378-70db-4b6f-b157-07855779dd74</guid><dc:creator>Captain Vincent</dc:creator><pubDate>Wed, 28 Dec 2016 21:41:05 GMT</pubDate><content:encoded>&lt;p&gt;延續前一個主題 &lt;a href="http://captainvincent.github.io/cached-page/"&gt;CachedPage&lt;/a&gt; 的工作後, 有了目標網站在 Cached Page Server 上還存留的清單, 接下來要進行較為複雜的爬蟲工作 (解析原始網頁內容、抓取圖片), 這時候之前學會的技巧就遇到了一些問題&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;&lt;a href="https://github.com/CaptainVincent/CachedPageSeedFinder"&gt;之前的架構&lt;/a&gt; 是循序, 透過 &lt;a href="http://docs.python-requests.org/en/master/"&gt;Requests&lt;/a&gt; 抓取 html content 解析網址, 再使用 &lt;a href="https://www.crummy.com/software/BeautifulSoup/bs4/doc/"&gt;BeautifulSoup, bs4&lt;/a&gt; 去將 html 轉成結構化的物件, 透過此 lib 的協助提取所需要的內文資訊。&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Performance&lt;/strong&gt; 循序的方式會造成因為 I/O wait 的時間太久, 導致需要連續 I/O 的工作大部分的時間都花在等待。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Data&lt;/strong&gt; 大量蒐集的資料要如何存放, 以方便為後續作業上的使用保留彈性。&lt;a href="http://captainvincent.github.io/pymongo-jie-shao/"&gt;Next Topic&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id="officialtutorialhttpsdocscrapyorgenlatestintrotutorialhtml"&gt;&lt;a href="https://doc.scrapy.org/en/latest/intro/tutorial.html"&gt;Official Tutorial&lt;/a&gt;&lt;/h4&gt;
+
+&lt;p&gt;&lt;img src="http://3.bp.blogspot.com/-TRxU3bGgqAY/Vd_L56GQMRI/AAAAAAAAAhk/lS7mSF_25wQ/s1600/Scrapy-Dataflow.png" alt="Data flow"&gt;
+&lt;a href="http://itcprogblog.blogspot.tw/2015/08/scraping-with-scrapy.html"&gt;dataflow reference&lt;/a&gt; form &lt;a href="http://itcprogblog.blogspot.tw/"&gt;The ITC Prog Blog&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Brief Overview&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;The spider schedules requests for download (1)&lt;/li&gt;
+&lt;li&gt;The engine manages these requests and then executes them concurrently (2,3)&lt;/li&gt;
+&lt;li&gt;When the response is available (4) the engine sends it back to the spider (5,6)&lt;/li&gt;
+&lt;li&gt;The spider then scrapes the response (7) and either returns more requests to the scheduler (1), or returns scraped items from the webpage (8a,8b).&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;從上圖可以知道, 只有左半邊是我們要處理的事情。&lt;/p&gt;
+
+&lt;hr&gt;
+
+&lt;h2 id="createproject"&gt;Create Project&lt;/h2&gt;
+
+&lt;pre&gt;&lt;code class="language- language-bash"&gt;scrapy startproject MySpider  
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;MySpider 為新建的 project name, 可自行命名&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;MySpider  
+|-- MySpider
+|   |-- __init__.py
+|   |-- items.py
+|   |-- middlewares.py
+|   |-- pipelines.py
+|   |-- settings.py
+|   `-- spiders
+|       `-- __init__.py
+`-- scrapy.cfg
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;筆者目前 project 使用到的檔案&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;spiders/&lt;code&gt;&amp;lt;spider name&amp;gt;&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;items.py&lt;/li&gt;
+&lt;li&gt;pipelines.py&lt;/li&gt;
+&lt;li&gt;settings.py&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id="spider"&gt;Spider&lt;/h3&gt;
+
+&lt;p&gt;spiders/exmaple.py  &lt;/p&gt;
+
+&lt;pre&gt;&lt;code class="language- language-python"&gt;import scrapy
+
+class MySpider(scrapy.Spider):  
+    name = 'myspider'
+    #allowed_domains = ['domain url']
+    start_urls = [
+        'http://www.google.com.tw',
+    ]
+
+    def parse(self, response):
+         (...)
+         yield scrapy.Request(url, callback)
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;ul&gt;
+&lt;li&gt;name 是用來定義執行時的名稱 ex. &lt;code&gt;scrapy crawl myspider&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;allowed_domains 用來限制允許的連線&lt;/li&gt;
+&lt;li&gt;start_urls 起始抓取的頁面, 得到 response 會呼叫 parse 這支 callback&lt;/li&gt;
+&lt;li&gt;parse 從 start_urls 得到 response, 可將此視為爬蟲主程式的進入點, 將 response 的內容提取出下一步要爬取的網址, 再透過 yield 送出 request, 而 requset 取得的內容可自行定義連結至哪個 function 來作為 callback&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id="item"&gt;Item&lt;/h3&gt;
+
+&lt;p&gt;item 為 scrapy framework 中用來串接 pipeline 動作的資料結構, 在 item.py 中先定義出此資料的內容&lt;/p&gt;
+
+&lt;p&gt;item.py  &lt;/p&gt;
+
+&lt;pre&gt;&lt;code class="language- language-python"&gt;class MyspiderItem(scrapy.Item):  
+    # define the fields for your item here like:
+    person = scrapy.Field()
+    image_urls = scrapy.Field()
+    images = scrapy.Field()
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;ul&gt;
+&lt;li&gt;person 為筆者示範如何自行定義欄位, 可透過相同的宣告方式來新增多個資料存放欄位, 但這裡 &lt;strong&gt;image_urls、images&lt;/strong&gt; 為特殊欄位, 當 item 宣告這兩個欄位並在 settings.py 中去 enable ImagesPipeline, 便可以在爬蟲執行過程中透過對 image_urls list 加入 image url, 讓 scrapy 自行下載 (透過內建的 ImagesPipeline) 並把下載完的狀態存放至 images 這個 list 之中。&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id="pipeline"&gt;Pipeline&lt;/h3&gt;
+
+&lt;p&gt;Pipeline 用來對 spider 撈出的資料 (要先存放至 item 中) 進行進一步的操作, ex. 寫入資料庫&lt;/p&gt;
+
+&lt;p&gt;pipelines.py  &lt;/p&gt;
+
+&lt;pre&gt;&lt;code class="language- language-python"&gt;class MyspiderPipeline(object):  
+    def open_spider(self, spider):
+        (...)
+    def close_spider(self, spider):
+        (...)
+    def process_item(self, item, spider):
+        (...)
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;這裡介紹三個 stage&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;open_spider spider 開啟時會觸發, 可以在這個階段做連接資料庫的動作&lt;/li&gt;
+&lt;li&gt;close_spider spider 關閉時觸發, 可以在這個階段記錄一些 log (ex. 爬蟲執行的結果)&lt;/li&gt;
+&lt;li&gt;process_item 當 spider 執行時有建立 item 物件, 離開該執行區塊時會觸發 (表示該 item 資料被寫入完畢), 可以在此階段將該 item 上的資訊寫入資料庫&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;hr&gt;
+
+&lt;p&gt;將上述三個部分的程式實作完成後, 還是有一些小地方要修改才跑得起來, 這邊一一介紹&lt;/p&gt;
+
+&lt;h3 id="robotstxt"&gt;robots.txt&lt;/h3&gt;
+
+&lt;p&gt;Scarpy default 遵守 Robots exclusion standard, 會先嘗試在 domain 中尋找 robots.txt 的存在才允許進行 crawl, 要將此行為關掉, 修改 settings.py 如下&lt;/p&gt;
+
+&lt;p&gt;settings.py  &lt;/p&gt;
+
+&lt;pre&gt;&lt;code class="language- language-python"&gt;# Obey robots.txt rules
+ROBOTSTXT_OBEY = False  
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3 id="enabledpipeline"&gt;Enabled Pipeline&lt;/h3&gt;
+
+&lt;p&gt;如果有自行新增的 pileline 要執行, 或是希望圖片可以透過 scrapy 自行下載 (如上面 item 範例中所述), 就要在這邊告知 scrapy, 一樣是修改 settings.py&lt;/p&gt;
+
+&lt;p&gt;settings.py  &lt;/p&gt;
+
+&lt;pre&gt;&lt;code class="language- language-python"&gt;ITEM_PIPELINES = {  
+    'scrapy.pipelines.images.ImagesPipeline': 1,
+    'MySpider.pipelines.MySpiderPipeline': 300,
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;後面的數字愈小, 執行的順序愈優先; ImagesPipeline 是 Scrapy 內建的, 沒有特殊的需求可以直接使用此 pipeline。&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;以上就是改用 Scrapy 來作為爬蟲框架的重點整理, 有任何使用上的疑問或說明上的錯誤都歡迎留言給筆者。&lt;/p&gt;</content:encoded></item><item><title>Cached Page</title><description>&lt;p&gt;筆者最近的功課之一是需要撈一個已經下線的網站內容, 所以首先要從網路上的頁面庫存下手 &lt;a href="http://www.cachedpages.com/"&gt;cachedpages&lt;/a&gt;; 順帶一提, 撰寫爬蟲撈取資料的人很多, 一種使用 cached page 的方式是因為目標網站會 ban 掉一些 (惡意?) 造成頻寬問題的連續需求發送端, 所以轉而向 cached page 著手。&lt;/p&gt;
 
 &lt;p&gt;&lt;a href="https://github.com/CaptainVincent/CachedPageSeedFinder"&gt;Github Source&lt;/a&gt;&lt;/p&gt;
 
 &lt;p&gt;這裡因為 google 的頁面庫存保留時間過短, 所以實作上僅對 &lt;a href="https://archive.org/web/"&gt;https://archive.org/web/&lt;/a&gt; 做查詢, 用來幫助蒐集仍存留在  cached page server 上的網址有哪些。(當然更辛苦的是針對這些不同時期 mirror 下來的頁面內容做 parsing T.T)&lt;/p&gt;
 
-&lt;pre&gt;&lt;code class="language-bash"&gt;python CachedPageSeedFinder.py domain &amp;lt;domain&amp;gt; [--output=&amp;lt;ofname&amp;gt;&lt;/code&gt;&lt;/pre&gt;</description><link>http://captainvincent.github.io/cached-page/</link><guid isPermaLink="false">53a35d3e-fc01-401c-96bf-d33f11be104a</guid><category>python</category><category>crawler</category><category>cachedpage</category><category>docopt</category><category>requests</category><category>bs4</category><dc:creator>Captain Vincent</dc:creator><pubDate>Sat, 24 Dec 2016 23:22:40 GMT</pubDate><content:encoded>&lt;p&gt;筆者最近的功課之一是需要撈一個已經下線的網站內容, 所以首先要從網路上的頁面庫存下手 &lt;a href="http://www.cachedpages.com/"&gt;cachedpages&lt;/a&gt;; 順帶一提, 撰寫爬蟲撈取資料的人很多, 一種使用 cached page 的方式是因為網站會 ban 掉一些 (惡意?) 造成頻寬問題的連續需求發送端, 所以轉而向 cached page 著手。&lt;/p&gt;
+&lt;pre&gt;&lt;code class="language-bash"&gt;python CachedPageSeedFinder.py domain &amp;lt;domain&amp;gt; [--output=&amp;lt;ofname&amp;gt;&lt;/code&gt;&lt;/pre&gt;</description><link>http://captainvincent.github.io/cached-page/</link><guid isPermaLink="false">53a35d3e-fc01-401c-96bf-d33f11be104a</guid><category>python</category><category>crawler</category><category>cachedpage</category><category>docopt</category><category>requests</category><category>bs4</category><dc:creator>Captain Vincent</dc:creator><pubDate>Sat, 24 Dec 2016 23:22:40 GMT</pubDate><content:encoded>&lt;p&gt;筆者最近的功課之一是需要撈一個已經下線的網站內容, 所以首先要從網路上的頁面庫存下手 &lt;a href="http://www.cachedpages.com/"&gt;cachedpages&lt;/a&gt;; 順帶一提, 撰寫爬蟲撈取資料的人很多, 一種使用 cached page 的方式是因為目標網站會 ban 掉一些 (惡意?) 造成頻寬問題的連續需求發送端, 所以轉而向 cached page 著手。&lt;/p&gt;
 
 &lt;p&gt;&lt;a href="https://github.com/CaptainVincent/CachedPageSeedFinder"&gt;Github Source&lt;/a&gt;&lt;/p&gt;
 
@@ -24,18 +190,23 @@
 &lt;li&gt;&lt;code&gt;--debugfile=&amp;lt;dfname&amp;gt;&lt;/code&gt; Debug only. Test parse link function use an input file.&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;實作的內容很簡單, 先對 cached page 送出查詢後, 將回傳的網頁內容做解析撈出網址即可, 算是很簡易的 crawler, 有興趣的就自行參考看看吧。&lt;/p&gt;
+&lt;p&gt;實作的內容很簡單, 先是對 cached page server 送出 query 的網址查詢後, 將回傳的內容做解析撈出網址即可, 算是簡易的 crawler, 有興趣可以直接參考 &lt;a href="https://github.com/CaptainVincent/CachedPageSeedFinder"&gt;Github Source&lt;/a&gt;。&lt;/p&gt;
 
 &lt;h4 id="pythonmodule"&gt;使用到的 python module&lt;/h4&gt;
 
 &lt;ul&gt;
 &lt;li&gt;docopt 提供命令列解析的工具&lt;/li&gt;
 &lt;li&gt;requests 用來對 server 發送 request&lt;/li&gt;
-&lt;li&gt;bs4 (BeautifulSoup) 用來解析 html 的內容&lt;/li&gt;
+&lt;li&gt;bs4 (BeautifulSoup 4) 用來解析 html 的內容&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;blockquote&gt;
-  &lt;p&gt;題外話, 後續要進行解析這些不同時期的庫存頁面工作, 已經改用 scrapy 的框架來實作, 主要是對於大量需要花時間的 io (Internet 連線) 工作, 單一循序的執行過於費時, 透過 scrapy 能同時進行多個非同步的 request 達到改善, 另外在 html 的解析上也改用 lxml (理由是依據 StackOverflow 上 &lt;a href="http://stackoverflow.com/questions/8342335/xpath-vs-dom-vs-beautifulsoup-vs-lxml-vs-other-which-is-the-fastest-approach-to"&gt;效能的評估&lt;/a&gt;)。&lt;/p&gt;
+  &lt;p&gt;題外話&lt;/p&gt;
+  
+  &lt;ol&gt;
+  &lt;li&gt;在功能實作上是不需要使用到 docopt, 但無意間看到介紹的相關文章, 也就用來當作練習的一部份。&lt;/li&gt;
+  &lt;li&gt;後續要進行大量的解析這些不同時期殘留的庫存頁面、以及圖片的抓取, 已經改用 scrapy 的框架來實作, 主要是對於大量需要花時間的 io (Internet 連線) 工作, 單一循序的執行等待過於費時, 透過 scrapy 能同時進行多個非同步的 request 達到改善, 另外在 html 的解析上也改用 lxml (理由是依據 StackOverflow 上 &lt;a href="http://stackoverflow.com/questions/8342335/xpath-vs-dom-vs-beautifulsoup-vs-lxml-vs-other-which-is-the-fastest-approach-to"&gt;效能的評估&lt;/a&gt;)。&lt;/li&gt;
+  &lt;/ol&gt;
 &lt;/blockquote&gt;</content:encoded></item><item><title>TradingBot Speech</title><description>&lt;blockquote&gt;
   &lt;p&gt;講者 &lt;strong&gt;Philipz 鄭淳尹&lt;/strong&gt; ＠東吳大學&lt;/p&gt;
   
@@ -1387,224 +1558,4 @@ function getStyleValues(keys, style) {
 
 &lt;blockquote&gt;
   &lt;p&gt;可喜可賀, 筆者總算升級完成, 但似乎覺得好像更新後也沒什麼不同。世界依舊美好 :)&lt;/p&gt;
-&lt;/blockquote&gt;</content:encoded></item><item><title>2016 COSCUP Day - 2</title><description>&lt;p&gt;&lt;img src="https://c7.staticflickr.com/9/8118/28868620030_52dd7da609.jpg" alt="COSCUP Day2"&gt;&lt;/p&gt;
-
-&lt;p&gt;前一天太晚睡, 第一個共同議程遲到錯過了 QQ。&lt;/p&gt;
-
-&lt;h3 id="servotheparallelbrowserengine"&gt;Servo, the Parallel Browser Engine&lt;/h3&gt;
-
-&lt;p&gt;&lt;a href="https://shinglyu.github.io/my_presentations/2016-coscup-servo-intro.pdf"&gt;講者投影片&lt;/a&gt;、&lt;a href="https://servo.org/bhtml-newtab/newtab.html"&gt;Demo 測試網頁&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;因應硬體平行化的架構, 將 browser 本身可拆分的工作 (ex. tree 中去計算 layout 的部分) 去進行平行化的 engine 設計, 但 javascript engine 仍直接沿用 SpiderMonkey。&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;加速&lt;/li&gt;
-&lt;li&gt;平均使用 CPU 可以降低耗電&lt;/li&gt;
-&lt;li&gt;將繪圖部分整理利用 GPU 加速&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;使用 Github 的 workflow 讓貢獻者意願增加, 並會對 Servo 做跨瀏覽器相容的測試。&lt;/p&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;Rust (Servo 使用的語言) 透過 compiler time 協助安全性的處理,&lt;/p&gt;&lt;/blockquote&gt;</description><link>http://captainvincent.github.io/2016-coscup-day-2/</link><guid isPermaLink="false">e0a4cf4a-e826-48d3-aad2-e48f2ce92e66</guid><category>COSCUP</category><dc:creator>Captain Vincent</dc:creator><pubDate>Sun, 21 Aug 2016 02:49:44 GMT</pubDate><content:encoded>&lt;p&gt;&lt;img src="https://c7.staticflickr.com/9/8118/28868620030_52dd7da609.jpg" alt="COSCUP Day2"&gt;&lt;/p&gt;
-
-&lt;p&gt;前一天太晚睡, 第一個共同議程遲到錯過了 QQ。&lt;/p&gt;
-
-&lt;h3 id="servotheparallelbrowserengine"&gt;Servo, the Parallel Browser Engine&lt;/h3&gt;
-
-&lt;p&gt;&lt;a href="https://shinglyu.github.io/my_presentations/2016-coscup-servo-intro.pdf"&gt;講者投影片&lt;/a&gt;、&lt;a href="https://servo.org/bhtml-newtab/newtab.html"&gt;Demo 測試網頁&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;因應硬體平行化的架構, 將 browser 本身可拆分的工作 (ex. tree 中去計算 layout 的部分) 去進行平行化的 engine 設計, 但 javascript engine 仍直接沿用 SpiderMonkey。&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;加速&lt;/li&gt;
-&lt;li&gt;平均使用 CPU 可以降低耗電&lt;/li&gt;
-&lt;li&gt;將繪圖部分整理利用 GPU 加速&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;使用 Github 的 workflow 讓貢獻者意願增加, 並會對 Servo 做跨瀏覽器相容的測試。&lt;/p&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;Rust (Servo 使用的語言) 透過 compiler time 協助安全性的處理, crates.io 相當於 Rust 的 npm, 目前 Servo 算是 Rust 的大用戶。&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;h3 id="weex"&gt;Weex 輕量級跨平台動態解決方案&lt;/h3&gt;
-
-&lt;p&gt;因應 2015 雙11 活動設計&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;Native 體驗&lt;/li&gt;
-&lt;li&gt;Web 般靈活的修改呈現&lt;/li&gt;
-&lt;li&gt;依據使用者消費習慣推薦內容&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;方案&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;JSON -&gt; NativeView 方案 (建立 Native template, 難以維護、Bug 修正更新不及時)&lt;/li&gt;
-&lt;li&gt;React Native (效能上 Weex 表現較佳, 基於 React Native 的設計是以 APP 為單位)&lt;/li&gt;
-&lt;li&gt;Vue.js + Web conponent =&gt; Weex (可使用在 單一頁面、嵌入 Native、嵌入 Web、整個 App 的建立 ... etc 的應用場景)&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;目標&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;變化性高&lt;/li&gt;
-&lt;li&gt;性能要求&lt;/li&gt;
-&lt;li&gt;一次開發三端同步 (Web、iOS、Android)&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;靈感來源&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;Web Component&lt;/li&gt;
-&lt;li&gt;Vuejs&lt;/li&gt;
-&lt;li&gt;Polymer&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;類似 React Native 要解決的問題, 但應用場景加入更多的變化的框架, 提供給開發者多一些的選擇。&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;h3 id="ahighscalemlplatformusingsparkandkafka"&gt;A High Scale ML Platform Using SPARK and KAFKA&lt;/h3&gt;
-
-&lt;p&gt;Batch vs Streaming&lt;/p&gt;
-
-&lt;h5 id="batch"&gt;Batch&lt;/h5&gt;
-
-&lt;ul&gt;
-&lt;li&gt;Batch 大量一波一波收到的資料, 可容忍不即時&lt;/li&gt;
-&lt;li&gt;使用 Spark, 因為是 in-memory 的計算, 並且對 Machine Learning 以及 SQL 的整合都很 friendly&lt;/li&gt;
-&lt;li&gt;演算法
-&lt;ul&gt;&lt;li&gt;Alternating Least Square&lt;/li&gt;
-&lt;li&gt;Logistic Regression (分類演算法)&lt;/li&gt;
-&lt;li&gt;GDBT (Ranking 演算法)&lt;/li&gt;
-&lt;li&gt;Clustering (依據使用者的行為分類)&lt;/li&gt;
-&lt;li&gt;Top-k rank&lt;/li&gt;&lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;Text Mining
-&lt;ul&gt;&lt;li&gt;Naive Bayes&lt;/li&gt;
-&lt;li&gt;Latent dirichlet allocation &lt;/li&gt;
-&lt;li&gt;Word2vec&lt;/li&gt;&lt;/ul&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h5 id="streamingexaccesslog"&gt;Streaming (ex. access log)&lt;/h5&gt;
-
-&lt;ul&gt;
-&lt;li&gt;Streaming 持續收到的資料, 需較即時地處理&lt;/li&gt;
-&lt;li&gt;應用在根據使用者行為的 live prediction&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;囧&gt; 可能是對 (SPARK、KAFKA) 這兩個 term 太陌生了, 所以聽著聽著就睡著了。&lt;/p&gt;
-
-&lt;h3 id="nas"&gt;NAS 也可以揀土豆&lt;/h3&gt;
-
-&lt;p&gt;介紹機器學習的一些方法以及他們一些訓練的實驗 (看了一下共筆    , 結果想抄筆記還沒得抄)。&lt;/p&gt;
-
-&lt;h3 id=""&gt;開放公司文化之下的軟體開發 / 如何用開源軟體賺錢？&lt;/h3&gt;
-
-&lt;p&gt;全體共同議程, 雖有諸多廣告的內容, 但整體上不至於討厭。&lt;/p&gt;
-
-&lt;p&gt;對於「開源」各方的直覺態度&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;小企業 - 免費的！功能不強沒關係&lt;/li&gt;
-&lt;li&gt;大企業 - 我們賣硬體，加一點軟體是不是可以多賣一點錢&lt;/li&gt;
-&lt;li&gt;員工 - 老闆要一個功能，我不會寫，找看看有沒有人寫過&lt;/li&gt;
-&lt;li&gt;政府 - 我們來辦比賽！&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;結論, 我們該如何使用開源軟體？ (需求主導)&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;觀察客戶要甚麼&lt;/li&gt;
-&lt;li&gt;加上重要功能，甚至比原來的軟體強大&lt;/li&gt;
-&lt;li&gt;願意自己重寫&lt;/li&gt;
-&lt;li&gt;甚至徹底改變商業模式&lt;/li&gt;
-&lt;li&gt;建置世界級的大系統&lt;/li&gt;
-&lt;li&gt;注重使用者體驗&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id="lightningtalk"&gt;Lightning Talk&lt;/h3&gt;
-
-&lt;p&gt;個人覺得的亮點&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;用 Git 的 branch 來畫台北捷運圖 (雖有點浪費才能, 但挺有趣的)&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://hackmd.io/"&gt;HackMD&lt;/a&gt; 的應用, 使用 markdown 來撰寫部落格後, 覺得他們整合大部分我所使用到的功能, 會找時間體驗一下他們的服務&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;&lt;del&gt;捕夢網請的模特兒不錯&lt;/del&gt;, 兩天的議程終於結束了, 參加完之後總是會讓體內燃著熱血, 要繼續 GoGo 邁向神乎其技的境界。 &lt;/p&gt;
-&lt;/blockquote&gt;</content:encoded></item><item><title>2016 COSCUP Day - 1</title><description>&lt;blockquote&gt;
-  &lt;p&gt;本篇是筆者今年參加 COSCUP 不負責任、不引戰的個人摘要筆記與心得文。&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;&lt;img src="https://c8.staticflickr.com/9/8293/29037136191_aa48f5b26e.jpg" alt="Day 1"&gt;&lt;/p&gt;
-
-&lt;h3 id="llvm"&gt;LLVM框架由淺入淺&lt;/h3&gt;
-
-&lt;p&gt;全體共同議程, 介紹一些由高階語言轉成 machine code 的幾個環節如何拆分, 引入介紹透過 LLVM 的框架標準化這幾個環節, 讓對編譯器有興趣的使用者可以自行串接 LLVM IR 做各種調配。&lt;/p&gt;
-
-&lt;h3 id="mculightweightjavascriptengine"&gt;MCU 與 lightweight javascript engine 的邂逅&lt;/h3&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;a href="http://sssslide.com/speakerdeck.com/iamblue/mcu-yu-lightweight-javascript-engine-de-xie-hou"&gt;講者之前相同題目的 Slide&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://www.youtube.com/watch?v=n3NY_2RPAl0"&gt;講者之前相同題目的影片&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;介紹在 MCU 終端的嵌入式硬體上執行 JS (相較於 MPU 的 device 會帶起較完整的系統並具備較高規格的硬體, MCU 的硬體規格限制更多), 最早期的啟發來自於基於 Tiny.js 開發的 Espruino, 原理是邊 parse 編解析 (但不構成 AST), 陸陸續續也出現一些針對物聯網嚴苛 device 條件所產生的&lt;/p&gt;</description><link>http://captainvincent.github.io/2016-coscup-day-1/</link><guid isPermaLink="false">a09358a9-97d5-48e3-b5de-26bc396ce87a</guid><category>COSCUP</category><dc:creator>Captain Vincent</dc:creator><pubDate>Fri, 19 Aug 2016 23:27:03 GMT</pubDate><content:encoded>&lt;blockquote&gt;
-  &lt;p&gt;本篇是筆者今年參加 COSCUP 不負責任、不引戰的個人摘要筆記與心得文。&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;&lt;img src="https://c8.staticflickr.com/9/8293/29037136191_aa48f5b26e.jpg" alt="Day 1"&gt;&lt;/p&gt;
-
-&lt;h3 id="llvm"&gt;LLVM框架由淺入淺&lt;/h3&gt;
-
-&lt;p&gt;全體共同議程, 介紹一些由高階語言轉成 machine code 的幾個環節如何拆分, 引入介紹透過 LLVM 的框架標準化這幾個環節, 讓對編譯器有興趣的使用者可以自行串接 LLVM IR 做各種調配。&lt;/p&gt;
-
-&lt;h3 id="mculightweightjavascriptengine"&gt;MCU 與 lightweight javascript engine 的邂逅&lt;/h3&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;a href="http://sssslide.com/speakerdeck.com/iamblue/mcu-yu-lightweight-javascript-engine-de-xie-hou"&gt;講者之前相同題目的 Slide&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://www.youtube.com/watch?v=n3NY_2RPAl0"&gt;講者之前相同題目的影片&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;介紹在 MCU 終端的嵌入式硬體上執行 JS (相較於 MPU 的 device 會帶起較完整的系統並具備較高規格的硬體, MCU 的硬體規格限制更多), 最早期的啟發來自於基於 Tiny.js 開發的 Espruino, 原理是邊 parse 編解析 (但不構成 AST), 陸陸續續也出現一些針對物聯網嚴苛 device 條件所產生的 engine 設計, 最後講者是透過去封裝一層名為 Microlattice.JS 的 interface 去使用 jerryscript (lightweight JS engine), 建構在freeRTOS 上。&lt;/p&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;因為設備問題, 所以 talk 只進行到一半, 剩下部分需參考講者之前演講資訊。&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;h3 id="freebirdjs"&gt;物聯網不滿足 - 自由管理物聯網裝置和溝通的 freebird.js&lt;/h3&gt;
-
-&lt;p&gt;從物聯網的一些基礎介紹起, 帶起要解決的問題, 主要是破碎的溝通方式 (同質、異質網路的相容性), 雖有 IFTTT 的解決方案(?), 但可能會導致 device 之間溝通的 latency 過長, 再來是想建立有系統的方式解決溝通問題 (因為從上層到底層都有問題要解決), 而開源計畫的 freebird.js 就是要解決 相容 以及 快速開發 IoT 應用的法門之一。&lt;/p&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;精神就是幫開發者做掉一些 dirty job, 讓開發者可以更容易地進入物聯網的, 但目前 protocol、晶片 driver 推陳出新, 仍須仰賴推廣讓開發者共同參與。 (另外 freebird.js 尚未 release 約 10~11 月)&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;h3 id="log"&gt;萬事萬物皆是 Log&lt;/h3&gt;
-
-&lt;p&gt;&lt;a href="https://medium.com/@poga/%E8%90%AC%E4%BA%8B%E8%90%AC%E7%89%A9%E7%9A%86%E6%98%AF-log-%E7%B3%BB%E7%B5%B1%E6%9E%B6%E6%A7%8B%E4%B9%9F%E4%BE%86%E9%BB%9E%E7%A7%91%E6%99%AE-caf3029359f8#.y9qlju1iz"&gt;作者提供的逐字稿&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;Determinism 相同的過程 = 相同的結果 (讓系統可以如此般趨於穩定的境界), 所以在設計系統架構時試著先用 log 去表示。&lt;/p&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;讓會眾可以安心抓神奇寶貝的講者 (?)&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;h3 id="opensourcedevops"&gt;Open Source 的 DevOps 工具箱&lt;/h3&gt;
-
-&lt;p&gt;&lt;a href="https://onedrive.live.com/view.aspx?resid=449602EB8FBEC303!2399&amp;amp;ithint=file%2cpptx&amp;amp;app=PowerPoint&amp;amp;authkey=!ANC0p7Yoi51Wu9E"&gt;講者投影片&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;精神在於建立一種文化, 介紹常見的軟體工程在開發時應有的配置 (列舉可用的 open source 工具, 詳細參閱投影片)。&lt;/p&gt;
-
-&lt;h3 id=""&gt;寫出高性能的服務與應用。那些你沒想過的事！&lt;/h3&gt;
-
-&lt;p&gt;全體共同議程, 比較偏向大學的 計算機組織 與 作業系統該有知識 (?), 算是溫故為主的內容。&lt;/p&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;總結&lt;/p&gt;
-  
-  &lt;p&gt;COSCUP 的伙食不錯, &lt;del&gt;中研院 電擊獸 很多&lt;/del&gt;, 跟其他主題更明確的聚會相比, 感覺準備的內容有比較多一點的學生感, 但引用朋友的見解, 來參加聚會聽 talk 只是配菜, 重點在於 要多認識人 或是 上台當講者, 筆者只能默默期許自己。&lt;/p&gt;
 &lt;/blockquote&gt;</content:encoded></item></channel></rss>
