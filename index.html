@@ -114,31 +114,31 @@
 
 </div>
 
-<article class="post">
+<article class="post tag-pymongo tag-mongodb">
     <header class="post-header">
-        <h2 class="post-title"><a href="pymongo-jie-shao/">pymongo 介紹 (未完)</a></h2>
+        <h2 class="post-title"><a href="pymongo-jie-shao/">pymongo 介紹</a></h2>
     </header>
     <section class="post-excerpt">
-        <p> <a class="read-more" href="pymongo-jie-shao/">»</a></p>
+        <p>先聲明使用 mongodb 作為資料存放的方式, 只是筆者目前的階段性選擇, 在未來何時會因應需求而跳槽也未可知, 但這裡還是會說明選擇以此作為資料存放的理由。   在最初的想法是打算以 JSON 格式的文本直接存放資料, 但文件與資料庫還是有許多差異 database vs flat files, 為了讓蒐集下來的資料可以保有查詢的功能, 後續就採用 mongodb 來存放。 運行容易 Schema-free 的模型在資料建置上自由 資料容易與 JSON 或是 python 的 <a class="read-more" href="pymongo-jie-shao/">»</a></p>
     </section>
     <footer class="post-meta">
         <img class="author-thumb" src="content/images/2016/11/--.JPG" alt="Captain Vincent" nopin="nopin">
         <a href="author/vincent/">Captain Vincent</a>
-        
-        <time class="post-date" datetime="2016-12-29">29 December 2016</time>
+         on <a href="tag/pymongo/">pymongo</a>, <a href="tag/mongodb/">mongodb</a>
+        <time class="post-date" datetime="2017-01-03">03 January 2017</time>
     </footer>
 </article>
-<article class="post">
+<article class="post tag-scrapy tag-crawler tag-spider">
     <header class="post-header">
         <h2 class="post-title"><a href="scrapy-jie-shao/">Scrapy 介紹</a></h2>
     </header>
     <section class="post-excerpt">
-        <p>延續前一個主題 CachedPage 的工作後, 有了目標網站在 Cached Page Server 上還存留的清單, 接下來要進行較為複雜的爬蟲工作 (解析原始網頁內容、抓取圖片), 這時候之前學會的技巧就遇到了一些問題   之前的架構 是循序, 透過 Requests 抓取 html content 解析網址, 再使用 BeautifulSoup, bs4 去將 html 轉成結構化的物件, <a class="read-more" href="scrapy-jie-shao/">»</a></p>
+        <p>延續前一個主題針對 CachedPage 做 crawl, 我有了目標網站在 Cached Page Server 上還存留的清單, 接下來要進行較為複雜的爬蟲工作 (反覆的解析原始網頁內容、抓取圖片), 這時候之前學會的技巧就遇到了一些問題   之前的架構 是循序, 透過 Requests 抓取 html content 解析網址, 再使用 BeautifulSoup, bs4 去將 html <a class="read-more" href="scrapy-jie-shao/">»</a></p>
     </section>
     <footer class="post-meta">
         <img class="author-thumb" src="content/images/2016/11/--.JPG" alt="Captain Vincent" nopin="nopin">
         <a href="author/vincent/">Captain Vincent</a>
-        
+         on <a href="tag/scrapy/">scrapy</a>, <a href="tag/crawler/">crawler</a>, <a href="tag/spider/">spider</a>
         <time class="post-date" datetime="2016-12-29">29 December 2016</time>
     </footer>
 </article>
@@ -147,7 +147,7 @@
         <h2 class="post-title"><a href="cached-page/">Cached Page</a></h2>
     </header>
     <section class="post-excerpt">
-        <p>筆者最近的功課之一是需要撈一個已經下線的網站內容, 所以首先要從網路上的頁面庫存下手 cachedpages; 順帶一提, 撰寫爬蟲撈取資料的人很多, 一種使用 cached page 的方式是因為目標網站會 ban 掉一些 (惡意?) 造成頻寬問題的連續需求發送端, 所以轉而向 cached page 著手。 Github Source 這裡因為 google 的頁面庫存保留時間過短, 所以實作上僅對 https://archive.org/ <a class="read-more" href="cached-page/">»</a></p>
+        <p>筆者最近的功課之一是需要撈一個已經下線的網站內容, 所以首先要從網路上的頁面庫存下手 cachedpages; 順帶一提, 撰寫爬蟲撈取資料的人很多, 一種使用 cached page 的方式是因為目標網站會 ban 掉一些 (惡意?) 造成頻寬、系統負擔問題的連續需求發送端, 所以轉而向 cached page 著手。 Github Source 這裡因為 google 的頁面庫存保留時間過短, 所以實作上僅對 https://archive. <a class="read-more" href="cached-page/">»</a></p>
     </section>
     <footer class="post-meta">
         <img class="author-thumb" src="content/images/2016/11/--.JPG" alt="Captain Vincent" nopin="nopin">

@@ -1,25 +1,119 @@
-<rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:media="http://search.yahoo.com/mrss/" version="2.0"><channel><title>Hello World! I'm Vincent.</title><description>The Wilderness Years.</description><link>http://captainvincent.github.io/</link><generator>Ghost 0.11</generator><lastBuildDate>Mon, 02 Jan 2017 20:26:41 GMT</lastBuildDate><atom:link href="http://captainvincent.github.io/rss/" rel="self" type="application/rss+xml"/><ttl>60</ttl><item><title>pymongo 介紹 (未完)</title><link>http://captainvincent.github.io/pymongo-jie-shao/</link><guid isPermaLink="false">624779c1-312a-4506-a5cc-b1e8d57dfa7b</guid><dc:creator>Captain Vincent</dc:creator><pubDate>Thu, 29 Dec 2016 08:06:47 GMT</pubDate><content:encoded/></item><item><title>Scrapy 介紹</title><description>&lt;p&gt;延續前一個主題 &lt;a href="http://captainvincent.github.io/cached-page/"&gt;CachedPage&lt;/a&gt; 的工作後, 有了目標網站在 Cached Page Server 上還存留的清單, 接下來要進行較為複雜的爬蟲工作 (解析原始網頁內容、抓取圖片), 這時候之前學會的技巧就遇到了一些問題&lt;/p&gt;
+<rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:media="http://search.yahoo.com/mrss/" version="2.0"><channel><title>Hello World! I'm Vincent.</title><description>The Wilderness Years.</description><link>http://captainvincent.github.io/</link><generator>Ghost 0.11</generator><lastBuildDate>Wed, 04 Jan 2017 10:22:19 GMT</lastBuildDate><atom:link href="http://captainvincent.github.io/rss/" rel="self" type="application/rss+xml"/><ttl>60</ttl><item><title>pymongo 介紹</title><description>&lt;p&gt;先聲明使用 mongodb 作為資料存放的方式, 只是筆者目前的階段性選擇, 在未來何時會因應需求而跳槽也未可知, 但這裡還是會說明選擇以此作為資料存放的理由。&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;在最初的想法是打算以 JSON 格式的文本直接存放資料, 但文件與資料庫還是有許多差異 &lt;a href="http://stackoverflow.com/questions/2356851/database-vs-flat-files"&gt;database vs flat files&lt;/a&gt;, 為了讓蒐集下來的資料可以保有查詢的功能, 後續就採用 mongodb 來存放。&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;ul&gt;
+&lt;li&gt;運行容易&lt;/li&gt;
+&lt;li&gt;Schema-free 的模型在資料建置上自由&lt;/li&gt;
+&lt;li&gt;資料容易與 JSON 或是 python 的 dict 資料結構對應其關係, 易理解&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id="serverside"&gt;Server Side&lt;/h2&gt;
+
+&lt;p&gt;筆者在 Mac 安裝的方式, 相信 UNIX-like 的環境都不會太困難 : )&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class="language- language-bash"&gt;brew install mongodb  
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;接下來就是讓 server 跑起來, 最後一個參數指定本地端作為 database 建置的路徑&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class="language- language-bash"&gt;mongod --config /usr/local/&lt;/code&gt;&lt;/pre&gt;</description><link>http://captainvincent.github.io/pymongo-jie-shao/</link><guid isPermaLink="false">624779c1-312a-4506-a5cc-b1e8d57dfa7b</guid><category>pymongo</category><category>mongodb</category><dc:creator>Captain Vincent</dc:creator><pubDate>Tue, 03 Jan 2017 08:06:00 GMT</pubDate><content:encoded>&lt;p&gt;先聲明使用 mongodb 作為資料存放的方式, 只是筆者目前的階段性選擇, 在未來何時會因應需求而跳槽也未可知, 但這裡還是會說明選擇以此作為資料存放的理由。&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;在最初的想法是打算以 JSON 格式的文本直接存放資料, 但文件與資料庫還是有許多差異 &lt;a href="http://stackoverflow.com/questions/2356851/database-vs-flat-files"&gt;database vs flat files&lt;/a&gt;, 為了讓蒐集下來的資料可以保有查詢的功能, 後續就採用 mongodb 來存放。&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;ul&gt;
+&lt;li&gt;運行容易&lt;/li&gt;
+&lt;li&gt;Schema-free 的模型在資料建置上自由&lt;/li&gt;
+&lt;li&gt;資料容易與 JSON 或是 python 的 dict 資料結構對應其關係, 易理解&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id="serverside"&gt;Server Side&lt;/h2&gt;
+
+&lt;p&gt;筆者在 Mac 安裝的方式, 相信 UNIX-like 的環境都不會太困難 : )&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class="language- language-bash"&gt;brew install mongodb  
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;接下來就是讓 server 跑起來, 最後一個參數指定本地端作為 database 建置的路徑&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class="language- language-bash"&gt;mongod --config /usr/local/etc/mongod.conf --dbpath &amp;lt;local db path&amp;gt;  
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;在 server 跑起來後, 我們就可以透過 &lt;a href="https://docs.mongodb.com/manual/reference/mongo-shell/"&gt;mongo shell&lt;/a&gt; 在 shell 中執行 client 端的操作, 筆者用來檢查資料庫當前的狀態滿方便的。&lt;/p&gt;
+  
+  &lt;ul&gt;
+  &lt;li&gt;show dbs ： 顯示當前的 database&lt;/li&gt;
+  &lt;li&gt;use dbname : 切換目前的 database 至 dbname&lt;/li&gt;
+  &lt;li&gt;show collections : 顯示當前 database 中的 collection 名稱 (collection 由 document 集結而成, document 為 mongodb 的儲存單元)&lt;/li&gt;
+  &lt;li&gt;db.colname.count() : 顯示名為 colname 的 collection 中 document 數量&lt;/li&gt;
+  &lt;li&gt;db.colname.findOne({Key:Value})&lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/blockquote&gt;
+
+&lt;h2 id="clientside"&gt;Client Side&lt;/h2&gt;
+
+&lt;p&gt;為了整合進 Scrapy 的 pipeline, 要先來安裝 python 的 mongodb client 模組 &lt;strong&gt;pymongo&lt;/strong&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class="language- language-bash"&gt;pip install pymongo  
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;strong&gt;Demo Code&lt;/strong&gt;, &lt;a href="https://api.mongodb.com/python/current/api/pymongo/"&gt;API reference&lt;/a&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class="language- language-python"&gt;from pymongo import MongoClient
+
+item = {'name':'test'}
+
+client = MongoClient()  
+db = client['Demo']  
+db.demo.insert_one(item)  
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;範例程式很簡單的示範了&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;連接 mongodb server  &lt;/li&gt;
+&lt;li&gt;新增一個名為 Demo 的資料庫  &lt;/li&gt;
+&lt;li&gt;將一筆資料寫入 Demo 資料庫中的 demo collection 中&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h2 id="aggregationpipeline"&gt;Aggregation Pipeline&lt;/h2&gt;
+
+&lt;p&gt;要對 database 中的資料群進行處理, 除了早期提供的 Map Reduce, 目前的版本也已經另外支援 Aggregation Pipeline 的方法, 在效能的比較上可以參考 &lt;a href="https://sysdig.com/blog/mongodb-showdown-aggregate-vs-map-reduce/"&gt;Aggregate vs Map-Reduce&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href="https://docs.mongodb.com/manual/core/aggregation-pipeline/"&gt;&lt;strong&gt;Reference&lt;/strong&gt;&lt;/a&gt; &lt;/p&gt;
+
+&lt;p&gt;使用方式是透過 mongodb 提供的 operator 去描述資料流在 pipeline 中的每個 stage 要如何去彙整, 並一層一層的往下一個 stage 傳遞。&lt;/p&gt;
+
+&lt;p&gt;&lt;img src="https://docs.mongodb.com/manual/_images/aggregation-pipeline.png" alt="aggregation pipeline"&gt;
+(&lt;a href="https://docs.mongodb.com/manual/core/aggregation-pipeline/"&gt;from &lt;strong&gt;Official Document&lt;/strong&gt; aggregation pipeline, example&lt;/a&gt;)&lt;/p&gt;
+
+&lt;p&gt;以上就是如何存儲 mongodb、並整理資料的方式, 當然在 python 中可以用更貼近習慣的方式, 寫程式碼去整理 (效能當然比內建的方式差多了), 但要熟悉這套描述運算的方式也是需要一些時間, 有些客製化的需求也未必能滿足需求, 方法可以自行取捨看看。&lt;/p&gt;</content:encoded></item><item><title>Scrapy 介紹</title><description>&lt;p&gt;延續前一個主題針對 &lt;a href="http://captainvincent.github.io/cached-page/"&gt;CachedPage&lt;/a&gt; 做 crawl, 我有了目標網站在 Cached Page Server 上還存留的清單, 接下來要進行較為複雜的爬蟲工作 (反覆的解析原始網頁內容、抓取圖片), 這時候之前學會的技巧就遇到了一些問題&lt;/p&gt;
 
 &lt;blockquote&gt;
   &lt;p&gt;&lt;a href="https://github.com/CaptainVincent/CachedPageSeedFinder"&gt;之前的架構&lt;/a&gt; 是循序, 透過 &lt;a href="http://docs.python-requests.org/en/master/"&gt;Requests&lt;/a&gt; 抓取 html content 解析網址, 再使用 &lt;a href="https://www.crummy.com/software/BeautifulSoup/bs4/doc/"&gt;BeautifulSoup, bs4&lt;/a&gt; 去將 html 轉成結構化的物件, 透過此 lib 的協助提取所需要的內文資訊。&lt;/p&gt;
 &lt;/blockquote&gt;
 
 &lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;Performance&lt;/strong&gt; 循序的方式會造成因為 I/O wait 的時間太久, 導致需要連續 I/O 的工作大部分的時間都花在等待。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Performance&lt;/strong&gt; 循序的方式會造成因為 I/O wait 的時間太久, 導致這些連續需要 I/O 的工作, 大部分的時間都花在等待連線上。&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;Data&lt;/strong&gt; 大量蒐集的資料要如何存放, 以方便為後續作業上的使用保留彈性。&lt;a href="http://captainvincent.github.io/pymongo-jie-shao/"&gt;Next Topic&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;h4 id="officialtutorialhttpsdocscrapyorgenlatestintrotutorialhtml"&gt;&lt;a href="https://doc.scrapy.org/en/latest/intro/tutorial.html"&gt;Official Tutorial&lt;/a&gt;&lt;/h4&gt;
 
 &lt;p&gt;&lt;img src="http://3.bp.blogspot.com/-TRxU3bGgqAY/Vd_L56GQMRI/AAAAAAAAAhk/lS7mSF_25wQ/s1600/Scrapy-Dataflow.png" alt="Data flow"&gt;
-&lt;a href="http://itcprogblog.blogspot.tw/2015/08/scraping-with-scrapy.html"&gt;dataflow reference&lt;/a&gt; form &lt;a href="http://itcprogblog.blogspot.tw/"&gt;The&lt;/a&gt;&lt;/p&gt;</description><link>http://captainvincent.github.io/scrapy-jie-shao/</link><guid isPermaLink="false">e29af378-70db-4b6f-b157-07855779dd74</guid><dc:creator>Captain Vincent</dc:creator><pubDate>Wed, 28 Dec 2016 21:41:05 GMT</pubDate><content:encoded>&lt;p&gt;延續前一個主題 &lt;a href="http://captainvincent.github.io/cached-page/"&gt;CachedPage&lt;/a&gt; 的工作後, 有了目標網站在 Cached Page Server 上還存留的清單, 接下來要進行較為複雜的爬蟲工作 (解析原始網頁內容、抓取圖片), 這時候之前學會的技巧就遇到了一些問題&lt;/p&gt;
+&lt;a href="http://itcprogblog.blogspot.tw/2015/08/scraping-with-scrapy.html"&gt;dataflow reference&lt;/a&gt;&lt;/p&gt;</description><link>http://captainvincent.github.io/scrapy-jie-shao/</link><guid isPermaLink="false">e29af378-70db-4b6f-b157-07855779dd74</guid><category>scrapy</category><category>crawler</category><category>spider</category><dc:creator>Captain Vincent</dc:creator><pubDate>Wed, 28 Dec 2016 21:41:05 GMT</pubDate><content:encoded>&lt;p&gt;延續前一個主題針對 &lt;a href="http://captainvincent.github.io/cached-page/"&gt;CachedPage&lt;/a&gt; 做 crawl, 我有了目標網站在 Cached Page Server 上還存留的清單, 接下來要進行較為複雜的爬蟲工作 (反覆的解析原始網頁內容、抓取圖片), 這時候之前學會的技巧就遇到了一些問題&lt;/p&gt;
 
 &lt;blockquote&gt;
   &lt;p&gt;&lt;a href="https://github.com/CaptainVincent/CachedPageSeedFinder"&gt;之前的架構&lt;/a&gt; 是循序, 透過 &lt;a href="http://docs.python-requests.org/en/master/"&gt;Requests&lt;/a&gt; 抓取 html content 解析網址, 再使用 &lt;a href="https://www.crummy.com/software/BeautifulSoup/bs4/doc/"&gt;BeautifulSoup, bs4&lt;/a&gt; 去將 html 轉成結構化的物件, 透過此 lib 的協助提取所需要的內文資訊。&lt;/p&gt;
 &lt;/blockquote&gt;
 
 &lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;Performance&lt;/strong&gt; 循序的方式會造成因為 I/O wait 的時間太久, 導致需要連續 I/O 的工作大部分的時間都花在等待。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Performance&lt;/strong&gt; 循序的方式會造成因為 I/O wait 的時間太久, 導致這些連續需要 I/O 的工作, 大部分的時間都花在等待連線上。&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;Data&lt;/strong&gt; 大量蒐集的資料要如何存放, 以方便為後續作業上的使用保留彈性。&lt;a href="http://captainvincent.github.io/pymongo-jie-shao/"&gt;Next Topic&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
@@ -37,7 +131,7 @@
 &lt;li&gt;The spider then scrapes the response (7) and either returns more requests to the scheduler (1), or returns scraped items from the webpage (8a,8b).&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;從上圖可以知道, 只有左半邊是我們要處理的事情。&lt;/p&gt;
+&lt;p&gt;從上圖知道, 左半邊是我們要處理的核心工作, 後面也將為各位一一介紹如何開始。&lt;/p&gt;
 
 &lt;hr&gt;
 
@@ -60,7 +154,7 @@
 `-- scrapy.cfg
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;p&gt;筆者目前 project 使用到的檔案&lt;/p&gt;
+&lt;p&gt;筆者目前 project 有修改、新增的檔案&lt;/p&gt;
 
 &lt;ul&gt;
 &lt;li&gt;spiders/&lt;code&gt;&amp;lt;spider name&amp;gt;&lt;/code&gt;&lt;/li&gt;
@@ -91,7 +185,7 @@ class MySpider(scrapy.Spider):
 &lt;li&gt;name 是用來定義執行時的名稱 ex. &lt;code&gt;scrapy crawl myspider&lt;/code&gt;&lt;/li&gt;
 &lt;li&gt;allowed_domains 用來限制允許的連線&lt;/li&gt;
 &lt;li&gt;start_urls 起始抓取的頁面, 得到 response 會呼叫 parse 這支 callback&lt;/li&gt;
-&lt;li&gt;parse 從 start_urls 得到 response, 可將此視為爬蟲主程式的進入點, 將 response 的內容提取出下一步要爬取的網址, 再透過 yield 送出 request, 而 requset 取得的內容可自行定義連結至哪個 function 來作為 callback&lt;/li&gt;
+&lt;li&gt;parse 從 start_urls 得到 response, 可將此視為爬蟲主程式的進入點, 將 response 的內容提取出下一步要爬取的網址, 再透過 yield 送出 request, 而 requset 取得的內容, 可自行再定義連結至哪個 function 來作為 callback&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;h3 id="item"&gt;Item&lt;/h3&gt;
@@ -136,7 +230,7 @@ class MySpider(scrapy.Spider):
 
 &lt;hr&gt;
 
-&lt;p&gt;將上述三個部分的程式實作完成後, 還是有一些小地方要修改才跑得起來, 這邊一一介紹&lt;/p&gt;
+&lt;p&gt;將上述三個部分的程式內容實作完成後, 還是有一些小地方要修改一下才跑得起來, 這些補充說明的部分如下。&lt;/p&gt;
 
 &lt;h3 id="robotstxt"&gt;robots.txt&lt;/h3&gt;
 
@@ -150,7 +244,7 @@ ROBOTSTXT_OBEY = False
 
 &lt;h3 id="enabledpipeline"&gt;Enabled Pipeline&lt;/h3&gt;
 
-&lt;p&gt;如果有自行新增的 pileline 要執行, 或是希望圖片可以透過 scrapy 自行下載 (如上面 item 範例中所述), 就要在這邊告知 scrapy, 一樣是修改 settings.py&lt;/p&gt;
+&lt;p&gt;如果有自行新增的 pileline 要執行, 或是希望蒐集到的圖片能如同筆者的需求, 透過 scrapy 自行下載 (如上面 item 範例中所述), 就要在這邊告知 scrapy, 一樣是修改 settings.py 如下&lt;/p&gt;
 
 &lt;p&gt;settings.py  &lt;/p&gt;
 
@@ -164,17 +258,17 @@ ROBOTSTXT_OBEY = False
   &lt;p&gt;後面的數字愈小, 執行的順序愈優先; ImagesPipeline 是 Scrapy 內建的, 沒有特殊的需求可以直接使用此 pipeline。&lt;/p&gt;
 &lt;/blockquote&gt;
 
-&lt;p&gt;以上就是改用 Scrapy 來作為爬蟲框架的重點整理, 有任何使用上的疑問或說明上的錯誤都歡迎留言給筆者。&lt;/p&gt;</content:encoded></item><item><title>Cached Page</title><description>&lt;p&gt;筆者最近的功課之一是需要撈一個已經下線的網站內容, 所以首先要從網路上的頁面庫存下手 &lt;a href="http://www.cachedpages.com/"&gt;cachedpages&lt;/a&gt;; 順帶一提, 撰寫爬蟲撈取資料的人很多, 一種使用 cached page 的方式是因為目標網站會 ban 掉一些 (惡意?) 造成頻寬問題的連續需求發送端, 所以轉而向 cached page 著手。&lt;/p&gt;
+&lt;p&gt;以上就是改用 Scrapy 來作為爬蟲框架的重點整理, 有任何使用上的疑問或說明上的錯誤都歡迎留言給筆者。&lt;/p&gt;</content:encoded></item><item><title>Cached Page</title><description>&lt;p&gt;筆者最近的功課之一是需要撈一個已經下線的網站內容, 所以首先要從網路上的頁面庫存下手 &lt;a href="http://www.cachedpages.com/"&gt;cachedpages&lt;/a&gt;; 順帶一提, 撰寫爬蟲撈取資料的人很多, 一種使用 cached page 的方式是因為目標網站會 ban 掉一些 (惡意?) 造成頻寬、系統負擔問題的連續需求發送端, 所以轉而向 cached page 著手。&lt;/p&gt;
 
 &lt;p&gt;&lt;a href="https://github.com/CaptainVincent/CachedPageSeedFinder"&gt;Github Source&lt;/a&gt;&lt;/p&gt;
 
-&lt;p&gt;這裡因為 google 的頁面庫存保留時間過短, 所以實作上僅對 &lt;a href="https://archive.org/web/"&gt;https://archive.org/web/&lt;/a&gt; 做查詢, 用來幫助蒐集仍存留在  cached page server 上的網址有哪些。(當然更辛苦的是針對這些不同時期 mirror 下來的頁面內容做 parsing T.T)&lt;/p&gt;
+&lt;p&gt;這裡因為 google 的頁面庫存保留時間過短, 所以實作上僅對 &lt;a href="https://archive.org/web/"&gt;https://archive.org/web/&lt;/a&gt; 做查詢, 用來幫助蒐集仍存留在  cached page server 上的網址有哪些, 使用方式如下。(當然更辛苦的是針對這些不同時期 mirror 下來的頁面內容做 parsing T.T)&lt;/p&gt;
 
-&lt;pre&gt;&lt;code class="language-bash"&gt;python CachedPageSeedFinder.py domain &amp;lt;domain&amp;gt; [--output=&amp;lt;ofname&amp;gt;&lt;/code&gt;&lt;/pre&gt;</description><link>http://captainvincent.github.io/cached-page/</link><guid isPermaLink="false">53a35d3e-fc01-401c-96bf-d33f11be104a</guid><category>python</category><category>crawler</category><category>cachedpage</category><category>docopt</category><category>requests</category><category>bs4</category><dc:creator>Captain Vincent</dc:creator><pubDate>Sat, 24 Dec 2016 23:22:40 GMT</pubDate><content:encoded>&lt;p&gt;筆者最近的功課之一是需要撈一個已經下線的網站內容, 所以首先要從網路上的頁面庫存下手 &lt;a href="http://www.cachedpages.com/"&gt;cachedpages&lt;/a&gt;; 順帶一提, 撰寫爬蟲撈取資料的人很多, 一種使用 cached page 的方式是因為目標網站會 ban 掉一些 (惡意?) 造成頻寬問題的連續需求發送端, 所以轉而向 cached page 著手。&lt;/p&gt;
+&lt;pre&gt;&lt;code class="language-bash"&gt;python CachedPageSeedFinder.py domain &amp;lt;domain&amp;gt; [--output=&amp;lt;&lt;/code&gt;&lt;/pre&gt;</description><link>http://captainvincent.github.io/cached-page/</link><guid isPermaLink="false">53a35d3e-fc01-401c-96bf-d33f11be104a</guid><category>python</category><category>crawler</category><category>cachedpage</category><category>docopt</category><category>requests</category><category>bs4</category><dc:creator>Captain Vincent</dc:creator><pubDate>Sat, 24 Dec 2016 23:22:40 GMT</pubDate><content:encoded>&lt;p&gt;筆者最近的功課之一是需要撈一個已經下線的網站內容, 所以首先要從網路上的頁面庫存下手 &lt;a href="http://www.cachedpages.com/"&gt;cachedpages&lt;/a&gt;; 順帶一提, 撰寫爬蟲撈取資料的人很多, 一種使用 cached page 的方式是因為目標網站會 ban 掉一些 (惡意?) 造成頻寬、系統負擔問題的連續需求發送端, 所以轉而向 cached page 著手。&lt;/p&gt;
 
 &lt;p&gt;&lt;a href="https://github.com/CaptainVincent/CachedPageSeedFinder"&gt;Github Source&lt;/a&gt;&lt;/p&gt;
 
-&lt;p&gt;這裡因為 google 的頁面庫存保留時間過短, 所以實作上僅對 &lt;a href="https://archive.org/web/"&gt;https://archive.org/web/&lt;/a&gt; 做查詢, 用來幫助蒐集仍存留在  cached page server 上的網址有哪些。(當然更辛苦的是針對這些不同時期 mirror 下來的頁面內容做 parsing T.T)&lt;/p&gt;
+&lt;p&gt;這裡因為 google 的頁面庫存保留時間過短, 所以實作上僅對 &lt;a href="https://archive.org/web/"&gt;https://archive.org/web/&lt;/a&gt; 做查詢, 用來幫助蒐集仍存留在  cached page server 上的網址有哪些, 使用方式如下。(當然更辛苦的是針對這些不同時期 mirror 下來的頁面內容做 parsing T.T)&lt;/p&gt;
 
 &lt;pre&gt;&lt;code class="language-bash"&gt;python CachedPageSeedFinder.py domain &amp;lt;domain&amp;gt; [--output=&amp;lt;ofname&amp;gt;] [--input=&amp;lt;dfname&amp;gt;] [--ignore=&amp;lt;list&amp;gt;]  
 &lt;/code&gt;&lt;/pre&gt;

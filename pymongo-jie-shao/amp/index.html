@@ -2,7 +2,7 @@
 <head>
     <meta charset="utf-8">
 
-    <title>pymongo 介紹 (未完)</title>
+    <title>pymongo 介紹</title>
     <meta name="description" content="">
 
     <meta name="HandheldFriendly" content="True">
@@ -15,16 +15,23 @@
     
     <meta property="og:site_name" content="Hello World! I'm Vincent.">
     <meta property="og:type" content="article">
-    <meta property="og:title" content="pymongo 介紹 (未完)">
+    <meta property="og:title" content="pymongo 介紹">
+    <meta property="og:description" content="先聲明使用 mongodb 作為資料存放的方式, 只是筆者目前的階段性選擇, 在未來何時會因應需求而跳槽也未可知, 但這裡還是會說明選擇以此作為資料存放的理由。   在最初的想法是打算以 JSON 格式的文本直接存放資料, 但文件與資料庫還是有許多差異 database vs flat files, 為了讓蒐集下來的資料可以保有查詢的功能, 後續就採用 mongodb 來存放。 運行容易 Schema-free 的模型在資料建置上自由 資料容易與 JSON 或是 python 的 dict 資料結構對應其關係, 易理解 Server Side 筆者在 Mac 安裝的方式, 相信 UNIX-like 的環境都不會太困難 : ) brew install mongodb   接下來就是讓 server 跑起來, 最後一個參數指定本地端作為 database 建置的路徑 mongod --config /usr/local/">
     <meta property="og:url" content="http://captainvincent.github.io/pymongo-jie-shao/">
-    <meta property="article:published_time" content="2016-12-29T08:06:47.000Z">
-    <meta property="article:modified_time" content="2016-12-29T08:06:54.000Z">
+    <meta property="article:published_time" content="2017-01-03T08:06:00.000Z">
+    <meta property="article:modified_time" content="2017-01-04T10:20:50.000Z">
+    <meta property="article:tag" content="pymongo">
+    <meta property="article:tag" content="mongodb">
+    
     <meta property="article:publisher" content="https://www.facebook.com/UndercoverEngineer">
     <meta name="twitter:card" content="summary">
-    <meta name="twitter:title" content="pymongo 介紹 (未完)">
+    <meta name="twitter:title" content="pymongo 介紹">
+    <meta name="twitter:description" content="先聲明使用 mongodb 作為資料存放的方式, 只是筆者目前的階段性選擇, 在未來何時會因應需求而跳槽也未可知, 但這裡還是會說明選擇以此作為資料存放的理由。   在最初的想法是打算以 JSON 格式的文本直接存放資料, 但文件與資料庫還是有許多差異 database vs flat files, 為了讓蒐集下來的資料可以保有查詢的功能, 後續就採用 mongodb 來存放。 運行容易 Schema-free 的模型在資料建置上自由 資料容易與 JSON 或是 python 的 dict 資料結構對應其關係, 易理解 Server Side 筆者在 Mac 安裝的方式, 相信 UNIX-like 的環境都不會太困難 : ) brew install mongodb   接下來就是讓 server 跑起來, 最後一個參數指定本地端作為 database 建置的路徑 mongod --config /usr/local/">
     <meta name="twitter:url" content="http://captainvincent.github.io/pymongo-jie-shao/">
     <meta name="twitter:label1" content="Written by">
     <meta name="twitter:data1" content="Captain Vincent">
+    <meta name="twitter:label2" content="Filed under">
+    <meta name="twitter:data2" content="pymongo, mongodb">
     
     <script type="application/ld+json">
 {
@@ -47,10 +54,12 @@
         "url": "http://captainvincent.github.io/author/vincent/",
         "sameAs": []
     },
-    "headline": "pymongo 介紹 (未完)",
+    "headline": "pymongo 介紹",
     "url": "http://captainvincent.github.io/pymongo-jie-shao/",
-    "datePublished": "2016-12-29T08:06:47.000Z",
-    "dateModified": "2016-12-29T08:06:54.000Z",
+    "datePublished": "2017-01-03T08:06:00.000Z",
+    "dateModified": "2017-01-04T10:20:50.000Z",
+    "keywords": "pymongo, mongodb",
+    "description": "先聲明使用 mongodb 作為資料存放的方式, 只是筆者目前的階段性選擇, 在未來何時會因應需求而跳槽也未可知, 但這裡還是會說明選擇以此作為資料存放的理由。   在最初的想法是打算以 JSON 格式的文本直接存放資料, 但文件與資料庫還是有許多差異 database vs flat files, 為了讓蒐集下來的資料可以保有查詢的功能, 後續就採用 mongodb 來存放。 運行容易 Schema-free 的模型在資料建置上自由 資料容易與 JSON 或是 python 的 dict 資料結構對應其關係, 易理解 Server Side 筆者在 Mac 安裝的方式, 相信 UNIX-like 的環境都不會太困難 : ) brew install mongodb   接下來就是讓 server 跑起來, 最後一個參數指定本地端作為 database 建置的路徑 mongod --config /usr/local/",
     "mainEntityOfPage": {
         "@type": "WebPage",
         "@id": "http://captainvincent.github.io"
@@ -843,15 +852,88 @@
         <article class="post">
 
             <header class="post-header">
-                <h1 class="post-title">pymongo 介紹 (未完)</h1>
+                <h1 class="post-title">pymongo 介紹</h1>
                 <section class="post-meta">
                     <p class="author">by <a href="../../author/vincent/">Captain Vincent</a></p>
-                    <time class="post-date" datetime="2016-12-29">2016-12-29</time>
+                    <time class="post-date" datetime="2017-01-03">2017-01-03</time>
                 </section>
             </header>
             <section class="post-content">
 
-                
+                <p>先聲明使用 mongodb 作為資料存放的方式, 只是筆者目前的階段性選擇, 在未來何時會因應需求而跳槽也未可知, 但這裡還是會說明選擇以此作為資料存放的理由。</p>
+
+<blockquote>
+  <p>在最初的想法是打算以 JSON 格式的文本直接存放資料, 但文件與資料庫還是有許多差異 <a href="http://stackoverflow.com/questions/2356851/database-vs-flat-files">database vs flat files</a>, 為了讓蒐集下來的資料可以保有查詢的功能, 後續就採用 mongodb 來存放。</p>
+</blockquote>
+
+<ul>
+<li>運行容易</li>
+<li>Schema-free 的模型在資料建置上自由</li>
+<li>資料容易與 JSON 或是 python 的 dict 資料結構對應其關係, 易理解</li>
+</ul>
+
+<h2 id="serverside">Server Side</h2>
+
+<p>筆者在 Mac 安裝的方式, 相信 UNIX-like 的環境都不會太困難 : )</p>
+
+<pre><code class="language- language-bash">brew install mongodb  
+</code></pre>
+
+<p>接下來就是讓 server 跑起來, 最後一個參數指定本地端作為 database 建置的路徑</p>
+
+<pre><code class="language- language-bash">mongod --config /usr/local/etc/mongod.conf --dbpath &lt;local db path&gt;  
+</code></pre>
+
+<blockquote>
+  <p>在 server 跑起來後, 我們就可以透過 <a href="https://docs.mongodb.com/manual/reference/mongo-shell/">mongo shell</a> 在 shell 中執行 client 端的操作, 筆者用來檢查資料庫當前的狀態滿方便的。</p>
+  
+  <ul>
+  <li>show dbs ： 顯示當前的 database</li>
+  <li>use dbname : 切換目前的 database 至 dbname</li>
+  <li>show collections : 顯示當前 database 中的 collection 名稱 (collection 由 document 集結而成, document 為 mongodb 的儲存單元)</li>
+  <li>db.colname.count() : 顯示名為 colname 的 collection 中 document 數量</li>
+  <li>db.colname.findOne({Key:Value})</li>
+  </ul>
+</blockquote>
+
+<h2 id="clientside">Client Side</h2>
+
+<p>為了整合進 Scrapy 的 pipeline, 要先來安裝 python 的 mongodb client 模組 <strong>pymongo</strong></p>
+
+<pre><code class="language- language-bash">pip install pymongo  
+</code></pre>
+
+<p><strong>Demo Code</strong>, <a href="https://api.mongodb.com/python/current/api/pymongo/">API reference</a></p>
+
+<pre><code class="language- language-python">from pymongo import MongoClient
+
+item = {'name':'test'}
+
+client = MongoClient()  
+db = client['Demo']  
+db.demo.insert_one(item)  
+</code></pre>
+
+<p>範例程式很簡單的示範了</p>
+
+<ol>
+<li>連接 mongodb server  </li>
+<li>新增一個名為 Demo 的資料庫  </li>
+<li>將一筆資料寫入 Demo 資料庫中的 demo collection 中</li>
+</ol>
+
+<h2 id="aggregationpipeline">Aggregation Pipeline</h2>
+
+<p>要對 database 中的資料群進行處理, 除了早期提供的 Map Reduce, 目前的版本也已經另外支援 Aggregation Pipeline 的方法, 在效能的比較上可以參考 <a href="https://sysdig.com/blog/mongodb-showdown-aggregate-vs-map-reduce/">Aggregate vs Map-Reduce</a></p>
+
+<p><a href="https://docs.mongodb.com/manual/core/aggregation-pipeline/"><strong>Reference</strong></a> </p>
+
+<p>使用方式是透過 mongodb 提供的 operator 去描述資料流在 pipeline 中的每個 stage 要如何去彙整, 並一層一層的往下一個 stage 傳遞。</p>
+
+<p><amp-img src="https://docs.mongodb.com/manual/_images/aggregation-pipeline.png" alt="aggregation pipeline" width="760" height="547" layout="responsive"></amp-img>
+(<a href="https://docs.mongodb.com/manual/core/aggregation-pipeline/">from <strong>Official Document</strong> aggregation pipeline, example</a>)</p>
+
+<p>以上就是如何存儲 mongodb、並整理資料的方式, 當然在 python 中可以用更貼近習慣的方式, 寫程式碼去整理 (效能當然比內建的方式差多了), 但要熟悉這套描述運算的方式也是需要一些時間, 有些客製化的需求也未必能滿足需求, 方法可以自行取捨看看。</p>
 
             </section>
 

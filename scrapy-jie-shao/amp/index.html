@@ -16,17 +16,23 @@
     <meta property="og:site_name" content="Hello World! I'm Vincent.">
     <meta property="og:type" content="article">
     <meta property="og:title" content="Scrapy 介紹">
-    <meta property="og:description" content="延續前一個主題 CachedPage 的工作後, 有了目標網站在 Cached Page Server 上還存留的清單, 接下來要進行較為複雜的爬蟲工作 (解析原始網頁內容、抓取圖片), 這時候之前學會的技巧就遇到了一些問題   之前的架構 是循序, 透過 Requests 抓取 html content 解析網址, 再使用 BeautifulSoup, bs4 去將 html 轉成結構化的物件, 透過此 lib 的協助提取所需要的內文資訊。 Performance 循序的方式會造成因為 I/O wait 的時間太久, 導致需要連續 I/O 的工作大部分的時間都花在等待。 Data 大量蒐集的資料要如何存放, 以方便為後續作業上的使用保留彈性。Next Topic Official Tutorial dataflow reference form The">
+    <meta property="og:description" content="延續前一個主題針對 CachedPage 做 crawl, 我有了目標網站在 Cached Page Server 上還存留的清單, 接下來要進行較為複雜的爬蟲工作 (反覆的解析原始網頁內容、抓取圖片), 這時候之前學會的技巧就遇到了一些問題   之前的架構 是循序, 透過 Requests 抓取 html content 解析網址, 再使用 BeautifulSoup, bs4 去將 html 轉成結構化的物件, 透過此 lib 的協助提取所需要的內文資訊。 Performance 循序的方式會造成因為 I/O wait 的時間太久, 導致這些連續需要 I/O 的工作, 大部分的時間都花在等待連線上。 Data 大量蒐集的資料要如何存放, 以方便為後續作業上的使用保留彈性。Next Topic Official Tutorial dataflow reference">
     <meta property="og:url" content="http://captainvincent.github.io/scrapy-jie-shao/">
     <meta property="article:published_time" content="2016-12-28T21:41:05.000Z">
-    <meta property="article:modified_time" content="2017-01-02T20:25:46.000Z">
+    <meta property="article:modified_time" content="2017-01-03T14:31:28.000Z">
+    <meta property="article:tag" content="scrapy">
+    <meta property="article:tag" content="crawler">
+    <meta property="article:tag" content="spider">
+    
     <meta property="article:publisher" content="https://www.facebook.com/UndercoverEngineer">
     <meta name="twitter:card" content="summary">
     <meta name="twitter:title" content="Scrapy 介紹">
-    <meta name="twitter:description" content="延續前一個主題 CachedPage 的工作後, 有了目標網站在 Cached Page Server 上還存留的清單, 接下來要進行較為複雜的爬蟲工作 (解析原始網頁內容、抓取圖片), 這時候之前學會的技巧就遇到了一些問題   之前的架構 是循序, 透過 Requests 抓取 html content 解析網址, 再使用 BeautifulSoup, bs4 去將 html 轉成結構化的物件, 透過此 lib 的協助提取所需要的內文資訊。 Performance 循序的方式會造成因為 I/O wait 的時間太久, 導致需要連續 I/O 的工作大部分的時間都花在等待。 Data 大量蒐集的資料要如何存放, 以方便為後續作業上的使用保留彈性。Next Topic Official Tutorial dataflow reference form The">
+    <meta name="twitter:description" content="延續前一個主題針對 CachedPage 做 crawl, 我有了目標網站在 Cached Page Server 上還存留的清單, 接下來要進行較為複雜的爬蟲工作 (反覆的解析原始網頁內容、抓取圖片), 這時候之前學會的技巧就遇到了一些問題   之前的架構 是循序, 透過 Requests 抓取 html content 解析網址, 再使用 BeautifulSoup, bs4 去將 html 轉成結構化的物件, 透過此 lib 的協助提取所需要的內文資訊。 Performance 循序的方式會造成因為 I/O wait 的時間太久, 導致這些連續需要 I/O 的工作, 大部分的時間都花在等待連線上。 Data 大量蒐集的資料要如何存放, 以方便為後續作業上的使用保留彈性。Next Topic Official Tutorial dataflow reference">
     <meta name="twitter:url" content="http://captainvincent.github.io/scrapy-jie-shao/">
     <meta name="twitter:label1" content="Written by">
     <meta name="twitter:data1" content="Captain Vincent">
+    <meta name="twitter:label2" content="Filed under">
+    <meta name="twitter:data2" content="scrapy, crawler, spider">
     
     <script type="application/ld+json">
 {
@@ -52,8 +58,9 @@
     "headline": "Scrapy 介紹",
     "url": "http://captainvincent.github.io/scrapy-jie-shao/",
     "datePublished": "2016-12-28T21:41:05.000Z",
-    "dateModified": "2017-01-02T20:25:46.000Z",
-    "description": "延續前一個主題 CachedPage 的工作後, 有了目標網站在 Cached Page Server 上還存留的清單, 接下來要進行較為複雜的爬蟲工作 (解析原始網頁內容、抓取圖片), 這時候之前學會的技巧就遇到了一些問題   之前的架構 是循序, 透過 Requests 抓取 html content 解析網址, 再使用 BeautifulSoup, bs4 去將 html 轉成結構化的物件, 透過此 lib 的協助提取所需要的內文資訊。 Performance 循序的方式會造成因為 I/O wait 的時間太久, 導致需要連續 I/O 的工作大部分的時間都花在等待。 Data 大量蒐集的資料要如何存放, 以方便為後續作業上的使用保留彈性。Next Topic Official Tutorial dataflow reference form The",
+    "dateModified": "2017-01-03T14:31:28.000Z",
+    "keywords": "scrapy, crawler, spider",
+    "description": "延續前一個主題針對 CachedPage 做 crawl, 我有了目標網站在 Cached Page Server 上還存留的清單, 接下來要進行較為複雜的爬蟲工作 (反覆的解析原始網頁內容、抓取圖片), 這時候之前學會的技巧就遇到了一些問題   之前的架構 是循序, 透過 Requests 抓取 html content 解析網址, 再使用 BeautifulSoup, bs4 去將 html 轉成結構化的物件, 透過此 lib 的協助提取所需要的內文資訊。 Performance 循序的方式會造成因為 I/O wait 的時間太久, 導致這些連續需要 I/O 的工作, 大部分的時間都花在等待連線上。 Data 大量蒐集的資料要如何存放, 以方便為後續作業上的使用保留彈性。Next Topic Official Tutorial dataflow reference",
     "mainEntityOfPage": {
         "@type": "WebPage",
         "@id": "http://captainvincent.github.io"
@@ -854,14 +861,14 @@
             </header>
             <section class="post-content">
 
-                <p>延續前一個主題 <a href="../../cached-page/">CachedPage</a> 的工作後, 有了目標網站在 Cached Page Server 上還存留的清單, 接下來要進行較為複雜的爬蟲工作 (解析原始網頁內容、抓取圖片), 這時候之前學會的技巧就遇到了一些問題</p>
+                <p>延續前一個主題針對 <a href="../../cached-page/">CachedPage</a> 做 crawl, 我有了目標網站在 Cached Page Server 上還存留的清單, 接下來要進行較為複雜的爬蟲工作 (反覆的解析原始網頁內容、抓取圖片), 這時候之前學會的技巧就遇到了一些問題</p>
 
 <blockquote>
   <p><a href="https://github.com/CaptainVincent/CachedPageSeedFinder">之前的架構</a> 是循序, 透過 <a href="http://docs.python-requests.org/en/master/">Requests</a> 抓取 html content 解析網址, 再使用 <a href="https://www.crummy.com/software/BeautifulSoup/bs4/doc/">BeautifulSoup, bs4</a> 去將 html 轉成結構化的物件, 透過此 lib 的協助提取所需要的內文資訊。</p>
 </blockquote>
 
 <ul>
-<li><strong>Performance</strong> 循序的方式會造成因為 I/O wait 的時間太久, 導致需要連續 I/O 的工作大部分的時間都花在等待。</li>
+<li><strong>Performance</strong> 循序的方式會造成因為 I/O wait 的時間太久, 導致這些連續需要 I/O 的工作, 大部分的時間都花在等待連線上。</li>
 <li><strong>Data</strong> 大量蒐集的資料要如何存放, 以方便為後續作業上的使用保留彈性。<a href="../../pymongo-jie-shao/">Next Topic</a></li>
 </ul>
 
@@ -879,7 +886,7 @@
 <li>The spider then scrapes the response (7) and either returns more requests to the scheduler (1), or returns scraped items from the webpage (8a,8b).</li>
 </ul>
 
-<p>從上圖可以知道, 只有左半邊是我們要處理的事情。</p>
+<p>從上圖知道, 左半邊是我們要處理的核心工作, 後面也將為各位一一介紹如何開始。</p>
 
 <hr>
 
@@ -902,7 +909,7 @@
 `-- scrapy.cfg
 </code></pre>
 
-<p>筆者目前 project 使用到的檔案</p>
+<p>筆者目前 project 有修改、新增的檔案</p>
 
 <ul>
 <li>spiders/<code>&lt;spider name&gt;</code></li>
@@ -933,7 +940,7 @@ class MySpider(scrapy.Spider):
 <li>name 是用來定義執行時的名稱 ex. <code>scrapy crawl myspider</code></li>
 <li>allowed_domains 用來限制允許的連線</li>
 <li>start_urls 起始抓取的頁面, 得到 response 會呼叫 parse 這支 callback</li>
-<li>parse 從 start_urls 得到 response, 可將此視為爬蟲主程式的進入點, 將 response 的內容提取出下一步要爬取的網址, 再透過 yield 送出 request, 而 requset 取得的內容可自行定義連結至哪個 function 來作為 callback</li>
+<li>parse 從 start_urls 得到 response, 可將此視為爬蟲主程式的進入點, 將 response 的內容提取出下一步要爬取的網址, 再透過 yield 送出 request, 而 requset 取得的內容, 可自行再定義連結至哪個 function 來作為 callback</li>
 </ul>
 
 <h3 id="item">Item</h3>
@@ -978,7 +985,7 @@ class MySpider(scrapy.Spider):
 
 <hr>
 
-<p>將上述三個部分的程式實作完成後, 還是有一些小地方要修改才跑得起來, 這邊一一介紹</p>
+<p>將上述三個部分的程式內容實作完成後, 還是有一些小地方要修改一下才跑得起來, 這些補充說明的部分如下。</p>
 
 <h3 id="robotstxt">robots.txt</h3>
 
@@ -992,7 +999,7 @@ ROBOTSTXT_OBEY = False
 
 <h3 id="enabledpipeline">Enabled Pipeline</h3>
 
-<p>如果有自行新增的 pileline 要執行, 或是希望圖片可以透過 scrapy 自行下載 (如上面 item 範例中所述), 就要在這邊告知 scrapy, 一樣是修改 settings.py</p>
+<p>如果有自行新增的 pileline 要執行, 或是希望蒐集到的圖片能如同筆者的需求, 透過 scrapy 自行下載 (如上面 item 範例中所述), 就要在這邊告知 scrapy, 一樣是修改 settings.py 如下</p>
 
 <p>settings.py  </p>
 
