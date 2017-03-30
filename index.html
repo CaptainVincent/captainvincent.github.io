@@ -11,9 +11,9 @@
 
     <link rel="shortcut icon" href="favicon.ico">
 
+    <link rel="stylesheet" type="text/css" href="assets/css/screen.css?v=8866cd0de0">
     <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Merriweather:300,700,700italic,300italic%7COpen+Sans:700,400">
-    <link rel="stylesheet" type="text/css" href="assets/css/screen.css?v=9347063cef">
-
+    <link rel="stylesheet" type="text/css" href="assets/css/prism.css?v=8866cd0de0">
 
     <link rel="canonical" href="index.html">
     <meta name="referrer" content="no-referrer-when-downgrade">
@@ -23,14 +23,14 @@
     <meta property="og:type" content="website">
     <meta property="og:title" content="Hello World! I'm Vincent.">
     <meta property="og:description" content="The Wilderness Years.">
-    <meta property="og:url" content="http://localhost:2368/">
-    <meta property="og:image" content="http://localhost:2368/content/images/2017/03/The_Stockpile_December_2015_Week4-2.jpg">
+    <meta property="og:url" content="http://captainvincent.github.io/">
+    <meta property="og:image" content="http://captainvincent.github.io/content/images/2016/11/The_Stockpile_December_2015_Week4-2.jpg">
     <meta property="article:publisher" content="https://www.facebook.com/UndercoverEngineer">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Hello World! I'm Vincent.">
     <meta name="twitter:description" content="The Wilderness Years.">
-    <meta name="twitter:url" content="http://localhost:2368/">
-    <meta name="twitter:image" content="http://localhost:2368/content/images/2017/03/The_Stockpile_December_2015_Week4-2.jpg">
+    <meta name="twitter:url" content="http://captainvincent.github.io/">
+    <meta name="twitter:image" content="http://captainvincent.github.io/content/images/2016/11/The_Stockpile_December_2015_Week4-2.jpg">
     <meta property="og:image:width" content="2100">
     <meta property="og:image:height" content="1400">
     
@@ -41,18 +41,18 @@
     "publisher": {
         "@type": "Organization",
         "name": "Hello World! I&#x27;m Vincent.",
-        "logo": "http://localhost:2368/ghost/img/ghosticon.jpg"
+        "logo": "http://captainvincent.github.io/ghost/img/ghosticon.jpg"
     },
-    "url": "http://localhost:2368/",
+    "url": "http://captainvincent.github.io/",
     "image": {
         "@type": "ImageObject",
-        "url": "http://localhost:2368/content/images/2017/03/The_Stockpile_December_2015_Week4-2.jpg",
+        "url": "http://captainvincent.github.io/content/images/2016/11/The_Stockpile_December_2015_Week4-2.jpg",
         "width": 2100,
         "height": 1400
     },
     "mainEntityOfPage": {
         "@type": "WebPage",
-        "@id": "http://localhost:2368"
+        "@id": "http://captainvincent.github.io"
     },
     "description": "The Wilderness Years."
 }
@@ -78,9 +78,9 @@
         <span class="hidden">Close</span>
     </a>
     <ul>
-            <li class="nav-blog-home-page nav-current"><a href="index.html">Blog Home Page</a></li>
-            <li class="nav-git-book"><a href="https://www.gitbook.com/@captainvincent">Git Book</a></li>
-            <li class="nav-aboutme"><a href="https://about.me/CaptainVincent">About.Me</a></li>
+            <li class="nav-blog-home-page nav-current" role="presentation"><a href="index.html">Blog Home Page</a></li>
+            <li class="nav-git-book" role="presentation"><a href="https://www.gitbook.com/@captainvincent">Git Book</a></li>
+            <li class="nav-aboutme" role="presentation"><a href="https://about.me/CaptainVincent">About.Me</a></li>
     </ul>
         <a class="subscribe-button icon-feed" href="rss/index.rss">Subscribe</a>
 </div>
@@ -90,7 +90,7 @@
     <div class="site-wrapper">
 
         
-<header class="main-header " style="background-image: url(content/images/2017/03/The_Stockpile_December_2015_Week4-2.jpg)">
+<header class="main-header " style="background-image: url(content/images/2016/11/The_Stockpile_December_2015_Week4-2.jpg)">
     <nav class="main-nav overlay clearfix">
         
             <a class="menu-button icon-menu" href="index.html#"><span class="word">Menu</span></a>
@@ -119,16 +119,16 @@
         <h2 class="post-title"><a href="pymongo-jie-shao/">pymongo 介紹</a></h2>
     </header>
     <section class="post-excerpt">
-        <p>延續之前實作爬蟲的專案, 這裡使用 mongodb 作為解析後資料存放的方式, 只是筆者目前的階段性選擇, 在未來何時會因應需求而跳槽也未可知, 但這裡還是會簡單說明選擇以此作為資料存放的理由。   在最初的想法是打算以 JSON 格式的文本直接存放資料, 但文件與資料庫還是有許多差異 database vs flat files, 為了讓蒐集下來的資料可以保有查詢的功能, 後續就採用 database 來存放。 運行容易 Schema-free 的模型在資料建置上自由 資料容易與 JSON 或是 python <a class="read-more" href="pymongo-jie-shao/">»</a></p>
+        <p>先聲明使用 mongodb 作為資料存放的方式, 只是筆者目前的階段性選擇, 在未來何時會因應需求而跳槽也未可知, 但這裡還是會說明選擇以此作為資料存放的理由。   在最初的想法是打算以 JSON 格式的文本直接存放資料, 但文件與資料庫還是有許多差異 database vs flat files, 為了讓蒐集下來的資料可以保有查詢的功能, 後續就採用 mongodb 來存放。 運行容易 Schema-free 的模型在資料建置上自由 資料容易與 JSON 或是 python 的 <a class="read-more" href="pymongo-jie-shao/">»</a></p>
     </section>
     <footer class="post-meta">
-        <img class="author-thumb" src="content/images/2017/03/--.JPG" alt="CaptainVincent" nopin="nopin">
-        <a href="author/captainvincent/">CaptainVincent</a>
+        <img class="author-thumb" src="content/images/2016/11/--.JPG" alt="Captain Vincent" nopin="nopin">
+        <a href="author/vincent/">Captain Vincent</a>
          on <a href="tag/pymongo/">pymongo</a>, <a href="tag/mongodb/">mongodb</a>
         <time class="post-date" datetime="2017-01-03">03 January 2017</time>
     </footer>
 </article>
-<article class="post tag-crawler tag-scrapy tag-spider">
+<article class="post tag-scrapy tag-crawler tag-spider">
     <header class="post-header">
         <h2 class="post-title"><a href="scrapy-jie-shao/">Scrapy 介紹</a></h2>
     </header>
@@ -136,9 +136,9 @@
         <p>延續前一個主題針對 CachedPage 做 crawl, 我有了目標網站在 Cached Page Server 上還存留的清單, 接下來要進行較為複雜的爬蟲工作 (反覆的解析原始網頁內容、抓取圖片), 這時候之前學會的技巧就遇到了一些問題   之前的架構 是循序, 透過 Requests 抓取 html content 解析網址, 再使用 BeautifulSoup, bs4 去將 html <a class="read-more" href="scrapy-jie-shao/">»</a></p>
     </section>
     <footer class="post-meta">
-        <img class="author-thumb" src="content/images/2017/03/--.JPG" alt="CaptainVincent" nopin="nopin">
-        <a href="author/captainvincent/">CaptainVincent</a>
-         on <a href="tag/crawler/">crawler</a>, <a href="tag/scrapy/">scrapy</a>, <a href="tag/spider/">spider</a>
+        <img class="author-thumb" src="content/images/2016/11/--.JPG" alt="Captain Vincent" nopin="nopin">
+        <a href="author/vincent/">Captain Vincent</a>
+         on <a href="tag/scrapy/">scrapy</a>, <a href="tag/crawler/">crawler</a>, <a href="tag/spider/">spider</a>
         <time class="post-date" datetime="2016-12-29">29 December 2016</time>
     </footer>
 </article>
@@ -150,8 +150,8 @@
         <p>筆者最近的功課之一是需要撈一個已經下線的網站內容, 所以首先要從網路上的頁面庫存下手 cachedpages; 順帶一提, 撰寫爬蟲撈取資料的人很多, 一種使用 cached page 的方式是因為目標網站會 ban 掉一些 (惡意?) 造成頻寬、系統負擔問題的連續需求發送端, 所以轉而向 cached page 著手。 Github Source 這裡因為 google 的頁面庫存保留時間過短, 所以實作上僅對 https://archive. <a class="read-more" href="cached-page/">»</a></p>
     </section>
     <footer class="post-meta">
-        <img class="author-thumb" src="content/images/2017/03/--.JPG" alt="CaptainVincent" nopin="nopin">
-        <a href="author/captainvincent/">CaptainVincent</a>
+        <img class="author-thumb" src="content/images/2016/11/--.JPG" alt="Captain Vincent" nopin="nopin">
+        <a href="author/vincent/">Captain Vincent</a>
          on <a href="tag/python/">python</a>, <a href="tag/crawler/">crawler</a>, <a href="tag/cachedpage/">cachedpage</a>, <a href="tag/docopt/">docopt</a>, <a href="tag/requests/">requests</a>, <a href="tag/bs4/">bs4</a>
         <time class="post-date" datetime="2016-12-25">25 December 2016</time>
     </footer>
@@ -164,8 +164,8 @@
         <p>講者 Philipz 鄭淳尹 ＠東吳大學      題外話, 講者在早期參加創業競賽, 當時認識了 VoiceTube 的創辦人詹益維。 Slide Link 目前專業仍是放在資訊背景中的系統架構為主, 提到關於未來技術的 keyword  infrastructure as code 讓大家自己 survey。 前言 一些常見的交易員應有心態, 以及在程式交易這塊如同迷霧中解密, 很多人都會走火入魔, 而講者本身在 2013 已經放棄了這塊 <a class="read-more" href="tradingbot-speech/">»</a></p>
     </section>
     <footer class="post-meta">
-        <img class="author-thumb" src="content/images/2017/03/--.JPG" alt="CaptainVincent" nopin="nopin">
-        <a href="author/captainvincent/">CaptainVincent</a>
+        <img class="author-thumb" src="content/images/2016/11/--.JPG" alt="Captain Vincent" nopin="nopin">
+        <a href="author/vincent/">Captain Vincent</a>
          on <a href="tag/philipz/">Philipz</a>, <a href="tag/zheng-chun-yin/">鄭淳尹</a>, <a href="tag/tradingbot/">TradingBot</a>
         <time class="post-date" datetime="2016-12-16">16 December 2016</time>
     </footer>
@@ -178,8 +178,8 @@
         <p>本次為 Google 開發者社群推廣的一日活動, 完整議程參考 主辦單位提供。 議程筆記 Personal 會議整理 Material Design / 實感設計 @Takuo Suzuki / 鈴木拓生 傳統的應用程式在不同的 platform 通常都呈現了不同的 interface, 對一般的使用者在使用上的經驗無法連貫以及學習曲線上的困難, Google 於 2014 制定了 Material Design 規範了 <a class="read-more" href="gdg-devfest-taipei-2016/">»</a></p>
     </section>
     <footer class="post-meta">
-        <img class="author-thumb" src="content/images/2017/03/--.JPG" alt="CaptainVincent" nopin="nopin">
-        <a href="author/captainvincent/">CaptainVincent</a>
+        <img class="author-thumb" src="content/images/2016/11/--.JPG" alt="Captain Vincent" nopin="nopin">
+        <a href="author/vincent/">Captain Vincent</a>
         
         <time class="post-date" datetime="2016-12-03">03 December 2016</time>
     </footer>
@@ -192,8 +192,8 @@
         <p>Github Source Code   最近開始學習 JavaScript, 趁著 trace 別人寫的 code 來認識基本語法; 本篇就從為了要實做一些動畫效果, 一邊觀察 react-native-animatable 這個模組來一邊學習動畫的操作。 Animation Reference @browniefed   關於動畫功能介紹與舉例皆滿詳盡的一本 GitBook。 ReactJS Component 生命週期 在介紹模組內容之前, 要先補齊一些對元件的基礎觀念。( Reference I、 <a class="read-more" href="react-native-animatable-jie-xi/">»</a></p>
     </section>
     <footer class="post-meta">
-        <img class="author-thumb" src="content/images/2017/03/--.JPG" alt="CaptainVincent" nopin="nopin">
-        <a href="author/captainvincent/">CaptainVincent</a>
+        <img class="author-thumb" src="content/images/2016/11/--.JPG" alt="Captain Vincent" nopin="nopin">
+        <a href="author/vincent/">Captain Vincent</a>
          on <a href="tag/react-native-2/">react-native</a>
         <time class="post-date" datetime="2016-11-20">20 November 2016</time>
     </footer>
@@ -206,8 +206,8 @@
         <p>原名      Learning React Native. by Bonnie Eisenman 筆者最近花了差不多一個月的時間, 總算把 React Native 學習手冊 閱讀以及例子都練習完畢了 (...累), 過程中當然也一邊把重點都整理到 Gitbook 讓自己之後可以複習、消化, 回首來看, 這本也是筆者少數真的有完成的電子書了, 平時更新 Blog 就感到頗為費心, 但果然還是不能跟寫書相比 (不管是量 或是 <a class="read-more" href="react-native-xue-xi-shou-ce/">»</a></p>
     </section>
     <footer class="post-meta">
-        <img class="author-thumb" src="content/images/2017/03/--.JPG" alt="CaptainVincent" nopin="nopin">
-        <a href="author/captainvincent/">CaptainVincent</a>
+        <img class="author-thumb" src="content/images/2016/11/--.JPG" alt="Captain Vincent" nopin="nopin">
+        <a href="author/vincent/">Captain Vincent</a>
          on <a href="tag/facebook/">Facebook</a>, <a href="tag/react-native/">React Native</a>, <a href="tag/gitbook/">Gitbook</a>
         <time class="post-date" datetime="2016-11-16">16 November 2016</time>
     </footer>
@@ -231,7 +231,16 @@
 
     <script type="text/javascript" src="http://code.jquery.com/jquery-1.12.0.min.js"></script>
     
-    <script type="text/javascript" src="assets/js/jquery.fitvids.js?v=9347063cef"></script>
-    <script type="text/javascript" src="assets/js/index.js?v=9347063cef"></script>
-
+    <script type="text/javascript" src="assets/js/jquery.fitvids.js?v=8866cd0de0"></script>
+    <script type="text/javascript" src="assets/js/index.js?v=8866cd0de0"></script>
+    <script type="text/javascript" src="assets/js/prism.js?v=8866cd0de0"></script>
+    <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/x-mathjax-config">
+        MathJax.Hub.Config({
+            tex2jax: {
+                inlineMath: [['$','$'], ['\\\\(','\\\\)']],
+                processEscapes: true
+            }
+        });
+    </script>
 </body>
