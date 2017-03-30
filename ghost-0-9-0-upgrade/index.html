@@ -11,9 +11,9 @@
 
     <link rel="shortcut icon" href="../favicon.ico">
 
-    <link rel="stylesheet" type="text/css" href="../assets/css/screen.css?v=8866cd0de0">
     <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Merriweather:300,700,700italic,300italic%7COpen+Sans:700,400">
-    <link rel="stylesheet" type="text/css" href="../assets/css/prism.css?v=8866cd0de0">
+    <link rel="stylesheet" type="text/css" href="../assets/css/screen.css?v=9347063cef">
+
 
     <link rel="canonical" href="index.html">
     <meta name="referrer" content="no-referrer-when-downgrade">
@@ -32,7 +32,7 @@
     <meta name="twitter:description" content="最近打開 Ghost 一直提醒我更新, 所以這篇文章就在一邊更新的過程中催生出來, 祝我好運吧！ How to upgrade (英文官方連結) Preparation 備份 Export &amp;amp; Import 將資料先以 JSON 格式匯出, 以免悲劇性的錯誤發生 (但順利升級的話是不用特別再匯入的)。 確認能夠停止、重新啟動 Ghost 這部分可以參考 官方中文安裝文件, 其中列舉安裝方式是最終目標都是將 Ghost 部署到線上的機器, 所以會有幾種登出 SSH 仍不要停掉 Ghost 的做法, 這時候就會牽涉本章節標題的步驟 (確認能夠停止、重新啟動 Ghost), 但如果有閱讀過筆者 How to setup Ghost blog platform (下) , 會知道筆者平時是透過 npm start run 在本地端, 等文章完成後,">
     <meta name="twitter:url" content="http://captainvincent.github.io/ghost-0-9-0-upgrade/">
     <meta name="twitter:label1" content="Written by">
-    <meta name="twitter:data1" content="Captain Vincent">
+    <meta name="twitter:data1" content="CaptainVincent">
     
     <script type="application/ld+json">
 {
@@ -45,14 +45,14 @@
     },
     "author": {
         "@type": "Person",
-        "name": "Captain Vincent",
+        "name": "CaptainVincent",
         "image": {
             "@type": "ImageObject",
-            "url": "http://captainvincent.github.io/content/images/2016/11/--.JPG",
+            "url": "http://captainvincent.github.io/content/images/2017/03/--.JPG",
             "width": 889,
             "height": 1080
         },
-        "url": "http://captainvincent.github.io/author/vincent/",
+        "url": "http://captainvincent.github.io/author/captainvincent/",
         "sameAs": []
     },
     "headline": "Ghost 0.9.0 Upgrade",
@@ -87,9 +87,9 @@
         <span class="hidden">Close</span>
     </a>
     <ul>
-            <li class="nav-blog-home-page" role="presentation"><a href="../">Blog Home Page</a></li>
-            <li class="nav-git-book" role="presentation"><a href="https://www.gitbook.com/@captainvincent">Git Book</a></li>
-            <li class="nav-aboutme" role="presentation"><a href="https://about.me/CaptainVincent">About.Me</a></li>
+            <li class="nav-blog-home-page"><a href="../">Blog Home Page</a></li>
+            <li class="nav-git-book"><a href="https://www.gitbook.com/@captainvincent">Git Book</a></li>
+            <li class="nav-aboutme"><a href="https://about.me/CaptainVincent">About.Me</a></li>
     </ul>
         <a class="subscribe-button icon-feed" href="../rss/index.rss">Subscribe</a>
 </div>
@@ -180,13 +180,13 @@
 
 
             <figure class="author-image">
-                <a class="img" href="../author/vincent/" style="background-image: url(../content/images/2016/11/--.JPG)"><span class="hidden">Captain Vincent's Picture</span></a>
+                <a class="img" href="../author/captainvincent/" style="background-image: url(../content/images/2017/03/--.JPG)"><span class="hidden">CaptainVincent's Picture</span></a>
             </figure>
 
             <section class="author">
-                <h4><a href="../author/vincent/">Captain Vincent</a></h4>
+                <h4><a href="../author/captainvincent/">CaptainVincent</a></h4>
 
-                    <p>Read <a href="../author/vincent/">more posts</a> by this author.</p>
+                    <p>Read <a href="../author/captainvincent/">more posts</a> by this author.</p>
                 <div class="author-meta">
                     
                     
@@ -207,29 +207,6 @@
                 </a>
             </section>
 
-
-            <div id="disqus_thread"></div>
-            <script>
-            /**
-            * RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
-            * LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables
-            */
-
-            var disqus_config = function () {
-                this.page.url = 'http://captainvincent.github.io/ghost-0-9-0-upgrade/'; // Replace PAGE_URL with your page's canonical URL variable
-                this.page.identifier = 'ghost-33'; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
-            };
-
-            (function() { // DON'T EDIT BELOW THIS LINE
-                var d = document, s = d.createElement('script');
-
-                s.src = '//captainvincent.disqus.com/embed.js';
-
-                s.setAttribute('data-timestamp', +new Date());
-                (d.head || d.body).appendChild(s);
-            })();
-            </script>
-            <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
 
         </footer>
 
@@ -262,16 +239,7 @@
 
     <script type="text/javascript" src="http://code.jquery.com/jquery-1.12.0.min.js"></script>
     
-    <script type="text/javascript" src="../assets/js/jquery.fitvids.js?v=8866cd0de0"></script>
-    <script type="text/javascript" src="../assets/js/index.js?v=8866cd0de0"></script>
-    <script type="text/javascript" src="../assets/js/prism.js?v=8866cd0de0"></script>
-    <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
-    <script type="text/x-mathjax-config">
-        MathJax.Hub.Config({
-            tex2jax: {
-                inlineMath: [['$','$'], ['\\\\(','\\\\)']],
-                processEscapes: true
-            }
-        });
-    </script>
+    <script type="text/javascript" src="../assets/js/jquery.fitvids.js?v=9347063cef"></script>
+    <script type="text/javascript" src="../assets/js/index.js?v=9347063cef"></script>
+
 </body>

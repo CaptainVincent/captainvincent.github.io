@@ -11,9 +11,9 @@
 
     <link rel="shortcut icon" href="../favicon.ico">
 
-    <link rel="stylesheet" type="text/css" href="../assets/css/screen.css?v=8866cd0de0">
     <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Merriweather:300,700,700italic,300italic%7COpen+Sans:700,400">
-    <link rel="stylesheet" type="text/css" href="../assets/css/prism.css?v=8866cd0de0">
+    <link rel="stylesheet" type="text/css" href="../assets/css/screen.css?v=9347063cef">
+
 
     <link rel="canonical" href="index.html">
     <meta name="referrer" content="no-referrer-when-downgrade">
@@ -35,7 +35,7 @@
     <meta name="twitter:description" content="Reference Page setup-ghost-for-github-pages   前言      用 Setup Ghost 作為 Ghost 部落格的第一篇文章也滿別具意義的, 不過在最一開始 Survey 時選用架設 Blog 的 Framework 是 Octopress , 但隨著架設完後一邊試用的體悟, 發現整個操作還真是 Suck Geek啊! 只好再廣泛的涉略一下後選用了 Ghost。 雖然 Octopress 與其同為支援 Ｍarkdown 的語法, 但選用Ghost的最大好處是後台已經整合了 Markdown的即視編輯器 (可能還稱不上殺手應用, 但已深得我心) Before Install Node.js Ghost 是用 Node.js 打造, 所以在執行過程中需要啟動 Node.js  而在 Mac 環境上安裝軟體套件目前常見的方式是透過 brew (也是參考網頁所上提供的)">
     <meta name="twitter:url" content="http://localhost:2368/how-to-setup-ghost-blog-platform-shang/">
     <meta name="twitter:label1" content="Written by">
-    <meta name="twitter:data1" content="Captain Vincent">
+    <meta name="twitter:data1" content="CaptainVincent">
     <meta name="twitter:label2" content="Filed under">
     <meta name="twitter:data2" content="Ghost, Octopress">
     
@@ -50,14 +50,14 @@
     },
     "author": {
         "@type": "Person",
-        "name": "Captain Vincent",
+        "name": "CaptainVincent",
         "image": {
             "@type": "ImageObject",
-            "url": "http://localhost:2368/content/images/2016/11/--.JPG",
+            "url": "http://localhost:2368/content/images/2017/03/--.JPG",
             "width": 889,
             "height": 1080
         },
-        "url": "http://localhost:2368/author/vincent/",
+        "url": "http://localhost:2368/author/captainvincent/",
         "sameAs": []
     },
     "headline": "How to setup Ghost blog platform (上)",
@@ -93,9 +93,9 @@
         <span class="hidden">Close</span>
     </a>
     <ul>
-            <li class="nav-blog-home-page" role="presentation"><a href="../">Blog Home Page</a></li>
-            <li class="nav-git-book" role="presentation"><a href="https://www.gitbook.com/@captainvincent">Git Book</a></li>
-            <li class="nav-aboutme" role="presentation"><a href="https://about.me/CaptainVincent">About.Me</a></li>
+            <li class="nav-blog-home-page"><a href="../">Blog Home Page</a></li>
+            <li class="nav-git-book"><a href="https://www.gitbook.com/@captainvincent">Git Book</a></li>
+            <li class="nav-aboutme"><a href="https://about.me/CaptainVincent">About.Me</a></li>
     </ul>
         <a class="subscribe-button icon-feed" href="../rss/index.rss">Subscribe</a>
 </div>
@@ -218,13 +218,13 @@ npm install --production
 
 
             <figure class="author-image">
-                <a class="img" href="../author/vincent/" style="background-image: url(../content/images/2016/11/--.JPG)"><span class="hidden">Captain Vincent's Picture</span></a>
+                <a class="img" href="../author/captainvincent/" style="background-image: url(../content/images/2017/03/--.JPG)"><span class="hidden">CaptainVincent's Picture</span></a>
             </figure>
 
             <section class="author">
-                <h4><a href="../author/vincent/">Captain Vincent</a></h4>
+                <h4><a href="../author/captainvincent/">CaptainVincent</a></h4>
 
-                    <p>Read <a href="../author/vincent/">more posts</a> by this author.</p>
+                    <p>Read <a href="../author/captainvincent/">more posts</a> by this author.</p>
                 <div class="author-meta">
                     
                     
@@ -245,29 +245,6 @@ npm install --production
                 </a>
             </section>
 
-
-            <div id="disqus_thread"></div>
-            <script>
-            /**
-            * RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
-            * LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables
-            */
-
-            var disqus_config = function () {
-                this.page.url = 'http://localhost:2368/how-to-setup-ghost-blog-platform-shang/'; // Replace PAGE_URL with your page's canonical URL variable
-                this.page.identifier = 'ghost-2'; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
-            };
-
-            (function() { // DON'T EDIT BELOW THIS LINE
-                var d = document, s = d.createElement('script');
-
-                s.src = '//captainvincent.disqus.com/embed.js';
-
-                s.setAttribute('data-timestamp', +new Date());
-                (d.head || d.body).appendChild(s);
-            })();
-            </script>
-            <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
 
         </footer>
 
@@ -294,16 +271,7 @@ npm install --production
 
     <script type="text/javascript" src="http://code.jquery.com/jquery-1.12.0.min.js"></script>
     
-    <script type="text/javascript" src="../assets/js/jquery.fitvids.js?v=8866cd0de0"></script>
-    <script type="text/javascript" src="../assets/js/index.js?v=8866cd0de0"></script>
-    <script type="text/javascript" src="../assets/js/prism.js?v=8866cd0de0"></script>
-    <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
-    <script type="text/x-mathjax-config">
-        MathJax.Hub.Config({
-            tex2jax: {
-                inlineMath: [['$','$'], ['\\\\(','\\\\)']],
-                processEscapes: true
-            }
-        });
-    </script>
+    <script type="text/javascript" src="../assets/js/jquery.fitvids.js?v=9347063cef"></script>
+    <script type="text/javascript" src="../assets/js/index.js?v=9347063cef"></script>
+
 </body>
