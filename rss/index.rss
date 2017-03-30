@@ -1,4 +1,4 @@
-<rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:media="http://search.yahoo.com/mrss/" version="2.0"><channel><title>Hello World! I'm Vincent.</title><description>The Wilderness Years.</description><link>http://captainvincent.github.io/</link><generator>Ghost 0.11</generator><lastBuildDate>Thu, 30 Mar 2017 19:03:46 GMT</lastBuildDate><atom:link href="http://captainvincent.github.io/rss/" rel="self" type="application/rss+xml"/><ttl>60</ttl><item><title>pymongo 介紹</title><description>&lt;p&gt;延續之前實作爬蟲的專案, 這裡使用 mongodb 作為解析後資料存放的方式, 只是筆者目前的階段性選擇, 在未來何時會因應需求而跳槽也未可知, 但這裡還是會簡單說明選擇以此作為資料存放的理由。&lt;/p&gt;
+<rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:media="http://search.yahoo.com/mrss/" version="2.0"><channel><title>Hello World! I'm Vincent.</title><description>The Wilderness Years.</description><link>http://localhost:2368/</link><generator>Ghost 0.11</generator><lastBuildDate>Thu, 30 Mar 2017 19:03:46 GMT</lastBuildDate><atom:link href="http://localhost:2368/rss/" rel="self" type="application/rss+xml"/><ttl>60</ttl><item><title>pymongo 介紹</title><description>&lt;p&gt;延續之前實作爬蟲的專案, 這裡使用 mongodb 作為解析後資料存放的方式, 只是筆者目前的階段性選擇, 在未來何時會因應需求而跳槽也未可知, 但這裡還是會簡單說明選擇以此作為資料存放的理由。&lt;/p&gt;
 
 &lt;blockquote&gt;
   &lt;p&gt;在最初的想法是打算以 JSON 格式的文本直接存放資料, 但文件與資料庫還是有許多差異 &lt;a href="http://stackoverflow.com/questions/2356851/database-vs-flat-files"&gt;database vs flat files&lt;/a&gt;, 為了讓蒐集下來的資料可以保有查詢的功能, 後續就採用 database 來存放。&lt;/p&gt;
@@ -19,7 +19,7 @@
 
 &lt;p&gt;接下來就是讓 server 跑起來, 最後一個參數指定本地端作為 database 建置的路徑&lt;/p&gt;
 
-&lt;pre&gt;&lt;code class="language- language-bash"&gt;mongod --config /usr/&lt;/code&gt;&lt;/pre&gt;</description><link>http://captainvincent.github.io/pymongo-jie-shao/</link><guid isPermaLink="false">624779c1-312a-4506-a5cc-b1e8d57dfa7b</guid><category>pymongo</category><category>mongodb</category><dc:creator>CaptainVincent</dc:creator><pubDate>Tue, 03 Jan 2017 08:06:00 GMT</pubDate><content:encoded>&lt;p&gt;延續之前實作爬蟲的專案, 這裡使用 mongodb 作為解析後資料存放的方式, 只是筆者目前的階段性選擇, 在未來何時會因應需求而跳槽也未可知, 但這裡還是會簡單說明選擇以此作為資料存放的理由。&lt;/p&gt;
+&lt;pre&gt;&lt;code class="language- language-bash"&gt;mongod --config /usr/&lt;/code&gt;&lt;/pre&gt;</description><link>http://localhost:2368/pymongo-jie-shao/</link><guid isPermaLink="false">624779c1-312a-4506-a5cc-b1e8d57dfa7b</guid><category>pymongo</category><category>mongodb</category><dc:creator>CaptainVincent</dc:creator><pubDate>Tue, 03 Jan 2017 08:06:00 GMT</pubDate><content:encoded>&lt;p&gt;延續之前實作爬蟲的專案, 這裡使用 mongodb 作為解析後資料存放的方式, 只是筆者目前的階段性選擇, 在未來何時會因應需求而跳槽也未可知, 但這裡還是會簡單說明選擇以此作為資料存放的理由。&lt;/p&gt;
 
 &lt;blockquote&gt;
   &lt;p&gt;在最初的想法是打算以 JSON 格式的文本直接存放資料, 但文件與資料庫還是有許多差異 &lt;a href="http://stackoverflow.com/questions/2356851/database-vs-flat-files"&gt;database vs flat files&lt;/a&gt;, 為了讓蒐集下來的資料可以保有查詢的功能, 後續就採用 database 來存放。&lt;/p&gt;
@@ -92,7 +92,7 @@ db.demo.insert_one(item)
 &lt;p&gt;&lt;img src="https://docs.mongodb.com/manual/_images/aggregation-pipeline.png" alt="aggregation pipeline"&gt;
 (&lt;a href="https://docs.mongodb.com/manual/core/aggregation-pipeline/"&gt;from &lt;strong&gt;Official Document&lt;/strong&gt; aggregation pipeline, example&lt;/a&gt;)&lt;/p&gt;
 
-&lt;p&gt;以上就是如何存儲 mongodb、並整理資料的方式, 當然在 python 中可以用更貼近習慣的方式, 寫程式碼去整理 (效能當然比內建的方式差多了), 但要熟悉這套描述運算的方式也是需要一些時間, 有些客製化的需求也未必能滿足需求, 方法可以自行取捨看看。&lt;/p&gt;</content:encoded></item><item><title>Scrapy 介紹</title><description>&lt;p&gt;延續前一個主題針對 &lt;a href="http://captainvincent.github.io/cached-page/"&gt;CachedPage&lt;/a&gt; 做 crawl, 我有了目標網站在 Cached Page Server 上還存留的清單, 接下來要進行較為複雜的爬蟲工作 (反覆的解析原始網頁內容、抓取圖片), 這時候之前學會的技巧就遇到了一些問題&lt;/p&gt;
+&lt;p&gt;以上就是如何存儲 mongodb、並整理資料的方式, 當然在 python 中可以用更貼近習慣的方式, 寫程式碼去整理 (效能當然比內建的方式差多了), 但要熟悉這套描述運算的方式也是需要一些時間, 有些客製化的需求也未必能滿足需求, 方法可以自行取捨看看。&lt;/p&gt;</content:encoded></item><item><title>Scrapy 介紹</title><description>&lt;p&gt;延續前一個主題針對 &lt;a href="http://localhost:2368/cached-page/"&gt;CachedPage&lt;/a&gt; 做 crawl, 我有了目標網站在 Cached Page Server 上還存留的清單, 接下來要進行較為複雜的爬蟲工作 (反覆的解析原始網頁內容、抓取圖片), 這時候之前學會的技巧就遇到了一些問題&lt;/p&gt;
 
 &lt;blockquote&gt;
   &lt;p&gt;&lt;a href="https://github.com/CaptainVincent/CachedPageSeedFinder"&gt;之前的架構&lt;/a&gt; 是循序, 透過 &lt;a href="http://docs.python-requests.org/en/master/"&gt;Requests&lt;/a&gt; 抓取 html content 解析網址, 再使用 &lt;a href="https://www.crummy.com/software/BeautifulSoup/bs4/doc/"&gt;BeautifulSoup, bs4&lt;/a&gt; 去將 html 轉成結構化的物件, 透過此 lib 的協助提取所需要的內文資訊。&lt;/p&gt;
@@ -100,13 +100,13 @@ db.demo.insert_one(item)
 
 &lt;ul&gt;
 &lt;li&gt;&lt;strong&gt;Performance&lt;/strong&gt; 循序的方式會造成因為 I/O wait 的時間太久, 導致這些連續需要 I/O 的工作, 大部分的時間都花在等待連線上。&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Data&lt;/strong&gt; 大量蒐集的資料要如何存放, 以方便為後續作業上的使用保留彈性。&lt;a href="http://captainvincent.github.io/pymongo-jie-shao/"&gt;Next Topic&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Data&lt;/strong&gt; 大量蒐集的資料要如何存放, 以方便為後續作業上的使用保留彈性。&lt;a href="http://localhost:2368/pymongo-jie-shao/"&gt;Next Topic&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;h4 id="officialtutorialhttpsdocscrapyorgenlatestintrotutorialhtml"&gt;&lt;a href="https://doc.scrapy.org/en/latest/intro/tutorial.html"&gt;Official Tutorial&lt;/a&gt;&lt;/h4&gt;
 
 &lt;p&gt;&lt;img src="http://3.bp.blogspot.com/-TRxU3bGgqAY/Vd_L56GQMRI/AAAAAAAAAhk/lS7mSF_25wQ/s1600/Scrapy-Dataflow.png" alt="Data flow"&gt;
-&lt;a href="http://itcprogblog.blogspot.tw/2015/08/scraping-with-scrapy.html"&gt;dataflow reference&lt;/a&gt;&lt;/p&gt;</description><link>http://captainvincent.github.io/scrapy-jie-shao/</link><guid isPermaLink="false">e29af378-70db-4b6f-b157-07855779dd74</guid><category>crawler</category><category>scrapy</category><category>spider</category><dc:creator>CaptainVincent</dc:creator><pubDate>Wed, 28 Dec 2016 21:41:05 GMT</pubDate><content:encoded>&lt;p&gt;延續前一個主題針對 &lt;a href="http://captainvincent.github.io/cached-page/"&gt;CachedPage&lt;/a&gt; 做 crawl, 我有了目標網站在 Cached Page Server 上還存留的清單, 接下來要進行較為複雜的爬蟲工作 (反覆的解析原始網頁內容、抓取圖片), 這時候之前學會的技巧就遇到了一些問題&lt;/p&gt;
+&lt;a href="http://itcprogblog.blogspot.tw/2015/08/scraping-with-scrapy.html"&gt;dataflow reference&lt;/a&gt;&lt;/p&gt;</description><link>http://localhost:2368/scrapy-jie-shao/</link><guid isPermaLink="false">e29af378-70db-4b6f-b157-07855779dd74</guid><category>crawler</category><category>scrapy</category><category>spider</category><dc:creator>CaptainVincent</dc:creator><pubDate>Wed, 28 Dec 2016 21:41:05 GMT</pubDate><content:encoded>&lt;p&gt;延續前一個主題針對 &lt;a href="http://localhost:2368/cached-page/"&gt;CachedPage&lt;/a&gt; 做 crawl, 我有了目標網站在 Cached Page Server 上還存留的清單, 接下來要進行較為複雜的爬蟲工作 (反覆的解析原始網頁內容、抓取圖片), 這時候之前學會的技巧就遇到了一些問題&lt;/p&gt;
 
 &lt;blockquote&gt;
   &lt;p&gt;&lt;a href="https://github.com/CaptainVincent/CachedPageSeedFinder"&gt;之前的架構&lt;/a&gt; 是循序, 透過 &lt;a href="http://docs.python-requests.org/en/master/"&gt;Requests&lt;/a&gt; 抓取 html content 解析網址, 再使用 &lt;a href="https://www.crummy.com/software/BeautifulSoup/bs4/doc/"&gt;BeautifulSoup, bs4&lt;/a&gt; 去將 html 轉成結構化的物件, 透過此 lib 的協助提取所需要的內文資訊。&lt;/p&gt;
@@ -114,7 +114,7 @@ db.demo.insert_one(item)
 
 &lt;ul&gt;
 &lt;li&gt;&lt;strong&gt;Performance&lt;/strong&gt; 循序的方式會造成因為 I/O wait 的時間太久, 導致這些連續需要 I/O 的工作, 大部分的時間都花在等待連線上。&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Data&lt;/strong&gt; 大量蒐集的資料要如何存放, 以方便為後續作業上的使用保留彈性。&lt;a href="http://captainvincent.github.io/pymongo-jie-shao/"&gt;Next Topic&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Data&lt;/strong&gt; 大量蒐集的資料要如何存放, 以方便為後續作業上的使用保留彈性。&lt;a href="http://localhost:2368/pymongo-jie-shao/"&gt;Next Topic&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;h4 id="officialtutorialhttpsdocscrapyorgenlatestintrotutorialhtml"&gt;&lt;a href="https://doc.scrapy.org/en/latest/intro/tutorial.html"&gt;Official Tutorial&lt;/a&gt;&lt;/h4&gt;
@@ -264,7 +264,7 @@ ROBOTSTXT_OBEY = False
 
 &lt;p&gt;這裡因為 google 的頁面庫存保留時間過短, 所以實作上僅對 &lt;a href="https://archive.org/web/"&gt;https://archive.org/web/&lt;/a&gt; 做查詢, 用來幫助蒐集仍存留在  cached page server 上的網址有哪些, 使用方式如下。(當然更辛苦的是針對這些不同時期 mirror 下來的頁面內容做 parsing T.T)&lt;/p&gt;
 
-&lt;pre&gt;&lt;code class="language-bash"&gt;python CachedPageSeedFinder.py domain &amp;lt;domain&amp;gt; [--output=&amp;lt;&lt;/code&gt;&lt;/pre&gt;</description><link>http://captainvincent.github.io/cached-page/</link><guid isPermaLink="false">53a35d3e-fc01-401c-96bf-d33f11be104a</guid><category>python</category><category>crawler</category><category>cachedpage</category><category>docopt</category><category>requests</category><category>bs4</category><dc:creator>CaptainVincent</dc:creator><pubDate>Sat, 24 Dec 2016 23:22:40 GMT</pubDate><content:encoded>&lt;p&gt;筆者最近的功課之一是需要撈一個已經下線的網站內容, 所以首先要從網路上的頁面庫存下手 &lt;a href="http://www.cachedpages.com/"&gt;cachedpages&lt;/a&gt;; 順帶一提, 撰寫爬蟲撈取資料的人很多, 一種使用 cached page 的方式是因為目標網站會 ban 掉一些 (惡意?) 造成頻寬、系統負擔問題的連續需求發送端, 所以轉而向 cached page 著手。&lt;/p&gt;
+&lt;pre&gt;&lt;code class="language-bash"&gt;python CachedPageSeedFinder.py domain &amp;lt;domain&amp;gt; [--output=&amp;lt;&lt;/code&gt;&lt;/pre&gt;</description><link>http://localhost:2368/cached-page/</link><guid isPermaLink="false">53a35d3e-fc01-401c-96bf-d33f11be104a</guid><category>python</category><category>crawler</category><category>cachedpage</category><category>docopt</category><category>requests</category><category>bs4</category><dc:creator>CaptainVincent</dc:creator><pubDate>Sat, 24 Dec 2016 23:22:40 GMT</pubDate><content:encoded>&lt;p&gt;筆者最近的功課之一是需要撈一個已經下線的網站內容, 所以首先要從網路上的頁面庫存下手 &lt;a href="http://www.cachedpages.com/"&gt;cachedpages&lt;/a&gt;; 順帶一提, 撰寫爬蟲撈取資料的人很多, 一種使用 cached page 的方式是因為目標網站會 ban 掉一些 (惡意?) 造成頻寬、系統負擔問題的連續需求發送端, 所以轉而向 cached page 著手。&lt;/p&gt;
 
 &lt;p&gt;&lt;a href="https://github.com/CaptainVincent/CachedPageSeedFinder"&gt;Github Source&lt;/a&gt;&lt;/p&gt;
 
@@ -336,7 +336,7 @@ ROBOTSTXT_OBEY = False
 
 &lt;h4 id=""&gt;交易策略&lt;/h4&gt;
 
-&lt;p&gt;基本上分為 Rule base (白箱) 跟 ML base&lt;/p&gt;</description><link>http://captainvincent.github.io/tradingbot-speech/</link><guid isPermaLink="false">28534d0c-1d09-4b84-a7bb-dd23eecbfb0a</guid><category>Philipz</category><category>鄭淳尹</category><category>TradingBot</category><dc:creator>CaptainVincent</dc:creator><pubDate>Fri, 16 Dec 2016 05:36:29 GMT</pubDate><content:encoded>&lt;blockquote&gt;
+&lt;p&gt;基本上分為 Rule base (白箱) 跟 ML base&lt;/p&gt;</description><link>http://localhost:2368/tradingbot-speech/</link><guid isPermaLink="false">28534d0c-1d09-4b84-a7bb-dd23eecbfb0a</guid><category>Philipz</category><category>鄭淳尹</category><category>TradingBot</category><dc:creator>CaptainVincent</dc:creator><pubDate>Fri, 16 Dec 2016 05:36:29 GMT</pubDate><content:encoded>&lt;blockquote&gt;
   &lt;p&gt;講者 &lt;strong&gt;Philipz 鄭淳尹&lt;/strong&gt; ＠東吳大學&lt;/p&gt;
   
   &lt;p&gt;題外話, 講者在早期參加創業競賽, 當時認識了 VoiceTube 的創辦人詹益維。&lt;/p&gt;
@@ -412,7 +412,7 @@ ROBOTSTXT_OBEY = False
 &lt;ul&gt;
 &lt;li&gt;The details can be found at
 &lt;ul&gt;&lt;li&gt;&lt;a href="https://material.google.com/"&gt;https://material.google.com/&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://material.io/"&gt;https:&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;&lt;/li&gt;&lt;/ul&gt;</description><link>http://captainvincent.github.io/gdg-devfest-taipei-2016/</link><guid isPermaLink="false">f2cf11d5-fff5-4057-b7b8-277bad2ca5e7</guid><dc:creator>CaptainVincent</dc:creator><pubDate>Fri, 02 Dec 2016 23:44:42 GMT</pubDate><content:encoded>&lt;blockquote&gt;
+&lt;li&gt;&lt;a href="https://material.io/"&gt;https:&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;&lt;/li&gt;&lt;/ul&gt;</description><link>http://localhost:2368/gdg-devfest-taipei-2016/</link><guid isPermaLink="false">f2cf11d5-fff5-4057-b7b8-277bad2ca5e7</guid><dc:creator>CaptainVincent</dc:creator><pubDate>Fri, 02 Dec 2016 23:44:42 GMT</pubDate><content:encoded>&lt;blockquote&gt;
   &lt;p&gt;本次為 Google 開發者社群推廣的一日活動, 完整議程參考 &lt;a href="https://devfest-taipei-3cbee.firebaseapp.com/schedule/day1"&gt;主辦單位提供&lt;/a&gt;。&lt;/p&gt;
 &lt;/blockquote&gt;
 
@@ -796,7 +796,7 @@ ROBOTSTXT_OBEY = False
 &lt;blockquote&gt;
   &lt;p&gt;分別會用 Will、Did 來修飾被觸發的 Callback Function Name, 來代表在這些 Stage 發生前或後的關係。&lt;/p&gt;&lt;/blockquote&gt;&lt;/li&gt;
   &lt;/ul&gt;
-  &lt;strong&gt;Mounting&lt;/strong&gt;</description><link>http://captainvincent.github.io/react-native-animatable-jie-xi/</link><guid isPermaLink="false">a554483a-fa8b-4551-a8fe-f6a7f3465c3b</guid><category>react-native</category><dc:creator>CaptainVincent</dc:creator><pubDate>Sun, 20 Nov 2016 15:06:40 GMT</pubDate><content:encoded>&lt;p&gt;&lt;a href="https://github.com/oblador/react-native-animatable/blob/master/index.js"&gt;Github Source Code&lt;/a&gt;&lt;/p&gt;
+  &lt;strong&gt;Mounting&lt;/strong&gt;</description><link>http://localhost:2368/react-native-animatable-jie-xi/</link><guid isPermaLink="false">a554483a-fa8b-4551-a8fe-f6a7f3465c3b</guid><category>react-native</category><dc:creator>CaptainVincent</dc:creator><pubDate>Sun, 20 Nov 2016 15:06:40 GMT</pubDate><content:encoded>&lt;p&gt;&lt;a href="https://github.com/oblador/react-native-animatable/blob/master/index.js"&gt;Github Source Code&lt;/a&gt;&lt;/p&gt;
 
 &lt;blockquote&gt;
   &lt;p&gt;最近開始學習 JavaScript, 趁著 trace 別人寫的 code 來認識基本語法; 本篇就從為了要實做一些動畫效果, 一邊觀察 react-native-animatable 這個模組來一邊學習動畫的操作。&lt;/p&gt;
@@ -1001,7 +1001,7 @@ function getStyleValues(keys, style) {
 
 &lt;p&gt;筆者最近花了差不多一個月的時間, 總算把 &lt;strong&gt;React Native 學習手冊&lt;/strong&gt; 閱讀以及例子都練習完畢了 (...累), 過程中當然也一邊把重點都整理到 Gitbook 讓自己之後可以複習、消化, 回首來看, 這本也是筆者少數真的有完成的電子書了, 平時更新 Blog 就感到頗為費心, 但果然還是不能跟寫書相比 (不管是量 或是 資料上的 Survey), 不過知識不應該僅屬於個人, 希望有需要的人, 這本電子書整理的資料也能對你有所幫助。&lt;/p&gt;
 
-&lt;h3 id="gitbookthttpswwwgitbookcombookcaptainvincentreactnativedetails"&gt;&lt;a href="https://www.gitbook.com/book/captainvincent/reactnative/details"&gt;GitBookt 傳送門&lt;/a&gt;&lt;/h3&gt;</description><link>http://captainvincent.github.io/react-native-xue-xi-shou-ce/</link><guid isPermaLink="false">fdff0b7d-6af1-487b-981a-8465da27012b</guid><category>Facebook</category><category>React Native</category><category>Gitbook</category><dc:creator>CaptainVincent</dc:creator><pubDate>Wed, 16 Nov 2016 12:54:43 GMT</pubDate><content:encoded>&lt;blockquote&gt;
+&lt;h3 id="gitbookthttpswwwgitbookcombookcaptainvincentreactnativedetails"&gt;&lt;a href="https://www.gitbook.com/book/captainvincent/reactnative/details"&gt;GitBookt 傳送門&lt;/a&gt;&lt;/h3&gt;</description><link>http://localhost:2368/react-native-xue-xi-shou-ce/</link><guid isPermaLink="false">fdff0b7d-6af1-487b-981a-8465da27012b</guid><category>Facebook</category><category>React Native</category><category>Gitbook</category><dc:creator>CaptainVincent</dc:creator><pubDate>Wed, 16 Nov 2016 12:54:43 GMT</pubDate><content:encoded>&lt;blockquote&gt;
   &lt;p&gt;原名&lt;/p&gt;
   
   &lt;p&gt;Learning React Native. by &lt;strong&gt;Bonnie Eisenman&lt;/strong&gt;&lt;/p&gt;
@@ -1024,7 +1024,7 @@ function getStyleValues(keys, style) {
 &lt;ul&gt;
 &lt;li&gt;面對人生沒有道理的現實, 無需逞強, 勇敢承認很多事情是我們做不到的。&lt;/li&gt;
 &lt;li&gt;父母會在子女需要自己時, 感到存在的意義而打起精神, 最好的孝順－就是不孝 (這裡指的是讓父母有限度的為子女擔憂)。&lt;/li&gt;
-&lt;li&gt;明白身為人的價值是在 &lt;strong&gt;還能夠感受喜悅&lt;/strong&gt;, 而非生產力, 父母製造麻煩有時是為了吸引子女的注意, 確保在家中的地位,&lt;/li&gt;&lt;/ul&gt;</description><link>http://captainvincent.github.io/mian-dui-fu-mu-lao-qu-de-yong-qi/</link><guid isPermaLink="false">7e6c0181-b22d-4fa3-8358-6ea3ffff4054</guid><category>岸見一郎</category><dc:creator>CaptainVincent</dc:creator><pubDate>Sat, 12 Nov 2016 23:56:56 GMT</pubDate><content:encoded>&lt;blockquote&gt;
+&lt;li&gt;明白身為人的價值是在 &lt;strong&gt;還能夠感受喜悅&lt;/strong&gt;, 而非生產力, 父母製造麻煩有時是為了吸引子女的注意, 確保在家中的地位,&lt;/li&gt;&lt;/ul&gt;</description><link>http://localhost:2368/mian-dui-fu-mu-lao-qu-de-yong-qi/</link><guid isPermaLink="false">7e6c0181-b22d-4fa3-8358-6ea3ffff4054</guid><category>岸見一郎</category><dc:creator>CaptainVincent</dc:creator><pubDate>Sat, 12 Nov 2016 23:56:56 GMT</pubDate><content:encoded>&lt;blockquote&gt;
   &lt;p&gt;原名&lt;/p&gt;
   
   &lt;p&gt;老いた親を愛せますか? それでも介護はやってくる － &lt;strong&gt;岸見一郎&lt;/strong&gt;&lt;/p&gt;
@@ -1075,7 +1075,7 @@ function getStyleValues(keys, style) {
   &lt;p&gt;因為此書的關係也回頭去聽了一些 &lt;strong&gt;尾崎豐&lt;/strong&gt; 比較廣為流傳的曲目; 另外, 筆者也丟臉的發現原來自己喜歡的 Merry Christmas, Mr Lawrence. 作者就是 &lt;strong&gt;阪本龍一&lt;/strong&gt;。&lt;strong&gt;見城&lt;/strong&gt; 先生書中提到的世界, 原來離我並沒有那麼遠。&lt;/p&gt;
 &lt;/blockquote&gt;
 
-&lt;p&gt;&lt;strong&gt;Merry Christmas Mr. Lawrence&lt;/strong&gt;&lt;/p&gt;</description><link>http://captainvincent.github.io/bian-ji-zhe-zhong-bing/</link><guid isPermaLink="false">0b40d163-6a52-4c58-a267-f5065d7f6514</guid><category>見城徹</category><dc:creator>CaptainVincent</dc:creator><pubDate>Tue, 01 Nov 2016 13:45:13 GMT</pubDate><content:encoded>&lt;h5 id=""&gt;－記那些折磨過我的大牌作家們－&lt;/h5&gt;
+&lt;p&gt;&lt;strong&gt;Merry Christmas Mr. Lawrence&lt;/strong&gt;&lt;/p&gt;</description><link>http://localhost:2368/bian-ji-zhe-zhong-bing/</link><guid isPermaLink="false">0b40d163-6a52-4c58-a267-f5065d7f6514</guid><category>見城徹</category><dc:creator>CaptainVincent</dc:creator><pubDate>Tue, 01 Nov 2016 13:45:13 GMT</pubDate><content:encoded>&lt;h5 id=""&gt;－記那些折磨過我的大牌作家們－&lt;/h5&gt;
 
 &lt;blockquote&gt;
   &lt;p&gt;原名&lt;/p&gt;
@@ -1133,7 +1133,7 @@ function getStyleValues(keys, style) {
 &lt;ul&gt;
 &lt;li&gt;&lt;strong&gt;被動者&lt;/strong&gt;－調停者而非決策者的角色, 在群體中總是追隨領導者前進, 一切順利時能處理某種程度的壓力, 但面對大場面時則對產出會有不負責任的反應。&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;終結者&lt;/strong&gt;－可以處理大部分的壓力, 能預測事情接下來的狀況, 但在某些預料外的狀況時, 則會無所適從, 重視且追隨表面的名聲、利益以及人們所認同的成功。&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;掃蕩者&lt;/strong&gt;&lt;/li&gt;&lt;/ul&gt;</description><link>http://captainvincent.github.io/qiang-zhe-zhi-dao/</link><guid isPermaLink="false">90bdc23c-e378-4a69-9cce-5101ead5701c</guid><dc:creator>CaptainVincent</dc:creator><pubDate>Wed, 12 Oct 2016 13:08:44 GMT</pubDate><content:encoded>&lt;blockquote&gt;
+&lt;li&gt;&lt;strong&gt;掃蕩者&lt;/strong&gt;&lt;/li&gt;&lt;/ul&gt;</description><link>http://localhost:2368/qiang-zhe-zhi-dao/</link><guid isPermaLink="false">90bdc23c-e378-4a69-9cce-5101ead5701c</guid><dc:creator>CaptainVincent</dc:creator><pubDate>Wed, 12 Oct 2016 13:08:44 GMT</pubDate><content:encoded>&lt;blockquote&gt;
   &lt;p&gt;原名&lt;/p&gt;
   
   &lt;p&gt;Relentless. by &lt;strong&gt;Tim S. Grover, Shari Lesser Wenk&lt;/strong&gt;&lt;/p&gt;
@@ -1195,7 +1195,7 @@ function getStyleValues(keys, style) {
 &lt;li&gt;&lt;strong&gt;要為小事計較&lt;/strong&gt;－信守每一個微小承諾才能贏得別人的信任, 所有的人際關係都建立在一些細膩的人情世故上, 對己對人都切勿馬虎敷衍處理。 &lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;打電話給別人時，不能先掛電話&lt;/strong&gt;－打電話給對方實際上是一種打擾他人的行為, 在職場上的潛規則不能忽視, 禮儀其實無所不在。&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;自我表現和自我厭惡是「孿生兄弟」&lt;/strong&gt;－人的寬度與深度是由這兩者所創出來的, 只有同時具備兩種面向的人才能持續發光發熱。&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;努力靠自己，評價由別人&lt;/strong&gt;－現實是殘酷的, 過程終究只是結果的副產物, 若不能帶來好的結果, 一切努力也將白費,&lt;/li&gt;&lt;/ul&gt;</description><link>http://captainvincent.github.io/bu-you-yu-na-neng-suan-shi-gong-zuo/</link><guid isPermaLink="false">3e72ce02-cbee-440d-a91a-0f85c6d99842</guid><category>見城徹</category><category>藤田晉</category><dc:creator>CaptainVincent</dc:creator><pubDate>Sun, 09 Oct 2016 13:06:56 GMT</pubDate><content:encoded>&lt;blockquote&gt;
+&lt;li&gt;&lt;strong&gt;努力靠自己，評價由別人&lt;/strong&gt;－現實是殘酷的, 過程終究只是結果的副產物, 若不能帶來好的結果, 一切努力也將白費,&lt;/li&gt;&lt;/ul&gt;</description><link>http://localhost:2368/bu-you-yu-na-neng-suan-shi-gong-zuo/</link><guid isPermaLink="false">3e72ce02-cbee-440d-a91a-0f85c6d99842</guid><category>見城徹</category><category>藤田晉</category><dc:creator>CaptainVincent</dc:creator><pubDate>Sun, 09 Oct 2016 13:06:56 GMT</pubDate><content:encoded>&lt;blockquote&gt;
   &lt;p&gt;原名&lt;/p&gt;
   
   &lt;p&gt;憂鬱でなければ、仕事じゃない － &lt;strong&gt;見城徹、藤田晉&lt;/strong&gt;&lt;/p&gt;
@@ -1296,7 +1296,7 @@ function getStyleValues(keys, style) {
 &lt;li&gt;集中努力, 成功跳槽, 勇往直前 (取決於實踐力)&lt;/li&gt;
 &lt;/ol&gt;
 
-&lt;h2 id=""&gt;如何提高年薪&lt;/h2&gt;</description><link>http://captainvincent.github.io/tiao-cao-fa-ze/</link><guid isPermaLink="false">826594dc-e155-44c4-a360-1a93271f00e3</guid><category>渡邊秀和</category><dc:creator>CaptainVincent</dc:creator><pubDate>Sat, 01 Oct 2016 08:02:44 GMT</pubDate><content:encoded>&lt;blockquote&gt;
+&lt;h2 id=""&gt;如何提高年薪&lt;/h2&gt;</description><link>http://localhost:2368/tiao-cao-fa-ze/</link><guid isPermaLink="false">826594dc-e155-44c4-a360-1a93271f00e3</guid><category>渡邊秀和</category><dc:creator>CaptainVincent</dc:creator><pubDate>Sat, 01 Oct 2016 08:02:44 GMT</pubDate><content:encoded>&lt;blockquote&gt;
   &lt;p&gt;原名&lt;/p&gt;
   
   &lt;p&gt;ビジネスエリートへのキャリア戦略 － &lt;strong&gt;渡辺 秀和&lt;/strong&gt; (二○一○年一舉拿下「日本獵頭大賽」顧問組MVP大獎)&lt;/p&gt;
@@ -1471,7 +1471,7 @@ function getStyleValues(keys, style) {
 
 &lt;p&gt;之後 筆者就會開始逐步恢復 Blog 與 GitBook 的更新頻率。&lt;/p&gt;
 
-&lt;p&gt;&lt;img src="https://c8.staticflickr.com/9/8222/29984781735_da71ff19bf.jpg" alt="Under Construction"&gt;&lt;/p&gt;</description><link>http://captainvincent.github.io/jin-kuang-geng-xin/</link><guid isPermaLink="false">a11b6a78-40ab-4ebe-b6c9-98688b6444e4</guid><category>JULY Nail</category><category>柒月美甲</category><dc:creator>CaptainVincent</dc:creator><pubDate>Wed, 28 Sep 2016 13:05:19 GMT</pubDate><content:encoded>&lt;blockquote&gt;
+&lt;p&gt;&lt;img src="https://c8.staticflickr.com/9/8222/29984781735_da71ff19bf.jpg" alt="Under Construction"&gt;&lt;/p&gt;</description><link>http://localhost:2368/jin-kuang-geng-xin/</link><guid isPermaLink="false">a11b6a78-40ab-4ebe-b6c9-98688b6444e4</guid><category>JULY Nail</category><category>柒月美甲</category><dc:creator>CaptainVincent</dc:creator><pubDate>Wed, 28 Sep 2016 13:05:19 GMT</pubDate><content:encoded>&lt;blockquote&gt;
   &lt;p&gt;近期因為幫忙開店 (美甲) 的事情, Github 上的 commit 驟減許多, (雖然之前 commit 的內容也都只是在 Blog 的更新以及 Gitbook 的撰寫上), 不過隨著目前店已經慢慢上軌道, 開始會將心力放回自身的學習上。&lt;/p&gt;
 &lt;/blockquote&gt;
 
@@ -1548,7 +1548,7 @@ function getStyleValues(keys, style) {
 
 &lt;blockquote&gt;
   &lt;p&gt;喜愛吃米腸包香腸的朋友, 有機會經過中和一定不要忘記去給老闆與老闆娘捧場一下, 這真的是要在地才知道的好滋味。&lt;/p&gt;
-&lt;/blockquote&gt;</description><link>http://captainvincent.github.io/zhong-he-mei-shi-mi-chang-bao-xiang-chang/</link><guid isPermaLink="false">87c86e87-4d13-4b9d-95be-2642a4487dd0</guid><category>米腸包香腸</category><category>大腸包小腸</category><category>中和</category><category>美食</category><dc:creator>CaptainVincent</dc:creator><pubDate>Mon, 26 Sep 2016 09:04:11 GMT</pubDate><content:encoded>&lt;blockquote&gt;
+&lt;/blockquote&gt;</description><link>http://localhost:2368/zhong-he-mei-shi-mi-chang-bao-xiang-chang/</link><guid isPermaLink="false">87c86e87-4d13-4b9d-95be-2642a4487dd0</guid><category>米腸包香腸</category><category>大腸包小腸</category><category>中和</category><category>美食</category><dc:creator>CaptainVincent</dc:creator><pubDate>Mon, 26 Sep 2016 09:04:11 GMT</pubDate><content:encoded>&lt;blockquote&gt;
   &lt;p&gt;最近一家吃了 &lt;strong&gt;十五年以上&lt;/strong&gt; 的米腸包香腸攤位臨時搬家, 老闆還來不及跟所有老顧客做通知, 這裡就熱心幫忙店家做一些推薦並分享。&lt;/p&gt;
 &lt;/blockquote&gt;
 
@@ -1598,7 +1598,7 @@ function getStyleValues(keys, style) {
 &lt;p&gt;將資料先以 JSON 格式匯出, 以免悲劇性的錯誤發生 (但順利升級的話是不用特別再匯入的)。&lt;/p&gt;&lt;/li&gt;
 &lt;li&gt;&lt;h5 id="ghost"&gt;確認能夠停止、重新啟動 Ghost&lt;/h5&gt;
 
-&lt;p&gt;這部分可以參考 &lt;a href="http://docs.ghost.org/zh_TW/installation/deploy/"&gt;官方中文安裝文件&lt;/a&gt;, 其中列舉安裝方式是最終目標都是將 Ghost 部署到線上的機器, 所以會有幾種登出 SSH 仍不要停掉 Ghost 的做法, 這時候就會牽涉本章節標題的步驟 (確認能夠停止、重新啟動 Ghost), 但如果有閱讀過筆者 &lt;a href="http://captainvincent.github.io/how-to-setup-ghost-blog-platform-xia/"&gt;How to setup Ghost blog platform (下)&lt;/a&gt; , 會知道筆者平時是透過 &lt;code&gt;npm start&lt;/code&gt; run 在本地端, 等文章完成後,&lt;/p&gt;&lt;/li&gt;&lt;/ul&gt;</description><link>http://captainvincent.github.io/ghost-0-9-0-upgrade/</link><guid isPermaLink="false">0ed885c0-14b7-4524-94d1-9ddf7a68930d</guid><dc:creator>CaptainVincent</dc:creator><pubDate>Sat, 27 Aug 2016 12:10:11 GMT</pubDate><content:encoded>&lt;p&gt;&lt;img src="https://c4.staticflickr.com/9/8400/28643234163_717f156e19.jpg" alt="更新通知"&gt;&lt;/p&gt;
+&lt;p&gt;這部分可以參考 &lt;a href="http://docs.ghost.org/zh_TW/installation/deploy/"&gt;官方中文安裝文件&lt;/a&gt;, 其中列舉安裝方式是最終目標都是將 Ghost 部署到線上的機器, 所以會有幾種登出 SSH 仍不要停掉 Ghost 的做法, 這時候就會牽涉本章節標題的步驟 (確認能夠停止、重新啟動 Ghost), 但如果有閱讀過筆者 &lt;a href="http://localhost:2368/how-to-setup-ghost-blog-platform-xia/"&gt;How to setup Ghost blog platform (下)&lt;/a&gt; , 會知道筆者平時是透過 &lt;code&gt;npm start&lt;/code&gt; run 在本地端, 等文章完成後,&lt;/p&gt;&lt;/li&gt;&lt;/ul&gt;</description><link>http://localhost:2368/ghost-0-9-0-upgrade/</link><guid isPermaLink="false">0ed885c0-14b7-4524-94d1-9ddf7a68930d</guid><dc:creator>CaptainVincent</dc:creator><pubDate>Sat, 27 Aug 2016 12:10:11 GMT</pubDate><content:encoded>&lt;p&gt;&lt;img src="https://c4.staticflickr.com/9/8400/28643234163_717f156e19.jpg" alt="更新通知"&gt;&lt;/p&gt;
 
 &lt;blockquote&gt;
   &lt;p&gt;最近打開 Ghost 一直提醒我更新, 所以這篇文章就在一邊更新的過程中催生出來, 祝我好運吧！&lt;/p&gt;
@@ -1614,7 +1614,7 @@ function getStyleValues(keys, style) {
 &lt;p&gt;將資料先以 JSON 格式匯出, 以免悲劇性的錯誤發生 (但順利升級的話是不用特別再匯入的)。&lt;/p&gt;&lt;/li&gt;
 &lt;li&gt;&lt;h5 id="ghost"&gt;確認能夠停止、重新啟動 Ghost&lt;/h5&gt;
 
-&lt;p&gt;這部分可以參考 &lt;a href="http://docs.ghost.org/zh_TW/installation/deploy/"&gt;官方中文安裝文件&lt;/a&gt;, 其中列舉安裝方式是最終目標都是將 Ghost 部署到線上的機器, 所以會有幾種登出 SSH 仍不要停掉 Ghost 的做法, 這時候就會牽涉本章節標題的步驟 (確認能夠停止、重新啟動 Ghost), 但如果有閱讀過筆者 &lt;a href="http://captainvincent.github.io/how-to-setup-ghost-blog-platform-xia/"&gt;How to setup Ghost blog platform (下)&lt;/a&gt; , 會知道筆者平時是透過 &lt;code&gt;npm start&lt;/code&gt; run 在本地端, 等文章完成後, 再透過 buster 的腳本將部落格轉成靜態網頁發佈至 &lt;a href="http://captainvincent.github.io/"&gt;github.io&lt;/a&gt;, 所以關於這種做法要停止、重新開始則僅需要停掉 &lt;code&gt;npm start&lt;/code&gt; 這個 process, 等更新完之後再重新啟動即可。&lt;/p&gt;&lt;/li&gt;
+&lt;p&gt;這部分可以參考 &lt;a href="http://docs.ghost.org/zh_TW/installation/deploy/"&gt;官方中文安裝文件&lt;/a&gt;, 其中列舉安裝方式是最終目標都是將 Ghost 部署到線上的機器, 所以會有幾種登出 SSH 仍不要停掉 Ghost 的做法, 這時候就會牽涉本章節標題的步驟 (確認能夠停止、重新啟動 Ghost), 但如果有閱讀過筆者 &lt;a href="http://localhost:2368/how-to-setup-ghost-blog-platform-xia/"&gt;How to setup Ghost blog platform (下)&lt;/a&gt; , 會知道筆者平時是透過 &lt;code&gt;npm start&lt;/code&gt; run 在本地端, 等文章完成後, 再透過 buster 的腳本將部落格轉成靜態網頁發佈至 &lt;a href="http://captainvincent.github.io/"&gt;github.io&lt;/a&gt;, 所以關於這種做法要停止、重新開始則僅需要停掉 &lt;code&gt;npm start&lt;/code&gt; 這個 process, 等更新完之後再重新啟動即可。&lt;/p&gt;&lt;/li&gt;
 &lt;li&gt;&lt;h5 id=""&gt;版本進版的挑選&lt;/h5&gt;
 
 &lt;p&gt;遵循 &lt;a href="http://semver.org/lang/zh-TW/"&gt;Semantic Versioning&lt;/a&gt; 的版本規範 Version : Major.Minor.Patch, 所以官網關於在進版上有一些建議 &lt;a href="http://support.ghost.org/how-to-upgrade/#3.-consider-the-version-jump"&gt;參考連結&lt;/a&gt;, 避免使用到帶有 Upgrade Bug 的版本。&lt;/p&gt;&lt;/li&gt;
